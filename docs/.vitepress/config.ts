@@ -1,16 +1,18 @@
 import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
 
+const iconPath = resolve(__dirname, './assets/logo.svg');
+
 export default defineConfig({
   title: 'Yc Design Vue',
   description: '基于 Vue 3 和 TypeScript 构建的现代化企业级 UI 组件库',
   lang: 'zh-CN',
   head: [
-    ['link', { rel: 'icon', href: '/assets/logo.svg' }],
+    ['link', { rel: 'icon', href: iconPath }],
     ['meta', { name: 'theme-color', content: '#165DFF' }],
   ],
   themeConfig: {
-    logo: '/assets/logo.svg',
+    logo: iconPath,
     siteTitle: 'Yc Design Vue',
     nav: [
       { text: '指南', link: '/guide/' },
