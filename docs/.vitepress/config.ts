@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
 
-const iconPath = resolve(__dirname, './assets/logo.svg');
+const iconPath = '../assets/logo.svg';
 
 export default defineConfig({
   title: 'Yc Design Vue',
@@ -199,5 +199,9 @@ export default defineConfig({
         '@': resolve(__dirname, '../../src'),
       },
     },
+    server: {
+      open: true,
+    },
+    css: {},
   },
 });
