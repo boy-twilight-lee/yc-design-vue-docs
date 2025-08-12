@@ -1,0 +1,8 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 'C' Arc -->
+    <path d="M60 140 C 70 160 130 160 140 140" stroke="#34495E" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <!-- 'Y' Wings -->
+    <path d="M100 125 L 70 70 L 50 80 L 100 140 L 150 80 L 130 70 L 100 125 Z" fill="#3B82F6"/>
+    <!-- Vue 'V' Core -->
+    <path d="M100 105 L 115 130 L 85 130 Z" fill="#41B883"/>
+</svg>

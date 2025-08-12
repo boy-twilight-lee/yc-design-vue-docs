@@ -6,11 +6,11 @@ export default defineConfig({
   description: '基于 Vue 3 和 TypeScript 构建的现代化企业级 UI 组件库',
   lang: 'zh-CN',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/assets/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#165DFF' }],
   ],
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/assets/logo.svg',
     siteTitle: 'Yc Design Vue',
     nav: [
       { text: '指南', link: '/guide/' },
