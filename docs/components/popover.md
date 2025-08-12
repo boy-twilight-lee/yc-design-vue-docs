@@ -12,7 +12,9 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
 
 ```vue
 <template>
-  <yc-popover title="标题" content="这是气泡卡片的内容">
+  <yc-popover
+    title="标题"
+    content="这是气泡卡片的内容">
     <yc-button>点击显示</yc-button>
   </yc-popover>
 </template>
@@ -25,27 +27,24 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
 ```vue
 <template>
   <yc-space>
-    <yc-popover 
-      title="点击触发" 
-      content="点击按钮显示气泡卡片" 
-      trigger="click"
-    >
+    <yc-popover
+      title="点击触发"
+      content="点击按钮显示气泡卡片"
+      trigger="click">
       <yc-button>点击触发</yc-button>
     </yc-popover>
-    
-    <yc-popover 
-      title="悬停触发" 
-      content="鼠标悬停显示气泡卡片" 
-      trigger="hover"
-    >
+
+    <yc-popover
+      title="悬停触发"
+      content="鼠标悬停显示气泡卡片"
+      trigger="hover">
       <yc-button>悬停触发</yc-button>
     </yc-popover>
-    
-    <yc-popover 
-      title="聚焦触发" 
-      content="获得焦点时显示气泡卡片" 
-      trigger="focus"
-    >
+
+    <yc-popover
+      title="聚焦触发"
+      content="获得焦点时显示气泡卡片"
+      trigger="focus">
       <yc-button>聚焦触发</yc-button>
     </yc-popover>
   </yc-space>
@@ -59,36 +58,54 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
 ```vue
 <template>
   <div style="margin: 100px; text-align: center;">
-    <yc-space direction="vertical" size="large">
+    <yc-space
+      direction="vertical"
+      size="large">
       <yc-space>
-        <yc-popover content="左上方弹出" position="tl">
+        <yc-popover
+          content="左上方弹出"
+          position="tl">
           <yc-button>TL</yc-button>
         </yc-popover>
-        <yc-popover content="上方弹出" position="top">
+        <yc-popover
+          content="上方弹出"
+          position="top">
           <yc-button>Top</yc-button>
         </yc-popover>
-        <yc-popover content="右上方弹出" position="tr">
+        <yc-popover
+          content="右上方弹出"
+          position="tr">
           <yc-button>TR</yc-button>
         </yc-popover>
       </yc-space>
-      
+
       <yc-space>
-        <yc-popover content="左侧弹出" position="left">
+        <yc-popover
+          content="左侧弹出"
+          position="left">
           <yc-button>Left</yc-button>
         </yc-popover>
-        <yc-popover content="右侧弹出" position="right">
+        <yc-popover
+          content="右侧弹出"
+          position="right">
           <yc-button>Right</yc-button>
         </yc-popover>
       </yc-space>
-      
+
       <yc-space>
-        <yc-popover content="左下方弹出" position="bl">
+        <yc-popover
+          content="左下方弹出"
+          position="bl">
           <yc-button>BL</yc-button>
         </yc-popover>
-        <yc-popover content="下方弹出" position="bottom">
+        <yc-popover
+          content="下方弹出"
+          position="bottom">
           <yc-button>Bottom</yc-button>
         </yc-popover>
-        <yc-popover content="右下方弹出" position="br">
+        <yc-popover
+          content="右下方弹出"
+          position="br">
           <yc-button>BR</yc-button>
         </yc-popover>
       </yc-space>
@@ -126,7 +143,7 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
       </template>
       <yc-avatar>张</yc-avatar>
     </yc-popover>
-    
+
     <yc-popover>
       <template #content>
         <div>
@@ -151,15 +168,14 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
 ```vue
 <template>
   <yc-space>
-    <yc-popover 
-      title="受控气泡卡片" 
+    <yc-popover
+      title="受控气泡卡片"
       content="这是一个受控的气泡卡片"
       :popup-visible="visible"
-      @popup-visible-change="visible = $event"
-    >
+      @popup-visible-change="visible = $event">
       <yc-button>受控气泡卡片</yc-button>
     </yc-popover>
-    
+
     <yc-button @click="visible = !visible">
       {{ visible ? '隐藏' : '显示' }}气泡卡片
     </yc-button>
@@ -167,9 +183,9 @@ Popover 气泡卡片是一种轻量级的弹出式信息展示组件，用于显
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 </script>
 ```
 
@@ -183,23 +199,26 @@ const visible = ref(false)
     <template #title>产品详情</template>
     <template #content>
       <div style="width: 300px;">
-        <yc-space direction="vertical" size="medium">
+        <yc-space
+          direction="vertical"
+          size="medium">
           <div>
-            <img 
+            <img
               src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png"
-              style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;"
-            />
+              style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px;" />
           </div>
-          
+
           <div>
-            <h4 style="margin: 0 0 8px 0;">YC Design 组件库</h4>
+            <h4 style="margin: 0 0 8px 0;">Yc Design 组件库</h4>
             <p style="margin: 0; color: #666; line-height: 1.5;">
               基于 Vue 3 和 TypeScript 构建的现代化企业级 UI 组件库，
               提供丰富的组件和完整的设计语言。
             </p>
           </div>
-          
-          <yc-space style="width: 100%;" align="center">
+
+          <yc-space
+            style="width: 100%;"
+            align="center">
             <yc-space>
               <yc-tag>Vue 3</yc-tag>
               <yc-tag>TypeScript</yc-tag>
@@ -208,9 +227,13 @@ const visible = ref(false)
             <div style="flex: 1;"></div>
             <span style="color: #f53f3f; font-weight: bold;">¥299</span>
           </yc-space>
-          
+
           <yc-space style="width: 100%;">
-            <yc-button type="primary" long>立即购买</yc-button>
+            <yc-button
+              type="primary"
+              long
+              >立即购买</yc-button
+            >
             <yc-button long>加入购物车</yc-button>
           </yc-space>
         </yc-space>
@@ -228,19 +251,21 @@ const visible = ref(false)
 ```vue
 <template>
   <yc-space>
-    <yc-popover 
-      title="自定义样式" 
+    <yc-popover
+      title="自定义样式"
       content="这是自定义样式的气泡卡片"
-      :content-style="{ backgroundColor: '#f0f9ff', color: '#1e40af', border: '1px solid #3b82f6' }"
-    >
+      :content-style="{
+        backgroundColor: '#f0f9ff',
+        color: '#1e40af',
+        border: '1px solid #3b82f6',
+      }">
       <yc-button>自定义背景</yc-button>
     </yc-popover>
-    
-    <yc-popover 
-      title="无箭头" 
+
+    <yc-popover
+      title="无箭头"
       content="这个气泡卡片没有箭头"
-      :arrow-style="{ display: 'none' }"
-    >
+      :arrow-style="{ display: 'none' }">
       <yc-button>无箭头</yc-button>
     </yc-popover>
   </yc-space>
@@ -253,14 +278,17 @@ const visible = ref(false)
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-space>
-      <yc-input placeholder="用户名" style="width: 200px;" />
-      <yc-popover 
-        title="用户名规则" 
+      <yc-input
+        placeholder="用户名"
+        style="width: 200px;" />
+      <yc-popover
+        title="用户名规则"
         trigger="click"
-        position="right"
-      >
+        position="right">
         <template #content>
           <div style="width: 250px;">
             <p style="margin: 0 0 8px 0;">用户名要求：</p>
@@ -272,23 +300,29 @@ const visible = ref(false)
             </ul>
           </div>
         </template>
-        <yc-button size="small" type="text">
+        <yc-button
+          size="small"
+          type="text">
           <yc-icon-info />
         </yc-button>
       </yc-popover>
     </yc-space>
-    
+
     <yc-space>
-      <yc-input type="password" placeholder="密码" style="width: 200px;" />
-      <yc-popover 
-        title="密码强度" 
+      <yc-input
+        type="password"
+        placeholder="密码"
+        style="width: 200px;" />
+      <yc-popover
+        title="密码强度"
         trigger="hover"
-        position="right"
-      >
+        position="right">
         <template #content>
           <div style="width: 200px;">
             <p style="margin: 0 0 8px 0;">密码强度要求：</p>
-            <yc-space direction="vertical" size="small">
+            <yc-space
+              direction="vertical"
+              size="small">
               <div style="color: #52c41a;">✓ 至少 8 个字符</div>
               <div style="color: #ff4d4f;">✗ 包含大小写字母</div>
               <div style="color: #ff4d4f;">✗ 包含数字</div>
@@ -296,7 +330,9 @@ const visible = ref(false)
             </yc-space>
           </div>
         </template>
-        <yc-button size="small" type="text">
+        <yc-button
+          size="small"
+          type="text">
           <yc-icon-exclamation />
         </yc-button>
       </yc-popover>
@@ -309,41 +345,41 @@ const visible = ref(false)
 
 ### Popover Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| popup-visible (v-model) | 弹出框是否可见 | `boolean` | `-` |
-| default-popup-visible | 弹出框默认是否可见 | `boolean` | `false` |
-| title | 气泡卡片标题 | `string` | `-` |
-| content | 气泡卡片内容 | `string` | `-` |
-| trigger | 触发方式 | `'hover' \| 'click' \| 'focus' \| 'contextMenu'` | `'hover'` |
-| position | 弹出位置 | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | `'top'` |
-| content-class | 内容区域类名 | `string \| string[]` | `-` |
-| content-style | 内容区域样式 | `CSSProperties` | `-` |
-| arrow-class | 箭头类名 | `string \| string[]` | `-` |
-| arrow-style | 箭头样式 | `CSSProperties` | `-` |
-| popup-container | 弹出框的挂载容器 | `string \| HTMLElement \| () => HTMLElement` | `'body'` |
-| trigger-props | Trigger 组件属性 | `TriggerProps` | `-` |
+| 参数名                  | 描述               | 类型                                                                                                     | 默认值    |
+| ----------------------- | ------------------ | -------------------------------------------------------------------------------------------------------- | --------- |
+| popup-visible (v-model) | 弹出框是否可见     | `boolean`                                                                                                | `-`       |
+| default-popup-visible   | 弹出框默认是否可见 | `boolean`                                                                                                | `false`   |
+| title                   | 气泡卡片标题       | `string`                                                                                                 | `-`       |
+| content                 | 气泡卡片内容       | `string`                                                                                                 | `-`       |
+| trigger                 | 触发方式           | `'hover' \| 'click' \| 'focus' \| 'contextMenu'`                                                         | `'hover'` |
+| position                | 弹出位置           | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | `'top'`   |
+| content-class           | 内容区域类名       | `string \| string[]`                                                                                     | `-`       |
+| content-style           | 内容区域样式       | `CSSProperties`                                                                                          | `-`       |
+| arrow-class             | 箭头类名           | `string \| string[]`                                                                                     | `-`       |
+| arrow-style             | 箭头样式           | `CSSProperties`                                                                                          | `-`       |
+| popup-container         | 弹出框的挂载容器   | `string \| HTMLElement \| () => HTMLElement`                                                             | `'body'`  |
+| trigger-props           | Trigger 组件属性   | `TriggerProps`                                                                                           | `-`       |
 
 ### Popover Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
+| 事件名               | 描述                     | 参数                 |
+| -------------------- | ------------------------ | -------------------- |
 | popup-visible-change | 弹出框显示状态改变时触发 | `(visible: boolean)` |
 
 ### Popover Slots
 
-| 插槽名 | 描述 |
-|--------|------|
-| default | 触发元素 |
-| title | 自定义标题 |
+| 插槽名  | 描述       |
+| ------- | ---------- |
+| default | 触发元素   |
+| title   | 自定义标题 |
 | content | 自定义内容 |
 
 ### Popover Methods
 
-| 方法名 | 描述 | 参数 |
-|--------|------|------|
-| show | 显示气泡卡片 | `-` |
-| hide | 隐藏气泡卡片 | `-` |
+| 方法名 | 描述         | 参数 |
+| ------ | ------------ | ---- |
+| show   | 显示气泡卡片 | `-`  |
+| hide   | 隐藏气泡卡片 | `-`  |
 
 ## 类型定义
 
@@ -367,7 +403,7 @@ export interface PopoverProps {
 ## 设计原则
 
 - **信息层次**：合理组织信息层次，突出重点内容
-- **交互友好**：提供多种触发方式，适应不同使用场景  
+- **交互友好**：提供多种触发方式，适应不同使用场景
 - **位置智能**：根据触发元素位置智能调整弹出方向
 - **内容丰富**：支持文本、图片、按钮等多种内容类型
 

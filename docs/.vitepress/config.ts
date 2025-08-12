@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: 'YC Design Vue',
+    siteTitle: 'Yc Design Vue',
     nav: [
       { text: '指南', link: '/guide/' },
       { text: '组件', link: '/components/' },
@@ -164,7 +164,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present YC Design Vue',
+      copyright: 'Copyright © 2024-present Yc Design Vue',
     },
     search: {
       provider: 'local',

@@ -1,10 +1,11 @@
 # 组件总览
 
-YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种场景。所有组件都使用 `yc-` 前缀，确保与您的项目不会产生命名冲突。
+Yc Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种场景。所有组件都使用 `yc-` 前缀，确保与您的项目不会产生命名冲突。
 
 ## 通用组件
 
 ### Button 按钮
+
 用于开始一个即时操作。
 
 ```vue
@@ -13,6 +14,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Icon 图标
+
 提供了一套常用的图标集合。
 
 ```vue
@@ -22,6 +24,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Typography 排版
+
 用于展示标题、段落、文本等。
 
 ```vue
@@ -32,6 +35,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ## 布局组件
 
 ### Grid 栅格
+
 24 栅格系统，快速创建页面布局。
 
 ```vue
@@ -42,6 +46,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Layout 布局
+
 页面整体布局框架。
 
 ```vue
@@ -53,6 +58,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Space 间距
+
 设置组件之间的间距。
 
 ```vue
@@ -63,6 +69,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Divider 分割线
+
 区隔内容的分割线。
 
 ```vue
@@ -73,6 +80,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ## 导航组件
 
 ### Menu 导航菜单
+
 为网站提供导航功能的菜单。
 
 ```vue
@@ -84,6 +92,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Tabs 标签页
+
 选项卡切换组件。
 
 ```vue
@@ -94,6 +103,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Breadcrumb 面包屑
+
 显示当前页面在系统层级结构中的位置。
 
 ```vue
@@ -105,18 +115,15 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Pagination 分页
+
 采用分页的形式分隔长列表。
 
 ```vue
-<yc-pagination
-  :total="100"
-  :current="1"
-  :page-size="10"
-  show-total
-/>
+<yc-pagination :total="100" :current="1" :page-size="10" show-total />
 ```
 
 ### Steps 步骤条
+
 引导用户按照流程完成任务。
 
 ```vue
@@ -128,6 +135,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Anchor 锚点
+
 用于跳转到页面指定位置。
 
 ```vue
@@ -140,6 +148,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ## 数据录入
 
 ### Input 输入框
+
 通过鼠标或键盘输入字符。
 
 ```vue
@@ -150,6 +159,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Select 选择器
+
 下拉选择器。
 
 ```vue
@@ -160,6 +170,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Checkbox 复选框
+
 在一组可选项中进行多项选择。
 
 ```vue
@@ -171,6 +182,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Radio 单选框
+
 在一组可选项中进行单项选择。
 
 ```vue
@@ -182,6 +194,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Switch 开关
+
 开关选择器。
 
 ```vue
@@ -190,6 +203,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Slider 滑块
+
 滑动输入条。
 
 ```vue
@@ -198,6 +212,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Rate 评分
+
 评分组件。
 
 ```vue
@@ -206,17 +221,15 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Cascader 级联选择器
+
 级联选择器。
 
 ```vue
-<yc-cascader
-  v-model="value"
-  :options="options"
-  placeholder="请选择"
-/>
+<yc-cascader v-model="value" :options="options" placeholder="请选择" />
 ```
 
 ### DatePicker 日期选择器
+
 日期选择器。
 
 ```vue
@@ -225,6 +238,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### TimePicker 时间选择器
+
 时间选择器。
 
 ```vue
@@ -232,6 +246,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### ColorPicker 颜色选择器
+
 颜色选择器。
 
 ```vue
@@ -239,19 +254,20 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Transfer 穿梭框
+
 双栏穿梭选择框。
 
 ```vue
 <yc-transfer
   v-model="targetKeys"
   :data="data"
-  :titles="['源数据', '目标数据']"
-/>
+  :titles="['源数据', '目标数据']" />
 ```
 
 ## 数据展示
 
 ### Table 表格
+
 展示行列数据。
 
 ```vue
@@ -259,6 +275,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### List 列表
+
 展示列表数据。
 
 ```vue
@@ -275,6 +292,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Card 卡片
+
 通用卡片容器。
 
 ```vue
@@ -284,6 +302,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Descriptions 描述列表
+
 成组展示多个只读字段。
 
 ```vue
@@ -294,6 +313,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Empty 空状态
+
 空状态时的展示占位图。
 
 ```vue
@@ -301,6 +321,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Progress 进度条
+
 展示操作的当前进度。
 
 ```vue
@@ -309,6 +330,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Skeleton 骨架屏
+
 在需要等待加载内容时提供一个占位图形组合。
 
 ```vue
@@ -316,6 +338,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Statistic 统计数值
+
 展示统计数值。
 
 ```vue
@@ -323,6 +346,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Tag 标签
+
 进行标记和分类的小标签。
 
 ```vue
@@ -331,6 +355,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Timeline 时间轴
+
 垂直展示的时间流信息。
 
 ```vue
@@ -342,6 +367,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Badge 徽标
+
 出现在按钮、图标旁的数字或状态标记。
 
 ```vue
@@ -351,6 +377,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Avatar 头像
+
 用来代表用户或事物。
 
 ```vue
@@ -359,19 +386,17 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Image 图片
+
 图片容器。
 
 ```vue
-<yc-image
-  width="200"
-  src="https://example.com/image.jpg"
-  alt="示例图片"
-/>
+<yc-image width="200" src="https://example.com/image.jpg" alt="示例图片" />
 ```
 
 ## 反馈组件
 
 ### Modal 对话框
+
 模态对话框。
 
 ```vue
@@ -381,6 +406,7 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Drawer 抽屉
+
 从屏幕边缘滑出的抽屉面板。
 
 ```vue
@@ -390,51 +416,52 @@ YC Design Vue 提供了丰富的组件，涵盖企业级应用中常见的各种
 ```
 
 ### Message 全局提示
+
 全局展示操作反馈信息。
 
 ```vue
 <yc-button @click="showMessage">显示消息</yc-button>
 
 <script setup>
-import { Message } from 'yc-design-vue'
+import { Message } from 'yc-design-vue';
 
 const showMessage = () => {
-  Message.success('操作成功')
-}
+  Message.success('操作成功');
+};
 </script>
 ```
 
 ### Notification 通知提醒
+
 全局展示通知提醒信息。
 
 ```vue
 <yc-button @click="showNotification">显示通知</yc-button>
 
 <script setup>
-import { Notification } from 'yc-design-vue'
+import { Notification } from 'yc-design-vue';
 
 const showNotification = () => {
   Notification.info({
     title: '通知标题',
-    content: '通知内容'
-  })
-}
+    content: '通知内容',
+  });
+};
 </script>
 ```
 
 ### Popconfirm 气泡确认框
+
 点击元素时弹出确认框。
 
 ```vue
-<yc-popconfirm
-  content="确定要删除吗？"
-  @ok="handleDelete"
->
+<yc-popconfirm content="确定要删除吗？" @ok="handleDelete">
   <yc-button>删除</yc-button>
 </yc-popconfirm>
 ```
 
 ### Popover 气泡卡片
+
 弹出层。
 
 ```vue
@@ -444,6 +471,7 @@ const showNotification = () => {
 ```
 
 ### Tooltip 文字提示
+
 简单的文字提示气泡框。
 
 ```vue
@@ -453,6 +481,7 @@ const showNotification = () => {
 ```
 
 ### Alert 警告
+
 警告提示，展现需要关注的信息。
 
 ```vue
@@ -461,17 +490,18 @@ const showNotification = () => {
 ```
 
 ### Result 结果
+
 用于反馈一系列操作任务的处理结果。
 
 ```vue
 <yc-result
   status="success"
   title="提交成功"
-  sub-title="请耐心等待，我们会尽快处理您的请求"
-/>
+  sub-title="请耐心等待，我们会尽快处理您的请求" />
 ```
 
 ### Spin 加载中
+
 页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。
 
 ```vue
@@ -482,6 +512,7 @@ const showNotification = () => {
 ## 其他组件
 
 ### Affix 固钉
+
 将页面元素钉在可视范围。
 
 ```vue
@@ -491,6 +522,7 @@ const showNotification = () => {
 ```
 
 ### BackTop 回到顶部
+
 返回页面顶部的操作按钮。
 
 ```vue
@@ -499,6 +531,7 @@ const showNotification = () => {
 ```
 
 ### ConfigProvider 全局配置
+
 为组件库提供统一的全局化配置。
 
 ```vue
@@ -508,6 +541,7 @@ const showNotification = () => {
 ```
 
 ### ResizeBox 调整尺寸
+
 可调整尺寸的容器。
 
 ```vue
@@ -518,6 +552,7 @@ const showNotification = () => {
 ```
 
 ### Scrollbar 滚动条
+
 自定义滚动条。
 
 ```vue
@@ -527,6 +562,7 @@ const showNotification = () => {
 ```
 
 ### Split 分割面板
+
 可拖拽的分割面板。
 
 ```vue
@@ -537,22 +573,21 @@ const showNotification = () => {
 ```
 
 ### Trigger 触发器
+
 下拉菜单、气泡确认框、文字提示等组件的触发器。
 
 ```vue
-<yc-trigger
-  popup-visible
-  popup="触发内容"
->
+<yc-trigger popup-visible popup="触发内容">
   <yc-button>触发器</yc-button>
 </yc-trigger>
 ```
 
 ### Watermark 水印
+
 为页面添加水印。
 
 ```vue
-<yc-watermark content="YC Design Vue">
+<yc-watermark content="Yc Design Vue">
   <div>页面内容</div>
 </yc-watermark>
 ```
@@ -567,4 +602,4 @@ const showNotification = () => {
 
 ## 快速开始
 
-要开始使用这些组件，请参考 [快速上手](/guide/) 指南，了解如何安装和配置 YC Design Vue。
+要开始使用这些组件，请参考 [快速上手](/guide/) 指南，了解如何安装和配置 Yc Design Vue。
