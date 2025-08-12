@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
 
 export default defineConfig({
-  title: 'YC Design Vue',
+  title: 'Yc Design Vue',
   description: '基于 Vue 3 和 TypeScript 构建的现代化企业级 UI 组件库',
   lang: 'zh-CN',
   head: [
