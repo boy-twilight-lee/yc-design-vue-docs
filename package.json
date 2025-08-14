@@ -12,5 +12,8 @@
     "@types/node": "^20.12.8",
     "vitepress": "^1.2.11",
     "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "yc-design-vue": "^1.0.3"
   }
 }
