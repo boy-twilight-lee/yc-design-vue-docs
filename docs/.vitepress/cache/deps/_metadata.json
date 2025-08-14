@@ -1,49 +1,49 @@
 {
-  "hash": "15eb5d3a",
-  "configHash": "2229eee5",
-  "lockfileHash": "1bdd1dd0",
-  "browserHash": "d0f5df39",
+  "hash": "e96eebcc",
+  "configHash": "7234a44b",
+  "lockfileHash": "f3a24391",
+  "browserHash": "37c9eacf",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "768ccac6",
+      "fileHash": "9f46d040",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "00cf1be2",
+      "fileHash": "01dfea01",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "eafa20f6",
+      "fileHash": "569a30e7",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "94e3af58",
+      "fileHash": "5195526b",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "666029d4",
+      "fileHash": "0bedb8ab",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "0c662d63",
+      "fileHash": "fd94c685",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "81afc525",
+    "yc-design-vue": {
+      "src": "../../../../node_modules/yc-design-vue/es/index.js",
+      "file": "yc-design-vue.js",
+      "fileHash": "7f0cc602",
       "needsInterop": false
     }
   },

@@ -2,3 +2,10 @@
   height: 50px;
   width: 50px;
 }
+
+.cell-demo {
+  margin-top: 24px;
+  padding: 48px;
+  border: 1px solid rgb(229, 230, 235);
+  border-radius: 2px 2px 0 0;
+}

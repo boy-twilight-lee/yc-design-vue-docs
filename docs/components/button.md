@@ -1,3 +1,7 @@
+好的，没问题。我已经为您将所有未被包裹的代码块都添加了 `<details>` 和 `<summary>` 标签，以实现可折叠的代码块效果。
+
+以下是修改后的完整 Markdown 内容：
+
 # Button 按钮
 
 ## 介绍
@@ -10,9 +14,8 @@
 
 按钮有五种类型：主按钮、次按钮、虚线按钮、文本按钮和链接按钮。主按钮在同一个操作区域最多出现一次。
 
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
+<div class="cell-demo">
+<yc-space direction="vertical" size="large">
     <yc-space>
       <yc-button type="primary">主要按钮</yc-button>
       <yc-button>默认按钮</yc-button>
@@ -25,13 +28,62 @@
       <yc-button type="primary" status="warning">警告按钮</yc-button>
       <yc-button type="primary" status="danger">危险按钮</yc-button>
     </yc-space>
+</yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-space>
+      <yc-button type="primary">主要按钮</yc-button>
+      <yc-button>默认按钮</yc-button>
+      <yc-button type="dashed">虚线按钮</yc-button>
+      <yc-button type="outline">描边按钮</yc-button>
+      <yc-button type="text">文本按钮</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="success"
+        >成功按钮</yc-button
+      >
+      <yc-button
+        type="primary"
+        status="warning"
+        >警告按钮</yc-button
+      >
+      <yc-button
+        type="primary"
+        status="danger"
+        >危险按钮</yc-button
+      >
+    </yc-space>
   </yc-space>
 </template>
 ```
 
+</details>
+
 ### 按钮尺寸
 
-按钮有三种尺寸：大、中、小。默认为中等尺寸。
+按钮有三种尺寸：大、中、小、迷你。默认为中等尺寸。
+
+<div class="cell-demo">
+  <yc-space>
+    <yc-button size="large">大按钮</yc-button>
+    <yc-button>中按钮</yc-button>
+    <yc-button size="small">小按钮</yc-button>
+     <yc-button size="mini">迷你按钮</yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -43,10 +95,22 @@
 </template>
 ```
 
+</details>
+
 ### 按钮形状
 
 按钮有三种形状：方形、圆角、圆形。
 
+<div class="cell-demo">
+  <yc-space>
+    <yc-button shape="square">方形按钮</yc-button>
+    <yc-button>圆角按钮</yc-button>
+    <yc-button shape="circle">圆</yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space>
@@ -56,11 +120,23 @@
   </yc-space>
 </template>
 ```
+</details>
 
 ### 按钮状态
 
 按钮有四种状态：正常、加载中、禁用、危险。
 
+<div class="cell-demo">
+  <yc-space>
+    <yc-button>正常按钮</yc-button>
+    <yc-button loading>加载中</yc-button>
+    <yc-button disabled>禁用按钮</yc-button>
+    <yc-button status="danger">危险按钮</yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space>
@@ -72,31 +148,80 @@
 </template>
 ```
 
+</details>
+
 ### 按钮组
 
 按钮组用于将多个按钮组合在一起，形成一组相关的操作。
 
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
+<div class="cell-demo">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-button-group>
       <yc-button>按钮1</yc-button>
       <yc-button>按钮2</yc-button>
       <yc-button>按钮3</yc-button>
     </yc-button-group>
-    
     <yc-button-group>
       <yc-button type="primary">按钮1</yc-button>
       <yc-button type="primary">按钮2</yc-button>
       <yc-button type="primary">按钮3</yc-button>
     </yc-button-group>
   </yc-space>
-</template>
-```
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+````vue
+<template>
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-button-group>
+      <yc-button>按钮1</yc-button>
+      <yc-button>按钮2</yc-button>
+      <yc-button>按钮3</yc-button>
+    </yc-button-group>
+
+    <yc-button-group>
+      <yc-button type="primary">按钮1</yc-button>
+      <yc-button type="primary">按钮2</yc-button>
+      <yc-button type="primary">按钮3</yc-button>
+    </yc-button-group>
+
+  </yc-space>
+</template>```
+</details>
 
 ### 图标按钮
 
 按钮可以包含图标，图标可以放在按钮的左侧或右侧。
+
+<div class="cell-demo">
+  <yc-space>
+    <yc-button>
+      <template #icon>
+        <yc-icon-search />
+      </template>
+      搜索
+    </yc-button>
+    <yc-button type="primary">
+      上传
+      <template #icon>
+        <yc-icon-upload />
+      </template>
+    </yc-button>
+    <yc-button shape="circle">
+      <template #icon>
+        <yc-icon-settings />
+      </template>
+    </yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -107,14 +232,14 @@
       </template>
       搜索
     </yc-button>
-    
+
     <yc-button type="primary">
       上传
       <template #icon>
         <yc-icon-upload />
       </template>
     </yc-button>
-    
+
     <yc-button shape="circle">
       <template #icon>
         <yc-icon-settings />
@@ -124,68 +249,98 @@
 </template>
 ```
 
+</details>
+
 ### 长按钮
 
 长按钮会占满父容器的宽度。
 
+<div class='cell-demo'>
+  <yc-space
+    direction="vertical"
+    size="large"
+    style="width:100%;">
+    <yc-button long>长按钮</yc-button>
+    <yc-button
+      type="primary"
+      long
+      >主要长按钮</yc-button
+    >
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-button long>长按钮</yc-button>
-    <yc-button type="primary" long>主要长按钮</yc-button>
+    <yc-button
+      type="primary"
+      long
+      >主要长按钮</yc-button
+    >
   </yc-space>
 </template>
 ```
+
+</details>
 
 ## API
 
 ### Button Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| type | 按钮的类型 | `'primary' \| 'secondary' \| 'dashed' \| 'outline' \| 'text'` | `-` |
-| status | 按钮的状态 | `'normal' \| 'success' \| 'warning' \| 'danger'` | `'normal'` |
-| size | 按钮的尺寸 | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'` |
-| shape | 按钮的形状 | `'square' \| 'round' \| 'circle'` | `'round'` |
-| long | 按钮是否撑满父容器宽度 | `boolean` | `false` |
-| loading | 按钮是否处于加载状态 | `boolean` | `false` |
-| disabled | 按钮是否禁用 | `boolean` | `false` |
-| html-type | 按钮的 HTML 类型 | `'button' \| 'submit' \| 'reset'` | `'button'` |
-| href | 链接按钮的地址 | `string` | `-` |
+| 参数名    | 描述                   | 类型                                                          | 默认值     |
+| --------- | ---------------------- | ------------------------------------------------------------- | ---------- |
+| type      | 按钮的类型             | `'primary' \| 'secondary' \| 'dashed' \| 'outline' \| 'text'` | `-`        |
+| status    | 按钮的状态             | `'normal' \| 'success' \| 'warning' \| 'danger'`              | `'normal'` |
+| size      | 按钮的尺寸             | `'mini' \| 'small' \| 'medium' \| 'large'`                    | `'medium'` |
+| shape     | 按钮的形状             | `'square' \| 'round' \| 'circle'`                             | `'round'`  |
+| long      | 按钮是否撑满父容器宽度 | `boolean`                                                     | `false`    |
+| loading   | 按钮是否处于加载状态   | `boolean`                                                     | `false`    |
+| disabled  | 按钮是否禁用           | `boolean`                                                     | `false`    |
+| html-type | 按钮的 HTML 类型       | `'button' \| 'submit' \| 'reset'`                             | `'button'` |
+| href      | 链接按钮的地址         | `string`                                                      | `-`        |
 
 ### Button Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
-| click | 点击按钮时触发 | `(ev: MouseEvent)` |
-| mousedown | 鼠标按下时触发 | `(ev: MouseEvent)` |
-| mouseup | 鼠标抬起时触发 | `(ev: MouseEvent)` |
-| dblclick | 双击时触发 | `(ev: MouseEvent)` |
+| 事件名      | 描述           | 参数               |
+| ----------- | -------------- | ------------------ |
+| click       | 点击按钮时触发 | `(ev: MouseEvent)` |
+| mousedown   | 鼠标按下时触发 | `(ev: MouseEvent)` |
+| mouseup     | 鼠标抬起时触发 | `(ev: MouseEvent)` |
+| dblclick    | 双击时触发     | `(ev: MouseEvent)` |
 | contextmenu | 右键点击时触发 | `(ev: MouseEvent)` |
 
 ### Button Slots
 
-| 插槽名 | 描述 |
-|--------|------|
+| 插槽名  | 描述       |
+| ------- | ---------- |
 | default | 按钮的内容 |
-| icon | 按钮的图标 |
+| icon    | 按钮的图标 |
 
 ### ButtonGroup Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| type | 按钮组的类型 | `'primary' \| 'secondary' \| 'dashed' \| 'outline' \| 'text'` | `-` |
-| status | 按钮组的状态 | `'normal' \| 'success' \| 'warning' \| 'danger'` | `'normal'` |
-| size | 按钮组的尺寸 | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'` |
-| disabled | 按钮组是否禁用 | `boolean` | `false` |
+| 参数名   | 描述           | 类型                                                          | 默认值     |
+| -------- | -------------- | ------------------------------------------------------------- | ---------- |
+| type     | 按钮组的类型   | `'primary' \| 'secondary' \| 'dashed' \| 'outline' \| 'text'` | `-`        |
+| status   | 按钮组的状态   | `'normal' \| 'success' \| 'warning' \| 'danger'`              | `'normal'` |
+| size     | 按钮组的尺寸   | `'mini' \| 'small' \| 'medium' \| 'large'`                    | `'medium'` |
+| disabled | 按钮组是否禁用 | `boolean`                                                     | `false`    |
 
 ### ButtonGroup Slots
 
-| 插槽名 | 描述 |
-|--------|------|
+| 插槽名  | 描述         |
+| ------- | ------------ |
 | default | 按钮组的内容 |
 
 ## 类型定义
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```typescript
 export interface ButtonProps {
@@ -215,9 +370,16 @@ export interface ButtonSlots {
 
 export type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
 export type ButtonShape = 'square' | 'circle' | 'round';
-export type ButtonType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
+export type ButtonType =
+  | 'primary'
+  | 'secondary'
+  | 'dashed'
+  | 'outline'
+  | 'text';
 export type ButtonHtmlType = 'button' | 'reset' | 'submit';
 ```
+
+</details>
 
 ## 设计原则
 
