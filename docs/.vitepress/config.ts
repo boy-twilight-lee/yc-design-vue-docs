@@ -28,9 +28,9 @@ export default defineConfig({
           text: '基础',
           items: [
             { text: '快速上手', link: '/guide/' },
-            // { text: '安装', link: '/guide/installation' },
-            // { text: '按需引入', link: '/guide/import' },
-            // { text: '主题定制', link: '/guide/theme' },
+            { text: '安装', link: '/guide/installation' },
+            { text: '按需引入', link: '/guide/import' },
+            { text: '主题定制', link: '/guide/theme' },
           ],
         },
       ],
