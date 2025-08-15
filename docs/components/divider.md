@@ -1,338 +1,278 @@
 # Divider 分割线
 
-区隔内容的分割线。
+划分内容区域，对模块做分隔。
 
-## 何时使用
+---
 
-- 对不同章节的文本段落进行分割
-- 对行内文本/元素进行分割
-- 对列表项进行分割
+### 基本用法
 
-## 基础用法
+对不同章节的文本段落进行分割，默认为水平分割线，可在中间加入文字。
 
-最简单的用法，水平分割线。
-
-```vue
-<template>
-  <div>
-    <p>这是一段文本内容</p>
-    <YcDivider />
-    <p>这是另一段文本内容</p>
+<div class="cell-demo">
+  <div class="divider-demo">
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider />
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider dashed />
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider :size="2" style="border-bottom-style: dotted" />
+    <p>A design is a plan or specification for the construction of an object.</p>
   </div>
-</template>
-```
-
-## 带文字的分割线
-
-通过插槽添加分割线文字。
-
-```vue
-<template>
-  <div>
-    <p>这是一段文本内容</p>
-    <YcDivider>分割线文字</YcDivider>
-    <p>这是另一段文本内容</p>
-  </div>
-</template>
-```
-
-## 文字位置
-
-通过 `orientation` 属性设置文字位置。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcDivider orientation="left">左侧文字</YcDivider>
-    <YcDivider orientation="center">居中文字</YcDivider>
-    <YcDivider orientation="right">右侧文字</YcDivider>
-  </YcSpace>
-</template>
-```
-
-## 垂直分割线
-
-通过 `direction` 属性设置垂直分割线。
-
-```vue
-<template>
-  <div style="display: flex; align-items: center;">
-    <span>文字</span>
-    <YcDivider direction="vertical" />
-    <span>文字</span>
-    <YcDivider direction="vertical" />
-    <span>文字</span>
-  </div>
-</template>
-```
-
-## 分割线类型
-
-通过 `type` 属性设置分割线类型。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcDivider type="solid">实线</YcDivider>
-    <YcDivider type="dashed">虚线</YcDivider>
-    <YcDivider type="dotted">点线</YcDivider>
-    <YcDivider type="double">双线</YcDivider>
-  </YcSpace>
-</template>
-```
-
-## 分割线尺寸
-
-通过 `size` 属性设置分割线粗细。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcDivider :size="1">1px 分割线</YcDivider>
-    <YcDivider :size="2">2px 分割线</YcDivider>
-    <YcDivider :size="4">4px 分割线</YcDivider>
-    <YcDivider :size="8">8px 分割线</YcDivider>
-  </YcSpace>
-</template>
-```
-
-## 自定义边距
-
-通过 `margin` 属性自定义分割线的边距。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcDivider :margin="8">小边距</YcDivider>
-    <YcDivider :margin="16">中等边距</YcDivider>
-    <YcDivider :margin="32">大边距</YcDivider>
-    <YcDivider :margin="48">超大边距</YcDivider>
-  </YcSpace>
-</template>
-```
-
-## 垂直分割线边距
-
-垂直分割线的边距会自动调整。
-
-```vue
-<template>
-  <div style="display: flex; align-items: center;">
-    <span>文字</span>
-    <YcDivider direction="vertical" :margin="8" />
-    <span>文字</span>
-    <YcDivider direction="vertical" :margin="16" />
-    <span>文字</span>
-    <YcDivider direction="vertical" :margin="24" />
-    <span>文字</span>
-  </div>
-</template>
-```
-
-## 自定义样式
-
-通过插槽自定义分割线内容。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcDivider>
-      <YcIcon-star style="color: #f50; margin-right: 8px;" />
-      重要提示
-    </YcDivider>
-    
-    <YcDivider>
-      <YcTag color="blue">标签</YcTag>
-      分割线
-    </YcDivider>
-    
-    <YcDivider>
-      <YcButton size="small" type="primary">按钮</YcButton>
-    </YcDivider>
-  </YcSpace>
-</template>
-```
-
-## 列表分割
-
-在列表中使用分割线。
-
-```vue
-<template>
-  <div>
-    <div class="list-item">列表项 1</div>
-    <YcDivider :margin="0" />
-    <div class="list-item">列表项 2</div>
-    <YcDivider :margin="0" />
-    <div class="list-item">列表项 3</div>
-    <YcDivider :margin="0" />
-    <div class="list-item">列表项 4</div>
-  </div>
-</template>
-
-<style scoped>
-.list-item {
-  padding: 12px 0;
-}
-</style>
-```
-
-## 表单分割
-
-在表单中使用分割线。
-
-```vue
-<template>
-  <div>
-    <YcForm layout="vertical">
-      <YcFormItem label="基本信息">
-        <YcInput placeholder="请输入姓名" />
-        <YcInput placeholder="请输入邮箱" />
-      </YcFormItem>
-      
-      <YcDivider>详细信息</YcDivider>
-      
-      <YcFormItem label="地址信息">
-        <YcInput placeholder="请输入地址" />
-        <YcInput placeholder="请输入城市" />
-      </YcFormItem>
-    </YcForm>
-  </div>
-</template>
-```
-
-## 卡片分割
-
-在卡片中使用分割线。
-
-```vue
-<template>
-  <YcCard title="用户信息">
-    <div style="padding: 16px 0;">
-      <div>用户名：张三</div>
-      <div>邮箱：zhangsan@example.com</div>
-    </div>
-    
-    <YcDivider :margin="0" />
-    
-    <div style="padding: 16px 0;">
-      <div>手机号：13800138000</div>
-      <div>地址：北京市朝阳区</div>
-    </div>
-  </YcCard>
-</template>
-```
-
-## 响应式分割线
-
-结合响应式设计使用分割线。
-
-```vue
-<template>
-  <div>
-    <div class="content-section">
-      <h3>第一部分</h3>
-      <p>这是第一部分的内容...</p>
-    </div>
-    
-    <YcDivider class="responsive-divider" />
-    
-    <div class="content-section">
-      <h3>第二部分</h3>
-      <p>这是第二部分的内容...</p>
-    </div>
-  </div>
-</template>
-
-<style scoped>
-.content-section {
-  margin: 24px 0;
-}
-
-.responsive-divider {
-  /* 在小屏幕上隐藏分割线 */
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-</style>
-```
-
-## 完整示例
-
-一个完整的分割线使用示例。
-
-```vue
-<template>
-  <div class="page-content">
-    <h1>页面标题</h1>
-    <p>这是页面的介绍内容...</p>
-    
-    <YcDivider>主要内容</YcDivider>
-    
-    <div class="content-grid">
-      <div class="content-item">
-        <h3>内容块 1</h3>
-        <p>这是第一个内容块...</p>
-      </div>
-      
-      <YcDivider direction="vertical" />
-      
-      <div class="content-item">
-        <h3>内容块 2</h3>
-        <p>这是第二个内容块...</p>
+  <div class="divider-demo" style="marginTop: 48px">
+    <div class="flex-box">
+      <span class="avatar"><IconImage style="width:16px;height:16px;"/></span>
+      <div class="content">
+        <yc-typography-title :heading="6">Image</yc-typography-title>
+        May 4, 2010
       </div>
     </div>
-    
-    <YcDivider type="dashed">分隔区域</YcDivider>
-    
-    <div class="footer-content">
-      <p>这是页脚内容...</p>
+    <yc-divider class="half-divider" />
+    <div class="flex-box">
+      <span class="avatar"><IconUser style="width:16px;height:16px;"/></span>
+      <div class="content">
+        <yc-typography-title :heading="6">Avatar</yc-typography-title>
+        May 4, 2010
+      </div>
+    </div>
+    <yc-divider class="half-divider" />
+    <div class="flex-box">
+      <span class="avatar"><IconPen style="width:16px;height:16px;" /></span>
+      <div class="content">
+        <yc-typography-title :heading="6">Icon</yc-typography-title>
+        May 4, 2010
+      </div>
     </div>
   </div>
-</template>
+</div>
 
 <style scoped>
-.page-content {
-  max-width: 800px;
-  margin: 0 auto;
+.divider-demo {
+  box-sizing: border-box;
+  width: 560px;
   padding: 24px;
+  border: 30px solid rgb(242, 243, 245);
 }
-
-.content-grid {
+.half-divider {
+  left: 55px;
+  width: calc(100% - 55px);
+  min-width: auto;
+  margin: 16px 0;
+}
+.flex-box {
   display: flex;
-  gap: 24px;
-  margin: 24px 0;
+  align-items: center;
+  justify-content: center;
 }
-
-.content-item {
+.flex-box .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  color: rgb(78, 89, 105);
+  font-size: 16px;
+  background-color: rgb(229, 230, 235);
+  border-radius: 50%;
+}
+.flex-box .content {
   flex: 1;
+  color: rgb(78, 89, 105);
+  font-size: 12px;
+  line-height: 20px;
 }
+</style>
 
-.footer-content {
-  margin-top: 24px;
-  text-align: center;
-  color: #666;
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div class="cell-demo">
+    <div class="divider-demo">
+      <p>
+        A design is a plan or specification for the construction of an object.
+      </p>
+      <yc-divider />
+      <p>
+        A design is a plan or specification for the construction of an object.
+      </p>
+      <yc-divider dashed />
+      <p>
+        A design is a plan or specification for the construction of an object.
+      </p>
+      <yc-divider
+        :size="2"
+        style="border-bottom-style: dotted" />
+      <p>
+        A design is a plan or specification for the construction of an object.
+      </p>
+    </div>
+    <div
+      class="divider-demo"
+      style="marginTop: 48px">
+      <div class="flex-box">
+        <span class="avatar"
+          ><IconImage style="width:16px;height:16px;"
+        /></span>
+        <div class="content">
+          <yc-typography-title :heading="6">Image</yc-typography-title>
+          May 4, 2010
+        </div>
+      </div>
+      <yc-divider class="half-divider" />
+      <div class="flex-box">
+        <span class="avatar"><IconUser style="width:16px;height:16px;" /></span>
+        <div class="content">
+          <yc-typography-title :heading="6">Avatar</yc-typography-title>
+          May 4, 2010
+        </div>
+      </div>
+      <yc-divider class="half-divider" />
+      <div class="flex-box">
+        <span class="avatar"><IconPen style="width:16px;height:16px;" /></span>
+        <div class="content">
+          <yc-typography-title :heading="6">Icon</yc-typography-title>
+          May 4, 2010
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.divider-demo {
+  box-sizing: border-box;
+  width: 560px;
+  padding: 24px;
+  border: 30px solid rgb(242, 243, 245);
+}
+.half-divider {
+  left: 55px;
+  width: calc(100% - 55px);
+  min-width: auto;
+  margin: 16px 0;
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-box .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  color: rgb(78, 89, 105);
+  font-size: 16px;
+  background-color: rgb(229, 230, 235);
+  border-radius: 50%;
+}
+.flex-box .content {
+  flex: 1;
+  color: rgb(78, 89, 105);
+  font-size: 12px;
+  line-height: 20px;
 }
 </style>
 ```
+
+</details>
+
+### 带有文字的分割线
+
+通过 <yc-tag>orientation</yc-tag> 为分割线添加描述文字。
+
+<div class="cell-demo">
+  <div class="divider-demo">
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider orientation="left">Text</yc-divider>
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider orientation="center">Text</yc-divider>
+    <p>A design is a plan or specification for the construction of an object.</p>
+    <yc-divider orientation="right">Text</yc-divider>
+    <yc-divider :margin="10">
+      <icon-star style="width:14px;height:14px;" />
+    </yc-divider>
+  </div>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div class="divider-demo">
+    <p>
+      A design is a plan or specification for the construction of an object.
+    </p>
+    <yc-divider orientation="left">Text</yc-divider>
+    <p>
+      A design is a plan or specification for the construction of an object.
+    </p>
+    <yc-divider orientation="center">Text</yc-divider>
+    <p>
+      A design is a plan or specification for the construction of an object.
+    </p>
+    <yc-divider orientation="right">Text</yc-divider>
+    <yc-divider :margin="10">
+      <icon-star />
+    </yc-divider>
+  </div>
+</template>
+```
+
+</details>
+
+### 竖直分割线
+
+指定 <yc-tag>direction</yc-tag> 为 <yc-tag>vertical</yc-tag> 即可使用竖直分割线。竖直分割线不能带文字。
+
+<div class="cell-demo">
+  <div class="divider-demo">
+    <span>Item 1</span>
+    <yc-divider direction="vertical" />
+    <span>Item 2</span>
+    <yc-divider direction="vertical" />
+    <span>Item 3</span>
+  </div>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div class="divider-demo">
+    <span>Item 1</span>
+    <yc-divider direction="vertical" />
+    <span>Item 2</span>
+    <yc-divider direction="vertical" />
+    <span>Item 3</span>
+  </div>
+</template>
+```
+
+</details>
 
 ## API
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| direction | 分割线方向 | `Direction` | `'horizontal'` |
-| orientation | 分割线文字位置 | `Orientation` | `'center'` |
-| type | 分割线类型 | `DividerType` | `'solid'` |
-| size | 分割线粗细 | `number` | `1` |
-| margin | 分割线边距 | `number` | - |
+| 参数        | 说明           | 类型          | 默认值         |
+| ----------- | -------------- | ------------- | -------------- |
+| direction   | 分割线方向     | `Direction`   | `'horizontal'` |
+| orientation | 分割线文字位置 | `Orientation` | `'center'`     |
+| type        | 分割线类型     | `DividerType` | `'solid'`      |
+| size        | 分割线粗细     | `number`      | `1`            |
+| margin      | 分割线边距     | `number`      | -              |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明           |
+| ------- | -------------- |
 | default | 分割线文字内容 |
 
 ### Types

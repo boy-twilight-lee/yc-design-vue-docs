@@ -46,10 +46,10 @@ export default defineConfig({
         {
           text: '布局',
           items: [
+            { text: 'Divider 分割线', link: '/components/divider' },
             { text: 'Grid 栅格', link: '/components/grid' },
             { text: 'Layout 布局', link: '/components/layout' },
             { text: 'Space 间距', link: '/components/space' },
-            { text: 'Divider 分割线', link: '/components/divider' },
           ],
         },
         {
