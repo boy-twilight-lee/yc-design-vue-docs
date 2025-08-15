@@ -540,7 +540,7 @@ const handleClick2 = () => {
   </yc-space>
 </div>
 
-<style scoped lang="less">
+<style scoped>
 .wrapper{
   width: 400px;
   padding: 20px;

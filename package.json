@@ -10,8 +10,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
-    "less": "^4.4.0",
-    "less-loader": "^12.3.0",
     "vitepress": "^1.2.11",
     "vue": "^3.3.4"
   },
