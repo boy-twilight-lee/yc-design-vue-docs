@@ -1,297 +1,319 @@
 # Link 链接
 
-## 介绍
-
 Link 链接组件用于页面间导航或外部链接跳转，支持不同状态和样式。
 
-## 基础用法
+---
 
-### 基本使用
+### 基础用法
 
-最简单的链接用法。
+链接的基本用法。
+
+<div class="cell-demo">
+  <yc-space>
+    <yc-link href="link">Link</yc-link>
+    <yc-link href="link" disabled>Link</yc-link>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
   <yc-space>
-    <yc-link href="https://github.com">GitHub</yc-link>
-    <yc-link href="/components/button">内部链接</yc-link>
-    <yc-link @click="handleClick">点击事件</yc-link>
+    <yc-link href="link">Link</yc-link>
+    <yc-link
+      href="link"
+      disabled
+      >Link</yc-link
+    >
   </yc-space>
 </template>
-
-<script setup>
-const handleClick = () => {
-  console.log('链接被点击')
-}
-</script>
 ```
 
-### 不同状态
+</details>
 
-通过 `status` 属性设置不同的链接状态。
+### 链接的状态
+
+链接的状态分为 <yc-tag>normal</yc-tag> - 正常（默认）、<yc-tag>success</yc-tag> - 成功、<yc-tag>warning</yc-tag> - 警告、<yc-tag>danger</yc-tag> - 危险四种。
+
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-space>
+      <yc-link href="link">Normal Link</yc-link>
+      <yc-link href="link" disabled>Normal Link</yc-link>
+    </yc-space>
+    <yc-space>
+      <yc-link href="link" status="success">Success Link</yc-link>
+      <yc-link href="link" status="success" disabled>Success Link</yc-link>
+    </yc-space>
+    <yc-space>
+      <yc-link href="link" status="warning">Warning Link</yc-link>
+      <yc-link href="link" status="warning" disabled>Warning Link</yc-link>
+    </yc-space>
+    <yc-space>
+      <yc-link href="link" status="danger">Danger Link</yc-link>
+      <yc-link href="link" status="danger" disabled>Danger Link</yc-link>
+    </yc-space>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
   <yc-space direction="vertical">
-    <yc-link status="normal">普通链接</yc-link>
-    <yc-link status="success">成功链接</yc-link>
-    <yc-link status="warning">警告链接</yc-link>
-    <yc-link status="danger">危险链接</yc-link>
-  </yc-space>
-</template>
-```
-
-### 禁用状态
-
-通过 `disabled` 属性禁用链接。
-
-```vue
-<template>
-  <yc-space>
-    <yc-link href="https://github.com">正常链接</yc-link>
-    <yc-link href="https://github.com" disabled>禁用链接</yc-link>
-  </yc-space>
-</template>
-```
-
-### 加载状态
-
-通过 `loading` 属性显示加载状态。
-
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
     <yc-space>
-      <yc-link :loading="loading" @click="handleAsyncAction">
-        {{ loading ? '加载中...' : '异步操作' }}
-      </yc-link>
-      <yc-button @click="toggleLoading">
-        {{ loading ? '停止加载' : '开始加载' }}
-      </yc-button>
-    </yc-space>
-  </yc-space>
-</template>
-
-<script setup>
-import { ref } from 'vue'
-
-const loading = ref(false)
-
-const handleAsyncAction = () => {
-  if (!loading.value) {
-    loading.value = true
-    setTimeout(() => {
-      loading.value = false
-    }, 2000)
-  }
-}
-
-const toggleLoading = () => {
-  loading.value = !loading.value
-}
-</script>
-```
-
-### 带图标的链接
-
-使用 `icon` 属性或插槽添加图标。
-
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
-    <yc-space>
-      <yc-link icon href="https://github.com">
-        <template #icon>
-          <yc-icon-link />
-        </template>
-        外部链接
-      </yc-link>
-      
-      <yc-link icon href="/components/button">
-        <template #icon>
-          <yc-icon-right />
-        </template>
-        内部导航
-      </yc-link>
-    </yc-space>
-    
-    <yc-space>
-      <yc-link icon status="success">
-        <template #icon>
-          <yc-icon-check />
-        </template>
-        成功状态
-      </yc-link>
-      
-      <yc-link icon status="danger">
-        <template #icon>
-          <yc-icon-close />
-        </template>
-        危险状态
-      </yc-link>
-    </yc-space>
-  </yc-space>
-</template>
-```
-
-### 悬停效果
-
-通过 `hoverable` 属性控制悬停效果。
-
-```vue
-<template>
-  <yc-space>
-    <yc-link hoverable>默认悬停效果</yc-link>
-    <yc-link :hoverable="false">无悬停效果</yc-link>
-  </yc-space>
-</template>
-```
-
-### 事件处理
-
-监听各种点击事件。
-
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
-    <yc-space>
-      <yc-link 
-        @click="handleClick"
-        @dblclick="handleDoubleClick"
-        @contextmenu="handleContextMenu"
+      <yc-link href="link">Normal Link</yc-link>
+      <yc-link
+        href="link"
+        disabled
+        >Normal Link</yc-link
       >
-        事件测试链接
-      </yc-link>
     </yc-space>
-    
-    <div v-if="eventLog" style="padding: 8px; background: #f5f5f5; border-radius: 4px;">
-      {{ eventLog }}
-    </div>
+    <yc-space>
+      <yc-link
+        href="link"
+        status="success"
+        >Success Link</yc-link
+      >
+      <yc-link
+        href="link"
+        status="success"
+        disabled
+        >Success Link</yc-link
+      >
+    </yc-space>
+    <yc-space>
+      <yc-link
+        href="link"
+        status="warning"
+        >Warning Link</yc-link
+      >
+      <yc-link
+        href="link"
+        status="warning"
+        disabled
+        >Warning Link</yc-link
+      >
+    </yc-space>
+    <yc-space>
+      <yc-link
+        href="link"
+        status="danger"
+        >Danger Link</yc-link
+      >
+      <yc-link
+        href="link"
+        status="danger"
+        disabled
+        >Danger Link</yc-link
+      >
+    </yc-space>
   </yc-space>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const eventLog = ref('')
-
-const handleClick = (event) => {
-  eventLog.value = '单击事件触发'
-  console.log('单击事件', event)
-}
-
-const handleDoubleClick = (event) => {
-  eventLog.value = '双击事件触发'
-  console.log('双击事件', event)
-}
-
-const handleContextMenu = (event) => {
-  event.preventDefault()
-  eventLog.value = '右键菜单事件触发'
-  console.log('右键菜单事件', event)
-}
-</script>
 ```
 
-### 链接组合
+</details>
 
-不同链接的组合使用示例。
+### 悬浮状态底色
+
+可以通过 hoverable 属性设置是否在悬浮状态时隐藏底色。
+
+<div class="cell-demo">
+  <yc-space>
+    <yc-link href="link" :hoverable="false">Link</yc-link>
+    <yc-link href="link" status="danger" :hoverable="false">Link</yc-link>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-card title="导航链接">
-      <yc-space wrap>
-        <yc-link href="/">首页</yc-link>
-        <yc-divider direction="vertical" />
-        <yc-link href="/components">组件</yc-link>
-        <yc-divider direction="vertical" />
-        <yc-link href="/guide">指南</yc-link>
-        <yc-divider direction="vertical" />
-        <yc-link href="https://github.com" icon>
-          <template #icon>
-            <yc-icon-link />
-          </template>
-          GitHub
-        </yc-link>
-      </yc-space>
-    </yc-card>
-    
-    <yc-card title="操作链接">
-      <yc-space>
-        <yc-link status="success" @click="handleEdit">编辑</yc-link>
-        <yc-link status="normal" @click="handleView">查看</yc-link>
-        <yc-link status="warning" @click="handleCopy">复制</yc-link>
-        <yc-link status="danger" @click="handleDelete">删除</yc-link>
-      </yc-space>
-    </yc-card>
-    
-    <yc-card title="状态链接">
-      <yc-space direction="vertical" size="small">
-        <yc-link icon status="success">
-          <template #icon>
-            <yc-icon-check />
-          </template>
-          任务已完成
-        </yc-link>
-        <yc-link icon status="warning">
-          <template #icon>
-            <yc-icon-exclamation />
-          </template>
-          需要注意
-        </yc-link>
-        <yc-link icon status="danger">
-          <template #icon>
-            <yc-icon-close />
-          </template>
-          操作失败
-        </yc-link>
-        <yc-link disabled>
-          <template #icon>
-            <yc-icon-loading />
-          </template>
-          处理中...
-        </yc-link>
-      </yc-space>
-    </yc-card>
+  <yc-space>
+    <yc-link
+      href="link"
+      :hoverable="false"
+      >Link</yc-link
+    >
+    <yc-link
+      href="link"
+      status="danger"
+      :hoverable="false"
+      >Link</yc-link
+    >
+  </yc-space>
+</template>
+```
+
+</details>
+
+### 图标
+
+通过 <yc-tag>icon</yc-tag> 设置带图标的链接，设置为 <yc-tag>true</yc-tag> 时候显示默认图标。
+
+ <div class='cell-demo'>
+    <yc-space>
+      <yc-link href="link" icon>Link</yc-link>
+      <yc-link href="link" disabled icon>Link</yc-link>
+    </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <yc-space>
+      <yc-link
+        href="link"
+        icon
+        >Link</yc-link
+      >
+      <yc-link
+        href="link"
+        disabled
+        icon
+        >Link</yc-link
+      >
+    </yc-space>
+  </div>
+  <div>
+    <yc-space>
+      <yc-link href="link">
+        <template #icon>
+          <icon-edit />
+        </template>
+        Link
+      </yc-link>
+      <yc-link
+        href="link"
+        disabled>
+        <template #icon>
+          <icon-edit />
+        </template>
+        Link
+      </yc-link>
+    </yc-space>
+  </div>
+</template>
+```
+
+</details>
+
+### 加载中状态
+
+通过设置 <yc-tag>loading</yc-tag> 可以让链接处于加载中状态。处于加载中状态的链接不会触发点击事件。
+
+ <div class='cell-demo'>
+  <yc-space>
+    <yc-link loading>Link</yc-link>
+    <yc-link :loading="loading1" @click="handleClick1">Link</yc-link>
+    <yc-link :loading="loading2" @click="handleClick2">
+      <template #icon>
+        <icon-edit />
+      </template>
+      Link
+    </yc-link>
+  </yc-space>
+</div>
+
+<script setup>
+import { ref } from 'vue';
+const loading1 = ref(false);
+const loading2 = ref(false);
+
+const handleClick1 = () => {
+      loading1.value = true;
+      setTimeout(() => {
+        loading1.value = false;
+      }, 3000);
+    }
+const handleClick2 = () => {
+      loading2.value = true;
+      setTimeout(() => {
+        loading2.value = false;
+      }, 3000);
+    }
+
+</script>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space>
+    <yc-link loading>Link</yc-link>
+    <yc-link
+      :loading="loading1"
+      @click="handleClick1"
+      >Link</yc-link
+    >
+    <yc-link
+      :loading="loading2"
+      @click="handleClick2">
+      <template #icon>
+        <icon-edit />
+      </template>
+      Link
+    </yc-link>
   </yc-space>
 </template>
 
 <script setup>
-const handleEdit = () => console.log('编辑操作')
-const handleView = () => console.log('查看操作') 
-const handleCopy = () => console.log('复制操作')
-const handleDelete = () => console.log('删除操作')
+import { ref } from 'vue';
+const loading1 = ref(false);
+const loading2 = ref(false);
+
+const handleClick1 = () => {
+  loading1.value = true;
+  setTimeout(() => {
+    loading1.value = false;
+  }, 3000);
+};
+const handleClick2 = () => {
+  loading2.value = true;
+  setTimeout(() => {
+    loading2.value = false;
+  }, 3000);
+};
 </script>
 ```
+
+</details>
 
 ## API
 
 ### Link Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| href | 链接地址 | `string` | `-` |
-| icon | 是否显示图标 | `boolean` | `false` |
-| status | 链接状态 | `'normal' \| 'success' \| 'warning' \| 'danger'` | `'normal'` |
-| hoverable | 是否有悬停效果 | `boolean` | `true` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| loading | 是否加载中 | `boolean` | `false` |
+| 参数名    | 描述           | 类型                                             | 默认值     |
+| --------- | -------------- | ------------------------------------------------ | ---------- |
+| href      | 链接地址       | `string`                                         | `-`        |
+| icon      | 是否显示图标   | `boolean`                                        | `false`    |
+| status    | 链接状态       | `'normal' \| 'success' \| 'warning' \| 'danger'` | `'normal'` |
+| hoverable | 是否有悬停效果 | `boolean`                                        | `true`     |
+| disabled  | 是否禁用       | `boolean`                                        | `false`    |
+| loading   | 是否加载中     | `boolean`                                        | `false`    |
 
 ### Link Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
-| click | 点击时触发 | `(event: MouseEvent)` |
-| dblclick | 双击时触发 | `(event: MouseEvent)` |
+| 事件名      | 描述           | 参数                  |
+| ----------- | -------------- | --------------------- |
+| click       | 点击时触发     | `(event: MouseEvent)` |
+| dblclick    | 双击时触发     | `(event: MouseEvent)` |
 | contextmenu | 右键点击时触发 | `(event: MouseEvent)` |
 
 ### Link Slots
 
-| 插槽名 | 描述 |
-|--------|------|
-| default | 链接内容 |
-| icon | 自定义图标 |
+| 插槽名  | 描述       |
+| ------- | ---------- |
+| default | 链接内容   |
+| icon    | 自定义图标 |
 
 ## 类型定义
 

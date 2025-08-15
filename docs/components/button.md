@@ -2,9 +2,9 @@
 
 按钮用于开始一个即时操作。
 
-## 基础用法
+---
 
-### 按钮类型
+### 基础用法
 
 按钮分为 <yc-tag>primary</yc-tag> - 主要按钮、<yc-tag>secondary</yc-tag> - 次要按钮（默认）、<yc-tag>dashed</yc-tag>- 虚线按钮、<yc-tag>outline</yc-tag> - 线形按钮、<yc-tag>text</yc-tag> - 文本按钮五种类型。
 
@@ -450,8 +450,28 @@
   </yc-space>
 </div>
 
+<script setup>
+import { ref } from 'vue';
+const loading1 = ref(false);
+const loading2 = ref(false);
+
+const handleClick1 = () => {
+  loading1.value = true;
+  setTimeout(() => {
+    loading1.value = false;
+  }, 3000);
+};
+const handleClick2 = () => {
+  loading2.value = true;
+  setTimeout(() => {
+    loading2.value = false;
+  }, 3000);
+};
+</script>
+
 <details>
 <summary>查看/隐藏代码</summary>
+
 ```vue
 <template>
   <yc-space>
@@ -483,7 +503,26 @@
     </yc-button>
   </yc-space>
 </template>
-````
+
+<script setup>
+import { ref } from 'vue';
+const loading1 = ref(false);
+const loading2 = ref(false);
+
+const handleClick1 = () => {
+  loading1.value = true;
+  setTimeout(() => {
+    loading1.value = false;
+  }, 3000);
+};
+const handleClick2 = () => {
+  loading2.value = true;
+  setTimeout(() => {
+    loading2.value = false;
+  }, 3000);
+};
+</script>
+```
 
 </details>
 
