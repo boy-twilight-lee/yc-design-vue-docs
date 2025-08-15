@@ -101,7 +101,7 @@
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -142,7 +142,7 @@
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space>
@@ -186,7 +186,7 @@
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -304,7 +304,7 @@
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -433,7 +433,7 @@
 
 ### 加载中状态
 
-通过设置 <yc-tag>loading</yc-tag> 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发点击事件。
+通过设置 <yc-tag>loading</yc-tag> 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发事件。
 
 <div class='cell-demo'>
   <yc-space>
@@ -451,7 +451,7 @@
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space>
@@ -511,7 +511,7 @@
 </style>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space>
@@ -547,6 +547,121 @@
 
 </details>
 
+### 组合按钮
+
+通过 <yc-tag>yc-button-group></yc-tag> 属性 组件使按钮以组合方式出现。可用在同级多项操作中。
+
+<div class='cell-demo'>
+  <yc-space direction="vertical">
+    <yc-button-group>
+      <yc-button>Publish</yc-button>
+      <yc-button>
+        <template #icon>
+          <icon-down />
+        </template>
+      </yc-button>
+    </yc-button-group>
+    <yc-button-group>
+      <yc-button>Publish</yc-button>
+      <yc-button>
+        <template #icon>
+          <icon-more />
+        </template>
+      </yc-button>
+    </yc-button-group>
+    <yc-button-group>
+      <yc-button type="primary">
+        <icon-left />
+        Prev
+      </yc-button>
+      <yc-button type="primary">
+        Next
+        <icon-right />
+      </yc-button>
+    </yc-button-group>
+    <yc-space size="large">
+      <yc-button-group type="primary">
+        <yc-button> copy </yc-button>
+        <yc-button> cut </yc-button>
+        <yc-button> find </yc-button>
+      </yc-button-group>
+      <yc-button-group type="primary" status="warning">
+        <yc-button> <template #icon><icon-heart-fill /></template> </yc-button>
+        <yc-button> <template #icon><icon-star-fill /></template> </yc-button>
+        <yc-button> <template #icon><icon-thumb-up-fill /></template> </yc-button>
+      </yc-button-group>
+      <yc-button-group size="small" disabled>
+        <yc-button> prev </yc-button>
+        <yc-button> next </yc-button>
+      </yc-button-group>
+    </yc-space>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space direction="vertical">
+    <yc-button-group>
+      <yc-button>Publish</yc-button>
+      <yc-button>
+        <template #icon>
+          <icon-down />
+        </template>
+      </yc-button>
+    </yc-button-group>
+    <yc-button-group>
+      <yc-button>Publish</yc-button>
+      <yc-button>
+        <template #icon>
+          <icon-more />
+        </template>
+      </yc-button>
+    </yc-button-group>
+    <yc-button-group>
+      <yc-button type="primary">
+        <icon-left />
+        Prev
+      </yc-button>
+      <yc-button type="primary">
+        Next
+        <icon-right />
+      </yc-button>
+    </yc-button-group>
+    <yc-space size="large">
+      <yc-button-group type="primary">
+        <yc-button> copy </yc-button>
+        <yc-button> cut </yc-button>
+        <yc-button> find </yc-button>
+      </yc-button-group>
+      <yc-button-group
+        type="primary"
+        status="warning">
+        <yc-button>
+          <template #icon><icon-heart-fill /></template>
+        </yc-button>
+        <yc-button>
+          <template #icon><icon-star-fill /></template>
+        </yc-button>
+        <yc-button>
+          <template #icon><icon-thumb-up-fill /></template>
+        </yc-button>
+      </yc-button-group>
+      <yc-button-group
+        size="small"
+        disabled>
+        <yc-button> prev </yc-button>
+        <yc-button> next </yc-button>
+      </yc-button-group>
+    </yc-space>
+  </yc-space>
+</template>
+```
+
+</details>
+
 ## API
 
 ### Button Props
@@ -567,11 +682,11 @@
 
 | 事件名      | 描述           | 参数               |
 | ----------- | -------------- | ------------------ |
-| click       | 点击按钮时触发 | `(ev: MouseEvent)` |
+| click       | 按钮时触发     | `(ev: MouseEvent)` |
 | mousedown   | 鼠标按下时触发 | `(ev: MouseEvent)` |
 | mouseup     | 鼠标抬起时触发 | `(ev: MouseEvent)` |
 | dblclick    | 双击时触发     | `(ev: MouseEvent)` |
-| contextmenu | 右键点击时触发 | `(ev: MouseEvent)` |
+| contextmenu | 右键时触发     | `(ev: MouseEvent)` |
 
 ### Button Slots
 
@@ -598,7 +713,7 @@
 ## 类型定义
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```typescript
 export interface ButtonProps {
@@ -650,14 +765,6 @@ export type ButtonHtmlType = 'button' | 'reset' | 'submit';
 
 1. 主按钮在同一个操作区域最多出现一次
 2. 禁用状态的按钮不会触发任何事件
-3. 加载状态的按钮会显示加载动画，并且不可点击
+3. 加载状态的按钮会显示加载动画，并且不可
 4. 按钮组中的按钮会自动继承按钮组的样式属性
 5. 图标按钮建议使用 `shape="circle"` 来获得更好的视觉效果
-
-```
-
-```
-
-```
-
-```
