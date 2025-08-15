@@ -150,7 +150,7 @@ background-color: rgb(var(--arcoblue-6));
 
 </details>
 
-## 可伸缩侧边栏
+### 可伸缩侧边栏
 
 可以用鼠标进行拖拽放大缩小的侧边栏，需要用到的参数：<yc-tag>resizeDirections</yc-tag>。
 
