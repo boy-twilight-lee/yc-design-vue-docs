@@ -159,7 +159,7 @@ background-color: rgb(var(--arcoblue-6));
     <yc-layout>
       <yc-layout-header>Header</yc-layout-header>
       <yc-layout>
-        <yc-layout-sider :resize-directions="['right']">
+        <yc-layout-sider :resize-directions="['right']" class="resize-sider">
           Sider
         </yc-layout-sider>
         <yc-layout-content>Content</yc-layout-content>
@@ -187,7 +187,7 @@ background-color: rgb(var(--arcoblue-6));
 height: 64px;
 background-color: var(--color-primary-light-4);
 }
-.layout-demo :deep(.yc-layout-sider) {
+.layout-demo :deep(.resize-sider) {
 width: 206px;
 background-color: var(--color-primary-light-3);
 min-width: 150px;
