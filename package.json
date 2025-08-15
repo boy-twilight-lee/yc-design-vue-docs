@@ -10,10 +10,13 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
+    "less": "^4.4.0",
+    "less-loader": "^12.3.0",
     "vitepress": "^1.2.11",
     "vue": "^3.3.4"
   },
   "dependencies": {
+    "@arco-design/web-vue": "^2.57.0",
     "yc-design-vue": "^1.0.3"
   }
 }

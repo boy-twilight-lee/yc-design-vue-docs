@@ -10,6 +10,20 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 
 使用 `TypographyTitle` 组件展示不同级别的标题。
 
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-typography-title :heading="1">一级标题 h1</yc-typography-title>
+    <yc-typography-title :heading="2">二级标题 h2</yc-typography-title>
+    <yc-typography-title :heading="3">三级标题 h3</yc-typography-title>
+    <yc-typography-title :heading="4">四级标题 h4</yc-typography-title>
+    <yc-typography-title :heading="5">五级标题 h5</yc-typography-title>
+    <yc-typography-title :heading="6">六级标题 h6</yc-typography-title>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
 ```vue
 <template>
   <yc-space direction="vertical">
@@ -23,9 +37,25 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 </template>
 ```
 
+</details>
+
 ### 文本
 
 使用 `TypographyText` 组件展示行内文本。
+
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-typography-text>默认文本</yc-typography-text>
+    <yc-typography-text type="secondary">次要文本</yc-typography-text>
+    <yc-typography-text type="success">成功文本</yc-typography-text>
+    <yc-typography-text type="warning">警告文本</yc-typography-text>
+    <yc-typography-text type="danger">危险文本</yc-typography-text>
+    <yc-typography-text disabled>禁用文本</yc-typography-text>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -40,9 +70,33 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 </template>
 ```
 
+</details>
+
 ### 段落
 
 使用 `TypographyParagraph` 组件展示段落文本。
+
+<div class="cell-demo">
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-typography-paragraph>
+      这是一个普通的段落。段落组件用于展示较长的文本内容，支持多行显示和换行。
+      文本内容可以包含各种格式和样式。
+    </yc-typography-paragraph>
+    <yc-typography-paragraph blockquote>
+      这是一个引用段落。引用段落通常用于展示重要的引用内容或者特殊说明。
+      它会有特殊的样式来区别于普通段落。
+    </yc-typography-paragraph>
+    <yc-typography-paragraph spacing="close">
+      这是一个紧密间距的段落。通过设置 spacing 属性，可以调整段落的行间距。
+      紧密间距适用于内容较多，需要节省空间的场景。
+    </yc-typography-paragraph>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -67,11 +121,26 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 </template>
 ```
 
+</details>
+
 ## 文本样式
 
 ### 文本装饰
 
 提供多种文本装饰样式。
+
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-typography-text bold>加粗文本</yc-typography-text>
+    <yc-typography-text mark>标记文本</yc-typography-text>
+    <yc-typography-text underline>下划线文本</yc-typography-text>
+    <yc-typography-text delete>删除线文本</yc-typography-text>
+    <yc-typography-text code>代码文本</yc-typography-text>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -85,9 +154,34 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 </template>
 ```
 
+</details>
+
 ### 组合样式
 
 可以组合使用多种样式。
+
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-typography-text
+      bold
+      type="primary"
+      >加粗主要文本</yc-typography-text
+    >
+    <yc-typography-text
+      mark
+      underline
+      >标记下划线文本</yc-typography-text
+    >
+    <yc-typography-text
+      code
+      type="success"
+      >成功代码文本</yc-typography-text
+    >
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -111,13 +205,38 @@ Typography 排版组件用于展示文本内容，支持标题、段落、文本
 </template>
 ```
 
+</details>
+
 ## 交互功能
 
 ### 可编辑
 
 设置 `editable` 属性让文本可编辑。
 
-```vue
+<div class="cell-demo">
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-typography-text
+      v-model:edit-text="editableText"
+      editable
+      @change="handleChange">
+      {{ editableText }}
+    </yc-typography-text>
+    <yc-typography-paragraph
+      v-model:edit-text="editableParagraph"
+      editable
+      @edit-start="handleEditStart"
+      @edit-end="handleEditEnd">
+      {{ editableParagraph }}
+    </yc-typography-paragraph>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+````vue
 <template>
   <yc-space
     direction="vertical"
@@ -158,13 +277,30 @@ const handleEditStart = () => {
 const handleEditEnd = () => {
   console.log('结束编辑');
 };
-</script>
-```
+</script>```
+
+</details>
 
 ### 可复制
 
 设置 `copyable` 属性让文本可复制。
 
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-typography-text copyable>
+      这段文本可以复制，点击复制图标
+    </yc-typography-text>
+    <yc-typography-paragraph
+      copyable
+      copy-text="自定义复制内容"
+      @copy="handleCopy">
+      这段文本可以复制，复制的内容是自定义的
+    </yc-typography-paragraph>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
 ```vue
 <template>
   <yc-space direction="vertical">
@@ -186,13 +322,52 @@ const handleCopy = (text) => {
   console.log('已复制:', text);
 };
 </script>
-```
+````
+
+</details>
 
 ### 省略
 
 设置 `ellipsis` 属性实现文本省略。
 
-```vue
+<div class="cell-demo">
+  <yc-space
+    direction="vertical"
+    size="large">
+    <div style="width: 200px;">
+      <yc-typography-text ellipsis>
+        这是一段很长的文本，会被省略显示，超出部分用省略号表示
+      </yc-typography-text>
+    </div>
+    <div style="width: 300px;">
+      <yc-typography-paragraph :ellipsis="{ rows: 2, expandable: true }">
+        这是一段很长的段落文本，设置了多行省略和可展开功能。
+        当文本超过指定行数时，会显示省略号，用户可以点击展开查看完整内容。
+        这种功能在展示列表项或卡片内容时非常有用，既能保持布局整洁，
+        又能让用户在需要时查看完整信息。
+      </yc-typography-paragraph>
+    </div>
+    <div style="width: 300px;">
+      <yc-typography-paragraph
+        :ellipsis="{
+          rows: 3,
+          expandable: true,
+          ellipsisStr: '...',
+          suffix: '--Yc Design',
+        }">
+        这是一段带有自定义省略字符和后缀的文本。可以自定义省略字符、
+        后缀内容等。这种灵活的配置方式可以满足不同的设计需求，
+        让文本展示更加符合产品的整体风格和用户体验要求。
+        同时支持多行省略和展开收起功能。
+      </yc-typography-paragraph>
+    </div>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+````vue
 <template>
   <yc-space
     direction="vertical"
@@ -227,8 +402,9 @@ const handleCopy = (text) => {
       </yc-typography-paragraph>
     </div>
   </yc-space>
-</template>
-```
+</template>```
+
+</details>
 
 ## API
 
@@ -286,6 +462,9 @@ const handleCopy = (text) => {
 
 ## 类型定义
 
+<details>
+<summary>点击查看/隐藏代码</summary>
+
 ```typescript
 export interface TypographyBaseProps {
   tag?: string;
@@ -331,7 +510,9 @@ export type TypographyType =
   | 'success'
   | 'danger'
   | 'warning';
-```
+````
+
+</details>
 
 ## 注意事项
 

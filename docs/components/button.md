@@ -1,10 +1,4 @@
-好的，没问题。我已经为您将所有未被包裹的代码块都添加了 `<details>` 和 `<summary>` 标签，以实现可折叠的代码块效果。
-
-以下是修改后的完整 Markdown 内容：
-
 # Button 按钮
-
-## 介绍
 
 按钮用于开始一个即时操作。
 
@@ -12,85 +6,75 @@
 
 ### 按钮类型
 
-按钮有五种类型：主按钮、次按钮、虚线按钮、文本按钮和链接按钮。主按钮在同一个操作区域最多出现一次。
+按钮分为 <yc-tag>primary</yc-tag> - 主要按钮、<yc-tag>secondary</yc-tag> - 次要按钮（默认）、<yc-tag>dashed</yc-tag>- 虚线按钮、<yc-tag>outline</yc-tag> - 线形按钮、<yc-tag>text</yc-tag> - 文本按钮五种类型。
 
 <div class="cell-demo">
-<yc-space direction="vertical" size="large">
-    <yc-space>
-      <yc-button type="primary">主要按钮</yc-button>
-      <yc-button>默认按钮</yc-button>
-      <yc-button type="dashed">虚线按钮</yc-button>
-      <yc-button type="outline">描边按钮</yc-button>
-      <yc-button type="text">文本按钮</yc-button>
-    </yc-space>
-    <yc-space>
-      <yc-button type="primary" status="success">成功按钮</yc-button>
-      <yc-button type="primary" status="warning">警告按钮</yc-button>
-      <yc-button type="primary" status="danger">危险按钮</yc-button>
-    </yc-space>
-</yc-space>
+  <yc-space>
+    <yc-button type="primary">Primary</yc-button>
+    <yc-button>Secondary</yc-button>
+    <yc-button type="dashed">Dashed</yc-button>
+    <yc-button type="outline">Outline</yc-button>
+    <yc-button type="text">Text</yc-button>
+  </yc-space>
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <yc-space
-    direction="vertical"
-    size="large">
+  <template>
     <yc-space>
-      <yc-button type="primary">主要按钮</yc-button>
-      <yc-button>默认按钮</yc-button>
-      <yc-button type="dashed">虚线按钮</yc-button>
-      <yc-button type="outline">描边按钮</yc-button>
-      <yc-button type="text">文本按钮</yc-button>
+      <yc-button type="primary">Primary</yc-button>
+      <yc-button>Secondary</yc-button>
+      <yc-button type="dashed">Dashed</yc-button>
+      <yc-button type="outline">Outline</yc-button>
+      <yc-button type="text">Text</yc-button>
     </yc-space>
-    <yc-space>
-      <yc-button
-        type="primary"
-        status="success"
-        >成功按钮</yc-button
-      >
-      <yc-button
-        type="primary"
-        status="warning"
-        >警告按钮</yc-button
-      >
-      <yc-button
-        type="primary"
-        status="danger"
-        >危险按钮</yc-button
-      >
-    </yc-space>
-  </yc-space>
+  </template>
 </template>
 ```
 
 </details>
 
-### 按钮尺寸
+### 图标按钮
 
-按钮有三种尺寸：大、中、小、迷你。默认为中等尺寸。
+按钮可以嵌入图标。在只设置图标时，按钮的宽高相等。
 
 <div class="cell-demo">
   <yc-space>
-    <yc-button size="large">大按钮</yc-button>
-    <yc-button>中按钮</yc-button>
-    <yc-button size="small">小按钮</yc-button>
-     <yc-button size="mini">迷你按钮</yc-button>
+    <yc-button type="primary">
+      <template #icon>
+        <icon-plus />
+      </template>
+    </yc-button>
+    <yc-button type="primary">
+      <template #icon>
+        <icon-delete />
+      </template>
+      <template #default>Delete</template>
+    </yc-button>
   </yc-space>
 </div>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
   <yc-space>
-    <yc-button size="large">大按钮</yc-button>
-    <yc-button>中按钮</yc-button>
-    <yc-button size="small">小按钮</yc-button>
+    <yc-button type="primary">
+      <template #icon>
+        <icon-plus />
+      </template>
+    </yc-button>
+    <yc-button type="primary">
+      <template #icon>
+        <icon-delete />
+      </template>
+      <!-- Use the default slot to avoid extra spaces -->
+      <template #default>Delete</template>
+    </yc-button>
   </yc-space>
 </template>
 ```
@@ -99,13 +83,61 @@
 
 ### 按钮形状
 
-按钮有三种形状：方形、圆角、圆形。
+按钮分为 <yc-tag>square</yc-tag> - 长方形（默认）、<yc-tag>circle</yc-tag> - 圆形、<yc-tag>round</yc-tag> - 全圆角三种形状。
 
 <div class="cell-demo">
   <yc-space>
-    <yc-button shape="square">方形按钮</yc-button>
-    <yc-button>圆角按钮</yc-button>
-    <yc-button shape="circle">圆</yc-button>
+    <yc-button type="primary">Square</yc-button>
+    <yc-button type="primary" shape="round">Round</yc-button>
+    <yc-button type="primary">
+      <template #icon>
+        <icon-plus />
+      </template>
+    </yc-button>
+    <yc-button type="primary" shape="circle">
+      <icon-plus />
+    </yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space>
+    <yc-button type="primary">Square</yc-button>
+    <yc-button
+      type="primary"
+      shape="round"
+      >Round</yc-button
+    >
+    <yc-button type="primary">
+      <template #icon>
+        <icon-plus />
+      </template>
+    </yc-button>
+    <yc-button
+      type="primary"
+      shape="circle">
+      <icon-plus />
+    </yc-button>
+  </yc-space>
+</template>
+```
+
+</details>
+
+### 按钮尺寸
+
+按钮分为 <yc-tag>mini</yc-tag>、<yc-tag>small</yc-tag>、<yc-tag>medium</yc-tag>、<yc-tag>large</yc-tag>四种尺寸。高度分别为：<yc-tag>24px</yc-tag>、<yc-tag>28px</yc-tag>、<yc-tag>32px</yc-tag>、<yc-tag>36px</yc-tag>。推荐（默认）尺寸为 <yc-tag>medium</yc-tag>。可在不同场景及不同业务需求选择适合尺寸。
+
+<div class="cell-demo">
+  <yc-space>
+    <yc-button type="primary" size="mini">Mini</yc-button>
+    <yc-button type="primary" size="small">Small</yc-button>
+    <yc-button type="primary">Medium</yc-button>
+    <yc-button type="primary" size="large">Large</yc-button>
   </yc-space>
 </div>
 
@@ -114,9 +146,10 @@
 ```vue
 <template>
   <yc-space>
-    <yc-button shape="square">方形按钮</yc-button>
-    <yc-button>圆角按钮</yc-button>
-    <yc-button shape="circle">圆形按钮</yc-button>
+    <yc-button type="primary" size="mini">Mini</yc-button>
+    <yc-button type="primary" size="small">Small</yc-button>
+    <yc-button type="primary">Medium</yc-button>
+    <yc-button type="primary" size="large">Large</yc-button>
   </yc-space>
 </template>
 ```
@@ -124,99 +157,31 @@
 
 ### 按钮状态
 
-按钮有四种状态：正常、加载中、禁用、危险。
+按钮的状态分为 <yc-tag>normal</yc-tag> - 正常（默认）、 <yc-tag>success</yc-tag> - 成功、<yc-tag>warning</yc-tag> - 警告、<yc-tag>danger</yc-tag> - 危险四种，可以与按钮类型同时使用。
 
 <div class="cell-demo">
-  <yc-space>
-    <yc-button>正常按钮</yc-button>
-    <yc-button loading>加载中</yc-button>
-    <yc-button disabled>禁用按钮</yc-button>
-    <yc-button status="danger">危险按钮</yc-button>
-  </yc-space>
-</div>
-
-<details>
-<summary>点击查看/隐藏代码</summary>
-```vue
-<template>
-  <yc-space>
-    <yc-button>正常按钮</yc-button>
-    <yc-button loading>加载中</yc-button>
-    <yc-button disabled>禁用按钮</yc-button>
-    <yc-button status="danger">危险按钮</yc-button>
-  </yc-space>
-</template>
-```
-
-</details>
-
-### 按钮组
-
-按钮组用于将多个按钮组合在一起，形成一组相关的操作。
-
-<div class="cell-demo">
-  <yc-space
-    direction="vertical"
-    size="large">
-    <yc-button-group>
-      <yc-button>按钮1</yc-button>
-      <yc-button>按钮2</yc-button>
-      <yc-button>按钮3</yc-button>
-    </yc-button-group>
-    <yc-button-group>
-      <yc-button type="primary">按钮1</yc-button>
-      <yc-button type="primary">按钮2</yc-button>
-      <yc-button type="primary">按钮3</yc-button>
-    </yc-button-group>
-  </yc-space>
-</div>
-
-<details>
-<summary>点击查看/隐藏代码</summary>
-````vue
-<template>
-  <yc-space
-    direction="vertical"
-    size="large">
-    <yc-button-group>
-      <yc-button>按钮1</yc-button>
-      <yc-button>按钮2</yc-button>
-      <yc-button>按钮3</yc-button>
-    </yc-button-group>
-
-    <yc-button-group>
-      <yc-button type="primary">按钮1</yc-button>
-      <yc-button type="primary">按钮2</yc-button>
-      <yc-button type="primary">按钮3</yc-button>
-    </yc-button-group>
-
-  </yc-space>
-</template>```
-</details>
-
-### 图标按钮
-
-按钮可以包含图标，图标可以放在按钮的左侧或右侧。
-
-<div class="cell-demo">
-  <yc-space>
-    <yc-button>
-      <template #icon>
-        <yc-icon-search />
-      </template>
-      搜索
-    </yc-button>
-    <yc-button type="primary">
-      上传
-      <template #icon>
-        <yc-icon-upload />
-      </template>
-    </yc-button>
-    <yc-button shape="circle">
-      <template #icon>
-        <yc-icon-settings />
-      </template>
-    </yc-button>
+  <yc-space direction="vertical">
+    <yc-space>
+      <yc-button type="primary" status="success">Primary</yc-button>
+      <yc-button status="success">Default</yc-button>
+      <yc-button type="dashed" status="success">Dashed</yc-button>
+      <yc-button type="outline" status="success">Outline</yc-button>
+      <yc-button type="text" status="success">Text</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button type="primary" status="warning">Primary</yc-button>
+      <yc-button status="warning">Default</yc-button>
+      <yc-button type="dashed" status="warning">Dashed</yc-button>
+      <yc-button type="outline" status="warning">Outline</yc-button>
+      <yc-button type="text" status="warning">Text</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button type="primary" status="danger">Primary</yc-button>
+      <yc-button status="danger">Default</yc-button>
+      <yc-button type="dashed" status="danger">Dashed</yc-button>
+      <yc-button type="outline" status="danger">Outline</yc-button>
+      <yc-button type="text" status="danger">Text</yc-button>
+    </yc-space>
   </yc-space>
 </div>
 
@@ -225,67 +190,360 @@
 
 ```vue
 <template>
-  <yc-space>
-    <yc-button>
-      <template #icon>
-        <yc-icon-search />
-      </template>
-      搜索
-    </yc-button>
-
-    <yc-button type="primary">
-      上传
-      <template #icon>
-        <yc-icon-upload />
-      </template>
-    </yc-button>
-
-    <yc-button shape="circle">
-      <template #icon>
-        <yc-icon-settings />
-      </template>
-    </yc-button>
+  <yc-space direction="vertical">
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="success"
+        >Primary</yc-button
+      >
+      <yc-button status="success">Default</yc-button>
+      <yc-button
+        type="dashed"
+        status="success"
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="success"
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="success"
+        >Text</yc-button
+      >
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="warning"
+        >Primary</yc-button
+      >
+      <yc-button status="warning">Default</yc-button>
+      <yc-button
+        type="dashed"
+        status="warning"
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="warning"
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="warning"
+        >Text</yc-button
+      >
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="danger"
+        >Primary</yc-button
+      >
+      <yc-button status="danger">Default</yc-button>
+      <yc-button
+        type="dashed"
+        status="danger"
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="danger"
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="danger"
+        >Text</yc-button
+      >
+    </yc-space>
   </yc-space>
 </template>
 ```
+
+</details>
+
+### 禁用状态
+
+按钮的禁用状态。
+
+<div class="cell-demo">
+  <yc-space direction="vertical">
+    <yc-space>
+      <yc-button type="primary" disabled>Primary</yc-button>
+      <yc-button disabled>Default</yc-button>
+      <yc-button type="dashed" disabled>Dashed</yc-button>
+      <yc-button type="outline" disabled>Outline</yc-button>
+      <yc-button type="text" disabled>Text</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button type="primary" status="success" disabled>Primary</yc-button>
+      <yc-button status="success" disabled>Default</yc-button>
+      <yc-button type="dashed" status="success" disabled>Dashed</yc-button>
+      <yc-button type="outline" status="success" disabled>Outline</yc-button>
+      <yc-button type="text" status="success" disabled>Text</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button type="primary" status="warning" disabled>Primary</yc-button>
+      <yc-button status="warning" disabled>Default</yc-button>
+      <yc-button type="dashed" status="warning" disabled>Dashed</yc-button>
+      <yc-button type="outline" status="warning" disabled>Outline</yc-button>
+      <yc-button type="text" status="warning" disabled>Text</yc-button>
+    </yc-space>
+    <yc-space>
+      <yc-button type="primary" status="danger" disabled>Primary</yc-button>
+      <yc-button status="danger" disabled>Default</yc-button>
+      <yc-button type="dashed" status="danger" disabled>Dashed</yc-button>
+      <yc-button type="outline" status="danger" disabled>Outline</yc-button>
+      <yc-button type="text" status="danger" disabled>Text</yc-button>
+    </yc-space>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space direction="vertical">
+    <yc-space>
+      <yc-button
+        type="primary"
+        disabled
+        >Primary</yc-button
+      >
+      <yc-button disabled>Default</yc-button>
+      <yc-button
+        type="dashed"
+        disabled
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        disabled
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        disabled
+        >Text</yc-button
+      >
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="success"
+        disabled
+        >Primary</yc-button
+      >
+      <yc-button
+        status="success"
+        disabled
+        >Default</yc-button
+      >
+      <yc-button
+        type="dashed"
+        status="success"
+        disabled
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="success"
+        disabled
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="success"
+        disabled
+        >Text</yc-button
+      >
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="warning"
+        disabled
+        >Primary</yc-button
+      >
+      <yc-button
+        status="warning"
+        disabled
+        >Default</yc-button
+      >
+      <yc-button
+        type="dashed"
+        status="warning"
+        disabled
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="warning"
+        disabled
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="warning"
+        disabled
+        >Text</yc-button
+      >
+    </yc-space>
+    <yc-space>
+      <yc-button
+        type="primary"
+        status="danger"
+        disabled
+        >Primary</yc-button
+      >
+      <yc-button
+        status="danger"
+        disabled
+        >Default</yc-button
+      >
+      <yc-button
+        type="dashed"
+        status="danger"
+        disabled
+        >Dashed</yc-button
+      >
+      <yc-button
+        type="outline"
+        status="danger"
+        disabled
+        >Outline</yc-button
+      >
+      <yc-button
+        type="text"
+        status="danger"
+        disabled
+        >Text</yc-button
+      >
+    </yc-space>
+  </yc-space>
+</template>
+```
+
+</details>
+
+### 加载中状态
+
+通过设置 <yc-tag>loading</yc-tag> 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发点击事件。
+
+<div class='cell-demo'>
+  <yc-space>
+    <yc-button type="primary" loading>Primary</yc-button>
+    <yc-button loading>Default</yc-button>
+    <yc-button type="dashed" loading>Dashed</yc-button>
+    <yc-button type="primary" :loading="loading1" @click="handleClick1">Click Me</yc-button>
+    <yc-button type="primary" :loading="loading2" @click="handleClick2">
+      <template #icon>
+        <icon-plus />
+      </template>
+      Click Me
+    </yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+```vue
+<template>
+  <yc-space>
+    <yc-button
+      type="primary"
+      loading
+      >Primary</yc-button
+    >
+    <yc-button loading>Default</yc-button>
+    <yc-button
+      type="dashed"
+      loading
+      >Dashed</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading1"
+      @click="handleClick1"
+      >Click Me</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading2"
+      @click="handleClick2">
+      <template #icon>
+        <icon-plus />
+      </template>
+      Click Me
+    </yc-button>
+  </yc-space>
+</template>
+````
 
 </details>
 
 ### 长按钮
 
-长按钮会占满父容器的宽度。
+通过设置 <yc-tag>long</yc-tag> 属性，使按钮的宽度跟随容器的宽度。
 
 <div class='cell-demo'>
-  <yc-space
-    direction="vertical"
-    size="large"
-    style="width:100%;">
-    <yc-button long>长按钮</yc-button>
-    <yc-button
-      type="primary"
-      long
-      >主要长按钮</yc-button
-    >
+   <yc-space class="wrapper" direction="vertical">
+    <yc-button type="primary" long>Primary</yc-button>
+    <yc-button long>Default</yc-button>
+    <yc-button type="dashed" long>Dashed</yc-button>
+    <yc-button type="outline" long>Outline</yc-button>
+    <yc-button type="text" long>Text</yc-button>
   </yc-space>
 </div>
 
+<style scoped lang="less">
+.wrapper{
+  width: 400px;
+  padding: 20px;
+  border: 1px solid rgb(229,230,235);
+  border-radius: 4px;
+}
+</style>
+
 <details>
 <summary>点击查看/隐藏代码</summary>
-
 ```vue
 <template>
-  <yc-space
-    direction="vertical"
-    size="large">
-    <yc-button long>长按钮</yc-button>
+  <yc-space>
     <yc-button
       type="primary"
-      long
-      >主要长按钮</yc-button
+      loading
+      >Primary</yc-button
     >
+    <yc-button loading>Default</yc-button>
+    <yc-button
+      type="dashed"
+      loading
+      >Dashed</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading1"
+      @click="handleClick1"
+      >Click Me</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading2"
+      @click="handleClick2">
+      <template #icon>
+        <icon-plus />
+      </template>
+      Click Me
+    </yc-button>
   </yc-space>
 </template>
-```
+````
 
 </details>
 
@@ -395,3 +653,11 @@ export type ButtonHtmlType = 'button' | 'reset' | 'submit';
 3. 加载状态的按钮会显示加载动画，并且不可点击
 4. 按钮组中的按钮会自动继承按钮组的样式属性
 5. 图标按钮建议使用 `shape="circle"` 来获得更好的视觉效果
+
+```
+
+```
+
+```
+
+```
