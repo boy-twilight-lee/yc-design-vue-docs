@@ -1,631 +1,1183 @@
 # Grid 栅格系统
 
-24 栅格系统。
+栅格可以有效的保证页面的一致性、逻辑性、加强团队协作和统一。
 
-## 何时使用
+---
 
-- 需要按照规则进行页面布局时
-- 需要响应式布局时
-- 需要精确控制元素位置和大小关系时
+### 基本用法
 
-## 基础用法
+展示了最基本的 24 等分应用。
 
-最简单的栅格布局。
-
-```vue
-<template>
-  <YcGrid>
-    <YcGridItem :span="8">col-8</YcGridItem>
-    <YcGridItem :span="8">col-8</YcGridItem>
-    <YcGridItem :span="8">col-8</YcGridItem>
-  </YcGrid>
-</template>
-```
-
-## 栅格列数
-
-通过 `cols` 属性设置栅格列数。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <div>
-      <h4>12列栅格</h4>
-      <YcGrid :cols="12">
-        <YcGridItem :span="6">col-6</YcGridItem>
-        <YcGridItem :span="6">col-6</YcGridItem>
-      </YcGrid>
-    </div>
-    
-    <div>
-      <h4>24列栅格</h4>
-      <YcGrid :cols="24">
-        <YcGridItem :span="8">col-8</YcGridItem>
-        <YcGridItem :span="8">col-8</YcGridItem>
-        <YcGridItem :span="8">col-8</YcGridItem>
-      </YcGrid>
-    </div>
-  </YcSpace>
-</template>
-```
-
-## 栅格项跨度
-
-通过 `span` 属性设置栅格项的跨度。
-
-```vue
-<template>
-  <YcGrid>
-    <YcGridItem :span="6">col-6</YcGridItem>
-    <YcGridItem :span="6">col-6</YcGridItem>
-    <YcGridItem :span="6">col-6</YcGridItem>
-    <YcGridItem :span="6">col-6</YcGridItem>
-  </YcGrid>
-  
-  <YcGrid style="margin-top: 16px;">
-    <YcGridItem :span="8">col-8</YcGridItem>
-    <YcGridItem :span="8">col-8</YcGridItem>
-    <YcGridItem :span="8">col-8</YcGridItem>
-  </YcGrid>
-  
-  <YcGrid style="margin-top: 16px;">
-    <YcGridItem :span="12">col-12</YcGridItem>
-    <YcGridItem :span="12">col-12</YcGridItem>
-  </YcGrid>
-</template>
-```
-
-## 栅格项偏移
-
-通过 `offset` 属性设置栅格项的偏移量。
-
-```vue
-<template>
-  <YcGrid>
-    <YcGridItem :span="6" :offset="6">col-6 col-offset-6</YcGridItem>
-    <YcGridItem :span="6" :offset="6">col-6 col-offset-6</YcGridItem>
-  </YcGrid>
-  
-  <YcGrid style="margin-top: 16px;">
-    <YcGridItem :span="8" :offset="8">col-8 col-offset-8</YcGridItem>
-    <YcGridItem :span="8">col-8</YcGridItem>
-  </YcGrid>
-</template>
-```
-
-## 响应式布局
-
-通过对象形式设置响应式属性。
-
-```vue
-<template>
-  <YcGrid>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-    <YcGridItem :span="{ xs: 24, sm: 12, md: 8, lg: 6, xl: 4 }">
-      <div class="grid-item">响应式栅格项</div>
-    </YcGridItem>
-  </YcGrid>
-</template>
+<div class="cell-demo">
+ <div class="grid-demo-background">
+    <yc-space direction="vertical" :size="16" style="display: block;">
+      <yc-row class="grid-demo">
+        <yc-col :span="24">
+          <div>24 - 100%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="12">
+          <div>12 - 50%</div>
+        </yc-col>
+        <yc-col :span="12">
+          <div>12 - 50%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+      </yc-row>
+    </yc-space>
+  </div>
+</div>
 
 <style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
+.grid-demo-background {
+  background-image: linear-gradient(
+    90deg,
+    rgb(242,243,245) 4.16666667%,
+    transparent 4.16666667%,
+    transparent 8.33333333%,
+    rgb(242,243,245) 8.33333333%,
+    rgb(242,243,245) 12.5%,
+    transparent 12.5%,
+    transparent 16.66666667%,
+    rgb(242,243,245) 16.66666667%,
+    rgb(242,243,245) 20.83333333%,
+    transparent 20.83333333%,
+    transparent 25%,
+    rgb(242,243,245) 25%,
+    rgb(242,243,245) 29.16666667%,
+    transparent 29.16666667%,
+    transparent 33.33333333%,
+    rgb(242,243,245) 33.33333333%,
+    rgb(242,243,245) 37.5%,
+    transparent 37.5%,
+    transparent 41.66666667%,
+    rgb(242,243,245) 41.66666667%,
+    rgb(242,243,245) 45.83333333%,
+    transparent 45.83333333%,
+    transparent 50%,
+    rgb(242,243,245) 50%,
+    rgb(242,243,245) 54.16666667%,
+    transparent 54.16666667%,
+    transparent 58.33333333%,
+    rgb(242,243,245) 58.33333333%,
+    rgb(242,243,245) 62.5%,
+    transparent 62.5%,
+    transparent 66.66666667%,
+    rgb(242,243,245) 66.66666667%,
+    rgb(242,243,245) 70.83333333%,
+    transparent 70.83333333%,
+    transparent 75%,
+    rgb(242,243,245) 75%,
+    rgb(242,243,245) 79.16666667%,
+    transparent 79.16666667%,
+    transparent 83.33333333%,
+    rgb(242,243,245) 83.33333333%,
+    rgb(242,243,245) 87.5%,
+    transparent 87.5%,
+    transparent 91.66666667%,
+    rgb(242,243,245) 91.66666667%,
+    rgb(242,243,245) 95.83333333%,
+    transparent 95.83333333%
+  );
+}
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
   text-align: center;
-  border-radius: 4px;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(22,93,255, 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: rgb(106,161,255);
 }
 </style>
-```
 
-## 栅格间距
-
-通过 `rowGap` 和 `colGap` 属性设置栅格间距。
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <div>
-      <h4>无间距</h4>
-      <YcGrid :row-gap="0" :col-gap="0">
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-      </YcGrid>
-    </div>
-    
-    <div>
-      <h4>有间距</h4>
-      <YcGrid :row-gap="16" :col-gap="16">
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-        <YcGridItem :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridItem>
-      </YcGrid>
-    </div>
-  </YcSpace>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 响应式间距
-
-通过对象形式设置响应式间距。
-
-```vue
-<template>
-  <YcGrid 
-    :row-gap="{ xs: 8, sm: 12, md: 16, lg: 20, xl: 24 }"
-    :col-gap="{ xs: 8, sm: 12, md: 16, lg: 20, xl: 24 }"
-  >
-    <YcGridItem :span="8">
-      <div class="grid-item">col-8</div>
-    </YcGridItem>
-    <YcGridItem :span="8">
-      <div class="grid-item">col-8</div>
-    </YcGridItem>
-    <YcGridItem :span="8">
-      <div class="grid-item">col-8</div>
-    </YcGridItem>
-  </YcGrid>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 栅格行
-
-使用 `GridRow` 和 `GridCol` 组件进行更灵活的布局。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <YcGridRow :gutter="16">
-      <YcGridCol :span="8">
-        <div class="grid-item">col-8</div>
-      </YcGridCol>
-      <YcGridCol :span="8">
-        <div class="grid-item">col-8</div>
-      </YcGridCol>
-      <YcGridCol :span="8">
-        <div class="grid-item">col-8</div>
-      </YcGridCol>
-    </YcGridRow>
-    
-    <YcGridRow :gutter="16">
-      <YcGridCol :span="6">
-        <div class="grid-item">col-6</div>
-      </YcGridCol>
-      <YcGridCol :span="6">
-        <div class="grid-item">col-6</div>
-      </YcGridCol>
-      <YcGridCol :span="6">
-        <div class="grid-item">col-6</div>
-      </YcGridCol>
-      <YcGridCol :span="6">
-        <div class="grid-item">col-6</div>
-      </YcGridCol>
-    </YcGridRow>
-  </YcSpace>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 栅格行对齐
-
-通过 `justify` 属性设置栅格行的水平对齐方式。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <div>
-      <h4>start (默认)</h4>
-      <YcGridRow :gutter="16" justify="start">
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>center</h4>
-      <YcGridRow :gutter="16" justify="center">
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>end</h4>
-      <YcGridRow :gutter="16" justify="end">
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>space-between</h4>
-      <YcGridRow :gutter="16" justify="space-between">
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>space-around</h4>
-      <YcGridRow :gutter="16" justify="space-around">
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-        <YcGridCol :span="6">
-          <div class="grid-item">col-6</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-  </YcSpace>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 栅格行垂直对齐
-
-通过 `align` 属性设置栅格行的垂直对齐方式。
-
-```vue
-<template>
-  <YcSpace direction="vertical" size="large">
-    <div>
-      <h4>start</h4>
-      <YcGridRow :gutter="16" align="start" style="height: 100px;">
-        <YcGridCol :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 60px;">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 80px;">col-8</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>center</h4>
-      <YcGridRow :gutter="16" align="center" style="height: 100px;">
-        <YcGridCol :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 60px;">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 80px;">col-8</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>end</h4>
-      <YcGridRow :gutter="16" align="end" style="height: 100px;">
-        <YcGridCol :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 60px;">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 80px;">col-8</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-    
-    <div>
-      <h4>stretch (默认)</h4>
-      <YcGridRow :gutter="16" align="stretch" style="height: 100px;">
-        <YcGridCol :span="8">
-          <div class="grid-item">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 60px;">col-8</div>
-        </YcGridCol>
-        <YcGridCol :span="8">
-          <div class="grid-item" style="height: 80px;">col-8</div>
-        </YcGridCol>
-      </YcGridRow>
-    </div>
-  </YcSpace>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 栅格列排序
-
-通过 `order` 属性设置栅格列的顺序。
-
-```vue
-<template>
-  <YcGridRow :gutter="16">
-    <YcGridCol :span="8" :order="3">
-      <div class="grid-item order-3">order-3</div>
-    </YcGridCol>
-    <YcGridCol :span="8" :order="1">
-      <div class="grid-item order-1">order-1</div>
-    </YcGridCol>
-    <YcGridCol :span="8" :order="2">
-      <div class="grid-item order-2">order-2</div>
-    </YcGridCol>
-  </YcGridRow>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-
-.order-1 { background: #e6f7ff; }
-.order-2 { background: #f6ffed; }
-.order-3 { background: #fff7e6; }
-</style>
-```
-
-## 栅格列弹性
-
-通过 `flex` 属性设置栅格列的弹性。
-
-```vue
-<template>
-  <YcGridRow :gutter="16">
-    <YcGridCol :span="8" flex="auto">
-      <div class="grid-item">flex: auto</div>
-    </YcGridCol>
-    <YcGridCol :span="8" flex="1">
-      <div class="grid-item">flex: 1</div>
-    </YcGridCol>
-    <YcGridCol :span="8" flex="2">
-      <div class="grid-item">flex: 2</div>
-    </YcGridCol>
-  </YcGridRow>
-</template>
-
-<style scoped>
-.grid-item {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 4px;
-}
-</style>
-```
-
-## 完整示例
-
-一个完整的栅格布局示例。
-
-```vue
-<template>
-  <div class="page">
-    <h2>页面布局示例</h2>
-    
-    <!-- 头部 -->
-    <YcGridRow :gutter="16" style="margin-bottom: 16px;">
-      <YcGridCol :span="24">
-        <div class="header">页面头部</div>
-      </YcGridCol>
-    </YcGridRow>
-    
-    <!-- 主体内容 -->
-    <YcGridRow :gutter="16" style="margin-bottom: 16px;">
-      <!-- 侧边栏 -->
-      <YcGridCol :span="{ xs: 24, md: 6 }">
-        <div class="sidebar">侧边栏</div>
-      </YcGridCol>
-      
-      <!-- 主内容区 -->
-      <YcGridCol :span="{ xs: 24, md: 18 }">
-        <div class="main-content">
-          <h3>主内容区</h3>
-          
-          <!-- 内容卡片 -->
-          <YcGrid :cols="12" :row-gap="16" :col-gap="16">
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 1</div>
-            </YcGridItem>
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 2</div>
-            </YcGridItem>
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 3</div>
-            </YcGridItem>
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 4</div>
-            </YcGridItem>
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 5</div>
-            </YcGridItem>
-            <YcGridItem :span="{ xs: 12, sm: 6, md: 4 }">
-              <div class="card">卡片 6</div>
-            </YcGridItem>
-          </YcGrid>
-        </div>
-      </YcGridCol>
-    </YcGridRow>
-    
-    <!-- 底部 -->
-    <YcGridRow :gutter="16">
-      <YcGridCol :span="24">
-        <div class="footer">页面底部</div>
-      </YcGridCol>
-    </YcGridRow>
+  <div class="grid-demo-background">
+    <yc-space
+      direction="vertical"
+      :size="16"
+      style="display: block;">
+      <yc-row class="grid-demo">
+        <yc-col :span="24">
+          <div>24 - 100%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="12">
+          <div>12 - 50%</div>
+        </yc-col>
+        <yc-col :span="12">
+          <div>12 - 50%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+        <yc-col :span="8">
+          <div>8 - 33.33%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+        <yc-col :span="6">
+          <div>6 - 25%</div>
+        </yc-col>
+      </yc-row>
+      <yc-row class="grid-demo">
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+        <yc-col :span="4">
+          <div>4 - 16.66%</div>
+        </yc-col>
+      </yc-row>
+    </yc-space>
   </div>
 </template>
 
 <style scoped>
-.page {
-  padding: 24px;
+.grid-demo-background {
+  background-image: linear-gradient(
+    90deg,
+    rgb(242, 243, 245) 4.16666667%,
+    transparent 4.16666667%,
+    transparent 8.33333333%,
+    rgb(242, 243, 245) 8.33333333%,
+    rgb(242, 243, 245) 12.5%,
+    transparent 12.5%,
+    transparent 16.66666667%,
+    rgb(242, 243, 245) 16.66666667%,
+    rgb(242, 243, 245) 20.83333333%,
+    transparent 20.83333333%,
+    transparent 25%,
+    rgb(242, 243, 245) 25%,
+    rgb(242, 243, 245) 29.16666667%,
+    transparent 29.16666667%,
+    transparent 33.33333333%,
+    rgb(242, 243, 245) 33.33333333%,
+    rgb(242, 243, 245) 37.5%,
+    transparent 37.5%,
+    transparent 41.66666667%,
+    rgb(242, 243, 245) 41.66666667%,
+    rgb(242, 243, 245) 45.83333333%,
+    transparent 45.83333333%,
+    transparent 50%,
+    rgb(242, 243, 245) 50%,
+    rgb(242, 243, 245) 54.16666667%,
+    transparent 54.16666667%,
+    transparent 58.33333333%,
+    rgb(242, 243, 245) 58.33333333%,
+    rgb(242, 243, 245) 62.5%,
+    transparent 62.5%,
+    transparent 66.66666667%,
+    rgb(242, 243, 245) 66.66666667%,
+    rgb(242, 243, 245) 70.83333333%,
+    transparent 70.83333333%,
+    transparent 75%,
+    rgb(242, 243, 245) 75%,
+    rgb(242, 243, 245) 79.16666667%,
+    transparent 79.16666667%,
+    transparent 83.33333333%,
+    rgb(242, 243, 245) 83.33333333%,
+    rgb(242, 243, 245) 87.5%,
+    transparent 87.5%,
+    transparent 91.66666667%,
+    rgb(242, 243, 245) 91.66666667%,
+    rgb(242, 243, 245) 95.83333333%,
+    transparent 95.83333333%
+  );
 }
-
-.header {
-  background: #1890ff;
-  color: white;
-  padding: 16px;
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
   text-align: center;
-  border-radius: 6px;
 }
-
-.sidebar {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 6px;
-  height: 200px;
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
 }
-
-.main-content {
-  background: #fafafa;
-  padding: 16px;
-  border-radius: 6px;
-}
-
-.card {
-  background: white;
-  padding: 16px;
-  text-align: center;
-  border-radius: 6px;
-  border: 1px solid #f0f0f0;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer {
-  background: #f0f0f0;
-  padding: 16px;
-  text-align: center;
-  border-radius: 6px;
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
 }
 </style>
 ```
+
+</details>
+
+### 栅格偏移
+
+指定 <yc-tag>offset</yc-tag> 可以对栅格进行平移操作。
+
+<div class="cell-demo">
+    <yc-row class="grid-demo" style="marginBottom: 16px; backgroundColor: var(--color-fill-2);">
+      <yc-col :span="8">col - 8</yc-col>
+      <yc-col :span="8" :offset="8">
+        col - 8 | offset - 8
+      </yc-col>
+    </yc-row>
+    <yc-row class="grid-demo" style="marginBottom: 16px; backgroundColor: var(--color-fill-2);">
+      <yc-col :span="6" :offset="8">
+        col - 6 | offset - 8
+      </yc-col>
+      <yc-col :span="6" :offset="4">
+        col - 6 | offset - 4
+      </yc-col>
+    </yc-row>
+    <yc-row class="grid-demo" style="backgroundColor: var(--color-fill-2)">
+      <yc-col :span="12" :offset="8">
+        col - 12 | offset - 8
+      </yc-col>
+    </yc-row>
+</div>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <yc-row
+      class="grid-demo"
+      style="marginBottom: 16px; backgroundColor: var(--color-fill-2);">
+      <yc-col :span="8">col - 8</yc-col>
+      <yc-col
+        :span="8"
+        :offset="8">
+        col - 8 | offset - 8
+      </yc-col>
+    </yc-row>
+    <yc-row
+      class="grid-demo"
+      style="marginBottom: 16px; backgroundColor: var(--color-fill-2);">
+      <yc-col
+        :span="6"
+        :offset="8">
+        col - 6 | offset - 8
+      </yc-col>
+      <yc-col
+        :span="6"
+        :offset="4">
+        col - 6 | offset - 4
+      </yc-col>
+    </yc-row>
+    <yc-row
+      class="grid-demo"
+      style="backgroundColor: var(--color-fill-2)">
+      <yc-col
+        :span="12"
+        :offset="8">
+        col - 12 | offset - 8
+      </yc-col>
+    </yc-row>
+  </div>
+</template>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details>
+
+### 区块间隔
+
+通过在 <yc-tag>Row</yc-tag> 上指定 <yc-tag>Gutter</yc-tag> 可以增加栅格的区域间隔。
+
+<div class="cell-demo">
+ <div>
+    <p>Horizontal</p>
+    <yc-row class="grid-demo" :gutter="24">
+      <yc-col :span="12">
+        <div>col - 12</div>
+      </yc-col>
+      <yc-col :span="12">
+        <div>col - 12</div>
+      </yc-col>
+    </yc-row>
+    <p>Responsive</p>
+    <yc-row class="grid-demo" :gutter="{ md: 8, lg: 24, xl: 32 }">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Horizontal and Vertical</p>
+    <yc-row class="grid-demo" :gutter="[24, 12]">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</div>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  color: var(--color-white);
+}
+.grid-demo .yc-col > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.grid-demo .yc-col:nth-child(2n) > div {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) > div {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <p>Horizontal</p>
+    <yc-row
+      class="grid-demo"
+      :gutter="24">
+      <yc-col :span="12">
+        <div>col - 12</div>
+      </yc-col>
+      <yc-col :span="12">
+        <div>col - 12</div>
+      </yc-col>
+    </yc-row>
+    <p>Responsive</p>
+    <yc-row
+      class="grid-demo"
+      :gutter="{ md: 8, lg: 24, xl: 32 }">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Horizontal and Vertical</p>
+    <yc-row
+      class="grid-demo"
+      :gutter="[24, 12]">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</template>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  color: var(--color-white);
+}
+.grid-demo .yc-col > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.grid-demo .yc-col:nth-child(2n) > div {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) > div {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details>
+
+### 水平布局
+
+通过 <yc-tag>justify</yc-tag> 来进行水平布局。
+
+<div class="cell-demo">
+  <div>
+    <p>Arrange left</p>
+    <yc-row class="grid-demo" justify="start">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange center</p>
+    <yc-row class="grid-demo" justify="center">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange right</p>
+    <yc-row class="grid-demo" justify="end">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Space around</p>
+    <yc-row class="grid-demo" justify="space-around">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Space between</p>
+    <yc-row class="grid-demo" justify="space-between">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</div>
+
+<style scoped>
+.grid-demo {
+  background-color: var(--color-fill-2);
+  margin-bottom: 40px;
+}
+.grid-demo:last-child {
+  margin-bottom: 0px;
+}
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <p>Arrange left</p>
+    <yc-row
+      class="grid-demo"
+      justify="start">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange center</p>
+    <yc-row
+      class="grid-demo"
+      justify="center">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange right</p>
+    <yc-row
+      class="grid-demo"
+      justify="end">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Space around</p>
+    <yc-row
+      class="grid-demo"
+      justify="space-around">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+    <p>Space between</p>
+    <yc-row
+      class="grid-demo"
+      justify="space-between">
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+      <yc-col :span="4">
+        <div>col - 4</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</template>
+
+<style scoped>
+.grid-demo {
+  background-color: var(--color-fill-2);
+  margin-bottom: 40px;
+}
+.grid-demo:last-child {
+  margin-bottom: 0px;
+}
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details>
+
+## 垂直布局
+
+通过 <yc-tag>align</yc-tag> 来进行垂直布局。
+
+<div class="cell-demo">
+   <div>
+    <p>Arrange top</p>
+    <yc-row class="grid-demo" align="start">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange center</p>
+    <yc-row class="grid-demo" align="center">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange bottom</p>
+    <yc-row class="grid-demo" align="end">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</div>
+
+<style scoped>
+.grid-demo {
+  background-color: var(--color-fill-2);
+  margin-bottom: 40px;
+}
+.grid-demo:last-child {
+  margin-bottom: 0px;
+}
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-of-type(1) {
+  height: 90px;
+  line-height: 90px;
+}
+.grid-demo .yc-col:nth-of-type(2) {
+  height: 48px;
+  line-height: 48px;
+}
+.grid-demo .yc-col:nth-of-type(3) {
+  height: 120px;
+  line-height: 120px;
+}
+.grid-demo .yc-col:nth-of-type(4) {
+  height: 60px;
+  line-height: 60px;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <p>Arrange top</p>
+    <yc-row
+      class="grid-demo"
+      align="start">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange center</p>
+    <yc-row
+      class="grid-demo"
+      align="center">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+    <p>Arrange bottom</p>
+    <yc-row
+      class="grid-demo"
+      align="end">
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+      <yc-col :span="6">
+        <div>col - 6</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</template>
+
+<style scoped>
+.grid-demo {
+  background-color: var(--color-fill-2);
+  margin-bottom: 40px;
+}
+.grid-demo:last-child {
+  margin-bottom: 0px;
+}
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-of-type(1) {
+  height: 90px;
+  line-height: 90px;
+}
+.grid-demo .yc-col:nth-of-type(2) {
+  height: 48px;
+  line-height: 48px;
+}
+.grid-demo .yc-col:nth-of-type(3) {
+  height: 120px;
+  line-height: 120px;
+}
+.grid-demo .yc-col:nth-of-type(4) {
+  height: 60px;
+  line-height: 60px;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details>
+
+## 排序
+
+通过 <yc-tag>order</yc-tag> 来进行元素排序。
+
+<div class="cell-demo">
+  <div>
+    <yc-row class="grid-demo">
+      <yc-col :span="6" :order="4">
+        <div>1 col-order-4</div>
+      </yc-col>
+      <yc-col :span="6" :order="3">
+        <div>2 col-order-3</div>
+      </yc-col>
+      <yc-col :span="6" :order="2">
+        <div>3 col-order-2</div>
+      </yc-col>
+      <yc-col :span="6" :order="1">
+        <div>4 col-order-1</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <yc-row class="grid-demo">
+      <yc-col
+        :span="6"
+        :order="4">
+        <div>1 col-order-4</div>
+      </yc-col>
+      <yc-col
+        :span="6"
+        :order="3">
+        <div>2 col-order-3</div>
+      </yc-col>
+      <yc-col
+        :span="6"
+        :order="2">
+        <div>3 col-order-2</div>
+      </yc-col>
+      <yc-col
+        :span="6"
+        :order="1">
+        <div>4 col-order-1</div>
+      </yc-col>
+    </yc-row>
+  </div>
+</template>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details >
+
+### 响应式布局
+
+预置六种响应尺寸, 分别为 <yc-tag>xs</yc-tag>, <yc-tag>sm</yc-tag>, <yc-tag>md</yc-tag>, <yc-tag>lg</yc-tag>, <yc-tag>xl</yc-tag>, <yc-tag>xxl</yc-tag>。
+
+<div class="cell-demo">
+  <yc-row class="grid-demo">
+    <yc-col
+      :span="{
+        xs: 2,
+        sm: 4,
+        md: 6,
+        lg: 8,
+        xl: 10,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+    <yc-col
+      :span="{
+        xs: 20,
+        sm: 16,
+        md: 12,
+        lg: 8,
+        xl: 4,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+    <yc-col
+      :span="{
+        xs: 2,
+        sm: 4,
+        md: 6,
+        lg: 8,
+        xl: 10,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+  </yc-row>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-row class="grid-demo">
+    <yc-col
+      :span="{
+        xs: 2,
+        sm: 4,
+        md: 6,
+        lg: 8,
+        xl: 10,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+    <yc-col
+      :span="{
+        xs: 20,
+        sm: 16,
+        md: 12,
+        lg: 8,
+        xl: 4,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+    <yc-col
+      :span="{
+        xs: 2,
+        sm: 4,
+        md: 6,
+        lg: 8,
+        xl: 10,
+        xxl: 8,
+      }">
+      Col
+    </yc-col>
+  </yc-row>
+</template>
+
+<style scoped>
+.grid-demo .yc-col {
+  height: 48px;
+  line-height: 48px;
+  color: var(--color-white);
+  text-align: center;
+}
+.grid-demo .yc-col:nth-child(2n) {
+  background-color: rgba(var(--arcoblue-6), 0.9);
+}
+.grid-demo .yc-col:nth-child(2n + 1) {
+  background-color: var(--color-primary-light-4);
+}
+</style>
+```
+
+</details>
 
 ## API
 
 ### Grid Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| cols | 栅格列数 | `number \| ResponsiveValue` | `24` |
-| rowGap | 行间距 | `number \| ResponsiveValue` | `0` |
-| colGap | 列间距 | `number \| ResponsiveValue` | `0` |
-| collapsed | 是否折叠 | `boolean` | `false` |
-| collapsedRows | 折叠行数 | `number` | `1` |
+| 参数          | 说明     | 类型                        | 默认值  |
+| ------------- | -------- | --------------------------- | ------- |
+| cols          | 栅格列数 | `number \| ResponsiveValue` | `24`    |
+| rowGap        | 行间距   | `number \| ResponsiveValue` | `0`     |
+| colGap        | 列间距   | `number \| ResponsiveValue` | `0`     |
+| collapsed     | 是否折叠 | `boolean`                   | `false` |
+| collapsedRows | 折叠行数 | `number`                    | `1`     |
 
 ### GridItem Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| span | 栅格项跨度 | `number \| ResponsiveValue` | - |
-| offset | 栅格项偏移量 | `number \| ResponsiveValue` | - |
-| suffix | 是否为后缀 | `boolean` | - |
+| 参数   | 说明         | 类型                        | 默认值 |
+| ------ | ------------ | --------------------------- | ------ |
+| span   | 栅格项跨度   | `number \| ResponsiveValue` | -      |
+| offset | 栅格项偏移量 | `number \| ResponsiveValue` | -      |
+| suffix | 是否为后缀   | `boolean`                   | -      |
 
 ### GridRow Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| gutter | 栅格间距 | `Gutter \| [Gutter, Gutter]` | - |
-| justify | 水平对齐方式 | `GridRowJustify` | - |
-| align | 垂直对齐方式 | `GridRowAlign` | - |
-| div | 是否渲染为div | `boolean` | - |
-| wrap | 是否换行 | `boolean` | - |
+| 参数    | 说明          | 类型                         | 默认值 |
+| ------- | ------------- | ---------------------------- | ------ |
+| gutter  | 栅格间距      | `Gutter \| [Gutter, Gutter]` | -      |
+| justify | 水平对齐方式  | `GridRowJustify`             | -      |
+| align   | 垂直对齐方式  | `GridRowAlign`               | -      |
+| div     | 是否渲染为div | `boolean`                    | -      |
+| wrap    | 是否换行      | `boolean`                    | -      |
 
 ### GridCol Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| span | 栅格列跨度 | `number \| ResponsiveValue` | - |
-| offset | 栅格列偏移量 | `number \| ResponsiveValue` | - |
-| order | 栅格列顺序 | `number \| ResponsiveValue` | - |
-| flex | 栅格列弹性 | `GridColFlex \| ResponsiveValue` | - |
+| 参数   | 说明         | 类型                             | 默认值 |
+| ------ | ------------ | -------------------------------- | ------ |
+| span   | 栅格列跨度   | `number \| ResponsiveValue`      | -      |
+| offset | 栅格列偏移量 | `number \| ResponsiveValue`      | -      |
+| order  | 栅格列顺序   | `number \| ResponsiveValue`      | -      |
+| flex   | 栅格列弹性   | `GridColFlex \| ResponsiveValue` | -      |
 
 ### Types
 
@@ -639,7 +1191,12 @@ type ResponsiveValue<T = number | string> = {
   xxl?: T;
 };
 
-type GridRowJustify = 'start' | 'center' | 'end' | 'space-around' | 'space-between';
+type GridRowJustify =
+  | 'start'
+  | 'center'
+  | 'end'
+  | 'space-around'
+  | 'space-between';
 type GridRowAlign = 'start' | 'center' | 'end' | 'stretch';
 type GridColFlex = number | string | 'initial' | 'auto' | 'none';
 type Gutter = number | ResponsiveValue;
