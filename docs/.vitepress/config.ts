@@ -65,7 +65,7 @@ export default defineConfig({
             { text: 'Descriptions 描述列表', link: '/components/descriptions' },
             { text: 'Empty 空状态', link: '/components/empty' },
             {
-              text: '图片',
+              text: '图片 Image',
               link: '/components/image',
             },
             { text: 'List 列表', link: '/components/list' },
