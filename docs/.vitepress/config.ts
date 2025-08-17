@@ -16,7 +16,7 @@ export default defineConfig({
     siteTitle: 'Yc Design Vue',
     nav: [
       { text: '指南', link: '/guide/' },
-      { text: '组件', link: '/components/' },
+      { text: '组件', link: '/components/button' },
       {
         text: 'GitHub',
         link: 'https://github.com/boy-twilight-lee/yc-design-vue',

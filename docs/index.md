@@ -10,7 +10,7 @@ hero:
       link: /guide/
     - theme: alt
       text: 查看组件
-      link: /components/
+      link: /components/button
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/boy-twilight-lee/yc-design-vue
@@ -34,7 +34,6 @@ features:
   - icon: 🌟
     title: 企业级品质
     details: 经过严格测试，稳定可靠，适合企业级应用开发
-
 ---
 
 ## 快速开始
@@ -58,27 +57,29 @@ yarn add yc-design-vue
     <yc-button>默认按钮</yc-button>
   </div>
   <div style="margin-top: 20px;">
-    <yc-input v-model="text" placeholder="请输入内容..."></yc-input>
+    <yc-input
+      v-model="text"
+      placeholder="请输入内容..."></yc-input>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const text = ref('')
+import { ref } from 'vue';
+const text = ref('');
 </script>
 ```
 
 ### 完整引入
 
 ```typescript
-import { createApp } from 'vue'
-import App from './App.vue'
-import YcUi from 'yc-design-vue'
-import 'yc-design-vue/es/style.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+import YcUi from 'yc-design-vue';
+import 'yc-design-vue/es/style.css';
 
-const app = createApp(App)
-app.use(YcUi)
-app.mount('#app')
+const app = createApp(App);
+app.use(YcUi);
+app.mount('#app');
 ```
 
 ## 组件总览
