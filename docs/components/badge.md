@@ -93,7 +93,7 @@
 
 ### 小红点
 
-设置 <yc-tag>dot<yc-tag>，即可只显示小红点而不显示数字。<yc-tag>count > 0<yc-tag> 时才显示
+设置 <yc-tag>dot</yc-tag>，即可只显示小红点而不显示数字。<yc-tag>count > 0</yc-tag> 时才显示
 
 <div class="cell-demo">
   <yc-space :size="40">
@@ -184,7 +184,7 @@
 
 ### 最大值
 
-设置 <yc-tag>max-count<yc-tag>，可以限制最大显示的徽标数值，超过将会加 <yc-tag>+<yc-tag> 后缀。<yc-tag>max-count<yc-tag> 默认为 <yc-tag>99<yc-tag>。
+设置 <yc-tag>max-count</yc-tag>，可以限制最大显示的徽标数值，超过将会加 <yc-tag>+</yc-tag> 后缀。<yc-tag>max-count</yc-tag> 默认为 <yc-tag>99</yc-tag>。
 
 <div class="cell-demo">
   <yc-space :size="40">
