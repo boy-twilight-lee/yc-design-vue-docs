@@ -1,176 +1,287 @@
 # Space 间距
 
-## 介绍
+设置组件之间的间距
 
-Space 组件用于设置组件之间的间距，避免组件紧贴在一起，让页面布局更加美观。
+---
 
-## 基础用法
+### 基础用法
 
-### 基本使用
+间距组件的基本用法。
 
-最简单的间距用法，默认为水平方向。
+<div class="cell-demo">
+  <yc-space>
+    <yc-typography-text>Space:</yc-typography-text>
+    <yc-tag v-if="false" color='arcoblue'>Tag</yc-tag>
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-switch defaultChecked />
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
   <yc-space>
-    <yc-button>按钮1</yc-button>
-    <yc-button>按钮2</yc-button>
-    <yc-button>按钮3</yc-button>
+    <yc-typography-text>Space:</yc-typography-text>
+    <yc-tag
+      v-if="false"
+      color="arcoblue">
+      Tag
+    </yc-tag>
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-switch defaultChecked />
   </yc-space>
 </template>
 ```
+
+</details>
 
 ### 垂直间距
 
-设置 `direction` 为 `vertical` 显示垂直间距。
+可以设置垂直方向排列的间距。
+
+<div class="cell-demo">
+  <yc-space direction="vertical" fill>
+    <yc-button type="primary" long>Item1</yc-button>
+    <yc-button type="primary" long>Item2</yc-button>
+    <yc-button type="primary" long>Item3</yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <yc-space direction="vertical">
-    <yc-button>按钮1</yc-button>
-    <yc-button>按钮2</yc-button>
-    <yc-button>按钮3</yc-button>
+  <yc-space
+    direction="vertical"
+    fill>
+    <yc-button
+      type="primary"
+      long
+      >Item1</yc-button
+    >
+    <yc-button
+      type="primary"
+      long
+      >Item2</yc-button
+    >
+    <yc-button
+      type="primary"
+      long
+      >Item3</yc-button
+    >
   </yc-space>
 </template>
 ```
 
-### 间距大小
+</details>
 
-通过 `size` 属性设置间距大小，支持预设值和数字。
+### 尺寸
 
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
-    <div>
-      <p>小间距</p>
-      <yc-space size="small">
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
-    </div>
-    
-    <div>
-      <p>中等间距（默认）</p>
-      <yc-space size="medium">
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
-    </div>
-    
-    <div>
-      <p>大间距</p>
-      <yc-space size="large">
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
-    </div>
-    
-    <div>
-      <p>自定义间距（24px）</p>
-      <yc-space :size="24">
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
-    </div>
-  </yc-space>
-</template>
-```
+内置 4 个尺寸，<yc-tag>mini - 4px</yc-tag> <yc-tag>small - 8px (默认)</yc-tag> <yc-tag>medium - 16px</yc-tag> <yc-tag>large - 24px</yc-tag>，也支持传数字来自定义尺寸。
 
-### 对齐方式
+<div class="cell-demo">
+  <div>
+    <div style="marginBottom: 20px">
+      <yc-radio-group v-model="size" type='button'>
+        <yc-radio value="mini">mini</yc-radio>
+        <yc-radio value="small">small</yc-radio>
+        <yc-radio value="medium">medium</yc-radio>
+        <yc-radio value="large">large</yc-radio>
+      </yc-radio-group>
+    </div>
+    <yc-space :size="size">
+      <yc-button type="primary">Item1</yc-button>
+      <yc-button type="primary">Item2</yc-button>
+      <yc-button type="primary">Item3</yc-button>
+    </yc-space>
+  </div>
+</div>
 
-通过 `align` 属性设置子元素的对齐方式。
+<script setup lang="ts">
+import { ref } from 'vue'
+const size = ref('medium')
+</script>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <div>
-      <p>起始对齐（默认）</p>
-      <yc-space align="start">
-        <yc-button>短按钮</yc-button>
-        <yc-button size="large">大尺寸按钮</yc-button>
-        <yc-button>短按钮</yc-button>
-      </yc-space>
+  <div>
+    <div style="marginBottom: 20px">
+      <yc-radio-group
+        v-model="size"
+        type="button">
+        <yc-radio value="mini">mini</yc-radio>
+        <yc-radio value="small">small</yc-radio>
+        <yc-radio value="medium">medium</yc-radio>
+        <yc-radio value="large">large</yc-radio>
+      </yc-radio-group>
     </div>
-    
-    <div>
-      <p>居中对齐</p>
-      <yc-space align="center">
-        <yc-button>短按钮</yc-button>
-        <yc-button size="large">大尺寸按钮</yc-button>
-        <yc-button>短按钮</yc-button>
-      </yc-space>
-    </div>
-    
-    <div>
-      <p>结束对齐</p>
-      <yc-space align="end">
-        <yc-button>短按钮</yc-button>
-        <yc-button size="large">大尺寸按钮</yc-button>
-        <yc-button>短按钮</yc-button>
-      </yc-space>
-    </div>
-    
-    <div>
-      <p>基线对齐</p>
-      <yc-space align="baseline">
-        <yc-button>短按钮</yc-button>
-        <yc-button size="large">大尺寸按钮</yc-button>
-        <yc-button>短按钮</yc-button>
-      </yc-space>
-    </div>
-  </yc-space>
-</template>
-```
-
-### 自动换行
-
-设置 `wrap` 属性允许子元素换行。
-
-```vue
-<template>
-  <div style="width: 300px; border: 1px dashed #ccc; padding: 16px;">
-    <yc-space wrap>
-      <yc-button v-for="i in 10" :key="i">按钮{{ i }}</yc-button>
+    <yc-space :size="size">
+      <yc-button type="primary">Item1</yc-button>
+      <yc-button type="primary">Item2</yc-button>
+      <yc-button type="primary">Item3</yc-button>
     </yc-space>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const size = ref('medium');
+const align = ref('center');
+</script>
 ```
 
-### 填充模式
+</details>
 
-设置 `fill` 属性让子元素填充整个空间。
+### 对齐
+
+内置 4 种对齐方式，分别为 <yc-tag>start</yc-tag> <yc-tag>center</yc-tag> <yc-tag>end</yc-tag> <yc-tag>baseline</yc-tag>，在水平模式下默认为 <yc-tag>center</yc-tag>。
+
+<div class="cell-demo">
+  <div>
+    <div style="marginBottom: 20px">
+      <yc-radio-group v-model="align" type='button'>
+        <yc-radio value="start">start</yc-radio>
+        <yc-radio value="center">center</yc-radio>
+        <yc-radio value="end">end</yc-radio>
+        <yc-radio value="baseline">baseline</yc-radio>
+      </yc-radio-group>
+    </div>
+    <yc-space :align="align" style="backgroundColor: var(--color-fill-2);padding: 10px;">
+      <yc-typography-text>Space:</yc-typography-text>
+      <yc-button type="primary">Item2</yc-button>
+      <yc-card title='Card'>
+        Card content
+      </yc-card>
+    </yc-space>
+  </div>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <div>
-      <p>默认模式</p>
-      <yc-space>
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
+  <div>
+    <div style="marginBottom: 20px">
+      <yc-radio-group
+        v-model="align"
+        type="button">
+        <yc-radio value="start">start</yc-radio>
+        <yc-radio value="center">center</yc-radio>
+        <yc-radio value="end">end</yc-radio>
+        <yc-radio value="baseline">baseline</yc-radio>
+      </yc-radio-group>
     </div>
-    
-    <div>
-      <p>填充模式</p>
-      <yc-space fill>
-        <yc-button>按钮1</yc-button>
-        <yc-button>按钮2</yc-button>
-        <yc-button>按钮3</yc-button>
-      </yc-space>
-    </div>
+    <yc-space
+      :align="align"
+      style="backgroundColor: var(--color-fill-2);padding: 10px;">
+      <yc-typography-text>Space:</yc-typography-text>
+      <yc-button type="primary">Item2</yc-button>
+      <yc-card title="Card"> Card content </yc-card>
+    </yc-space>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const align = ref('center');
+</script>
+```
+
+</details>
+
+### 环绕间距
+
+环绕类型的间距，四周都有间距，一般用于换行的场景。
+
+<div class="cell-demo">
+  <yc-space wrap>
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-button type="primary">Item3</yc-button>
+    <yc-button type="primary">Item4</yc-button>
+    <yc-button type="primary">Item5</yc-button>
+    <yc-button type="primary">Item6</yc-button>
+    <yc-button type="primary">Item7</yc-button>
+    <yc-button type="primary">Item8</yc-button>
+    <yc-button type="primary">Item9</yc-button>
+    <yc-button type="primary">Item10</yc-button>
+    <yc-button type="primary">Item11</yc-button>
+    <yc-button type="primary">Item12</yc-button>
+    <yc-button type="primary">Item13</yc-button>
+    <yc-button type="primary">Item14</yc-button>
+    <yc-button type="primary">Item15</yc-button>
+    <yc-button type="primary">Item16</yc-button>
+    <yc-button type="primary">Item17</yc-button>
+    <yc-button type="primary">Item18</yc-button>
+    <yc-button type="primary">Item19</yc-button>
+    <yc-button type="primary">Item20</yc-button>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space wrap>
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-button type="primary">Item3</yc-button>
+    <yc-button type="primary">Item4</yc-button>
+    <yc-button type="primary">Item5</yc-button>
+    <yc-button type="primary">Item6</yc-button>
+    <yc-button type="primary">Item7</yc-button>
+    <yc-button type="primary">Item8</yc-button>
+    <yc-button type="primary">Item9</yc-button>
+    <yc-button type="primary">Item10</yc-button>
+    <yc-button type="primary">Item11</yc-button>
+    <yc-button type="primary">Item12</yc-button>
+    <yc-button type="primary">Item13</yc-button>
+    <yc-button type="primary">Item14</yc-button>
+    <yc-button type="primary">Item15</yc-button>
+    <yc-button type="primary">Item16</yc-button>
+    <yc-button type="primary">Item17</yc-button>
+    <yc-button type="primary">Item18</yc-button>
+    <yc-button type="primary">Item19</yc-button>
+    <yc-button type="primary">Item20</yc-button>
   </yc-space>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+const align = ref('center');
+</script>
 ```
+
+</details>
 
 ### 分隔符
 
-使用 `split` 插槽添加分隔符。
+为相邻子元素设置分隔符。
+
+<div class="cell-demo">
+  <yc-space>
+    <template #split>
+      <yc-divider direction="vertical" />
+    </template>
+    <yc-tag v-if="false" color='arcoblue'>Tag</yc-tag>
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-switch defaultChecked />
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
 
 ```vue
 <template>
@@ -178,88 +289,38 @@ Space 组件用于设置组件之间的间距，避免组件紧贴在一起，�
     <template #split>
       <yc-divider direction="vertical" />
     </template>
-    <yc-button>按钮1</yc-button>
-    <yc-button>按钮2</yc-button>
-    <yc-button>按钮3</yc-button>
+    <yc-tag
+      v-if="false"
+      color="arcoblue"
+      >Tag</yc-tag
+    >
+    <yc-button type="primary">Item1</yc-button>
+    <yc-button type="primary">Item2</yc-button>
+    <yc-switch defaultChecked />
   </yc-space>
 </template>
 ```
 
-### 复杂布局示例
-
-结合不同属性创建复杂的布局。
-
-```vue
-<template>
-  <yc-space direction="vertical" size="large">
-    <!-- 表单布局 -->
-    <yc-card title="用户信息">
-      <yc-space direction="vertical" size="medium" fill>
-        <yc-space>
-          <span style="width: 80px; display: inline-block;">姓名：</span>
-          <yc-input placeholder="请输入姓名" />
-        </yc-space>
-        <yc-space>
-          <span style="width: 80px; display: inline-block;">邮箱：</span>
-          <yc-input placeholder="请输入邮箱" />
-        </yc-space>
-        <yc-space>
-          <span style="width: 80px; display: inline-block;">电话：</span>
-          <yc-input placeholder="请输入电话" />
-        </yc-space>
-        <yc-space>
-          <yc-button type="primary">保存</yc-button>
-          <yc-button>取消</yc-button>
-        </yc-space>
-      </yc-space>
-    </yc-card>
-    
-    <!-- 操作按钮组 -->
-    <yc-card title="操作栏">
-      <yc-space wrap>
-        <yc-button type="primary">新增</yc-button>
-        <yc-button>编辑</yc-button>
-        <yc-button>删除</yc-button>
-        <yc-divider direction="vertical" />
-        <yc-button>导出</yc-button>
-        <yc-button>导入</yc-button>
-        <yc-divider direction="vertical" />
-        <yc-button>刷新</yc-button>
-      </yc-space>
-    </yc-card>
-    
-    <!-- 标签组 -->
-    <yc-card title="标签">
-      <yc-space wrap>
-        <yc-tag v-for="tag in tags" :key="tag" closable>{{ tag }}</yc-tag>
-      </yc-space>
-    </yc-card>
-  </yc-space>
-</template>
-
-<script setup>
-const tags = ['Vue', 'React', 'Angular', 'TypeScript', 'JavaScript', 'CSS', 'HTML', 'Node.js']
-</script>
-```
+</details>
 
 ## API
 
 ### Space Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| align | 对齐方式 | `'start' \| 'end' \| 'center' \| 'baseline'` | `'start'` |
-| direction | 间距方向 | `'horizontal' \| 'vertical'` | `'horizontal'` |
-| wrap | 是否自动换行，仅在 horizontal 时有效 | `boolean` | `false` |
-| fill | 是否让 Space 变为一个块级元素，填充整个父元素 | `boolean` | `false` |
-| size | 间距大小 | `'mini' \| 'small' \| 'medium' \| 'large' \| number` | `'medium'` |
+| 参数名    | 描述                                          | 类型                                                 | 默认值         |
+| --------- | --------------------------------------------- | ---------------------------------------------------- | -------------- |
+| align     | 对齐方式                                      | `'start' \| 'end' \| 'center' \| 'baseline'`         | `'start'`      |
+| direction | 间距方向                                      | `'horizontal' \| 'vertical'`                         | `'horizontal'` |
+| wrap      | 是否自动换行，仅在 horizontal 时有效          | `boolean`                                            | `false`        |
+| fill      | 是否让 Space 变为一个块级元素，填充整个父元素 | `boolean`                                            | `false`        |
+| size      | 间距大小                                      | `'mini' \| 'small' \| 'medium' \| 'large' \| number` | `'medium'`     |
 
 ### Space Slots
 
-| 插槽名 | 描述 |
-|--------|------|
+| 插槽名  | 描述               |
+| ------- | ------------------ |
 | default | 需要添加间距的元素 |
-| split | 分隔符 |
+| split   | 分隔符             |
 
 ## 类型定义
 
