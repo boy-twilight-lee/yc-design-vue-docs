@@ -131,7 +131,7 @@ Yc Design Vue 支持通过 CSS 变量进行主题定制。
 
 ## 下一步
 
-- 查看 [组件列表](/components/) 了解所有可用组件
+- 查看 [组件列表](/components/button) 了解所有可用组件
 - 阅读 [安装指南](/guide/installation) 了解详细的安装步骤
 - 学习 [按需引入](/guide/import) 优化打包体积
 - 探索 [主题定制](/guide/theme) 个性化您的应用
