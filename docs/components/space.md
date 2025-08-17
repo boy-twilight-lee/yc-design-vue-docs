@@ -102,11 +102,6 @@
   </div>
 </div>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-const size = ref('medium')
-</script>
-
 <details>
 <summary>查看/隐藏代码</summary>
 
@@ -134,7 +129,6 @@ const size = ref('medium')
 <script setup lang="ts">
 import { ref } from 'vue';
 const size = ref('medium');
-const align = ref('center');
 </script>
 ```
 
@@ -255,11 +249,6 @@ const align = ref('center');
     <yc-button type="primary">Item20</yc-button>
   </yc-space>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-const align = ref('center');
-</script>
 ```
 
 </details>
@@ -302,6 +291,12 @@ const align = ref('center');
 ```
 
 </details>
+
+<script setup>
+import { ref, reactive } from 'vue';
+const align = ref('center');
+const size = ref('medium');
+</script>
 
 ## API
 

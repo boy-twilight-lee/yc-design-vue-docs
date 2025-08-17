@@ -341,7 +341,6 @@ const toast = () => {
 
 <script setup>
 import { computed, ref } from 'vue';
-import { Message } from 'yc-design-vue';
 const list = ['B', 'Arco', 'Design', 'Tom', 'AD'];
 const index = ref(0);
 const text = computed(() => list[index.value]);

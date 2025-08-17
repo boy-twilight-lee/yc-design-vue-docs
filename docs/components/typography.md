@@ -365,6 +365,11 @@ const str = ref('Click the icon to edit this text.');
 
 </details>
 
+<script setup>
+import { ref } from 'vue';
+const str = ref('Click the icon to edit this text.');
+</script>
+
 ## API
 
 ### Typography Props
