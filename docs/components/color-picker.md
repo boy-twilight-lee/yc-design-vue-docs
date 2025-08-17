@@ -40,9 +40,15 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcColorPicker v-model="hexColor" format="hex" />
-    <YcColorPicker v-model="rgbColor" format="rgb" />
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcColorPicker
+      v-model="hexColor"
+      format="hex" />
+    <YcColorPicker
+      v-model="rgbColor"
+      format="rgb" />
   </YcSpace>
 </template>
 
@@ -60,7 +66,9 @@ const rgbColor = ref('rgb(24, 144, 255)');
 
 ```vue
 <template>
-  <YcColorPicker v-model="color" show-text />
+  <YcColorPicker
+    v-model="color"
+    show-text />
 </template>
 
 <script setup>
@@ -76,7 +84,9 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker v-model="color" show-history />
+  <YcColorPicker
+    v-model="color"
+    show-history />
 </template>
 
 <script setup>
@@ -92,7 +102,9 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker v-model="color" show-preset />
+  <YcColorPicker
+    v-model="color"
+    show-preset />
 </template>
 
 <script setup>
@@ -108,11 +120,10 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker 
-    v-model="color" 
-    show-preset 
-    :preset-colors="presetColors"
-  />
+  <YcColorPicker
+    v-model="color"
+    show-preset
+    :preset-colors="presetColors" />
 </template>
 
 <script setup>
@@ -127,7 +138,7 @@ const presetColors = ref([
   '#fa541c',
   '#13c2c2',
   '#722ed1',
-  '#eb2f96'
+  '#eb2f96',
 ]);
 </script>
 ```
@@ -138,22 +149,17 @@ const presetColors = ref([
 
 ```vue
 <template>
-  <YcColorPicker 
-    v-model="color" 
-    show-history 
-    :history-colors="historyColors"
-  />
+  <YcColorPicker
+    v-model="color"
+    show-history
+    :history-colors="historyColors" />
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
 const color = ref('#1890ff');
-const historyColors = ref([
-  '#1890ff',
-  '#f50',
-  '#52c41a'
-]);
+const historyColors = ref(['#1890ff', '#f50', '#52c41a']);
 </script>
 ```
 
@@ -164,10 +170,18 @@ const historyColors = ref([
 ```vue
 <template>
   <YcSpace>
-    <YcColorPicker v-model="color" size="mini" />
-    <YcColorPicker v-model="color" size="small" />
-    <YcColorPicker v-model="color" size="medium" />
-    <YcColorPicker v-model="color" size="large" />
+    <YcColorPicker
+      v-model="color"
+      size="mini" />
+    <YcColorPicker
+      v-model="color"
+      size="small" />
+    <YcColorPicker
+      v-model="color"
+      size="medium" />
+    <YcColorPicker
+      v-model="color"
+      size="large" />
   </YcSpace>
 </template>
 
@@ -184,7 +198,9 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker v-model="color" disabled />
+  <YcColorPicker
+    v-model="color"
+    disabled />
 </template>
 
 <script setup>
@@ -200,7 +216,9 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker v-model="color" :disabled-alpha="true" />
+  <YcColorPicker
+    v-model="color"
+    :disabled-alpha="true" />
 </template>
 
 <script setup>
@@ -232,13 +250,12 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker 
-    v-model="color" 
+  <YcColorPicker
+    v-model="color"
     :trigger-props="{ 
       popup-visible: true,
       'popup-placement': 'bottom'
-    }"
-  />
+    }" />
 </template>
 
 <script setup>
@@ -254,11 +271,10 @@ const color = ref('#1890ff');
 
 ```vue
 <template>
-  <YcColorPicker 
+  <YcColorPicker
     v-model="color"
     @change="onChange"
-    @popup-visible-change="onPopupVisibleChange"
-  />
+    @popup-visible-change="onPopupVisibleChange" />
 </template>
 
 <script setup>
@@ -282,7 +298,9 @@ const onPopupVisibleChange = (visible, color) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcColorPicker v-model="color" />
     <div>当前颜色: {{ color }}</div>
     <YcButton @click="resetColor">重置颜色</YcButton>
@@ -304,35 +322,29 @@ const resetColor = () => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 当前选中的颜色 | `string` | - |
-| defaultValue | 默认颜色 | `string` | - |
-| format | 颜色格式 | `ColorFormat` | - |
-| size | 尺寸 | `Size` | - |
-| showText | 是否显示颜色值文本 | `boolean` | - |
-| showHistory | 是否显示历史颜色 | `boolean` | - |
-| showPreset | 是否显示预设颜色 | `boolean` | - |
-| disabled | 是否禁用 | `boolean` | `false` |
-| disabledAlpha | 是否禁用透明度 | `boolean` | - |
-| hideTrigger | 是否隐藏触发器 | `boolean` | - |
-| triggerProps | 触发器属性 | `TriggerProps` | - |
-| historyColors | 历史颜色列表 | `string[]` | - |
-| presetColors | 预设颜色列表 | `string[]` | - |
+| 参数          | 说明               | 类型           | 默认值  |
+| ------------- | ------------------ | -------------- | ------- |
+| modelValue    | 当前选中的颜色     | `string`       | -       |
+| defaultValue  | 默认颜色           | `string`       | -       |
+| format        | 颜色格式           | `ColorFormat`  | -       |
+| size          | 尺寸               | `Size`         | -       |
+| showText      | 是否显示颜色值文本 | `boolean`      | -       |
+| showHistory   | 是否显示历史颜色   | `boolean`      | -       |
+| showPreset    | 是否显示预设颜色   | `boolean`      | -       |
+| disabled      | 是否禁用           | `boolean`      | `false` |
+| disabledAlpha | 是否禁用透明度     | `boolean`      | -       |
+| hideTrigger   | 是否隐藏触发器     | `boolean`      | -       |
+| triggerProps  | 触发器属性         | `TriggerProps` | -       |
+| historyColors | 历史颜色列表       | `string[]`     | -       |
+| presetColors  | 预设颜色列表       | `string[]`     | -       |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:modelValue | 颜色变化时触发 | `(value: string)` |
-| change | 颜色变化时触发 | `(value: string)` |
+| 事件名               | 说明                   | 回调参数                            |
+| -------------------- | ---------------------- | ----------------------------------- |
+| update:modelValue    | 颜色变化时触发         | `(value: string)`                   |
+| change               | 颜色变化时触发         | `(value: string)`                   |
 | popup-visible-change | 弹窗显示状态变化时触发 | `(visible: boolean, color: string)` |
-
-### Types
-
-```typescript
-type ColorFormat = 'hex' | 'rgb';
-```
 
 ## 注意事项
 
@@ -340,29 +352,3 @@ type ColorFormat = 'hex' | 'rgb';
 2. 预设颜色和历史颜色会自动保存到本地存储
 3. 禁用透明度时，颜色值将不包含alpha通道
 4. 触发器属性可以控制弹窗的显示位置和行为
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-color-picker {
-  /* 颜色选择器容器 */
-}
-
-.yc-color-picker-trigger {
-  /* 触发器 */
-}
-
-.yc-color-picker-panel {
-  /* 颜色面板 */
-}
-
-.yc-color-picker-history {
-  /* 历史颜色 */
-}
-
-.yc-color-picker-preset {
-  /* 预设颜色 */
-}
-```

@@ -368,36 +368,6 @@ Watermark 水印组件用于为页面添加水印，防止信息泄露，支持�
 | ------- | ------------------ |
 | default | 需要添加水印的内容 |
 
-## 类型定义
-
-```typescript
-export interface WatermarkProps {
-  content?: string | string[];
-  image?: string;
-  width?: number;
-  height?: number;
-  gap?: number[];
-  offset?: number[];
-  rotate?: number;
-  font?: WatermarkFont;
-  zIndex?: number;
-  alpha?: number;
-  grayscale?: boolean;
-  repeat?: boolean;
-  staggered?: boolean;
-  antiTamper?: boolean;
-}
-
-export interface WatermarkFont {
-  color?: string;
-  fontSize?: number;
-  fontFamily?: string;
-  fontStyle?: 'none' | 'normal' | 'italic' | 'oblique';
-  textAlign?: 'start' | 'end' | 'left' | 'right' | 'center';
-  fontWeight?: 'normal' | 'bold' | 'bolder' | 'lighter' | number;
-}
-```
-
 ## 设计原则
 
 - **安全防护**：通过水印防止信息泄露和未授权使用

@@ -49,7 +49,9 @@ Message 组件支持多种消息类型。
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showNormal">普通消息</YcButton>
       <YcButton @click="showInfo">信息消息</YcButton>
@@ -58,7 +60,7 @@ Message 组件支持多种消息类型。
       <YcButton @click="showError">错误消息</YcButton>
       <YcButton @click="showLoading">加载消息</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>消息类型说明：</h4>
       <ul>
@@ -108,12 +110,14 @@ const showLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showTopMessage">顶部显示</YcButton>
       <YcButton @click="showBottomMessage">底部显示</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>位置说明：</h4>
       <ul>
@@ -130,14 +134,14 @@ import { Message } from 'yc-ui';
 const showTopMessage = () => {
   Message.success({
     content: '消息显示在页面顶部',
-    position: 'top'
+    position: 'top',
   });
 };
 
 const showBottomMessage = () => {
   Message.success({
     content: '消息显示在页面底部',
-    position: 'bottom'
+    position: 'bottom',
   });
 };
 </script>
@@ -162,14 +166,14 @@ import { YcIcon } from 'yc-ui';
 const showCustomIcon = () => {
   Message.info({
     content: '这是一条带自定义图标的消息',
-    icon: () => h(YcIcon, { type: 'star' })
+    icon: () => h(YcIcon, { type: 'star' }),
   });
 };
 
 const showNoIcon = () => {
   Message.info({
     content: '这是一条不带图标的消息',
-    showIcon: false
+    showIcon: false,
   });
 };
 </script>
@@ -181,13 +185,15 @@ const showNoIcon = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showClosable">可关闭消息</YcButton>
       <YcButton @click="showAutoClose">自动关闭消息</YcButton>
       <YcButton @click="showPersistent">持久消息</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>关闭控制说明：</h4>
       <ul>
@@ -206,14 +212,14 @@ const showClosable = () => {
   Message.info({
     content: '这是一条可关闭的消息',
     closable: true,
-    duration: 0
+    duration: 0,
   });
 };
 
 const showAutoClose = () => {
   Message.success({
     content: '这条消息将在3秒后自动关闭',
-    duration: 3000
+    duration: 3000,
   });
 };
 
@@ -221,7 +227,7 @@ const showPersistent = () => {
   Message.warning({
     content: '这是一条持久消息，不会自动关闭',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 </script>
@@ -233,7 +239,9 @@ const showPersistent = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showSimpleMessage">简单文本</YcButton>
       <YcButton @click="showRichMessage">富文本内容</YcButton>
@@ -255,8 +263,12 @@ const showRichMessage = () => {
     content: h('div', [
       h('h4', '操作成功'),
       h('p', '您的请求已成功处理'),
-      h('p', { style: 'color: #666; font-size: 12px;' }, '时间：2024-01-15 10:30')
-    ])
+      h(
+        'p',
+        { style: 'color: #666; font-size: 12px;' },
+        '时间：2024-01-15 10:30'
+      ),
+    ]),
   });
 };
 
@@ -265,10 +277,14 @@ const showCustomMessage = () => {
     content: h('div', { class: 'custom-message' }, [
       h('div', { class: 'message-header' }, [
         h('span', { class: 'message-title' }, '系统通知'),
-        h('span', { class: 'message-time' }, '刚刚')
+        h('span', { class: 'message-time' }, '刚刚'),
       ]),
-      h('div', { class: 'message-content' }, '您有一条新的系统通知，请及时查看。')
-    ])
+      h(
+        'div',
+        { class: 'message-content' },
+        '您有一条新的系统通知，请及时查看。'
+      ),
+    ]),
   });
 };
 </script>
@@ -308,19 +324,27 @@ const showCustomMessage = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showMessage">显示消息</YcButton>
-      <YcButton @click="closeMessage" :disabled="!messageInstance">关闭消息</YcButton>
+      <YcButton
+        @click="closeMessage"
+        :disabled="!messageInstance"
+        >关闭消息</YcButton
+      >
       <YcButton @click="clearAllMessages">清空所有消息</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>消息管理说明：</h4>
       <ul>
         <li>调用 Message 方法会返回一个实例</li>
         <li>通过实例的 <code>close()</code> 方法可以手动关闭消息</li>
-        <li>通过 <code>Message.clear()</code> 方法可以清空指定位置的所有消息</li>
+        <li>
+          通过 <code>Message.clear()</code> 方法可以清空指定位置的所有消息
+        </li>
       </ul>
     </div>
   </YcSpace>
@@ -336,7 +360,7 @@ const showMessage = () => {
   messageInstance.value = Message.info({
     content: '这是一条可管理的消息',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -361,12 +385,18 @@ const clearAllMessages = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showLoading">显示加载</YcButton>
-      <YcButton @click="closeLoading" :disabled="!loadingInstance">关闭加载</YcButton>
+      <YcButton
+        @click="closeLoading"
+        :disabled="!loadingInstance"
+        >关闭加载</YcButton
+      >
     </YcSpace>
-    
+
     <div>
       <h4>加载消息说明：</h4>
       <ul>
@@ -387,7 +417,7 @@ const loadingInstance = ref(null);
 const showLoading = () => {
   loadingInstance.value = Message.loading({
     content: '正在处理您的请求，请稍候...',
-    duration: 0
+    duration: 0,
   });
 };
 
@@ -406,12 +436,14 @@ const closeLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showCustomConfig">自定义配置</YcButton>
       <YcButton @click="showHoverReset">悬停重置</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>配置选项说明：</h4>
       <ul>
@@ -436,7 +468,7 @@ const showCustomConfig = () => {
     position: 'bottom',
     duration: 5000,
     closable: true,
-    showIcon: true
+    showIcon: true,
   });
 };
 
@@ -444,7 +476,7 @@ const showHoverReset = () => {
   Message.info({
     content: '悬停此消息可以重置自动关闭计时器',
     duration: 3000,
-    resetOnHover: true
+    resetOnHover: true,
   });
 };
 </script>
@@ -458,7 +490,7 @@ const showHoverReset = () => {
 <template>
   <div class="page">
     <h2>Message 全局提示示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
       <YcSpace wrap>
@@ -469,7 +501,7 @@ const showHoverReset = () => {
         <YcButton @click="showLoading">加载</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>位置控制</h3>
       <YcSpace wrap>
@@ -477,7 +509,7 @@ const showHoverReset = () => {
         <YcButton @click="showBottomMessage">底部显示</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>关闭控制</h3>
       <YcSpace wrap>
@@ -486,23 +518,25 @@ const showHoverReset = () => {
         <YcButton @click="showPersistentMessage">持久消息</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>消息管理</h3>
       <YcSpace wrap>
         <YcButton @click="showManagedMessage">显示消息</YcButton>
-        <YcButton @click="closeManagedMessage" :disabled="!managedMessageInstance">
+        <YcButton
+          @click="closeManagedMessage"
+          :disabled="!managedMessageInstance">
           关闭消息
         </YcButton>
         <YcButton @click="clearAllMessages">清空所有</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>富文本内容</h3>
       <YcButton @click="showRichContentMessage">显示富文本</YcButton>
     </div>
-    
+
     <div class="section">
       <h3>自定义图标</h3>
       <YcSpace wrap>
@@ -510,7 +544,7 @@ const showHoverReset = () => {
         <YcButton @click="showNoIconMessage">无图标</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>高级功能</h3>
       <YcSpace wrap>
@@ -553,14 +587,14 @@ const showLoading = () => {
 const showTopMessage = () => {
   Message.success({
     content: '消息显示在页面顶部',
-    position: 'top'
+    position: 'top',
   });
 };
 
 const showBottomMessage = () => {
   Message.success({
     content: '消息显示在页面底部',
-    position: 'bottom'
+    position: 'bottom',
   });
 };
 
@@ -569,14 +603,14 @@ const showClosableMessage = () => {
   Message.info({
     content: '这是一条可关闭的消息',
     closable: true,
-    duration: 0
+    duration: 0,
   });
 };
 
 const showAutoCloseMessage = () => {
   Message.success({
     content: '这条消息将在3秒后自动关闭',
-    duration: 3000
+    duration: 3000,
   });
 };
 
@@ -584,7 +618,7 @@ const showPersistentMessage = () => {
   Message.warning({
     content: '这是一条持久消息，不会自动关闭',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -593,7 +627,7 @@ const showManagedMessage = () => {
   managedMessageInstance.value = Message.info({
     content: '这是一条可管理的消息',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -616,8 +650,12 @@ const showRichContentMessage = () => {
     content: h('div', [
       h('h4', { style: 'margin: 0 0 8px 0;' }, '操作成功'),
       h('p', { style: 'margin: 0 0 4px 0;' }, '您的请求已成功处理'),
-      h('p', { style: 'color: #666; font-size: 12px; margin: 0;' }, '时间：2024-01-15 10:30')
-    ])
+      h(
+        'p',
+        { style: 'color: #666; font-size: 12px; margin: 0;' },
+        '时间：2024-01-15 10:30'
+      ),
+    ]),
   });
 };
 
@@ -625,14 +663,14 @@ const showRichContentMessage = () => {
 const showCustomIconMessage = () => {
   Message.info({
     content: '这是一条带自定义图标的消息',
-    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐')
+    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐'),
   });
 };
 
 const showNoIconMessage = () => {
   Message.info({
     content: '这是一条不带图标的消息',
-    showIcon: false
+    showIcon: false,
   });
 };
 
@@ -641,7 +679,7 @@ const showHoverResetMessage = () => {
   Message.info({
     content: '悬停此消息可以重置自动关闭计时器',
     duration: 5000,
-    resetOnHover: true
+    resetOnHover: true,
   });
 };
 
@@ -649,7 +687,7 @@ const showBottomPositionMessage = () => {
   Message.success({
     content: '这是一条显示在底部的消息',
     position: 'bottom',
-    duration: 3000
+    duration: 3000,
   });
 };
 </script>
@@ -676,55 +714,55 @@ const showBottomPositionMessage = () => {
 
 ### Message 方法
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| Message.info | 显示信息消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.success | 显示成功消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.warning | 显示警告消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.error | 显示错误消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.loading | 显示加载消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.normal | 显示普通消息 | `string \| MessageConfig` | `MessageReturn` |
-| Message.clear | 清空指定位置的消息 | `MessagePostion` | `MessageReturn` |
+| 方法名          | 说明               | 参数                      | 返回值          |
+| --------------- | ------------------ | ------------------------- | --------------- |
+| Message.info    | 显示信息消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.success | 显示成功消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.warning | 显示警告消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.error   | 显示错误消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.loading | 显示加载消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.normal  | 显示普通消息       | `string \| MessageConfig` | `MessageReturn` |
+| Message.clear   | 清空指定位置的消息 | `MessagePostion`          | `MessageReturn` |
 
 ### MessageConfig
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 消息类型 | `MessageType` | - |
-| content | 消息内容 | `RenderContent` | - |
-| id | 消息唯一标识 | `string` | - |
-| icon | 自定义图标 | `RenderFunction` | - |
-| showIcon | 是否显示图标 | `boolean` | `true` |
-| closable | 是否可关闭 | `boolean` | `false` |
-| duration | 自动关闭时间（毫秒） | `number` | `3000` |
-| isReset | 是否重置 | `boolean` | `false` |
-| onClose | 关闭回调 | `(id: string \| number) => void` | - |
-| onDestory | 销毁回调 | `(id: string \| number) => void` | - |
-| resetOnHover | 悬停时重置计时器 | `boolean` | `false` |
-| position | 显示位置 | `MessagePostion` | `'top'` |
+| 参数         | 说明                 | 类型                             | 默认值  |
+| ------------ | -------------------- | -------------------------------- | ------- |
+| type         | 消息类型             | `MessageType`                    | -       |
+| content      | 消息内容             | `RenderContent`                  | -       |
+| id           | 消息唯一标识         | `string`                         | -       |
+| icon         | 自定义图标           | `RenderFunction`                 | -       |
+| showIcon     | 是否显示图标         | `boolean`                        | `true`  |
+| closable     | 是否可关闭           | `boolean`                        | `false` |
+| duration     | 自动关闭时间（毫秒） | `number`                         | `3000`  |
+| isReset      | 是否重置             | `boolean`                        | `false` |
+| onClose      | 关闭回调             | `(id: string \| number) => void` | -       |
+| onDestory    | 销毁回调             | `(id: string \| number) => void` | -       |
+| resetOnHover | 悬停时重置计时器     | `boolean`                        | `false` |
+| position     | 显示位置             | `MessagePostion`                 | `'top'` |
 
 ### MessageReturn
 
-| 属性 | 说明 | 类型 |
-| --- | --- | --- |
+| 属性  | 说明           | 类型         |
+| ----- | -------------- | ------------ |
 | close | 关闭消息的方法 | `() => void` |
 
 ### MessageType
 
-| 类型 | 说明 |
-| --- | --- |
-| `'info'` | 信息消息 |
+| 类型        | 说明     |
+| ----------- | -------- |
+| `'info'`    | 信息消息 |
 | `'success'` | 成功消息 |
 | `'warning'` | 警告消息 |
-| `'error'` | 错误消息 |
+| `'error'`   | 错误消息 |
 | `'loading'` | 加载消息 |
-| `'normal'` | 普通消息 |
+| `'normal'`  | 普通消息 |
 
 ### MessagePostion
 
-| 位置 | 说明 |
-| --- | --- |
-| `'top'` | 页面顶部 |
+| 位置       | 说明     |
+| ---------- | -------- |
+| `'top'`    | 页面顶部 |
 | `'bottom'` | 页面底部 |
 
 ## 注意事项
@@ -734,33 +772,3 @@ const showBottomPositionMessage = () => {
 3. 可以通过返回的实例手动关闭消息
 4. 支持自定义图标和富文本内容
 5. 可以通过配置控制消息的显示位置和关闭行为
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-message {
-  /* 消息容器 */
-}
-
-.yc-message-info {
-  /* 信息消息 */
-}
-
-.yc-message-success {
-  /* 成功消息 */
-}
-
-.yc-message-warning {
-  /* 警告消息 */
-}
-
-.yc-message-error {
-  /* 错误消息 */
-}
-
-.yc-message-loading {
-  /* 加载消息 */
-}
-```

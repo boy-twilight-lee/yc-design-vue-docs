@@ -14,7 +14,9 @@
 
 ```vue
 <template>
-  <YcConfigProvider :size="'large'" :z-index="2000">
+  <YcConfigProvider
+    :size="'large'"
+    :z-index="2000">
     <YcButton>大尺寸按钮</YcButton>
     <YcInput placeholder="大尺寸输入框" />
   </YcConfigProvider>
@@ -27,7 +29,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcConfigProvider size="mini">
       <YcSpace>
         <YcButton>迷你按钮</YcButton>
@@ -35,7 +39,7 @@
         <YcSelect placeholder="迷你选择器" />
       </YcSpace>
     </YcConfigProvider>
-    
+
     <YcConfigProvider size="small">
       <YcSpace>
         <YcButton>小尺寸按钮</YcButton>
@@ -43,7 +47,7 @@
         <YcSelect placeholder="小尺寸选择器" />
       </YcSpace>
     </YcConfigProvider>
-    
+
     <YcConfigProvider size="medium">
       <YcSpace>
         <YcButton>中等尺寸按钮</YcButton>
@@ -51,7 +55,7 @@
         <YcSelect placeholder="中等尺寸选择器" />
       </YcSpace>
     </YcConfigProvider>
-    
+
     <YcConfigProvider size="large">
       <YcSpace>
         <YcButton>大尺寸按钮</YcButton>
@@ -71,7 +75,9 @@
 <template>
   <YcConfigProvider :z-index="3000">
     <YcButton @click="showModal">显示模态框</YcButton>
-    <YcModal v-model:visible="modalVisible" title="高层级模态框">
+    <YcModal
+      v-model:visible="modalVisible"
+      title="高层级模态框">
       <p>这个模态框的层级是 3000</p>
     </YcModal>
   </YcConfigProvider>
@@ -102,8 +108,10 @@ const showModal = () => {
         <YcDropdownItem>选项2</YcDropdownItem>
       </YcDropdown>
     </YcConfigProvider>
-    
-    <div ref="customContainer" style="position: relative; margin-top: 16px;">
+
+    <div
+      ref="customContainer"
+      style="position: relative; margin-top: 16px;">
       <YcConfigProvider :popup-container="customContainer">
         <YcButton @click="showDropdown2">挂载到自定义容器</YcButton>
         <YcDropdown v-model:popup-visible="dropdown2Visible">
@@ -138,8 +146,12 @@ const showDropdown2 = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcConfigProvider :update-at-scroll="true" :scroll-to-close="false">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcConfigProvider
+      :update-at-scroll="true"
+      :scroll-to-close="false">
       <div style="height: 200px; overflow: auto; border: 1px solid #d9d9d9;">
         <div style="height: 400px; padding: 16px;">
           <YcButton @click="showDropdown1">滚动时更新位置</YcButton>
@@ -150,8 +162,10 @@ const showDropdown2 = () => {
         </div>
       </div>
     </YcConfigProvider>
-    
-    <YcConfigProvider :update-at-scroll="true" :scroll-to-close="true">
+
+    <YcConfigProvider
+      :update-at-scroll="true"
+      :scroll-to-close="true">
       <div style="height: 200px; overflow: auto; border: 1px solid #d9d9d9;">
         <div style="height: 400px; padding: 16px;">
           <YcButton @click="showDropdown2">滚动时关闭</YcButton>
@@ -188,9 +202,15 @@ const showDropdown2 = () => {
 ```vue
 <template>
   <YcConfigProvider :exchange-time="true">
-    <YcSpace direction="vertical" size="large">
-      <YcTimePicker v-model="time1" placeholder="开始时间" />
-      <YcTimePicker v-model="time2" placeholder="结束时间" />
+    <YcSpace
+      direction="vertical"
+      size="large">
+      <YcTimePicker
+        v-model="time1"
+        placeholder="开始时间" />
+      <YcTimePicker
+        v-model="time2"
+        placeholder="结束时间" />
     </YcSpace>
   </YcConfigProvider>
 </template>
@@ -209,12 +229,16 @@ ConfigProvider 支持嵌套使用，内层配置会覆盖外层配置。
 
 ```vue
 <template>
-  <YcConfigProvider size="large" :z-index="2000">
+  <YcConfigProvider
+    size="large"
+    :z-index="2000">
     <div>
       <p>外层配置：大尺寸，层级 2000</p>
       <YcButton>大尺寸按钮</YcButton>
-      
-      <YcConfigProvider size="mini" :z-index="3000">
+
+      <YcConfigProvider
+        size="mini"
+        :z-index="3000">
         <div style="margin-top: 16px;">
           <p>内层配置：迷你尺寸，层级 3000</p>
           <YcButton>迷你按钮</YcButton>
@@ -238,11 +262,9 @@ ConfigProvider 支持嵌套使用，内层配置会覆盖外层配置。
         <span>自定义加载中...</span>
       </div>
     </template>
-    
+
     <YcSpin :spinning="true">
-      <div style="height: 200px; padding: 16px;">
-        内容区域
-      </div>
+      <div style="height: 200px; padding: 16px;">内容区域</div>
     </YcSpin>
   </YcConfigProvider>
 </template>
@@ -270,8 +292,10 @@ ConfigProvider 支持嵌套使用，内层配置会覆盖外层配置。
         <p>暂无{{ getComponentName(component) }}数据</p>
       </div>
     </template>
-    
-    <YcSelect placeholder="请选择" style="width: 200px;">
+
+    <YcSelect
+      placeholder="请选择"
+      style="width: 200px;">
       <!-- 无选项 -->
     </YcSelect>
   </YcConfigProvider>
@@ -282,7 +306,7 @@ const getComponentName = (component) => {
   const nameMap = {
     Select: '选择',
     List: '列表',
-    Transfer: '穿梭框'
+    Transfer: '穿梭框',
   };
   return nameMap[component] || '数据';
 };
@@ -313,16 +337,17 @@ const getComponentName = (component) => {
     popup-container="body"
     :update-at-scroll="true"
     :scroll-to-close="false"
-    :exchange-time="true"
-  >
+    :exchange-time="true">
     <div class="app">
       <header class="app-header">
         <h1>我的应用</h1>
         <YcButton type="primary">登录</YcButton>
       </header>
-      
+
       <main class="app-main">
-        <YcSpace direction="vertical" size="large">
+        <YcSpace
+          direction="vertical"
+          size="large">
           <YcInput placeholder="请输入用户名" />
           <YcSelect placeholder="请选择角色">
             <YcOption value="admin">管理员</YcOption>
@@ -359,28 +384,22 @@ const getComponentName = (component) => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| zIndex | 弹窗组件的默认层级 | `number` | `1001` |
-| size | 组件的默认尺寸 | `Size` | `'medium'` |
-| popupContainer | 弹窗的挂载容器 | `PopupContainer` | `'body'` |
-| updateAtScroll | 滚动时是否更新弹窗位置 | `boolean` | `true` |
-| scrollToClose | 滚动时是否关闭弹窗 | `boolean` | `false` |
-| exchangeTime | 时间选择器是否支持时间交换 | `boolean` | `true` |
+| 参数           | 说明                       | 类型             | 默认值     |
+| -------------- | -------------------------- | ---------------- | ---------- |
+| zIndex         | 弹窗组件的默认层级         | `number`         | `1001`     |
+| size           | 组件的默认尺寸             | `Size`           | `'medium'` |
+| popupContainer | 弹窗的挂载容器             | `PopupContainer` | `'body'`   |
+| updateAtScroll | 滚动时是否更新弹窗位置     | `boolean`        | `true`     |
+| scrollToClose  | 滚动时是否关闭弹窗         | `boolean`        | `false`    |
+| exchangeTime   | 时间选择器是否支持时间交换 | `boolean`        | `true`     |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 子组件内容 | - |
-| loading | 自定义加载状态 | - |
-| empty | 自定义空状态 | `{ component: EmptyComponent }` |
-
-### Types
-
-```typescript
-type EmptyComponent = 'Select' | 'List' | 'Transfer';
-```
+| 插槽名  | 说明           | 参数                            |
+| ------- | -------------- | ------------------------------- |
+| default | 子组件内容     | -                               |
+| loading | 自定义加载状态 | -                               |
+| empty   | 自定义空状态   | `{ component: EmptyComponent }` |
 
 ## 注意事项
 
@@ -388,7 +407,3 @@ type EmptyComponent = 'Select' | 'List' | 'Transfer';
 2. 内层配置会覆盖外层配置，实现局部定制
 3. 弹窗容器配置会影响所有弹窗组件的挂载位置
 4. 滚动行为配置主要影响下拉菜单、选择器等弹窗组件
-
-## 样式定制
-
-ConfigProvider 本身不提供样式类，它通过 provide/inject 机制向子组件提供配置信息。子组件会根据这些配置自动调整样式和行为。

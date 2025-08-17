@@ -14,7 +14,9 @@
 
 ```vue
 <template>
-  <YcMenu :selected-keys="selectedKeys" @menu-item-click="onMenuItemClick">
+  <YcMenu
+    :selected-keys="selectedKeys"
+    @menu-item-click="onMenuItemClick">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home />
@@ -54,19 +56,25 @@ const onMenuItemClick = (key) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>垂直菜单</h4>
-      <YcMenu mode="vertical" :selected-keys="selectedKeys">
+      <YcMenu
+        mode="vertical"
+        :selected-keys="selectedKeys">
         <YcMenuItem key="home">首页</YcMenuItem>
         <YcMenuItem key="user">用户管理</YcMenuItem>
         <YcMenuItem key="setting">系统设置</YcMenuItem>
       </YcMenu>
     </div>
-    
+
     <div>
       <h4>水平菜单</h4>
-      <YcMenu mode="horizontal" :selected-keys="selectedKeys">
+      <YcMenu
+        mode="horizontal"
+        :selected-keys="selectedKeys">
         <YcMenuItem key="home">首页</YcMenuItem>
         <YcMenuItem key="user">用户管理</YcMenuItem>
         <YcMenuItem key="setting">系统设置</YcMenuItem>
@@ -88,21 +96,22 @@ const selectedKeys = ref('home');
 
 ```vue
 <template>
-  <YcMenu 
-    mode="vertical" 
+  <YcMenu
+    mode="vertical"
     :selected-keys="selectedKeys"
     :open-keys="openKeys"
     @menu-item-click="onMenuItemClick"
-    @sub-menu-click="onSubMenuClick"
-  >
+    @sub-menu-click="onSubMenuClick">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home />
       </template>
       首页
     </YcMenuItem>
-    
-    <YcSubMenu key="user" title="用户管理">
+
+    <YcSubMenu
+      key="user"
+      title="用户管理">
       <template #icon>
         <YcIcon-user />
       </template>
@@ -110,8 +119,10 @@ const selectedKeys = ref('home');
       <YcMenuItem key="user-add">添加用户</YcMenuItem>
       <YcMenuItem key="user-role">角色管理</YcMenuItem>
     </YcSubMenu>
-    
-    <YcSubMenu key="system" title="系统管理">
+
+    <YcSubMenu
+      key="system"
+      title="系统管理">
       <template #icon>
         <YcIcon-setting />
       </template>
@@ -144,7 +155,9 @@ const onSubMenuClick = (key, openKeys) => {
 
 ```vue
 <template>
-  <YcMenu mode="vertical" :selected-keys="selectedKeys">
+  <YcMenu
+    mode="vertical"
+    :selected-keys="selectedKeys">
     <YcMenuItemGroup title="基础功能">
       <YcMenuItem key="home">
         <template #icon>
@@ -159,7 +172,7 @@ const onSubMenuClick = (key, openKeys) => {
         仪表盘
       </YcMenuItem>
     </YcMenuItemGroup>
-    
+
     <YcMenuItemGroup title="用户管理">
       <YcMenuItem key="user-list">
         <template #icon>
@@ -174,7 +187,7 @@ const onSubMenuClick = (key, openKeys) => {
         添加用户
       </YcMenuItem>
     </YcMenuItemGroup>
-    
+
     <YcMenuItemGroup title="系统设置">
       <YcMenuItem key="setting">
         <template #icon>
@@ -205,25 +218,28 @@ const selectedKeys = ref('home');
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcButton @click="toggleCollapsed">
       {{ collapsed ? '展开菜单' : '折叠菜单' }}
     </YcButton>
-    
-    <YcMenu 
-      mode="vertical" 
+
+    <YcMenu
+      mode="vertical"
       :collapsed="collapsed"
       :selected-keys="selectedKeys"
-      :open-keys="openKeys"
-    >
+      :open-keys="openKeys">
       <YcMenuItem key="home">
         <template #icon>
           <YcIcon-home />
         </template>
         <span v-show="!collapsed">首页</span>
       </YcMenuItem>
-      
-      <YcSubMenu key="user" title="用户管理">
+
+      <YcSubMenu
+        key="user"
+        title="用户管理">
         <template #icon>
           <YcIcon-user />
         </template>
@@ -231,8 +247,10 @@ const selectedKeys = ref('home');
         <YcMenuItem key="user-list">用户列表</YcMenuItem>
         <YcMenuItem key="user-add">添加用户</YcMenuItem>
       </YcSubMenu>
-      
-      <YcSubMenu key="system" title="系统管理">
+
+      <YcSubMenu
+        key="system"
+        title="系统管理">
         <template #icon>
           <YcIcon-setting />
         </template>
@@ -263,29 +281,32 @@ const toggleCollapsed = () => {
 
 ```vue
 <template>
-  <YcMenu 
-    mode="vertical" 
+  <YcMenu
+    mode="vertical"
     :selected-keys="selectedKeys"
     :open-keys="openKeys"
     :accordion="true"
-    @sub-menu-click="onSubMenuClick"
-  >
+    @sub-menu-click="onSubMenuClick">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home />
       </template>
       首页
     </YcMenuItem>
-    
-    <YcSubMenu key="user" title="用户管理">
+
+    <YcSubMenu
+      key="user"
+      title="用户管理">
       <template #icon>
         <YcIcon-user />
       </template>
       <YcMenuItem key="user-list">用户列表</YcMenuItem>
       <YcMenuItem key="user-add">添加用户</YcMenuItem>
     </YcSubMenu>
-    
-    <YcSubMenu key="system" title="系统管理">
+
+    <YcSubMenu
+      key="system"
+      title="系统管理">
       <template #icon>
         <YcIcon-setting />
       </template>
@@ -313,27 +334,27 @@ const onSubMenuClick = (key, openKeys) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>深色主题</h4>
-      <YcMenu 
-        mode="vertical" 
+      <YcMenu
+        mode="vertical"
         theme="dark"
-        :selected-keys="selectedKeys"
-      >
+        :selected-keys="selectedKeys">
         <YcMenuItem key="home">首页</YcMenuItem>
         <YcMenuItem key="user">用户管理</YcMenuItem>
         <YcMenuItem key="setting">系统设置</YcMenuItem>
       </YcMenu>
     </div>
-    
+
     <div>
       <h4>浅色主题</h4>
-      <YcMenu 
-        mode="vertical" 
+      <YcMenu
+        mode="vertical"
         theme="light"
-        :selected-keys="selectedKeys"
-      >
+        :selected-keys="selectedKeys">
         <YcMenuItem key="home">首页</YcMenuItem>
         <YcMenuItem key="user">用户管理</YcMenuItem>
         <YcMenuItem key="setting">系统设置</YcMenuItem>
@@ -355,21 +376,25 @@ const selectedKeys = ref('home');
 
 ```vue
 <template>
-  <YcMenu mode="vertical" :selected-keys="selectedKeys">
+  <YcMenu
+    mode="vertical"
+    :selected-keys="selectedKeys">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home />
       </template>
       首页
     </YcMenuItem>
-    
-    <YcMenuItem key="user" disabled>
+
+    <YcMenuItem
+      key="user"
+      disabled>
       <template #icon>
         <YcIcon-user />
       </template>
       用户管理（已禁用）
     </YcMenuItem>
-    
+
     <YcMenuItem key="setting">
       <template #icon>
         <YcIcon-setting />
@@ -392,7 +417,9 @@ const selectedKeys = ref('home');
 
 ```vue
 <template>
-  <YcMenu mode="vertical" :selected-keys="selectedKeys">
+  <YcMenu
+    mode="vertical"
+    :selected-keys="selectedKeys">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home style="color: #1890ff;" />
@@ -402,7 +429,7 @@ const selectedKeys = ref('home');
       </template>
       首页
     </YcMenuItem>
-    
+
     <YcMenuItem key="user">
       <template #icon>
         <YcIcon-user style="color: #52c41a;" />
@@ -412,7 +439,7 @@ const selectedKeys = ref('home');
       </template>
       用户管理
     </YcMenuItem>
-    
+
     <YcMenuItem key="setting">
       <template #icon>
         <YcIcon-setting style="color: #faad14;" />
@@ -438,22 +465,23 @@ const selectedKeys = ref('home');
 
 ```vue
 <template>
-  <YcMenu 
-    mode="vertical" 
+  <YcMenu
+    mode="vertical"
     :collapsed="collapsed"
     :selected-keys="selectedKeys"
     :open-keys="openKeys"
     breakpoint="lg"
-    @collapse="onCollapse"
-  >
+    @collapse="onCollapse">
     <YcMenuItem key="home">
       <template #icon>
         <YcIcon-home />
       </template>
       <span v-show="!collapsed">首页</span>
     </YcMenuItem>
-    
-    <YcSubMenu key="user" title="用户管理">
+
+    <YcSubMenu
+      key="user"
+      title="用户管理">
       <template #icon>
         <YcIcon-user />
       </template>
@@ -461,8 +489,10 @@ const selectedKeys = ref('home');
       <YcMenuItem key="user-list">用户列表</YcMenuItem>
       <YcMenuItem key="user-add">添加用户</YcMenuItem>
     </YcSubMenu>
-    
-    <YcSubMenu key="system" title="系统管理">
+
+    <YcSubMenu
+      key="system"
+      title="系统管理">
       <template #icon>
         <YcIcon-setting />
       </template>
@@ -494,10 +524,10 @@ const onCollapse = (collapsed, type) => {
 <template>
   <div class="page">
     <h2>导航菜单示例</h2>
-    
+
     <div class="menu-container">
-      <YcMenu 
-        mode="vertical" 
+      <YcMenu
+        mode="vertical"
         :collapsed="collapsed"
         :selected-keys="selectedKeys"
         :open-keys="openKeys"
@@ -505,8 +535,7 @@ const onCollapse = (collapsed, type) => {
         theme="dark"
         @menu-item-click="onMenuItemClick"
         @sub-menu-click="onSubMenuClick"
-        @collapse="onCollapse"
-      >
+        @collapse="onCollapse">
         <!-- 基础功能 -->
         <YcMenuItemGroup title="基础功能">
           <YcMenuItem key="home">
@@ -515,7 +544,7 @@ const onCollapse = (collapsed, type) => {
             </template>
             <span v-show="!collapsed">首页</span>
           </YcMenuItem>
-          
+
           <YcMenuItem key="dashboard">
             <template #icon>
               <YcIcon-dashboard />
@@ -523,28 +552,30 @@ const onCollapse = (collapsed, type) => {
             <span v-show="!collapsed">仪表盘</span>
           </YcMenuItem>
         </YcMenuItemGroup>
-        
+
         <!-- 用户管理 -->
-        <YcSubMenu key="user" title="用户管理">
+        <YcSubMenu
+          key="user"
+          title="用户管理">
           <template #icon>
             <YcIcon-user />
           </template>
           <span v-show="!collapsed">用户管理</span>
-          
+
           <YcMenuItem key="user-list">
             <template #icon>
               <YcIcon-user />
             </template>
             用户列表
           </YcMenuItem>
-          
+
           <YcMenuItem key="user-add">
             <template #icon>
               <YcIcon-user-add />
             </template>
             添加用户
           </YcMenuItem>
-          
+
           <YcMenuItem key="user-role">
             <template #icon>
               <YcIcon-team />
@@ -552,28 +583,30 @@ const onCollapse = (collapsed, type) => {
             角色管理
           </YcMenuItem>
         </YcSubMenu>
-        
+
         <!-- 内容管理 -->
-        <YcSubMenu key="content" title="内容管理">
+        <YcSubMenu
+          key="content"
+          title="内容管理">
           <template #icon>
             <YcIcon-file-text />
           </template>
           <span v-show="!collapsed">内容管理</span>
-          
+
           <YcMenuItem key="article-list">
             <template #icon>
               <YcIcon-file-text />
             </template>
             文章列表
           </YcMenuItem>
-          
+
           <YcMenuItem key="article-add">
             <template #icon>
               <YcIcon-plus />
             </template>
             发布文章
           </YcMenuItem>
-          
+
           <YcMenuItem key="category">
             <template #icon>
               <YcIcon-folder />
@@ -581,28 +614,30 @@ const onCollapse = (collapsed, type) => {
             分类管理
           </YcMenuItem>
         </YcSubMenu>
-        
+
         <!-- 系统管理 -->
-        <YcSubMenu key="system" title="系统管理">
+        <YcSubMenu
+          key="system"
+          title="系统管理">
           <template #icon>
             <YcIcon-setting />
           </template>
           <span v-show="!collapsed">系统管理</span>
-          
+
           <YcMenuItem key="system-config">
             <template #icon>
               <YcIcon-setting />
             </template>
             系统配置
           </YcMenuItem>
-          
+
           <YcMenuItem key="system-log">
             <template #icon>
               <YcIcon-file-text />
             </template>
             系统日志
           </YcMenuItem>
-          
+
           <YcMenuItem key="backup">
             <template #icon>
               <YcIcon-save />
@@ -610,7 +645,7 @@ const onCollapse = (collapsed, type) => {
             数据备份
           </YcMenuItem>
         </YcSubMenu>
-        
+
         <!-- 帮助中心 -->
         <YcMenuItem key="help">
           <template #icon>
@@ -620,15 +655,17 @@ const onCollapse = (collapsed, type) => {
         </YcMenuItem>
       </YcMenu>
     </div>
-    
+
     <div class="content-area">
       <div class="content-header">
-        <YcButton @click="toggleCollapsed" style="margin-right: 16px;">
+        <YcButton
+          @click="toggleCollapsed"
+          style="margin-right: 16px;">
           {{ collapsed ? '展开菜单' : '折叠菜单' }}
         </YcButton>
         <span>当前选中: {{ selectedKeys }}</span>
       </div>
-      
+
       <div class="content-body">
         <h3>{{ getCurrentPageTitle() }}</h3>
         <p>这是 {{ getCurrentPageTitle() }} 页面的内容...</p>
@@ -656,7 +693,7 @@ const pageTitleMap = {
   'system-config': '系统配置',
   'system-log': '系统日志',
   backup: '数据备份',
-  help: '帮助中心'
+  help: '帮助中心',
 };
 
 const getCurrentPageTitle = () => {
@@ -730,66 +767,66 @@ const toggleCollapsed = () => {
 
 ### Menu Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| theme | 主题 | `Theme` | `'light'` |
-| mode | 菜单模式 | `MenuMode` | `'vertical'` |
-| levelIndent | 缩进宽度 | `number` | `24` |
-| autoOpen | 是否自动展开 | `boolean` | `false` |
-| collapsed | 是否折叠 | `boolean` | - |
-| defaultCollapsed | 默认是否折叠 | `boolean` | `false` |
-| collapsedWidth | 折叠时宽度 | `number \| string` | `80` |
-| accordion | 是否启用手风琴模式 | `boolean` | `false` |
-| showCollapseButton | 是否显示折叠按钮 | `boolean` | `false` |
-| selectedKeys | 选中的菜单项 | `string` | - |
-| defaultSelectedKeys | 默认选中的菜单项 | `string` | - |
-| openKeys | 展开的子菜单 | `string[]` | - |
-| defaultOpenKeys | 默认展开的子菜单 | `string[]` | - |
-| breakpoint | 响应式断点 | `BreakpointName` | - |
-| triggerProps | 触发器属性 | `TriggerProps` | - |
-| tooltipProps | 提示框属性 | `TooltipProps` | - |
-| autoOpenSelected | 是否自动展开选中项 | `boolean` | `false` |
-| autoScrollIntoView | 是否自动滚动到视图 | `boolean` | `false` |
-| scrollConfig | 滚动配置 | `ScrollIntoViewOptions` | - |
-| popupMaxHeight | 弹出菜单最大高度 | `PopupMaxHeight` | - |
+| 参数                | 说明               | 类型                    | 默认值       |
+| ------------------- | ------------------ | ----------------------- | ------------ |
+| theme               | 主题               | `Theme`                 | `'light'`    |
+| mode                | 菜单模式           | `MenuMode`              | `'vertical'` |
+| levelIndent         | 缩进宽度           | `number`                | `24`         |
+| autoOpen            | 是否自动展开       | `boolean`               | `false`      |
+| collapsed           | 是否折叠           | `boolean`               | -            |
+| defaultCollapsed    | 默认是否折叠       | `boolean`               | `false`      |
+| collapsedWidth      | 折叠时宽度         | `number \| string`      | `80`         |
+| accordion           | 是否启用手风琴模式 | `boolean`               | `false`      |
+| showCollapseButton  | 是否显示折叠按钮   | `boolean`               | `false`      |
+| selectedKeys        | 选中的菜单项       | `string`                | -            |
+| defaultSelectedKeys | 默认选中的菜单项   | `string`                | -            |
+| openKeys            | 展开的子菜单       | `string[]`              | -            |
+| defaultOpenKeys     | 默认展开的子菜单   | `string[]`              | -            |
+| breakpoint          | 响应式断点         | `BreakpointName`        | -            |
+| triggerProps        | 触发器属性         | `TriggerProps`          | -            |
+| tooltipProps        | 提示框属性         | `TooltipProps`          | -            |
+| autoOpenSelected    | 是否自动展开选中项 | `boolean`               | `false`      |
+| autoScrollIntoView  | 是否自动滚动到视图 | `boolean`               | `false`      |
+| scrollConfig        | 滚动配置           | `ScrollIntoViewOptions` | -            |
+| popupMaxHeight      | 弹出菜单最大高度   | `PopupMaxHeight`        | -            |
 
 ### SubMenu Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| path | 路径 | `string` | - |
-| title | 标题 | `string` | - |
-| selectable | 是否可选 | `boolean` | `false` |
-| popup | 是否弹出显示 | `boolean` | `false` |
-| popupMaxHeight | 弹出菜单最大高度 | `PopupMaxHeight` | - |
+| 参数           | 说明             | 类型             | 默认值  |
+| -------------- | ---------------- | ---------------- | ------- |
+| path           | 路径             | `string`         | -       |
+| title          | 标题             | `string`         | -       |
+| selectable     | 是否可选         | `boolean`        | `false` |
+| popup          | 是否弹出显示     | `boolean`        | `false` |
+| popupMaxHeight | 弹出菜单最大高度 | `PopupMaxHeight` | -       |
 
 ### MenuItem Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| path | 路径 | `string` | - |
+| 参数     | 说明     | 类型      | 默认值  |
+| -------- | -------- | --------- | ------- |
+| path     | 路径     | `string`  | -       |
 | disabled | 是否禁用 | `boolean` | `false` |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:selectedKeys | 选中菜单项变化时触发 | `(value: string)` |
-| update:openKeys | 展开子菜单变化时触发 | `(value: string[])` |
-| update:collapsed | 折叠状态变化时触发 | `(value: boolean)` |
-| collapse | 折叠状态变化时触发 | `(collapsed: boolean, type: 'clickTrigger' \| 'responsive')` |
-| menu-item-click | 菜单项点击时触发 | `(key: string)` |
-| sub-menu-click | 子菜单点击时触发 | `(key: string, openKeys: string[])` |
+| 事件名              | 说明                 | 回调参数                                                     |
+| ------------------- | -------------------- | ------------------------------------------------------------ |
+| update:selectedKeys | 选中菜单项变化时触发 | `(value: string)`                                            |
+| update:openKeys     | 展开子菜单变化时触发 | `(value: string[])`                                          |
+| update:collapsed    | 折叠状态变化时触发   | `(value: boolean)`                                           |
+| collapse            | 折叠状态变化时触发   | `(collapsed: boolean, type: 'clickTrigger' \| 'responsive')` |
+| menu-item-click     | 菜单项点击时触发     | `(key: string)`                                              |
+| sub-menu-click      | 子菜单点击时触发     | `(key: string, openKeys: string[])`                          |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 菜单内容 | - |
-| title | 标题内容 | - |
-| icon | 图标 | - |
-| suffix | 后缀内容 | - |
-| expand-icon-down | 展开图标 | - |
+| 插槽名           | 说明     | 参数 |
+| ---------------- | -------- | ---- |
+| default          | 菜单内容 | -    |
+| title            | 标题内容 | -    |
+| icon             | 图标     | -    |
+| suffix           | 后缀内容 | -    |
+| expand-icon-down | 展开图标 | -    |
 
 ## 注意事项
 
@@ -797,25 +834,3 @@ const toggleCollapsed = () => {
 2. 可以通过插槽自定义图标和内容
 3. 支持响应式设计和折叠功能
 4. 手风琴模式确保同时只展开一个子菜单
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-menu {
-  /* 菜单容器 */
-}
-
-.yc-menu-item {
-  /* 菜单项 */
-}
-
-.yc-sub-menu {
-  /* 子菜单 */
-}
-
-.yc-menu-item-group {
-  /* 菜单项分组 */
-}
-```

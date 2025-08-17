@@ -37,10 +37,8 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert title="带标题的警告">
-    这是一条带标题的警告信息
-  </YcAlert>
-  
+  <YcAlert title="带标题的警告"> 这是一条带标题的警告信息 </YcAlert>
+
   <YcAlert>
     <template #title>
       <span style="color: #1890ff;">自定义标题样式</span>
@@ -56,9 +54,7 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert closable>
-    这是一条可关闭的警告信息
-  </YcAlert>
+  <YcAlert closable> 这是一条可关闭的警告信息 </YcAlert>
 </template>
 ```
 
@@ -68,9 +64,7 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert :show-icon="false">
-    这是一条不显示图标的警告信息
-  </YcAlert>
+  <YcAlert :show-icon="false"> 这是一条不显示图标的警告信息 </YcAlert>
 </template>
 ```
 
@@ -80,9 +74,7 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert center>
-    这是一条居中显示的警告信息
-  </YcAlert>
+  <YcAlert center> 这是一条居中显示的警告信息 </YcAlert>
 </template>
 ```
 
@@ -92,9 +84,7 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert banner>
-    这是一条横幅样式的警告信息
-  </YcAlert>
+  <YcAlert banner> 这是一条横幅样式的警告信息 </YcAlert>
 </template>
 ```
 
@@ -122,7 +112,11 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
   <YcAlert>
     这是一条带操作按钮的警告信息
     <template #action>
-      <YcButton size="small" type="primary">查看详情</YcButton>
+      <YcButton
+        size="small"
+        type="primary"
+        >查看详情</YcButton
+      >
     </template>
   </YcAlert>
 </template>
@@ -149,7 +143,10 @@ Alert 组件提供了四种类型：`success`、`warning`、`info`、`error`。
 
 ```vue
 <template>
-  <YcAlert closable @close="onClose" @after-close="onAfterClose">
+  <YcAlert
+    closable
+    @close="onClose"
+    @after-close="onAfterClose">
     这是一条可关闭的警告信息
   </YcAlert>
 </template>
@@ -169,59 +166,31 @@ const onAfterClose = () => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 警告类型 | `'warning' \| 'success' \| 'info' \| 'error' \| 'normal'` | `'info'` |
-| showIcon | 是否显示图标 | `boolean` | `true` |
-| closable | 是否可关闭 | `boolean` | `false` |
-| title | 警告标题 | `string` | - |
-| banner | 是否显示为横幅样式 | `boolean` | `false` |
-| center | 是否居中显示 | `boolean` | `false` |
+| 参数     | 说明               | 类型                                                      | 默认值   |
+| -------- | ------------------ | --------------------------------------------------------- | -------- |
+| type     | 警告类型           | `'warning' \| 'success' \| 'info' \| 'error' \| 'normal'` | `'info'` |
+| showIcon | 是否显示图标       | `boolean`                                                 | `true`   |
+| closable | 是否可关闭         | `boolean`                                                 | `false`  |
+| title    | 警告标题           | `string`                                                  | -        |
+| banner   | 是否显示为横幅样式 | `boolean`                                                 | `false`  |
+| center   | 是否居中显示       | `boolean`                                                 | `false`  |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| close | 关闭时触发 | `(ev: MouseEvent)` |
-| after-close | 关闭动画结束后触发 | - |
+| 事件名      | 说明               | 回调参数           |
+| ----------- | ------------------ | ------------------ |
+| close       | 关闭时触发         | `(ev: MouseEvent)` |
+| after-close | 关闭动画结束后触发 | -                  |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
-| default | 警告内容 |
-| icon | 自定义图标 |
-| title | 自定义标题 |
-| action | 自定义操作区域 |
+| 插槽名        | 说明           |
+| ------------- | -------------- |
+| default       | 警告内容       |
+| icon          | 自定义图标     |
+| title         | 自定义标题     |
+| action        | 自定义操作区域 |
 | close-element | 自定义关闭按钮 |
-
-### Types
-
-```typescript
-interface AlertProps {
-  type?: AlertType;
-  showIcon?: boolean;
-  closable?: boolean;
-  title?: string;
-  banner?: boolean;
-  center?: boolean;
-}
-
-interface AlertEmits {
-  (e: 'close', ev: MouseEvent): void;
-  (e: 'after-close'): void;
-}
-
-interface AlertSlots {
-  default(): void;
-  icon(): void;
-  title(): void;
-  action(): void;
-  'close-element'(): void;
-}
-
-type AlertType = 'warning' | 'success' | 'info' | 'error' | 'normal';
-```
 
 ## 注意事项
 

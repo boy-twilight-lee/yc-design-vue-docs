@@ -381,25 +381,6 @@ const visible = ref(false);
 | show   | 显示气泡卡片 | `-`  |
 | hide   | 隐藏气泡卡片 | `-`  |
 
-## 类型定义
-
-```typescript
-export interface PopoverProps {
-  popupVisible?: boolean;
-  defaultPopupVisible?: boolean;
-  title?: string;
-  content?: string;
-  trigger?: TriggerType;
-  position?: TriggerPosition;
-  contentClass?: ClassName;
-  contentStyle?: CSSProperties;
-  arrowClass?: ClassName;
-  arrowStyle?: CSSProperties;
-  popupContainer?: PopupContainer;
-  triggerProps?: TriggerProps;
-}
-```
-
 ## 设计原则
 
 - **信息层次**：合理组织信息层次，突出重点内容

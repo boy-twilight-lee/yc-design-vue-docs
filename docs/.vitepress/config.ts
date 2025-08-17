@@ -64,7 +64,10 @@ export default defineConfig({
             { text: 'Comment 评论', link: '/components/comment' },
             { text: 'Descriptions 描述列表', link: '/components/descriptions' },
             { text: 'Empty 空状态', link: '/components/empty' },
-            { text: 'Image 图片', link: '/components/image' },
+            {
+              text: '图片',
+              link: '/components/image',
+            },
             { text: 'List 列表', link: '/components/list' },
             { text: 'Popover 气泡卡片', link: '/components/popover' },
             { text: 'Statistic 统计数值', link: '/components/statistic' },

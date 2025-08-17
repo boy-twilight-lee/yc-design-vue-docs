@@ -348,28 +348,6 @@
 | default | 徽标包裹的内容 |
 | content | 自定义徽标内容 |
 
-### Types
-
-```typescript
-interface BadgeProps {
-  text?: string;
-  dot?: boolean;
-  dotStyle?: CSSProperties;
-  maxCount?: number;
-  offset?: number[];
-  color?: string;
-  status?: BadgeStatus;
-  count?: number;
-}
-
-interface BadgeSlots {
-  default(): void;
-  content(): void;
-}
-
-type BadgeStatus = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
-```
-
 ## 注意事项
 
 1. 当 `count` 为 0 时，徽标不会显示
@@ -377,33 +355,3 @@ type BadgeStatus = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
 3. `offset` 数组的第一个值是水平偏移，第二个值是垂直偏移
 4. 徽标会自动根据内容调整大小
 5. 独立使用时，徽标会显示为行内元素
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-badge {
-  /* 徽标容器 */
-}
-
-.yc-badge-number {
-  /* 数字徽标 */
-}
-
-.yc-badge-dot {
-  /* 点状徽标 */
-}
-
-.yc-badge-status {
-  /* 状态徽标 */
-}
-
-.yc-badge-text {
-  /* 文本徽标 */
-}
-
-.yc-badge-custom-dot {
-  /* 自定义徽标 */
-}
-```

@@ -275,50 +275,9 @@
 | ------- | -------------- |
 | default | 分割线文字内容 |
 
-### Types
-
-```typescript
-type Orientation = 'left' | 'center' | 'right';
-type DividerType = 'solid' | 'dashed' | 'dotted' | 'double';
-```
-
 ## 注意事项
 
 1. 垂直分割线不支持文字内容
 2. 边距会根据方向自动调整
 3. 分割线类型会影响视觉效果
 4. 在响应式设计中注意分割线的显示
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-divider {
-  /* 分割线容器 */
-}
-
-.yc-divider-direction-horizontal {
-  /* 水平分割线 */
-}
-
-.yc-divider-direction-vertical {
-  /* 垂直分割线 */
-}
-
-.yc-divider-text {
-  /* 分割线文字 */
-}
-
-.yc-divider-text-left {
-  /* 左侧文字 */
-}
-
-.yc-divider-text-center {
-  /* 居中文字 */
-}
-
-.yc-divider-text-right {
-  /* 右侧文字 */
-}
-```

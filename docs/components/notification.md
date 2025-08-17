@@ -28,28 +28,28 @@ import { Notification } from 'yc-ui';
 const showInfo = () => {
   Notification.info({
     title: '信息通知',
-    content: '这是一条信息通知'
+    content: '这是一条信息通知',
   });
 };
 
 const showSuccess = () => {
   Notification.success({
     title: '成功通知',
-    content: '操作成功完成！'
+    content: '操作成功完成！',
   });
 };
 
 const showWarning = () => {
   Notification.warning({
     title: '警告通知',
-    content: '请注意这个警告信息'
+    content: '请注意这个警告信息',
   });
 };
 
 const showError = () => {
   Notification.error({
     title: '错误通知',
-    content: '操作失败，请重试'
+    content: '操作失败，请重试',
   });
 };
 </script>
@@ -61,14 +61,16 @@ Notification 组件支持多种通知类型。
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showInfo">信息通知</YcButton>
       <YcButton @click="showSuccess">成功通知</YcButton>
       <YcButton @click="showWarning">警告通知</YcButton>
       <YcButton @click="showError">错误通知</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>通知类型说明：</h4>
       <ul>
@@ -87,28 +89,28 @@ import { Notification } from 'yc-ui';
 const showInfo = () => {
   Notification.info({
     title: '信息通知',
-    content: '这是一条信息通知'
+    content: '这是一条信息通知',
   });
 };
 
 const showSuccess = () => {
   Notification.success({
     title: '成功通知',
-    content: '这是一条成功通知'
+    content: '这是一条成功通知',
   });
 };
 
 const showWarning = () => {
   Notification.warning({
     title: '警告通知',
-    content: '这是一条警告通知'
+    content: '这是一条警告通知',
   });
 };
 
 const showError = () => {
   Notification.error({
     title: '错误通知',
-    content: '这是一条错误通知'
+    content: '这是一条错误通知',
   });
 };
 </script>
@@ -120,14 +122,16 @@ const showError = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace wrap>
       <YcButton @click="showTopLeft">左上角</YcButton>
       <YcButton @click="showTopRight">右上角</YcButton>
       <YcButton @click="showBottomLeft">左下角</YcButton>
       <YcButton @click="showBottomRight">右下角</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>位置说明：</h4>
       <ul>
@@ -147,7 +151,7 @@ const showTopLeft = () => {
   Notification.info({
     title: '左上角通知',
     content: '这条通知显示在页面左上角',
-    position: 'topLeft'
+    position: 'topLeft',
   });
 };
 
@@ -155,7 +159,7 @@ const showTopRight = () => {
   Notification.info({
     title: '右上角通知',
     content: '这条通知显示在页面右上角',
-    position: 'topRight'
+    position: 'topRight',
   });
 };
 
@@ -163,7 +167,7 @@ const showBottomLeft = () => {
   Notification.info({
     title: '左下角通知',
     content: '这条通知显示在页面左下角',
-    position: 'bottomLeft'
+    position: 'bottomLeft',
   });
 };
 
@@ -171,7 +175,7 @@ const showBottomRight = () => {
   Notification.info({
     title: '右下角通知',
     content: '这条通知显示在页面右下角',
-    position: 'bottomRight'
+    position: 'bottomRight',
   });
 };
 </script>
@@ -197,7 +201,7 @@ const showCustomIcon = () => {
   Notification.info({
     title: '自定义图标通知',
     content: '这是一条带自定义图标的通知',
-    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐')
+    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐'),
   });
 };
 
@@ -205,7 +209,7 @@ const showNoIcon = () => {
   Notification.info({
     title: '无图标通知',
     content: '这是一条不带图标的通知',
-    showIcon: false
+    showIcon: false,
   });
 };
 </script>
@@ -217,13 +221,15 @@ const showNoIcon = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showClosable">可关闭通知</YcButton>
       <YcButton @click="showAutoClose">自动关闭通知</YcButton>
       <YcButton @click="showPersistent">持久通知</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>关闭控制说明：</h4>
       <ul>
@@ -243,7 +249,7 @@ const showClosable = () => {
     title: '可关闭通知',
     content: '这是一条可关闭的通知',
     closable: true,
-    duration: 0
+    duration: 0,
   });
 };
 
@@ -251,7 +257,7 @@ const showAutoClose = () => {
   Notification.success({
     title: '自动关闭通知',
     content: '这条通知将在3秒后自动关闭',
-    duration: 3000
+    duration: 3000,
   });
 };
 
@@ -260,7 +266,7 @@ const showPersistent = () => {
     title: '持久通知',
     content: '这是一条持久通知，不会自动关闭',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 </script>
@@ -272,7 +278,9 @@ const showPersistent = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showSimpleNotification">简单文本</YcButton>
       <YcButton @click="showRichNotification">富文本内容</YcButton>
@@ -288,7 +296,7 @@ import { h } from 'vue';
 const showSimpleNotification = () => {
   Notification.info({
     title: '简单通知',
-    content: '这是一条简单的文本通知'
+    content: '这是一条简单的文本通知',
   });
 };
 
@@ -298,8 +306,12 @@ const showRichNotification = () => {
     content: h('div', [
       h('h4', { style: 'margin: 0 0 8px 0;' }, '操作成功'),
       h('p', { style: 'margin: 0 0 4px 0;' }, '您的请求已成功处理'),
-      h('p', { style: 'color: #666; font-size: 12px; margin: 0;' }, '时间：2024-01-15 10:30')
-    ])
+      h(
+        'p',
+        { style: 'color: #666; font-size: 12px; margin: 0;' },
+        '时间：2024-01-15 10:30'
+      ),
+    ]),
   });
 };
 
@@ -309,10 +321,14 @@ const showCustomNotification = () => {
     content: h('div', { class: 'custom-notification' }, [
       h('div', { class: 'notification-header' }, [
         h('span', { class: 'notification-title' }, '系统通知'),
-        h('span', { class: 'notification-time' }, '刚刚')
+        h('span', { class: 'notification-time' }, '刚刚'),
       ]),
-      h('div', { class: 'notification-content' }, '您有一条新的系统通知，请及时查看。')
-    ])
+      h(
+        'div',
+        { class: 'notification-content' },
+        '您有一条新的系统通知，请及时查看。'
+      ),
+    ]),
   });
 };
 </script>
@@ -352,20 +368,30 @@ const showCustomNotification = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpace>
       <YcButton @click="showNotification">显示通知</YcButton>
-      <YcButton @click="closeNotification" :disabled="!notificationInstance">关闭通知</YcButton>
+      <YcButton
+        @click="closeNotification"
+        :disabled="!notificationInstance"
+        >关闭通知</YcButton
+      >
       <YcButton @click="clearAllNotifications">清空所有通知</YcButton>
     </YcSpace>
-    
+
     <div>
       <h4>通知管理说明：</h4>
       <ul>
         <li>调用 Notification 方法会返回一个实例</li>
         <li>通过实例的 <code>close()</code> 方法可以手动关闭通知</li>
-        <li>通过 <code>Notification.clear()</code> 方法可以清空指定位置的所有通知</li>
-        <li>通过 <code>Notification.remove()</code> 方法可以移除指定ID的通知</li>
+        <li>
+          通过 <code>Notification.clear()</code> 方法可以清空指定位置的所有通知
+        </li>
+        <li>
+          通过 <code>Notification.remove()</code> 方法可以移除指定ID的通知
+        </li>
       </ul>
     </div>
   </YcSpace>
@@ -382,7 +408,7 @@ const showNotification = () => {
     title: '可管理的通知',
     content: '这是一条可管理的通知',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -423,7 +449,8 @@ const showCustomCloseIcon = () => {
   Notification.info({
     title: '自定义关闭图标',
     content: '这条通知使用了自定义的关闭图标',
-    closeIcon: () => h('span', { style: 'color: #ff4d4f; font-size: 16px;' }, '❌')
+    closeIcon: () =>
+      h('span', { style: 'color: #ff4d4f; font-size: 16px;' }, '❌'),
   });
 };
 
@@ -431,9 +458,15 @@ const showCustomCloseElement = () => {
   Notification.info({
     title: '自定义关闭元素',
     content: '这条通知使用了自定义的关闭元素',
-    closeIconElement: () => h('div', { 
-      style: 'background: #1890ff; color: white; padding: 2px 6px; border-radius: 3px; cursor: pointer;' 
-    }, '关闭')
+    closeIconElement: () =>
+      h(
+        'div',
+        {
+          style:
+            'background: #1890ff; color: white; padding: 2px 6px; border-radius: 3px; cursor: pointer;',
+        },
+        '关闭'
+      ),
   });
 };
 </script>
@@ -458,15 +491,25 @@ const showWithFooter = () => {
   Notification.info({
     title: '带底部的通知',
     content: '这是一条带底部内容的通知',
-    footer: () => h('div', { 
-      style: 'border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px;' 
-    }, [
-      h('span', { style: 'color: #666; font-size: 12px;' }, '底部信息：'),
-      h('a', { 
-        href: '#', 
-        style: 'color: #1890ff; text-decoration: none; margin-left: 8px;' 
-      }, '查看详情')
-    ])
+    footer: () =>
+      h(
+        'div',
+        {
+          style:
+            'border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px;',
+        },
+        [
+          h('span', { style: 'color: #666; font-size: 12px;' }, '底部信息：'),
+          h(
+            'a',
+            {
+              href: '#',
+              style: 'color: #1890ff; text-decoration: none; margin-left: 8px;',
+            },
+            '查看详情'
+          ),
+        ]
+      ),
   });
 };
 </script>
@@ -480,7 +523,7 @@ const showWithFooter = () => {
 <template>
   <div class="page">
     <h2>Notification 通知提醒示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
       <YcSpace wrap>
@@ -490,7 +533,7 @@ const showWithFooter = () => {
         <YcButton @click="showError">错误通知</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>位置控制</h3>
       <YcSpace wrap>
@@ -500,7 +543,7 @@ const showWithFooter = () => {
         <YcButton @click="showBottomRight">右下角</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>关闭控制</h3>
       <YcSpace wrap>
@@ -509,23 +552,25 @@ const showWithFooter = () => {
         <YcButton @click="showPersistentNotification">持久通知</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>通知管理</h3>
       <YcSpace wrap>
         <YcButton @click="showManagedNotification">显示通知</YcButton>
-        <YcButton @click="closeManagedNotification" :disabled="!managedNotificationInstance">
+        <YcButton
+          @click="closeManagedNotification"
+          :disabled="!managedNotificationInstance">
           关闭通知
         </YcButton>
         <YcButton @click="clearAllNotifications">清空所有</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>富文本内容</h3>
       <YcButton @click="showRichContentNotification">显示富文本</YcButton>
     </div>
-    
+
     <div class="section">
       <h3>自定义图标</h3>
       <YcSpace wrap>
@@ -533,11 +578,13 @@ const showWithFooter = () => {
         <YcButton @click="showNoIconNotification">无图标</YcButton>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>高级功能</h3>
       <YcSpace wrap>
-        <YcButton @click="showCustomCloseIconNotification">自定义关闭图标</YcButton>
+        <YcButton @click="showCustomCloseIconNotification"
+          >自定义关闭图标</YcButton
+        >
         <YcButton @click="showWithFooterNotification">带底部通知</YcButton>
       </YcSpace>
     </div>
@@ -555,28 +602,28 @@ const managedNotificationInstance = ref(null);
 const showInfo = () => {
   Notification.info({
     title: '信息通知',
-    content: '这是一条信息通知'
+    content: '这是一条信息通知',
   });
 };
 
 const showSuccess = () => {
   Notification.success({
     title: '成功通知',
-    content: '操作成功完成！'
+    content: '操作成功完成！',
   });
 };
 
 const showWarning = () => {
   Notification.warning({
     title: '警告通知',
-    content: '请注意这个警告信息'
+    content: '请注意这个警告信息',
   });
 };
 
 const showError = () => {
   Notification.error({
     title: '错误通知',
-    content: '操作失败，请重试'
+    content: '操作失败，请重试',
   });
 };
 
@@ -585,7 +632,7 @@ const showTopLeft = () => {
   Notification.info({
     title: '左上角通知',
     content: '这条通知显示在页面左上角',
-    position: 'topLeft'
+    position: 'topLeft',
   });
 };
 
@@ -593,7 +640,7 @@ const showTopRight = () => {
   Notification.info({
     title: '右上角通知',
     content: '这条通知显示在页面右上角',
-    position: 'topRight'
+    position: 'topRight',
   });
 };
 
@@ -601,7 +648,7 @@ const showBottomLeft = () => {
   Notification.info({
     title: '左下角通知',
     content: '这条通知显示在页面左下角',
-    position: 'bottomLeft'
+    position: 'bottomLeft',
   });
 };
 
@@ -609,7 +656,7 @@ const showBottomRight = () => {
   Notification.info({
     title: '右下角通知',
     content: '这条通知显示在页面右下角',
-    position: 'bottomRight'
+    position: 'bottomRight',
   });
 };
 
@@ -619,7 +666,7 @@ const showClosableNotification = () => {
     title: '可关闭通知',
     content: '这是一条可关闭的通知',
     closable: true,
-    duration: 0
+    duration: 0,
   });
 };
 
@@ -627,7 +674,7 @@ const showAutoCloseNotification = () => {
   Notification.success({
     title: '自动关闭通知',
     content: '这条通知将在3秒后自动关闭',
-    duration: 3000
+    duration: 3000,
   });
 };
 
@@ -636,7 +683,7 @@ const showPersistentNotification = () => {
     title: '持久通知',
     content: '这是一条持久通知，不会自动关闭',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -646,7 +693,7 @@ const showManagedNotification = () => {
     title: '可管理的通知',
     content: '这是一条可管理的通知',
     duration: 0,
-    closable: true
+    closable: true,
   });
 };
 
@@ -672,8 +719,12 @@ const showRichContentNotification = () => {
     content: h('div', [
       h('h4', { style: 'margin: 0 0 8px 0;' }, '操作成功'),
       h('p', { style: 'margin: 0 0 4px 0;' }, '您的请求已成功处理'),
-      h('p', { style: 'color: #666; font-size: 12px; margin: 0;' }, '时间：2024-01-15 10:30')
-    ])
+      h(
+        'p',
+        { style: 'color: #666; font-size: 12px; margin: 0;' },
+        '时间：2024-01-15 10:30'
+      ),
+    ]),
   });
 };
 
@@ -682,7 +733,7 @@ const showCustomIconNotification = () => {
   Notification.info({
     title: '自定义图标通知',
     content: '这是一条带自定义图标的通知',
-    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐')
+    icon: () => h('span', { style: 'color: #1890ff; font-size: 16px;' }, '⭐'),
   });
 };
 
@@ -690,7 +741,7 @@ const showNoIconNotification = () => {
   Notification.info({
     title: '无图标通知',
     content: '这是一条不带图标的通知',
-    showIcon: false
+    showIcon: false,
   });
 };
 
@@ -699,7 +750,8 @@ const showCustomCloseIconNotification = () => {
   Notification.info({
     title: '自定义关闭图标',
     content: '这条通知使用了自定义的关闭图标',
-    closeIcon: () => h('span', { style: 'color: #ff4d4f; font-size: 16px;' }, '❌')
+    closeIcon: () =>
+      h('span', { style: 'color: #ff4d4f; font-size: 16px;' }, '❌'),
   });
 };
 
@@ -707,15 +759,25 @@ const showWithFooterNotification = () => {
   Notification.info({
     title: '带底部的通知',
     content: '这是一条带底部内容的通知',
-    footer: () => h('div', { 
-      style: 'border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px;' 
-    }, [
-      h('span', { style: 'color: #666; font-size: 12px;' }, '底部信息：'),
-      h('a', { 
-        href: '#', 
-        style: 'color: #1890ff; text-decoration: none; margin-left: 8px;' 
-      }, '查看详情')
-    ])
+    footer: () =>
+      h(
+        'div',
+        {
+          style:
+            'border-top: 1px solid #f0f0f0; padding-top: 8px; margin-top: 8px;',
+        },
+        [
+          h('span', { style: 'color: #666; font-size: 12px;' }, '底部信息：'),
+          h(
+            'a',
+            {
+              href: '#',
+              style: 'color: #1890ff; text-decoration: none; margin-left: 8px;',
+            },
+            '查看详情'
+          ),
+        ]
+      ),
   });
 };
 </script>
@@ -742,59 +804,59 @@ const showWithFooterNotification = () => {
 
 ### Notification 方法
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| Notification.info | 显示信息通知 | `string \| NotificationConfig` | `NotificationReturn` |
-| Notification.success | 显示成功通知 | `string \| NotificationConfig` | `NotificationReturn` |
-| Notification.warning | 显示警告通知 | `string \| NotificationConfig` | `NotificationReturn` |
-| Notification.error | 显示错误通知 | `string \| NotificationConfig` | `NotificationReturn` |
-| Notification.remove | 移除指定通知 | `string` | - |
-| Notification.clear | 清空指定位置的通知 | `NotificationPosition` | `NotificationReturn` |
+| 方法名               | 说明               | 参数                           | 返回值               |
+| -------------------- | ------------------ | ------------------------------ | -------------------- |
+| Notification.info    | 显示信息通知       | `string \| NotificationConfig` | `NotificationReturn` |
+| Notification.success | 显示成功通知       | `string \| NotificationConfig` | `NotificationReturn` |
+| Notification.warning | 显示警告通知       | `string \| NotificationConfig` | `NotificationReturn` |
+| Notification.error   | 显示错误通知       | `string \| NotificationConfig` | `NotificationReturn` |
+| Notification.remove  | 移除指定通知       | `string`                       | -                    |
+| Notification.clear   | 清空指定位置的通知 | `NotificationPosition`         | `NotificationReturn` |
 
 ### NotificationConfig
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 通知类型 | `NotificationType` | - |
-| content | 通知内容 | `RenderContent` | - |
-| title | 通知标题 | `RenderContent` | - |
-| icon | 自定义图标 | `RenderFunction` | - |
-| id | 通知唯一标识 | `string` | - |
-| style | 自定义样式 | `CSSProperties` | - |
-| class | 自定义类名 | `ClassName` | - |
-| showIcon | 是否显示图标 | `boolean` | `true` |
-| closable | 是否可关闭 | `boolean` | `true` |
-| duration | 自动关闭时间（毫秒） | `number` | `4500` |
-| isReset | 是否重置 | `boolean` | `false` |
-| footer | 底部内容 | `RenderFunction` | - |
-| closeIcon | 自定义关闭图标 | `RenderFunction` | - |
-| closeIconElement | 自定义关闭元素 | `RenderFunction` | - |
-| onClose | 关闭回调 | `(id: string \| number) => void` | - |
-| onDestory | 销毁回调 | `(id: string \| number) => void` | - |
-| position | 显示位置 | `NotificationPosition` | `'topRight'` |
+| 参数             | 说明                 | 类型                             | 默认值       |
+| ---------------- | -------------------- | -------------------------------- | ------------ |
+| type             | 通知类型             | `NotificationType`               | -            |
+| content          | 通知内容             | `RenderContent`                  | -            |
+| title            | 通知标题             | `RenderContent`                  | -            |
+| icon             | 自定义图标           | `RenderFunction`                 | -            |
+| id               | 通知唯一标识         | `string`                         | -            |
+| style            | 自定义样式           | `CSSProperties`                  | -            |
+| class            | 自定义类名           | `ClassName`                      | -            |
+| showIcon         | 是否显示图标         | `boolean`                        | `true`       |
+| closable         | 是否可关闭           | `boolean`                        | `true`       |
+| duration         | 自动关闭时间（毫秒） | `number`                         | `4500`       |
+| isReset          | 是否重置             | `boolean`                        | `false`      |
+| footer           | 底部内容             | `RenderFunction`                 | -            |
+| closeIcon        | 自定义关闭图标       | `RenderFunction`                 | -            |
+| closeIconElement | 自定义关闭元素       | `RenderFunction`                 | -            |
+| onClose          | 关闭回调             | `(id: string \| number) => void` | -            |
+| onDestory        | 销毁回调             | `(id: string \| number) => void` | -            |
+| position         | 显示位置             | `NotificationPosition`           | `'topRight'` |
 
 ### NotificationReturn
 
-| 属性 | 说明 | 类型 |
-| --- | --- | --- |
+| 属性  | 说明           | 类型         |
+| ----- | -------------- | ------------ |
 | close | 关闭通知的方法 | `() => void` |
 
 ### NotificationType
 
-| 类型 | 说明 |
-| --- | --- |
-| `'info'` | 信息通知 |
+| 类型        | 说明     |
+| ----------- | -------- |
+| `'info'`    | 信息通知 |
 | `'success'` | 成功通知 |
 | `'warning'` | 警告通知 |
-| `'error'` | 错误通知 |
+| `'error'`   | 错误通知 |
 
 ### NotificationPosition
 
-| 位置 | 说明 |
-| --- | --- |
-| `'topLeft'` | 页面左上角 |
-| `'topRight'` | 页面右上角 |
-| `'bottomLeft'` | 页面左下角 |
+| 位置            | 说明       |
+| --------------- | ---------- |
+| `'topLeft'`     | 页面左上角 |
+| `'topRight'`    | 页面右上角 |
+| `'bottomLeft'`  | 页面左下角 |
 | `'bottomRight'` | 页面右下角 |
 
 ## 注意事项
@@ -804,29 +866,3 @@ const showWithFooterNotification = () => {
 3. 可以通过返回的实例手动关闭通知
 4. 支持自定义图标、关闭图标和底部内容
 5. 可以通过配置控制通知的显示位置和关闭行为
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-notification {
-  /* 通知容器 */
-}
-
-.yc-notification-info {
-  /* 信息通知 */
-}
-
-.yc-notification-success {
-  /* 成功通知 */
-}
-
-.yc-notification-warning {
-  /* 警告通知 */
-}
-
-.yc-notification-error {
-  /* 错误通知 */
-}
-```

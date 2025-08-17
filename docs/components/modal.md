@@ -13,16 +13,17 @@
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="visible = true">
+    <yc-button
+      type="primary"
+      @click="visible = true">
       打开对话框
     </yc-button>
-    
+
     <yc-modal
       v-model:visible="visible"
       title="对话框标题"
       @ok="handleOk"
-      @cancel="handleCancel"
-    >
+      @cancel="handleCancel">
       <p>这是对话框的内容</p>
       <p>您可以在这里放置任何内容</p>
     </yc-modal>
@@ -30,19 +31,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 
 const handleOk = () => {
-  visible.value = false
-  console.log('点击了确定')
-}
+  visible.value = false;
+  console.log('点击了确定');
+};
 
 const handleCancel = () => {
-  visible.value = false
-  console.log('点击了取消')
-}
+  visible.value = false;
+  console.log('点击了取消');
+};
 </script>
 ```
 
@@ -53,10 +54,12 @@ const handleCancel = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="visible = true">
+    <yc-button
+      type="primary"
+      @click="visible = true">
       自定义按钮
     </yc-button>
-    
+
     <yc-modal
       v-model:visible="visible"
       title="自定义按钮"
@@ -65,27 +68,26 @@ const handleCancel = () => {
       ok-type="success"
       cancel-type="outline"
       @ok="handleOk"
-      @cancel="handleCancel"
-    >
+      @cancel="handleCancel">
       <p>您可以自定义确定和取消按钮的文字和样式</p>
     </yc-modal>
   </yc-space>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 
 const handleOk = () => {
-  visible.value = false
-  console.log('保存成功')
-}
+  visible.value = false;
+  console.log('保存成功');
+};
 
 const handleCancel = () => {
-  visible.value = false
-  console.log('关闭对话框')
-}
+  visible.value = false;
+  console.log('关闭对话框');
+};
 </script>
 ```
 
@@ -96,33 +98,34 @@ const handleCancel = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="visible = true">
+    <yc-button
+      type="primary"
+      @click="visible = true">
       无标题对话框
     </yc-button>
-    
+
     <yc-modal
       v-model:visible="visible"
       :title="false"
       @ok="handleOk"
-      @cancel="handleCancel"
-    >
+      @cancel="handleCancel">
       <p>这是一个没有标题的对话框</p>
     </yc-modal>
   </yc-space>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 
 const handleOk = () => {
-  visible.value = false
-}
+  visible.value = false;
+};
 
 const handleCancel = () => {
-  visible.value = false
-}
+  visible.value = false;
+};
 </script>
 ```
 
@@ -133,18 +136,22 @@ const handleCancel = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="showConfirm">
+    <yc-button
+      type="primary"
+      @click="showConfirm">
       删除确认
     </yc-button>
-    
-    <yc-button type="primary" @click="showConfirm2">
+
+    <yc-button
+      type="primary"
+      @click="showConfirm2">
       自定义确认
     </yc-button>
   </yc-space>
 </template>
 
 <script setup lang="ts">
-import { Modal } from 'yc-design-vue'
+import { Modal } from 'yc-design-vue';
 
 const showConfirm = () => {
   Modal.confirm({
@@ -154,13 +161,13 @@ const showConfirm = () => {
     cancelText: '取消',
     okType: 'danger',
     onOk: () => {
-      console.log('确认删除')
+      console.log('确认删除');
     },
     onCancel: () => {
-      console.log('取消删除')
+      console.log('取消删除');
     },
-  })
-}
+  });
+};
 
 const showConfirm2 = () => {
   Modal.confirm({
@@ -172,10 +179,10 @@ const showConfirm2 = () => {
     okText: '确定',
     cancelText: '取消',
     onOk: () => {
-      console.log('确认操作')
+      console.log('确认操作');
     },
-  })
-}
+  });
+};
 </script>
 ```
 
@@ -186,58 +193,66 @@ const showConfirm2 = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="showInfo">
+    <yc-button
+      type="primary"
+      @click="showInfo">
       信息提示
     </yc-button>
-    
-    <yc-button type="primary" @click="showSuccess">
+
+    <yc-button
+      type="primary"
+      @click="showSuccess">
       成功提示
     </yc-button>
-    
-    <yc-button type="primary" @click="showWarning">
+
+    <yc-button
+      type="primary"
+      @click="showWarning">
       警告提示
     </yc-button>
-    
-    <yc-button type="primary" @click="showError">
+
+    <yc-button
+      type="primary"
+      @click="showError">
       错误提示
     </yc-button>
   </yc-space>
 </template>
 
 <script setup lang="ts">
-import { Modal } from 'yc-design-vue'
+import { Modal } from 'yc-design-vue';
 
 const showInfo = () => {
   Modal.info({
     title: '信息',
     content: '这是一条信息提示',
     okText: '知道了',
-  })
-}
+  });
+};
 
 const showSuccess = () => {
   Modal.success({
     title: '成功',
     content: '操作成功完成',
     okText: '确定',
-  })
-}
+  });
+};
 
 const showWarning = () => {
   Modal.warning({
     title: '警告',
     content: '请注意这个操作可能带来的影响',
     okText: '知道了',
-  })
-}
+  });
+};
 
 const showError = () => {
   Modal.error({
     title: '错误',
     content: '操作失败，请重试',
     okText: '确定',
-  })
-}
+  });
+};
 </script>
 ```
 
@@ -248,42 +263,43 @@ const showError = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="visible = true">
+    <yc-button
+      type="primary"
+      @click="visible = true">
       异步关闭
     </yc-button>
-    
+
     <yc-modal
       v-model:visible="visible"
       title="异步关闭"
       :confirm-loading="loading"
       @ok="handleAsyncOk"
-      @cancel="handleCancel"
-    >
+      @cancel="handleCancel">
       <p>点击确定按钮后会显示加载状态，2秒后自动关闭</p>
     </yc-modal>
   </yc-space>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const visible = ref(false)
-const loading = ref(false)
+const visible = ref(false);
+const loading = ref(false);
 
 const handleAsyncOk = () => {
-  loading.value = true
-  
+  loading.value = true;
+
   // 模拟异步操作
   setTimeout(() => {
-    loading.value = false
-    visible.value = false
-    console.log('异步操作完成')
-  }, 2000)
-}
+    loading.value = false;
+    visible.value = false;
+    console.log('异步操作完成');
+  }, 2000);
+};
 
 const handleCancel = () => {
-  visible.value = false
-}
+  visible.value = false;
+};
 </script>
 ```
 
@@ -294,26 +310,35 @@ const handleCancel = () => {
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" @click="visible = true">
+    <yc-button
+      type="primary"
+      @click="visible = true">
       自定义内容
     </yc-button>
-    
+
     <yc-modal
       v-model:visible="visible"
       title="用户信息"
       width="600px"
       @ok="handleOk"
-      @cancel="handleCancel"
-    >
-      <yc-form :model="form" layout="vertical">
+      @cancel="handleCancel">
+      <yc-form
+        :model="form"
+        layout="vertical">
         <yc-form-item label="用户名">
-          <yc-input v-model="form.username" placeholder="请输入用户名" />
+          <yc-input
+            v-model="form.username"
+            placeholder="请输入用户名" />
         </yc-form-item>
         <yc-form-item label="邮箱">
-          <yc-input v-model="form.email" placeholder="请输入邮箱" />
+          <yc-input
+            v-model="form.email"
+            placeholder="请输入邮箱" />
         </yc-form-item>
         <yc-form-item label="描述">
-          <yc-textarea v-model="form.description" placeholder="请输入描述" />
+          <yc-textarea
+            v-model="form.description"
+            placeholder="请输入描述" />
         </yc-form-item>
       </yc-form>
     </yc-modal>
@@ -321,23 +346,23 @@ const handleCancel = () => {
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 const form = reactive({
   username: '',
   email: '',
   description: '',
-})
+});
 
 const handleOk = () => {
-  console.log('表单数据:', form)
-  visible.value = false
-}
+  console.log('表单数据:', form);
+  visible.value = false;
+};
 
 const handleCancel = () => {
-  visible.value = false
-}
+  visible.value = false;
+};
 </script>
 ```
 
@@ -345,134 +370,73 @@ const handleCancel = () => {
 
 ### Modal Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| visible / v-model:visible | 对话框是否可见 | `boolean` | `false` |
-| title | 对话框标题 | `string \| VNode \| false` | `-` |
-| content | 对话框内容 | `string \| VNode` | `-` |
-| width | 对话框宽度 | `string \| number` | `520` |
-| height | 对话框高度 | `string \| number` | `-` |
-| top | 对话框距离顶部的距离 | `string \| number` | `100` |
-| centered | 是否居中显示 | `boolean` | `false` |
-| mask | 是否显示遮罩层 | `boolean` | `true` |
-| mask-closable | 点击遮罩层是否可以关闭 | `boolean` | `true` |
-| closable | 是否显示关闭按钮 | `boolean` | `true` |
-| ok-text | 确定按钮文字 | `string` | `'确定'` |
-| cancel-text | 取消按钮文字 | `string` | `'取消'` |
-| ok-type | 确定按钮类型 | `ButtonType` | `'primary'` |
-| cancel-type | 取消按钮类型 | `ButtonType` | `'outline'` |
-| ok-loading | 确定按钮是否处于加载状态 | `boolean` | `false` |
-| confirm-loading | 确定按钮是否处于加载状态 | `boolean` | `false` |
-| ok-button-props | 确定按钮的属性 | `ButtonProps` | `-` |
-| cancel-button-props | 取消按钮的属性 | `ButtonProps` | `-` |
-| footer | 自定义底部内容 | `VNode \| false` | `-` |
-| unmount-on-close | 关闭时是否销毁子元素 | `boolean` | `false` |
-| esc-to-close | 是否支持 ESC 键关闭 | `boolean` | `true` |
-| draggable | 是否可拖拽 | `boolean` | `false` |
-| before-ok | 确定按钮点击前的回调 | `() => boolean \| Promise<boolean>` | `-` |
-| before-cancel | 取消按钮点击前的回调 | `() => boolean \| Promise<boolean>` | `-` |
+| 参数名                    | 描述                     | 类型                                | 默认值      |
+| ------------------------- | ------------------------ | ----------------------------------- | ----------- |
+| visible / v-model:visible | 对话框是否可见           | `boolean`                           | `false`     |
+| title                     | 对话框标题               | `string \| VNode \| false`          | `-`         |
+| content                   | 对话框内容               | `string \| VNode`                   | `-`         |
+| width                     | 对话框宽度               | `string \| number`                  | `520`       |
+| height                    | 对话框高度               | `string \| number`                  | `-`         |
+| top                       | 对话框距离顶部的距离     | `string \| number`                  | `100`       |
+| centered                  | 是否居中显示             | `boolean`                           | `false`     |
+| mask                      | 是否显示遮罩层           | `boolean`                           | `true`      |
+| mask-closable             | 点击遮罩层是否可以关闭   | `boolean`                           | `true`      |
+| closable                  | 是否显示关闭按钮         | `boolean`                           | `true`      |
+| ok-text                   | 确定按钮文字             | `string`                            | `'确定'`    |
+| cancel-text               | 取消按钮文字             | `string`                            | `'取消'`    |
+| ok-type                   | 确定按钮类型             | `ButtonType`                        | `'primary'` |
+| cancel-type               | 取消按钮类型             | `ButtonType`                        | `'outline'` |
+| ok-loading                | 确定按钮是否处于加载状态 | `boolean`                           | `false`     |
+| confirm-loading           | 确定按钮是否处于加载状态 | `boolean`                           | `false`     |
+| ok-button-props           | 确定按钮的属性           | `ButtonProps`                       | `-`         |
+| cancel-button-props       | 取消按钮的属性           | `ButtonProps`                       | `-`         |
+| footer                    | 自定义底部内容           | `VNode \| false`                    | `-`         |
+| unmount-on-close          | 关闭时是否销毁子元素     | `boolean`                           | `false`     |
+| esc-to-close              | 是否支持 ESC 键关闭      | `boolean`                           | `true`      |
+| draggable                 | 是否可拖拽               | `boolean`                           | `false`     |
+| before-ok                 | 确定按钮点击前的回调     | `() => boolean \| Promise<boolean>` | `-`         |
+| before-cancel             | 取消按钮点击前的回调     | `() => boolean \| Promise<boolean>` | `-`         |
 
 ### Modal Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
-| ok | 点击确定按钮时触发 | `-` |
-| cancel | 点击取消按钮时触发 | `-` |
-| close | 对话框关闭时触发 | `-` |
-| before-ok | 确定按钮点击前触发 | `-` |
-| before-cancel | 取消按钮点击前触发 | `-` |
+| 事件名        | 描述               | 参数 |
+| ------------- | ------------------ | ---- |
+| ok            | 点击确定按钮时触发 | `-`  |
+| cancel        | 点击取消按钮时触发 | `-`  |
+| close         | 对话框关闭时触发   | `-`  |
+| before-ok     | 确定按钮点击前触发 | `-`  |
+| before-cancel | 取消按钮点击前触发 | `-`  |
 
 ### Modal Slots
 
-| 插槽名 | 描述 |
-|--------|------|
-| default | 对话框的内容 |
-| title | 对话框的标题 |
-| footer | 对话框的底部内容 |
+| 插槽名  | 描述             |
+| ------- | ---------------- |
+| default | 对话框的内容     |
+| title   | 对话框的标题     |
+| footer  | 对话框的底部内容 |
 
 ### Modal 静态方法
 
-| 方法名 | 描述 | 参数 | 返回值 |
-|--------|------|------|--------|
-| Modal.info | 信息对话框 | `ModalConfig` | `ModalInstance` |
+| 方法名        | 描述       | 参数          | 返回值          |
+| ------------- | ---------- | ------------- | --------------- |
+| Modal.info    | 信息对话框 | `ModalConfig` | `ModalInstance` |
 | Modal.success | 成功对话框 | `ModalConfig` | `ModalInstance` |
 | Modal.warning | 警告对话框 | `ModalConfig` | `ModalInstance` |
-| Modal.error | 错误对话框 | `ModalConfig` | `ModalInstance` |
+| Modal.error   | 错误对话框 | `ModalConfig` | `ModalInstance` |
 | Modal.confirm | 确认对话框 | `ModalConfig` | `ModalInstance` |
 
 ### ModalConfig
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| title | 对话框标题 | `string \| VNode` | `-` |
-| content | 对话框内容 | `string \| VNode` | `-` |
-| okText | 确定按钮文字 | `string` | `'确定'` |
-| cancelText | 取消按钮文字 | `string` | `'取消'` |
-| okType | 确定按钮类型 | `ButtonType` | `'primary'` |
-| cancelType | 取消按钮类型 | `ButtonType` | `'outline'` |
-| onOk | 确定按钮点击回调 | `() => void` | `-` |
-| onCancel | 取消按钮点击回调 | `() => void` | `-` |
-
-## 类型定义
-
-```typescript
-export interface ModalProps {
-  visible?: boolean;
-  title?: string | VNode | false;
-  content?: string | VNode;
-  width?: string | number;
-  height?: string | number;
-  top?: string | number;
-  centered?: boolean;
-  mask?: boolean;
-  maskClosable?: boolean;
-  closable?: boolean;
-  okText?: string;
-  cancelText?: string;
-  okType?: ButtonType;
-  cancelType?: ButtonType;
-  okLoading?: boolean;
-  confirmLoading?: boolean;
-  okButtonProps?: ButtonProps;
-  cancelButtonProps?: ButtonProps;
-  footer?: VNode | false;
-  unmountOnClose?: boolean;
-  escToClose?: boolean;
-  draggable?: boolean;
-  beforeOk?: () => boolean | Promise<boolean>;
-  beforeCancel?: () => boolean | Promise<boolean>;
-}
-
-export interface ModalEmits {
-  (e: 'update:visible', visible: boolean): void;
-  (e: 'ok'): void;
-  (e: 'cancel'): void;
-  (e: 'close'): void;
-  (e: 'beforeOk'): void;
-  (e: 'beforeCancel'): void;
-}
-
-export interface ModalSlots {
-  default(): void;
-  title(): void;
-  footer(): void;
-}
-
-export interface ModalConfig {
-  title?: string | VNode;
-  content?: string | VNode;
-  okText?: string;
-  cancelText?: string;
-  okType?: ButtonType;
-  cancelType?: ButtonType;
-  onOk?: () => void;
-  onCancel?: () => void;
-}
-
-export interface ModalInstance {
-  close: () => void;
-}
-```
+| 参数名     | 描述             | 类型              | 默认值      |
+| ---------- | ---------------- | ----------------- | ----------- |
+| title      | 对话框标题       | `string \| VNode` | `-`         |
+| content    | 对话框内容       | `string \| VNode` | `-`         |
+| okText     | 确定按钮文字     | `string`          | `'确定'`    |
+| cancelText | 取消按钮文字     | `string`          | `'取消'`    |
+| okType     | 确定按钮类型     | `ButtonType`      | `'primary'` |
+| cancelType | 取消按钮类型     | `ButtonType`      | `'outline'` |
+| onOk       | 确定按钮点击回调 | `() => void`      | `-`         |
+| onCancel   | 取消按钮点击回调 | `() => void`      | `-`         |
 
 ## 设计原则
 

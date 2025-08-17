@@ -12,20 +12,23 @@
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-space>
       <yc-button @click="setLoading">
         {{ loading ? '加载完成' : '开始加载' }}
       </yc-button>
     </yc-space>
-    
+
     <yc-skeleton :loading="loading">
       <template #content>
         <yc-card>
           <template #header>
             <yc-space>
               <yc-avatar>
-                <img src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png" />
+                <img
+                  src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png" />
               </yc-avatar>
               <div>
                 <div>用户名</div>
@@ -33,7 +36,7 @@
               </div>
             </yc-space>
           </template>
-          
+
           <p>这里是实际的内容，当加载完成后会显示这些内容。</p>
           <p>骨架屏主要用于在内容加载时提供视觉占位符。</p>
         </yc-card>
@@ -43,13 +46,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const loading = ref(true)
+const loading = ref(true);
 
 const setLoading = () => {
-  loading.value = !loading.value
-}
+  loading.value = !loading.value;
+};
 </script>
 ```
 
@@ -59,29 +62,37 @@ const setLoading = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-button @click="setLoading2">
       {{ loading2 ? '加载完成' : '开始加载' }}
     </yc-button>
-    
+
     <yc-skeleton :loading="loading2">
       <!-- 自定义骨架屏 -->
       <template #default>
         <yc-space>
-          <yc-skeleton-shape shape="circle" size="large" />
+          <yc-skeleton-shape
+            shape="circle"
+            size="large" />
           <div style="flex: 1;">
-            <yc-skeleton-line :rows="3" :widths="[200, 150, 100]" />
+            <yc-skeleton-line
+              :rows="3"
+              :widths="[200, 150, 100]" />
           </div>
         </yc-space>
       </template>
-      
+
       <!-- 实际内容 -->
       <template #content>
         <yc-space>
           <yc-avatar size="large">U</yc-avatar>
           <div>
             <div style="font-weight: bold; margin-bottom: 4px;">用户信息</div>
-            <div style="color: #999; margin-bottom: 4px;">这是用户的详细描述</div>
+            <div style="color: #999; margin-bottom: 4px;">
+              这是用户的详细描述
+            </div>
             <div style="font-size: 12px; color: #ccc;">最后更新时间</div>
           </div>
         </yc-space>
@@ -91,13 +102,13 @@ const setLoading = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const loading2 = ref(true)
+const loading2 = ref(true);
 
 const setLoading2 = () => {
-  loading2.value = !loading2.value
-}
+  loading2.value = !loading2.value;
+};
 </script>
 ```
 
@@ -107,59 +118,81 @@ const setLoading2 = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-button @click="setLoading3">
       {{ loading3 ? '加载完成' : '开始加载' }}
     </yc-button>
-    
+
     <yc-skeleton :loading="loading3">
       <template #default>
         <div>
           <!-- 头部区域 -->
           <yc-space style="margin-bottom: 16px;">
-            <yc-skeleton-shape shape="circle" size="large" />
+            <yc-skeleton-shape
+              shape="circle"
+              size="large" />
             <div style="flex: 1;">
-              <yc-skeleton-line :rows="2" :widths="[150, 100]" />
+              <yc-skeleton-line
+                :rows="2"
+                :widths="[150, 100]" />
             </div>
           </yc-space>
-          
+
           <!-- 内容区域 -->
-          <yc-skeleton-shape shape="sqaure" style="width: 100%; height: 200px; margin-bottom: 16px;" />
-          
+          <yc-skeleton-shape
+            shape="sqaure"
+            style="width: 100%; height: 200px; margin-bottom: 16px;" />
+
           <!-- 文本区域 -->
-          <yc-skeleton-line :rows="4" :widths="['100%', '80%', '90%', '60%']" />
-          
+          <yc-skeleton-line
+            :rows="4"
+            :widths="['100%', '80%', '90%', '60%']" />
+
           <!-- 底部按钮区域 -->
           <yc-space style="margin-top: 16px;">
-            <yc-skeleton-shape shape="sqaure" style="width: 80px; height: 32px;" />
-            <yc-skeleton-shape shape="sqaure" style="width: 80px; height: 32px;" />
+            <yc-skeleton-shape
+              shape="sqaure"
+              style="width: 80px; height: 32px;" />
+            <yc-skeleton-shape
+              shape="sqaure"
+              style="width: 80px; height: 32px;" />
           </yc-space>
         </div>
       </template>
-      
+
       <template #content>
         <yc-card>
           <template #header>
             <yc-space>
               <yc-avatar size="large">
-                <img src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png" />
+                <img
+                  src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png" />
               </yc-avatar>
               <div>
                 <div style="font-weight: bold;">文章标题</div>
-                <div style="color: #999; font-size: 14px;">作者 • 2024-01-01</div>
+                <div style="color: #999; font-size: 14px;">
+                  作者 • 2024-01-01
+                </div>
               </div>
             </yc-space>
           </template>
-          
-          <img 
+
+          <img
             src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/placeholder_light.png"
-            style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 16px;"
-          />
-          
-          <p>这是一篇关于设计系统的文章。设计系统是一套完整的设计标准、文档元素、组件和代码实现，用于指导产品设计和开发。</p>
-          <p>通过建立设计系统，团队可以提高工作效率，保证产品的一致性，并减少重复工作。</p>
-          <p>本文将介绍如何构建一套完整的设计系统，包括颜色规范、字体规范、组件库等各个方面的内容。</p>
-          
+            style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 16px;" />
+
+          <p>
+            这是一篇关于设计系统的文章。设计系统是一套完整的设计标准、文档元素、组件和代码实现，用于指导产品设计和开发。
+          </p>
+          <p>
+            通过建立设计系统，团队可以提高工作效率，保证产品的一致性，并减少重复工作。
+          </p>
+          <p>
+            本文将介绍如何构建一套完整的设计系统，包括颜色规范、字体规范、组件库等各个方面的内容。
+          </p>
+
           <yc-space style="margin-top: 16px;">
             <yc-button type="primary">点赞</yc-button>
             <yc-button>收藏</yc-button>
@@ -171,13 +204,13 @@ const setLoading2 = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const loading3 = ref(true)
+const loading3 = ref(true);
 
 const setLoading3 = () => {
-  loading3.value = !loading3.value
-}
+  loading3.value = !loading3.value;
+};
 </script>
 ```
 
@@ -187,14 +220,18 @@ const setLoading3 = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-space>
       <yc-button @click="toggleAnimation">
         {{ animation ? '关闭动画' : '开启动画' }}
       </yc-button>
     </yc-space>
-    
-    <yc-skeleton loading :animation="animation">
+
+    <yc-skeleton
+      loading
+      :animation="animation">
       <template #default>
         <yc-space>
           <yc-skeleton-shape shape="circle" />
@@ -206,13 +243,13 @@ const setLoading3 = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const animation = ref(true)
+const animation = ref(true);
 
 const toggleAnimation = () => {
-  animation.value = !animation.value
-}
+  animation.value = !animation.value;
+};
 </script>
 ```
 
@@ -222,23 +259,30 @@ const toggleAnimation = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-button @click="setLoading4">
       {{ loading4 ? '加载完成' : '开始加载' }}
     </yc-button>
-    
+
     <yc-skeleton :loading="loading4">
       <template #default>
-        <div v-for="i in 3" :key="i" style="margin-bottom: 16px;">
+        <div
+          v-for="i in 3"
+          :key="i"
+          style="margin-bottom: 16px;">
           <yc-space>
             <yc-skeleton-shape shape="circle" />
             <div style="flex: 1;">
-              <yc-skeleton-line :rows="2" :widths="[200, 150]" />
+              <yc-skeleton-line
+                :rows="2"
+                :widths="[200, 150]" />
             </div>
           </yc-space>
         </div>
       </template>
-      
+
       <template #content>
         <yc-list :data="listData">
           <template #item="{ item }">
@@ -246,8 +290,7 @@ const toggleAnimation = () => {
               <template #meta>
                 <yc-list-item-meta
                   :title="item.title"
-                  :description="item.description"
-                >
+                  :description="item.description">
                   <template #avatar>
                     <yc-avatar>{{ item.avatar }}</yc-avatar>
                   </template>
@@ -262,19 +305,19 @@ const toggleAnimation = () => {
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const loading4 = ref(true)
+const loading4 = ref(true);
 
 const listData = [
   { title: '列表项目1', description: '这是第一个列表项的描述', avatar: 'A' },
   { title: '列表项目2', description: '这是第二个列表项的描述', avatar: 'B' },
-  { title: '列表项目3', description: '这是第三个列表项的描述', avatar: 'C' }
-]
+  { title: '列表项目3', description: '这是第三个列表项的描述', avatar: 'C' },
+];
 
 const setLoading4 = () => {
-  loading4.value = !loading4.value
-}
+  loading4.value = !loading4.value;
+};
 </script>
 ```
 
@@ -282,57 +325,33 @@ const setLoading4 = () => {
 
 ### Skeleton Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| loading | 是否显示骨架屏 | `boolean` | `true` |
-| animation | 是否显示动画 | `boolean` | `true` |
+| 参数名    | 描述           | 类型      | 默认值 |
+| --------- | -------------- | --------- | ------ |
+| loading   | 是否显示骨架屏 | `boolean` | `true` |
+| animation | 是否显示动画   | `boolean` | `true` |
 
 ### Skeleton Slots
 
-| 插槽名 | 描述 |
-|--------|------|
+| 插槽名  | 描述             |
+| ------- | ---------------- |
 | default | 自定义骨架屏内容 |
-| content | 实际内容 |
+| content | 实际内容         |
 
 ### SkeletonLine Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| rows | 行数 | `number` | `3` |
-| widths | 每行的宽度 | `number[]` | `-` |
-| line-height | 行高 | `number` | `20` |
-| line-spacing | 行间距 | `number` | `15` |
+| 参数名       | 描述       | 类型       | 默认值 |
+| ------------ | ---------- | ---------- | ------ |
+| rows         | 行数       | `number`   | `3`    |
+| widths       | 每行的宽度 | `number[]` | `-`    |
+| line-height  | 行高       | `number`   | `20`   |
+| line-spacing | 行间距     | `number`   | `15`   |
 
 ### SkeletonShape Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| shape | 形状 | `'square' \| 'circle'` | `'square'` |
-| size | 尺寸 | `'small' \| 'medium' \| 'large'` | `'medium'` |
-
-## 类型定义
-
-```typescript
-export interface SkeletonProps {
-  animation?: boolean;
-  loading?: boolean;
-}
-
-export interface SkeletonLineProps {
-  rows?: number;
-  widths?: number[];
-  lineHeight?: number;
-  lineSpacing?: number;
-}
-
-export interface SkeletonShapeProps {
-  shape?: SkeletonShapeShape;
-  size?: SkeletonShapeSize;
-}
-
-export type SkeletonShapeSize = 'small' | 'medium' | 'large';
-export type SkeletonShapeShape = 'square' | 'circle';
-```
+| 参数名 | 描述 | 类型                             | 默认值     |
+| ------ | ---- | -------------------------------- | ---------- |
+| shape  | 形状 | `'square' \| 'circle'`           | `'square'` |
+| size   | 尺寸 | `'small' \| 'medium' \| 'large'` | `'medium'` |
 
 ## 设计原则
 

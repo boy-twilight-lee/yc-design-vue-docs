@@ -12,16 +12,20 @@
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-input-number v-model="value1" placeholder="请输入数字" />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-input-number
+      v-model="value1"
+      placeholder="请输入数字" />
     <p>当前值：{{ value1 }}</p>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value1 = ref(0)
+const value1 = ref(0);
 </script>
 ```
 
@@ -31,23 +35,29 @@ const value1 = ref(0)
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <div>
       <p>嵌入模式（默认）</p>
-      <yc-input-number v-model="value2" mode="embed" />
+      <yc-input-number
+        v-model="value2"
+        mode="embed" />
     </div>
     <div>
       <p>按钮模式</p>
-      <yc-input-number v-model="value3" mode="button" />
+      <yc-input-number
+        v-model="value3"
+        mode="button" />
     </div>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value2 = ref(0)
-const value3 = ref(0)
+const value2 = ref(0);
+const value3 = ref(0);
 </script>
 ```
 
@@ -58,18 +68,27 @@ const value3 = ref(0)
 ```vue
 <template>
   <yc-space>
-    <yc-input-number v-model="value4" :step="1" placeholder="步长 1" />
-    <yc-input-number v-model="value5" :step="5" placeholder="步长 5" />
-    <yc-input-number v-model="value6" :step="0.1" placeholder="步长 0.1" />
+    <yc-input-number
+      v-model="value4"
+      :step="1"
+      placeholder="步长 1" />
+    <yc-input-number
+      v-model="value5"
+      :step="5"
+      placeholder="步长 5" />
+    <yc-input-number
+      v-model="value6"
+      :step="0.1"
+      placeholder="步长 0.1" />
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value4 = ref(0)
-const value5 = ref(0)
-const value6 = ref(0)
+const value4 = ref(0);
+const value5 = ref(0);
+const value6 = ref(0);
 </script>
 ```
 
@@ -80,18 +99,27 @@ const value6 = ref(0)
 ```vue
 <template>
   <yc-space>
-    <yc-input-number v-model="value7" :precision="0" placeholder="整数" />
-    <yc-input-number v-model="value8" :precision="2" placeholder="保留2位小数" />
-    <yc-input-number v-model="value9" :precision="4" placeholder="保留4位小数" />
+    <yc-input-number
+      v-model="value7"
+      :precision="0"
+      placeholder="整数" />
+    <yc-input-number
+      v-model="value8"
+      :precision="2"
+      placeholder="保留2位小数" />
+    <yc-input-number
+      v-model="value9"
+      :precision="4"
+      placeholder="保留4位小数" />
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value7 = ref(0)
-const value8 = ref(0)
-const value9 = ref(0)
+const value7 = ref(0);
+const value8 = ref(0);
+const value9 = ref(0);
 </script>
 ```
 
@@ -102,18 +130,28 @@ const value9 = ref(0)
 ```vue
 <template>
   <yc-space>
-    <yc-input-number v-model="value10" :min="0" placeholder="最小值 0" />
-    <yc-input-number v-model="value11" :max="100" placeholder="最大值 100" />
-    <yc-input-number v-model="value12" :min="0" :max="100" placeholder="0-100" />
+    <yc-input-number
+      v-model="value10"
+      :min="0"
+      placeholder="最小值 0" />
+    <yc-input-number
+      v-model="value11"
+      :max="100"
+      placeholder="最大值 100" />
+    <yc-input-number
+      v-model="value12"
+      :min="0"
+      :max="100"
+      placeholder="0-100" />
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value10 = ref(0)
-const value11 = ref(0)
-const value12 = ref(50)
+const value10 = ref(0);
+const value11 = ref(0);
+const value12 = ref(50);
 </script>
 ```
 
@@ -123,31 +161,33 @@ const value12 = ref(50)
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <div>
       <p>货币格式</p>
-      <yc-input-number 
-        v-model="value13" 
-        :formatter="(value) => `¥ ${value}`.replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',')"
-        :parser="(value) => value.replace(/¥\\s?|(,*)/g, '')"
-      />
+      <yc-input-number
+        v-model="value13"
+        :formatter="
+          (value) => `¥ ${value}`.replace(/\\B(?=(\\d{3})+(?!\\d))/g, ',')
+        "
+        :parser="(value) => value.replace(/¥\\s?|(,*)/g, '')" />
     </div>
     <div>
       <p>百分比格式</p>
-      <yc-input-number 
-        v-model="value14" 
+      <yc-input-number
+        v-model="value14"
         :formatter="(value) => `${value}%`"
-        :parser="(value) => value.replace('%', '')"
-      />
+        :parser="(value) => value.replace('%', '')" />
     </div>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value13 = ref(1000)
-const value14 = ref(50)
+const value13 = ref(1000);
+const value14 = ref(50);
 </script>
 ```
 
@@ -158,9 +198,13 @@ const value14 = ref(50)
 ```vue
 <template>
   <yc-space>
-    <yc-input-number size="large" placeholder="大尺寸" />
+    <yc-input-number
+      size="large"
+      placeholder="大尺寸" />
     <yc-input-number placeholder="默认尺寸" />
-    <yc-input-number size="small" placeholder="小尺寸" />
+    <yc-input-number
+      size="small"
+      placeholder="小尺寸" />
   </yc-space>
 </template>
 ```
@@ -172,19 +216,26 @@ const value14 = ref(50)
 ```vue
 <template>
   <yc-space>
-    <yc-input-number :model-value="100" disabled />
-    <yc-input-number :model-value="100" disabled mode="button" />
+    <yc-input-number
+      :model-value="100"
+      disabled />
+    <yc-input-number
+      :model-value="100"
+      disabled
+      mode="button" />
   </yc-space>
 </template>
 ```
 
-### 只读状态 
+### 只读状态
 
 通过 `readonly` 属性设置为只读状态。
 
 ```vue
 <template>
-  <yc-input-number :model-value="100" readonly />
+  <yc-input-number
+    :model-value="100"
+    readonly />
 </template>
 ```
 
@@ -194,13 +245,16 @@ const value14 = ref(50)
 
 ```vue
 <template>
-  <yc-input-number v-model="value15" hide-button placeholder="隐藏按钮" />
+  <yc-input-number
+    v-model="value15"
+    hide-button
+    placeholder="隐藏按钮" />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value15 = ref(0)
+const value15 = ref(0);
 </script>
 ```
 
@@ -210,13 +264,16 @@ const value15 = ref(0)
 
 ```vue
 <template>
-  <yc-input-number v-model="value16" error placeholder="错误状态" />
+  <yc-input-number
+    v-model="value16"
+    error
+    placeholder="错误状态" />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value16 = ref(0)
+const value16 = ref(0);
 </script>
 ```
 
@@ -226,15 +283,17 @@ const value16 = ref(0)
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <yc-input-number v-model="value17">
       <template #prefix>$</template>
     </yc-input-number>
-    
+
     <yc-input-number v-model="value18">
       <template #suffix>元</template>
     </yc-input-number>
-    
+
     <yc-input-number v-model="value19">
       <template #prepend>价格</template>
       <template #append>.00</template>
@@ -243,11 +302,11 @@ const value16 = ref(0)
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value17 = ref(100)
-const value18 = ref(100)
-const value19 = ref(100)
+const value17 = ref(100);
+const value18 = ref(100);
+const value19 = ref(100);
 </script>
 ```
 
@@ -255,84 +314,56 @@ const value19 = ref(100)
 
 ### InputNumber Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| modelValue (v-model) | 绑定值 | `number \| string` | `-` |
-| default-value | 默认值 | `number \| string` | `-` |
-| mode | 步进器模式 | `'embed' \| 'button'` | `'embed'` |
-| precision | 数值精度 | `number` | `-` |
-| step | 数字变化步长 | `number` | `1` |
-| min | 最小值 | `number` | `-Infinity` |
-| max | 最大值 | `number` | `Infinity` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| readonly | 是否只读 | `boolean` | `false` |
-| error | 是否为错误状态 | `boolean` | `false` |
-| size | 尺寸 | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'` |
-| placeholder | 输入框占位文本 | `string` | `-` |
-| hide-button | 是否隐藏步进按钮 | `boolean` | `false` |
-| allow-clear | 是否允许清空 | `boolean` | `false` |
-| formatter | 格式化函数 | `(value: string) => string` | `-` |
-| parser | 解析函数 | `(value: string) => string` | `-` |
-| model-event | 触发 v-model 的事件 | `'change' \| 'input'` | `'change'` |
+| 参数名               | 描述                | 类型                                       | 默认值      |
+| -------------------- | ------------------- | ------------------------------------------ | ----------- |
+| modelValue (v-model) | 绑定值              | `number \| string`                         | `-`         |
+| default-value        | 默认值              | `number \| string`                         | `-`         |
+| mode                 | 步进器模式          | `'embed' \| 'button'`                      | `'embed'`   |
+| precision            | 数值精度            | `number`                                   | `-`         |
+| step                 | 数字变化步长        | `number`                                   | `1`         |
+| min                  | 最小值              | `number`                                   | `-Infinity` |
+| max                  | 最大值              | `number`                                   | `Infinity`  |
+| disabled             | 是否禁用            | `boolean`                                  | `false`     |
+| readonly             | 是否只读            | `boolean`                                  | `false`     |
+| error                | 是否为错误状态      | `boolean`                                  | `false`     |
+| size                 | 尺寸                | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'`  |
+| placeholder          | 输入框占位文本      | `string`                                   | `-`         |
+| hide-button          | 是否隐藏步进按钮    | `boolean`                                  | `false`     |
+| allow-clear          | 是否允许清空        | `boolean`                                  | `false`     |
+| formatter            | 格式化函数          | `(value: string) => string`                | `-`         |
+| parser               | 解析函数            | `(value: string) => string`                | `-`         |
+| model-event          | 触发 v-model 的事件 | `'change' \| 'input'`                      | `'change'`  |
 
 ### InputNumber Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
-| input | 输入框内容变化时触发 | `(value: number \| string, ev: Event)` |
-| change | 仅在输入框失去焦点或按下回车时触发 | `(value: number \| string, ev: Event)` |
-| focus | 获得焦点时触发 | `(ev: FocusEvent)` |
-| blur | 失去焦点时触发 | `(ev: FocusEvent)` |
-| clear | 点击清除按钮时触发 | `(ev: MouseEvent)` |
-| keydown | 键盘按下时触发 | `(ev: KeyboardEvent)` |
-| press-enter | 按下回车键时触发 | `(ev: KeyboardEvent)` |
+| 事件名      | 描述                               | 参数                                   |
+| ----------- | ---------------------------------- | -------------------------------------- |
+| input       | 输入框内容变化时触发               | `(value: number \| string, ev: Event)` |
+| change      | 仅在输入框失去焦点或按下回车时触发 | `(value: number \| string, ev: Event)` |
+| focus       | 获得焦点时触发                     | `(ev: FocusEvent)`                     |
+| blur        | 失去焦点时触发                     | `(ev: FocusEvent)`                     |
+| clear       | 点击清除按钮时触发                 | `(ev: MouseEvent)`                     |
+| keydown     | 键盘按下时触发                     | `(ev: KeyboardEvent)`                  |
+| press-enter | 按下回车键时触发                   | `(ev: KeyboardEvent)`                  |
 
 ### InputNumber Slots
 
-| 插槽名 | 描述 |
-|--------|------|
-| plus | 自定义加号按钮 |
-| minus | 自定义减号按钮 |
-| prefix | 前缀内容 |
-| suffix | 后缀内容 |
-| prepend | 前置内容 |
-| append | 后置内容 |
-| label | 标签内容 |
+| 插槽名  | 描述           |
+| ------- | -------------- |
+| plus    | 自定义加号按钮 |
+| minus   | 自定义减号按钮 |
+| prefix  | 前缀内容       |
+| suffix  | 后缀内容       |
+| prepend | 前置内容       |
+| append  | 后置内容       |
+| label   | 标签内容       |
 
 ### InputNumber Methods
 
-| 方法名 | 描述 | 参数 |
-|--------|------|------|
-| focus | 使输入框获得焦点 | `-` |
-| blur | 使输入框失去焦点 | `-` |
-
-## 类型定义
-
-```typescript
-export interface InputNumberProps {
-  modelValue?: InputNumberValue;
-  defaultValue?: InputNumberValue;
-  mode?: InputNumberMode;
-  precision?: number;
-  step?: number;
-  disabled?: boolean;
-  error?: boolean;
-  max?: number;
-  min?: number;
-  placeholder?: string;
-  hideButton?: boolean;
-  size?: Size;
-  allowClear?: boolean;
-  formatter?: InputNumberFormatter;
-  parser?: InputNumberParser;
-  readonly?: boolean;
-}
-
-export type InputNumberValue = number | string;
-export type InputNumberMode = 'embed' | 'button';
-export type InputNumberFormatter = (value: string) => string;
-export type InputNumberParser = (value: string) => string;
-```
+| 方法名 | 描述             | 参数 |
+| ------ | ---------------- | ---- |
+| focus  | 使输入框获得焦点 | `-`  |
+| blur   | 使输入框失去焦点 | `-`  |
 
 ## 设计原则
 

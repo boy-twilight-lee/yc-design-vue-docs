@@ -17,21 +17,14 @@
   <YcAutoComplete
     v-model="value"
     :data="options"
-    placeholder="请输入内容"
-  />
+    placeholder="请输入内容" />
 </template>
 
 <script setup>
 import { ref } from 'vue';
 
 const value = ref('');
-const options = [
-  'Apple',
-  'Banana',
-  'Cherry',
-  'Date',
-  'Elderberry'
-];
+const options = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
 </script>
 ```
 
@@ -45,8 +38,7 @@ const options = [
     v-model="value"
     :data="options"
     :filter-option="filterOption"
-    placeholder="自定义过滤"
-  />
+    placeholder="自定义过滤" />
 </template>
 
 <script setup>
@@ -56,7 +48,7 @@ const value = ref('');
 const options = [
   { label: 'Apple', value: 'apple' },
   { label: 'Banana', value: 'banana' },
-  { label: 'Cherry', value: 'cherry' }
+  { label: 'Cherry', value: 'cherry' },
 ];
 
 const filterOption = (inputValue, option) => {
@@ -75,8 +67,7 @@ const filterOption = (inputValue, option) => {
     v-model="value"
     :data="options"
     :strict="true"
-    placeholder="严格模式"
-  />
+    placeholder="严格模式" />
 </template>
 
 <script setup>
@@ -97,8 +88,7 @@ const options = ['Apple', 'Banana', 'Cherry'];
     v-model="value"
     :data="options"
     :disabled="true"
-    placeholder="禁用状态"
-  />
+    placeholder="禁用状态" />
 </template>
 ```
 
@@ -112,8 +102,7 @@ const options = ['Apple', 'Banana', 'Cherry'];
     v-model="value"
     :data="options"
     :allow-clear="true"
-    placeholder="允许清空"
-  />
+    placeholder="允许清空" />
 </template>
 ```
 
@@ -127,8 +116,7 @@ const options = ['Apple', 'Banana', 'Cherry'];
     v-model="value"
     :data="options"
     type="textarea"
-    placeholder="文本域模式"
-  />
+    placeholder="文本域模式" />
 </template>
 ```
 
@@ -141,8 +129,7 @@ const options = ['Apple', 'Banana', 'Cherry'];
   <YcAutoComplete
     v-model="value"
     :data="options"
-    placeholder="自定义选项"
-  >
+    placeholder="自定义选项">
     <template #option="{ data }">
       <div style="display: flex; align-items: center; gap: 8px;">
         <span>🍎</span>
@@ -160,7 +147,7 @@ const value = ref('');
 const options = [
   { label: 'Apple', value: 'apple' },
   { label: 'Banana', value: 'banana' },
-  { label: 'Cherry', value: 'cherry' }
+  { label: 'Cherry', value: 'cherry' },
 ];
 </script>
 ```
@@ -174,14 +161,12 @@ const options = [
   <YcAutoComplete
     v-model="value"
     :data="options"
-    placeholder="自定义触发器"
-  >
+    placeholder="自定义触发器">
     <template #trigger>
       <YcInput
         v-model="value"
         placeholder="自定义输入框"
-        style="width: 300px;"
-      />
+        style="width: 300px;" />
     </template>
   </YcAutoComplete>
 </template>
@@ -196,11 +181,15 @@ const options = [
   <YcAutoComplete
     v-model="value"
     :data="options"
-    placeholder="带底部内容"
-  >
+    placeholder="带底部内容">
     <template #footer>
-      <div style="padding: 8px; text-align: center; border-top: 1px solid #f0f0f0;">
-        <YcButton size="small" type="primary">添加新选项</YcButton>
+      <div
+        style="padding: 8px; text-align: center; border-top: 1px solid #f0f0f0;">
+        <YcButton
+          size="small"
+          type="primary"
+          >添加新选项</YcButton
+        >
       </div>
     </template>
   </YcAutoComplete>
@@ -220,8 +209,7 @@ const options = [
     @search="onSearch"
     @select="onSelect"
     @change="onChange"
-    @clear="onClear"
-  />
+    @clear="onClear" />
 </template>
 
 <script setup>
@@ -252,103 +240,55 @@ const onClear = () => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 绑定值 | `string` | - |
-| defaultValue | 默认值 | `string` | `''` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| data | 选项数据 | `SelectOptions` | `() => []` |
-| popupContainer | 弹出层容器 | `PopupContainer` | - |
-| strict | 是否严格模式 | `boolean` | `false` |
-| filterOption | 自定义过滤函数 | `(inputValue: string, option: SelectOptionData) => boolean` | - |
-| triggerProps | 触发器属性 | `TriggerProps` | `() => ({})` |
-| allowClear | 是否允许清空 | `boolean` | `true` |
-| vistualListProps | 虚拟列表属性 | `VirtualListProps` | - |
-| isSelectSetValue | 选择时是否设置值 | `boolean` | `true` |
-| isSearch | 是否启用搜索 | `boolean` | `true` |
-| type | 输入框类型 | `'textarea' \| 'input'` | `'input'` |
+| 参数             | 说明             | 类型                                                        | 默认值       |
+| ---------------- | ---------------- | ----------------------------------------------------------- | ------------ |
+| modelValue       | 绑定值           | `string`                                                    | -            |
+| defaultValue     | 默认值           | `string`                                                    | `''`         |
+| disabled         | 是否禁用         | `boolean`                                                   | `false`      |
+| data             | 选项数据         | `SelectOptions`                                             | `() => []`   |
+| popupContainer   | 弹出层容器       | `PopupContainer`                                            | -            |
+| strict           | 是否严格模式     | `boolean`                                                   | `false`      |
+| filterOption     | 自定义过滤函数   | `(inputValue: string, option: SelectOptionData) => boolean` | -            |
+| triggerProps     | 触发器属性       | `TriggerProps`                                              | `() => ({})` |
+| allowClear       | 是否允许清空     | `boolean`                                                   | `true`       |
+| vistualListProps | 虚拟列表属性     | `VirtualListProps`                                          | -            |
+| isSelectSetValue | 选择时是否设置值 | `boolean`                                                   | `true`       |
+| isSearch         | 是否启用搜索     | `boolean`                                                   | `true`       |
+| type             | 输入框类型       | `'textarea' \| 'input'`                                     | `'input'`    |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:modelValue | 值更新时触发 | `(value: string)` |
-| change | 值改变时触发 | `(value: string)` |
-| search | 搜索时触发 | `(value: string)` |
-| select | 选择选项时触发 | `(value: string)` |
-| clear | 清空时触发 | `(ev?: Event)` |
-| dropdown-scroll | 下拉框滚动时触发 | `(ev?: Event)` |
-| dropdown-reach-bottom | 下拉框触底时触发 | `(ev?: Event)` |
-| blur | 失去焦点时触发 | `(ev: FocusEvent)` |
-| focus | 获得焦点时触发 | `(ev: FocusEvent)` |
-| input | 输入时触发 | `(value: string, ev: Event)` |
-| keydown | 按键按下时触发 | `(ev: KeyboardEvent)` |
+| 事件名                | 说明             | 回调参数                     |
+| --------------------- | ---------------- | ---------------------------- |
+| update:modelValue     | 值更新时触发     | `(value: string)`            |
+| change                | 值改变时触发     | `(value: string)`            |
+| search                | 搜索时触发       | `(value: string)`            |
+| select                | 选择选项时触发   | `(value: string)`            |
+| clear                 | 清空时触发       | `(ev?: Event)`               |
+| dropdown-scroll       | 下拉框滚动时触发 | `(ev?: Event)`               |
+| dropdown-reach-bottom | 下拉框触底时触发 | `(ev?: Event)`               |
+| blur                  | 失去焦点时触发   | `(ev: FocusEvent)`           |
+| focus                 | 获得焦点时触发   | `(ev: FocusEvent)`           |
+| input                 | 输入时触发       | `(value: string, ev: Event)` |
+| keydown               | 按键按下时触发   | `(ev: KeyboardEvent)`        |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| option | 自定义选项渲染 | `{ data: ObjectData }` |
-| footer | 底部内容 | - |
-| trigger | 自定义触发器 | - |
+| 插槽名  | 说明           | 参数                   |
+| ------- | -------------- | ---------------------- |
+| option  | 自定义选项渲染 | `{ data: ObjectData }` |
+| footer  | 底部内容       | -                      |
+| trigger | 自定义触发器   | -                      |
 
 ### Expose
 
-| 方法名 | 说明 | 参数 |
-| --- | --- | --- |
-| focus | 聚焦 | - |
-| blur | 失焦 | - |
-| getInputRef | 获取输入框引用 | - |
-| getMirrorRef | 获取镜像引用 | - |
-| updatePosition | 更新位置 | `(x: number, y: number)` |
-
-### Types
-
-```typescript
-interface AutoCompleteProps {
-  modelValue?: string;
-  defaultValue?: string;
-  disabled?: boolean;
-  data?: SelectOptions;
-  popupContainer?: PopupContainer;
-  strict?: boolean;
-  filterOption?: (inputValue: string, option: SelectOptionData) => boolean;
-  triggerProps?: TriggerProps;
-  allowClear?: boolean;
-  vistualListProps?: VirtualListProps;
-  isSelectSetValue?: boolean;
-  isSearch?: boolean;
-  type?: 'textarea' | 'input';
-}
-
-interface AutoCompleteEmits {
-  (e: 'update:modelValue', value: string): void;
-  (e: 'change', value: string): void;
-  (e: 'search', value: string): void;
-  (e: 'select', value: string): void;
-  (e: 'clear', ev?: Event): void;
-  (e: 'dropdown-scroll', ev?: Event): void;
-  (e: 'dropdown-reach-bottom', ev?: Event): void;
-  (e: 'blur', ev: FocusEvent): void;
-  (e: 'focus', ev: FocusEvent): void;
-  (e: 'input', value: string, ev: Event): void;
-  (e: 'keydown', ev: KeyboardEvent): void;
-}
-
-interface AutoCompleteSlots {
-  option(scope: { data: ObjectData }): void;
-  footer(): void;
-  trigger(): void;
-}
-
-interface AutoCompleteExpose {
-  focus(): void;
-  blur(): void;
-  getInputRef(): HTMLInputElement | HTMLTextAreaElement | undefined;
-  getMirrorRef(): HTMLDivElement | undefined;
-  updatePosition(x: number, y: number): void;
-}
-```
+| 方法名         | 说明           | 参数                     |
+| -------------- | -------------- | ------------------------ |
+| focus          | 聚焦           | -                        |
+| blur           | 失焦           | -                        |
+| getInputRef    | 获取输入框引用 | -                        |
+| getMirrorRef   | 获取镜像引用   | -                        |
+| updatePosition | 更新位置       | `(x: number, y: number)` |
 
 ## 注意事项
 

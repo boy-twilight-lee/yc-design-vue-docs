@@ -14,11 +14,10 @@
 
 ```vue
 <template>
-  <YcPagination 
-    :total="100" 
+  <YcPagination
+    :total="100"
     :current="current"
-    @change="onChange"
-  />
+    @change="onChange" />
 </template>
 
 <script setup>
@@ -39,35 +38,34 @@ const onChange = (page) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>每页 10 条</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current1"
         :page-size="10"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>每页 20 条</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current2"
         :page-size="20"
-        @change="onChange2"
-      />
+        @change="onChange2" />
     </div>
-    
+
     <div>
       <h4>每页 50 条</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current3"
         :page-size="50"
-        @change="onChange3"
-      />
+        @change="onChange3" />
     </div>
   </YcSpace>
 </template>
@@ -99,15 +97,14 @@ const onChange3 = (page) => {
 
 ```vue
 <template>
-  <YcPagination 
-    :total="1000" 
+  <YcPagination
+    :total="1000"
     :current="current"
     :page-size="pageSize"
     :show-page-size="true"
     :page-size-options="[10, 20, 50, 100]"
     @change="onChange"
-    @page-size-change="onPageSizeChange"
-  />
+    @page-size-change="onPageSizeChange" />
 </template>
 
 <script setup>
@@ -135,28 +132,26 @@ const onPageSizeChange = (size) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认总数显示</h4>
-      <YcPagination 
-        :total="1000" 
+      <YcPagination
+        :total="1000"
         :current="current1"
         :show-total="true"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>自定义总数显示</h4>
-      <YcPagination 
-        :total="1000" 
+      <YcPagination
+        :total="1000"
         :current="current2"
         :show-total="true"
-        @change="onChange2"
-      >
-        <template #total="{ total }">
-          共 {{ total }} 条记录
-        </template>
+        @change="onChange2">
+        <template #total="{ total }"> 共 {{ total }} 条记录 </template>
       </YcPagination>
     </div>
   </YcSpace>
@@ -184,12 +179,11 @@ const onChange2 = (page) => {
 
 ```vue
 <template>
-  <YcPagination 
-    :total="1000" 
+  <YcPagination
+    :total="1000"
     :current="current"
     :show-jumper="true"
-    @change="onChange"
-  />
+    @change="onChange" />
 </template>
 
 <script setup>
@@ -210,24 +204,24 @@ const onChange = (page) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>标准分页</h4>
-      <YcPagination 
-        :total="1000" 
+      <YcPagination
+        :total="1000"
         :current="current1"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>简单分页</h4>
-      <YcPagination 
-        :total="1000" 
+      <YcPagination
+        :total="1000"
         :current="current2"
         :simple="true"
-        @change="onChange2"
-      />
+        @change="onChange2" />
     </div>
   </YcSpace>
 </template>
@@ -254,35 +248,34 @@ const onChange2 = (page) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>小尺寸</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current1"
         size="small"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>中等尺寸</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current2"
         size="medium"
-        @change="onChange2"
-      />
+        @change="onChange2" />
     </div>
-    
+
     <div>
       <h4>大尺寸</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current3"
         size="large"
-        @change="onChange3"
-      />
+        @change="onChange3" />
     </div>
   </YcSpace>
 </template>
@@ -314,13 +307,12 @@ const onChange3 = (page) => {
 
 ```vue
 <template>
-  <YcPagination 
-    :total="100" 
+  <YcPagination
+    :total="100"
     :current="current"
     :page-item-style="pageItemStyle"
     :active-page-item-style="activePageItemStyle"
-    @change="onChange"
-  />
+    @change="onChange" />
 </template>
 
 <script setup>
@@ -331,7 +323,7 @@ const current = ref(1);
 const pageItemStyle = {
   border: '1px solid #d9d9d9',
   borderRadius: '4px',
-  margin: '0 4px'
+  margin: '0 4px',
 };
 
 const activePageItemStyle = {
@@ -339,7 +331,7 @@ const activePageItemStyle = {
   backgroundColor: '#1890ff',
   color: 'white',
   borderRadius: '4px',
-  margin: '0 4px'
+  margin: '0 4px',
 };
 
 const onChange = (page) => {
@@ -354,26 +346,26 @@ const onChange = (page) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>显示单页分页</h4>
-      <YcPagination 
-        :total="10" 
+      <YcPagination
+        :total="10"
         :current="current1"
         :page-size="10"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>隐藏单页分页</h4>
-      <YcPagination 
-        :total="10" 
+      <YcPagination
+        :total="10"
         :current="current2"
         :page-size="10"
         :hide-on-single-page="true"
-        @change="onChange2"
-      />
+        @change="onChange2" />
     </div>
   </YcSpace>
 </template>
@@ -400,24 +392,24 @@ const onChange2 = (page) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>正常分页</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current1"
-        @change="onChange1"
-      />
+        @change="onChange1" />
     </div>
-    
+
     <div>
       <h4>禁用分页</h4>
-      <YcPagination 
-        :total="100" 
+      <YcPagination
+        :total="100"
         :current="current2"
         :disabled="true"
-        @change="onChange2"
-      />
+        @change="onChange2" />
     </div>
   </YcSpace>
 </template>
@@ -446,7 +438,7 @@ const onChange2 = (page) => {
 <template>
   <div class="page">
     <h2>分页组件示例</h2>
-    
+
     <div class="section">
       <h3>数据展示</h3>
       <div class="data-table">
@@ -455,21 +447,20 @@ const onChange2 = (page) => {
           <span>年龄</span>
           <span>城市</span>
         </div>
-        <div 
-          v-for="item in currentPageData" 
-          :key="item.id" 
-          class="table-row"
-        >
+        <div
+          v-for="item in currentPageData"
+          :key="item.id"
+          class="table-row">
           <span>{{ item.name }}</span>
           <span>{{ item.age }}</span>
           <span>{{ item.city }}</span>
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <h3>分页控制</h3>
-      <YcPagination 
+      <YcPagination
         :total="total"
         :current="current"
         :page-size="pageSize"
@@ -478,14 +469,16 @@ const onChange2 = (page) => {
         :show-jumper="true"
         :page-size-options="[5, 10, 20, 50]"
         @change="onPageChange"
-        @page-size-change="onPageSizeChange"
-      >
+        @page-size-change="onPageSizeChange">
         <template #total="{ total }">
-          共 {{ total }} 条记录，当前第 {{ current }}/{{ Math.ceil(total / pageSize) }} 页
+          共 {{ total }} 条记录，当前第 {{ current }}/{{
+            Math.ceil(total / pageSize)
+          }}
+          页
         </template>
       </YcPagination>
     </div>
-    
+
     <div class="section">
       <h3>分页信息</h3>
       <div class="pagination-info">
@@ -496,39 +489,38 @@ const onChange2 = (page) => {
         <p><strong>当前页数据：</strong>{{ currentPageData.length }} 条</p>
       </div>
     </div>
-    
+
     <div class="section">
       <h3>其他分页样式</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>简单分页</h4>
-          <YcPagination 
-            :total="total" 
+          <YcPagination
+            :total="total"
             :current="current"
             :simple="true"
-            @change="onPageChange"
-          />
+            @change="onPageChange" />
         </div>
-        
+
         <div>
           <h4>小尺寸分页</h4>
-          <YcPagination 
-            :total="total" 
+          <YcPagination
+            :total="total"
             :current="current"
             size="small"
-            @change="onPageChange"
-          />
+            @change="onPageChange" />
         </div>
-        
+
         <div>
           <h4>自定义样式分页</h4>
-          <YcPagination 
-            :total="total" 
+          <YcPagination
+            :total="total"
             :current="current"
             :page-item-style="customPageItemStyle"
             :active-page-item-style="customActivePageItemStyle"
-            @change="onPageChange"
-          />
+            @change="onPageChange" />
         </div>
       </YcSpace>
     </div>
@@ -551,7 +543,9 @@ const generateData = () => {
       id: i,
       name: `用户 ${i}`,
       age: Math.floor(Math.random() * 50) + 18,
-      city: ['北京', '上海', '广州', '深圳', '杭州'][Math.floor(Math.random() * 5)]
+      city: ['北京', '上海', '广州', '深圳', '杭州'][
+        Math.floor(Math.random() * 5)
+      ],
     });
   }
   return data;
@@ -583,7 +577,7 @@ const customPageItemStyle = {
   borderRadius: '6px',
   margin: '0 6px',
   padding: '8px 12px',
-  transition: 'all 0.3s'
+  transition: 'all 0.3s',
 };
 
 const customActivePageItemStyle = {
@@ -593,7 +587,7 @@ const customActivePageItemStyle = {
   borderRadius: '6px',
   margin: '0 6px',
   padding: '8px 12px',
-  transition: 'all 0.3s'
+  transition: 'all 0.3s',
 };
 
 onMounted(() => {
@@ -670,46 +664,46 @@ onMounted(() => {
 
 ### Pagination Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| total | 数据总数 | `number` | - |
-| current | 当前页数 | `number` | - |
-| defaultCurrent | 默认当前页数 | `number` | `1` |
-| pageSize | 每页条数 | `number` | `10` |
-| defaultPageSize | 默认每页条数 | `number` | `10` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| hideOnSinglePage | 只有一页时是否隐藏分页器 | `boolean` | `false` |
-| simple | 是否使用简单分页器 | `boolean` | `false` |
-| showTotal | 是否显示总数 | `boolean` | `false` |
-| showMore | 是否显示更多按钮 | `boolean` | `false` |
-| showJumper | 是否显示快速跳转 | `boolean` | `false` |
-| showPageSize | 是否显示分页大小选择器 | `boolean` | `false` |
-| pageSizeOptions | 分页大小选项 | `number[]` | `[10, 20, 50, 100]` |
-| pageSizeProps | 分页大小选择器属性 | `SelectProps` | - |
-| size | 分页器尺寸 | `Size` | `'medium'` |
-| pageItemStyle | 分页项样式 | `CSSProperties` | - |
-| activePageItemStyle | 激活分页项样式 | `CSSProperties` | - |
-| baseSize | 基础分页大小 | `number` | - |
-| bufferSize | 缓冲区大小 | `number` | - |
-| autoAdjust | 是否自动调整 | `boolean` | - |
+| 参数                | 说明                     | 类型            | 默认值              |
+| ------------------- | ------------------------ | --------------- | ------------------- |
+| total               | 数据总数                 | `number`        | -                   |
+| current             | 当前页数                 | `number`        | -                   |
+| defaultCurrent      | 默认当前页数             | `number`        | `1`                 |
+| pageSize            | 每页条数                 | `number`        | `10`                |
+| defaultPageSize     | 默认每页条数             | `number`        | `10`                |
+| disabled            | 是否禁用                 | `boolean`       | `false`             |
+| hideOnSinglePage    | 只有一页时是否隐藏分页器 | `boolean`       | `false`             |
+| simple              | 是否使用简单分页器       | `boolean`       | `false`             |
+| showTotal           | 是否显示总数             | `boolean`       | `false`             |
+| showMore            | 是否显示更多按钮         | `boolean`       | `false`             |
+| showJumper          | 是否显示快速跳转         | `boolean`       | `false`             |
+| showPageSize        | 是否显示分页大小选择器   | `boolean`       | `false`             |
+| pageSizeOptions     | 分页大小选项             | `number[]`      | `[10, 20, 50, 100]` |
+| pageSizeProps       | 分页大小选择器属性       | `SelectProps`   | -                   |
+| size                | 分页器尺寸               | `Size`          | `'medium'`          |
+| pageItemStyle       | 分页项样式               | `CSSProperties` | -                   |
+| activePageItemStyle | 激活分页项样式           | `CSSProperties` | -                   |
+| baseSize            | 基础分页大小             | `number`        | -                   |
+| bufferSize          | 缓冲区大小               | `number`        | -                   |
+| autoAdjust          | 是否自动调整             | `boolean`       | -                   |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:current | 当前页变化时触发 | `(current: number)` |
-| update:pageSize | 分页大小变化时触发 | `(pageSize: number)` |
-| change | 页码变化时触发 | `(current: number)` |
+| 事件名           | 说明               | 回调参数             |
+| ---------------- | ------------------ | -------------------- |
+| update:current   | 当前页变化时触发   | `(current: number)`  |
+| update:pageSize  | 分页大小变化时触发 | `(pageSize: number)` |
+| change           | 页码变化时触发     | `(current: number)`  |
 | page-size-change | 分页大小变化时触发 | `(pageSize: number)` |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| total | 总数显示 | `{ total: number }` |
-| page-item-ellipsis | 省略号 | - |
-| page-item-step | 上一步/下一步按钮 | `{ type: 'previous' \| 'next' }` |
-| page-item | 分页项 | `{ page: number }` |
+| 插槽名             | 说明              | 参数                             |
+| ------------------ | ----------------- | -------------------------------- |
+| total              | 总数显示          | `{ total: number }`              |
+| page-item-ellipsis | 省略号            | -                                |
+| page-item-step     | 上一步/下一步按钮 | `{ type: 'previous' \| 'next' }` |
+| page-item          | 分页项            | `{ page: number }`               |
 
 ## 注意事项
 
@@ -717,34 +711,3 @@ onMounted(() => {
 2. 切换分页大小时，建议重置当前页到第一页
 3. 可以通过插槽自定义总数显示、分页项等内容的样式
 4. 支持响应式设计，适配不同屏幕尺寸
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-pagination {
-  /* 分页容器 */
-}
-
-.yc-pagination-item {
-  /* 分页项 */
-}
-
-.yc-pagination-item-active {
-  /* 激活的分页项 */
-}
-
-.yc-pagination-prev,
-.yc-pagination-next {
-  /* 上一步/下一步按钮 */
-}
-
-.yc-pagination-jumper {
-  /* 快速跳转 */
-}
-
-.yc-pagination-options {
-  /* 分页大小选择器 */
-}
-```

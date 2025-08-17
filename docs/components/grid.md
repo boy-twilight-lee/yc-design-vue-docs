@@ -1179,54 +1179,9 @@
 | order  | 栅格列顺序   | `number \| ResponsiveValue`      | -      |
 | flex   | 栅格列弹性   | `GridColFlex \| ResponsiveValue` | -      |
 
-### Types
-
-```typescript
-type ResponsiveValue<T = number | string> = {
-  xs?: T;
-  sm?: T;
-  md?: T;
-  lg?: T;
-  xl?: T;
-  xxl?: T;
-};
-
-type GridRowJustify =
-  | 'start'
-  | 'center'
-  | 'end'
-  | 'space-around'
-  | 'space-between';
-type GridRowAlign = 'start' | 'center' | 'end' | 'stretch';
-type GridColFlex = number | string | 'initial' | 'auto' | 'none';
-type Gutter = number | ResponsiveValue;
-```
-
 ## 注意事项
 
 1. 栅格系统基于24列设计，可以灵活组合
 2. 响应式属性支持断点设置
 3. 间距可以通过对象形式设置响应式值
 4. 栅格行和栅格列提供了更灵活的布局控制
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-grid {
-  /* 栅格容器 */
-}
-
-.yc-grid-item {
-  /* 栅格项 */
-}
-
-.yc-grid-row {
-  /* 栅格行 */
-}
-
-.yc-grid-col {
-  /* 栅格列 */
-}
-```

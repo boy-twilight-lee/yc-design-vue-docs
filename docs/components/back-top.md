@@ -64,9 +64,7 @@
   <div style="height: 200px; overflow: auto;">
     <div style="height: 1000px;">
       <p>长内容...</p>
-      <YcBackTop :visible-height="100">
-        滚动100px后显示
-      </YcBackTop>
+      <YcBackTop :visible-height="100"> 滚动100px后显示 </YcBackTop>
     </div>
   </div>
 </template>
@@ -78,7 +76,9 @@
 
 ```vue
 <template>
-  <div ref="scrollContainer" style="height: 200px; overflow: auto;">
+  <div
+    ref="scrollContainer"
+    style="height: 200px; overflow: auto;">
     <div style="height: 1000px;">
       <p>长内容...</p>
       <YcBackTop :target-container="scrollContainer">
@@ -104,7 +104,9 @@ const scrollContainer = ref();
   <div style="height: 200px; overflow: auto;">
     <div style="height: 1000px;">
       <p>长内容...</p>
-      <YcBackTop :duration="500" easeing="bounceOut">
+      <YcBackTop
+        :duration="500"
+        easeing="bounceOut">
         自定义动画效果
       </YcBackTop>
     </div>
@@ -116,33 +118,18 @@ const scrollContainer = ref();
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| visibleHeight | 滚动多少距离后显示回到顶部按钮 | `number` | `200` |
-| targetContainer | 指定滚动容器 | `TargetContainer` | - |
-| easeing | 动画缓动函数 | `string` | `'quadOut'` |
-| duration | 动画持续时间（毫秒） | `number` | `200` |
+| 参数            | 说明                           | 类型              | 默认值      |
+| --------------- | ------------------------------ | ----------------- | ----------- |
+| visibleHeight   | 滚动多少距离后显示回到顶部按钮 | `number`          | `200`       |
+| targetContainer | 指定滚动容器                   | `TargetContainer` | -           |
+| easeing         | 动画缓动函数                   | `string`          | `'quadOut'` |
+| duration        | 动画持续时间（毫秒）           | `number`          | `200`       |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明                   |
+| ------- | ---------------------- |
 | default | 自定义回到顶部按钮内容 |
-
-### Types
-
-```typescript
-interface BackTopProps {
-  visibleHeight?: number;
-  targetContainer?: TargetContainer;
-  easeing?: string;
-  duration?: number;
-}
-
-interface BackTopSlots {
-  default(): void;
-}
-```
 
 ## 注意事项
 
@@ -150,20 +137,3 @@ interface BackTopSlots {
 2. `easeing` 属性支持 b-tween 库的所有缓动函数
 3. 组件使用绝对定位，确保父容器设置了相对定位
 4. 默认情况下，组件显示在右下角，可以通过 CSS 自定义位置
-
-## 样式定制
-
-组件提供了基础的样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-back-top {
-  /* 自定义位置 */
-  right: 100px;
-  bottom: 100px;
-  
-  /* 自定义样式 */
-  background: #1890ff;
-  color: white;
-  border-radius: 50%;
-}
-```

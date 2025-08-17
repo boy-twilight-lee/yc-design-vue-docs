@@ -15,7 +15,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSpin />
     <YcSpin tip="加载中..." />
   </YcSpace>
@@ -28,22 +30,24 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>小尺寸</h4>
       <YcSpin :size="16" />
     </div>
-    
+
     <div>
       <h4>默认尺寸</h4>
       <YcSpin />
     </div>
-    
+
     <div>
       <h4>大尺寸</h4>
       <YcSpin :size="32" />
     </div>
-    
+
     <div>
       <h4>超大尺寸</h4>
       <YcSpin :size="48" />
@@ -58,21 +62,31 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>加载中</h4>
-      <YcSpin :loading="true" tip="加载中..." />
+      <YcSpin
+        :loading="true"
+        tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>加载完成</h4>
-      <YcSpin :loading="false" tip="加载完成" />
+      <YcSpin
+        :loading="false"
+        tip="加载完成" />
     </div>
-    
+
     <div>
       <h4>动态切换</h4>
-      <YcSpin :loading="isLoading" :tip="loadingTip" />
-      <YcButton @click="toggleLoading" style="margin-left: 16px;">
+      <YcSpin
+        :loading="isLoading"
+        :tip="loadingTip" />
+      <YcButton
+        @click="toggleLoading"
+        style="margin-left: 16px;">
         {{ isLoading ? '停止加载' : '开始加载' }}
       </YcButton>
     </div>
@@ -98,23 +112,33 @@ const toggleLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认加载</h4>
       <YcSpin tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>点状加载</h4>
-      <YcSpin :dot="true" tip="加载中..." />
+      <YcSpin
+        :dot="true"
+        tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>不同尺寸的点状加载</h4>
       <YcSpace>
-        <YcSpin :dot="true" :size="16" />
-        <YcSpin :dot="true" :size="24" />
-        <YcSpin :dot="true" :size="32" />
+        <YcSpin
+          :dot="true"
+          :size="16" />
+        <YcSpin
+          :dot="true"
+          :size="24" />
+        <YcSpin
+          :dot="true"
+          :size="32" />
       </YcSpace>
     </div>
   </YcSpace>
@@ -127,15 +151,19 @@ const toggleLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>显示图标</h4>
       <YcSpin tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>隐藏图标</h4>
-      <YcSpin :hide-icon="true" tip="加载中..." />
+      <YcSpin
+        :hide-icon="true"
+        tip="加载中..." />
     </div>
   </YcSpace>
 </template>
@@ -147,12 +175,14 @@ const toggleLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认图标</h4>
       <YcSpin tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>自定义图标</h4>
       <YcSpin tip="加载中...">
@@ -161,7 +191,7 @@ const toggleLoading = () => {
         </template>
       </YcSpin>
     </div>
-    
+
     <div>
       <h4>自定义动画图标</h4>
       <YcSpin tip="加载中...">
@@ -185,7 +215,11 @@ const toggleLoading = () => {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -204,12 +238,14 @@ const toggleLoading = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认提示</h4>
       <YcSpin tip="加载中..." />
     </div>
-    
+
     <div>
       <h4>自定义提示</h4>
       <YcSpin>
@@ -221,7 +257,7 @@ const toggleLoading = () => {
         </template>
       </YcSpin>
     </div>
-    
+
     <div>
       <h4>动态提示</h4>
       <YcSpin>
@@ -231,7 +267,9 @@ const toggleLoading = () => {
           </div>
         </template>
       </YcSpin>
-      <YcButton @click="changeTip" style="margin-left: 16px;">
+      <YcButton
+        @click="changeTip"
+        style="margin-left: 16px;">
         切换提示
       </YcButton>
     </div>
@@ -248,7 +286,7 @@ const changeTip = () => {
     '正在加载数据...',
     '正在处理请求...',
     '正在验证信息...',
-    '即将完成...'
+    '即将完成...',
   ];
   const randomIndex = Math.floor(Math.random() * tips.length);
   dynamicTip.value = tips[randomIndex];
@@ -283,24 +321,32 @@ const changeTip = () => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>内容加载</h4>
-      <YcSpin :loading="isContentLoading" tip="内容加载中...">
+      <YcSpin
+        :loading="isContentLoading"
+        tip="内容加载中...">
         <div class="content-container">
           <p>这是页面的主要内容</p>
           <p>当 loading 为 true 时，内容会被遮罩</p>
           <p>当 loading 为 false 时，内容正常显示</p>
         </div>
       </YcSpin>
-      <YcButton @click="toggleContentLoading" style="margin-top: 16px;">
+      <YcButton
+        @click="toggleContentLoading"
+        style="margin-top: 16px;">
         {{ isContentLoading ? '显示内容' : '隐藏内容' }}
       </YcButton>
     </div>
-    
+
     <div>
       <h4>表格加载</h4>
-      <YcSpin :loading="isTableLoading" tip="表格数据加载中...">
+      <YcSpin
+        :loading="isTableLoading"
+        tip="表格数据加载中...">
         <div class="table-container">
           <table class="demo-table">
             <thead>
@@ -330,7 +376,9 @@ const changeTip = () => {
           </table>
         </div>
       </YcSpin>
-      <YcButton @click="toggleTableLoading" style="margin-top: 16px;">
+      <YcButton
+        @click="toggleTableLoading"
+        style="margin-top: 16px;">
         {{ isTableLoading ? '显示表格' : '隐藏表格' }}
       </YcButton>
     </div>
@@ -397,85 +445,107 @@ const toggleTableLoading = () => {
 <template>
   <div class="page">
     <h2>Spin 加载中示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <YcSpin />
         <YcSpin tip="加载中..." />
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>尺寸设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>小尺寸</h4>
           <YcSpin :size="16" />
         </div>
-        
+
         <div>
           <h4>默认尺寸</h4>
           <YcSpin />
         </div>
-        
+
         <div>
           <h4>大尺寸</h4>
           <YcSpin :size="32" />
         </div>
-        
+
         <div>
           <h4>超大尺寸</h4>
           <YcSpin :size="48" />
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>加载状态</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>动态切换</h4>
-          <YcSpin :loading="isLoading" :tip="loadingTip" />
-          <YcButton @click="toggleLoading" style="margin-left: 16px;">
+          <YcSpin
+            :loading="isLoading"
+            :tip="loadingTip" />
+          <YcButton
+            @click="toggleLoading"
+            style="margin-left: 16px;">
             {{ isLoading ? '停止加载' : '开始加载' }}
           </YcButton>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>点状加载</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认加载</h4>
           <YcSpin tip="加载中..." />
         </div>
-        
+
         <div>
           <h4>点状加载</h4>
-          <YcSpin :dot="true" tip="加载中..." />
+          <YcSpin
+            :dot="true"
+            tip="加载中..." />
         </div>
-        
+
         <div>
           <h4>不同尺寸的点状加载</h4>
           <YcSpace>
-            <YcSpin :dot="true" :size="16" />
-            <YcSpin :dot="true" :size="24" />
-            <YcSpin :dot="true" :size="32" />
+            <YcSpin
+              :dot="true"
+              :size="16" />
+            <YcSpin
+              :dot="true"
+              :size="24" />
+            <YcSpin
+              :dot="true"
+              :size="32" />
           </YcSpace>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义图标</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认图标</h4>
           <YcSpin tip="加载中..." />
         </div>
-        
+
         <div>
           <h4>自定义图标</h4>
           <YcSpin tip="加载中...">
@@ -484,7 +554,7 @@ const toggleTableLoading = () => {
             </template>
           </YcSpin>
         </div>
-        
+
         <div>
           <h4>自定义动画图标</h4>
           <YcSpin tip="加载中...">
@@ -495,10 +565,12 @@ const toggleTableLoading = () => {
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义提示</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>自定义提示</h4>
           <YcSpin>
@@ -510,7 +582,7 @@ const toggleTableLoading = () => {
             </template>
           </YcSpin>
         </div>
-        
+
         <div>
           <h4>动态提示</h4>
           <YcSpin>
@@ -520,33 +592,43 @@ const toggleTableLoading = () => {
               </div>
             </template>
           </YcSpin>
-          <YcButton @click="changeTip" style="margin-left: 16px;">
+          <YcButton
+            @click="changeTip"
+            style="margin-left: 16px;">
             切换提示
           </YcButton>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>容器加载</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>内容加载</h4>
-          <YcSpin :loading="isContentLoading" tip="内容加载中...">
+          <YcSpin
+            :loading="isContentLoading"
+            tip="内容加载中...">
             <div class="content-container">
               <p>这是页面的主要内容</p>
               <p>当 loading 为 true 时，内容会被遮罩</p>
               <p>当 loading 为 false 时，内容正常显示</p>
             </div>
           </YcSpin>
-          <YcButton @click="toggleContentLoading" style="margin-top: 16px;">
+          <YcButton
+            @click="toggleContentLoading"
+            style="margin-top: 16px;">
             {{ isContentLoading ? '显示内容' : '隐藏内容' }}
           </YcButton>
         </div>
-        
+
         <div>
           <h4>表格加载</h4>
-          <YcSpin :loading="isTableLoading" tip="表格数据加载中...">
+          <YcSpin
+            :loading="isTableLoading"
+            tip="表格数据加载中...">
             <div class="table-container">
               <table class="demo-table">
                 <thead>
@@ -576,7 +658,9 @@ const toggleTableLoading = () => {
               </table>
             </div>
           </YcSpin>
-          <YcButton @click="toggleTableLoading" style="margin-top: 16px;">
+          <YcButton
+            @click="toggleTableLoading"
+            style="margin-top: 16px;">
             {{ isTableLoading ? '显示表格' : '隐藏表格' }}
           </YcButton>
         </div>
@@ -623,7 +707,7 @@ const changeTip = () => {
     '正在加载数据...',
     '正在处理请求...',
     '正在验证信息...',
-    '即将完成...'
+    '即将完成...',
   ];
   const randomIndex = Math.floor(Math.random() * tips.length);
   dynamicTip.value = tips[randomIndex];
@@ -662,7 +746,11 @@ const changeTip = () => {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -732,22 +820,22 @@ const changeTip = () => {
 
 ### Spin Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| size | 加载图标尺寸 | `number` | - |
-| loading | 是否处于加载状态 | `boolean` | `true` |
-| dot | 是否使用点状加载动画 | `boolean` | `false` |
-| tip | 加载提示文字 | `string` | - |
-| hideIcon | 是否隐藏加载图标 | `boolean` | `false` |
-| isSizeInherit | 是否继承父元素尺寸 | `boolean` | - |
+| 参数          | 说明                 | 类型      | 默认值  |
+| ------------- | -------------------- | --------- | ------- |
+| size          | 加载图标尺寸         | `number`  | -       |
+| loading       | 是否处于加载状态     | `boolean` | `true`  |
+| dot           | 是否使用点状加载动画 | `boolean` | `false` |
+| tip           | 加载提示文字         | `string`  | -       |
+| hideIcon      | 是否隐藏加载图标     | `boolean` | `false` |
+| isSizeInherit | 是否继承父元素尺寸   | `boolean` | -       |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 加载的内容 | - |
-| icon | 自定义加载图标 | - |
-| tip | 自定义提示内容 | - |
+| 插槽名  | 说明           | 参数 |
+| ------- | -------------- | ---- |
+| default | 加载的内容     | -    |
+| icon    | 自定义加载图标 | -    |
+| tip     | 自定义提示内容 | -    |
 
 ## 注意事项
 
@@ -755,41 +843,3 @@ const changeTip = () => {
 2. 可以通过插槽自定义加载图标和提示内容
 3. 点状加载动画适合轻量级的加载场景
 4. 容器加载模式适合整个区块的加载状态
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-spin {
-  /* 加载容器 */
-}
-
-.yc-spin-spinning {
-  /* 加载状态 */
-}
-
-.yc-spin-container {
-  /* 内容容器 */
-}
-
-.yc-spin-mask {
-  /* 遮罩层 */
-}
-
-.yc-spin-icon {
-  /* 加载图标 */
-}
-
-.yc-spin-dot {
-  /* 点状加载 */
-}
-
-.yc-spin-tip {
-  /* 提示文字 */
-}
-
-.yc-spin-nested-loading {
-  /* 嵌套加载 */
-}
-```

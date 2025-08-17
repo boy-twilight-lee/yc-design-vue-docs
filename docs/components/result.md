@@ -12,11 +12,10 @@ Result 结果组件用于反馈一系列操作任务的处理结果，常用于�
 
 ```vue
 <template>
-  <yc-result 
-    status="success" 
-    title="提交成功" 
-    subtitle="您的表单已成功提交，我们会尽快处理。"
-  />
+  <yc-result
+    status="success"
+    title="提交成功"
+    subtitle="您的表单已成功提交，我们会尽快处理。" />
 </template>
 ```
 
@@ -26,30 +25,28 @@ Result 结果组件用于反馈一系列操作任务的处理结果，常用于�
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-result 
-      status="success" 
-      title="操作成功" 
-      subtitle="您的操作已成功完成"
-    />
-    
-    <yc-result 
-      status="info" 
-      title="信息提示" 
-      subtitle="这是一条信息提示"
-    />
-    
-    <yc-result 
-      status="warning" 
-      title="警告提示" 
-      subtitle="请注意检查相关信息"
-    />
-    
-    <yc-result 
-      status="error" 
-      title="操作失败" 
-      subtitle="操作失败，请重试或联系管理员"
-    />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-result
+      status="success"
+      title="操作成功"
+      subtitle="您的操作已成功完成" />
+
+    <yc-result
+      status="info"
+      title="信息提示"
+      subtitle="这是一条信息提示" />
+
+    <yc-result
+      status="warning"
+      title="警告提示"
+      subtitle="请注意检查相关信息" />
+
+    <yc-result
+      status="error"
+      title="操作失败"
+      subtitle="操作失败，请重试或联系管理员" />
   </yc-space>
 </template>
 ```
@@ -60,24 +57,23 @@ Result 结果组件用于反馈一系列操作任务的处理结果，常用于�
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-result 
-      status="403" 
-      title="403" 
-      subtitle="抱歉，您无权访问该页面"
-    />
-    
-    <yc-result 
-      status="404" 
-      title="404" 
-      subtitle="抱歉，您访问的页面不存在"
-    />
-    
-    <yc-result 
-      status="500" 
-      title="500" 
-      subtitle="抱歉，服务器出现错误"
-    />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-result
+      status="403"
+      title="403"
+      subtitle="抱歉，您无权访问该页面" />
+
+    <yc-result
+      status="404"
+      title="404"
+      subtitle="抱歉，您访问的页面不存在" />
+
+    <yc-result
+      status="500"
+      title="500"
+      subtitle="抱歉，服务器出现错误" />
   </yc-space>
 </template>
 ```
@@ -88,14 +84,17 @@ Result 结果组件用于反馈一系列操作任务的处理结果，常用于�
 
 ```vue
 <template>
-  <yc-result 
-    status="success" 
-    title="支付成功" 
-    subtitle="您的订单已支付成功，商品将在24小时内发货"
-  >
+  <yc-result
+    status="success"
+    title="支付成功"
+    subtitle="您的订单已支付成功，商品将在24小时内发货">
     <template #extra>
       <yc-space>
-        <yc-button type="primary" @click="goToOrders">查看订单</yc-button>
+        <yc-button
+          type="primary"
+          @click="goToOrders"
+          >查看订单</yc-button
+        >
         <yc-button @click="goHome">返回首页</yc-button>
       </yc-space>
     </template>
@@ -104,12 +103,12 @@ Result 结果组件用于反馈一系列操作任务的处理结果，常用于�
 
 <script setup>
 const goToOrders = () => {
-  console.log('跳转到订单页面')
-}
+  console.log('跳转到订单页面');
+};
 
 const goHome = () => {
-  console.log('返回首页')
-}
+  console.log('返回首页');
+};
 </script>
 ```
 
@@ -119,11 +118,12 @@ const goHome = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-result 
-      title="自定义图标" 
-      subtitle="这是一个自定义图标的结果页面"
-    >
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-result
+      title="自定义图标"
+      subtitle="这是一个自定义图标的结果页面">
       <template #icon>
         <yc-icon-star style="color: #faad14; font-size: 72px;" />
       </template>
@@ -131,10 +131,12 @@ const goHome = () => {
         <yc-button type="primary">继续操作</yc-button>
       </template>
     </yc-result>
-    
+
     <yc-result>
       <template #icon>
-        <yc-avatar size="large" style="background-color: #1890ff;">
+        <yc-avatar
+          size="large"
+          style="background-color: #1890ff;">
           <yc-icon-user />
         </yc-avatar>
       </template>
@@ -165,7 +167,7 @@ const goHome = () => {
     <template #title>
       <h2 style="color: #52c41a;">恭喜您！</h2>
     </template>
-    
+
     <template #subtitle>
       <div style="margin-bottom: 16px;">
         <p>您的账户已激活成功，现在您可以：</p>
@@ -176,16 +178,22 @@ const goHome = () => {
         </ul>
       </div>
     </template>
-    
+
     <template #extra>
-      <yc-space direction="vertical" size="large">
+      <yc-space
+        direction="vertical"
+        size="large">
         <yc-space>
-          <yc-button type="primary" size="large">立即体验</yc-button>
+          <yc-button
+            type="primary"
+            size="large"
+            >立即体验</yc-button
+          >
           <yc-button size="large">个人中心</yc-button>
         </yc-space>
-        
+
         <yc-divider />
-        
+
         <div style="color: #666;">
           <p>遇到问题？</p>
           <yc-space>
@@ -205,36 +213,44 @@ const goHome = () => {
 
 ```vue
 <template>
-  <yc-result 
-    status="info" 
-    title="等待审核" 
-    subtitle="您的申请已提交，我们会在3个工作日内完成审核"
-  >
+  <yc-result
+    status="info"
+    title="等待审核"
+    subtitle="您的申请已提交，我们会在3个工作日内完成审核">
     <template #extra>
-      <yc-space direction="vertical" size="large">
-        <yc-card title="申请详情" style="width: 400px;">
+      <yc-space
+        direction="vertical"
+        size="large">
+        <yc-card
+          title="申请详情"
+          style="width: 400px;">
           <yc-descriptions :column="1">
-            <yc-descriptions-item label="申请类型">企业认证</yc-descriptions-item>
-            <yc-descriptions-item label="提交时间">2024-01-15 14:30:25</yc-descriptions-item>
-            <yc-descriptions-item label="预计完成">2024-01-18 17:00:00</yc-descriptions-item>
+            <yc-descriptions-item label="申请类型"
+              >企业认证</yc-descriptions-item
+            >
+            <yc-descriptions-item label="提交时间"
+              >2024-01-15 14:30:25</yc-descriptions-item
+            >
+            <yc-descriptions-item label="预计完成"
+              >2024-01-18 17:00:00</yc-descriptions-item
+            >
             <yc-descriptions-item label="当前状态">
               <yc-tag color="blue">审核中</yc-tag>
             </yc-descriptions-item>
           </yc-descriptions>
         </yc-card>
-        
+
         <yc-space>
           <yc-button type="primary">查看进度</yc-button>
           <yc-button>修改申请</yc-button>
           <yc-button>取消申请</yc-button>
         </yc-space>
-        
-        <yc-alert 
-          message="审核期间" 
-          description="如需修改申请信息，请及时联系我们" 
-          type="info" 
-          show-icon 
-        />
+
+        <yc-alert
+          message="审核期间"
+          description="如需修改申请信息，请及时联系我们"
+          type="info"
+          show-icon />
       </yc-space>
     </template>
   </yc-result>
@@ -251,15 +267,15 @@ const goHome = () => {
     <template #icon>
       <yc-empty-icon style="font-size: 64px; color: #d9d9d9;" />
     </template>
-    
+
     <template #title>
       <h3>暂无数据</h3>
     </template>
-    
+
     <template #subtitle>
       <p>当前没有可显示的内容</p>
     </template>
-    
+
     <template #extra>
       <yc-space>
         <yc-button type="primary">创建内容</yc-button>
@@ -274,41 +290,21 @@ const goHome = () => {
 
 ### Result Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| status | 结果状态 | `'info' \| 'success' \| 'warning' \| 'error' \| '403' \| '404' \| '500' \| null` | `'info'` |
-| title | 标题 | `string` | `-` |
-| subtitle | 副标题 | `string` | `-` |
+| 参数名   | 描述     | 类型                                                                             | 默认值   |
+| -------- | -------- | -------------------------------------------------------------------------------- | -------- |
+| status   | 结果状态 | `'info' \| 'success' \| 'warning' \| 'error' \| '403' \| '404' \| '500' \| null` | `'info'` |
+| title    | 标题     | `string`                                                                         | `-`      |
+| subtitle | 副标题   | `string`                                                                         | `-`      |
 
 ### Result Slots
 
-| 插槽名 | 描述 |
-|--------|------|
-| icon | 自定义图标 |
-| title | 自定义标题 |
-| subtitle | 自定义副标题 |
-| extra | 自定义额外内容 |
-| default | 自定义内容 |
-
-## 类型定义
-
-```typescript
-export interface ResultProps {
-  status?: ResultStatus;
-  title?: string;
-  subtitle?: string;
-}
-
-export type ResultStatus = 
-  | 'info' 
-  | 'success' 
-  | 'warning' 
-  | 'error' 
-  | '403' 
-  | '404' 
-  | '500' 
-  | null;
-```
+| 插槽名   | 描述           |
+| -------- | -------------- |
+| icon     | 自定义图标     |
+| title    | 自定义标题     |
+| subtitle | 自定义副标题   |
+| extra    | 自定义额外内容 |
+| default  | 自定义内容     |
 
 ## 设计原则
 

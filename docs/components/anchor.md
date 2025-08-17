@@ -16,18 +16,24 @@
 <template>
   <div class="anchor-demo">
     <YcAnchor>
-      <YcAnchorLink href="#basic" title="基础用法" />
-      <YcAnchorLink href="#static" title="静态展示" />
-      <YcAnchorLink href="#api" title="API" />
+      <YcAnchorLink
+        href="#basic"
+        title="基础用法" />
+      <YcAnchorLink
+        href="#static"
+        title="静态展示" />
+      <YcAnchorLink
+        href="#api"
+        title="API" />
     </YcAnchor>
-    
+
     <div class="content">
       <h2 id="basic">基础用法</h2>
       <p>这是基础用法的内容...</p>
-      
+
       <h2 id="static">静态展示</h2>
       <p>这是静态展示的内容...</p>
-      
+
       <h2 id="api">API</h2>
       <p>这是API的内容...</p>
     </div>
@@ -58,9 +64,15 @@ h2 {
 ```vue
 <template>
   <YcAnchor :line-less="true">
-    <YcAnchorLink href="#basic" title="基础用法" />
-    <YcAnchorLink href="#static" title="静态展示" />
-    <YcAnchorLink href="#api" title="API" />
+    <YcAnchorLink
+      href="#basic"
+      title="基础用法" />
+    <YcAnchorLink
+      href="#static"
+      title="静态展示" />
+    <YcAnchorLink
+      href="#api"
+      title="API" />
   </YcAnchor>
 </template>
 ```
@@ -72,16 +84,28 @@ h2 {
 ```vue
 <template>
   <YcAnchor>
-    <YcAnchorLink href="#chapter1" title="第一章">
+    <YcAnchorLink
+      href="#chapter1"
+      title="第一章">
       <template #sublist>
-        <YcAnchorLink href="#chapter1-1" title="1.1 基础概念" />
-        <YcAnchorLink href="#chapter1-2" title="1.2 进阶用法" />
+        <YcAnchorLink
+          href="#chapter1-1"
+          title="1.1 基础概念" />
+        <YcAnchorLink
+          href="#chapter1-2"
+          title="1.2 进阶用法" />
       </template>
     </YcAnchorLink>
-    <YcAnchorLink href="#chapter2" title="第二章">
+    <YcAnchorLink
+      href="#chapter2"
+      title="第二章">
       <template #sublist>
-        <YcAnchorLink href="#chapter2-1" title="2.1 实践案例" />
-        <YcAnchorLink href="#chapter2-2" title="2.2 注意事项" />
+        <YcAnchorLink
+          href="#chapter2-1"
+          title="2.1 实践案例" />
+        <YcAnchorLink
+          href="#chapter2-2"
+          title="2.2 注意事项" />
       </template>
     </YcAnchorLink>
   </YcAnchor>
@@ -94,12 +118,18 @@ h2 {
 
 ```vue
 <template>
-  <div class="scroll-container" ref="containerRef">
+  <div
+    class="scroll-container"
+    ref="containerRef">
     <YcAnchor :scroll-container="containerRef">
-      <YcAnchorLink href="#section1" title="第一部分" />
-      <YcAnchorLink href="#section2" title="第二部分" />
+      <YcAnchorLink
+        href="#section1"
+        title="第一部分" />
+      <YcAnchorLink
+        href="#section2"
+        title="第二部分" />
     </YcAnchor>
-    
+
     <div class="content">
       <div id="section1">第一部分内容...</div>
       <div id="section2">第二部分内容...</div>
@@ -130,8 +160,12 @@ const containerRef = ref();
 ```vue
 <template>
   <YcAnchor :smooth="false">
-    <YcAnchorLink href="#section1" title="第一部分" />
-    <YcAnchorLink href="#section2" title="第二部分" />
+    <YcAnchorLink
+      href="#section1"
+      title="第一部分" />
+    <YcAnchorLink
+      href="#section2"
+      title="第二部分" />
   </YcAnchor>
 </template>
 ```
@@ -143,8 +177,12 @@ const containerRef = ref();
 ```vue
 <template>
   <YcAnchor boundary="center">
-    <YcAnchorLink href="#section1" title="居中对齐" />
-    <YcAnchorLink href="#section2" title="第二部分" />
+    <YcAnchorLink
+      href="#section1"
+      title="居中对齐" />
+    <YcAnchorLink
+      href="#section2"
+      title="第二部分" />
   </YcAnchor>
 </template>
 ```
@@ -156,8 +194,12 @@ const containerRef = ref();
 ```vue
 <template>
   <YcAnchor :change-hash="false">
-    <YcAnchorLink href="#section1" title="不改变哈希" />
-    <YcAnchorLink href="#section2" title="第二部分" />
+    <YcAnchorLink
+      href="#section1"
+      title="不改变哈希" />
+    <YcAnchorLink
+      href="#section2"
+      title="第二部分" />
   </YcAnchor>
 </template>
 ```
@@ -169,7 +211,9 @@ const containerRef = ref();
 ```vue
 <template>
   <YcAnchor>
-    <YcAnchorLink href="#custom" title="自定义内容">
+    <YcAnchorLink
+      href="#custom"
+      title="自定义内容">
       <template #default>
         <span style="color: #1890ff;">🎯 自定义样式</span>
       </template>
@@ -182,61 +226,33 @@ const containerRef = ref();
 
 ### Anchor Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| boundary | 锚点对齐方式 | `'start' \| 'end' \| 'center' \| 'nearest' \| number` | `'start'` |
-| lineLess | 是否隐藏连接线 | `boolean` | `false` |
-| scrollContainer | 滚动容器 | `TargetContainer` | - |
-| changeHash | 是否改变URL哈希 | `boolean` | `true` |
-| smooth | 是否平滑滚动 | `boolean` | `true` |
+| 参数            | 说明            | 类型                                                  | 默认值    |
+| --------------- | --------------- | ----------------------------------------------------- | --------- |
+| boundary        | 锚点对齐方式    | `'start' \| 'end' \| 'center' \| 'nearest' \| number` | `'start'` |
+| lineLess        | 是否隐藏连接线  | `boolean`                                             | `false`   |
+| scrollContainer | 滚动容器        | `TargetContainer`                                     | -         |
+| changeHash      | 是否改变URL哈希 | `boolean`                                             | `true`    |
+| smooth          | 是否平滑滚动    | `boolean`                                             | `true`    |
 
 ### AnchorLink Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 锚点标题 | `string` | - |
-| href | 锚点链接 | `string` | - |
+| 参数  | 说明     | 类型     | 默认值 |
+| ----- | -------- | -------- | ------ |
+| title | 锚点标题 | `string` | -      |
+| href  | 锚点链接 | `string` | -      |
 
 ### Anchor Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明         |
+| ------- | ------------ |
 | default | 锚点链接列表 |
 
 ### AnchorLink Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明         |
+| ------- | ------------ |
 | default | 锚点标题内容 |
-| sublist | 子锚点列表 |
-
-### Types
-
-```typescript
-interface AnchorProps {
-  boundary?: AnchorBoundary;
-  lineLess?: boolean;
-  scrollContainer?: TargetContainer;
-  changeHash?: boolean;
-  smooth?: boolean;
-}
-
-interface AnchorLinkProps {
-  title?: string;
-  href?: string;
-}
-
-interface AnchorSlots {
-  default(): void;
-}
-
-interface AnchorLinkSlots {
-  default(): void;
-  sublist(): void;
-}
-
-type AnchorBoundary = 'start' | 'end' | 'center' | 'nearest' | number;
-```
+| sublist | 子锚点列表   |
 
 ## 注意事项
 

@@ -29,7 +29,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>水平方向</h4>
       <YcTimeline direction="horizontal">
@@ -59,7 +61,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>左侧模式</h4>
       <YcTimeline mode="left">
@@ -261,8 +265,7 @@
       dot-color="#52c41a"
       dot-type="solid"
       line-type="solid"
-      line-color="#52c41a"
-    >
+      line-color="#52c41a">
       成功状态
     </YcTimelineItem>
 
@@ -270,8 +273,7 @@
       dot-color="#faad14"
       dot-type="hollow"
       line-type="dashed"
-      line-color="#faad14"
-    >
+      line-color="#faad14">
       警告状态
     </YcTimelineItem>
 
@@ -279,8 +281,7 @@
       dot-color="#ff4d4f"
       dot-type="solid"
       line-type="dotted"
-      line-color="#ff4d4f"
-    >
+      line-color="#ff4d4f">
       错误状态
     </YcTimelineItem>
 
@@ -288,8 +289,7 @@
       dot-color="#1890ff"
       dot-type="hollow"
       line-type="solid"
-      line-color="#1890ff"
-    >
+      line-color="#1890ff">
       信息状态
     </YcTimelineItem>
   </YcTimeline>
@@ -302,7 +302,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无待处理状态</h4>
       <YcTimeline>
@@ -370,7 +372,9 @@
 
     <div class="section">
       <h3>时间轴方向</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>水平方向</h4>
           <YcTimeline direction="horizontal">
@@ -395,7 +399,9 @@
 
     <div class="section">
       <h3>时间轴模式</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>左侧模式</h4>
           <YcTimeline mode="left">
@@ -516,8 +522,7 @@
           dot-color="#52c41a"
           dot-type="solid"
           line-type="solid"
-          line-color="#52c41a"
-        >
+          line-color="#52c41a">
           成功状态
         </YcTimelineItem>
 
@@ -525,8 +530,7 @@
           dot-color="#faad14"
           dot-type="hollow"
           line-type="dashed"
-          line-color="#faad14"
-        >
+          line-color="#faad14">
           警告状态
         </YcTimelineItem>
 
@@ -534,8 +538,7 @@
           dot-color="#ff4d4f"
           dot-type="solid"
           line-type="dotted"
-          line-color="#ff4d4f"
-        >
+          line-color="#ff4d4f">
           错误状态
         </YcTimelineItem>
 
@@ -543,8 +546,7 @@
           dot-color="#1890ff"
           dot-type="hollow"
           line-type="solid"
-          line-color="#1890ff"
-        >
+          line-color="#1890ff">
           信息状态
         </YcTimelineItem>
       </YcTimeline>
@@ -552,7 +554,9 @@
 
     <div class="section">
       <h3>待处理状态</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>无待处理状态</h4>
           <YcTimeline>
@@ -743,37 +747,3 @@
 2. 可以通过插槽自定义节点和标签
 3. 支持多种模式，适合不同布局需求
 4. 待处理状态可以显示更多步骤提示
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-timeline {
-  /* 时间轴容器 */
-}
-
-.yc-timeline-item {
-  /* 时间轴项目 */
-}
-
-.yc-timeline-item-dot {
-  /* 时间轴节点 */
-}
-
-.yc-timeline-item-line {
-  /* 时间轴线条 */
-}
-
-.yc-timeline-item-label {
-  /* 时间轴标签 */
-}
-
-.yc-timeline-item-content {
-  /* 时间轴内容 */
-}
-
-.yc-timeline-pending {
-  /* 待处理状态 */
-}
-```

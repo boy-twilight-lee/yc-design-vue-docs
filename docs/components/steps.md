@@ -13,9 +13,15 @@
 ```vue
 <template>
   <yc-steps :current="1">
-    <yc-step title="步骤一" description="这是步骤一的描述" />
-    <yc-step title="步骤二" description="这是步骤二的描述" />
-    <yc-step title="步骤三" description="这是步骤三的描述" />
+    <yc-step
+      title="步骤一"
+      description="这是步骤一的描述" />
+    <yc-step
+      title="步骤二"
+      description="这是步骤二的描述" />
+    <yc-step
+      title="步骤三"
+      description="这是步骤三的描述" />
   </yc-steps>
 </template>
 ```
@@ -26,37 +32,58 @@
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-steps v-model:current="current" changeable>
-      <yc-step title="开始" description="开始使用" />
-      <yc-step title="进行中" description="正在处理" />
-      <yc-step title="等待" description="等待结果" />
-      <yc-step title="完成" description="处理完成" />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-steps
+      v-model:current="current"
+      changeable>
+      <yc-step
+        title="开始"
+        description="开始使用" />
+      <yc-step
+        title="进行中"
+        description="正在处理" />
+      <yc-step
+        title="等待"
+        description="等待结果" />
+      <yc-step
+        title="完成"
+        description="处理完成" />
     </yc-steps>
-    
+
     <yc-space>
-      <yc-button @click="prev" :disabled="current <= 0">上一步</yc-button>
-      <yc-button type="primary" @click="next" :disabled="current >= 3">下一步</yc-button>
+      <yc-button
+        @click="prev"
+        :disabled="current <= 0"
+        >上一步</yc-button
+      >
+      <yc-button
+        type="primary"
+        @click="next"
+        :disabled="current >= 3"
+        >下一步</yc-button
+      >
     </yc-space>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const current = ref(0)
+const current = ref(0);
 
 const prev = () => {
   if (current.value > 0) {
-    current.value--
+    current.value--;
   }
-}
+};
 
 const next = () => {
   if (current.value < 3) {
-    current.value++
+    current.value++;
   }
-}
+};
 </script>
 ```
 
@@ -66,37 +93,53 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <div>
       <p>默认类型</p>
-      <yc-steps :current="1" type="default">
+      <yc-steps
+        :current="1"
+        type="default">
         <yc-step title="步骤一" />
         <yc-step title="步骤二" />
         <yc-step title="步骤三" />
       </yc-steps>
     </div>
-    
+
     <div>
       <p>箭头类型</p>
-      <yc-steps :current="1" type="arrow">
+      <yc-steps
+        :current="1"
+        type="arrow">
         <yc-step title="步骤一" />
         <yc-step title="步骤二" />
         <yc-step title="步骤三" />
       </yc-steps>
     </div>
-    
+
     <div>
       <p>点状类型</p>
-      <yc-steps :current="1" type="dot">
-        <yc-step title="步骤一" description="描述信息" />
-        <yc-step title="步骤二" description="描述信息" />
-        <yc-step title="步骤三" description="描述信息" />
+      <yc-steps
+        :current="1"
+        type="dot">
+        <yc-step
+          title="步骤一"
+          description="描述信息" />
+        <yc-step
+          title="步骤二"
+          description="描述信息" />
+        <yc-step
+          title="步骤三"
+          description="描述信息" />
       </yc-steps>
     </div>
-    
+
     <div>
       <p>导航类型</p>
-      <yc-steps :current="1" type="navigation">
+      <yc-steps
+        :current="1"
+        type="navigation">
         <yc-step title="步骤一" />
         <yc-step title="步骤二" />
         <yc-step title="步骤三" />
@@ -112,11 +155,21 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-steps :current="1" direction="vertical">
-    <yc-step title="登录" description="用户登录系统" />
-    <yc-step title="验证" description="验证用户信息" />
-    <yc-step title="选择" description="选择相关选项" />
-    <yc-step title="完成" description="完成所有设置" />
+  <yc-steps
+    :current="1"
+    direction="vertical">
+    <yc-step
+      title="登录"
+      description="用户登录系统" />
+    <yc-step
+      title="验证"
+      description="验证用户信息" />
+    <yc-step
+      title="选择"
+      description="选择相关选项" />
+    <yc-step
+      title="完成"
+      description="完成所有设置" />
   </yc-steps>
 </template>
 ```
@@ -127,22 +180,40 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <div>
       <p>水平标签（默认）</p>
-      <yc-steps :current="1" label-placement="horizontal">
-        <yc-step title="步骤一" description="这是描述" />
-        <yc-step title="步骤二" description="这是描述" />
-        <yc-step title="步骤三" description="这是描述" />
+      <yc-steps
+        :current="1"
+        label-placement="horizontal">
+        <yc-step
+          title="步骤一"
+          description="这是描述" />
+        <yc-step
+          title="步骤二"
+          description="这是描述" />
+        <yc-step
+          title="步骤三"
+          description="这是描述" />
       </yc-steps>
     </div>
-    
+
     <div>
       <p>垂直标签</p>
-      <yc-steps :current="1" label-placement="vertical">
-        <yc-step title="步骤一" description="这是描述" />
-        <yc-step title="步骤二" description="这是描述" />
-        <yc-step title="步骤三" description="这是描述" />
+      <yc-steps
+        :current="1"
+        label-placement="vertical">
+        <yc-step
+          title="步骤一"
+          description="这是描述" />
+        <yc-step
+          title="步骤二"
+          description="这是描述" />
+        <yc-step
+          title="步骤三"
+          description="这是描述" />
       </yc-steps>
     </div>
   </yc-space>
@@ -156,10 +227,18 @@ const next = () => {
 ```vue
 <template>
   <yc-steps :current="1">
-    <yc-step title="完成" status="finish" />
-    <yc-step title="进行中" status="process" />
-    <yc-step title="错误" status="error" />
-    <yc-step title="等待" status="wait" />
+    <yc-step
+      title="完成"
+      status="finish" />
+    <yc-step
+      title="进行中"
+      status="process" />
+    <yc-step
+      title="错误"
+      status="error" />
+    <yc-step
+      title="等待"
+      status="wait" />
   </yc-steps>
 </template>
 ```
@@ -196,7 +275,9 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-steps :current="1" small>
+  <yc-steps
+    :current="1"
+    small>
     <yc-step title="步骤一" />
     <yc-step title="步骤二" />
     <yc-step title="步骤三" />
@@ -211,10 +292,18 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-steps :current="1" line-less>
-    <yc-step title="步骤一" description="描述信息" />
-    <yc-step title="步骤二" description="描述信息" />
-    <yc-step title="步骤三" description="描述信息" />
+  <yc-steps
+    :current="1"
+    line-less>
+    <yc-step
+      title="步骤一"
+      description="描述信息" />
+    <yc-step
+      title="步骤二"
+      description="描述信息" />
+    <yc-step
+      title="步骤三"
+      description="描述信息" />
   </yc-steps>
 </template>
 ```
@@ -225,7 +314,9 @@ const next = () => {
 
 ```vue
 <template>
-  <yc-steps :current="1" direction="vertical">
+  <yc-steps
+    :current="1"
+    direction="vertical">
     <yc-step title="步骤一">
       <template #description>
         <div>
@@ -255,73 +346,47 @@ const next = () => {
 
 ### Steps Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| current (v-model) | 当前步骤 | `number` | `0` |
-| default-current | 默认当前步骤 | `number` | `0` |
-| type | 步骤条类型 | `'default' \| 'arrow' \| 'dot' \| 'navigation'` | `'default'` |
-| direction | 显示方向 | `'horizontal' \| 'vertical'` | `'horizontal'` |
-| label-placement | 标签放置位置 | `'horizontal' \| 'vertical'` | `'horizontal'` |
-| status | 指定当前步骤的状态 | `'wait' \| 'process' \| 'finish' \| 'error'` | `'process'` |
-| line-less | 是否隐藏连接线 | `boolean` | `false` |
-| small | 是否为小型步骤条 | `boolean` | `false` |
-| changeable | 是否可以点击切换 | `boolean` | `false` |
+| 参数名            | 描述               | 类型                                            | 默认值         |
+| ----------------- | ------------------ | ----------------------------------------------- | -------------- |
+| current (v-model) | 当前步骤           | `number`                                        | `0`            |
+| default-current   | 默认当前步骤       | `number`                                        | `0`            |
+| type              | 步骤条类型         | `'default' \| 'arrow' \| 'dot' \| 'navigation'` | `'default'`    |
+| direction         | 显示方向           | `'horizontal' \| 'vertical'`                    | `'horizontal'` |
+| label-placement   | 标签放置位置       | `'horizontal' \| 'vertical'`                    | `'horizontal'` |
+| status            | 指定当前步骤的状态 | `'wait' \| 'process' \| 'finish' \| 'error'`    | `'process'`    |
+| line-less         | 是否隐藏连接线     | `boolean`                                       | `false`        |
+| small             | 是否为小型步骤条   | `boolean`                                       | `false`        |
+| changeable        | 是否可以点击切换   | `boolean`                                       | `false`        |
 
 ### Steps Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
+| 事件名 | 描述           | 参数                        |
+| ------ | -------------- | --------------------------- |
 | change | 点击步骤时触发 | `(step: number, ev: Event)` |
 
 ### Steps Slots
 
-| 插槽名 | 描述 |
-|--------|------|
+| 插槽名  | 描述     |
+| ------- | -------- |
 | default | 步骤内容 |
 
 ### Step Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| title | 步骤标题 | `string` | `-` |
-| description | 步骤描述 | `string` | `-` |
-| status | 步骤状态 | `'wait' \| 'process' \| 'finish' \| 'error'` | `-` |
-| disabled | 是否禁用 | `boolean` | `false` |
+| 参数名      | 描述     | 类型                                         | 默认值  |
+| ----------- | -------- | -------------------------------------------- | ------- |
+| title       | 步骤标题 | `string`                                     | `-`     |
+| description | 步骤描述 | `string`                                     | `-`     |
+| status      | 步骤状态 | `'wait' \| 'process' \| 'finish' \| 'error'` | `-`     |
+| disabled    | 是否禁用 | `boolean`                                    | `false` |
 
 ### Step Slots
 
-| 插槽名 | 描述 | 参数 |
-|--------|------|------|
-| icon | 自定义图标 | `{ step: number, status: StepStatus }` |
-| node | 自定义节点 | `{ step: number, status: StepStatus }` |
-| description | 自定义描述 | `-` |
-| default | 自定义标题 | `-` |
-
-## 类型定义
-
-```typescript
-export interface StepsProps {
-  type?: StepType;
-  direction?: Direction;
-  labelPlacement?: Direction;
-  current?: number;
-  defaultCurrent?: number;
-  status?: StepStatus;
-  lineLess?: boolean;
-  small?: boolean;
-  changeable?: boolean;
-}
-
-export interface StepProps {
-  title?: string;
-  description?: string;
-  status?: StepStatus;
-  disabled?: boolean;
-}
-
-export type StepStatus = 'wait' | 'process' | 'finish' | 'error';
-export type StepType = 'default' | 'arrow' | 'dot' | 'navigation';
-```
+| 插槽名      | 描述       | 参数                                   |
+| ----------- | ---------- | -------------------------------------- |
+| icon        | 自定义图标 | `{ step: number, status: StepStatus }` |
+| node        | 自定义节点 | `{ step: number, status: StepStatus }` |
+| description | 自定义描述 | `-`                                    |
+| default     | 自定义标题 | `-`                                    |
 
 ## 设计原则
 

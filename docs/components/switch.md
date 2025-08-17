@@ -13,7 +13,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSwitch v-model="checked" />
     <div>当前状态: {{ checked ? '开启' : '关闭' }}</div>
   </YcSpace>
@@ -32,16 +34,22 @@ const checked = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>小尺寸</h4>
-      <YcSwitch v-model="checked1" size="small" />
+      <YcSwitch
+        v-model="checked1"
+        size="small" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>中等尺寸</h4>
-      <YcSwitch v-model="checked2" size="medium" />
+      <YcSwitch
+        v-model="checked2"
+        size="medium" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
   </YcSpace>
@@ -61,22 +69,30 @@ const checked2 = ref(true);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>圆形开关</h4>
-      <YcSwitch v-model="checked1" type="circle" />
+      <YcSwitch
+        v-model="checked1"
+        type="circle" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>圆角开关</h4>
-      <YcSwitch v-model="checked2" type="round" />
+      <YcSwitch
+        v-model="checked2"
+        type="round" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>线条开关</h4>
-      <YcSwitch v-model="checked3" type="line" />
+      <YcSwitch
+        v-model="checked3"
+        type="line" />
       <div>状态: {{ checked3 ? '开启' : '关闭' }}</div>
     </div>
   </YcSpace>
@@ -97,30 +113,30 @@ const checked3 = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认值 (true/false)</h4>
       <YcSwitch v-model="defaultChecked" />
       <div>值: {{ defaultChecked }}</div>
     </div>
-    
+
     <div>
       <h4>自定义值 (on/off)</h4>
-      <YcSwitch 
-        v-model="customChecked" 
+      <YcSwitch
+        v-model="customChecked"
         checked-value="on"
-        unchecked-value="off"
-      />
+        unchecked-value="off" />
       <div>值: {{ customChecked }}</div>
     </div>
-    
+
     <div>
       <h4>数字值 (1/0)</h4>
-      <YcSwitch 
-        v-model="numberChecked" 
+      <YcSwitch
+        v-model="numberChecked"
         :checked-value="1"
-        :unchecked-value="0"
-      />
+        :unchecked-value="0" />
       <div>值: {{ numberChecked }}</div>
     </div>
   </YcSpace>
@@ -141,30 +157,30 @@ const numberChecked = ref(0);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认颜色</h4>
       <YcSwitch v-model="checked1" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>自定义颜色</h4>
-      <YcSwitch 
-        v-model="checked2" 
+      <YcSwitch
+        v-model="checked2"
         checked-color="#52c41a"
-        unchecked-color="#d9d9d9"
-      />
+        unchecked-color="#d9d9d9" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>主题色</h4>
-      <YcSwitch 
-        v-model="checked3" 
+      <YcSwitch
+        v-model="checked3"
         checked-color="#1890ff"
-        unchecked-color="#bfbfbf"
-      />
+        unchecked-color="#bfbfbf" />
       <div>状态: {{ checked3 ? '开启' : '关闭' }}</div>
     </div>
   </YcSpace>
@@ -185,30 +201,30 @@ const checked3 = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无文字</h4>
       <YcSwitch v-model="checked1" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>有文字</h4>
-      <YcSwitch 
-        v-model="checked2" 
+      <YcSwitch
+        v-model="checked2"
         checked-text="开启"
-        unchecked-text="关闭"
-      />
+        unchecked-text="关闭" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>英文文字</h4>
-      <YcSwitch 
-        v-model="checked3" 
+      <YcSwitch
+        v-model="checked3"
         checked-text="ON"
-        unchecked-text="OFF"
-      />
+        unchecked-text="OFF" />
       <div>状态: {{ checked3 ? '开启' : '关闭' }}</div>
     </div>
   </YcSpace>
@@ -229,13 +245,15 @@ const checked3 = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认图标</h4>
       <YcSwitch v-model="checked1" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>自定义图标</h4>
       <YcSwitch v-model="checked2">
@@ -248,7 +266,7 @@ const checked3 = ref(false);
       </YcSwitch>
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>表情图标</h4>
       <YcSwitch v-model="checked3">
@@ -290,26 +308,29 @@ const checked3 = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>正常状态</h4>
       <YcSwitch v-model="checked1" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>加载状态</h4>
-      <YcSwitch v-model="checked2" :loading="true" />
+      <YcSwitch
+        v-model="checked2"
+        :loading="true" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}（加载中）</div>
     </div>
-    
+
     <div>
       <h4>动态加载</h4>
-      <YcSwitch 
-        v-model="checked3" 
+      <YcSwitch
+        v-model="checked3"
         :loading="isLoading"
-        @change="handleChange"
-      />
+        @change="handleChange" />
       <div>状态: {{ checked3 ? '开启' : '关闭' }}</div>
       <div>加载状态: {{ isLoading ? '加载中' : '完成' }}</div>
     </div>
@@ -327,7 +348,7 @@ const isLoading = ref(false);
 const handleChange = async (value) => {
   isLoading.value = true;
   // 模拟异步操作
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   isLoading.value = false;
 };
 </script>
@@ -339,22 +360,29 @@ const handleChange = async (value) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>正常状态</h4>
       <YcSwitch v-model="checked" />
       <div>状态: {{ checked ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>禁用状态</h4>
-      <YcSwitch v-model="checked" disabled />
+      <YcSwitch
+        v-model="checked"
+        disabled />
       <div>状态: {{ checked ? '开启' : '关闭' }}（禁用）</div>
     </div>
-    
+
     <div>
       <h4>禁用且加载</h4>
-      <YcSwitch v-model="checked" disabled :loading="true" />
+      <YcSwitch
+        v-model="checked"
+        disabled
+        :loading="true" />
       <div>状态: {{ checked ? '开启' : '关闭' }}（禁用且加载中）</div>
     </div>
   </YcSpace>
@@ -373,28 +401,28 @@ const checked = ref(false);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>普通切换</h4>
       <YcSwitch v-model="checked1" />
       <div>状态: {{ checked1 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>切换前确认</h4>
-      <YcSwitch 
-        v-model="checked2" 
-        :before-change="beforeChange"
-      />
+      <YcSwitch
+        v-model="checked2"
+        :before-change="beforeChange" />
       <div>状态: {{ checked2 ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div>
       <h4>异步确认</h4>
-      <YcSwitch 
-        v-model="checked3" 
-        :before-change="asyncBeforeChange"
-      />
+      <YcSwitch
+        v-model="checked3"
+        :before-change="asyncBeforeChange" />
       <div>状态: {{ checked3 ? '开启' : '关闭' }}</div>
     </div>
   </YcSpace>
@@ -415,7 +443,7 @@ const beforeChange = (newValue) => {
 const asyncBeforeChange = async (newValue) => {
   const action = newValue ? '开启' : '关闭';
   // 模拟异步确认
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return confirm(`确定要${action}吗？（异步确认）`);
 };
 </script>
@@ -427,18 +455,19 @@ const asyncBeforeChange = async (newValue) => {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcSwitch 
-      v-model="checked" 
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcSwitch
+      v-model="checked"
       @change="onChange"
       @focus="onFocus"
-      @blur="onBlur"
-    />
-    
+      @blur="onBlur" />
+
     <div>当前状态: {{ checked ? '开启' : '关闭' }}</div>
     <div>变化次数: {{ changeCount }}</div>
     <div>焦点状态: {{ focusStatus }}</div>
-    
+
     <YcSpace>
       <YcButton @click="setChecked(true)">设为开启</YcButton>
       <YcButton @click="setChecked(false)">设为关闭</YcButton>
@@ -482,155 +511,171 @@ const setChecked = (value) => {
 <template>
   <div class="page">
     <h2>Switch 开关示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
       <YcSwitch v-model="basicChecked" />
       <div>当前状态: {{ basicChecked ? '开启' : '关闭' }}</div>
     </div>
-    
+
     <div class="section">
       <h3>尺寸设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>小尺寸</h4>
-          <YcSwitch v-model="sizeChecked1" size="small" />
+          <YcSwitch
+            v-model="sizeChecked1"
+            size="small" />
           <div>状态: {{ sizeChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>中等尺寸</h4>
-          <YcSwitch v-model="sizeChecked2" size="medium" />
+          <YcSwitch
+            v-model="sizeChecked2"
+            size="medium" />
           <div>状态: {{ sizeChecked2 ? '开启' : '关闭' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>类型设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>圆形开关</h4>
-          <YcSwitch v-model="typeChecked1" type="circle" />
+          <YcSwitch
+            v-model="typeChecked1"
+            type="circle" />
           <div>状态: {{ typeChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>圆角开关</h4>
-          <YcSwitch v-model="typeChecked2" type="round" />
+          <YcSwitch
+            v-model="typeChecked2"
+            type="round" />
           <div>状态: {{ typeChecked2 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>线条开关</h4>
-          <YcSwitch v-model="typeChecked3" type="line" />
+          <YcSwitch
+            v-model="typeChecked3"
+            type="line" />
           <div>状态: {{ typeChecked3 ? '开启' : '关闭' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义值</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认值 (true/false)</h4>
           <YcSwitch v-model="defaultChecked" />
           <div>值: {{ defaultChecked }}</div>
         </div>
-        
+
         <div>
           <h4>自定义值 (on/off)</h4>
-          <YcSwitch 
-            v-model="customChecked" 
+          <YcSwitch
+            v-model="customChecked"
             checked-value="on"
-            unchecked-value="off"
-          />
+            unchecked-value="off" />
           <div>值: {{ customChecked }}</div>
         </div>
-        
+
         <div>
           <h4>数字值 (1/0)</h4>
-          <YcSwitch 
-            v-model="numberChecked" 
+          <YcSwitch
+            v-model="numberChecked"
             :checked-value="1"
-            :unchecked-value="0"
-          />
+            :unchecked-value="0" />
           <div>值: {{ numberChecked }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义颜色</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认颜色</h4>
           <YcSwitch v-model="colorChecked1" />
           <div>状态: {{ colorChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>自定义颜色</h4>
-          <YcSwitch 
-            v-model="colorChecked2" 
+          <YcSwitch
+            v-model="colorChecked2"
             checked-color="#52c41a"
-            unchecked-color="#d9d9d9"
-          />
+            unchecked-color="#d9d9d9" />
           <div>状态: {{ colorChecked2 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>主题色</h4>
-          <YcSwitch 
-            v-model="colorChecked3" 
+          <YcSwitch
+            v-model="colorChecked3"
             checked-color="#1890ff"
-            unchecked-color="#bfbfbf"
-          />
+            unchecked-color="#bfbfbf" />
           <div>状态: {{ colorChecked3 ? '开启' : '关闭' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>文字显示</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>无文字</h4>
           <YcSwitch v-model="textChecked1" />
           <div>状态: {{ textChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>有文字</h4>
-          <YcSwitch 
-            v-model="textChecked2" 
+          <YcSwitch
+            v-model="textChecked2"
             checked-text="开启"
-            unchecked-text="关闭"
-          />
+            unchecked-text="关闭" />
           <div>状态: {{ textChecked2 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>英文文字</h4>
-          <YcSwitch 
-            v-model="textChecked3" 
+          <YcSwitch
+            v-model="textChecked3"
             checked-text="ON"
-            unchecked-text="OFF"
-          />
+            unchecked-text="OFF" />
           <div>状态: {{ textChecked3 ? '开启' : '关闭' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义图标</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认图标</h4>
           <YcSwitch v-model="iconChecked1" />
           <div>状态: {{ iconChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>自定义图标</h4>
           <YcSwitch v-model="iconChecked2">
@@ -643,7 +688,7 @@ const setChecked = (value) => {
           </YcSwitch>
           <div>状态: {{ iconChecked2 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>表情图标</h4>
           <YcSwitch v-model="iconChecked3">
@@ -658,100 +703,111 @@ const setChecked = (value) => {
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>加载状态</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>正常状态</h4>
           <YcSwitch v-model="loadingChecked1" />
           <div>状态: {{ loadingChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>加载状态</h4>
-          <YcSwitch v-model="loadingChecked2" :loading="true" />
+          <YcSwitch
+            v-model="loadingChecked2"
+            :loading="true" />
           <div>状态: {{ loadingChecked2 ? '开启' : '关闭' }}（加载中）</div>
         </div>
-        
+
         <div>
           <h4>动态加载</h4>
-          <YcSwitch 
-            v-model="loadingChecked3" 
+          <YcSwitch
+            v-model="loadingChecked3"
             :loading="isLoading"
-            @change="handleChange"
-          />
+            @change="handleChange" />
           <div>状态: {{ loadingChecked3 ? '开启' : '关闭' }}</div>
           <div>加载状态: {{ isLoading ? '加载中' : '完成' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>禁用状态</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>正常状态</h4>
           <YcSwitch v-model="disabledChecked" />
           <div>状态: {{ disabledChecked ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>禁用状态</h4>
-          <YcSwitch v-model="disabledChecked" disabled />
+          <YcSwitch
+            v-model="disabledChecked"
+            disabled />
           <div>状态: {{ disabledChecked ? '开启' : '关闭' }}（禁用）</div>
         </div>
-        
+
         <div>
           <h4>禁用且加载</h4>
-          <YcSwitch v-model="disabledChecked" disabled :loading="true" />
-          <div>状态: {{ disabledChecked ? '开启' : '关闭' }}（禁用且加载中）</div>
+          <YcSwitch
+            v-model="disabledChecked"
+            disabled
+            :loading="true" />
+          <div>
+            状态: {{ disabledChecked ? '开启' : '关闭' }}（禁用且加载中）
+          </div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>切换前确认</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>普通切换</h4>
           <YcSwitch v-model="confirmChecked1" />
           <div>状态: {{ confirmChecked1 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>切换前确认</h4>
-          <YcSwitch 
-            v-model="confirmChecked2" 
-            :before-change="beforeChange"
-          />
+          <YcSwitch
+            v-model="confirmChecked2"
+            :before-change="beforeChange" />
           <div>状态: {{ confirmChecked2 ? '开启' : '关闭' }}</div>
         </div>
-        
+
         <div>
           <h4>异步确认</h4>
-          <YcSwitch 
-            v-model="confirmChecked3" 
-            :before-change="asyncBeforeChange"
-          />
+          <YcSwitch
+            v-model="confirmChecked3"
+            :before-change="asyncBeforeChange" />
           <div>状态: {{ confirmChecked3 ? '开启' : '关闭' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>事件处理</h3>
-      <YcSwitch 
-        v-model="eventChecked" 
+      <YcSwitch
+        v-model="eventChecked"
         @change="onChange"
         @focus="onFocus"
-        @blur="onBlur"
-      />
-      
+        @blur="onBlur" />
+
       <div>当前状态: {{ eventChecked ? '开启' : '关闭' }}</div>
       <div>变化次数: {{ changeCount }}</div>
       <div>焦点状态: {{ focusStatus }}</div>
-      
+
       <YcSpace>
         <YcButton @click="setEventChecked(true)">设为开启</YcButton>
         <YcButton @click="setEventChecked(false)">设为关闭</YcButton>
@@ -818,7 +874,7 @@ const focusStatus = ref('未聚焦');
 const handleChange = async (value) => {
   isLoading.value = true;
   // 模拟异步操作
-  await new Promise(resolve => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   isLoading.value = false;
 };
 
@@ -831,7 +887,7 @@ const beforeChange = (newValue) => {
 const asyncBeforeChange = async (newValue) => {
   const action = newValue ? '开启' : '关闭';
   // 模拟异步确认
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return confirm(`确定要${action}吗？（异步确认）`);
 };
 
@@ -892,65 +948,65 @@ const setEventChecked = (value) => {
 
 ### Switch Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 绑定值 | `SwitchValue` | - |
-| defaultChecked | 默认值 | `SwitchValue` | - |
-| disabled | 是否禁用 | `boolean` | `false` |
-| loading | 是否加载中 | `boolean` | `false` |
-| type | 开关类型 | `SwitchType` | `'circle'` |
-| size | 开关尺寸 | `SwitchSize` | `'medium'` |
-| checkedValue | 选中时的值 | `SwitchValue` | `true` |
-| uncheckedValue | 未选中时的值 | `SwitchValue` | `false` |
-| checkedColor | 选中时的颜色 | `string` | - |
-| uncheckedColor | 未选中时的颜色 | `string` | - |
-| checkedText | 选中时的文字 | `string` | - |
-| uncheckedText | 未选中时的文字 | `string` | - |
-| beforeChange | 切换前的回调函数 | `BeforeChange` | - |
+| 参数           | 说明             | 类型           | 默认值     |
+| -------------- | ---------------- | -------------- | ---------- |
+| modelValue     | 绑定值           | `SwitchValue`  | -          |
+| defaultChecked | 默认值           | `SwitchValue`  | -          |
+| disabled       | 是否禁用         | `boolean`      | `false`    |
+| loading        | 是否加载中       | `boolean`      | `false`    |
+| type           | 开关类型         | `SwitchType`   | `'circle'` |
+| size           | 开关尺寸         | `SwitchSize`   | `'medium'` |
+| checkedValue   | 选中时的值       | `SwitchValue`  | `true`     |
+| uncheckedValue | 未选中时的值     | `SwitchValue`  | `false`    |
+| checkedColor   | 选中时的颜色     | `string`       | -          |
+| uncheckedColor | 未选中时的颜色   | `string`       | -          |
+| checkedText    | 选中时的文字     | `string`       | -          |
+| uncheckedText  | 未选中时的文字   | `string`       | -          |
+| beforeChange   | 切换前的回调函数 | `BeforeChange` | -          |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:modelValue | 绑定值变化时触发 | `(value: SwitchValue)` |
-| change | 状态变化时触发 | `(value: SwitchValue, ev: Event)` |
-| focus | 获得焦点时触发 | `(ev: FocusEvent)` |
-| blur | 失去焦点时触发 | `(ev: FocusEvent)` |
+| 事件名            | 说明             | 回调参数                          |
+| ----------------- | ---------------- | --------------------------------- |
+| update:modelValue | 绑定值变化时触发 | `(value: SwitchValue)`            |
+| change            | 状态变化时触发   | `(value: SwitchValue, ev: Event)` |
+| focus             | 获得焦点时触发   | `(ev: FocusEvent)`                |
+| blur              | 失去焦点时触发   | `(ev: FocusEvent)`                |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| checked-icon | 选中时的图标 | - |
-| unchecked-icon | 未选中时的图标 | - |
-| checked | 选中时的内容 | - |
-| unchecked | 未选中时的内容 | - |
+| 插槽名         | 说明           | 参数 |
+| -------------- | -------------- | ---- |
+| checked-icon   | 选中时的图标   | -    |
+| unchecked-icon | 未选中时的图标 | -    |
+| checked        | 选中时的内容   | -    |
+| unchecked      | 未选中时的内容 | -    |
 
 ### SwitchValue
 
-| 类型 | 说明 |
-| --- | --- |
+| 类型                          | 说明       |
+| ----------------------------- | ---------- |
 | `string \| number \| boolean` | 开关值类型 |
 
 ### SwitchType
 
-| 类型 | 说明 |
-| --- | --- |
+| 类型       | 说明     |
+| ---------- | -------- |
 | `'circle'` | 圆形开关 |
-| `'round'` | 圆角开关 |
-| `'line'` | 线条开关 |
+| `'round'`  | 圆角开关 |
+| `'line'`   | 线条开关 |
 
 ### SwitchSize
 
-| 类型 | 说明 |
-| --- | --- |
-| `'small'` | 小尺寸 |
+| 类型       | 说明     |
+| ---------- | -------- |
+| `'small'`  | 小尺寸   |
 | `'medium'` | 中等尺寸 |
 
 ### BeforeChange
 
-| 类型 | 说明 |
-| --- | --- |
+| 类型                                                                     | 说明           |
+| ------------------------------------------------------------------------ | -------------- |
 | `(newValue: SwitchValue) => Promise<boolean \| void> \| boolean \| void` | 切换前回调函数 |
 
 ## 注意事项
@@ -959,45 +1015,3 @@ const setEventChecked = (value) => {
 2. `beforeChange` 回调函数可以返回 `false` 或 `Promise<false>` 来阻止切换
 3. 加载状态下开关不可操作
 4. 禁用状态下开关不可操作
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-switch {
-  /* 开关容器 */
-}
-
-.yc-switch-checked {
-  /* 选中状态 */
-}
-
-.yc-switch-unchecked {
-  /* 未选中状态 */
-}
-
-.yc-switch-disabled {
-  /* 禁用状态 */
-}
-
-.yc-switch-loading {
-  /* 加载状态 */
-}
-
-.yc-switch-handle {
-  /* 开关手柄 */
-}
-
-.yc-switch-inner {
-  /* 开关内容 */
-}
-
-.yc-switch-text {
-  /* 开关文字 */
-}
-
-.yc-switch-icon {
-  /* 开关图标 */
-}
-```

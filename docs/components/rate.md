@@ -14,7 +14,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcRate v-model="value" />
     <div>当前评分: {{ value }}</div>
   </YcSpace>
@@ -33,16 +35,20 @@ const value = ref(3);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>整星评分</h4>
       <YcRate v-model="value1" />
       <div>评分: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>半星评分</h4>
-      <YcRate v-model="value2" :allow-half="true" />
+      <YcRate
+        v-model="value2"
+        :allow-half="true" />
       <div>评分: {{ value2 }}</div>
     </div>
   </YcSpace>
@@ -62,12 +68,14 @@ const value2 = ref(3.5);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认星星</h4>
       <YcRate v-model="value1" />
     </div>
-    
+
     <div>
       <h4>自定义图标</h4>
       <YcRate v-model="value2">
@@ -76,7 +84,7 @@ const value2 = ref(3.5);
         </template>
       </YcRate>
     </div>
-    
+
     <div>
       <h4>数字评分</h4>
       <YcRate v-model="value3">
@@ -127,20 +135,26 @@ const value3 = ref(3);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认颜色</h4>
       <YcRate v-model="value" />
     </div>
-    
+
     <div>
       <h4>单色评分</h4>
-      <YcRate v-model="value" color="#52c41a" />
+      <YcRate
+        v-model="value"
+        color="#52c41a" />
     </div>
-    
+
     <div>
       <h4>分段颜色</h4>
-      <YcRate v-model="value" :color="gradientColor" />
+      <YcRate
+        v-model="value"
+        :color="gradientColor" />
     </div>
   </YcSpace>
 </template>
@@ -155,7 +169,7 @@ const gradientColor = {
   2: '#fa8c16',
   3: '#faad14',
   4: '#52c41a',
-  5: '#1890ff'
+  5: '#1890ff',
 };
 </script>
 ```
@@ -166,22 +180,30 @@ const gradientColor = {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>5星评分</h4>
-      <YcRate v-model="value1" :count="5" />
+      <YcRate
+        v-model="value1"
+        :count="5" />
       <div>评分: {{ value1 }}/5</div>
     </div>
-    
+
     <div>
       <h4>10星评分</h4>
-      <YcRate v-model="value2" :count="10" />
+      <YcRate
+        v-model="value2"
+        :count="10" />
       <div>评分: {{ value2 }}/10</div>
     </div>
-    
+
     <div>
       <h4>3星评分</h4>
-      <YcRate v-model="value3" :count="3" />
+      <YcRate
+        v-model="value3"
+        :count="3" />
       <div>评分: {{ value3 }}/3</div>
     </div>
   </YcSpace>
@@ -202,16 +224,20 @@ const value3 = ref(2);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>可编辑评分</h4>
       <YcRate v-model="value" />
       <div>评分: {{ value }}</div>
     </div>
-    
+
     <div>
       <h4>只读评分</h4>
-      <YcRate v-model="value" :readonly="true" />
+      <YcRate
+        v-model="value"
+        :readonly="true" />
       <div>评分: {{ value }}（只读）</div>
     </div>
   </YcSpace>
@@ -230,16 +256,20 @@ const value = ref(4);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>正常状态</h4>
       <YcRate v-model="value" />
       <div>评分: {{ value }}</div>
     </div>
-    
+
     <div>
       <h4>禁用状态</h4>
-      <YcRate v-model="value" :disabled="true" />
+      <YcRate
+        v-model="value"
+        :disabled="true" />
       <div>评分: {{ value }}（禁用）</div>
     </div>
   </YcSpace>
@@ -258,16 +288,22 @@ const value = ref(3);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>允许清除</h4>
-      <YcRate v-model="value1" :allow-clear="true" />
+      <YcRate
+        v-model="value1"
+        :allow-clear="true" />
       <div>评分: {{ value1 || '未评分' }}</div>
     </div>
-    
+
     <div>
       <h4>不允许清除</h4>
-      <YcRate v-model="value2" :allow-clear="false" />
+      <YcRate
+        v-model="value2"
+        :allow-clear="false" />
       <div>评分: {{ value2 }}</div>
     </div>
   </YcSpace>
@@ -287,16 +323,17 @@ const value2 = ref(3);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcRate 
-      v-model="value" 
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcRate
+      v-model="value"
       @change="onChange"
-      @hover-change="onHoverChange"
-    />
-    
+      @hover-change="onHoverChange" />
+
     <div>当前评分: {{ value }}</div>
     <div>悬停评分: {{ hoverValue }}</div>
-    
+
     <YcSpace>
       <YcButton @click="setRating(1)">设为1星</YcButton>
       <YcButton @click="setRating(3)">设为3星</YcButton>
@@ -338,49 +375,59 @@ const clearRating = () => {
 <template>
   <div class="page">
     <h2>Rate 评分示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <YcRate v-model="basicValue" />
         <div>当前评分: {{ basicValue }}</div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>半星评分</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>整星评分</h4>
           <YcRate v-model="halfValue1" />
           <div>评分: {{ halfValue1 }}</div>
         </div>
-        
+
         <div>
           <h4>半星评分</h4>
-          <YcRate v-model="halfValue2" :allow-half="true" />
+          <YcRate
+            v-model="halfValue2"
+            :allow-half="true" />
           <div>评分: {{ halfValue2 }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义图标</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认星星</h4>
           <YcRate v-model="iconValue1" />
         </div>
-        
+
         <div>
           <h4>爱心图标</h4>
           <YcRate v-model="iconValue2">
             <template #character="{ index }">
-              <span class="custom-icon">{{ index < iconValue2 ? '❤️' : '🤍' }}</span>
+              <span class="custom-icon">{{
+                index < iconValue2 ? '❤️' : '🤍'
+              }}</span>
             </template>
           </YcRate>
         </div>
-        
+
         <div>
           <h4>数字评分</h4>
           <YcRate v-model="iconValue3">
@@ -391,79 +438,100 @@ const clearRating = () => {
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>自定义颜色</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认颜色</h4>
           <YcRate v-model="colorValue" />
         </div>
-        
+
         <div>
           <h4>绿色评分</h4>
-          <YcRate v-model="colorValue" color="#52c41a" />
+          <YcRate
+            v-model="colorValue"
+            color="#52c41a" />
         </div>
-        
+
         <div>
           <h4>分段颜色</h4>
-          <YcRate v-model="colorValue" :color="gradientColor" />
+          <YcRate
+            v-model="colorValue"
+            :color="gradientColor" />
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>评分数量</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>5星评分</h4>
-          <YcRate v-model="countValue1" :count="5" />
+          <YcRate
+            v-model="countValue1"
+            :count="5" />
           <div>评分: {{ countValue1 }}/5</div>
         </div>
-        
+
         <div>
           <h4>10星评分</h4>
-          <YcRate v-model="countValue2" :count="10" />
+          <YcRate
+            v-model="countValue2"
+            :count="10" />
           <div>评分: {{ countValue2 }}/10</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>状态控制</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>只读模式</h4>
-          <YcRate v-model="stateValue" :readonly="true" />
+          <YcRate
+            v-model="stateValue"
+            :readonly="true" />
           <div>评分: {{ stateValue }}（只读）</div>
         </div>
-        
+
         <div>
           <h4>禁用状态</h4>
-          <YcRate v-model="stateValue" :disabled="true" />
+          <YcRate
+            v-model="stateValue"
+            :disabled="true" />
           <div>评分: {{ stateValue }}（禁用）</div>
         </div>
-        
+
         <div>
           <h4>允许清除</h4>
-          <YcRate v-model="stateValue" :allow-clear="true" />
+          <YcRate
+            v-model="stateValue"
+            :allow-clear="true" />
           <div>评分: {{ stateValue || '未评分' }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>事件处理</h3>
-      <YcSpace direction="vertical" size="large">
-        <YcRate 
-          v-model="eventValue" 
+      <YcSpace
+        direction="vertical"
+        size="large">
+        <YcRate
+          v-model="eventValue"
           @change="onChange"
-          @hover-change="onHoverChange"
-        />
-        
+          @hover-change="onHoverChange" />
+
         <div>当前评分: {{ eventValue }}</div>
         <div>悬停评分: {{ hoverValue }}</div>
-        
+
         <YcSpace>
           <YcButton @click="setRating(1)">设为1星</YcButton>
           <YcButton @click="setRating(3)">设为3星</YcButton>
@@ -510,7 +578,7 @@ const gradientColor = {
   2: '#fa8c16',
   3: '#faad14',
   4: '#52c41a',
-  5: '#1890ff'
+  5: '#1890ff',
 };
 
 // 事件处理
@@ -580,30 +648,30 @@ const clearRating = () => {
 
 ### Rate Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| count | 评分数量 | `number` | `5` |
-| modelValue | 绑定值 | `number` | - |
-| defaultValue | 默认值 | `number` | `0` |
-| allowHalf | 是否允许半星 | `boolean` | `false` |
-| allowClear | 是否允许清除 | `boolean` | `true` |
-| grading | 是否启用分级 | `boolean` | `false` |
-| readonly | 是否只读 | `boolean` | `false` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| color | 评分颜色 | `string \| Record<number, string>` | - |
+| 参数         | 说明         | 类型                               | 默认值  |
+| ------------ | ------------ | ---------------------------------- | ------- |
+| count        | 评分数量     | `number`                           | `5`     |
+| modelValue   | 绑定值       | `number`                           | -       |
+| defaultValue | 默认值       | `number`                           | `0`     |
+| allowHalf    | 是否允许半星 | `boolean`                          | `false` |
+| allowClear   | 是否允许清除 | `boolean`                          | `true`  |
+| grading      | 是否启用分级 | `boolean`                          | `false` |
+| readonly     | 是否只读     | `boolean`                          | `false` |
+| disabled     | 是否禁用     | `boolean`                          | `false` |
+| color        | 评分颜色     | `string \| Record<number, string>` | -       |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:modelValue | 绑定值变化时触发 | `(value: number)` |
-| change | 评分变化时触发 | `(value: number)` |
-| hover-change | 悬停评分变化时触发 | `(value: number)` |
+| 事件名            | 说明               | 回调参数          |
+| ----------------- | ------------------ | ----------------- |
+| update:modelValue | 绑定值变化时触发   | `(value: number)` |
+| change            | 评分变化时触发     | `(value: number)` |
+| hover-change      | 悬停评分变化时触发 | `(value: number)` |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
+| 插槽名    | 说明       | 参数                |
+| --------- | ---------- | ------------------- |
 | character | 自定义字符 | `{ index: number }` |
 
 ## 注意事项
@@ -612,33 +680,3 @@ const clearRating = () => {
 2. 半星评分需要设置 `allowHalf` 为 `true`
 3. 可以通过 `character` 插槽自定义评分图标
 4. 支持分段颜色设置，通过对象形式配置不同评分的颜色
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-rate {
-  /* 评分容器 */
-}
-
-.yc-rate-item {
-  /* 评分项 */
-}
-
-.yc-rate-item-active {
-  /* 激活状态的评分项 */
-}
-
-.yc-rate-item-half {
-  /* 半星状态 */
-}
-
-.yc-rate-item-disabled {
-  /* 禁用状态 */
-}
-
-.yc-rate-character {
-  /* 评分字符 */
-}
-```

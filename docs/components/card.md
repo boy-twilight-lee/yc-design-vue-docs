@@ -26,7 +26,9 @@
 
 ```vue
 <template>
-  <YcCard title="无边框卡片" :bordered="false">
+  <YcCard
+    title="无边框卡片"
+    :bordered="false">
     <p>卡片内容</p>
   </YcCard>
 </template>
@@ -38,7 +40,9 @@
 
 ```vue
 <template>
-  <YcCard title="可悬停卡片" hoverable>
+  <YcCard
+    title="可悬停卡片"
+    hoverable>
     <p>鼠标悬停时会有阴影效果</p>
   </YcCard>
 </template>
@@ -50,7 +54,9 @@
 
 ```vue
 <template>
-  <YcCard title="加载中" :loading="true">
+  <YcCard
+    title="加载中"
+    :loading="true">
     <p>卡片内容</p>
   </YcCard>
 </template>
@@ -62,11 +68,17 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcCard title="默认尺寸" size="medium">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcCard
+      title="默认尺寸"
+      size="medium">
       <p>默认尺寸的卡片</p>
     </YcCard>
-    <YcCard title="小尺寸" size="small">
+    <YcCard
+      title="小尺寸"
+      size="small">
       <p>小尺寸的卡片</p>
     </YcCard>
   </YcSpace>
@@ -100,7 +112,9 @@
 <template>
   <YcCard title="带封面的卡片">
     <template #cover>
-      <img src="https://via.placeholder.com/300x200" alt="封面图片" />
+      <img
+        src="https://via.placeholder.com/300x200"
+        alt="封面图片" />
     </template>
     <p>卡片内容</p>
   </YcCard>
@@ -132,12 +146,13 @@
 <template>
   <YcCard>
     <template #cover>
-      <img src="https://via.placeholder.com/300x200" alt="封面图片" />
+      <img
+        src="https://via.placeholder.com/300x200"
+        alt="封面图片" />
     </template>
     <YcCardMeta
       title="卡片标题"
-      description="这是一段描述文字，介绍卡片的主要内容。"
-    />
+      description="这是一段描述文字，介绍卡片的主要内容。" />
   </YcCard>
 </template>
 ```
@@ -166,8 +181,7 @@
   <YcCard
     title="自定义样式"
     :header-style="{ backgroundColor: '#f0f0f0' }"
-    :body-style="{ padding: '24px' }"
-  >
+    :body-style="{ padding: '24px' }">
     <p>自定义样式的卡片</p>
   </YcCard>
 </template>
@@ -177,56 +191,39 @@
 
 ### Card Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| bordered | 是否有边框 | `boolean` | `true` |
-| loading | 是否显示加载状态 | `boolean` | `false` |
-| hoverable | 是否可悬停 | `boolean` | `false` |
-| size | 卡片尺寸 | `CardSize` | - |
-| headerStyle | 头部样式 | `CSSProperties` | `{}` |
-| bodyStyle | 内容区域样式 | `CSSProperties` | `{}` |
-| title | 卡片标题 | `string` | `''` |
-| extra | 额外操作区域 | `string` | `''` |
+| 参数        | 说明             | 类型            | 默认值  |
+| ----------- | ---------------- | --------------- | ------- |
+| bordered    | 是否有边框       | `boolean`       | `true`  |
+| loading     | 是否显示加载状态 | `boolean`       | `false` |
+| hoverable   | 是否可悬停       | `boolean`       | `false` |
+| size        | 卡片尺寸         | `CardSize`      | -       |
+| headerStyle | 头部样式         | `CSSProperties` | `{}`    |
+| bodyStyle   | 内容区域样式     | `CSSProperties` | `{}`    |
+| title       | 卡片标题         | `string`        | `''`    |
+| extra       | 额外操作区域     | `string`        | `''`    |
 
 ### CardMeta Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| title | 标题 | `string` | - |
-| description | 描述 | `string` | - |
+| 参数        | 说明 | 类型     | 默认值 |
+| ----------- | ---- | -------- | ------ |
+| title       | 标题 | `string` | -      |
+| description | 描述 | `string` | -      |
 
 ### CardGrid Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| hoverable | 是否可悬停 | `boolean` | - |
+| 参数      | 说明       | 类型      | 默认值 |
+| --------- | ---------- | --------- | ------ |
+| hoverable | 是否可悬停 | `boolean` | -      |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明         |
+| ------- | ------------ |
 | actions | 卡片操作区域 |
-| cover | 卡片封面 |
-| extra | 额外操作区域 |
-| title | 卡片标题 |
-| default | 卡片内容 |
-
-### Types
-
-```typescript
-interface CardProps {
-  bordered?: boolean;
-  loading?: boolean;
-  hoverable?: boolean;
-  size?: CardSize;
-  headerStyle?: CSSProperties;
-  bodyStyle?: CSSProperties;
-  title?: string;
-  extra?: string;
-}
-
-type CardSize = 'medium' | 'small';
-```
+| cover   | 卡片封面     |
+| extra   | 额外操作区域 |
+| title   | 卡片标题     |
+| default | 卡片内容     |
 
 ## 注意事项
 
@@ -234,29 +231,3 @@ type CardSize = 'medium' | 'small';
 2. `CardGrid` 会自动创建网格布局
 3. 加载状态会覆盖卡片内容
 4. 悬停效果需要配合 CSS 样式实现
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-card {
-  /* 卡片容器 */
-}
-
-.yc-card-header {
-  /* 卡片头部 */
-}
-
-.yc-card-body {
-  /* 卡片内容 */
-}
-
-.yc-card-actions {
-  /* 卡片操作区域 */
-}
-
-.yc-card-cover {
-  /* 卡片封面 */
-}
-```

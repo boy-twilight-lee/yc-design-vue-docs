@@ -29,7 +29,9 @@
 
 ```vue
 <template>
-  <YcDescriptions title="产品信息" :data="productData" />
+  <YcDescriptions
+    title="产品信息"
+    :data="productData" />
 </template>
 
 <script setup>
@@ -41,7 +43,7 @@ const productData = ref([
   { label: '产品颜色', value: '深空黑色' },
   { label: '存储容量', value: '256GB' },
   { label: '产品价格', value: '¥6999' },
-  { label: '上市时间', value: '2024-09-22' }
+  { label: '上市时间', value: '2024-09-22' },
 ]);
 </script>
 ```
@@ -52,15 +54,21 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcDescriptions title="2列布局" :column="2">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcDescriptions
+      title="2列布局"
+      :column="2">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
       <YcDescriptionsItem label="地址">北京市朝阳区</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="4列布局" :column="4">
+
+    <YcDescriptions
+      title="4列布局"
+      :column="4">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
@@ -76,10 +84,9 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcDescriptions 
-    title="响应式列数" 
-    :column="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }"
-  >
+  <YcDescriptions
+    title="响应式列数"
+    :column="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5 }">
     <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
     <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
@@ -95,26 +102,40 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcDescriptions title="水平布局" layout="horizontal" :column="3">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcDescriptions
+      title="水平布局"
+      layout="horizontal"
+      :column="3">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="垂直布局" layout="vertical" :column="3">
+
+    <YcDescriptions
+      title="垂直布局"
+      layout="vertical"
+      :column="3">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="内联水平布局" layout="inline-horizontal" :column="3">
+
+    <YcDescriptions
+      title="内联水平布局"
+      layout="inline-horizontal"
+      :column="3">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="内联垂直布局" layout="inline-vertical" :column="3">
+
+    <YcDescriptions
+      title="内联垂直布局"
+      layout="inline-vertical"
+      :column="3">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
@@ -129,14 +150,20 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcDescriptions title="无边框" :bordered="false">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcDescriptions
+      title="无边框"
+      :bordered="false">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="有边框" :bordered="true">
+
+    <YcDescriptions
+      title="有边框"
+      :bordered="true">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
       <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
@@ -151,23 +178,33 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcDescriptions title="迷你尺寸" size="mini">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcDescriptions
+      title="迷你尺寸"
+      size="mini">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="小尺寸" size="small">
+
+    <YcDescriptions
+      title="小尺寸"
+      size="small">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="中等尺寸" size="medium">
+
+    <YcDescriptions
+      title="中等尺寸"
+      size="medium">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="大尺寸" size="large">
+
+    <YcDescriptions
+      title="大尺寸"
+      size="large">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
@@ -181,18 +218,26 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcDescriptions title="左对齐" align="left">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcDescriptions
+      title="左对齐"
+      align="left">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="居中对齐" align="center">
+
+    <YcDescriptions
+      title="居中对齐"
+      align="center">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
-    
-    <YcDescriptions title="右对齐" align="right">
+
+    <YcDescriptions
+      title="右对齐"
+      align="right">
       <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
       <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     </YcDescriptions>
@@ -206,10 +251,9 @@ const productData = ref([
 
 ```vue
 <template>
-  <YcDescriptions 
-    title="复杂对齐" 
-    :align="{ label: 'right', value: 'left' }"
-  >
+  <YcDescriptions
+    title="复杂对齐"
+    :align="{ label: 'right', value: 'left' }">
     <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
     <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
     <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
@@ -269,7 +313,7 @@ const getStatusColor = (status) => {
   const colorMap = {
     active: 'green',
     inactive: 'red',
-    pending: 'orange'
+    pending: 'orange',
   };
   return colorMap[status] || 'default';
 };
@@ -302,29 +346,25 @@ const getStatusColor = (status) => {
 
 ```vue
 <template>
-  <YcDescriptions title="跨列设置" :column="4">
-    <YcDescriptionsItem label="用户名" :span="2">张三</YcDescriptionsItem>
-    <YcDescriptionsItem label="邮箱" :span="2">zhangsan@example.com</YcDescriptionsItem>
+  <YcDescriptions
+    title="跨列设置"
+    :column="4">
+    <YcDescriptionsItem
+      label="用户名"
+      :span="2"
+      >张三</YcDescriptionsItem
+    >
+    <YcDescriptionsItem
+      label="邮箱"
+      :span="2"
+      >zhangsan@example.com</YcDescriptionsItem
+    >
     <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
-    <YcDescriptionsItem label="地址" :span="3">北京市朝阳区某某街道某某小区</YcDescriptionsItem>
-  </YcDescriptions>
-</template>
-```
-
-## 样式定制
-
-通过 `labelStyle` 和 `valueStyle` 属性自定义样式。
-
-```vue
-<template>
-  <YcDescriptions 
-    title="自定义样式"
-    :label-style="{ color: '#1890ff', fontWeight: 'bold' }"
-    :value-style="{ color: '#666', fontStyle: 'italic' }"
-  >
-    <YcDescriptionsItem label="用户名">张三</YcDescriptionsItem>
-    <YcDescriptionsItem label="邮箱">zhangsan@example.com</YcDescriptionsItem>
-    <YcDescriptionsItem label="手机号">13800138000</YcDescriptionsItem>
+    <YcDescriptionsItem
+      label="地址"
+      :span="3"
+      >北京市朝阳区某某街道某某小区</YcDescriptionsItem
+    >
   </YcDescriptions>
 </template>
 ```
@@ -333,50 +373,34 @@ const getStatusColor = (status) => {
 
 ### Descriptions Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| data | 描述数据 | `DescData[]` | `[]` |
-| column | 列数 | `DescriptionsColumn` | `3` |
-| title | 标题 | `string` | `''` |
-| layout | 布局方式 | `DescriptionsLayout` | `'horizontal'` |
-| align | 对齐方式 | `DescriptionsAlign` | `'left'` |
-| size | 尺寸 | `Size` | - |
-| bordered | 是否有边框 | `boolean` | `false` |
-| labelStyle | 标签样式 | `CSSProperties` | `{}` |
-| valueStyle | 值样式 | `CSSProperties` | `{}` |
-| tableLayout | 表格布局 | `TableLayout` | `'auto'` |
+| 参数        | 说明       | 类型                 | 默认值         |
+| ----------- | ---------- | -------------------- | -------------- |
+| data        | 描述数据   | `DescData[]`         | `[]`           |
+| column      | 列数       | `DescriptionsColumn` | `3`            |
+| title       | 标题       | `string`             | `''`           |
+| layout      | 布局方式   | `DescriptionsLayout` | `'horizontal'` |
+| align       | 对齐方式   | `DescriptionsAlign`  | `'left'`       |
+| size        | 尺寸       | `Size`               | -              |
+| bordered    | 是否有边框 | `boolean`            | `false`        |
+| labelStyle  | 标签样式   | `CSSProperties`      | `{}`           |
+| valueStyle  | 值样式     | `CSSProperties`      | `{}`           |
+| tableLayout | 表格布局   | `TableLayout`        | `'auto'`       |
 
 ### DescriptionsItem Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| span | 跨列数 | `number` | `1` |
-| label | 标签 | `string` | - |
+| 参数  | 说明   | 类型     | 默认值 |
+| ----- | ------ | -------- | ------ |
+| span  | 跨列数 | `number` | `1`    |
+| label | 标签   | `string` | -      |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 描述项内容 | - |
-| value | 自定义值 | `{ value: string, index: number, data: DescData }` |
-| label | 自定义标签 | `{ label: string, index: number, data: DescData }` |
-| title | 自定义标题 | - |
-
-### Types
-
-```typescript
-interface DescData {
-  label?: string | RenderContent;
-  value?: string | RenderContent;
-  span?: number;
-}
-
-type TextAlign = 'left' | 'right' | 'center';
-type DescriptionsAlign = TextAlign | { label?: TextAlign; value?: TextAlign };
-type DescriptionsColumn = number | ResponsiveValue;
-type DescriptionsLayout = 'horizontal' | 'vertical' | 'inline-horizontal' | 'inline-vertical';
-type TableLayout = 'auto' | 'fixed';
-```
+| 插槽名  | 说明       | 参数                                               |
+| ------- | ---------- | -------------------------------------------------- |
+| default | 描述项内容 | -                                                  |
+| value   | 自定义值   | `{ value: string, index: number, data: DescData }` |
+| label   | 自定义标签 | `{ label: string, index: number, data: DescData }` |
+| title   | 自定义标题 | -                                                  |
 
 ## 注意事项
 
@@ -384,37 +408,3 @@ type TableLayout = 'auto' | 'fixed';
 2. 跨列设置需要确保总列数不超过设置的列数
 3. 响应式列数支持断点设置
 4. 边框样式会影响整体视觉效果
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-descriptions {
-  /* 描述列表容器 */
-}
-
-.yc-descriptions-title {
-  /* 标题 */
-}
-
-.yc-descriptions-body {
-  /* 主体内容 */
-}
-
-.yc-descriptions-table {
-  /* 表格 */
-}
-
-.yc-descriptions-row {
-  /* 行 */
-}
-
-.yc-descriptions-item-label {
-  /* 标签 */
-}
-
-.yc-descriptions-item-value {
-  /* 值 */
-}
-```

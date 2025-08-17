@@ -12,20 +12,21 @@
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-cascader 
-      v-model="value1" 
-      :options="options" 
-      placeholder="请选择地区" 
-    />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-cascader
+      v-model="value1"
+      :options="options"
+      placeholder="请选择地区" />
     <p>选中值：{{ value1 }}</p>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value1 = ref([])
+const value1 = ref([]);
 
 const options = [
   {
@@ -37,18 +38,18 @@ const options = [
         value: 'hangzhou',
         children: [
           { label: '西湖区', value: 'xihu' },
-          { label: '拱墅区', value: 'gongshu' }
-        ]
+          { label: '拱墅区', value: 'gongshu' },
+        ],
       },
       {
         label: '温州市',
         value: 'wenzhou',
         children: [
           { label: '鹿城区', value: 'lucheng' },
-          { label: '瓯海区', value: 'ouhai' }
-        ]
-      }
-    ]
+          { label: '瓯海区', value: 'ouhai' },
+        ],
+      },
+    ],
   },
   {
     label: '江苏省',
@@ -59,12 +60,12 @@ const options = [
         value: 'nanjing',
         children: [
           { label: '鼓楼区', value: 'gulou' },
-          { label: '玄武区', value: 'xuanwu' }
-        ]
-      }
-    ]
-  }
-]
+          { label: '玄武区', value: 'xuanwu' },
+        ],
+      },
+    ],
+  },
+];
 </script>
 ```
 
@@ -74,21 +75,22 @@ const options = [
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-cascader 
-      v-model="value2" 
-      :options="options" 
-      placeholder="请选择地区（多选）" 
-      multiple
-    />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-cascader
+      v-model="value2"
+      :options="options"
+      placeholder="请选择地区（多选）"
+      multiple />
     <p>选中值：{{ value2 }}</p>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value2 = ref([])
+const value2 = ref([]);
 // options 同上
 </script>
 ```
@@ -99,18 +101,17 @@ const value2 = ref([])
 
 ```vue
 <template>
-  <yc-cascader 
-    v-model="value3" 
-    :options="options" 
-    placeholder="搜索地区" 
-    allow-search
-  />
+  <yc-cascader
+    v-model="value3"
+    :options="options"
+    placeholder="搜索地区"
+    allow-search />
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value3 = ref([])
+const value3 = ref([]);
 </script>
 ```
 
@@ -120,31 +121,31 @@ const value3 = ref([])
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
+  <yc-space
+    direction="vertical"
+    size="large">
     <div>
       <p>点击触发（默认）</p>
-      <yc-cascader 
-        v-model="value4" 
-        :options="options" 
-        expand-trigger="click" 
-      />
+      <yc-cascader
+        v-model="value4"
+        :options="options"
+        expand-trigger="click" />
     </div>
     <div>
       <p>悬停触发</p>
-      <yc-cascader 
-        v-model="value5" 
-        :options="options" 
-        expand-trigger="hover" 
-      />
+      <yc-cascader
+        v-model="value5"
+        :options="options"
+        expand-trigger="hover" />
     </div>
   </yc-space>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value4 = ref([])
-const value5 = ref([])
+const value4 = ref([]);
+const value5 = ref([]);
 </script>
 ```
 
@@ -154,11 +155,10 @@ const value5 = ref([])
 
 ```vue
 <template>
-  <yc-cascader 
-    v-model="value6" 
-    :options="customOptions" 
-    placeholder="选择部门"
-  >
+  <yc-cascader
+    v-model="value6"
+    :options="customOptions"
+    placeholder="选择部门">
     <template #option="{ data }">
       <span>{{ data.label }}</span>
       <span style="color: #999; margin-left: 8px;">{{ data.count }}</span>
@@ -167,9 +167,9 @@ const value5 = ref([])
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
-const value6 = ref([])
+const value6 = ref([]);
 
 const customOptions = [
   {
@@ -178,19 +178,19 @@ const customOptions = [
     count: '(15人)',
     children: [
       { label: '前端组', value: 'frontend', count: '(8人)' },
-      { label: '后端组', value: 'backend', count: '(7人)' }
-    ]
+      { label: '后端组', value: 'backend', count: '(7人)' },
+    ],
   },
   {
     label: '产品部',
-    value: 'product', 
+    value: 'product',
     count: '(10人)',
     children: [
       { label: '产品组', value: 'pm', count: '(6人)' },
-      { label: '设计组', value: 'design', count: '(4人)' }
-    ]
-  }
-]
+      { label: '设计组', value: 'design', count: '(4人)' },
+    ],
+  },
+];
 </script>
 ```
 
@@ -200,10 +200,20 @@ const customOptions = [
 
 ```vue
 <template>
-  <yc-space direction="vertical" size="large">
-    <yc-cascader size="large" :options="options" placeholder="大尺寸" />
-    <yc-cascader :options="options" placeholder="默认尺寸" />
-    <yc-cascader size="small" :options="options" placeholder="小尺寸" />
+  <yc-space
+    direction="vertical"
+    size="large">
+    <yc-cascader
+      size="large"
+      :options="options"
+      placeholder="大尺寸" />
+    <yc-cascader
+      :options="options"
+      placeholder="默认尺寸" />
+    <yc-cascader
+      size="small"
+      :options="options"
+      placeholder="小尺寸" />
   </yc-space>
 </template>
 ```
@@ -214,7 +224,10 @@ const customOptions = [
 
 ```vue
 <template>
-  <yc-cascader :options="options" placeholder="禁用状态" disabled />
+  <yc-cascader
+    :options="options"
+    placeholder="禁用状态"
+    disabled />
 </template>
 ```
 
@@ -222,91 +235,50 @@ const customOptions = [
 
 ### Cascader Props
 
-| 参数名 | 描述 | 类型 | 默认值 |
-|--------|------|------|--------|
-| modelValue (v-model) | 绑定值 | `CascaderValue` | `-` |
-| default-value | 默认值 | `CascaderValue` | `-` |
-| options | 可选项数据源 | `CascaderOption[]` | `[]` |
-| multiple | 是否多选 | `boolean` | `false` |
-| size | 尺寸 | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'` |
-| placeholder | 输入框占位文本 | `string` | `-` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| error | 是否为错误状态 | `boolean` | `false` |
-| allow-search | 是否支持搜索 | `boolean` | `false` |
-| allow-clear | 是否支持清除 | `boolean` | `false` |
-| expand-trigger | 次级菜单的触发方式 | `'click' \| 'hover'` | `'click'` |
-| popup-visible | 弹出框是否可见 | `boolean` | `-` |
-| default-popup-visible | 弹出框默认是否可见 | `boolean` | `false` |
-| format-label | 格式化显示标签 | `(options: CascaderOption[]) => string` | `-` |
-| max-tag-count | 多选时最多显示的标签数量 | `number` | `-` |
-| loading | 是否为加载状态 | `boolean` | `false` |
-| search-delay | 搜索防抖延时 | `number` | `500` |
-| filter-option | 自定义搜索逻辑 | `(inputValue: string, option: CascaderOption) => boolean` | `-` |
+| 参数名                | 描述                     | 类型                                                      | 默认值     |
+| --------------------- | ------------------------ | --------------------------------------------------------- | ---------- |
+| modelValue (v-model)  | 绑定值                   | `CascaderValue`                                           | `-`        |
+| default-value         | 默认值                   | `CascaderValue`                                           | `-`        |
+| options               | 可选项数据源             | `CascaderOption[]`                                        | `[]`       |
+| multiple              | 是否多选                 | `boolean`                                                 | `false`    |
+| size                  | 尺寸                     | `'mini' \| 'small' \| 'medium' \| 'large'`                | `'medium'` |
+| placeholder           | 输入框占位文本           | `string`                                                  | `-`        |
+| disabled              | 是否禁用                 | `boolean`                                                 | `false`    |
+| error                 | 是否为错误状态           | `boolean`                                                 | `false`    |
+| allow-search          | 是否支持搜索             | `boolean`                                                 | `false`    |
+| allow-clear           | 是否支持清除             | `boolean`                                                 | `false`    |
+| expand-trigger        | 次级菜单的触发方式       | `'click' \| 'hover'`                                      | `'click'`  |
+| popup-visible         | 弹出框是否可见           | `boolean`                                                 | `-`        |
+| default-popup-visible | 弹出框默认是否可见       | `boolean`                                                 | `false`    |
+| format-label          | 格式化显示标签           | `(options: CascaderOption[]) => string`                   | `-`        |
+| max-tag-count         | 多选时最多显示的标签数量 | `number`                                                  | `-`        |
+| loading               | 是否为加载状态           | `boolean`                                                 | `false`    |
+| search-delay          | 搜索防抖延时             | `number`                                                  | `500`      |
+| filter-option         | 自定义搜索逻辑           | `(inputValue: string, option: CascaderOption) => boolean` | `-`        |
 
 ### Cascader Events
 
-| 事件名 | 描述 | 参数 |
-|--------|------|------|
-| change | 选择完成后触发 | `(value: CascaderValue)` |
-| input-value-change | 输入框值改变时触发 | `(value: string)` |
-| clear | 点击清除按钮时触发 | `-` |
-| search | 搜索时触发 | `(value: string)` |
-| popup-visible-change | 弹出框显示状态改变时触发 | `(visible: boolean)` |
-| focus | 获得焦点时触发 | `(ev: FocusEvent)` |
-| blur | 失去焦点时触发 | `(ev: FocusEvent)` |
+| 事件名               | 描述                     | 参数                     |
+| -------------------- | ------------------------ | ------------------------ |
+| change               | 选择完成后触发           | `(value: CascaderValue)` |
+| input-value-change   | 输入框值改变时触发       | `(value: string)`        |
+| clear                | 点击清除按钮时触发       | `-`                      |
+| search               | 搜索时触发               | `(value: string)`        |
+| popup-visible-change | 弹出框显示状态改变时触发 | `(visible: boolean)`     |
+| focus                | 获得焦点时触发           | `(ev: FocusEvent)`       |
+| blur                 | 失去焦点时触发           | `(ev: FocusEvent)`       |
 
 ### Cascader Slots
 
-| 插槽名 | 描述 | 参数 |
-|--------|------|------|
-| label | 自定义标签显示 | `{ data: CascaderOption }` |
-| option | 自定义选项显示 | `{ data: CascaderOption }` |
-| prefix | 前缀内容 | `-` |
-| arrow-icon | 自定义箭头图标 | `-` |
-| loading-icon | 自定义加载图标 | `-` |
-| search-icon | 自定义搜索图标 | `-` |
-| empty | 自定义空状态 | `-` |
-
-## 类型定义
-
-```typescript
-export interface CascaderProps {
-  pathMode?: boolean;
-  multiple?: boolean;
-  modelValue?: CascaderValue;
-  defaultValue?: CascaderValue;
-  options?: CascaderOption[];
-  disabled?: boolean;
-  error?: boolean;
-  size?: Size;
-  allowSearch?: boolean;
-  allowClear?: boolean;
-  expandTrigger?: ExpandTrigger;
-  placeholder?: string;
-  filterOption?: (inputValue: string, option: CascaderOption) => boolean;
-  maxTagCount?: number;
-  formatLabel?: (options: CascaderOption[]) => string;
-  loading?: boolean;
-  searchDelay?: number;
-}
-
-export type CascaderValue = 
-  | CascaderOptionValue 
-  | CascaderOptionValue[] 
-  | CascaderOptionValue[][];
-
-export type CascaderOptionValue = string | number | Record<string, any>;
-
-export interface CascaderOption {
-  label?: string;
-  value?: CascaderOptionValue;
-  disabled?: boolean;
-  children?: CascaderOption[];
-  isLeaf?: boolean;
-}
-
-export type ExpandTrigger = 'click' | 'hover';
-```
+| 插槽名       | 描述           | 参数                       |
+| ------------ | -------------- | -------------------------- |
+| label        | 自定义标签显示 | `{ data: CascaderOption }` |
+| option       | 自定义选项显示 | `{ data: CascaderOption }` |
+| prefix       | 前缀内容       | `-`                        |
+| arrow-icon   | 自定义箭头图标 | `-`                        |
+| loading-icon | 自定义加载图标 | `-`                        |
+| search-icon  | 自定义搜索图标 | `-`                        |
+| empty        | 自定义空状态   | `-`                        |
 
 ## 设计原则
 

@@ -15,7 +15,9 @@
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer v-model:visible="visible" title="抽屉标题">
+  <YcDrawer
+    v-model:visible="visible"
+    title="抽屉标题">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -39,12 +41,11 @@ const visible = ref(false);
     <YcButton @click="placement = 'top'">顶部</YcButton>
     <YcButton @click="placement = 'bottom'">底部</YcButton>
   </YcSpace>
-  
-  <YcDrawer 
-    v-model:visible="visible" 
+
+  <YcDrawer
+    v-model:visible="visible"
     :placement="placement"
-    title="抽屉标题"
-  >
+    title="抽屉标题">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -68,13 +69,12 @@ const placement = ref('right');
     <YcButton @click="openDrawer('medium')">中等尺寸</YcButton>
     <YcButton @click="openDrawer('large')">大尺寸</YcButton>
   </YcSpace>
-  
-  <YcDrawer 
-    v-model:visible="visible" 
+
+  <YcDrawer
+    v-model:visible="visible"
     :width="drawerWidth"
     :height="drawerHeight"
-    title="抽屉标题"
-  >
+    title="抽屉标题">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -135,13 +135,23 @@ const visible = ref(false);
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer v-model:visible="visible" title="抽屉标题">
+  <YcDrawer
+    v-model:visible="visible"
+    title="抽屉标题">
     <p>抽屉内容</p>
     <template #footer>
       <YcSpace>
         <YcButton @click="visible = false">关闭</YcButton>
-        <YcButton type="primary" @click="handleSave">保存</YcButton>
-        <YcButton type="primary" @click="handleSaveAndClose">保存并关闭</YcButton>
+        <YcButton
+          type="primary"
+          @click="handleSave"
+          >保存</YcButton
+        >
+        <YcButton
+          type="primary"
+          @click="handleSaveAndClose"
+          >保存并关闭</YcButton
+        >
       </YcSpace>
     </template>
   </YcDrawer>
@@ -175,13 +185,12 @@ const handleSaveAndClose = () => {
     <YcButton @click="openDrawer(true, false)">隐藏底部</YcButton>
     <YcButton @click="openDrawer(false, false)">隐藏头部和底部</YcButton>
   </YcSpace>
-  
-  <YcDrawer 
-    v-model:visible="visible" 
+
+  <YcDrawer
+    v-model:visible="visible"
     :header="showHeader"
     :footer="showFooter"
-    title="抽屉标题"
-  >
+    title="抽屉标题">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -208,14 +217,13 @@ const openDrawer = (header, footer) => {
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer 
-    v-model:visible="visible" 
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
     :ok-button-props="{ type: 'primary', danger: true }"
     :cancel-button-props="{ type: 'dashed' }"
     ok-text="删除"
-    cancel-text="取消"
-  >
+    cancel-text="取消">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -234,12 +242,11 @@ const visible = ref(false);
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer 
-    v-model:visible="visible" 
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
     :ok-loading="loading"
-    @ok="handleOk"
-  >
+    @ok="handleOk">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -253,7 +260,7 @@ const loading = ref(false);
 const handleOk = async () => {
   loading.value = true;
   try {
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     console.log('操作完成');
     visible.value = false;
   } finally {
@@ -274,13 +281,12 @@ const handleOk = async () => {
     <YcButton @click="openDrawer(true, false)">有遮罩，不可点击关闭</YcButton>
     <YcButton @click="openDrawer(false, false)">无遮罩</YcButton>
   </YcSpace>
-  
-  <YcDrawer 
-    v-model:visible="visible" 
+
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
     :mask="showMask"
-    :mask-closable="maskClosable"
-  >
+    :mask-closable="maskClosable">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -310,12 +316,11 @@ const openDrawer = (mask, closable) => {
     <YcButton @click="openDrawer(true)">显示关闭按钮</YcButton>
     <YcButton @click="openDrawer(false)">隐藏关闭按钮</YcButton>
   </YcSpace>
-  
-  <YcDrawer 
-    v-model:visible="visible" 
+
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
-    :closable="showCloseButton"
-  >
+    :closable="showCloseButton">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -355,7 +360,7 @@ const openDrawer = () => {
     },
     onCancel: () => {
       console.log('取消操作');
-    }
+    },
   });
 };
 </script>
@@ -368,16 +373,15 @@ const openDrawer = () => {
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer 
-    v-model:visible="visible" 
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
     @before-open="onBeforeOpen"
     @open="onOpen"
     @before-close="onBeforeClose"
     @close="onClose"
     @ok="onOk"
-    @cancel="onCancel"
-  >
+    @cancel="onCancel">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -422,11 +426,10 @@ const onCancel = () => {
 ```vue
 <template>
   <YcButton @click="visible = true">打开抽屉</YcButton>
-  <YcDrawer 
-    v-model:visible="visible" 
+  <YcDrawer
+    v-model:visible="visible"
     title="抽屉标题"
-    :drawer-style="customStyle"
-  >
+    :drawer-style="customStyle">
     <p>抽屉内容</p>
   </YcDrawer>
 </template>
@@ -437,7 +440,7 @@ import { ref } from 'vue';
 const visible = ref(false);
 const customStyle = {
   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-  color: 'white'
+  color: 'white',
 };
 </script>
 ```
@@ -449,31 +452,42 @@ const customStyle = {
 ```vue
 <template>
   <div class="page">
-    <YcButton type="primary" @click="openUserDrawer">编辑用户信息</YcButton>
-    
-    <YcDrawer 
-      v-model:visible="userDrawerVisible" 
+    <YcButton
+      type="primary"
+      @click="openUserDrawer"
+      >编辑用户信息</YcButton
+    >
+
+    <YcDrawer
+      v-model:visible="userDrawerVisible"
       title="用户信息编辑"
       placement="right"
       width="500"
       :ok-loading="saving"
-      @ok="saveUserInfo"
-    >
+      @ok="saveUserInfo">
       <YcForm layout="vertical">
         <YcFormItem label="用户名">
-          <YcInput v-model="userForm.username" placeholder="请输入用户名" />
+          <YcInput
+            v-model="userForm.username"
+            placeholder="请输入用户名" />
         </YcFormItem>
-        
+
         <YcFormItem label="邮箱">
-          <YcInput v-model="userForm.email" placeholder="请输入邮箱" />
+          <YcInput
+            v-model="userForm.email"
+            placeholder="请输入邮箱" />
         </YcFormItem>
-        
+
         <YcFormItem label="手机号">
-          <YcInput v-model="userForm.phone" placeholder="请输入手机号" />
+          <YcInput
+            v-model="userForm.phone"
+            placeholder="请输入手机号" />
         </YcFormItem>
-        
+
         <YcFormItem label="地址">
-          <YcTextarea v-model="userForm.address" placeholder="请输入地址" />
+          <YcTextarea
+            v-model="userForm.address"
+            placeholder="请输入地址" />
         </YcFormItem>
       </YcForm>
     </YcDrawer>
@@ -490,7 +504,7 @@ const userForm = reactive({
   username: '',
   email: '',
   phone: '',
-  address: ''
+  address: '',
 });
 
 const openUserDrawer = () => {
@@ -505,7 +519,7 @@ const openUserDrawer = () => {
 const saveUserInfo = async () => {
   saving.value = true;
   try {
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log('保存用户信息:', userForm);
     userDrawerVisible.value = false;
   } finally {
@@ -525,59 +539,53 @@ const saveUserInfo = async () => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| visible | 是否可见 | `boolean` | - |
-| defaultVisible | 默认是否可见 | `boolean` | `false` |
-| placement | 抽屉位置 | `DrawerPlacement` | `'right'` |
-| title | 标题 | `string` | `''` |
-| mask | 是否显示遮罩 | `boolean` | `true` |
-| maskClosable | 点击遮罩是否关闭 | `boolean` | `true` |
-| closable | 是否显示关闭按钮 | `boolean` | `true` |
-| okText | 确认按钮文字 | `string` | `'确认'` |
-| cancelText | 取消按钮文字 | `string` | `'取消'` |
-| okLoading | 确认按钮加载状态 | `boolean` | `false` |
-| okButtonProps | 确认按钮属性 | `ButtonProps` | `{}` |
-| cancelButtonProps | 取消按钮属性 | `ButtonProps` | `{}` |
-| unmountOnClose | 关闭时是否销毁子元素 | `boolean` | `false` |
-| width | 宽度 | `number \| string` | `250` |
-| height | 高度 | `number \| string` | `250` |
-| popupContainer | 弹窗挂载容器 | `PopupContainer` | - |
-| drawerStyle | 抽屉样式 | `CSSProperties` | `{}` |
-| escToClose | 按ESC键是否关闭 | `boolean` | `true` |
-| renderToBody | 是否渲染到body | `boolean` | `true` |
-| header | 是否显示头部 | `boolean` | `true` |
-| footer | 是否显示底部 | `boolean` | `true` |
-| hideCancel | 是否隐藏取消按钮 | `boolean` | `false` |
-| onBeforeCancel | 取消前回调 | `OnBeforeCancel` | - |
-| onBeforeOk | 确认前回调 | `OnBeforeOk` | - |
+| 参数              | 说明                 | 类型               | 默认值    |
+| ----------------- | -------------------- | ------------------ | --------- |
+| visible           | 是否可见             | `boolean`          | -         |
+| defaultVisible    | 默认是否可见         | `boolean`          | `false`   |
+| placement         | 抽屉位置             | `DrawerPlacement`  | `'right'` |
+| title             | 标题                 | `string`           | `''`      |
+| mask              | 是否显示遮罩         | `boolean`          | `true`    |
+| maskClosable      | 点击遮罩是否关闭     | `boolean`          | `true`    |
+| closable          | 是否显示关闭按钮     | `boolean`          | `true`    |
+| okText            | 确认按钮文字         | `string`           | `'确认'`  |
+| cancelText        | 取消按钮文字         | `string`           | `'取消'`  |
+| okLoading         | 确认按钮加载状态     | `boolean`          | `false`   |
+| okButtonProps     | 确认按钮属性         | `ButtonProps`      | `{}`      |
+| cancelButtonProps | 取消按钮属性         | `ButtonProps`      | `{}`      |
+| unmountOnClose    | 关闭时是否销毁子元素 | `boolean`          | `false`   |
+| width             | 宽度                 | `number \| string` | `250`     |
+| height            | 高度                 | `number \| string` | `250`     |
+| popupContainer    | 弹窗挂载容器         | `PopupContainer`   | -         |
+| drawerStyle       | 抽屉样式             | `CSSProperties`    | `{}`      |
+| escToClose        | 按ESC键是否关闭      | `boolean`          | `true`    |
+| renderToBody      | 是否渲染到body       | `boolean`          | `true`    |
+| header            | 是否显示头部         | `boolean`          | `true`    |
+| footer            | 是否显示底部         | `boolean`          | `true`    |
+| hideCancel        | 是否隐藏取消按钮     | `boolean`          | `false`   |
+| onBeforeCancel    | 取消前回调           | `OnBeforeCancel`   | -         |
+| onBeforeOk        | 确认前回调           | `OnBeforeOk`       | -         |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:visible | 可见性变化时触发 | `(value: boolean)` |
-| ok | 点击确认按钮时触发 | - |
-| cancel | 点击取消按钮时触发 | `(event: MouseEvent \| KeyboardEvent)` |
-| before-open | 打开前触发 | - |
-| open | 打开后触发 | - |
-| before-close | 关闭前触发 | - |
-| close | 关闭后触发 | - |
+| 事件名         | 说明               | 回调参数                               |
+| -------------- | ------------------ | -------------------------------------- |
+| update:visible | 可见性变化时触发   | `(value: boolean)`                     |
+| ok             | 点击确认按钮时触发 | -                                      |
+| cancel         | 点击取消按钮时触发 | `(event: MouseEvent \| KeyboardEvent)` |
+| before-open    | 打开前触发         | -                                      |
+| open           | 打开后触发         | -                                      |
+| before-close   | 关闭前触发         | -                                      |
+| close          | 关闭后触发         | -                                      |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
-| default | 抽屉内容 |
-| header | 自定义头部 |
-| footer | 自定义底部 |
-| title | 自定义标题 |
-
-### Types
-
-```typescript
-type DrawerPlacement = 'right' | 'left' | 'top' | 'bottom';
-```
+| 插槽名  | 说明       |
+| ------- | ---------- |
+| default | 抽屉内容   |
+| header  | 自定义头部 |
+| footer  | 自定义底部 |
+| title   | 自定义标题 |
 
 ## 注意事项
 
@@ -585,33 +593,3 @@ type DrawerPlacement = 'right' | 'left' | 'top' | 'bottom';
 2. 宽度和高度会根据位置自动调整
 3. 可以通过服务方式调用，无需在模板中声明
 4. 支持键盘ESC键关闭
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-drawer-wrapper {
-  /* 抽屉包装器 */
-}
-
-.yc-drawer-mask {
-  /* 遮罩层 */
-}
-
-.yc-drawer-container {
-  /* 抽屉容器 */
-}
-
-.yc-drawer-header {
-  /* 抽屉头部 */
-}
-
-.yc-drawer-body {
-  /* 抽屉内容 */
-}
-
-.yc-drawer-footer {
-  /* 抽屉底部 */
-}
-```

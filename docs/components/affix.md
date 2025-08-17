@@ -61,9 +61,13 @@
 
 ```vue
 <template>
-  <div ref="scrollContainer" style="height: 200px; overflow: auto;">
+  <div
+    ref="scrollContainer"
+    style="height: 200px; overflow: auto;">
     <div style="height: 1000px;">
-      <YcAffix :target="scrollContainer" :offset-top="50">
+      <YcAffix
+        :target="scrollContainer"
+        :offset-top="50">
         <YcButton type="primary">指定容器内固定</YcButton>
       </YcAffix>
     </div>
@@ -85,7 +89,9 @@ const scrollContainer = ref();
 <template>
   <div style="height: 200px; overflow: auto;">
     <div style="height: 1000px;">
-      <YcAffix :offset-top="50" @change="onChange">
+      <YcAffix
+        :offset-top="50"
+        @change="onChange">
         <YcButton type="primary">监听状态变化</YcButton>
       </YcAffix>
     </div>
@@ -108,53 +114,30 @@ const onChange = (fixed) => {
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| offsetTop | 距离顶部多少距离时固定 | `number` | `0` |
-| offsetBottom | 距离底部多少距离时固定 | `number` | - |
-| target | 指定滚动容器 | `TargetContainer` | - |
-| targetContainer | 指定目标容器 | `TargetContainer` | - |
+| 参数            | 说明                   | 类型              | 默认值 |
+| --------------- | ---------------------- | ----------------- | ------ |
+| offsetTop       | 距离顶部多少距离时固定 | `number`          | `0`    |
+| offsetBottom    | 距离底部多少距离时固定 | `number`          | -      |
+| target          | 指定滚动容器           | `TargetContainer` | -      |
+| targetContainer | 指定目标容器           | `TargetContainer` | -      |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
+| 事件名 | 说明               | 回调参数           |
+| ------ | ------------------ | ------------------ |
 | change | 固定状态改变时触发 | `(fixed: boolean)` |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
+| 插槽名  | 说明           |
+| ------- | -------------- |
 | default | 需要固定的内容 |
 
 ### Expose
 
-| 方法名 | 说明 | 参数 |
-| --- | --- | --- |
-| updatePosition | 手动更新位置 | - |
-
-### Types
-
-```typescript
-interface AffixProps {
-  offsetTop?: number;
-  offsetBottom?: number;
-  target?: TargetContainer;
-  targetContainer?: TargetContainer;
-}
-
-interface AffixEmits {
-  (e: 'change', fixed: boolean): void;
-}
-
-interface AffixSlots {
-  default(): void;
-}
-
-interface AffixExpose {
-  updatePosition(): void;
-}
-```
+| 方法名         | 说明         | 参数 |
+| -------------- | ------------ | ---- |
+| updatePosition | 手动更新位置 | -    |
 
 ## 注意事项
 

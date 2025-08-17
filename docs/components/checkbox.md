@@ -42,7 +42,11 @@ const checked = ref(false);
 <template>
   <YcSpace>
     <YcCheckbox disabled>禁用状态</YcCheckbox>
-    <YcCheckbox disabled :default-checked="true">禁用且选中</YcCheckbox>
+    <YcCheckbox
+      disabled
+      :default-checked="true"
+      >禁用且选中</YcCheckbox
+    >
   </YcSpace>
 </template>
 ```
@@ -83,7 +87,9 @@ const checkedList = ref(['1']);
 
 ```vue
 <template>
-  <YcCheckboxGroup v-model="checkedList" :options="options" />
+  <YcCheckboxGroup
+    v-model="checkedList"
+    :options="options" />
 </template>
 
 <script setup>
@@ -93,7 +99,7 @@ const checkedList = ref(['1']);
 const options = ref([
   { label: '选项1', value: '1' },
   { label: '选项2', value: '2' },
-  { label: '选项3', value: '3' }
+  { label: '选项3', value: '3' },
 ]);
 </script>
 ```
@@ -104,7 +110,9 @@ const options = ref([
 
 ```vue
 <template>
-  <YcCheckboxGroup v-model="checkedList" :max="2">
+  <YcCheckboxGroup
+    v-model="checkedList"
+    :max="2">
     <YcCheckbox value="1">选项1</YcCheckbox>
     <YcCheckbox value="2">选项2</YcCheckbox>
     <YcCheckbox value="3">选项3</YcCheckbox>
@@ -125,14 +133,20 @@ const checkedList = ref(['1']);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcCheckboxGroup v-model="checkedList" direction="horizontal">
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcCheckboxGroup
+      v-model="checkedList"
+      direction="horizontal">
       <YcCheckbox value="1">选项1</YcCheckbox>
       <YcCheckbox value="2">选项2</YcCheckbox>
       <YcCheckbox value="3">选项3</YcCheckbox>
     </YcCheckboxGroup>
-    
-    <YcCheckboxGroup v-model="checkedList" direction="vertical">
+
+    <YcCheckboxGroup
+      v-model="checkedList"
+      direction="vertical">
       <YcCheckbox value="1">选项1</YcCheckbox>
       <YcCheckbox value="2">选项2</YcCheckbox>
       <YcCheckbox value="3">选项3</YcCheckbox>
@@ -153,7 +167,9 @@ const checkedList = ref(['1']);
 
 ```vue
 <template>
-  <YcCheckboxGroup v-model="checkedList" disabled>
+  <YcCheckboxGroup
+    v-model="checkedList"
+    disabled>
     <YcCheckbox value="1">选项1</YcCheckbox>
     <YcCheckbox value="2">选项2</YcCheckbox>
     <YcCheckbox value="3">选项3</YcCheckbox>
@@ -235,55 +251,39 @@ const onChange = (checked, ev) => {
 
 ### Checkbox Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 是否选中 | `boolean` | - |
-| defaultChecked | 默认是否选中 | `boolean` | `false` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| value | 复选框的值 | `CheckboxValue` | - |
-| indeterminate | 是否为半选状态 | `boolean` | `false` |
+| 参数           | 说明           | 类型            | 默认值  |
+| -------------- | -------------- | --------------- | ------- |
+| modelValue     | 是否选中       | `boolean`       | -       |
+| defaultChecked | 默认是否选中   | `boolean`       | `false` |
+| disabled       | 是否禁用       | `boolean`       | `false` |
+| value          | 复选框的值     | `CheckboxValue` | -       |
+| indeterminate  | 是否为半选状态 | `boolean`       | `false` |
 
 ### CheckboxGroup Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 选中的值列表 | `CheckboxValue[]` | - |
-| defaultValue | 默认选中的值列表 | `CheckboxValue[]` | `[]` |
-| max | 最大选择数量 | `number` | - |
-| options | 选项配置 | `(CheckboxOption \| CheckboxValue)[]` | - |
-| direction | 排列方向 | `Direction` | - |
-| disabled | 是否禁用 | `boolean` | `false` |
+| 参数         | 说明             | 类型                                  | 默认值  |
+| ------------ | ---------------- | ------------------------------------- | ------- |
+| modelValue   | 选中的值列表     | `CheckboxValue[]`                     | -       |
+| defaultValue | 默认选中的值列表 | `CheckboxValue[]`                     | `[]`    |
+| max          | 最大选择数量     | `number`                              | -       |
+| options      | 选项配置         | `(CheckboxOption \| CheckboxValue)[]` | -       |
+| direction    | 排列方向         | `Direction`                           | -       |
+| disabled     | 是否禁用         | `boolean`                             | `false` |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:modelValue | 值变化时触发 | `(value: boolean \| CheckboxValue[])` |
-| change | 值变化时触发 | `(value: boolean \| CheckboxValue[], ev?: Event)` |
+| 事件名            | 说明         | 回调参数                                          |
+| ----------------- | ------------ | ------------------------------------------------- |
+| update:modelValue | 值变化时触发 | `(value: boolean \| CheckboxValue[])`             |
+| change            | 值变化时触发 | `(value: boolean \| CheckboxValue[], ev?: Event)` |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 复选框标签内容 | - |
-| checkbox | 自定义复选框 | `{ checked: boolean, disabled: boolean }` |
-| label | 自定义标签 | `{ data: ObjectData }` |
-
-### Types
-
-```typescript
-type CheckboxValue = string | number | boolean;
-
-type CheckboxOption = (
-  | CheckboxValue
-  | {
-      label?: string;
-      value: CheckboxValue;
-      disabled?: boolean;
-      indeterminate?: boolean;
-    }
-)[];
-```
+| 插槽名   | 说明           | 参数                                      |
+| -------- | -------------- | ----------------------------------------- |
+| default  | 复选框标签内容 | -                                         |
+| checkbox | 自定义复选框   | `{ checked: boolean, disabled: boolean }` |
+| label    | 自定义标签     | `{ data: ObjectData }`                    |
 
 ## 注意事项
 
@@ -291,29 +291,3 @@ type CheckboxOption = (
 2. 半选状态通常用于全选/全不选功能
 3. 最大选择数量限制会在达到上限时禁用未选中的选项
 4. 选项配置支持字符串、数字、布尔值或对象形式
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-checkbox {
-  /* 复选框容器 */
-}
-
-.yc-checkbox-input {
-  /* 复选框输入框 */
-}
-
-.yc-checkbox-checked {
-  /* 选中状态 */
-}
-
-.yc-checkbox-disabled {
-  /* 禁用状态 */
-}
-
-.yc-checkbox-indeterminate {
-  /* 半选状态 */
-}
-```

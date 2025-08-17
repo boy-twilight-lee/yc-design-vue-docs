@@ -42,7 +42,7 @@
         <YcDoption value="2">选项2</YcDoption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown trigger="hover">
       <YcButton>悬停触发</YcButton>
       <template #content>
@@ -50,7 +50,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown trigger="contextmenu">
       <YcButton>右键触发</YcButton>
       <template #content>
@@ -76,7 +76,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown position="bottom">
       <YcButton>底部</YcButton>
       <template #content>
@@ -84,7 +84,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown position="tl">
       <YcButton>左上</YcButton>
       <template #content>
@@ -92,7 +92,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown position="tr">
       <YcButton>右上</YcButton>
       <template #content>
@@ -100,7 +100,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown position="bl">
       <YcButton>左下</YcButton>
       <template #content>
@@ -108,7 +108,7 @@
         <YcDoption value="2">选项2</YcOption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown position="br">
       <YcButton>右下</YcButton>
       <template #content>
@@ -130,7 +130,11 @@
     <YcButton>选项配置</YcButton>
     <template #content>
       <YcDoption value="1">选项1</YcDoption>
-      <YcDoption value="2" disabled>禁用选项</YcDoption>
+      <YcDoption
+        value="2"
+        disabled
+        >禁用选项</YcDoption
+      >
       <YcDoption value="3">选项3</YcDoption>
     </template>
   </YcDropdown>
@@ -187,13 +191,21 @@ const onSelect = (value, ev) => {
       <YcDoption value="1">
         编辑
         <template #suffix>
-          <YcTag size="small" color="blue">新</YcTag>
+          <YcTag
+            size="small"
+            color="blue"
+            >新</YcTag
+          >
         </template>
       </YcDoption>
       <YcDoption value="2">
         删除
         <template #suffix>
-          <YcTag size="small" color="red">危险</YcTag>
+          <YcTag
+            size="small"
+            color="red"
+            >危险</YcTag
+          >
         </template>
       </YcDoption>
       <YcDoption value="3">
@@ -221,7 +233,7 @@ const onSelect = (value, ev) => {
         <YcDoption value="open">打开</YcDoption>
         <YcDoption value="save">保存</YcDoption>
       </YcDgroup>
-      
+
       <YcDgroup title="编辑操作">
         <YcDoption value="cut">剪切</YcDoption>
         <YcDoption value="copy">复制</YcDoption>
@@ -280,7 +292,7 @@ const onSelect = (value, ev) => {
         </YcDsubmenu>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown>
       <YcButton>点击触发子菜单</YcButton>
       <template #content>
@@ -308,9 +320,7 @@ const onSelect = (value, ev) => {
 <template>
   <YcSpace>
     <YcDropdownButton>
-      <template #default>
-        按钮下拉
-      </template>
+      <template #default> 按钮下拉 </template>
       <template #icon>
         <YcIcon-down />
       </template>
@@ -320,11 +330,9 @@ const onSelect = (value, ev) => {
         <YcDoption value="3">选项3</YcDoption>
       </template>
     </YcDropdownButton>
-    
+
     <YcDropdownButton type="primary">
-      <template #default>
-        主要按钮
-      </template>
+      <template #default> 主要按钮 </template>
       <template #icon>
         <YcIcon-down />
       </template>
@@ -333,11 +341,9 @@ const onSelect = (value, ev) => {
         <YcDoption value="2">选项2</YcDoption>
       </template>
     </YcDropdownButton>
-    
+
     <YcDropdownButton type="dashed">
-      <template #default>
-        虚线按钮
-      </template>
+      <template #default> 虚线按钮 </template>
       <template #icon>
         <YcIcon-down />
       </template>
@@ -361,7 +367,7 @@ const onSelect = (value, ev) => {
       <YcButton @click="visible = true">显示</YcButton>
       <YcButton @click="visible = false">隐藏</YcButton>
     </YcSpace>
-    
+
     <YcDropdown v-model:popup-visible="visible">
       <YcButton>受控显示</YcButton>
       <template #content>
@@ -398,7 +404,7 @@ const visible = ref(false);
         <YcDoption value="6">选项6</YcDoption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown :popup-max-height="false">
       <YcButton>不限制高度</YcButton>
       <template #content>
@@ -425,7 +431,7 @@ const visible = ref(false);
         <YcDoption value="2">选项2</YcDoption>
       </template>
     </YcDropdown>
-    
+
     <YcDropdown theme="dark">
       <YcButton>深色主题</YcButton>
       <template #content>
@@ -452,7 +458,11 @@ const visible = ref(false);
     </template>
     <template #footer>
       <div style="padding: 8px 12px; border-top: 1px solid #f0f0f0;">
-        <YcButton size="small" type="text">更多操作</YcButton>
+        <YcButton
+          size="small"
+          type="text"
+          >更多操作</YcButton
+        >
       </div>
     </template>
   </YcDropdown>
@@ -465,10 +475,9 @@ const visible = ref(false);
 
 ```vue
 <template>
-  <YcDropdown 
+  <YcDropdown
     @select="onSelect"
-    @popup-visible-change="onVisibleChange"
-  >
+    @popup-visible-change="onVisibleChange">
     <YcButton>事件处理</YcButton>
     <template #content>
       <YcDoption value="1">选项1</YcDoption>
@@ -496,7 +505,9 @@ const onVisibleChange = (visible) => {
 ```vue
 <template>
   <div class="page">
-    <YcSpace direction="vertical" size="large">
+    <YcSpace
+      direction="vertical"
+      size="large">
       <div>
         <h3>基础下拉菜单</h3>
         <YcDropdown @select="onSelect">
@@ -526,7 +537,7 @@ const onVisibleChange = (visible) => {
           </template>
         </YcDropdown>
       </div>
-      
+
       <div>
         <h3>分组下拉菜单</h3>
         <YcDropdown>
@@ -537,7 +548,7 @@ const onVisibleChange = (visible) => {
               <YcDoption value="open">打开</YcDoption>
               <YcDoption value="save">保存</YcDoption>
             </YcDgroup>
-            
+
             <YcDgroup title="编辑操作">
               <YcDoption value="cut">剪切</YcDoption>
               <YcDoption value="copy">复制</YcDoption>
@@ -546,7 +557,7 @@ const onVisibleChange = (visible) => {
           </template>
         </YcDropdown>
       </div>
-      
+
       <div>
         <h3>子菜单</h3>
         <YcDropdown>
@@ -588,66 +599,57 @@ const onSelect = (value, ev) => {
 
 ### Dropdown Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| popupVisible | 是否显示下拉菜单 | `boolean` | - |
-| defaultPopupVisible | 默认是否显示 | `boolean` | `false` |
-| trigger | 触发方式 | `TriggerType` | `'click'` |
-| position | 下拉菜单位置 | `DropdownPosition` | `'bottom'` |
-| popupContainer | 弹窗挂载容器 | `PopupContainer` | - |
-| hideOnSelect | 选择后是否隐藏 | `boolean` | `true` |
-| alignPoint | 是否对齐到触发点 | `boolean` | `false` |
-| triggerProps | 触发器属性 | `TriggerProps` | `{}` |
-| popupMaxHeight | 最大高度 | `number \| boolean` | `200` |
-| theme | 主题 | `Theme` | `'light'` |
+| 参数                | 说明             | 类型                | 默认值     |
+| ------------------- | ---------------- | ------------------- | ---------- |
+| popupVisible        | 是否显示下拉菜单 | `boolean`           | -          |
+| defaultPopupVisible | 默认是否显示     | `boolean`           | `false`    |
+| trigger             | 触发方式         | `TriggerType`       | `'click'`  |
+| position            | 下拉菜单位置     | `DropdownPosition`  | `'bottom'` |
+| popupContainer      | 弹窗挂载容器     | `PopupContainer`    | -          |
+| hideOnSelect        | 选择后是否隐藏   | `boolean`           | `true`     |
+| alignPoint          | 是否对齐到触发点 | `boolean`           | `false`    |
+| triggerProps        | 触发器属性       | `TriggerProps`      | `{}`       |
+| popupMaxHeight      | 最大高度         | `number \| boolean` | `200`      |
+| theme               | 主题             | `Theme`             | `'light'`  |
 
 ### Doption Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| value | 选项值 | `DoptionValue` | - |
-| disabled | 是否禁用 | `boolean` | `false` |
-| isSubmenu | 是否为子菜单 | `boolean` | - |
-| isActive | 是否激活 | `boolean` | - |
+| 参数      | 说明         | 类型           | 默认值  |
+| --------- | ------------ | -------------- | ------- |
+| value     | 选项值       | `DoptionValue` | -       |
+| disabled  | 是否禁用     | `boolean`      | `false` |
+| isSubmenu | 是否为子菜单 | `boolean`      | -       |
+| isActive  | 是否激活     | `boolean`      | -       |
 
 ### Dsubmenu Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| disabled | 是否禁用 | `boolean` | `false` |
-| trigger | 触发方式 | `DsubmenuTrigger` | - |
-| position | 位置 | `DsubmenuPosition` | - |
-| popupVisible | 是否显示 | `boolean` | - |
-| defaultPopupVisible | 默认是否显示 | `boolean` | - |
-| triggerProps | 触发器属性 | `TriggerProps` | - |
-| popupMaxHeight | 最大高度 | `number` | - |
+| 参数                | 说明         | 类型               | 默认值  |
+| ------------------- | ------------ | ------------------ | ------- |
+| disabled            | 是否禁用     | `boolean`          | `false` |
+| trigger             | 触发方式     | `DsubmenuTrigger`  | -       |
+| position            | 位置         | `DsubmenuPosition` | -       |
+| popupVisible        | 是否显示     | `boolean`          | -       |
+| defaultPopupVisible | 默认是否显示 | `boolean`          | -       |
+| triggerProps        | 触发器属性   | `TriggerProps`     | -       |
+| popupMaxHeight      | 最大高度     | `number`           | -       |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
-| update:popupVisible | 显示状态变化时触发 | `(value: boolean)` |
-| popup-visible-change | 显示状态变化时触发 | `(value: boolean)` |
-| select | 选择选项时触发 | `(value: DoptionValue, ev: MouseEvent)` |
+| 事件名               | 说明               | 回调参数                                |
+| -------------------- | ------------------ | --------------------------------------- |
+| update:popupVisible  | 显示状态变化时触发 | `(value: boolean)`                      |
+| popup-visible-change | 显示状态变化时触发 | `(value: boolean)`                      |
+| select               | 选择选项时触发     | `(value: DoptionValue, ev: MouseEvent)` |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
-| default | 触发器内容 |
+| 插槽名  | 说明         |
+| ------- | ------------ |
+| default | 触发器内容   |
 | content | 下拉菜单内容 |
-| footer | 底部内容 |
-| icon | 选项图标 |
-| suffix | 选项后缀 |
-
-### Types
-
-```typescript
-type DoptionValue = string | number | boolean | ObjectData;
-type DropdownPosition = 'top' | 'tr' | 'tl' | 'bottom' | 'br' | 'bl';
-type DsubmenuTrigger = 'hover' | 'click';
-type DsubmenuPosition = 'rt' | 'lt';
-```
+| footer  | 底部内容     |
+| icon    | 选项图标     |
+| suffix  | 选项后缀     |
 
 ## 注意事项
 
@@ -655,33 +657,3 @@ type DsubmenuPosition = 'rt' | 'lt';
 2. 子菜单可以嵌套使用，支持悬停和点击触发
 3. 选项分组可以更好地组织菜单结构
 4. 支持键盘导航和无障碍访问
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-dropdown {
-  /* 下拉菜单容器 */
-}
-
-.yc-dropdown-list {
-  /* 选项列表 */
-}
-
-.yc-dropdown-item {
-  /* 选项项 */
-}
-
-.yc-dropdown-group {
-  /* 选项分组 */
-}
-
-.yc-dropdown-submenu {
-  /* 子菜单 */
-}
-
-.yc-dropdown-footer {
-  /* 底部内容 */
-}
-```

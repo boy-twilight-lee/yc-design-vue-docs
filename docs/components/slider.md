@@ -14,7 +14,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcSlider v-model="value" />
     <div>当前值: {{ value }}</div>
   </YcSpace>
@@ -33,22 +35,30 @@ const value = ref(50);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认范围 (0-100)</h4>
       <YcSlider v-model="value1" />
       <div>值: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>自定义范围 (0-200)</h4>
-      <YcSlider v-model="value2" :min="0" :max="200" />
+      <YcSlider
+        v-model="value2"
+        :min="0"
+        :max="200" />
       <div>值: {{ value2 }}</div>
     </div>
-    
+
     <div>
       <h4>负值范围 (-100-100)</h4>
-      <YcSlider v-model="value3" :min="-100" :max="100" />
+      <YcSlider
+        v-model="value3"
+        :min="-100"
+        :max="100" />
       <div>值: {{ value3 }}</div>
     </div>
   </YcSpace>
@@ -69,22 +79,28 @@ const value3 = ref(0);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>默认步长 (1)</h4>
       <YcSlider v-model="value1" />
       <div>值: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>步长为 5</h4>
-      <YcSlider v-model="value2" :step="5" />
+      <YcSlider
+        v-model="value2"
+        :step="5" />
       <div>值: {{ value2 }}</div>
     </div>
-    
+
     <div>
       <h4>步长为 10</h4>
-      <YcSlider v-model="value3" :step="10" />
+      <YcSlider
+        v-model="value3"
+        :step="10" />
       <div>值: {{ value3 }}</div>
     </div>
   </YcSpace>
@@ -105,16 +121,20 @@ const value3 = ref(50);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>单选滑块</h4>
       <YcSlider v-model="singleValue" />
       <div>值: {{ singleValue }}</div>
     </div>
-    
+
     <div>
       <h4>范围选择滑块</h4>
-      <YcSlider v-model="rangeValue" range />
+      <YcSlider
+        v-model="rangeValue"
+        range />
       <div>范围: {{ rangeValue[0] }} - {{ rangeValue[1] }}</div>
     </div>
   </YcSpace>
@@ -134,20 +154,26 @@ const rangeValue = ref([20, 80]);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无标记</h4>
       <YcSlider v-model="value1" />
     </div>
-    
+
     <div>
       <h4>有标记</h4>
-      <YcSlider v-model="value2" :marks="marks" />
+      <YcSlider
+        v-model="value2"
+        :marks="marks" />
     </div>
-    
+
     <div>
       <h4>自定义标记</h4>
-      <YcSlider v-model="value3" :marks="customMarks" />
+      <YcSlider
+        v-model="value3"
+        :marks="customMarks" />
     </div>
   </YcSpace>
 </template>
@@ -164,7 +190,7 @@ const marks = {
   25: '25°C',
   50: '50°C',
   75: '75°C',
-  100: '100°C'
+  100: '100°C',
 };
 
 const customMarks = {
@@ -172,7 +198,7 @@ const customMarks = {
   25: '一般',
   50: '良好',
   75: '优秀',
-  100: '完美'
+  100: '完美',
 };
 </script>
 ```
@@ -183,17 +209,23 @@ const customMarks = {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>水平方向</h4>
-      <YcSlider v-model="value1" direction="horizontal" />
+      <YcSlider
+        v-model="value1"
+        direction="horizontal" />
       <div>值: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>垂直方向</h4>
       <div style="height: 200px; display: flex; align-items: center;">
-        <YcSlider v-model="value2" direction="vertical" />
+        <YcSlider
+          v-model="value2"
+          direction="vertical" />
       </div>
       <div>值: {{ value2 }}</div>
     </div>
@@ -214,16 +246,20 @@ const value2 = ref(50);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无输入框</h4>
       <YcSlider v-model="value1" />
       <div>值: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>有输入框</h4>
-      <YcSlider v-model="value2" :show-input="true" />
+      <YcSlider
+        v-model="value2"
+        :show-input="true" />
       <div>值: {{ value2 }}</div>
     </div>
   </YcSpace>
@@ -243,26 +279,31 @@ const value2 = ref(50);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无提示</h4>
-      <YcSlider v-model="value1" :show-tooltip="false" />
+      <YcSlider
+        v-model="value1"
+        :show-tooltip="false" />
       <div>值: {{ value1 }}</div>
     </div>
-    
+
     <div>
       <h4>有提示</h4>
-      <YcSlider v-model="value2" :show-tooltip="true" />
+      <YcSlider
+        v-model="value2"
+        :show-tooltip="true" />
       <div>值: {{ value2 }}</div>
     </div>
-    
+
     <div>
       <h4>自定义提示格式</h4>
-      <YcSlider 
-        v-model="value3" 
+      <YcSlider
+        v-model="value3"
         :show-tooltip="true"
-        :format-tooltip="customFormat"
-      />
+        :format-tooltip="customFormat" />
       <div>值: {{ value3 }}%</div>
     </div>
   </YcSpace>
@@ -285,24 +326,27 @@ const customFormat = (value) => `${value}%`;
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>无刻度</h4>
       <YcSlider v-model="value1" />
     </div>
-    
+
     <div>
       <h4>有刻度</h4>
-      <YcSlider v-model="value2" :show-ticks="true" />
+      <YcSlider
+        v-model="value2"
+        :show-ticks="true" />
     </div>
-    
+
     <div>
       <h4>刻度和标记</h4>
-      <YcSlider 
-        v-model="value3" 
+      <YcSlider
+        v-model="value3"
         :show-ticks="true"
-        :marks="marks"
-      />
+        :marks="marks" />
     </div>
   </YcSpace>
 </template>
@@ -319,7 +363,7 @@ const marks = {
   25: '25',
   50: '50',
   75: '75',
-  100: '100'
+  100: '100',
 };
 </script>
 ```
@@ -330,16 +374,20 @@ const marks = {
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <div>
       <h4>正常状态</h4>
       <YcSlider v-model="value" />
       <div>值: {{ value }}</div>
     </div>
-    
+
     <div>
       <h4>禁用状态</h4>
-      <YcSlider v-model="value" disabled />
+      <YcSlider
+        v-model="value"
+        disabled />
       <div>值: {{ value }}（禁用）</div>
     </div>
   </YcSpace>
@@ -358,15 +406,16 @@ const value = ref(50);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
-    <YcSlider 
-      v-model="value" 
-      @change="onChange"
-    />
-    
+  <YcSpace
+    direction="vertical"
+    size="large">
+    <YcSlider
+      v-model="value"
+      @change="onChange" />
+
     <div>当前值: {{ value }}</div>
     <div>变化次数: {{ changeCount }}</div>
-    
+
     <YcSpace>
       <YcButton @click="setValue(0)">设为0</YcButton>
       <YcButton @click="setValue(50)">设为50</YcButton>
@@ -400,142 +449,168 @@ const setValue = (val) => {
 <template>
   <div class="page">
     <h2>Slider 滑块示例</h2>
-    
+
     <div class="section">
       <h3>基础用法</h3>
       <YcSlider v-model="basicValue" />
       <div>当前值: {{ basicValue }}</div>
     </div>
-    
+
     <div class="section">
       <h3>范围设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>默认范围 (0-100)</h4>
           <YcSlider v-model="rangeValue1" />
           <div>值: {{ rangeValue1 }}</div>
         </div>
-        
+
         <div>
           <h4>自定义范围 (0-200)</h4>
-          <YcSlider v-model="rangeValue2" :min="0" :max="200" />
+          <YcSlider
+            v-model="rangeValue2"
+            :min="0"
+            :max="200" />
           <div>值: {{ rangeValue2 }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>步长设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>步长为 5</h4>
-          <YcSlider v-model="stepValue1" :step="5" />
+          <YcSlider
+            v-model="stepValue1"
+            :step="5" />
           <div>值: {{ stepValue1 }}</div>
         </div>
-        
+
         <div>
           <h4>步长为 10</h4>
-          <YcSlider v-model="stepValue2" :step="10" />
+          <YcSlider
+            v-model="stepValue2"
+            :step="10" />
           <div>值: {{ stepValue2 }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>范围选择</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>单选滑块</h4>
           <YcSlider v-model="singleValue" />
           <div>值: {{ singleValue }}</div>
         </div>
-        
+
         <div>
           <h4>范围选择滑块</h4>
-          <YcSlider v-model="rangeSelectValue" range />
+          <YcSlider
+            v-model="rangeSelectValue"
+            range />
           <div>范围: {{ rangeSelectValue[0] }} - {{ rangeSelectValue[1] }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>标记显示</h3>
-      <YcSlider v-model="marksValue" :marks="marks" />
+      <YcSlider
+        v-model="marksValue"
+        :marks="marks" />
       <div>值: {{ marksValue }}</div>
     </div>
-    
+
     <div class="section">
       <h3>方向设置</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>水平方向</h4>
-          <YcSlider v-model="directionValue1" direction="horizontal" />
+          <YcSlider
+            v-model="directionValue1"
+            direction="horizontal" />
           <div>值: {{ directionValue1 }}</div>
         </div>
-        
+
         <div>
           <h4>垂直方向</h4>
           <div style="height: 200px; display: flex; align-items: center;">
-            <YcSlider v-model="directionValue2" direction="vertical" />
+            <YcSlider
+              v-model="directionValue2"
+              direction="vertical" />
           </div>
           <div>值: {{ directionValue2 }}</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>输入框显示</h3>
-      <YcSlider v-model="inputValue" :show-input="true" />
+      <YcSlider
+        v-model="inputValue"
+        :show-input="true" />
       <div>值: {{ inputValue }}</div>
     </div>
-    
+
     <div class="section">
       <h3>提示显示</h3>
-      <YcSlider 
-        v-model="tooltipValue" 
+      <YcSlider
+        v-model="tooltipValue"
         :show-tooltip="true"
-        :format-tooltip="customFormat"
-      />
+        :format-tooltip="customFormat" />
       <div>值: {{ tooltipValue }}%</div>
     </div>
-    
+
     <div class="section">
       <h3>刻度显示</h3>
-      <YcSlider 
-        v-model="ticksValue" 
+      <YcSlider
+        v-model="ticksValue"
         :show-ticks="true"
-        :marks="ticksMarks"
-      />
+        :marks="ticksMarks" />
       <div>值: {{ ticksValue }}</div>
     </div>
-    
+
     <div class="section">
       <h3>状态控制</h3>
-      <YcSpace direction="vertical" size="large">
+      <YcSpace
+        direction="vertical"
+        size="large">
         <div>
           <h4>正常状态</h4>
           <YcSlider v-model="stateValue" />
           <div>值: {{ stateValue }}</div>
         </div>
-        
+
         <div>
           <h4>禁用状态</h4>
-          <YcSlider v-model="stateValue" disabled />
+          <YcSlider
+            v-model="stateValue"
+            disabled />
           <div>值: {{ stateValue }}（禁用）</div>
         </div>
       </YcSpace>
     </div>
-    
+
     <div class="section">
       <h3>事件处理</h3>
-      <YcSlider 
-        v-model="eventValue" 
-        @change="onChange"
-      />
-      
+      <YcSlider
+        v-model="eventValue"
+        @change="onChange" />
+
       <div>当前值: {{ eventValue }}</div>
       <div>变化次数: {{ changeCount }}</div>
-      
+
       <YcSpace>
         <YcButton @click="setEventValue(0)">设为0</YcButton>
         <YcButton @click="setEventValue(50)">设为50</YcButton>
@@ -570,7 +645,7 @@ const marks = {
   25: '25°C',
   50: '50°C',
   75: '75°C',
-  100: '100°C'
+  100: '100°C',
 };
 
 // 方向设置
@@ -591,7 +666,7 @@ const ticksMarks = {
   25: '25',
   50: '50',
   75: '75',
-  100: '100'
+  100: '100',
 };
 
 // 状态控制
@@ -638,40 +713,40 @@ const setEventValue = (val) => {
 
 ### Slider Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| modelValue | 绑定值 | `SliderValue` | - |
-| defaultValue | 默认值 | `SliderValue` | - |
-| step | 步长 | `number` | `1` |
-| min | 最小值 | `number` | `0` |
-| max | 最大值 | `number` | `100` |
-| marks | 标记 | `Record<number, string>` | - |
-| direction | 方向 | `Direction` | `'horizontal'` |
-| disabled | 是否禁用 | `boolean` | `false` |
-| showTicks | 是否显示刻度 | `boolean` | `false` |
-| showInput | 是否显示输入框 | `boolean` | `false` |
-| range | 是否范围选择 | `boolean` | `false` |
-| showTooltip | 是否显示提示 | `boolean` | `true` |
-| formatTooltip | 提示格式化函数 | `FormatTooltip` | - |
+| 参数          | 说明           | 类型                     | 默认值         |
+| ------------- | -------------- | ------------------------ | -------------- |
+| modelValue    | 绑定值         | `SliderValue`            | -              |
+| defaultValue  | 默认值         | `SliderValue`            | -              |
+| step          | 步长           | `number`                 | `1`            |
+| min           | 最小值         | `number`                 | `0`            |
+| max           | 最大值         | `number`                 | `100`          |
+| marks         | 标记           | `Record<number, string>` | -              |
+| direction     | 方向           | `Direction`              | `'horizontal'` |
+| disabled      | 是否禁用       | `boolean`                | `false`        |
+| showTicks     | 是否显示刻度   | `boolean`                | `false`        |
+| showInput     | 是否显示输入框 | `boolean`                | `false`        |
+| range         | 是否范围选择   | `boolean`                | `false`        |
+| showTooltip   | 是否显示提示   | `boolean`                | `true`         |
+| formatTooltip | 提示格式化函数 | `FormatTooltip`          | -              |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
+| 事件名            | 说明             | 回调参数               |
+| ----------------- | ---------------- | ---------------------- |
 | update:modelValue | 绑定值变化时触发 | `(value: SliderValue)` |
-| change | 值变化时触发 | `(value: SliderValue)` |
+| change            | 值变化时触发     | `(value: SliderValue)` |
 
 ### SliderValue
 
-| 类型 | 说明 |
-| --- | --- |
-| `number` | 单选值 |
+| 类型       | 说明       |
+| ---------- | ---------- |
+| `number`   | 单选值     |
 | `number[]` | 范围选择值 |
 
 ### FormatTooltip
 
-| 类型 | 说明 |
-| --- | --- |
+| 类型                        | 说明           |
+| --------------------------- | -------------- |
 | `(value: number) => string` | 提示格式化函数 |
 
 ## 注意事项
@@ -680,53 +755,3 @@ const setEventValue = (val) => {
 2. 垂直方向需要设置容器高度
 3. 标记和刻度可以同时使用
 4. 提示格式化函数可以自定义显示内容
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-slider {
-  /* 滑块容器 */
-}
-
-.yc-slider-rail {
-  /* 滑块轨道 */
-}
-
-.yc-slider-track {
-  /* 滑块轨道填充 */
-}
-
-.yc-slider-handle {
-  /* 滑块手柄 */
-}
-
-.yc-slider-handle:hover {
-  /* 滑块手柄悬停状态 */
-}
-
-.yc-slider-handle-active {
-  /* 滑块手柄激活状态 */
-}
-
-.yc-slider-marks {
-  /* 标记容器 */
-}
-
-.yc-slider-mark {
-  /* 标记 */
-}
-
-.yc-slider-mark-text {
-  /* 标记文字 */
-}
-
-.yc-slider-ticks {
-  /* 刻度容器 */
-}
-
-.yc-slider-tick {
-  /* 刻度 */
-}
-```

@@ -749,50 +749,6 @@ const handleClick2 = () => {
 | ------- | ------------ |
 | default | 按钮组的内容 |
 
-## 类型定义
-
-<details>
-<summary>查看/隐藏代码</summary>
-
-```typescript
-export interface ButtonProps {
-  type?: ButtonType;
-  shape?: ButtonShape;
-  status?: ButtonStatus;
-  size?: Size;
-  long?: boolean;
-  loading?: boolean;
-  disabled?: boolean;
-  htmlType?: ButtonHtmlType;
-  href?: string;
-}
-
-export interface ButtonEmits {
-  (e: 'mousedown', event: MouseEvent): void;
-  (e: 'mouseup', event: MouseEvent): void;
-  (e: 'click', event: MouseEvent): void;
-  (e: 'dblclick', event: MouseEvent): void;
-  (e: 'contextmenu', event: MouseEvent): void;
-}
-
-export interface ButtonSlots {
-  default(): void;
-  icon(): void;
-}
-
-export type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
-export type ButtonShape = 'square' | 'circle' | 'round';
-export type ButtonType =
-  | 'primary'
-  | 'secondary'
-  | 'dashed'
-  | 'outline'
-  | 'text';
-export type ButtonHtmlType = 'button' | 'reset' | 'submit';
-```
-
-</details>
-
 ## 设计原则
 
 - **一致性**：按钮的视觉样式和行为保持一致

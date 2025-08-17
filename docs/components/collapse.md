@@ -15,13 +15,19 @@
 ```vue
 <template>
   <YcCollapse>
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -35,13 +41,19 @@
 ```vue
 <template>
   <YcCollapse :accordion="true">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -55,13 +67,19 @@
 ```vue
 <template>
   <YcCollapse :default-active-key="['1', '3']">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -75,13 +93,19 @@
 ```vue
 <template>
   <YcCollapse v-model:active-key="activeKeys">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -104,13 +128,19 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse :bordered="false">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -124,21 +154,23 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse>
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <template #expand-icon="{ active, disabled, position }">
-        <YcIcon-right 
-          :class="{ 'rotate-90': active }" 
-          style="transition: transform 0.3s;"
-        />
+        <YcIcon-right
+          :class="{ 'rotate-90': active }"
+          style="transition: transform 0.3s;" />
       </template>
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <template #expand-icon="{ active, disabled, position }">
-        <YcIcon-right 
-          :class="{ 'rotate-90': active }" 
-          style="transition: transform 0.3s;"
-        />
+        <YcIcon-right
+          :class="{ 'rotate-90': active }"
+          style="transition: transform 0.3s;" />
       </template>
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
@@ -158,15 +190,21 @@ const activeKeys = ref(['1']);
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcCollapse expand-icon-position="left">
-      <YcCollapseItem header="左侧图标" path="1">
+      <YcCollapseItem
+        header="左侧图标"
+        path="1">
         <p>展开图标在左侧</p>
       </YcCollapseItem>
     </YcCollapse>
-    
+
     <YcCollapse expand-icon-position="right">
-      <YcCollapseItem header="右侧图标" path="2">
+      <YcCollapseItem
+        header="右侧图标"
+        path="2">
         <p>展开图标在右侧</p>
       </YcCollapseItem>
     </YcCollapse>
@@ -181,10 +219,14 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse :show-expand-icon="false">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -219,15 +261,27 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse>
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <template #extra>
-        <YcButton size="small" type="text">编辑</YcButton>
+        <YcButton
+          size="small"
+          type="text"
+          >编辑</YcButton
+        >
       </template>
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <template #extra>
-        <YcButton size="small" type="text">删除</YcButton>
+        <YcButton
+          size="small"
+          type="text"
+          >删除</YcButton
+        >
       </template>
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
@@ -242,13 +296,20 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse>
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2" disabled>
+    <YcCollapseItem
+      header="面板2"
+      path="2"
+      disabled>
       <p>这个面板被禁用了</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板3" path="3">
+    <YcCollapseItem
+      header="面板3"
+      path="3">
       <p>这是第三个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -262,10 +323,14 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse :destroy-on-hide="true">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这个面板隐藏时内容会被销毁</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这个面板隐藏时内容会被保留</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -279,10 +344,14 @@ const activeKeys = ref(['1']);
 ```vue
 <template>
   <YcCollapse @change="onChange">
-    <YcCollapseItem header="面板1" path="1">
+    <YcCollapseItem
+      header="面板1"
+      path="1">
       <p>这是第一个面板的内容</p>
     </YcCollapseItem>
-    <YcCollapseItem header="面板2" path="2">
+    <YcCollapseItem
+      header="面板2"
+      path="2">
       <p>这是第二个面板的内容</p>
     </YcCollapseItem>
   </YcCollapse>
@@ -299,48 +368,41 @@ const onChange = (activeKeys) => {
 
 ### Collapse Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| activeKey | 当前展开的面板 | `CollapseValue[]` | - |
-| defaultActiveKey | 默认展开的面板 | `CollapseValue[]` | `[]` |
-| accordion | 是否开启手风琴模式 | `boolean` | `false` |
-| showExpandIcon | 是否显示展开图标 | `boolean` | `true` |
-| expandIconPosition | 展开图标位置 | `ExpandIconPosition` | `'left'` |
-| bordered | 是否有边框 | `boolean` | `true` |
-| destroyOnHide | 隐藏时是否销毁内容 | `boolean` | `false` |
+| 参数               | 说明               | 类型                 | 默认值   |
+| ------------------ | ------------------ | -------------------- | -------- |
+| activeKey          | 当前展开的面板     | `CollapseValue[]`    | -        |
+| defaultActiveKey   | 默认展开的面板     | `CollapseValue[]`    | `[]`     |
+| accordion          | 是否开启手风琴模式 | `boolean`            | `false`  |
+| showExpandIcon     | 是否显示展开图标   | `boolean`            | `true`   |
+| expandIconPosition | 展开图标位置       | `ExpandIconPosition` | `'left'` |
+| bordered           | 是否有边框         | `boolean`            | `true`   |
+| destroyOnHide      | 隐藏时是否销毁内容 | `boolean`            | `false`  |
 
 ### CollapseItem Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| path | 面板的唯一标识 | `CollapseValue` | - |
-| header | 面板标题 | `string` | - |
-| disabled | 是否禁用 | `boolean` | `false` |
-| showExpandIcon | 是否显示展开图标 | `boolean` | - |
-| destroyOnHide | 隐藏时是否销毁内容 | `boolean` | - |
+| 参数           | 说明               | 类型            | 默认值  |
+| -------------- | ------------------ | --------------- | ------- |
+| path           | 面板的唯一标识     | `CollapseValue` | -       |
+| header         | 面板标题           | `string`        | -       |
+| disabled       | 是否禁用           | `boolean`       | `false` |
+| showExpandIcon | 是否显示展开图标   | `boolean`       | -       |
+| destroyOnHide  | 隐藏时是否销毁内容 | `boolean`       | -       |
 
 ### Events
 
-| 事件名 | 说明 | 回调参数 |
-| --- | --- | --- |
+| 事件名           | 说明                 | 回调参数                   |
+| ---------------- | -------------------- | -------------------------- |
 | update:activeKey | 展开的面板变化时触发 | `(value: CollapseValue[])` |
-| change | 展开的面板变化时触发 | `(value: CollapseValue[])` |
+| change           | 展开的面板变化时触发 | `(value: CollapseValue[])` |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 面板内容 | - |
+| 插槽名      | 说明           | 参数                                                                  |
+| ----------- | -------------- | --------------------------------------------------------------------- |
+| default     | 面板内容       | -                                                                     |
 | expand-icon | 自定义展开图标 | `{ active: boolean, disabled: boolean, position: 'left' \| 'right' }` |
-| header | 自定义头部内容 | - |
-| extra | 额外操作区域 | - |
-
-### Types
-
-```typescript
-type CollapseValue = string | number;
-type ExpandIconPosition = 'left' | 'right';
-```
+| header      | 自定义头部内容 | -                                                                     |
+| extra       | 额外操作区域   | -                                                                     |
 
 ## 注意事项
 
@@ -348,29 +410,3 @@ type ExpandIconPosition = 'left' | 'right';
 2. 面板的 `path` 属性必须唯一
 3. 禁用状态的面板无法展开或收起
 4. 销毁隐藏内容可以提高性能，但会丢失状态
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-collapse {
-  /* 折叠面板容器 */
-}
-
-.yc-collapse-item {
-  /* 折叠面板项 */
-}
-
-.yc-collapse-header {
-  /* 面板头部 */
-}
-
-.yc-collapse-content {
-  /* 面板内容 */
-}
-
-.yc-collapse-expand-icon {
-  /* 展开图标 */
-}
-```

@@ -450,49 +450,6 @@ const toast =()=> {
 | ------- | -------- |
 | default | 头像列表 |
 
-### Types
-
-```typescript
-interface AvatarProps {
-  shape?: AvatarShape;
-  imageUrl?: string;
-  size?: number;
-  autoFixFontSize?: boolean;
-  triggerType?: AvatarTriggerType;
-  triggerIconStyle?: CSSProperties;
-  objectFit?: ObjectFit;
-}
-
-interface AvatarGroupProps {
-  shape?: AvatarShape;
-  size?: number;
-  autoFixFontSize?: boolean;
-  maxCount?: number;
-  zIndexAscend?: boolean;
-  maxStyle?: CSSProperties;
-  maxPopoverTriggerProps?: TriggerProps;
-}
-
-interface AvatarEmits {
-  (e: 'click', ev: MouseEvent): void;
-  (e: 'error', ev: Event): void;
-  (e: 'load', ev: Event): void;
-}
-
-interface AvatarSlots {
-  default(): void;
-  'trigger-icon'(): void;
-}
-
-interface AvatarGroupSlots {
-  default(): void;
-}
-
-type AvatarShape = 'square' | 'round';
-type AvatarTriggerType = 'mask' | 'button';
-type ObjectFit = 'cover' | 'contain' | 'fill' | 'none';
-```
-
 ## 注意事项
 
 1. 当不设置 `size` 属性时，头像会继承父组件的尺寸设置

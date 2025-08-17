@@ -317,20 +317,6 @@ const size = ref('medium');
 | default | 需要添加间距的元素 |
 | split   | 分隔符             |
 
-## 类型定义
-
-```typescript
-export interface SpaceProps {
-  align?: SpaceAlign;
-  direction?: Direction;
-  wrap?: boolean;
-  fill?: boolean;
-  size?: Size | number;
-}
-
-export type SpaceAlign = 'start' | 'end' | 'center' | 'baseline';
-```
-
 ## 设计原则
 
 - **视觉平衡**：通过合理的间距让页面布局更加平衡

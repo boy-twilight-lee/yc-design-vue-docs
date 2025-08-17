@@ -315,21 +315,6 @@ const handleClick2 = () => {
 | default | 链接内容   |
 | icon    | 自定义图标 |
 
-## 类型定义
-
-```typescript
-export interface LinkProps {
-  href?: string;
-  icon?: boolean;
-  status?: LinkStatus;
-  hoverable?: boolean;
-  disabled?: boolean;
-  loading?: boolean;
-}
-
-export type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
-```
-
 ## 设计原则
 
 - **语义明确**：通过不同状态和图标明确表达链接用途

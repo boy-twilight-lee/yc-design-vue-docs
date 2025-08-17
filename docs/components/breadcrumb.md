@@ -37,7 +37,7 @@ import { ref } from 'vue';
 const routes = ref([
   { label: '首页', path: '/' },
   { label: '产品', path: '/products' },
-  { label: '详情', path: '/products/detail' }
+  { label: '详情', path: '/products/detail' },
 ]);
 </script>
 ```
@@ -48,19 +48,21 @@ const routes = ref([
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcBreadcrumb separator="/">
       <YcBreadcrumbItem>首页</YcBreadcrumbItem>
       <YcBreadcrumbItem>产品</YcBreadcrumbItem>
       <YcBreadcrumbItem>详情</YcBreadcrumbItem>
     </YcBreadcrumb>
-    
+
     <YcBreadcrumb separator=">">
       <YcBreadcrumbItem>首页</YcBreadcrumbItem>
       <YcBreadcrumbItem>产品</YcBreadcrumbItem>
       <YcBreadcrumbItem>详情</YcBreadcrumbItem>
     </YcBreadcrumb>
-    
+
     <YcBreadcrumb separator="-">
       <YcBreadcrumbItem>首页</YcBreadcrumbItem>
       <YcBreadcrumbItem>产品</YcBreadcrumbItem>
@@ -111,13 +113,12 @@ const routes = ref([
 <template>
   <YcBreadcrumb>
     <YcBreadcrumbItem>首页</YcBreadcrumbItem>
-    <YcBreadcrumbItem 
+    <YcBreadcrumbItem
       :droplist="[
         { label: '电子产品', path: '/electronics' },
         { label: '服装', path: '/clothing' },
-        { label: '食品', path: '/food' }
-      ]"
-    >
+        { label: '食品', path: '/food' },
+      ]">
       产品分类
     </YcBreadcrumbItem>
     <YcBreadcrumbItem>详情</YcBreadcrumbItem>
@@ -147,7 +148,7 @@ import { ref } from 'vue';
 const routes = ref([
   { label: '首页', path: '/' },
   { label: '产品', path: '/products' },
-  { label: '详情', path: '/products/detail' }
+  { label: '详情', path: '/products/detail' },
 ]);
 </script>
 ```
@@ -158,7 +159,9 @@ const routes = ref([
 
 ```vue
 <template>
-  <YcBreadcrumb :routes="routes" :custom-url="customUrl" />
+  <YcBreadcrumb
+    :routes="routes"
+    :custom-url="customUrl" />
 </template>
 
 <script setup>
@@ -167,7 +170,7 @@ import { ref } from 'vue';
 const routes = ref([
   { label: '首页', path: '/' },
   { label: '产品', path: '/products' },
-  { label: '详情', path: '/products/detail' }
+  { label: '详情', path: '/products/detail' },
 ]);
 
 const customUrl = (paths) => {
@@ -194,60 +197,31 @@ const customUrl = (paths) => {
 
 ### Breadcrumb Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| maxCount | 最大显示的面包屑项数量 | `number` | `0` |
-| routes | 面包屑路由配置 | `BreadcrumbRoute[]` | `[]` |
-| separator | 分隔符 | `BreadcrumbSeparator` | `''` |
-| customUrl | 自定义链接生成函数 | `CustomUrl` | - |
+| 参数      | 说明                   | 类型                  | 默认值 |
+| --------- | ---------------------- | --------------------- | ------ |
+| maxCount  | 最大显示的面包屑项数量 | `number`              | `0`    |
+| routes    | 面包屑路由配置         | `BreadcrumbRoute[]`   | `[]`   |
+| separator | 分隔符                 | `BreadcrumbSeparator` | `''`   |
+| customUrl | 自定义链接生成函数     | `CustomUrl`           | -      |
 
 ### BreadcrumbItem Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| separator | 自定义分隔符 | `BreadcrumbSeparator` | - |
-| droplist | 下拉菜单数据 | `BreadcrumbRoute[]` | - |
-| dropdownProps | 下拉菜单属性 | `DropdownProps` | - |
-| path | 链接地址 | `string` | - |
-| showSeparator | 是否显示分隔符 | `boolean` | `true` |
+| 参数          | 说明           | 类型                  | 默认值 |
+| ------------- | -------------- | --------------------- | ------ |
+| separator     | 自定义分隔符   | `BreadcrumbSeparator` | -      |
+| droplist      | 下拉菜单数据   | `BreadcrumbRoute[]`   | -      |
+| dropdownProps | 下拉菜单属性   | `DropdownProps`       | -      |
+| path          | 链接地址       | `string`              | -      |
+| showSeparator | 是否显示分隔符 | `boolean`             | `true` |
 
 ### Slots
 
-| 插槽名 | 说明 | 参数 |
-| --- | --- | --- |
-| default | 面包屑项内容 | - |
+| 插槽名      | 说明               | 参数                       |
+| ----------- | ------------------ | -------------------------- |
+| default     | 面包屑项内容       | -                          |
 | item-render | 自定义面包屑项渲染 | `{ route, routes, paths }` |
-| more-icon | 更多图标 | - |
-| separator | 自定义分隔符 | - |
-
-### Types
-
-```typescript
-interface BreadcrumbProps {
-  maxCount?: number;
-  routes?: BreadcrumbRoute[];
-  separator?: BreadcrumbSeparator;
-  customUrl?: CustomUrl;
-}
-
-interface BreadcrumbItemProps {
-  separator?: BreadcrumbSeparator;
-  droplist?: BreadcrumbRoute[];
-  dropdownProps?: DropdownProps;
-  path?: string;
-  showSeparator?: boolean;
-}
-
-interface BreadcrumbRoute {
-  label?: string;
-  path?: string;
-  index?: number;
-  children?: BreadcrumbRoute[];
-}
-
-type CustomUrl = (path: string[]) => string;
-type BreadcrumbSeparator = string | number;
-```
+| more-icon   | 更多图标           | -                          |
+| separator   | 自定义分隔符       | -                          |
 
 ## 注意事项
 
@@ -256,25 +230,3 @@ type BreadcrumbSeparator = string | number;
 3. 面包屑项会自动处理链接跳转，需要确保 `path` 属性正确
 4. 分隔符可以通过插槽自定义为图标或其他内容
 5. 下拉菜单支持多级嵌套结构
-
-## 样式定制
-
-组件提供了多个样式类，可以通过 CSS 进行定制：
-
-```css
-.yc-breadcrumb {
-  /* 面包屑容器 */
-}
-
-.yc-breadcrumb-item {
-  /* 面包屑项 */
-}
-
-.yc-breadcrumb-separator {
-  /* 分隔符 */
-}
-
-.yc-breadcrumb-more {
-  /* 更多图标 */
-}
-```

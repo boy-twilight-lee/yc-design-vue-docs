@@ -424,60 +424,6 @@ const str = ref('Click the icon to edit this text.');
 | copy-icon    | 自定义复制图标 | `{ copied: boolean }`   |
 | copy-tooltip | 自定义复制提示 | `{ copied: boolean }`   |
 
-## 类型定义
-
-<details>
-<summary>点击查看/隐藏代码</summary>
-
-```typescript
-export interface TypographyBaseProps {
-  tag?: string;
-  type?: TypographyType;
-  bold?: boolean;
-  disabled?: boolean;
-  mark?: boolean;
-  underline?: boolean;
-  delete?: boolean;
-  code?: boolean;
-  editable?: boolean;
-  editing?: boolean;
-  editText?: string;
-  copyable?: boolean;
-  copyText?: string;
-  copyDelay?: number;
-  ellipsis?: boolean | EllipsisConfig;
-}
-
-export interface TypographyTitleProps {
-  heading?: 1 | 2 | 3 | 4 | 5 | 6;
-}
-
-export interface TypographyParagraphProps {
-  blockquote?: boolean;
-  spacing?: 'default' | 'close';
-}
-
-export type EllipsisConfig = {
-  rows?: number;
-  expandable?: boolean;
-  ellipsisStr?: string;
-  suffix?: string;
-  showTooltip?:
-    | boolean
-    | { type: 'tooltip' | 'popover'; props: Record<string, any> };
-  css?: boolean;
-};
-
-export type TypographyType =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'danger'
-  | 'warning';
-```
-
-</details>
-
 ## 注意事项
 
 1. 可编辑文本在编辑模式下支持 Enter 键确认和 Escape 键取消
