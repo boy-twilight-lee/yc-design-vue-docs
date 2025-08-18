@@ -1,0 +1,53 @@
+### 图标
+
+通过 <yc-tag>icon</yc-tag> 设置带图标的链接，设置为 <yc-tag>true</yc-tag> 时候显示默认图标。
+
+ <div class='cell-demo'>
+    <yc-space>
+      <yc-link href="link" icon>Link</yc-link>
+      <yc-link href="link" disabled icon>Link</yc-link>
+    </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <div>
+    <yc-space>
+      <yc-link
+        href="link"
+        icon
+        >Link</yc-link
+      >
+      <yc-link
+        href="link"
+        disabled
+        icon
+        >Link</yc-link
+      >
+    </yc-space>
+  </div>
+  <div>
+    <yc-space>
+      <yc-link href="link">
+        <template #icon>
+          <icon-edit />
+        </template>
+        Link
+      </yc-link>
+      <yc-link
+        href="link"
+        disabled>
+        <template #icon>
+          <icon-edit />
+        </template>
+        Link
+      </yc-link>
+    </yc-space>
+  </div>
+</template>
+```
+
+</details>

@@ -1,0 +1,60 @@
+### 长按钮
+
+通过设置 <yc-tag>long</yc-tag> 属性，使按钮的宽度跟随容器的宽度。
+
+<div class='cell-demo'>
+   <yc-space class="wrapper" direction="vertical">
+    <yc-button type="primary" long>Primary</yc-button>
+    <yc-button long>Default</yc-button>
+    <yc-button type="dashed" long>Dashed</yc-button>
+    <yc-button type="outline" long>Outline</yc-button>
+    <yc-button type="text" long>Text</yc-button>
+  </yc-space>
+</div>
+
+<style scoped>
+.wrapper{
+  width: 400px;
+  padding: 20px;
+  border: 1px solid var(~'--color-border');
+  border-radius: 4px;
+}
+</style>
+
+<details>
+<summary>查看/隐藏代码</summary>
+```vue
+
+<template>
+  <yc-space>
+    <yc-button
+      type="primary"
+      loading
+      >Primary</yc-button
+    >
+    <yc-button loading>Default</yc-button>
+    <yc-button
+      type="dashed"
+      loading
+      >Dashed</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading1"
+      @click="handleClick1"
+      >Click Me</yc-button
+    >
+    <yc-button
+      type="primary"
+      :loading="loading2"
+      @click="handleClick2">
+      <template #icon>
+        <icon-plus />
+      </template>
+      Click Me
+    </yc-button>
+  </yc-space>
+</template>
+```
+
+</details>
