@@ -29,7 +29,7 @@
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const input1 = ref('');
@@ -119,7 +119,7 @@ const input3 = ref('只读内容');
     placeholder="请输入密码" />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const password = ref('');
@@ -138,7 +138,7 @@ const password = ref('');
     :rows="4" />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const content = ref('');
@@ -158,7 +158,7 @@ const content = ref('');
     @search="handleSearch" />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const searchText = ref('');
@@ -190,7 +190,7 @@ const handleSearch = (value: string) => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const number1 = ref(0);
@@ -210,7 +210,7 @@ const number2 = ref(0);
     :max-tag-count="5" />
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const tags = ref(['标签1', '标签2']);

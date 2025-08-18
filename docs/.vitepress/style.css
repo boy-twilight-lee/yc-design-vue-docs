@@ -4,3 +4,11 @@
   border: 1px solid rgb(229, 230, 235);
   border-radius: 2px 2px 0 0;
 }
+
+:root {
+  --vp-layout-max-width: 100%;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 1000px !important;
+}

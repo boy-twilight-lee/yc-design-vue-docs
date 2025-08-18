@@ -17,7 +17,7 @@
   </yc-space>
 </div>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 const loading1 = ref(false);
 const loading2 = ref(false);
@@ -71,7 +71,7 @@ const handleClick2 = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 const loading1 = ref(false);
 const loading2 = ref(false);

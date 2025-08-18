@@ -30,7 +30,7 @@
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const visible = ref(false);
@@ -74,7 +74,7 @@ const handleCancel = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const visible = ref(false);
@@ -114,7 +114,7 @@ const handleCancel = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const visible = ref(false);
@@ -150,7 +150,7 @@ const handleCancel = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Modal } from 'yc-design-vue';
 
 const showConfirm = () => {
@@ -219,7 +219,7 @@ const showConfirm2 = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Modal } from 'yc-design-vue';
 
 const showInfo = () => {
@@ -280,7 +280,7 @@ const showError = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const visible = ref(false);
@@ -345,7 +345,7 @@ const handleCancel = () => {
   </yc-space>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref, reactive } from 'vue';
 
 const visible = ref(false);

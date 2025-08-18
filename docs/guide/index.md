@@ -100,7 +100,7 @@ app.mount('#app');
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 
 const text = ref('');

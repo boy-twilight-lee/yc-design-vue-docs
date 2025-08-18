@@ -126,7 +126,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 const size = ref('medium');
 </script>
@@ -184,7 +184,7 @@ const size = ref('medium');
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
 const align = ref('center');
 </script>
