@@ -74,4 +74,4 @@ YC Design Vue 支持现代浏览器和 IE11+：
 - 阅读 [快速上手](/guide/) 了解基本使用方法
 - 查看 [按需引入](/guide/import) 优化打包体积
 - 探索 [主题定制](/guide/theme) 个性化您的应用
-- 浏览 [组件文档](/components/button) 了解所有可用组件
+- 浏览 [组件文档](/components/button/index.md) 了解所有可用组件
