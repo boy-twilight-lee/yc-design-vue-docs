@@ -1,0 +1,48 @@
+### 文本内容
+
+设置 <yc-tag>text</yc-tag>，可设置自定义提示内容。
+
+<div class="cell-demo">
+  <yc-space :size="40">
+    <yc-badge text="NEW">
+      <yc-avatar shape="square">
+        <span>
+          <IconUser />
+        </span>
+      </yc-avatar>
+    </yc-badge>
+    <yc-badge text="HOT">
+      <yc-avatar shape="square">
+        <span>
+          <IconUser />
+        </span>
+      </yc-avatar>
+    </yc-badge>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space :size="40">
+    <yc-badge text="NEW">
+      <yc-avatar shape="square">
+        <span>
+          <IconUser />
+        </span>
+      </yc-avatar>
+    </yc-badge>
+    <yc-badge text="HOT">
+      <yc-avatar shape="square">
+        <span>
+          <IconUser />
+        </span>
+      </yc-avatar>
+    </yc-badge>
+  </yc-space>
+</template>
+```
+
+</details>

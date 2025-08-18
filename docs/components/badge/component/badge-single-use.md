@@ -1,0 +1,35 @@
+### 独立使用
+
+<yc-tag>default slot</yc-tag> 为空时，将会独立展示徽标。
+
+<div class="cell-demo">
+  <yc-space :size="40">
+    <yc-badge :count="2" />
+    <yc-badge
+      :count="2"
+      :dotStyle="{ background: '#E5E6EB', color: '#86909C' }"
+    />
+    <yc-badge :count="16" />
+    <yc-badge :count="1000" :max-count="99" />
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space :size="40">
+    <yc-badge :count="2" />
+    <yc-badge
+      :count="2"
+      :dotStyle="{ background: '#E5E6EB', color: '#86909C' }" />
+    <yc-badge :count="16" />
+    <yc-badge
+      :count="1000"
+      :max-count="99" />
+  </yc-space>
+</template>
+```
+
+</details>

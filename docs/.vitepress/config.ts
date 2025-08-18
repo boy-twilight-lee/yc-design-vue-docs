@@ -52,13 +52,13 @@ export default defineConfig({
             { text: 'Divider 分割线', link: '/components/divider/index.md' },
             { text: 'Grid 栅格', link: '/components/grid/index.md' },
             { text: 'Layout 布局', link: '/components/layout/index.md' },
-            { text: 'Space 间距', link: '/components/space' },
+            { text: 'Space 间距', link: '/components/space/index.md' },
           ],
         },
         {
           text: '数据展示',
           items: [
-            { text: 'Avatar 头像', link: '/components/avatar' },
+            { text: 'Avatar 头像', link: '/components/avatar/index.md' },
             { text: 'Badge 徽标', link: '/components/badge' },
             { text: 'Calendar 日历', link: '/components/calendar' },
             { text: 'Card 卡片', link: '/components/card' },
