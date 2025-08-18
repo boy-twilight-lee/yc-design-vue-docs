@@ -13,7 +13,7 @@ import DividerTip from "./component/divider-tip.md"
 </script>
 
 <divider-basic-use />
-<divider-width-text />
+<divider-with-text />
 <divider-vertical />
 <divider-api />
 <divider-tip />

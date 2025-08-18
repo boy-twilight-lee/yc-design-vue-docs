@@ -11,7 +11,7 @@ import LinkStatus from "./component/link-status.md"
 import LinkHover from "./component/link-hover.md"
 import LinkLoading from "./component/link-loading.md"
 import LinkApi from "./component/link-api.md"
-import Link from "./component/link-tip.md"
+import LinkTip from "./component/link-tip.md"
 </script>
 
 <link-basic-use />

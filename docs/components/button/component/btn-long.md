@@ -26,33 +26,12 @@
 ```vue
 
 <template>
-  <yc-space>
-    <yc-button
-      type="primary"
-      loading
-      >Primary</yc-button
-    >
-    <yc-button loading>Default</yc-button>
-    <yc-button
-      type="dashed"
-      loading
-      >Dashed</yc-button
-    >
-    <yc-button
-      type="primary"
-      :loading="loading1"
-      @click="handleClick1"
-      >Click Me</yc-button
-    >
-    <yc-button
-      type="primary"
-      :loading="loading2"
-      @click="handleClick2">
-      <template #icon>
-        <icon-plus />
-      </template>
-      Click Me
-    </yc-button>
+   <yc-space class="wrapper" direction="vertical">
+    <yc-button type="primary" long>Primary</yc-button>
+    <yc-button long>Default</yc-button>
+    <yc-button type="dashed" long>Dashed</yc-button>
+    <yc-button type="outline" long>Outline</yc-button>
+    <yc-button type="text" long>Text</yc-button>
   </yc-space>
 </template>
 ```
