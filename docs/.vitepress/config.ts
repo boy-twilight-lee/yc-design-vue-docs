@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
+import autoprefixer from 'autoprefixer';
 
 const iconPath = '/logo.svg';
 
@@ -206,6 +207,58 @@ export default defineConfig({
     },
     server: {
       open: true,
+    },
+    build: {
+      chunkSizeWarningLimit: 1000,
+      sourcemap: false,
+      minify: 'terser',
+      assetsDir: 'static',
+      assetsInlineLimit: 1024 * 5,
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.indexOf('node_modules') != -1) {
+              return id
+                .toString()
+                .split('node_modules/')[1]
+                .split('/')[0]
+                .toString();
+            }
+          },
+          chunkFileNames: (chunkInfo) => {
+            const facadeModuleId = chunkInfo.facadeModuleId
+              ? chunkInfo.facadeModuleId.split('/')
+              : [];
+            const fileName =
+              facadeModuleId[facadeModuleId.length - 2] || '[name]';
+            return `js/${fileName}/[name].[hash].js`;
+          },
+        },
+      },
+    },
+    css: {
+      postcss: {
+        plugins: [
+          autoprefixer({
+            // 自动添加前缀
+            overrideBrowserslist: [
+              'Android 4.1',
+              'iOS 7.1',
+              'Chrome > 31',
+              'ff > 31',
+              'ie >= 8',
+              'last 2 versions',
+            ],
+            grid: true,
+          }),
+        ],
+      },
     },
   },
 });
