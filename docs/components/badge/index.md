@@ -17,13 +17,11 @@ import BadgeTip from "./component/badge-tip.md"
 </script>
 
 <badge-basic-use />
-<badge-icon />
-<badge-shape />
-<badge-size />
+<badge-Single-use />
+<badge-dot />
+<badge-text />
+<badge-max-count />
 <badge-status />
-<badge-disabled />
-<badge-loading />
-<badge-long />
-<badge-group />
+<badge-color />
 <badge-api />
 <badge-tip />

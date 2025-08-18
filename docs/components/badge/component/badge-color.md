@@ -4,7 +4,7 @@
 
 <div class="cell-demo">
   <div>
-    <a-badge
+    <yc-badge
       v-for="color in colors"
       :key="color"
       :color="color"
@@ -13,7 +13,7 @@
   </div>
   <br />
   <div>
-    <a-badge
+    <yc-badge
       v-for="color in customColors"
       :key="color"
       :color="color"
@@ -23,7 +23,7 @@
 </div>
 
 <script setup>
-const color = [
+const colors = [
   'red',
   'orangered',
   'orange',
@@ -61,7 +61,7 @@ const customColors = [
 ```vue
 <template>
   <div>
-    <a-badge
+    <yc-badge
       v-for="color in colors"
       :key="color"
       :color="color"
@@ -70,7 +70,7 @@ const customColors = [
   </div>
   <br />
   <div>
-    <a-badge
+    <yc-badge
       v-for="color in customColors"
       :key="color"
       :color="color"

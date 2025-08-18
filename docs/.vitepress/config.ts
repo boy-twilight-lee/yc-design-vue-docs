@@ -59,8 +59,8 @@ export default defineConfig({
           text: '数据展示',
           items: [
             { text: 'Avatar 头像', link: '/components/avatar/index.md' },
-            { text: 'Badge 徽标', link: '/components/badge' },
-            { text: 'Calendar 日历', link: '/components/calendar' },
+            { text: 'Badge 徽标', link: '/components/badge/index.md' },
+            { text: 'Calendar 日历', link: '/components/calendar/index.md' },
             { text: 'Card 卡片', link: '/components/card' },
             { text: 'Carousel 走马灯', link: '/components/carousel' },
             { text: 'Collapse 折叠面板', link: '/components/collapse' },
