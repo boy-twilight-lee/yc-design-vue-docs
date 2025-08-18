@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
 import { resolve } from 'path';
-import autoprefixer from 'autoprefixer';
 
 const iconPath = '/logo.svg';
 
@@ -240,24 +239,6 @@ export default defineConfig({
             return `js/${fileName}/[name].[hash].js`;
           },
         },
-      },
-    },
-    css: {
-      postcss: {
-        plugins: [
-          autoprefixer({
-            // 自动添加前缀
-            overrideBrowserslist: [
-              'Android 4.1',
-              'iOS 7.1',
-              'Chrome > 31',
-              'ff > 31',
-              'ie >= 8',
-              'last 2 versions',
-            ],
-            grid: true,
-          }),
-        ],
       },
     },
   },
