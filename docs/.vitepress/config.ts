@@ -63,7 +63,10 @@ export default defineConfig({
             { text: 'Calendar 日历', link: '/components/calendar/index.md' },
             { text: 'Card 卡片', link: '/components/card/index.md' },
             { text: 'Carousel 走马灯', link: '/components/carousel/index.md' },
-            { text: 'Collapse 折叠面板', link: '/components/collapse' },
+            {
+              text: 'Collapse 折叠面板',
+              link: '/components/collapse/index.md',
+            },
             { text: 'Comment 评论', link: '/components/comment' },
             { text: 'Descriptions 描述列表', link: '/components/descriptions' },
             { text: 'Empty 空状态', link: '/components/empty' },
