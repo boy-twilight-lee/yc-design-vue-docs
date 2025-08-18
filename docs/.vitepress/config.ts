@@ -38,17 +38,20 @@ export default defineConfig({
         {
           text: '通用',
           items: [
-            { text: 'Button 按钮', link: '/components/button' },
-            { text: 'Link 链接', link: '/components/link' },
-            { text: 'Typography 排版', link: '/components/typography' },
+            { text: 'Button 按钮', link: '/components/button/index.md' },
+            { text: 'Link 链接', link: '/components/link/index.md' },
+            {
+              text: 'Typography 排版',
+              link: '/components/typography/index.md',
+            },
           ],
         },
         {
           text: '布局',
           items: [
-            { text: 'Divider 分割线', link: '/components/divider' },
-            { text: 'Grid 栅格', link: '/components/grid' },
-            { text: 'Layout 布局', link: '/components/layout' },
+            { text: 'Divider 分割线', link: '/components/divider/index.md' },
+            { text: 'Grid 栅格', link: '/components/grid/index.md' },
+            { text: 'Layout 布局', link: '/components/layout/index.md' },
             { text: 'Space 间距', link: '/components/space' },
           ],
         },
