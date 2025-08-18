@@ -8,7 +8,7 @@
 - 当需要设置连续或离散的数值时
 - 当需要范围选择时
 
-## 基础用法
+## 基本用法
 
 最简单的滑块用法。
 
@@ -451,7 +451,7 @@ const setValue = (val) => {
     <h2>Slider 滑块示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSlider v-model="basicValue" />
       <div>当前值: {{ basicValue }}</div>
     </div>
@@ -623,7 +623,7 @@ const setValue = (val) => {
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicValue = ref(50);
 
 // 范围设置

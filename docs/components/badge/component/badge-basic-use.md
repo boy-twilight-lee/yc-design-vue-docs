@@ -1,4 +1,4 @@
-### 基础用法
+### 基本用法
 
 基本用法。只需指定 <yc-tag>count</yc-tag> 或者 <yc-tag>content slot</yc-tag>，即可显示徽标。
 

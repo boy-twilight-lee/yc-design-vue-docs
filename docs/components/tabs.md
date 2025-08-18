@@ -8,7 +8,7 @@
 - 当内容需要分组展示时
 - 当需要切换不同视图时
 
-## 基础用法
+## 基本用法
 
 最简单的标签页用法。
 
@@ -745,7 +745,7 @@ const setActiveTab = (key) => {
     <h2>Tabs 标签页示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcTabs v-model:active-key="basicActiveKey">
         <YcTabPane key="tab1" title="标签1">标签1的内容</YcTabPane>
         <YcTabPane key="tab2" title="标签2">标签2的内容</YcTabPane>
@@ -989,7 +989,7 @@ const setActiveTab = (key) => {
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicActiveKey = ref('tab1');
 
 // 标签页类型

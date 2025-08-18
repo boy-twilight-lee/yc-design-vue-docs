@@ -8,7 +8,7 @@
 - 当需要展示项目进度时
 - 当需要展示历史记录时
 
-## 基础用法
+## 基本用法
 
 最简单的时间轴用法。
 
@@ -361,7 +361,7 @@
     <h2>Timeline 时间轴示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcTimeline>
         <YcTimelineItem>创建项目 2023-01-01</YcTimelineItem>
         <YcTimelineItem>项目开发 2023-02-01</YcTimelineItem>

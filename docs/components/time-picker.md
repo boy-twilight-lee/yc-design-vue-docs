@@ -8,7 +8,7 @@
 - 当用户需要选择一个时间范围时
 - 当需要精确控制时间选择时
 
-## 基础用法
+## 基本用法
 
 最简单的时间选择器用法。
 
@@ -291,7 +291,7 @@ const onClear = () => {
     <h2>TimePicker 时间选择器示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcTimePicker
         v-model="basicTime"
         placeholder="请选择时间" />
@@ -465,7 +465,7 @@ const onClear = () => {
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicTime = ref('');
 
 // 时间范围选择

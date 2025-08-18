@@ -8,7 +8,7 @@
 - 当页面有多个章节，需要显示章节导航时
 - 当需要实现页面内导航功能时
 
-## 基础用法
+## 基本用法
 
 最简单的用法，通过 `href` 属性指定锚点。
 
@@ -18,7 +18,7 @@
     <YcAnchor>
       <YcAnchorLink
         href="#basic"
-        title="基础用法" />
+        title="基本用法" />
       <YcAnchorLink
         href="#static"
         title="静态展示" />
@@ -28,8 +28,8 @@
     </YcAnchor>
 
     <div class="content">
-      <h2 id="basic">基础用法</h2>
-      <p>这是基础用法的内容...</p>
+      <h2 id="basic">基本用法</h2>
+      <p>这是基本用法的内容...</p>
 
       <h2 id="static">静态展示</h2>
       <p>这是静态展示的内容...</p>
@@ -66,7 +66,7 @@ h2 {
   <YcAnchor :line-less="true">
     <YcAnchorLink
       href="#basic"
-      title="基础用法" />
+      title="基本用法" />
     <YcAnchorLink
       href="#static"
       title="静态展示" />

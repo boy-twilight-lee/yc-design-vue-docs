@@ -8,7 +8,7 @@
 - 当选项较多，需要搜索和筛选时
 - 当需要多选或单选时
 
-## 基础用法
+## 基本用法
 
 最简单的选择器用法。
 
@@ -253,7 +253,7 @@ const value = ref('');
     <h2>Select 选择器示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSelect
         v-model="basicValue"
         placeholder="请选择">
@@ -390,7 +390,7 @@ const value = ref('');
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicValue = ref('');
 
 // 多选模式

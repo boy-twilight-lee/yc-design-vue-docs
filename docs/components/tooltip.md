@@ -8,7 +8,7 @@
 - 当需要为复杂操作提供说明时
 - 当需要显示额外的上下文信息时
 
-## 基础用法
+## 基本用法
 
 最简单的文字提示用法。
 
@@ -361,7 +361,7 @@ const toggleTooltip = () => {
     <h2>Tooltip 文字提示示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace size="large">
         <YcTooltip content="这是一个提示信息">
           <YcButton>悬停查看提示</YcButton>

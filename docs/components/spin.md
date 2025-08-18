@@ -9,7 +9,7 @@
 - 区块内容加载时
 - 需要用户等待时
 
-## 基础用法
+## 基本用法
 
 最简单的加载中用法。
 
@@ -447,7 +447,7 @@ const toggleTableLoading = () => {
     <h2>Spin 加载中示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace
         direction="vertical"
         size="large">

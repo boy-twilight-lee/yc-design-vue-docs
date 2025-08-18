@@ -8,7 +8,7 @@
 - 需要用户从一组选项中选择一个时
 - 需要展示选项状态时
 
-## 基础用法
+## 基本用法
 
 最简单的单选框用法。
 
@@ -291,7 +291,7 @@ const selectedValue = ref('option1');
     <h2>Radio 单选框示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace
         direction="vertical"
         size="large">

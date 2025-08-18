@@ -7,7 +7,7 @@
 - 需要表示开关状态/两种状态之间的切换时
 - 和 checkbox 的区别是，switch 会直接触发状态改变，而 checkbox 一般用于状态标记，需要和提交操作配合
 
-## 基础用法
+## 基本用法
 
 最简单的开关用法。
 
@@ -513,7 +513,7 @@ const setChecked = (value) => {
     <h2>Switch 开关示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSwitch v-model="basicChecked" />
       <div>当前状态: {{ basicChecked ? '开启' : '关闭' }}</div>
     </div>
@@ -819,7 +819,7 @@ const setChecked = (value) => {
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicChecked = ref(false);
 
 // 尺寸设置

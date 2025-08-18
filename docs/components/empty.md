@@ -8,7 +8,7 @@
 - 当搜索结果为空时，用于友好提示
 - 当网络异常时，用于错误状态展示
 
-## 基础用法
+## 基本用法
 
 最简单的用法，展示默认的空状态。
 
@@ -24,7 +24,9 @@
 
 ```vue
 <template>
-  <YcSpace direction="vertical" size="large">
+  <YcSpace
+    direction="vertical"
+    size="large">
     <YcEmpty description="暂无数据" />
     <YcEmpty description="暂无搜索结果" />
     <YcEmpty description="网络异常，请稍后重试" />
@@ -38,10 +40,9 @@
 
 ```vue
 <template>
-  <YcEmpty 
-    description="暂无数据" 
-    img-src="https://via.placeholder.com/200x150/f5f5f5/999?text=暂无数据"
-  />
+  <YcEmpty
+    description="暂无数据"
+    img-src="https://via.placeholder.com/200x150/f5f5f5/999?text=暂无数据" />
 </template>
 ```
 
@@ -67,7 +68,9 @@
 <template>
   <div>
     <YcList :data="listData" />
-    <YcEmpty v-if="!listData.length" description="暂无列表数据" />
+    <YcEmpty
+      v-if="!listData.length"
+      description="暂无列表数据" />
   </div>
 </template>
 
@@ -82,16 +85,16 @@ const listData = ref([]);
 
 ### Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
+| 参数        | 说明           | 类型     | 默认值       |
+| ----------- | -------------- | -------- | ------------ |
 | description | 自定义描述文字 | `string` | `'暂无数据'` |
-| imgSrc | 自定义图片地址 | `string` | `''` |
+| imgSrc      | 自定义图片地址 | `string` | `''`         |
 
 ### Slots
 
-| 插槽名 | 说明 |
-| --- | --- |
-| image | 自定义图片内容 |
+| 插槽名 | 说明           |
+| ------ | -------------- |
+| image  | 自定义图片内容 |
 
 ## 注意事项
 

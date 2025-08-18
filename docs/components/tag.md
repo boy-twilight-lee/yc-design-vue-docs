@@ -8,7 +8,7 @@
 - 进行分类
 - 可关闭的标签，用于可编辑的标签组
 
-## 基础用法
+## 基本用法
 
 最简单的标签用法。
 
@@ -225,7 +225,7 @@ const toggleLoading = () => {
     <h2>Tag 标签示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace size="small">
         <YcTag>标签1</YcTag>
         <YcTag>标签2</YcTag>

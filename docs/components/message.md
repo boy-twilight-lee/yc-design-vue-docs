@@ -8,7 +8,7 @@
 - 需要显示成功、警告、错误等反馈信息时
 - 需要显示加载状态时
 
-## 基础用法
+## 基本用法
 
 最简单的用法，通过 `Message.info()` 等方法调用。
 
@@ -492,7 +492,7 @@ const showHoverReset = () => {
     <h2>Message 全局提示示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace wrap>
         <YcButton @click="showInfo">信息</YcButton>
         <YcButton @click="showSuccess">成功</YcButton>
@@ -562,7 +562,7 @@ import { h } from 'vue';
 
 const managedMessageInstance = ref(null);
 
-// 基础用法
+// 基本用法
 const showInfo = () => {
   Message.info('这是一条信息提示');
 };

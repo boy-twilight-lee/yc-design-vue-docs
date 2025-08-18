@@ -8,7 +8,7 @@
 - 需要用户给出星级评价时
 - 展示评分结果时
 
-## 基础用法
+## 基本用法
 
 最简单的评分用法。
 
@@ -377,7 +377,7 @@ const clearRating = () => {
     <h2>Rate 评分示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace
         direction="vertical"
         size="large">
@@ -546,7 +546,7 @@ const clearRating = () => {
 <script setup>
 import { ref } from 'vue';
 
-// 基础用法
+// 基本用法
 const basicValue = ref(3);
 
 // 半星评分

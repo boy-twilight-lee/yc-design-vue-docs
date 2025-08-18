@@ -8,7 +8,7 @@
 - 需要显示操作结果时
 - 需要显示系统通知时
 
-## 基础用法
+## 基本用法
 
 最简单的用法，通过 `Notification.info()` 等方法调用。
 
@@ -525,7 +525,7 @@ const showWithFooter = () => {
     <h2>Notification 通知提醒示例</h2>
 
     <div class="section">
-      <h3>基础用法</h3>
+      <h3>基本用法</h3>
       <YcSpace wrap>
         <YcButton @click="showInfo">信息通知</YcButton>
         <YcButton @click="showSuccess">成功通知</YcButton>
@@ -598,7 +598,7 @@ import { h } from 'vue';
 
 const managedNotificationInstance = ref(null);
 
-// 基础用法
+// 基本用法
 const showInfo = () => {
   Notification.info({
     title: '信息通知',
