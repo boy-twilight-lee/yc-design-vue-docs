@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.8",
-    "terser": "^5.43.1",
     "vitepress": "^1.2.11",
     "vue": "^3.3.4"
   },

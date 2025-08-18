@@ -207,39 +207,5 @@ export default defineConfig({
     server: {
       open: true,
     },
-    build: {
-      chunkSizeWarningLimit: 1000,
-      sourcemap: false,
-      minify: 'terser',
-      assetsDir: 'static',
-      assetsInlineLimit: 1024 * 5,
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-        },
-      },
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.indexOf('node_modules') != -1) {
-              return id
-                .toString()
-                .split('node_modules/')[1]
-                .split('/')[0]
-                .toString();
-            }
-          },
-          chunkFileNames: (chunkInfo) => {
-            const facadeModuleId = chunkInfo.facadeModuleId
-              ? chunkInfo.facadeModuleId.split('/')
-              : [];
-            const fileName =
-              facadeModuleId[facadeModuleId.length - 2] || '[name]';
-            return `js/${fileName}/[name].[hash].js`;
-          },
-        },
-      },
-    },
   },
 });
