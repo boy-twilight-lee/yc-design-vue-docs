@@ -1,4 +1,4 @@
-# Descriptions 描述列表
+# 描述列表 Descriptions
 
 一般用于详情页的信息展示。
 
