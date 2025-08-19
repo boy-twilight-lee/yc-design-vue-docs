@@ -7,22 +7,6 @@ import ArcoIcon from '@arco-design/web-vue/es/icon';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
 
-function updateDetailsTriggers() {
-  document.querySelectorAll('details').forEach((details) => {
-    const summary = details.querySelector('summary');
-    if (!summary) {
-      return;
-    }
-    summary.onclick = () => {
-      if (details.hasAttribute('open')) {
-        details.removeAttribute('open');
-      } else {
-        details.setAttribute('open', 'true');
-      }
-    };
-  });
-}
-
 export default {
   extends: Theme,
   enhanceApp({ app }: { app: App }) {
@@ -35,8 +19,19 @@ export default {
       () => route.path,
       async () => {
         await nextTick();
-        updateDetailsTriggers();
-        console.log('函数触发了');
+        document.querySelectorAll('details').forEach((details) => {
+          const summary = details.querySelector('summary');
+          if (!summary) {
+            return;
+          }
+          summary.onclick = () => {
+            if (details.hasAttribute('open')) {
+              details.removeAttribute('open');
+            } else {
+              details.setAttribute('open', 'true');
+            }
+          };
+        });
       },
       {
         immediate: true,
