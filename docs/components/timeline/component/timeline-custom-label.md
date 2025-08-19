@@ -1,0 +1,42 @@
+### 自定义标签
+
+可以通过 <yc-tag>label</yc-tag> 插槽自定义标签
+
+<div class="cell-demo vp-raw">
+  <yc-timeline>
+    <yc-timeline-item>
+      Code Review
+      <template #label>
+        <yc-tag>
+          <template #icon>
+            <icon-check-circle-fill />
+          </template>
+          Passed
+        </yc-tag>
+      </template>
+    </yc-timeline-item>
+  </yc-timeline>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-timeline>
+    <yc-timeline-item>
+      Code Review
+      <template #label>
+        <yc-tag>
+          <template #icon>
+            <icon-check-circle-fill />
+          </template>
+          Passed
+        </yc-tag>
+      </template>
+    </yc-timeline-item>
+  </yc-timeline>
+</template>
+```
+
+</details>
