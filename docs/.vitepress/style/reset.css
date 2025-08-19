@@ -12,3 +12,9 @@
 .VPDoc.has-aside .content-container {
   max-width: 1000px !important;
 }
+
+iframe {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}

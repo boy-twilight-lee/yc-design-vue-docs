@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
-import { resolve } from 'path';
+import { whyframe } from '@whyframe/core';
+import { whyframeVue } from '@whyframe/vue';
 
+// iconpath
 const iconPath = '/logo.svg';
 
 export default defineConfig({
@@ -205,13 +207,16 @@ export default defineConfig({
     },
   },
   vite: {
-    resolve: {
-      alias: {
-        '@': resolve(__dirname, '../../src'),
-      },
-    },
     server: {
       open: true,
     },
+    plugins: [
+      whyframe({
+        defaultSrc: '/frames/default',
+      }),
+      whyframeVue({
+        include: /\.(?:vue|md)$/,
+      }),
+    ],
   },
 });
