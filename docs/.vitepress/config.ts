@@ -83,7 +83,7 @@ export default defineConfig({
               text: '统计数值 Statistic',
               link: '/components/statistic/index.md',
             },
-            { text: '标签页 Tabs', link: '/components/tabs' },
+            { text: '标签页 Tabs', link: '/components/tabs/index.md' },
             { text: '标签 Tag', link: '/components/tag' },
             { text: '时间轴 Timeline', link: '/components/timeline' },
             { text: '文字提示 Tooltip', link: '/components/tooltip' },
