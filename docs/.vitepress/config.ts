@@ -68,7 +68,10 @@ export default defineConfig({
               link: '/components/collapse/index.md',
             },
             { text: 'Comment 评论', link: '/components/comment/index.md' },
-            { text: 'Descriptions 描述列表', link: '/components/descriptions' },
+            {
+              text: 'Descriptions 描述列表',
+              link: '/components/descriptions/index.md',
+            },
             { text: 'Empty 空状态', link: '/components/empty' },
             {
               text: 'Image 图片',
