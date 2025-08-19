@@ -4382,8 +4382,10 @@ var _sfc_main17 = defineComponent({
 // node_modules/yc-design-vue/es/_shared/utils/global-config.js
 var CONFIG_PROVIDER_PROVIDE_KEY = "config-props";
 var getVar = (value, _value) => {
-  var _a;
-  return isUndefined(value == null ? void 0 : value.value) || isString(_value == null ? void 0 : _value.value) && !((_a = value == null ? void 0 : value.value) == null ? void 0 : _a.length) ? _value : value;
+  return computed(() => {
+    var _a;
+    return isUndefined(value == null ? void 0 : value.value) || isString(value == null ? void 0 : value.value) && !((_a = value == null ? void 0 : value.value) == null ? void 0 : _a.length) ? _value.value : value.value;
+  });
 };
 var getGlobalConfig = (props = {}) => {
   const {
@@ -8953,7 +8955,7 @@ var Badge = Object.assign(_Badge, {
   }
 });
 
-// node_modules/yc-design-vue/es/_shared/icons/IconSeparator.vue2.js
+// node_modules/yc-design-vue/es/_shared/icons/IconSeparator.vue.js
 var _sfc_main50 = defineComponent({
   __name: "IconSeparator",
   setup(__props) {
@@ -14048,7 +14050,7 @@ var useModalClose = (params) => {
     emits("close");
     outerVisible.value = false;
   };
-  const handleClose = async (type, ev) => {
+  const handleClose = async (type, ev, cancelEmits = true) => {
     const isClose = ["confirmBtn", "cancelBtn"].includes(type) ? await useOnBeforeClose(type, asyncLoading, onBeforeOk, onBeforeCancel) : true;
     if (!isClose) {
       return;
@@ -14059,7 +14061,7 @@ var useModalClose = (params) => {
     if (type == "confirmBtn") {
       emits("ok");
     }
-    emits("cancel", ev);
+    cancelEmits && emits("cancel", ev);
     innerVisible.value = false;
   };
   if (escToClose.value) {
@@ -15213,6 +15215,7 @@ var _sfc_main116 = defineComponent({
       popupContainer: _popupContainer
     } = toRefs(props);
     const { zIndex, popupContainer } = getGlobalConfig(props);
+    console.log(popupContainer.value, "popupContainer");
     const imageRef = ref();
     const scale = useControlValue(ref(), defaultScale.value);
     const rotate = ref(0);
@@ -15320,7 +15323,7 @@ var _sfc_main116 = defineComponent({
                     transform: `scale(${unref(scale)}, ${unref(scale)})`
                   }),
                   class: "yc-image-preview-img-container",
-                  onClick: _cache[0] || (_cache[0] = withModifiers(($event) => unref(handleClose)("mask", $event), ["self"]))
+                  onClick: _cache[0] || (_cache[0] = withModifiers(($event) => unref(handleClose)("mask", $event, false), ["self"]))
                 }, [
                   createBaseVNode("img", {
                     src: _ctx.src,
@@ -15365,7 +15368,7 @@ var _sfc_main116 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/Image/ImagePreview.vue.js
-var ImagePreview = _export_sfc(_sfc_main116, [["__scopeId", "data-v-77e15fcc"]]);
+var ImagePreview = _export_sfc(_sfc_main116, [["__scopeId", "data-v-094a0de9"]]);
 
 // node_modules/yc-design-vue/es/Image/Image.vue2.js
 var _hoisted_156 = ["src", "title", "alt"];
@@ -22532,7 +22535,7 @@ var useContext25 = () => {
   };
 };
 
-// node_modules/yc-design-vue/es/_shared/icons/IconDelete.vue2.js
+// node_modules/yc-design-vue/es/_shared/icons/IconDelete.vue.js
 var _sfc_main181 = defineComponent({
   __name: "IconDelete",
   setup(__props) {
@@ -22548,7 +22551,7 @@ var _sfc_main181 = defineComponent({
   }
 });
 
-// node_modules/yc-design-vue/es/_shared/icons/IconSearch.vue2.js
+// node_modules/yc-design-vue/es/_shared/icons/IconSearch.vue.js
 var _sfc_main182 = defineComponent({
   __name: "IconSearch",
   setup(__props) {

@@ -14,12 +14,12 @@
       justifyContent: 'center',
       alignItems: 'center',
     }"
-    id="image-popup-container">
+    ref="containerRef">
     <yc-image
       width="200"
       src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp"
       :preview-props="{
-        popupContainer: containerRef,
+        popupContainer: containerRef ,
         closable: false,
       }" />
   </div>
@@ -27,10 +27,7 @@
 
 <script setup>
 import { ref,onMounted } from 'vue';
-const containerRef = ref(null);
-onMounted(() => {
-  containerRef.value = document.querySelector('#image-popup-container');
-});
+const containerRef = ref('body');
 </script>
 
 <details>
@@ -49,7 +46,7 @@ onMounted(() => {
       justifyContent: 'center',
       alignItems: 'center',
     }"
-    id="image-popup-container">
+    ref="containerRef">
     <yc-image
       width="200"
       src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp"
@@ -63,9 +60,6 @@ onMounted(() => {
 <script setup>
 import { ref, onMounted } from 'vue';
 const containerRef = ref(null);
-onMounted(() => {
-  containerRef.value = document.querySelector('#image-popup-container');
-});
 </script>
 ```
 
