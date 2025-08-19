@@ -86,7 +86,7 @@ export default defineConfig({
             { text: '标签页 Tabs', link: '/components/tabs/index.md' },
             { text: '标签 Tag', link: '/components/tag/index.md' },
             { text: '时间轴 Timeline', link: '/components/timeline' },
-            { text: '文字提示 Tooltip', link: '/components/tooltip' },
+            { text: '文字提示 Tooltip', link: '/components/tooltip/index.md' },
           ],
         },
         {
