@@ -1,0 +1,34 @@
+### 可关闭标签
+
+通过 <yc-tag>closable</yc-tag> 属性控制标签是否可关闭。可关闭标签可通过 <yc-tag>close</yc-tag> 事件执行一些关闭后操作，也可通过 <yc-tag>visible</yc-tag> 属性控制标签的显示或隐藏。
+
+<div class="cell-demo vp-raw">
+  <yc-space>
+    <yc-tag closable>Tag</yc-tag>
+    <yc-tag closable>
+      <template #icon>
+        <icon-star />
+      </template>
+      Tag
+    </yc-tag>
+  </yc-space>
+</div>
+
+<details>
+<summary>查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-space>
+    <yc-tag closable>Tag</yc-tag>
+    <yc-tag closable>
+      <template #icon>
+        <icon-star />
+      </template>
+      Tag
+    </yc-tag>
+  </yc-space>
+</template>
+```
+
+</details>
