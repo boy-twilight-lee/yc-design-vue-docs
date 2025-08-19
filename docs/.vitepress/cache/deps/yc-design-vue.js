@@ -2556,7 +2556,6 @@ var valueToPx = (value) => {
   if (isNumber(value) || isString(value) && numberReg.test(value)) {
     return value + "px";
   }
-  console.log("value", value);
   return value;
 };
 
@@ -3224,14 +3223,18 @@ var _sfc_main3 = defineComponent({
             createVNode(unref(_sfc_main2))
           ], true)
         ]),
-        _ctx.description ? (openBlock(), createElementBlock("div", _hoisted_4, toDisplayString(_ctx.description), 1)) : createCommentVNode("", true)
+        _ctx.description ? (openBlock(), createElementBlock("div", _hoisted_4, [
+          renderSlot(_ctx.$slots, "default", {}, () => [
+            createTextVNode(toDisplayString(_ctx.description), 1)
+          ], true)
+        ])) : createCommentVNode("", true)
       ]);
     };
   }
 });
 
 // node_modules/yc-design-vue/es/Empty/index.vue.js
-var _Empty = _export_sfc(_sfc_main3, [["__scopeId", "data-v-67a96799"]]);
+var _Empty = _export_sfc(_sfc_main3, [["__scopeId", "data-v-7bbc6ff2"]]);
 
 // node_modules/yc-design-vue/es/Empty/index.js
 var Empty = Object.assign(_Empty, {
@@ -8795,7 +8798,6 @@ var _sfc_main48 = defineComponent({
     const buttonRef = ref();
     const curScroll = ref(0);
     const targetContainer = computed(() => {
-      console.log(findFirstScrollableParent(buttonRef.value));
       return isUndefined(_targetContainer.value) ? findFirstScrollableParent(buttonRef.value) : getElement(_targetContainer.value);
     });
     const handleTop = () => {
@@ -8848,7 +8850,7 @@ var _sfc_main48 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/BackTop/index.vue.js
-var _BackTop = _export_sfc(_sfc_main48, [["__scopeId", "data-v-ecf1edd4"]]);
+var _BackTop = _export_sfc(_sfc_main48, [["__scopeId", "data-v-1a91c814"]]);
 
 // node_modules/yc-design-vue/es/BackTop/index.js
 var BackTop = Object.assign(_BackTop, {
@@ -13250,11 +13252,9 @@ var _sfc_main92 = defineComponent({
           break;
         case "updateValue":
           {
-            console.log("updateValue", value);
             computedValue.value = value.map(
               (item) => item.value
             );
-            console.log(computedValue.value, "value");
           }
           break;
       }
@@ -13393,7 +13393,7 @@ var _sfc_main92 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/Cascader/Cascader.vue.js
-var _Cascader = _export_sfc(_sfc_main92, [["__scopeId", "data-v-8b4cd88e"]]);
+var _Cascader = _export_sfc(_sfc_main92, [["__scopeId", "data-v-a5acb2b3"]]);
 
 // node_modules/yc-design-vue/es/Cascader/index.js
 var Cascader = Object.assign(_Cascader, {
@@ -14390,7 +14390,6 @@ var open = (props) => {
     render(null, container);
   };
   const update2 = (updateProps) => {
-    console.log("函数执行了", updateProps);
   };
   const vnode = h(_sfc_main101, {
     ...props,
@@ -17495,7 +17494,6 @@ var useContext20 = () => {
             maxCount++;
           }
           max.value = maxCount;
-          console.log(max.value, "max");
         }, 200)
       );
     }
@@ -18400,7 +18398,6 @@ var open2 = (props) => {
     render(null, container2);
   };
   const update2 = (updateProps) => {
-    console.log("函数执行了", updateProps);
   };
   const vnode = h(_sfc_main145, {
     ...props,
@@ -19432,7 +19429,7 @@ var _sfc_main154 = defineComponent({
   }
 });
 
-// node_modules/yc-design-vue/es/_shared/icons/IconExclamation.vue.js
+// node_modules/yc-design-vue/es/_shared/icons/IconExclamation.vue2.js
 var _sfc_main155 = defineComponent({
   __name: "IconExclamation",
   setup(__props) {

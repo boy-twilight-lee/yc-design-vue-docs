@@ -72,10 +72,10 @@ export default defineConfig({
               text: 'Descriptions 描述列表',
               link: '/components/descriptions/index.md',
             },
-            { text: 'Empty 空状态', link: '/components/empty' },
+            { text: 'Empty 空状态', link: '/components/empty/index.md' },
             {
               text: 'Image 图片',
-              link: '/components/image',
+              link: '/components/image/index.md',
             },
             { text: 'List 列表', link: '/components/list' },
             { text: 'Popover 气泡卡片', link: '/components/popover' },
