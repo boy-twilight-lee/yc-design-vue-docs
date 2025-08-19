@@ -5,8 +5,7 @@
 <div class="cell-demo vp-raw">
   <yc-list
     :max-height="240"
-    @reach-bottom="fetchData"
-    :scrollbar="scrollbar">
+    @reach-bottom="fetchData">
     <template #header> List title </template>
     <template #scroll-loading>
       <div v-if="bottom">No more data</div>

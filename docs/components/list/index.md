@@ -10,7 +10,6 @@ import ListSize from "./component/list-size.md"
 import ListItem from "./component/list-item.md"
 import ListAction from "./component/list-action.md"
 import ListVerticalStyle from "./component/list-vertical-style.md"
-import ListGrid from "./component/list-grid.md"
 import ListScroll from "./component/list-scroll.md"
 import ListVirtualScroll from "./component/list-virtual-scroll.md"
 import ListApi from "./component/list-api.md"
@@ -22,7 +21,6 @@ import ListTip from "./component/list-tip.md"
 <list-item />
 <list-action />
 <list-vertical-style />
-<list-grid />
 <list-scroll />
 <list-virtual-scroll />
 <list-api />

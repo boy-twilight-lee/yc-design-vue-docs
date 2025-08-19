@@ -7208,6 +7208,7 @@ var _sfc_main37 = defineComponent({
     const slots = useSlots();
     const props = __props;
     const emits = __emit;
+    const { popupContainer: _popupContainer } = toRefs(props);
     const { popupContainer } = getGlobalConfig(props);
     const popupRef = ref();
     const triggerRef = ref();
@@ -7282,7 +7283,8 @@ var _sfc_main37 = defineComponent({
                   "yc-trigger",
                   `yc-trigger-position-${unref(position)}`,
                   {
-                    "yc-trigger-transform-origin": _ctx.needTransformOrigin
+                    "yc-trigger-transform-origin": _ctx.needTransformOrigin,
+                    "yc-trigger-absolute": !unref(isUndefined)(unref(_popupContainer))
                   },
                   _ctx.$attrs.class
                 ]),
@@ -7324,7 +7326,7 @@ var _sfc_main37 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/Trigger/index.vue.js
-var _Trigger = _export_sfc(_sfc_main37, [["__scopeId", "data-v-37d87bda"]]);
+var _Trigger = _export_sfc(_sfc_main37, [["__scopeId", "data-v-93ea11ef"]]);
 
 // node_modules/yc-design-vue/es/Trigger/index.js
 var Trigger = Object.assign(_Trigger, {
@@ -11565,7 +11567,7 @@ var _sfc_main78 = defineComponent({
 // node_modules/yc-design-vue/es/ColorPicker/ColorPalette.vue.js
 var ColorPalette = _export_sfc(_sfc_main78, [["__scopeId", "data-v-60bb1666"]]);
 
-// node_modules/yc-design-vue/es/_shared/icons/IconMinus.vue2.js
+// node_modules/yc-design-vue/es/_shared/icons/IconMinus.vue.js
 var _sfc_main79 = defineComponent({
   __name: "IconMinus",
   setup(__props) {
