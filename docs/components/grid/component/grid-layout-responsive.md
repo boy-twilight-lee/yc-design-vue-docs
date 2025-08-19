@@ -33,7 +33,11 @@ Grid 组件的响应式配置格式为 <yc-tag>{ xs: 1, sm: 2, md: 3, lg: 4, xl:
 </style>
 
 <details>
-<summary>查看/隐藏代码</summary>
+<summary>
+ <button class="code-btn"  >
+    <icon-code />
+ </button>
+</summary>
 
 ```vue
 <template>

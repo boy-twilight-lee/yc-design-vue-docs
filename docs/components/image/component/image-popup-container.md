@@ -31,7 +31,11 @@ const containerRef = ref('body');
 </script>
 
 <details>
-<summary>查看/隐藏代码</summary>
+<summary>
+ <button class="code-btn"  >
+    <icon-code />
+ </button>
+</summary>
 
 ```vue
 <template>

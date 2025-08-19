@@ -4,12 +4,6 @@
 
 ---
 
-# 标签 Timeline
-
-用于信息的选择、筛选、分类。用户通过标签进行信息反馈和交互操作。
-
----
-
 <script setup>
 import TimelineBasicUse from "./component/timeline-basic-use.md"
 import TimelineCustomContent from "./component/timeline-custom-content.md"
