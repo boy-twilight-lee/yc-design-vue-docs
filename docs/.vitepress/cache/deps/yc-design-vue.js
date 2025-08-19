@@ -60,7 +60,6 @@ import {
   withKeys,
   withModifiers
 } from "./chunk-HVR2FF6M.js";
-import "./chunk-5WRI5ZAA.js";
 
 // node_modules/yc-design-vue/es/node_modules/@vueuse/shared/index.js
 function tryOnScopeDispose(fn) {
@@ -11567,7 +11566,7 @@ var _sfc_main78 = defineComponent({
 // node_modules/yc-design-vue/es/ColorPicker/ColorPalette.vue.js
 var ColorPalette = _export_sfc(_sfc_main78, [["__scopeId", "data-v-60bb1666"]]);
 
-// node_modules/yc-design-vue/es/_shared/icons/IconMinus.vue.js
+// node_modules/yc-design-vue/es/_shared/icons/IconMinus.vue2.js
 var _sfc_main79 = defineComponent({
   __name: "IconMinus",
   setup(__props) {
@@ -15217,7 +15216,6 @@ var _sfc_main116 = defineComponent({
       popupContainer: _popupContainer
     } = toRefs(props);
     const { zIndex, popupContainer } = getGlobalConfig(props);
-    console.log(popupContainer.value, "popupContainer");
     const imageRef = ref();
     const scale = useControlValue(ref(), defaultScale.value);
     const rotate = ref(0);
@@ -15370,7 +15368,7 @@ var _sfc_main116 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/Image/ImagePreview.vue.js
-var ImagePreview = _export_sfc(_sfc_main116, [["__scopeId", "data-v-094a0de9"]]);
+var ImagePreview = _export_sfc(_sfc_main116, [["__scopeId", "data-v-b3306f5d"]]);
 
 // node_modules/yc-design-vue/es/Image/Image.vue2.js
 var _hoisted_156 = ["src", "title", "alt"];
@@ -16699,7 +16697,6 @@ var _sfc_main133 = defineComponent({
     loading: { type: Boolean, default: false },
     hoverable: { type: Boolean, default: false },
     paginationProps: { default: void 0 },
-    gridProps: { default: void 0 },
     maxHeight: { default: void 0 },
     bottomOffset: { default: 0 },
     virtualListProps: { default: void 0 },
@@ -16708,15 +16705,16 @@ var _sfc_main133 = defineComponent({
   emits: ["scroll", "reach-bottom", "page-change", "page-size-change"],
   setup(__props, { emit: __emit }) {
     var _a, _b;
+    useSlots();
     const props = __props;
     const emits = __emit;
-    const { data, paginationProps, virtualListProps, gridProps, bottomOffset } = toRefs(props);
+    const { data, paginationProps, virtualListProps, bottomOffset } = toRefs(props);
     const { size, renderEmpty } = getGlobalConfig(props);
     const isBottomReached = ref(false);
     const realListRef = ref();
     const virtualListRef = ref();
     const isVirtualList = computed(() => {
-      if (!virtualListProps.value || paginationProps.value || gridProps.value) {
+      if (!virtualListProps.value || paginationProps.value) {
         return false;
       }
       return virtualListProps.value.itemHeight && (!virtualListProps.value.threshold || virtualListProps.value.threshold > data.value.length);
@@ -16822,22 +16820,7 @@ var _sfc_main133 = defineComponent({
                       } : void 0
                     ]), 1032, ["data", "virtual-list-props", "style"])) : (openBlock(), createElementBlock("div", _hoisted_328, [
                       renderSlot(_ctx.$slots, "default", {}, void 0, true),
-                      unref(gridProps) ? (openBlock(), createBlock(unref(Grid), normalizeProps(mergeProps({ key: 0 }, unref(gridProps))), {
-                        default: withCtx(() => [
-                          (openBlock(true), createElementBlock(Fragment, null, renderList(curList.value, (item, i) => {
-                            return openBlock(), createBlock(unref(_sfc_main105), { key: i }, {
-                              default: withCtx(() => [
-                                renderSlot(_ctx.$slots, "item", {
-                                  index: i,
-                                  item
-                                }, void 0, true)
-                              ]),
-                              _: 2
-                            }, 1024);
-                          }), 128))
-                        ]),
-                        _: 3
-                      }, 16)) : (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList(curList.value, (item, i) => {
+                      (openBlock(true), createElementBlock(Fragment, null, renderList(curList.value, (item, i) => {
                         return renderSlot(_ctx.$slots, "item", {
                           key: i,
                           index: i,
@@ -16880,7 +16863,7 @@ var _sfc_main133 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/List/List.vue.js
-var _List = _export_sfc(_sfc_main133, [["__scopeId", "data-v-e85a4d7e"]]);
+var _List = _export_sfc(_sfc_main133, [["__scopeId", "data-v-a549d4df"]]);
 
 // node_modules/yc-design-vue/es/List/ListItemMeta.vue2.js
 var _hoisted_166 = { class: "yc-list-item-meta" };
@@ -21036,7 +21019,8 @@ var _sfc_main171 = defineComponent({
       animation,
       animationDuration,
       easeing,
-      isCountdown
+      isCountdown,
+      showGroupSeparator
     } = toRefs(props);
     const valueRef = ref();
     const showValue = computed(() => {
@@ -21070,9 +21054,15 @@ var _sfc_main171 = defineComponent({
         immediate: true
       }
     );
+    const formatNumber = (num) => {
+      let parts = num.toString().split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return parts.join(".");
+    };
     function getFormatValue(value2) {
       if (isNumber(value2) && !isCountdown.value) {
-        return value2.toFixed(precision.value);
+        const fixedValue = value2.toFixed(precision.value);
+        return showGroupSeparator.value ? formatNumber(fixedValue) : fixedValue;
       }
       if (isCountdown.value) {
         return formatSeconds(value2, format.value);
@@ -21119,7 +21109,7 @@ var _sfc_main171 = defineComponent({
 });
 
 // node_modules/yc-design-vue/es/Statistic/Statistic.vue.js
-var _Statistic = _export_sfc(_sfc_main171, [["__scopeId", "data-v-86198234"]]);
+var _Statistic = _export_sfc(_sfc_main171, [["__scopeId", "data-v-1d5de805"]]);
 
 // node_modules/yc-design-vue/es/Statistic/Countdown.vue.js
 var _sfc_main172 = defineComponent({
@@ -22928,7 +22918,7 @@ var _sfc_main185 = defineComponent({
   }
 });
 
-// node_modules/yc-design-vue/es/_shared/icons/IconCopy.vue.js
+// node_modules/yc-design-vue/es/_shared/icons/IconCopy.vue2.js
 var _sfc_main186 = defineComponent({
   __name: "IconCopy",
   setup(__props) {
@@ -22944,7 +22934,7 @@ var _sfc_main186 = defineComponent({
   }
 });
 
-// node_modules/yc-design-vue/es/_shared/icons/IconEdit.vue.js
+// node_modules/yc-design-vue/es/_shared/icons/IconEdit.vue2.js
 var _sfc_main187 = defineComponent({
   __name: "IconEdit",
   setup(__props) {
