@@ -78,7 +78,7 @@ export default defineConfig({
               link: '/components/image/index.md',
             },
             { text: 'List 列表', link: '/components/list/index.md' },
-            { text: 'Popover 气泡卡片', link: '/components/popover' },
+            { text: 'Popover 气泡卡片', link: '/components/popover/index.md' },
             { text: 'Statistic 统计数值', link: '/components/statistic' },
             { text: 'Tabs 标签页', link: '/components/tabs' },
             { text: 'Tag 标签', link: '/components/tag' },
