@@ -2,7 +2,7 @@
 
 用于将复杂的内容区域分组和隐藏，可折叠或展开。默认可以展开多个面板。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse :default-active-key="['1', 2]">
     <yc-collapse-item header="Beijing Toutiao Technology Co., Ltd." path="1">
       <div>Beijing Toutiao Technology Co., Ltd.</div>

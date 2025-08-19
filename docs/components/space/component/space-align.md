@@ -2,7 +2,7 @@
 
 内置 4 种对齐方式，分别为 <yc-tag>start</yc-tag> <yc-tag>center</yc-tag> <yc-tag>end</yc-tag> <yc-tag>baseline</yc-tag>，在水平模式下默认为 <yc-tag>center</yc-tag>。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <div style="marginBottom: 20px">
       <yc-radio-group v-model="align" type='button'>

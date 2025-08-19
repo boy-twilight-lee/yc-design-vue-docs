@@ -2,7 +2,7 @@
 
 评论框配合回复框使用
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-comment
     align="right"
     author="Balzac"

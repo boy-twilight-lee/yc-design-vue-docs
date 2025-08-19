@@ -2,7 +2,7 @@
 
 通过设置 <yc-tag>bordered="false"</yc-tag> 隐藏边框。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse
     :default-active-key="['1']"
     :bordered="false">

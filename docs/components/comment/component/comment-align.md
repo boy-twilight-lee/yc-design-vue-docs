@@ -2,7 +2,7 @@
 
 通过 <yc-tag>align</yc-tag> 属性可以设置 <yc-tag>datetime</yc-tag> 和 <yc-tag>actions</yc-tag> 的对齐方式.
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-comment
     author="Balzac"
     datetime="1 hour"

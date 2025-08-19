@@ -2,7 +2,7 @@
 
 使用 <yc-tag>Card.Meta</yc-tag> 支持更加灵活的内容（封面、头像、 标题、描述信息）
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-card hoverable :style="{ width: '360px' }">
     <template #cover>
       <div

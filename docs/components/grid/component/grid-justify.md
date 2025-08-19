@@ -2,7 +2,7 @@
 
 通过 <yc-tag>justify</yc-tag> 来进行水平布局。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <p>Arrange left</p>
     <yc-row class="grid-demo" justify="start">

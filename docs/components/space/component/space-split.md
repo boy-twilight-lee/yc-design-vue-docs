@@ -2,7 +2,7 @@
 
 为相邻子元素设置分隔符。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space>
     <template #split>
       <yc-divider direction="vertical" />

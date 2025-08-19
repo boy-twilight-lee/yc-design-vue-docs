@@ -2,7 +2,7 @@
 
 有水平排列、垂直排列、行内水平排列、行内垂直排列四种布局模式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-radio-group
     type="button"
     v-model="size">

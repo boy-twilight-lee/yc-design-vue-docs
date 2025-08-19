@@ -2,7 +2,7 @@
 
 头像的基础使用。如果头像是文字的话，会自动调节字体大小，来适应头像框。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space size="large">
     <yc-avatar>A</yc-avatar>
     <yc-avatar :style="{ backgroundColor: '#3370ff' }">

@@ -2,7 +2,7 @@
 
 带边框和背景颜色的列表。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-descriptions
     :data="data"
     title="User Info"

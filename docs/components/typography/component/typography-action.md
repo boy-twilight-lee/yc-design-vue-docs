@@ -2,7 +2,7 @@
 
 提供复制、编辑文本等功能。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-typography>
     <yc-typography-paragraph copyable>
       Click the icon to copy this text.

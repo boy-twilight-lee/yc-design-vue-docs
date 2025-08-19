@@ -2,7 +2,7 @@
 
 指定 <yc-tag>hoverable</yc-tag> 来为卡片添加鼠标悬浮样式，同时你可以通过样式覆盖来自定义悬浮样式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div :style="{ display: 'flex' }">
     <yc-card :style="{ width: '360px' }" title="Arco Card" hoverable>
       <template #extra>

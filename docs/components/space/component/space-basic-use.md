@@ -2,7 +2,7 @@
 
 间距组件的基本用法。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space>
     <yc-typography-text>Space:</yc-typography-text>
     <yc-tag v-if="false" color='arcoblue'>Tag</yc-tag>

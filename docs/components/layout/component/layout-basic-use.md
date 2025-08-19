@@ -2,7 +2,7 @@
 
 典型的页面布局。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div class="layout-demo">
     <yc-layout style="height: 400px;">
       <yc-layout-header>Header</yc-layout-header>

@@ -2,7 +2,7 @@
 
 通过 <yc-tag>align</yc-tag> 来进行垂直布局。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <p>Arrange top</p>
     <yc-row class="grid-demo" align="start">

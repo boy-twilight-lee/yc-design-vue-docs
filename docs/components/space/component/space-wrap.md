@@ -2,7 +2,7 @@
 
 环绕类型的间距，四周都有间距，一般用于换行的场景。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space wrap>
     <yc-button type="primary">Item1</yc-button>
     <yc-button type="primary">Item2</yc-button>

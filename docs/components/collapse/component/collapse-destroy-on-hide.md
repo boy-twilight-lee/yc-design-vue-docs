@@ -2,7 +2,7 @@
 
 通过设置 <yc-tag>destroy-on-hide</yc-tag> 可以让面板内容在隐藏时销毁。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse
     :default-active-key="['1', 2]"
     destroy-on-hide>

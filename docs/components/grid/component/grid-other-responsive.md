@@ -2,7 +2,7 @@
 
 <yc-tag>span</yc-tag>, <yc-tag>offset</yc-tag>, <yc-tag>offset</yc-tag> 属性都可以在传入的对象中设置 <yc-tag>xs</yc-tag>, <yc-tag>sm</yc-tag>, <yc-tag>md</yc-tag>, <yc-tag>lg</yc-tag>, <yc-tag>xl</yc-tag>, <yc-tag>xxl</yc-tag> 。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-row class="grid-demo">
     <yc-col
       :span="{

@@ -2,7 +2,7 @@
 
 展示不同级别的标题。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-typography>
     <yc-typography-title> H1. The Pragmatic Romanticism </yc-typography-title>
     <yc-typography-title :heading="2">

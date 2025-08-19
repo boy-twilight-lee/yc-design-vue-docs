@@ -3,7 +3,7 @@
 可以通过 <yc-tag>autoPlay</yc-tag> 设置是否自动切换。
 可设置 <yc-tag>moveSpeed</yc-tag>, <yc-tag>timingFunc</yc-tag> 实现不同切换幻灯片效果。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-carousel
     :style="{
       width: '600px',

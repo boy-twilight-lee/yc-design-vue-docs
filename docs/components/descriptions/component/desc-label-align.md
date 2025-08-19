@@ -2,7 +2,7 @@
 
 标签文本可以设置左对齐右对齐，也可以设置垂直的排列方式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space
     direction="vertical"
     size="large">

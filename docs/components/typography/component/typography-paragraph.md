@@ -2,7 +2,7 @@
 
 文本段落样式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-typography>
     <yc-typography-title :heading="5">Default</yc-typography-title>
     <yc-typography-paragraph>

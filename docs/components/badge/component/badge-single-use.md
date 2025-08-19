@@ -2,7 +2,7 @@
 
 <yc-tag>default slot</yc-tag> 为空时，将会独立展示徽标。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space :size="40">
     <yc-badge :count="2" />
     <yc-badge

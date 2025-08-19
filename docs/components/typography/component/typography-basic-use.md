@@ -2,7 +2,7 @@
 
 排版组件用于展示标题、段落、文本内容，这里展示了排版的组合使用。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
  <yc-typography :style="{ marginTop: '-40px' }">
     <yc-typography-title> Design system </yc-typography-title>
     <yc-typography-paragraph>

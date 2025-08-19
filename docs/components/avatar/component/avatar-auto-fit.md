@@ -2,7 +2,7 @@
 
 如果头像是文字的话，会自动调节字体大小，来适应头像框。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-avatar
     :style="{
       marginRight: '24px',

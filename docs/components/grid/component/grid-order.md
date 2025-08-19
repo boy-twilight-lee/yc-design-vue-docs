@@ -2,7 +2,7 @@
 
 通过 <yc-tag>order</yc-tag> 来进行元素排序。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <yc-row class="grid-demo">
       <yc-col :span="6" :order="4">

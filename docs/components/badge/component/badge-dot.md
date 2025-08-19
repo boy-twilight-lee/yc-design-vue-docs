@@ -2,7 +2,7 @@
 
 设置 <yc-tag>dot</yc-tag>，即可只显示小红点而不显示数字。<yc-tag>count > 0</yc-tag> 时才显示
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space :size="40">
     <yc-badge :count="9" dot :offset="[6, -2]">
       <a href="#">Link</a>

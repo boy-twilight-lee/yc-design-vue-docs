@@ -2,7 +2,7 @@
 
 一个基本的评论组件，带有作者、头像、时间和操作。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-comment
     author="Socrates"
     content="Comment body content."

@@ -2,7 +2,7 @@
 
 展示和选择日历
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-calendar v-model="value" style="width:100%;" />
   select: {{value}}
 </div>

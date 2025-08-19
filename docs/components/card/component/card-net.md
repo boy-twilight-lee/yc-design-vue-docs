@@ -2,7 +2,7 @@
 
 通过 <yc-tag>Card.Grid</yc-tag> 来使用卡片内容区隔模式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-card :bordered="false" :style="{ width: '100%' }">
     <yc-card-grid
       v-for="(_, index) in new Array(7)"

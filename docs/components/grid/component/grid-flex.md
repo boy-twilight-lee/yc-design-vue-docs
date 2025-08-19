@@ -2,7 +2,7 @@
 
 通过设置 <yc-tag>Col</yc-tag> 组件的 <yc-tag>flex</yc-tag> 属性，可以任意配置 flex 布局。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-row class="grid-demo" style="margin-bottom: 16px;">
     <yc-col flex="100px">
       <div>100px</div>

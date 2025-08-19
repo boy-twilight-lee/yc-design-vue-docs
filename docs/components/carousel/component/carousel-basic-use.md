@@ -2,7 +2,7 @@
 
 基本用法
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-carousel
     :style="{
       width: '600px',

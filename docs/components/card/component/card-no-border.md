@@ -2,7 +2,7 @@
 
 设置 <yc-tag>bordered</yc-tag> 为 <yc-tag>false</yc-tag> 来使用无边框卡片。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div
     :style="{
       display: 'flex',

@@ -2,7 +2,7 @@
 
 通过设置 <yc-tag>Menu.Sider</yc-tag> 的 <yc-tag>trigger</yc-tag> 属性，实现自定义收起按钮的图标。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-layout class="layout-demo">
     <yc-layout-sider
       collapsible

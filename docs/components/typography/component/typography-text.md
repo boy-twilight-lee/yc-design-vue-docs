@@ -2,7 +2,7 @@
 
 不同样式的文本以及超链接组件。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space
     direction="vertical"
     :size="10">

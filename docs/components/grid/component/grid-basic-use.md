@@ -2,7 +2,7 @@
 
 展示了最基本的 24 等分应用。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div class="grid-demo-background">
     <yc-space direction="vertical" :size="16" style="display: block;">
       <yc-row class="grid-demo">

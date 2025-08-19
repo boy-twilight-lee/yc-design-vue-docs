@@ -2,7 +2,7 @@
 
 简单地成组展示多个只读字段，一般用于详情页的信息。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space
     direction="vertical"
     size="large"

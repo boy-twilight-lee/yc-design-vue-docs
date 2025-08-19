@@ -2,7 +2,7 @@
 
 在系统概览页面常常和栅格进行配合。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div
     :style="{
       boxSizing: 'border-box',

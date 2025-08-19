@@ -2,7 +2,7 @@
 
 actions slot 可以用于展示底部按钮组。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-card :style="{ width: '360px' }">
     <template #actions>
       <span class="icon-hover"> <IconThumbUp /> </span>

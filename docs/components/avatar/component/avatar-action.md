@@ -2,7 +2,7 @@
 
 可以通过 <yc-tag>trigger-icon</yc-tag> <yc-tag>trigger-type</yc-tag> 来定制交互按钮，类型有 <yc-tag>mask (遮罩)</yc-tag> 和 <yc-tag>button (按钮)</yc-tag> 两种。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space size="large">
     <yc-avatar
       :trigger-icon-style="{ color: '#3491FA' }"

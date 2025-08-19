@@ -2,7 +2,7 @@
 
 指定 <yc-tag>offset</yc-tag> 可以对栅格进行平移操作。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <yc-row class="grid-demo" style="marginBottom: 16px; backgroundColor: var(--color-fill-2);">
       <yc-col :span="8">col - 8</yc-col>

@@ -2,7 +2,7 @@
 
 设置 <yc-tag>text</yc-tag>，可设置自定义提示内容。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space :size="40">
     <yc-badge text="NEW">
       <yc-avatar shape="square">

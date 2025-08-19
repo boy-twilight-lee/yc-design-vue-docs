@@ -2,7 +2,7 @@
 
 链接的基本用法。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space>
     <yc-link href="link">Link</yc-link>
     <yc-link href="link" disabled>Link</yc-link>

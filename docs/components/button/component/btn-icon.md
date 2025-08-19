@@ -2,7 +2,7 @@
 
 按钮可以嵌入图标。在只设置图标时，按钮的宽高相等。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space>
     <yc-button type="primary">
       <template #icon>

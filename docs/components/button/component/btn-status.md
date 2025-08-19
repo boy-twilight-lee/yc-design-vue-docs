@@ -2,7 +2,7 @@
 
 按钮的状态分为 <yc-tag>normal</yc-tag> - 正常（默认）、 <yc-tag>success</yc-tag> - 成功、<yc-tag>warning</yc-tag> - 警告、<yc-tag>danger</yc-tag> - 危险四种，可以与按钮类型同时使用。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space direction="vertical">
     <yc-space>
       <yc-button type="primary" status="success">Primary</yc-button>

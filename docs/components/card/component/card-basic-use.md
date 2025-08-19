@@ -2,7 +2,7 @@
 
 常规的内容容器，可承载文字、列表、图片、段落，常用于模块划分和内容概览。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div :style="{ display: 'flex' }">
     <yc-card
       :style="{ width: '360px' }"

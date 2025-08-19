@@ -2,7 +2,7 @@
 
 按钮的禁用状态。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space direction="vertical">
     <yc-space>
       <yc-button type="primary" disabled>Primary</yc-button>

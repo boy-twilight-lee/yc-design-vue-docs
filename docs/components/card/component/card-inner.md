@@ -2,7 +2,7 @@
 
 卡片中可以嵌套其他卡片组件。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <a-card title="Arco Card">
     <a-card :style="{ marginBottom: '20px' }" title="Inner Card Title">
       <template #extra>

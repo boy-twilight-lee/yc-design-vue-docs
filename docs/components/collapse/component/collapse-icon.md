@@ -2,7 +2,7 @@
 
 为展开项自定义展开图标
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse :default-active-key="['1', 2]">
     <template #expand-icon="{ active }">
       <icon-face-smile-fill v-if="active" />

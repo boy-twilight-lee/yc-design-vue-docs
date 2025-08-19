@@ -2,7 +2,7 @@
 
 对不同章节的文本段落进行分割，默认为水平分割线，可在中间加入文字。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div class="divider-demo">
     <p>A design is a plan or specification for the construction of an object.</p>
     <yc-divider />
@@ -82,7 +82,7 @@
 
 ```vue
 <template>
-  <div class="cell-demo">
+  <div class="cell-demo vp-raw">
     <div class="divider-demo">
       <p>
         A design is a plan or specification for the construction of an object.

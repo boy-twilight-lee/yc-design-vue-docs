@@ -2,7 +2,7 @@
 
 单列的描述列表样式。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-radio-group
     type="button"
     v-model="size">

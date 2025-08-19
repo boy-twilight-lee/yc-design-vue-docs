@@ -2,7 +2,7 @@
 
 面板多层嵌套。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse
     :default-active-key="['1', 2]"
     destroy-on-hide>

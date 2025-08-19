@@ -2,7 +2,7 @@
 
 卡片可以只有内容区域。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-card hoverable :style="{ width: '360px', marginBottom: '20px' }">
     <div
       :style="{

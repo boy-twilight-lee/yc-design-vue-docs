@@ -2,7 +2,7 @@
 
 评论可以嵌套使用
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-comment
     author="Socrates"
     avatar="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/3ee5f13fb09879ecb5185e440cef6eb9.png~tplv-uwbnlip3yd-webp.webp"

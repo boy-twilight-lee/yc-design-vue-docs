@@ -2,7 +2,7 @@
 
 通过在 <yc-tag>Row</yc-tag> 上指定 <yc-tag>Gutter</yc-tag> 可以增加栅格的区域间隔。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
  <div>
     <p>Horizontal</p>
     <yc-row class="grid-demo" :gutter="24">

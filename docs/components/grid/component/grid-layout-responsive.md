@@ -2,7 +2,7 @@
 
 Grid 组件的响应式配置格式为 <yc-tag>{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }</yc-tag>。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-grid :cols="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }" :colGap="12" :rowGap="16" class="grid-demo-grid">
     <yc-grid-item class="demo-item">item</yc-grid-item>
     <yc-grid-item class="demo-item">item</yc-grid-item>

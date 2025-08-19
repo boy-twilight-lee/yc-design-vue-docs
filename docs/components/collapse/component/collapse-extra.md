@@ -2,7 +2,7 @@
 
 通过 <yc-tag>extra</yc-tag> 可以设置额外节点。<yc-tag>extra</yc-tag> 单击可以以设置 <yc-tag>stop</yc-tag> 修饰符，以阻止当前项目展开。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-collapse>
     <yc-collapse-item
       header="Beijing Toutiao Technology Co., Ltd."

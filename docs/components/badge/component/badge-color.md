@@ -2,7 +2,7 @@
 
 我们提供多种预设色彩的徽标样式。如果预设值不能满足你的需求，<yc-tag>color</yc-tag> 字段也可以设置自定义色值。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div>
     <yc-badge
       v-for="color in colors"

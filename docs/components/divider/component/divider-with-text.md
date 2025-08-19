@@ -2,7 +2,7 @@
 
 通过 <yc-tag>orientation</yc-tag> 为分割线添加描述文字。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div class="divider-demo">
     <p>A design is a plan or specification for the construction of an object.</p>
     <yc-divider orientation="left">Text</yc-divider>

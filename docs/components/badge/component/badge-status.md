@@ -2,7 +2,7 @@
 
 设置 <yc-tag>status</yc-tag>，可以得到不同的状态点。<yc-tag>normal - 正常</yc-tag> <yc-tag>processing - 进行中</yc-tag> <yc-tag>success - 成功</yc-tag> <yc-tag>warning - 提醒</yc-tag> <yc-tag>danger - 危险</yc-tag>。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <yc-space size="large" direction="vertical">
     <yc-space size="large">
       <yc-badge status="normal" />
