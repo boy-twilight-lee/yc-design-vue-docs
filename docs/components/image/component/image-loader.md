@@ -2,7 +2,7 @@
 
 大图可通过给 <yc-tag>loader</yc-tag> 传递一个小一些的图片，让其在原图未被加载成功时显示，以此来模拟渐进加载。
 
-<div class="demo-cell vp-raw">
+<div class="cell-demo vp-raw">
   <div>
     <yc-button
       type="primary"

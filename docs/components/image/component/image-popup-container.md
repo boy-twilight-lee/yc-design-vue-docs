@@ -2,7 +2,7 @@
 
 可以通过 <yc-tag>popupContainer</yc-tag> 指定预览挂载的父级节点。
 
-<div class="demo-cell vp-raw">
+<div class="cell-demo vp-raw">
   <div
     :style="{
       width: '100%',

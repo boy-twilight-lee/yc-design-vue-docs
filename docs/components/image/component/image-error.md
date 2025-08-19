@@ -2,7 +2,7 @@
 
 当加载图片失败的时候显示的内容。
 
-<div class="demo-cell vp-raw">
+<div class="cell-demo vp-raw">
   <yc-space :size="20">
     <yc-image
       width="400"

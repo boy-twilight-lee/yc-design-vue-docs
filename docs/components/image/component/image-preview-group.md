@@ -2,7 +2,7 @@
 
 用 <yc-tag> yc-image-preview-group </yc-tag> 包裹 <yc-tag> yc-image </yc-tag> 组件即可进行多图预览。
 
-<div class="demo-cell vp-raw">
+<div class="cell-demo vp-raw">
   <yc-image-preview-group infinite>
     <yc-space>
       <yc-image

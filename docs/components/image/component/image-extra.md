@@ -2,7 +2,7 @@
 
 组件提供了具名插槽 <yc-tag>extra</yc-tag> 供用户在页脚定制额外的内容。
 
-<div class="demo-cell vp-raw">
+<div class="cell-demo vp-raw">
   <yc-image
     src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp"
     title="A user’s avatar"
