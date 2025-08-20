@@ -10,7 +10,7 @@
     expand-child />
 </div>
 
-<script>
+<script setup>
 const options = [
   {
     value: 'beijing',
@@ -79,7 +79,7 @@ const options = [
     expand-child />
 </template>
 
-<script>
+<script setup>
 const options = [
   {
     value: 'beijing',
