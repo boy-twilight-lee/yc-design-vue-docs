@@ -15,6 +15,5 @@ import AutoTip from "./component/auto-tip.md"
 <auto-basic-use />
 <auto-strict />
 <auto-footer />
-
 <auto-api />
 <auto-tip />

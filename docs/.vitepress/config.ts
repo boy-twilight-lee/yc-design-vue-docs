@@ -215,7 +215,6 @@ export default defineConfig({
   },
   ignoreDeadLinks: true,
   vite: {
-    base: './',
     ssr: {
       noExternal: [
         'yc-design-vue',
