@@ -19,6 +19,7 @@ import TimelineApi from "./component/timeline-api.md"
 import TimelineTip from "./component/timeline-tip.md"
 </script>
 
+<client-only>
 <timeline-basic-use />
 <timeline-custom-content />
 <timeline-custom-node />
@@ -29,5 +30,6 @@ import TimelineTip from "./component/timeline-tip.md"
 <timeline-horizontal />
 <timeline-label-position />
 <timeline-custom-label />
+</client-only>
 <timeline-api />
 <timeline-tip />

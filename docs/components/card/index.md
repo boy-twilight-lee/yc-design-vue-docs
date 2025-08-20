@@ -18,6 +18,7 @@ import CardApi from "./component/card-api.md"
 import CardTip from "./component/card-tip.md"
 </script>
 
+<client-only>
 <card-basic-use />
 <card-hover />
 <card-no-border/>
@@ -26,5 +27,6 @@ import CardTip from "./component/card-tip.md"
 <card-grid />
 <card-net />
 <card-more-setting />
+</client-only>
 <card-api />
 <card-tip />

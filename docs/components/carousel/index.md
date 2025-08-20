@@ -12,10 +12,12 @@ import CarouselApi from "./component/carousel-api.md"
 import CarouselTip from "./component/carousel-tip.md"
 </script>
 
+<client-only>
 <carousel-basic-use />
 <carousel-auto-play />
 <carousel-indicator />
 <carousel-direction />
 <carousel-animation />
+</client-only>
 <carousel-api />
 <carousel-tip />

@@ -18,6 +18,7 @@ import CollapseApi from "./component/collapse-api.md"
 import CollapseTip from "./component/collapse-tip.md"
 </script>
 
+<client-only>
 <collapse-basic-use />
 <collapse-accordion />
 <collapse-nest />
@@ -27,5 +28,6 @@ import CollapseTip from "./component/collapse-tip.md"
 <collapse-style />
 <collapse-icon-position />
 <collapse-destroy-on-hide />
+</client-only>
 <collapse-api />
 <collapse-tip />

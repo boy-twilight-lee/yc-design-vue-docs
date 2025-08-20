@@ -13,10 +13,12 @@ import TooltipApi from "./component/tooltip-api.md"
 import TooltipTip from "./component/tooltip-tip.md"
 </script>
 
+<client-only>
 <tooltip-basic-use />
 <tooltip-mini />
 <tooltip-position />
 <tooltip-bg />
 <yc-tag>tooltip</yc-tag> 组件的 <yc-tag>trigger-props</yc-tag> 继承 <yc-tag>trigger</yc-tag>  组件的全部属性
+</client-only>
 <tooltip-api />
 <tooltip-tip />
