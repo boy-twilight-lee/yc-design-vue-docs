@@ -20,7 +20,7 @@ import ImageApi from "./component/image-api.md"
 import ImageTip from "./component/image-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <image-basic-use />
 <image-caption />
 <image-extra />
@@ -32,6 +32,6 @@ import ImageTip from "./component/image-tip.md"
 <image-preview />
 <image-preview-group-use />
 <image-popup-container />
-</client-only>
+</ClientOnly>
 <image-api />
 <image-tip />

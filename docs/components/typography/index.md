@@ -14,12 +14,12 @@ import TypograpgyApi from "./component/typography-api.md"
 import TypograpgyTip from "./component/typograpgy-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <typograpgy-basic-use />
 <typograpgy-title />
 <typograpgy-text />
 <typograpgy-paragraph />
 <typograpgy-action />
-</client-only>
+</ClientOnly>
 <typograpgy-api />
 <typograpgy-tip />

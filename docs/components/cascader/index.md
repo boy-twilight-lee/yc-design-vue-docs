@@ -16,13 +16,13 @@ import CascaderApi from "./component/cascader-api.md"
 import CascaderTip from "./component/cascader-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <cascader-basic-use />
 <cascader-clear />
 <cascader-format />
 <cascader-multiple />
 <cascader-loading />
 <cascader-load />
-</client-only>
+</ClientOnly>
 <cascader-api />
 <cascader-tip />

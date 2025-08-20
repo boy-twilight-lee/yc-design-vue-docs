@@ -15,13 +15,13 @@ import AvatarApi from "./component/avatar-api.md"
 import AvatarTip from "./component/avatar-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <avatar-basic-use />
 <avatar-size />
 <avatar-group />
 <avatar-action />
 <avatar-auto-fit />
 <avatar-set />
-</client-only>
+</ClientOnly>
 <avatar-api />
 <avatar-tip />

@@ -12,10 +12,10 @@ import AutoApi from "./component/auto-api.md"
 import AutoTip from "./component/auto-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <auto-basic-use />
 <auto-strict />
 <auto-footer />
-</client-only>
+</ClientOnly>
 <auto-api />
 <auto-tip />

@@ -12,10 +12,10 @@ import DividerApi from "./component/divider-api.md"
 import DividerTip from "./component/divider-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <divider-basic-use />
 <divider-with-text />
 <divider-vertical />
-</client-only>
+</ClientOnly>
 <divider-api />
 <divider-tip />

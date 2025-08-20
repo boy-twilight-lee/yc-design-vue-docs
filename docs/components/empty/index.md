@@ -11,9 +11,9 @@ import EmptyApi from "./component/empty-api.md"
 import EmptyTip from "./component/empty-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <empty-basic-use />
 <empty-image />
-</client-only>
+</ClientOnly>
 <empty-api />
 <empty-tip />

@@ -10,8 +10,8 @@ import CalendarApi from "./component/calendar-api.md"
 import CalendarTip from "./component/calendar-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <calendar-basic-use />
-</client-only>
+</ClientOnly>
 <calendar-api />
 <calendar-tip />

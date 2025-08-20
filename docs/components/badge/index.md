@@ -16,7 +16,7 @@ import BadgeApi from "./component/badge-api.md"
 import BadgeTip from "./component/badge-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <badge-basic-use />
 <badge-Single-use />
 <badge-dot />
@@ -24,6 +24,6 @@ import BadgeTip from "./component/badge-tip.md"
 <badge-max-count />
 <badge-status />
 <badge-color />
-</client-only>
+</ClientOnly>
 <badge-api />
 <badge-tip />

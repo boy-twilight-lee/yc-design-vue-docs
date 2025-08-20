@@ -13,11 +13,11 @@ import CommentApi from "./component/comment-api.md"
 import CommentTip from "./component/comment-tip.md"
 </script>
 
-<client-only>
+<ClientOnly>
 <comment-basic-use />
 <comment-align />
 <comment-nest />
 <comment-input />
-</client-only>
+</ClientOnly>
 <comment-api />
 <comment-tip />
