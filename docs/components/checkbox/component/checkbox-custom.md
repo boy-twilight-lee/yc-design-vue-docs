@@ -66,7 +66,7 @@
 <style scoped>
 .custom-checkbox-card {
   padding: 10px 16px;
-  border: 1px solid var(--color-border-2);
+  border: 1px solid var(--vp-color-border-2);
   border-radius: 4px;
   width: 250px;
   box-sizing: border-box;
@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 2px;
-  border: 1px solid var(--color-border-2);
+  border: 1px solid var(--vp-color-border-2);
   box-sizing: border-box;
 }
 
@@ -189,7 +189,7 @@
 <style scoped>
 .custom-checkbox-card {
   padding: 10px 16px;
-  border: 1px solid var(--color-border-2);
+  border: 1px solid var(--vp-color-border-2);
   border-radius: 4px;
   width: 250px;
   box-sizing: border-box;
@@ -202,7 +202,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 2px;
-  border: 1px solid var(--color-border-2);
+  border: 1px solid var(--vp-color-border-2);
   box-sizing: border-box;
 }
 

@@ -88,7 +88,7 @@ function onClickMenuItem(key) {
 .layout-demo {
   height: 500px;
   background: var(--color-fill-2);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--vp-color-border);
 }
 .layout-demo :deep(.yc-layout-sider) .logo {
   height: 32px;
@@ -221,7 +221,7 @@ function onClickMenuItem(key) {
 .layout-demo {
   height: 500px;
   background: var(--color-fill-2);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--vp-color-border);
 }
 .layout-demo :deep(.yc-layout-sider) .logo {
   height: 32px;
