@@ -117,7 +117,7 @@ export default defineConfig({
               link: '/components/input-number',
             },
             {
-              text: '验证码输入框 VerificationCode',
+              text: '验证码 VerificationCode',
               link: '/components/verification-code',
             },
             { text: '标签输入框 InputTag', link: '/components/input-tag' },
