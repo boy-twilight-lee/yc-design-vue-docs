@@ -212,11 +212,5 @@ export default defineConfig({
     server: {
       open: true,
     },
-    plugins: [],
-    build: {
-      commonjsOptions: {
-        include: [/node_modules/],
-      },
-    },
   },
 });
