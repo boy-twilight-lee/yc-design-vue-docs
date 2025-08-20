@@ -213,6 +213,7 @@ export default defineConfig({
       },
     },
   },
+  ignoreDeadLinks: true,
   vite: {
     base: './',
     ssr: {

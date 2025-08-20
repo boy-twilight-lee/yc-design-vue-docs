@@ -12,6 +12,11 @@ import CascaderFormat from "./component/cascader-format.md"
 import CascaderMultiple from "./component/cascader-multiple.md"
 import CascaderLoading from "./component/cascader-loading.md"
 import CascaderLoad from "./component/cascader-load.md"
+import CascaderSearch from "./component/cascader-search.md"
+import CascaderPathMode from "./component/cascader-path-mode.md"
+import CascaderFallback from "./component/cascader-fallback.md"
+import CascaderField from "./component/cascader-field.md"
+import CascaderExpand from "./component/cascader-expand-menu.md"
 import CascaderApi from "./component/cascader-api.md"
 import CascaderTip from "./component/cascader-tip.md"
 </script>
@@ -22,6 +27,10 @@ import CascaderTip from "./component/cascader-tip.md"
 <cascader-multiple />
 <cascader-loading />
 <cascader-load />
-
+<cascader-search />
+<cascader-path-mode />
+<cascader-fallback />
+<cascader-field />
+<cascader-expand />
 <cascader-api />
 <cascader-tip />
