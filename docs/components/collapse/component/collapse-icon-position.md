@@ -1,6 +1,6 @@
 ### 展开图标位置
 
-通过 expand-icon-position 属性设置展开图标的位置。
+通过 <yc-tag>expand-icon-position</yc-tag> 属性设置展开图标的位置。
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,6 +1,6 @@
 ### 指示器
 
-可以指定指示器类型：<yc-tag>dot</yc-tag> | <yc-tag>line</yc-tag> | <yc-tag>slider</yc-tag> 和位置 <yc-tag>left</yc-tag> | <yc-tag>right</yc-tag> | <yc-tag>top</yc-tag> | <yc-tag>bottom</yc-tag> | <yc-tag>outer</yc-tag>
+可以指定指示器类型：<yc-tag>dot</yc-tag> 、<yc-tag>line</yc-tag> 、<yc-tag>slider</yc-tag> 和位置 <yc-tag>left</yc-tag> 、<yc-tag>right</yc-tag> 、<yc-tag>top</yc-tag> 、<yc-tag>bottom</yc-tag> 、<yc-tag>outer</yc-tag>
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,6 +1,6 @@
 ### 单独使用多图预览组件
 
-组件<yc-tag>yc-image-preview-group</yc-tag> 可单独使用，需控制 <yc-tag>visible</yc-tag> 。在图片的展示上分为两种场景，一是通过 <yc-tag>defaultCurrent</yc-tag> 指定第一张展示的图片；二是控制 <yc-tag>current</yc-tag> 来决定当前显示的是第几张图片。
+组件<yc-tag>{{'<yc-image-preview-group>'}}</yc-tag> 可单独使用，需控制 <yc-tag>visible</yc-tag> 。在图片的展示上分为两种场景，一是通过 <yc-tag>defaultCurrent</yc-tag> 指定第一张展示的图片；二是控制 <yc-tag>current</yc-tag> 来决定当前显示的是第几张图片。
 
 <div class="cell-demo vp-raw">
   <yc-button

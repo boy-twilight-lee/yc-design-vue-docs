@@ -1,6 +1,6 @@
 ### 对齐
 
-内置 4 种对齐方式，分别为 <yc-tag>start</yc-tag> <yc-tag>center</yc-tag> <yc-tag>end</yc-tag> <yc-tag>baseline</yc-tag>，在水平模式下默认为 <yc-tag>center</yc-tag>。
+内置 4 种对齐方式，分别为 <yc-tag>start</yc-tag> 、<yc-tag>center</yc-tag> 、<yc-tag>end</yc-tag> 、<yc-tag>baseline</yc-tag>，在水平模式下默认为 <yc-tag>center</yc-tag>。
 
 <div class="cell-demo vp-raw">
   <div>

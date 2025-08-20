@@ -1,6 +1,6 @@
 ### 尺寸
 
-内置 4 个尺寸，<yc-tag>mini - 4px</yc-tag> <yc-tag>small - 8px (默认)</yc-tag> <yc-tag>medium - 16px</yc-tag> <yc-tag>large - 24px</yc-tag>，也支持传数字来自定义尺寸。
+内置 4 个尺寸，<yc-tag>mini - 4px</yc-tag> 、<yc-tag>small - 8px (默认)</yc-tag> 、<yc-tag>medium - 16px</yc-tag> 、<yc-tag>large - 24px</yc-tag>，也支持传数字来自定义尺寸。
 
 <div class="cell-demo vp-raw">
   <div>

@@ -1,6 +1,6 @@
 ### 不同尺寸
 
-列表组件提供了三种大小 <yc-tag>small, medium, large </yc-tag>，可根据业务需求自行选择。
+列表组件提供了三种大小 <yc-tag>small</yc-tag> 、<yc-tag>medium</yc-tag> 、<yc-tag>large</yc-tag>，可根据业务需求自行选择。
 
 <div class="cell-demo vp-raw">
   <yc-space

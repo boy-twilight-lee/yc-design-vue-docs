@@ -1,6 +1,6 @@
 ### 布局模式
 
-有水平排列、垂直排列、行内水平排列、行内垂直排列四种布局模式。
+有 <yc-tag>水平排列</yc-tag> 、<yc-tag>垂直排列</yc-tag> 、<yc-tag>行内水平排列</yc-tag> 、<yc-tag>行内垂直排列</yc-tag> 四种布局模式。
 
 <div class="cell-demo vp-raw">
   <yc-radio-group

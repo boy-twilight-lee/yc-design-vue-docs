@@ -1,6 +1,6 @@
 ### 支持更多内容配置
 
-actions slot 可以用于展示底部按钮组。
+使用 <yc-tag>actions slot</yc-taG> 可以用于展示底部按钮组。
 
 <div class="cell-demo vp-raw">
   <yc-card :style="{ width: '360px' }">

@@ -1,6 +1,6 @@
 ### 组合按钮
 
-通过 <yc-tag>yc-button-group></yc-tag> 属性 组件使按钮以组合方式出现。可用在同级多项操作中。
+通过 <yc-tag>{{'<yc-button-group>'}}</yc-tag> 属性 组件使按钮以组合方式出现。可用在同级多项操作中。
 
 <div class='cell-demo'>
   <yc-space direction="vertical">

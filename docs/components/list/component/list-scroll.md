@@ -1,6 +1,6 @@
 ### 滚动
 
-通过设置 <yc-tag>max-height</yc-tag> 属性限制列表的最大高度。通过 <yc-tag>reach-bottom </yc-tag>事件可以监听列表触底的事件。
+通过设置 <yc-tag>max-height</yc-tag> 属性限制列表的最大高度。通过 <yc-tag>reach-bottom</yc-tag> 事件可以监听列表触底的事件。
 
 <div class="cell-demo vp-raw">
   <yc-list

@@ -1,6 +1,6 @@
 ### 头像组
 
-使用 <yc-tag>Avatar.Group</yc-tag> 可以使用头像组功能，可通过 <yc-tag>size</yc-tag> 指定头像的大小。
+使用 <yc-tag>{{'<Avatar.Group>'}}</yc-tag> 可以使用头像组功能，可通过 <yc-tag>size</yc-tag> 指定头像的大小。
 
 <div class="cell-demo vp-raw">
   <yc-space :size="32">
