@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: YC Design Vue
-  text: 基于 Vue 3 的现代化企业级 UI 组件库
+  text: 基于 Vue 3 的现代化 UI 组件库
   tagline: 开箱即用、功能丰富、高度可定制的界面解决方案
   actions:
     - theme: brand
@@ -19,9 +19,9 @@ features:
   - icon: 🚀
     title: 基于 Vue 3
     details: 充分利用 Vue 3 的新特性，如 Composition API，性能更优
-  - icon: 🔧
+  - icon: 💪
     title: TypeScript 支持
-    details: 提供完整的类型定义，带来更好的开发体验和代码健壮性
+    details: 使用 TypeScript 编写，提供完整的类型定义
   - icon: 🎨
     title: 开箱即用
     details: 引入方式简单，学习成本低，可以快速上手
@@ -29,8 +29,8 @@ features:
     title: 主题定制
     details: 支持灵活的样式覆盖和主题定制，轻松匹配您的品牌视觉
   - icon: 📱
-    title: 响应式设计
-    details: 支持多种屏幕尺寸，确保在各种设备上都有良好的用户体验
+    title: 组件类型丰富
+    details: 70+ 个高质量组件，覆盖移动端主流场景
   - icon: 🌟
     title: 企业级品质
     details: 经过严格测试，稳定可靠，适合企业级应用开发
@@ -48,37 +48,16 @@ npm install yc-design-vue --save
 yarn add yc-design-vue
 ```
 
-### 使用
-
-```vue
-<template>
-  <div>
-    <yc-button type="primary">主要按钮</yc-button>
-    <yc-button>默认按钮</yc-button>
-  </div>
-  <div style="margin-top: 20px;">
-    <yc-input
-      v-model="text"
-      placeholder="请输入内容..."></yc-input>
-  </div>
-</template>
-
-<script setup>
-import { ref } from 'vue';
-const text = ref('');
-</script>
-```
-
 ### 完整引入
 
 ```typescript
 import { createApp } from 'vue';
 import App from './App.vue';
-import YcUi from 'yc-design-vue';
+import YcDesign from 'yc-design-vue';
 import 'yc-design-vue/es/style.css';
 
 const app = createApp(App);
-app.use(YcUi);
+app.use(YcDesign);
 app.mount('#app');
 ```
 
