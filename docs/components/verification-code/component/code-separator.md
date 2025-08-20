@@ -1,0 +1,34 @@
+### 自定义分隔符
+
+指定 <yc-tag>separator</yc-tag> 可以自定义渲染分隔符。
+
+<div class="cell-demo vp-raw">
+  <yc-verification-code
+    style="width: 400px"
+    :length="9"
+    :separator="(index) => ((index + 1) % 3 || index > 7 ? null : '-')"
+    @finish="(value) => Message.info(`Verification code: ${value}`)" />
+</div>
+
+<script setup>
+import { Message } from 'yc-design-vue';
+</script>
+
+<details>
+<summary>点击查看/隐藏代码</summary>
+
+```vue
+<template>
+  <yc-verification-code
+    style="width: 400px"
+    :length="9"
+    :separator="(index) => ((index + 1) % 3 || index > 7 ? null : '-')"
+    @finish="(value) => Message.info(`Verification code: ${value}`)" />
+</template>
+
+<script setup>
+import { Message } from 'yc-design-vue';
+</script>
+```
+
+</details>

@@ -111,14 +111,14 @@ export default defineConfig({
               text: '颜色选择器 ColorPicker',
               link: '/components/color-picker/index.md',
             },
-            { text: '输入框 Input', link: '/components/input' },
+            { text: '输入框 Input', link: '/components/input/index.md' },
             {
               text: '数字输入框 InputNumber',
-              link: '/components/input-number',
+              link: '/components/input-number/index.md',
             },
             {
               text: '验证码 VerificationCode',
-              link: '/components/verification-code',
+              link: '/components/verification-code/index.md',
             },
             { text: '标签输入框 InputTag', link: '/components/input-tag' },
             { text: '提及 Mention', link: '/components/mention' },
