@@ -23,6 +23,7 @@ import CascaderTip from "./component/cascader-tip.md"
 
 <cascader-basic-use />
 <cascader-clear />
+<cascader-disabled />
 <cascader-format />
 <cascader-multiple />
 <cascader-loading />

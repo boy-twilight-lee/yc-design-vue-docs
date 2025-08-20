@@ -103,10 +103,10 @@ export default defineConfig({
               text: '级联选择 Cascader',
               link: '/components/cascader/index.md',
             },
-            { text: '复选框 Checkbox', link: '/components/checkbox' },
+            { text: '复选框 Checkbox', link: '/components/checkbox/index.md' },
             {
               text: '颜色选择器 ColorPicker',
-              link: '/components/color-picker',
+              link: '/components/color-picker/index.md',
             },
             { text: '输入框 Input', link: '/components/input' },
             {
