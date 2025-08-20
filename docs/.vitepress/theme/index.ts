@@ -4,6 +4,7 @@ import { useRoute } from 'vitepress';
 import 'yc-design-vue/es/style.css';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
+import '../style/global.less';
 // 是否是服务端渲染
 export const isServerRendering = (() => {
   try {
