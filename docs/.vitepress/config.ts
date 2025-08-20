@@ -208,6 +208,7 @@ export default defineConfig({
     },
   },
   vite: {
+    base: './',
     server: {
       open: true,
     },
