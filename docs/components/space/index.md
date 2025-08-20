@@ -12,7 +12,7 @@ import SpaceAlign from "./component/space-align.md"
 import SpaceWrap from "./component/space-wrap.md"
 import SpaceSplit from "./component/space-split.md"
 import SpaceApi from "./component/space-api.md"
-import SpaceTip from "./component/space-tip.md"
+
 </script>
 
 <space-basic-use />
@@ -21,6 +21,4 @@ import SpaceTip from "./component/space-tip.md"
 <space-align />
 <space-wrap />
 <space-split />
-
 <space-api />
-<space-tip />

@@ -10,13 +10,11 @@ import StatisticPrefix from "./component/statistic-prefix.md"
 import StatisticAnimation from "./component/statistic-animation.md"
 import StatisticCountdown from "./component/statistic-countdown.md"
 import StatisticApi from "./component/statistic-api.md"
-import StatisticTip from "./component/statistic-tip.md"
+
 </script>
 
 <statistic-basic-use />
 <statistic-prefix />
 <statistic-animation />
 <statistic-countdown />
-
 <statistic-api />
-<statistic-tip />

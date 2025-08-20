@@ -17,7 +17,7 @@ import ImagePreview from "./component/image-preview.md"
 import ImagePreviewGroupUse from "./component/image-preview-group-use.md"
 import ImagePopupContainer from "./component/image-popup-container.md"
 import ImageApi from "./component/image-api.md"
-import ImageTip from "./component/image-tip.md"
+
 </script>
 
 <image-basic-use />
@@ -31,6 +31,4 @@ import ImageTip from "./component/image-tip.md"
 <image-preview />
 <image-preview-group-use />
 <image-popup-container />
-
 <image-api />
-<image-tip />

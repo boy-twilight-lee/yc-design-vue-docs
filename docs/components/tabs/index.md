@@ -13,7 +13,7 @@ import TabsExtra from "./component/tabs-extra.md"
 import TabsTrigger from "./component/tabs-trigger.md"
 import TabsScroll from "./component/tabs-scroll.md"
 import TabsApi from "./component/tabs-api.md"
-import TabsTip from "./component/tabs-tip.md"
+
 </script>
 
 <tabs-basic-use />
@@ -23,6 +23,4 @@ import TabsTip from "./component/tabs-tip.md"
 <tabs-extra />
 <tabs-trigger />
 <tabs-scroll />
-
 <tabs-api />
-<tabs-tip />

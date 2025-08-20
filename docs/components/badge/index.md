@@ -13,7 +13,6 @@ import BadgeMaxCount from "./component/badge-max-count.md"
 import BadgeStatus from "./component/badge-status.md"
 import BadgeColor from "./component/badge-color.md"
 import BadgeApi from "./component/badge-api.md"
-import BadgeTip from "./component/badge-tip.md"
 </script>
 
 <badge-basic-use />
@@ -23,6 +22,4 @@ import BadgeTip from "./component/badge-tip.md"
 <badge-max-count />
 <badge-status />
 <badge-color />
-
 <badge-api />
-<badge-tip />

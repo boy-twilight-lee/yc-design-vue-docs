@@ -15,7 +15,6 @@ import BtnLoading from "./component/btn-loading.md"
 import BtnLong from "./component/btn-long.md"
 import BtnGroup from "./component/btn-group.md"
 import BtnApi from "./component/btn-api.md"
-import BtnTip from "./component/btn-tip.md"
 </script>
 
 <btn-basic-use />
@@ -27,6 +26,4 @@ import BtnTip from "./component/btn-tip.md"
 <btn-loading />
 <btn-long />
 <btn-group />
-
 <btn-api />
-<btn-tip />

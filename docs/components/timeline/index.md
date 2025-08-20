@@ -16,7 +16,7 @@ import TimelineHorizontal from "./component/timeline-horizontal.md"
 import TimelineLabelPosition  from "./component/timeline-label-position.md"
 import TimelineCustomLabel from "./component/timeline-custom-label.md"
 import TimelineApi from "./component/timeline-api.md"
-import TimelineTip from "./component/timeline-tip.md"
+
 </script>
 
 <timeline-basic-use />
@@ -29,6 +29,4 @@ import TimelineTip from "./component/timeline-tip.md"
 <timeline-horizontal />
 <timeline-label-position />
 <timeline-custom-label />
-
 <timeline-api />
-<timeline-tip />

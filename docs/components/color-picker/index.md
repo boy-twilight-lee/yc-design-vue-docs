@@ -14,7 +14,6 @@ import PickerTrigger from "./component/picker-trigger.md"
 import PickerCustomTrigger from "./component/picker-custom-trigger.md"
 import PickerPanel from "./component/picker-panel.md"
 import PickerApi from "./component/picker-api.md"
-import PickerTip from "./component/picker-tip.md"
 </script>
 
 <picker-basic-use />
@@ -26,4 +25,3 @@ import PickerTip from "./component/picker-tip.md"
 <picker-custom-trigger />
 <picker-panel />
 <picker-api />
-<picker-tip />

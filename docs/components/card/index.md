@@ -15,7 +15,6 @@ import CardNet from "./component/card-net.md"
 import CardInner from "./component/card-inner.md"
 import CardMoreSetting from "./component/card-more-setting.md"
 import CardApi from "./component/card-api.md"
-import CardTip from "./component/card-tip.md"
 </script>
 
 <card-basic-use />
@@ -27,4 +26,3 @@ import CardTip from "./component/card-tip.md"
 <card-net />
 <card-more-setting />
 <card-api />
-<card-tip />

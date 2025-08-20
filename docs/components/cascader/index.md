@@ -18,7 +18,6 @@ import CascaderFallback from "./component/cascader-fallback.md"
 import CascaderField from "./component/cascader-field.md"
 import CascaderExpand from "./component/cascader-expand-menu.md"
 import CascaderApi from "./component/cascader-api.md"
-import CascaderTip from "./component/cascader-tip.md"
 </script>
 
 <cascader-basic-use />
@@ -34,4 +33,3 @@ import CascaderTip from "./component/cascader-tip.md"
 <cascader-field />
 <cascader-expand />
 <cascader-api />
-<cascader-tip />

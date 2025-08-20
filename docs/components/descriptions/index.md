@@ -12,7 +12,6 @@ import DescBordered from "./component/desc-bordered.md"
 import DescLayout from "./component/desc-layout.md"
 import DescLayoutDemo from "./component/desc-layout-demo.md"
 import DescApi from "./component/desc-api.md"
-import DescTip from "./component/desc-tip.md"
 </script>
 
 <desc-basic-use />
@@ -21,6 +20,4 @@ import DescTip from "./component/desc-tip.md"
 <desc-bordered />
 <desc-layout />
 <desc-layout-demo />
-
 <desc-api />
-<desc-tip />

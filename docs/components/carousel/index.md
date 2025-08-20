@@ -9,7 +9,6 @@ import CarouselIndicator from "./component/carousel-indicator.md"
 import CarouselDirection from "./component/carousel-direction.md"
 import CarouselAnimation from "./component/carousel-animation.md"
 import CarouselApi from "./component/carousel-api.md"
-import CarouselTip from "./component/carousel-tip.md"
 </script>
 
 <carousel-basic-use />
@@ -17,6 +16,4 @@ import CarouselTip from "./component/carousel-tip.md"
 <carousel-indicator />
 <carousel-direction />
 <carousel-animation />
-
 <carousel-api />
-<carousel-tip />

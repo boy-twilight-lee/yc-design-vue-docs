@@ -8,11 +8,9 @@
 import EmptyBasicUse from "./component/empty-basic-use.md"
 import EmptyImage from "./component/empty-image.md"
 import EmptyApi from "./component/empty-api.md"
-import EmptyTip from "./component/empty-tip.md"
+
 </script>
 
 <empty-basic-use />
 <empty-image />
-
 <empty-api />
-<empty-tip />

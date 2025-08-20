@@ -12,7 +12,6 @@ import AvatarAction from "./component/avatar-action.md"
 import AvatarAutoFit from "./component/avatar-auto-fit.md"
 import AvatarSet from "./component/avatar-set.md"
 import AvatarApi from "./component/avatar-api.md"
-import AvatarTip from "./component/avatar-tip.md"
 </script>
 
 <avatar-basic-use />
@@ -22,4 +21,3 @@ import AvatarTip from "./component/avatar-tip.md"
 <avatar-auto-fit />
 <avatar-set />
 <avatar-api />
-<avatar-tip />

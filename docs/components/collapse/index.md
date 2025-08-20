@@ -15,7 +15,6 @@ import CollapseStyle from "./component/collapse-style.md"
 import CollapseIconPosition from "./component/collapse-icon-position.md"
 import CollapseDestroyOnHide from "./component/collapse-destroy-on-hide.md"
 import CollapseApi from "./component/collapse-api.md"
-import CollapseTip from "./component/collapse-tip.md"
 </script>
 
 <collapse-basic-use />
@@ -27,6 +26,4 @@ import CollapseTip from "./component/collapse-tip.md"
 <collapse-style />
 <collapse-icon-position />
 <collapse-destroy-on-hide />
-
 <collapse-api />
-<collapse-tip />

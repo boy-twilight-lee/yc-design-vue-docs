@@ -9,11 +9,9 @@ import AutoBasicUse from "./component/auto-basic-use.md"
 import AutoStrict from "./component/auto-strict.md"
 import AutoFooter from "./component/auto-footer.md"
 import AutoApi from "./component/auto-api.md"
-import AutoTip from "./component/auto-tip.md"
 </script>
 
 <auto-basic-use />
 <auto-strict />
 <auto-footer />
 <auto-api />
-<auto-tip />

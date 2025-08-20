@@ -15,7 +15,7 @@ import TagLoading from "./component/tag-loading.md"
 import TagIcon from "./component/tag-icon.md"
 import TagBorder from "./component/tag-border.md"
 import TagApi from "./component/tag-api.md"
-import TagTip from "./component/tag-tip.md"
+
 </script>
 
 <tag-basic-use />
@@ -27,6 +27,4 @@ import TagTip from "./component/tag-tip.md"
 <tag-loading />
 <tag-icon />
 <tag-border />
-
 <tag-api />
-<tag-tip />

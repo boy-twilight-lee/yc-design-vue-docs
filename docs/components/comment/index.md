@@ -10,13 +10,10 @@ import CommentAlign from "./component/comment-align.md"
 import CommentNest from "./component/comment-nest.md"
 import CommentInput from "./component/comment-input.md"
 import CommentApi from "./component/comment-api.md"
-import CommentTip from "./component/comment-tip.md"
 </script>
 
 <comment-basic-use />
 <comment-align />
 <comment-nest />
 <comment-input />
-
 <comment-api />
-<comment-tip />

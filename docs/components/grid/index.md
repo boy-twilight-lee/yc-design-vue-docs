@@ -17,7 +17,7 @@ import GridFlex from "./component/grid-flex.md"
 import GridLayout from "./component/grid-layout.md"
 import GridLayoutResponsive from "./component/grid-layout-responsive.md"
 import GridApi from "./component/grid-api.md"
-import GridTip from "./component/grid-tip.md"
+
 </script>
 
 <grid-basic-use />
@@ -32,4 +32,3 @@ import GridTip from "./component/grid-tip.md"
 <grid-layout/>
 <grid-layout-responsive/>
 <grid-api />
-<grid-tip />

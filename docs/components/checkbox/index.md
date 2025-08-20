@@ -13,7 +13,6 @@ import CheckboxIndeterminate  from "./component/checkbox-indeterminate.md"
 import CheckboxLayout from "./component/checkbox-layout.md"
 import CheckboxCustom from "./component/checkbox-custom.md"
 import CheckboxApi from "./component/checkbox-api.md"
-import CheckboxTip from "./component/checkbox-tip.md"
 </script>
 
 <checkbox-basic-use />
@@ -26,4 +25,3 @@ import CheckboxTip from "./component/checkbox-tip.md"
 <checkbox-layout />
 <checkbox-custom />
 <checkbox-api />
-<checkbox-tip />

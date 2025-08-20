@@ -13,7 +13,7 @@ import ListVerticalStyle from "./component/list-vertical-style.md"
 import ListScroll from "./component/list-scroll.md"
 import ListVirtualScroll from "./component/list-virtual-scroll.md"
 import ListApi from "./component/list-api.md"
-import ListTip from "./component/list-tip.md"
+
 </script>
 
 <list-basic-use />
@@ -23,6 +23,4 @@ import ListTip from "./component/list-tip.md"
 <list-vertical-style />
 <list-scroll />
 <list-virtual-scroll />
-
 <list-api />
-<list-tip />
