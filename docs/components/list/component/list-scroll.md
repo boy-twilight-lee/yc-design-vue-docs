@@ -23,7 +23,7 @@ const data = reactive([]);
 const fetchData = () => {
   console.log('reach bottom!');
   if (current.value <= 5) {
-    window.setTimeout(() => {
+    setTimeout(() => {
       const index = data.length;
       data.push(
         `Beijing Bytedance Technology Co., Ltd. ${index + 1}`,
@@ -71,7 +71,7 @@ const data = reactive([]);
 const fetchData = () => {
   console.log('reach bottom!');
   if (current.value <= 5) {
-    window.setTimeout(() => {
+    setTimeout(() => {
       const index = data.length;
       data.push(
         `Beijing Bytedance Technology Co., Ltd. ${index + 1}`,
