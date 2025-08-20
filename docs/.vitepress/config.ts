@@ -216,7 +216,12 @@ export default defineConfig({
   vite: {
     base: './',
     ssr: {
-      noExternal: ['yc-design-vue', '@arco-design/web-vue', 'nanoid'],
+      noExternal: [
+        'yc-design-vue',
+        '@arco-design/web-vue',
+        'nanoid',
+        'scroll-into-view-if-needed',
+      ],
     },
   },
 });

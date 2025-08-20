@@ -13,11 +13,10 @@ import StatisticApi from "./component/statistic-api.md"
 import StatisticTip from "./component/statistic-tip.md"
 </script>
 
-<client-only>
 <statistic-basic-use />
 <statistic-prefix />
 <statistic-animation />
 <statistic-countdown />
-</client-only>
+
 <statistic-api />
 <statistic-tip />

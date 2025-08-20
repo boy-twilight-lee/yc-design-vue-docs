@@ -12,11 +12,10 @@ import PopoverApi from "./component/popover-api.md"
 import PopoverTip from "./component/popover-tip.md"
 </script>
 
-<client-only>
 <popover-basic-use />
 <popover-trigger />
 <popover-position />
 <yc-tag>popover</yc-tag> 组件的 <yc-tag>trigger-props</yc-tag> 继承 <yc-tag>trigger</yc-tag>  组件的全部属性
-</client-only>
+
 <popover-api />
 <popover-tip />

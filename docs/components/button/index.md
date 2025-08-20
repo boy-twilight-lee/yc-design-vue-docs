@@ -18,7 +18,6 @@ import BtnApi from "./component/btn-api.md"
 import BtnTip from "./component/btn-tip.md"
 </script>
 
-<client-only>
 <btn-basic-use />
 <btn-icon />
 <btn-shape />
@@ -28,6 +27,6 @@ import BtnTip from "./component/btn-tip.md"
 <btn-loading />
 <btn-long />
 <btn-group />
-</client-only>
+
 <btn-api />
 <btn-tip />

@@ -20,7 +20,6 @@ import GridApi from "./component/grid-api.md"
 import GridTip from "./component/grid-tip.md"
 </script>
 
-<client-only>
 <grid-basic-use />
 <grid-offset />
 <grid-gutter />
@@ -32,6 +31,5 @@ import GridTip from "./component/grid-tip.md"
 <grid-flex/>
 <grid-layout/>
 <grid-layout-responsive/>
-</client-only>
 <grid-api />
 <grid-tip />

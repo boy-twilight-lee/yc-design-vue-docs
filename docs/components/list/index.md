@@ -16,7 +16,6 @@ import ListApi from "./component/list-api.md"
 import ListTip from "./component/list-tip.md"
 </script>
 
-<client-only>
 <list-basic-use />
 <list-size />
 <list-item />
@@ -24,6 +23,6 @@ import ListTip from "./component/list-tip.md"
 <list-vertical-style />
 <list-scroll />
 <list-virtual-scroll />
-</client-only>
+
 <list-api />
 <list-tip />
