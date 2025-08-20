@@ -15,13 +15,13 @@ import DescApi from "./component/desc-api.md"
 import DescTip from "./component/desc-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <desc-basic-use />
 <desc-single-col />
 <desc-label-align />
 <desc-bordered />
 <desc-layout />
 <desc-layout-demo />
-</ClientOnly>
+</client-only>
 <desc-api />
 <desc-tip />

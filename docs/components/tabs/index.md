@@ -16,7 +16,7 @@ import TabsApi from "./component/tabs-api.md"
 import TabsTip from "./component/tabs-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <tabs-basic-use />
 <tabs-icon />
 <tabs-type />
@@ -24,6 +24,6 @@ import TabsTip from "./component/tabs-tip.md"
 <tabs-extra />
 <tabs-trigger />
 <tabs-scroll />
-</ClientOnly>
+</client-only>
 <tabs-api />
 <tabs-tip />

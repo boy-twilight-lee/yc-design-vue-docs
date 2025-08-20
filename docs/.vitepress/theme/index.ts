@@ -1,25 +1,35 @@
 import Theme from 'vitepress/theme';
 import { App, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
-import YcDesign from 'yc-design-vue';
 import 'yc-design-vue/es/style.css';
-import ArcoIcon from '@arco-design/web-vue/es/icon';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
+// 是否是服务端渲染
+export const isServerRendering = (() => {
+  try {
+    return !(typeof window !== 'undefined' && document !== undefined);
+  } catch (e) {
+    return true;
+  }
+})();
 
 export default {
   extends: Theme,
   enhanceApp: async ({ app }: { app: App }) => {
-    app.use(YcDesign);
-    app.use(ArcoIcon);
+    if (isServerRendering) return;
+    const YcDesign = await import('yc-design-vue');
+    const ArcoIcon = await import('@arco-design/web-vue/es/icon');
+    app.use(YcDesign.default);
+    app.use(ArcoIcon.default);
   },
   setup() {
+    if (isServerRendering) return;
+    // route信息
     const route = useRoute();
     watch(
       () => route.path,
       async () => {
         await nextTick();
-        if (typeof document === 'undefined') return;
         document?.querySelectorAll('details')?.forEach((details) => {
           const summary = details.querySelector('summary');
           if (!summary) {

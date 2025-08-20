@@ -14,12 +14,12 @@ import LinkApi from "./component/link-api.md"
 import LinkTip from "./component/link-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <link-basic-use />
 <link-status />
 <link-hover />
 <link-icon />
 <link-loading />
-</ClientOnly>
+</client-only>
 <link-api />
 <link-tip />

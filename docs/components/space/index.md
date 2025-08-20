@@ -15,13 +15,13 @@ import SpaceApi from "./component/space-api.md"
 import SpaceTip from "./component/space-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <space-basic-use />
 <space-vertical-offset />
 <space-size />
 <space-align />
 <space-wrap />
 <space-split />
-</ClientOnly>
+</client-only>
 <space-api />
 <space-tip />

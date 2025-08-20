@@ -13,11 +13,11 @@ import LayoutApi from "./component/layout-api.md"
 import LayoutTip from "./component/layout-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <layout-basic-use />
 <layout-icon />
 <layout-btn />
 <layout-resize-box />
-</ClientOnly>
+</client-only>
 <layout-api />
 <layout-tip />

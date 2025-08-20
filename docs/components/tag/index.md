@@ -18,7 +18,7 @@ import TagApi from "./component/tag-api.md"
 import TagTip from "./component/tag-tip.md"
 </script>
 
-<ClientOnly>
+<client-only>
 <tag-basic-use />
 <tag-close />
 <tag-edit />
@@ -28,6 +28,6 @@ import TagTip from "./component/tag-tip.md"
 <tag-loading />
 <tag-icon />
 <tag-border />
-</ClientOnly>
+</client-only>
 <tag-api />
 <tag-tip />
