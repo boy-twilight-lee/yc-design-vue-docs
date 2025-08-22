@@ -1,53 +1,167 @@
 ## API
 
-### Typography Props
+### common Props
 
-| 参数名              | 描述                   | 类型                                                             | 默认值  |
-| ------------------- | ---------------------- | ---------------------------------------------------------------- | ------- |
-| type                | 文本类型               | `'primary' \| 'secondary' \| 'success' \| 'warning' \| 'danger'` | `-`     |
-| bold                | 是否加粗               | `boolean`                                                        | `false` |
-| disabled            | 是否禁用               | `boolean`                                                        | `false` |
-| mark                | 是否标记               | `boolean`                                                        | `false` |
-| underline           | 是否下划线             | `boolean`                                                        | `false` |
-| delete              | 是否删除线             | `boolean`                                                        | `false` |
-| code                | 是否代码样式           | `boolean`                                                        | `false` |
-| editable            | 是否可编辑             | `boolean`                                                        | `false` |
-| editing (v-model)   | 是否处于编辑状态       | `boolean`                                                        | `false` |
-| edit-text (v-model) | 编辑的文本内容         | `string`                                                         | `-`     |
-| copyable            | 是否可复制             | `boolean`                                                        | `false` |
-| copy-text           | 复制的文本内容         | `string`                                                         | `-`     |
-| copy-delay          | 复制成功提示的延迟时间 | `number`                                                         | `3000`  |
-| ellipsis            | 省略配置               | `boolean \| EllipsisConfig`                                      | `false` |
+<field-table :data="props"/>
 
-### TypographyTitle Props
+### common Events
 
-| 参数名  | 描述     | 类型                         | 默认值 |
-| ------- | -------- | ---------------------------- | ------ |
-| heading | 标题级别 | `1 \| 2 \| 3 \| 4 \| 5 \| 6` | `1`    |
+<field-table :data="emits" :showDefaultValue="false" header="事件名"/>
 
-### TypographyParagraph Props
+### typography-title Props
 
-| 参数名     | 描述           | 类型                   | 默认值      |
-| ---------- | -------------- | ---------------------- | ----------- |
-| blockquote | 是否为引用样式 | `boolean`              | `false`     |
-| spacing    | 行间距类型     | `'default' \| 'close'` | `'default'` |
+<field-table :data="titleProps"/>
 
-### Typography Events
+### typography-paragraph Props
 
-| 事件名     | 描述               | 参数                    |
-| ---------- | ------------------ | ----------------------- |
-| edit-start | 开始编辑时触发     | `-`                     |
-| change     | 编辑完成时触发     | `(value: string)`       |
-| edit-end   | 结束编辑时触发     | `-`                     |
-| copy       | 复制时触发         | `(value: string)`       |
-| ellipsis   | 省略状态变化时触发 | `(isEllipsis: boolean)` |
-| expand     | 展开状态变化时触发 | `(expanded: boolean)`   |
+<field-table :data="paragraphProps"/>
 
-### Typography Slots
-
-| 插槽名       | 描述           | 参数                    |
-| ------------ | -------------- | ----------------------- |
-| default      | 文本内容       | `-`                     |
-| expand-node  | 自定义展开节点 | `{ expanded: boolean }` |
-| copy-icon    | 自定义复制图标 | `{ copied: boolean }`   |
-| copy-tooltip | 自定义复制提示 | `{ copied: boolean }`   |
+<script setup>
+import { ref } from 'vue';
+const props = ref([
+  {
+    name: 'type',
+    desc: '文本类型',
+    type: "`'primary' | 'secondary' | 'success' | 'danger' | 'warning'`",
+    value: '-',
+  },
+  {
+    name: 'bold',
+    desc: '粗体',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'mark',
+    desc: '添加标记样式',
+    type: '`boolean | { color: string }`',
+    value: '`false`',
+  },
+  {
+    name: 'underline',
+    desc: '下划线样式',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'delete',
+    desc: '删除线样式',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'code',
+    desc: '代码块样式',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'disabled',
+    desc: '禁用状态',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'editable',
+    desc: '开启可编辑功能',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'editing (v-model)',
+    desc: '是否在编辑状态',
+    type: '`boolean`',
+    value: '-',
+  },
+  {
+    name: 'default-editing',
+    desc: '默认的编辑状态',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'edit-text (v-model)',
+    desc: '编辑的文字',
+    type: '`string`',
+    value: '-',
+  },
+  {
+    name: 'copyable',
+    desc: '开启复制功能',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'copy-text',
+    desc: '复制的文字',
+    type: '`string`',
+    value: '-',
+  },
+  {
+    name: 'copy-delay',
+    desc: '复制成功后，复制按钮恢复到可点击状态的延迟时间，单位是毫秒 (2.16.0+)',
+    type: '`number`',
+    value: '`3000`',
+  },
+  {
+    name: 'edit-tooltip-props',
+    desc: '编辑按钮问题提示配置 (2.32.0+)',
+    type: '`object`',
+    value: '-',
+  },
+  {
+    name: 'copy-tooltip-props',
+    desc: '拷贝按钮问题提示配置 (2.32.0+)',
+    type: '`object`',
+    value: '-',
+  },
+]);
+const emits =  ref([
+  {
+    name: 'edit-start',
+    desc: '开始编辑',
+    type: '`() => void`',
+    value: '-',
+  },
+  {
+    name: 'change',
+    desc: '编辑内容变化',
+    type: '`(text: string) => void`',
+    value: '-',
+  },
+  {
+    name: 'edit-end',
+    desc: '编辑结束',
+    type: '`() => void`',
+    value: '-',
+  },
+  {
+    name: 'copy',
+    desc: '复制',
+    type: '`(text: string) => void`',
+    value: '-',
+  },
+]);
+const titleProps = ref([
+  {
+    name: 'heading',
+    desc: '标题级别，相当于 h1 h2 h3 h4 h5 h6',
+    type: "`'1' | '2' | '3' | '4' | '5' | '6'`",
+    value: "`'1'`",
+  },
+]);
+const paragraphProps = ref([
+  {
+    name: 'blockquote',
+    desc: '长引用',
+    type: '`boolean`',
+    value: '`false`',
+  },
+  {
+    name: 'spacing',
+    desc: '段落的的行高，长文本(大于5行)的时候推荐使用默认行高，短文本(小于等于3行)推荐使用 close 紧密的行高。',
+    type: "`'default' | 'close'`",
+    value: "`'default'`",
+  },
+]);
+</script>

@@ -1,13 +1,15 @@
 import Theme from 'vitepress/theme';
 import { watch, nextTick, h } from 'vue';
 import { useRoute } from 'vitepress';
+import vitepressNprogress from 'vitepress-plugin-nprogress';
+import 'vitepress-plugin-nprogress/lib/css/index.css';
 import 'yc-design-vue/es/style.css';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
 import '../style/global.less';
 import { HeroImage } from '../components/hero-image';
-import vitepressNprogress from 'vitepress-plugin-nprogress';
-import 'vitepress-plugin-nprogress/lib/css/index.css';
+import { FieldTable } from '../components/field-table';
+
 // 是否是服务端渲染
 export const isServerRendering = (() => {
   try {
@@ -27,6 +29,7 @@ export default {
     const ArcoIcon = await import('@arco-design/web-vue/es/icon');
     app.use(YcDesign.default);
     app.use(ArcoIcon.default);
+    app.component('FieldTable', FieldTable);
   },
   Layout() {
     return h(Theme.Layout, null, {

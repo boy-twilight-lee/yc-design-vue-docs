@@ -1,17 +1,41 @@
 ## API
 
-### Props
+### divider Props
 
-| 参数        | 说明           | 类型          | 默认值         |
-| ----------- | -------------- | ------------- | -------------- |
-| direction   | 分割线方向     | `Direction`   | `'horizontal'` |
-| orientation | 分割线文字位置 | `Orientation` | `'center'`     |
-| type        | 分割线类型     | `DividerType` | `'solid'`      |
-| size        | 分割线粗细     | `number`      | `1`            |
-| margin      | 分割线边距     | `number`      | -              |
+<field-table :data="dividerProps"/>
 
-### Slots
-
-| 插槽名  | 说明           |
-| ------- | -------------- |
-| default | 分割线文字内容 |
+<script setup>
+import { ref } from 'vue';
+const dividerProps = ref([
+  {
+    name: 'direction',
+    desc: '分割线的方向，是水平还是竖直',
+    type: "`'horizontal' | 'vertical'`",
+    value: "`'horizontal'`",
+  },
+  {
+    name: 'orientation',
+    desc: '分割线文字的位置',
+    type: "`'left' | 'center' | 'right'`",
+    value: "`'center'`",
+  },
+  {
+    name: 'type',
+    desc: '分割线样式类型 (2.35.0+)',
+    type: "`'solid' | 'dashed' | 'dotted' | 'double'`",
+    value: '-',
+  },
+  {
+    name: 'size',
+    desc: '分割线宽度/高度 (2.35.0+)',
+    type: '`number`',
+    value: '-',
+  },
+  {
+    name: 'margin',
+    desc: '分割线上下 margin (垂直方向时为左右 margin) (2.35.0+)',
+    type: '`number | string`',
+    value: '-',
+  },
+]);
+</script>
