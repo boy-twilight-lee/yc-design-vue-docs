@@ -1,10 +1,11 @@
 import Theme from 'vitepress/theme';
-import { App, watch, nextTick } from 'vue';
+import { App, watch, nextTick, h } from 'vue';
 import { useRoute } from 'vitepress';
 import 'yc-design-vue/es/style.css';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
 import '../style/global.less';
+import { HeroImage } from '../component/hero-image';
 // 是否是服务端渲染
 export const isServerRendering = (() => {
   try {
@@ -22,6 +23,11 @@ export default {
     const ArcoIcon = await import('@arco-design/web-vue/es/icon');
     app.use(YcDesign.default);
     app.use(ArcoIcon.default);
+  },
+  Layout() {
+    return h(Theme.Layout, null, {
+      'home-hero-image': () => h(HeroImage),
+    });
   },
   setup() {
     if (isServerRendering) return;

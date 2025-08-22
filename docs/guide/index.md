@@ -114,7 +114,6 @@ const text = ref('');
 - `yc-button` - 按钮组件
 - `yc-input` - 输入框组件
 - `yc-modal` - 对话框组件
-- `yc-table` - 表格组件
 
 ## 样式定制
 

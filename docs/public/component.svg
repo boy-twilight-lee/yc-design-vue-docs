@@ -1,0 +1,51 @@
+<svg width="160" height="192" viewBox="0 0 160 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--
+  设计说明 (已修改):
+  主色调: #165DFF (rgb(22, 93, 255))
+  特点:
+  - SVG画布尺寸已调整为 160x192，严格遵循 5:6 的宽高比。
+  - 内部元素被重新组织，以适应更垂直的构图，形成一种向下流动的视觉层次感。
+  - 保留了所有原始的精致元素和品牌色彩。
+  -->
+
+  <!-- 定义一个与主色调匹配的柔和阴影效果 -->
+  <defs>
+    <filter id="shadow-primary-5x6" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#165DFF" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- SVG整体背景, 尺寸调整为 160x192 -->
+  <rect width="160" height="192" rx="20" fill="#F8F9FC"/>
+
+  <!--
+    内容元素编组:
+    - transform 在160x192的画布中留出20px的边距
+  -->
+  <g transform="translate(20 20)" style="filter: url(#shadow-primary-5x6);">
+
+    <!-- 1. 顶部的个人资料卡片 -->
+    <rect x="22" y="0" width="76" height="36" rx="8" fill="#FFFFFF" stroke="#EBF1FF" stroke-width="2"/>
+    <circle cx="38" cy="18" r="8" fill="#165DFF"/>
+    <rect x="54" y="12" width="32" height="6" rx="3" fill="#CBD5E0"/>
+    <rect x="54" y="24" width="20" height="4" rx="2" fill="#E2E8F0"/>
+    
+    <!-- 2. 左侧中部的代码/图标组件 -->
+    <rect x="0" y="48" width="80" height="56" rx="8" fill="#FFFFFF" stroke="#EBF1FF" stroke-width="2"/>
+    <rect x="12" y="60" width="28" height="8" rx="4" fill="#A8C5FF"/>
+    <rect x="12" y="76" width="48" height="8" rx="4" fill="#EBF1FF"/>
+
+    <!-- 3. 右侧贯穿中下部的图表卡片 -->
+    <rect x="88" y="44" width="32" height="80" rx="8" fill="#FFFFFF" stroke="#EBF1FF" stroke-width="2"/>
+    <!-- 条形图的抽象表示 -->
+    <rect x="98" y="56" width="12" height="24" rx="3" fill="#A8C5FF"/>
+    <rect x="98" y="88" width="12" height="16" rx="3" fill="#165DFF"/>
+
+    <!-- 4. 左下方的交互元素 -->
+    <!-- 主按钮 -->
+    <rect x="0" y="120" width="72" height="32" rx="8" fill="#165DFF"/>
+    <!-- "开启"状态的开关 -->
+    <rect x="80" y="129" width="32" height="14" rx="7" fill="#165DFF"/>
+    <circle cx="104" cy="136" r="5" fill="white"/>
+  </g>
+</svg>

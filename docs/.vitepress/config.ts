@@ -1,21 +1,21 @@
 import { defineConfig } from 'vitepress';
 
-// iconpath
-const iconPath = '/logo.svg';
-
 export default defineConfig({
   title: 'Yc Design Vue',
   description: '基于 Vue 3 和 TypeScript 构建的现代化企业级 UI 组件库',
   lang: 'zh-CN',
   head: [
-    ['link', { rel: 'icon', href: iconPath }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#165DFF' }],
   ],
   themeConfig: {
-    logo: iconPath,
+    logo: '/logo.svg',
     siteTitle: 'Yc Design Vue',
     outline: {
       level: [2, 3],
+    },
+    lastUpdated: {
+      text: '最后更新于',
     },
     nav: [
       { text: '指南', link: '/guide/' },
@@ -190,10 +190,6 @@ export default defineConfig({
         link: 'https://github.com/boy-twilight-lee/yc-design-vue',
       },
     ],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present Yc Design Vue',
-    },
     search: {
       provider: 'local',
       options: {
