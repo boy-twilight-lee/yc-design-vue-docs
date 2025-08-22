@@ -1,53 +1,53 @@
 ## API
 
-### Props
+### auto-complete Props
 
-| 参数             | 说明             | 类型                                                        | 默认值       |
-| ---------------- | ---------------- | ----------------------------------------------------------- | ------------ |
-| modelValue       | 绑定值           | `string`                                                    | -            |
-| defaultValue     | 默认值           | `string`                                                    | `''`         |
-| disabled         | 是否禁用         | `boolean`                                                   | `false`      |
-| data             | 选项数据         | `SelectOptions`                                             | `() => []`   |
-| popupContainer   | 弹出层容器       | `PopupContainer`                                            | -            |
-| strict           | 是否严格模式     | `boolean`                                                   | `false`      |
-| filterOption     | 自定义过滤函数   | `(inputValue: string, option: SelectOptionData) => boolean` | -            |
-| triggerProps     | 触发器属性       | `TriggerProps`                                              | `() => ({})` |
-| allowClear       | 是否允许清空     | `boolean`                                                   | `true`       |
-| vistualListProps | 虚拟列表属性     | `VirtualListProps`                                          | -            |
-| isSelectSetValue | 选择时是否设置值 | `boolean`                                                   | `true`       |
-| isSearch         | 是否启用搜索     | `boolean`                                                   | `true`       |
-| type             | 输入框类型       | `'textarea' \| 'input'`                                     | `'input'`    |
+<field-table :data="autoCompleteProps"/>
 
-### Events
+### auto-complete Events
 
-| 事件名                | 说明             | 回调参数                     |
-| --------------------- | ---------------- | ---------------------------- |
-| update:modelValue     | 值更新时触发     | `(value: string)`            |
-| change                | 值改变时触发     | `(value: string)`            |
-| search                | 搜索时触发       | `(value: string)`            |
-| select                | 选择选项时触发   | `(value: string)`            |
-| clear                 | 清空时触发       | `(ev?: Event)`               |
-| dropdown-scroll       | 下拉框滚动时触发 | `(ev?: Event)`               |
-| dropdown-reach-bottom | 下拉框触底时触发 | `(ev?: Event)`               |
-| blur                  | 失去焦点时触发   | `(ev: FocusEvent)`           |
-| focus                 | 获得焦点时触发   | `(ev: FocusEvent)`           |
-| input                 | 输入时触发       | `(value: string, ev: Event)` |
-| keydown               | 按键按下时触发   | `(ev: KeyboardEvent)`        |
+<field-table :data="autoCompleteEvents" type="emits"/>
 
-### Slots
+### auto-complete Methods
 
-| 插槽名  | 说明           | 参数                   |
-| ------- | -------------- | ---------------------- |
-| option  | 自定义选项渲染 | `{ data: ObjectData }` |
-| footer  | 底部内容       | -                      |
-| trigger | 自定义触发器   | -                      |
+<field-table :data="autoCompleteMethods" type="expose"/>
 
-### Expose
+### auto-complete Slots
 
-| 方法名         | 说明           | 参数                     |
-| -------------- | -------------- | ------------------------ |
-| focus          | 聚焦           | -                        |
-| blur           | 失焦           | -                        |
-| getInputRef    | 获取输入框引用 | -                        |
-| getMirrorRef   | 获取镜像引用   | -                        |
-| updatePosition | 更新位置       | `(x: number, y: number)` |
+<field-table :data="autoCompleteSlots" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const autoCompleteProps = ref([
+  { name: 'model-value (v-model)', desc: '绑定值', type: 'string', value: '-' },
+  { name: 'default-value', desc: '默认值（非受控模式）', type: 'string', value: "''" },
+  { name: 'disabled', desc: '是否禁用', type: 'boolean', value: 'false' },
+  { name: 'data', desc: '用于自动提示的数据', type: '(string | number | SelectOptionData | SelectOptionGroup)[]', value: '[]' },
+  { name: 'popup-container', desc: '弹出框的挂载容器', type: 'string | HTMLElement | null | undefined', value: '-' },
+  { name: 'strict', desc: '是否为严格校验模式', type: 'boolean', value: 'false' },
+  { name: 'filter-option', desc: '自定义选项过滤方法', type: 'FilterOption', value: 'true' },
+  { name: 'trigger-props', desc: 'trigger 组件属性', type: 'TriggerProps', value: '-', version: '2.14.0' },
+  { name: 'allow-clear', desc: '是否允许清空输入框', type: 'boolean', value: 'false', version: '2.23.0' },
+  { name: 'virtual-list-props', desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps', type: 'VirtualListProps', value: '-', version: '2.50.0' },
+]);
+
+const autoCompleteEvents = ref([
+  { name: 'change', desc: '绑定值发生改变时触发', type: 'value: string' },
+  { name: 'search', desc: '用户搜索时触发', type: 'value: string' },
+  { name: 'select', desc: '选择选项时触发', type: 'value: string' },
+  { name: 'clear', desc: '用户点击清除按钮时触发', type: 'ev: Event', version: '2.23.0' },
+  { name: 'dropdown-scroll', desc: '下拉菜单发生滚动时触发', type: 'ev: Event', version: '2.52.0' },
+  { name: 'dropdown-reach-bottom', desc: '下拉菜单滚动到底部时触发', type: 'ev: Event', version: '2.52.0' },
+]);
+
+const autoCompleteMethods = ref([
+  { name: 'focus', desc: '使输入框获取焦点', type: '-', value: '-', version: '2.40.0' },
+  { name: 'blur', desc: '使输入框失去焦点', type: '-', value: '-', version: '2.40.0' },
+]);
+
+const autoCompleteSlots = ref([
+  { name: 'option', desc: '选项内容', type: 'data: OptionInfo', version: '2.13.0' },
+  { name: 'footer', desc: '弹出框的页脚' },
+]);
+</script>
