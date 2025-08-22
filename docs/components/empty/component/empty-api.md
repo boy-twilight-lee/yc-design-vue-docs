@@ -1,14 +1,45 @@
 ## API
 
-### Props
+### empty Props
 
-| 参数        | 说明           | 类型     | 默认值       |
-| ----------- | -------------- | -------- | ------------ |
-| description | 自定义描述文字 | `string` | `'暂无数据'` |
-| imgSrc      | 自定义图片地址 | `string` | `''`         |
+<field-table :data="emptyProps"/>
 
-### Slots
+### empty Slots
 
-| 插槽名 | 说明           |
-| ------ | -------------- |
-| image  | 自定义图片内容 |
+<field-table :data="emptySlots" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const emptyProps = ref([
+  {
+    name: 'description',
+    desc: '描述内容',
+    type: 'string',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'img-src',
+    desc: '自定义图片的地址',
+    type: 'string',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'in-config-provider',
+    desc: '是否在 ConfigProvider 中使用',
+    type: 'boolean',
+    value: 'false',
+    version: '2.47.0',
+  },
+]);
+
+const emptySlots = ref([
+  {
+    name: 'image',
+    desc: '图片/图标',
+  },
+]);
+
+</script>

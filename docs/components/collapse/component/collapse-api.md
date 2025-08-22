@@ -1,39 +1,134 @@
 ## API
 
-### Collapse Props
+### collapse Props
 
-| 参数               | 说明               | 类型                 | 默认值   |
-| ------------------ | ------------------ | -------------------- | -------- |
-| activeKey          | 当前展开的面板     | `CollapseValue[]`    | -        |
-| defaultActiveKey   | 默认展开的面板     | `CollapseValue[]`    | `[]`     |
-| accordion          | 是否开启手风琴模式 | `boolean`            | `false`  |
-| showExpandIcon     | 是否显示展开图标   | `boolean`            | `true`   |
-| expandIconPosition | 展开图标位置       | `ExpandIconPosition` | `'left'` |
-| bordered           | 是否有边框         | `boolean`            | `true`   |
-| destroyOnHide      | 隐藏时是否销毁内容 | `boolean`            | `false`  |
+<field-table :data="collapseProps"/>
 
-### CollapseItem Props
+### collapse Events
 
-| 参数           | 说明               | 类型            | 默认值  |
-| -------------- | ------------------ | --------------- | ------- |
-| path           | 面板的唯一标识     | `CollapseValue` | -       |
-| header         | 面板标题           | `string`        | -       |
-| disabled       | 是否禁用           | `boolean`       | `false` |
-| showExpandIcon | 是否显示展开图标   | `boolean`       | -       |
-| destroyOnHide  | 隐藏时是否销毁内容 | `boolean`       | -       |
+<field-table :data="collapseEvents" type="emits"/>
 
-### Events
+### collapse-item Props
 
-| 事件名           | 说明                 | 回调参数                   |
-| ---------------- | -------------------- | -------------------------- |
-| update:activeKey | 展开的面板变化时触发 | `(value: CollapseValue[])` |
-| change           | 展开的面板变化时触发 | `(value: CollapseValue[])` |
+<field-table :data="collapseItemProps"/>
 
-### Slots
+### collapse-item Slots
 
-| 插槽名      | 说明           | 参数                                                                  |
-| ----------- | -------------- | --------------------------------------------------------------------- |
-| default     | 面板内容       | -                                                                     |
-| expand-icon | 自定义展开图标 | `{ active: boolean, disabled: boolean, position: 'left' \| 'right' }` |
-| header      | 自定义头部内容 | -                                                                     |
-| extra       | 额外操作区域   | -                                                                     |
+<field-table :data="collapseItemSlots" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const collapseProps = ref([
+  {
+    name: 'active-key (v-model)',
+    desc: '当前展开的面板的 key',
+    type: '(string | number)[]',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'default-active-key',
+    desc: '默认展开的面板的 key （非受控模式）',
+    type: '(string | number)[]',
+    value: '[]',
+    version: '',
+  },
+  {
+    name: 'accordion',
+    desc: '是否开启手风琴模式',
+    type: 'boolean',
+    value: 'false',
+    version: '',
+  },
+  {
+    name: 'show-expand-icon',
+    desc: '是否显示展开图标',
+    type: 'boolean',
+    value: '-',
+    version: '2.33.0',
+  },
+  {
+    name: 'expand-icon-position',
+    desc: '展开图标显示的位置',
+    type: "'left' | 'right'",
+    value: "'left'",
+    version: '',
+  },
+  {
+    name: 'bordered',
+    desc: '是否显示边框',
+    type: 'boolean',
+    value: 'true',
+    version: '',
+  },
+  {
+    name: 'destroy-on-hide',
+    desc: '是否在隐藏时销毁内容',
+    type: 'boolean',
+    value: 'false',
+    version: '2.27.0',
+  },
+]);
+
+const collapseEvents = ref([
+  {
+    name: 'change',
+    desc: '展开的面板发生改变时触发',
+    type: 'activeKey: (string | number)[], ev: Event',
+  },
+]);
+
+const collapseItemProps = ref([
+  {
+    name: 'header',
+    desc: '面板的标题',
+    type: 'string',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
+    version: '',
+  },
+  {
+    name: 'show-expand-icon',
+    desc: '是否显示展开图标',
+    type: 'boolean',
+    value: 'true',
+    version: '',
+  },
+  {
+    name: 'destroy-on-hide',
+    desc: '是否在隐藏时销毁内容',
+    type: 'boolean',
+    value: 'false',
+    version: '2.27.0',
+  },
+]);
+
+const collapseItemSlots = ref([
+  {
+    name: 'extra',
+    desc: '额外内容',
+    type: '-',
+    version: '',
+  },
+  {
+    name: 'expand-icon',
+    desc: '展开图标',
+    type: "active: boolean, disabled: boolean, position: 'left' | 'right'",
+    version: '2.33.0',
+  },
+  {
+    name: 'header',
+    desc: '面板的标题',
+    type: '-',
+    version: '',
+  },
+]);
+
+</script>

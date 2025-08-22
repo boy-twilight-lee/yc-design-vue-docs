@@ -14,37 +14,37 @@ const linkProps = ref([
   {
     name: 'href',
     desc: '链接地址',
-    type: '`string`',
+    type: 'string',
     value: '-',
   },
   {
     name: 'status',
     desc: '链接的状态',
-    type: "`'normal' | 'warning' | 'success' | 'danger'`",
+    type: "'normal' | 'warning' | 'success' | 'danger'",
     value: "`'normal'`",
   },
   {
     name: 'hoverable',
     desc: '鼠标悬浮时存在底色 (2.7.0+)',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`true`',
   },
   {
     name: 'icon',
     desc: '图标 (2.7.0+)',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`false`',
   },
   {
     name: 'loading',
     desc: '链接是否为加载中状态 (2.37.0+)',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`false`',
   },
   {
     name: 'disabled',
     desc: '链接是否禁用',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`false`',
   },
 ]);
@@ -52,7 +52,7 @@ const emits =  ref([
   {
     name: 'click',
     desc: '点击时触发',
-    type: '`(ev: MouseEvent) => void`',
+    type: '(ev: MouseEvent) => void',
     value: '-',
   },
 ]);

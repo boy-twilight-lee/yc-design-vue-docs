@@ -1,27 +1,77 @@
 ## API
 
-### Props
+### calendar Props
 
-| 参数         | 说明             | 类型             | 默认值              |
-| ------------ | ---------------- | ---------------- | ------------------- |
-| modelValue   | 当前选中的日期   | `Date`           | -                   |
-| defaultValue | 默认选中的日期   | `Date`           | `new Date()`        |
-| mode         | 日历模式         | `CalendarMode`   | -                   |
-| defaultMode  | 默认模式         | `CalendarMode`   | `'month'`           |
-| modes        | 可切换的模式列表 | `CalendarMode[]` | `['month', 'year']` |
+<field-table :data="calendarProps"/>
 
-### Events
+### calendar Events
 
-| 事件名            | 说明           | 回调参数               |
-| ----------------- | -------------- | ---------------------- |
-| update:modelValue | 日期变化时触发 | `(value: Date)`        |
-| update:mode       | 模式变化时触发 | `(mode: CalendarMode)` |
-| change            | 日期变化时触发 | `(value: Date)`        |
-| panel-change      | 面板变化时触发 | `(value: Date)`        |
+<field-table :data="calendarEvents" type="emits" />
 
-### Slots
+### calendar Slots
 
-| 插槽名  | 说明                 | 参数                                           |
-| ------- | -------------------- | ---------------------------------------------- |
-| header  | 自定义头部内容       | `{ year: number, month: number }`              |
-| default | 自定义日期单元格内容 | `{ year: number, month: number, day: number }` |
+<field-table :data="calendarSlots" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+const calendarProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'date',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: 'date',
+    value: '-',
+  },
+  {
+    name: 'mode',
+    desc: '模式',
+    type: "'month' | 'year'",
+    value: '-',
+  },
+  {
+    name: 'default-mode',
+    desc: '默认模式',
+    type: "'month' | 'year'",
+    value: "'month'",
+  },
+  {
+    name: 'modes',
+    desc: '显示的模式',
+    type: "('month' | 'year')[]",
+    value: "['month', 'year']",
+  },
+]);
+
+const calendarEvents = ref([
+  {
+    name: 'change',
+    desc: '选择的日期改变时触发',
+    type: 'date: Date',
+  },
+  {
+    name: 'panel-change',
+    desc: '日期面板改变时触发',
+    type: 'date: Date',
+  },
+]);
+
+const calendarSlots = ref([
+  {
+    name: 'header',
+    desc: '自定义头部内容',
+    type: 'year: number, month: number',
+    version: '2.53.0',
+  },
+  {
+    name: 'default',
+    desc: '自定义单元格内容',
+    type: 'year: number, month: number, date: number',
+    version: '2.53.0',
+  },
+]);
+</script>

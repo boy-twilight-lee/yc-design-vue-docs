@@ -1,37 +1,133 @@
 ## API
 
-### Card Props
+### card Props
 
-| 参数        | 说明             | 类型            | 默认值  |
-| ----------- | ---------------- | --------------- | ------- |
-| bordered    | 是否有边框       | `boolean`       | `true`  |
-| loading     | 是否显示加载状态 | `boolean`       | `false` |
-| hoverable   | 是否可悬停       | `boolean`       | `false` |
-| size        | 卡片尺寸         | `CardSize`      | -       |
-| headerStyle | 头部样式         | `CSSProperties` | `{}`    |
-| bodyStyle   | 内容区域样式     | `CSSProperties` | `{}`    |
-| title       | 卡片标题         | `string`        | `''`    |
-| extra       | 额外操作区域     | `string`        | `''`    |
+<field-table :data="cardProps"/>
 
-### CardMeta Props
+### card Slots
 
-| 参数        | 说明 | 类型     | 默认值 |
-| ----------- | ---- | -------- | ------ |
-| title       | 标题 | `string` | -      |
-| description | 描述 | `string` | -      |
+<field-table :data="cardSlots" type="slots"/>
 
-### CardGrid Props
+### card-meta Props
 
-| 参数      | 说明       | 类型      | 默认值 |
-| --------- | ---------- | --------- | ------ |
-| hoverable | 是否可悬停 | `boolean` | -      |
+<field-table :data="cardMetaProps"/>
 
-### Slots
+### card-meta Slots
 
-| 插槽名  | 说明         |
-| ------- | ------------ |
-| actions | 卡片操作区域 |
-| cover   | 卡片封面     |
-| extra   | 额外操作区域 |
-| title   | 卡片标题     |
-| default | 卡片内容     |
+<field-table :data="cardMetaSlots" type="slots"/>
+
+### card-grid Props
+
+<field-table :data="cardGridProps"/>
+
+<script setup>
+import { ref } from 'vue';
+const cardProps = ref([
+  {
+    name: 'bordered',
+    desc: '是否有边框',
+    type: 'boolean',
+    value: 'true',
+  },
+  {
+    name: 'loading',
+    desc: '是否为加载中',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'hoverable',
+    desc: '是否可悬浮',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'size',
+    desc: '卡片尺寸',
+    type: "'medium' | 'small'",
+    value: "'medium'",
+  },
+  {
+    name: 'header-style',
+    desc: '自定义标题区域样式',
+    type: 'CSSProperties',
+    value: '() => ({})',
+  },
+  {
+    name: 'body-style',
+    desc: '内容区域自定义样式',
+    type: 'CSSProperties',
+    value: '() => ({})',
+  },
+  {
+    name: 'title',
+    desc: '卡片标题',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'extra',
+    desc: '卡片右上角的操作区域',
+    type: 'string',
+    value: '-',
+  },
+]);
+
+const cardSlots = ref([
+  {
+    name: 'actions',
+    desc: '卡片底部的操作组',
+  },
+  {
+    name: 'cover',
+    desc: '卡片封面',
+  },
+  {
+    name: 'extra',
+    desc: '卡片右上角的操作区域',
+  },
+  {
+    name: 'title',
+    desc: '卡片标题',
+  },
+]);
+
+const cardMetaProps = ref([
+  {
+    name: 'title',
+    desc: '标题',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'description',
+    desc: '描述',
+    type: 'string',
+    value: '-',
+  },
+]);
+
+const cardMetaSlots = ref([
+  {
+    name: 'description',
+    desc: '描述',
+  },
+  {
+    name: 'title',
+    desc: '标题',
+  },
+  {
+    name: 'avatar',
+    desc: '头像',
+  },
+]);
+
+const cardGridProps = ref([
+  {
+    name: 'hoverable',
+    desc: '是否可以悬浮',
+    type: 'boolean',
+    value: 'false',
+  },
+]);
+</script>

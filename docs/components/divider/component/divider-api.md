@@ -10,31 +10,31 @@ const dividerProps = ref([
   {
     name: 'direction',
     desc: '分割线的方向，是水平还是竖直',
-    type: "`'horizontal' | 'vertical'`",
+    type: "'horizontal' | 'vertical'",
     value: "`'horizontal'`",
   },
   {
     name: 'orientation',
     desc: '分割线文字的位置',
-    type: "`'left' | 'center' | 'right'`",
+    type: "'left' | 'center' | 'right'",
     value: "`'center'`",
   },
   {
     name: 'type',
     desc: '分割线样式类型 (2.35.0+)',
-    type: "`'solid' | 'dashed' | 'dotted' | 'double'`",
+    type: "'solid' | 'dashed' | 'dotted' | 'double'",
     value: '-',
   },
   {
     name: 'size',
     desc: '分割线宽度/高度 (2.35.0+)',
-    type: '`number`',
+    type: 'number',
     value: '-',
   },
   {
     name: 'margin',
     desc: '分割线上下 margin (垂直方向时为左右 margin) (2.35.0+)',
-    type: '`number | string`',
+    type: 'number | string',
     value: '-',
   },
 ]);

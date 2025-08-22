@@ -1,32 +1,103 @@
 ## API
 
-### Props
+### carousel Props
 
-| 参数                     | 说明                 | 类型                    | 默认值  |
-| ------------------------ | -------------------- | ----------------------- | ------- |
-| current                  | 当前显示的轮播项索引 | `number`                | -       |
-| defaultCurrent           | 默认显示的轮播项索引 | `number`                | `0`     |
-| autoPlay                 | 是否自动播放         | `AutoPlay`              | `false` |
-| moveSpeed                | 移动速度             | `number`                | -       |
-| animationName            | 动画效果             | `CarouselAnimationName` | -       |
-| trigger                  | 指示器触发方式       | `IndicatorTrigger`      | -       |
-| direction                | 轮播方向             | `Direction`             | -       |
-| showArrow                | 箭头显示方式         | `CarouselShowArrow`     | -       |
-| arrowClass               | 箭头样式类           | `ClassName`             | -       |
-| indicatorType            | 指示器类型           | `IndicatorType`         | -       |
-| indicatorPosition        | 指示器位置           | `IndicatorPosition`     | -       |
-| indicatorClass           | 指示器样式类         | `ClassName`             | -       |
-| transitionTimingFunction | 过渡时间函数         | `string`                | -       |
+<field-table :data="carouselProps"/>
 
-### Events
+### carousel Events
 
-| 事件名         | 说明               | 回调参数                                               |
-| -------------- | ------------------ | ------------------------------------------------------ |
-| update:current | 当前索引变化时触发 | `(index: number)`                                      |
-| change         | 轮播变化时触发     | `(index: number, preIndex: number, isManual: boolean)` |
+<field-table :data="carouselEvents" type="emits"/>
 
-### Slots
+<script setup>
+import { ref } from 'vue';
 
-| 插槽名  | 说明       |
-| ------- | ---------- |
-| default | 轮播项内容 |
+const carouselProps = ref([
+  {
+    name: 'current (v-model)',
+    desc: '当前展示索引',
+    type: 'number',
+    value: '-',
+  },
+  {
+    name: 'default-current',
+    desc: '当前展示索引',
+    type: 'number',
+    value: '1',
+  },
+  {
+    name: 'auto-play',
+    desc: '是否自动循环展示，或者传入 { interval: 自动切换的时间间隔(默认: 3000), hoverToPause: 鼠标悬浮时是否暂停自动切换(默认: true) } 进行高级配置',
+    type: 'boolean | CarouselAutoPlayConfig',
+    value: 'false',
+  },
+  {
+    name: 'move-speed',
+    desc: '幻灯片移动速率(ms)',
+    type: 'number',
+    value: '500',
+  },
+  {
+    name: 'animation-name',
+    desc: '切换动画',
+    type: "'slide' | 'fade' | 'card'",
+    value: "'slide'",
+  },
+  {
+    name: 'trigger',
+    desc: '幻灯片切换触发方式, click/hover 指示器',
+    type: "'click' | 'hover'",
+    value: "'click'",
+  },
+  {
+    name: 'direction',
+    desc: '幻灯片移动方向',
+    type: "'horizontal' | 'vertical'",
+    value: "'horizontal'",
+  },
+  {
+    name: 'show-arrow',
+    desc: '切换箭头显示时机',
+    type: "'always' | 'hover' | 'never'",
+    value: "'always'",
+  },
+  {
+    name: 'arrow-class',
+    desc: '切换箭头样式',
+    type: 'string',
+    value: "''",
+  },
+  {
+    name: 'indicator-type',
+    desc: '指示器类型，可为小方块和小圆点或不显示',
+    type: "'line' | 'dot' | 'slider' | 'never'",
+    value: "'dot'",
+  },
+  {
+    name: 'indicator-position',
+    desc: '指示器位置',
+    type: "'bottom' | 'top' | 'left' | 'right' | 'outer'",
+    value: "'bottom'",
+  },
+  {
+    name: 'indicator-class',
+    desc: '指示器的样式',
+    type: 'string',
+    value: "''",
+  },
+  {
+    name: 'transition-timing-function',
+    desc: '过渡速度曲线, 默认匀速 transition-timing-function',
+    type: 'string',
+    value: "'cubic-bezier(0.34, 0.69, 0.1, 1)'",
+  },
+]);
+
+const carouselEvents = ref([
+  {
+    name: 'change',
+    desc: '幻灯片发生切换时的回调函数',
+    type: 'index: number, prevIndex: number, isManual: boolean',
+  },
+]);
+
+</script>

@@ -1,22 +1,70 @@
 ## API
 
-### Props
+### comment Props
 
-| 参数     | 说明     | 类型           | 默认值   |
-| -------- | -------- | -------------- | -------- |
-| author   | 评论作者 | `string`       | `''`     |
-| avatar   | 头像地址 | `string`       | `''`     |
-| content  | 评论内容 | `string`       | `''`     |
-| datetime | 评论时间 | `string`       | `''`     |
-| align    | 对齐方式 | `CommentAlign` | `'left'` |
+<field-table :data="commentProps"/>
 
-### Slots
+### comment Slots
 
-| 插槽名   | 说明       |
-| -------- | ---------- |
-| avatar   | 自定义头像 |
-| author   | 自定义作者 |
-| datetime | 自定义时间 |
-| content  | 自定义内容 |
-| actions  | 操作区域   |
-| default  | 嵌套评论   |
+<field-table :data="commentSlots" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const commentProps = ref([
+  {
+    name: 'author',
+    desc: '作者名',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'avatar',
+    desc: '头像',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'content',
+    desc: '评论内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'datetime',
+    desc: '时间描述',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'align',
+    desc: '靠左/靠右 展示 datetime 和 actions',
+    type: '\'left\' | \'right\' | { datetime?: "left" | "right"; actions?: "left" | "right" }',
+    value: "'left'",
+  },
+]);
+
+const commentSlots = ref([
+  {
+    name: 'avatar',
+    desc: '头像',
+  },
+  {
+    name: 'author',
+    desc: '作者',
+  },
+  {
+    name: 'datetime',
+    desc: '时间描述',
+  },
+  {
+    name: 'content',
+    desc: '评论内容',
+  },
+  {
+    name: 'actions',
+    desc: '操作列表',
+  },
+]);
+
+</script>

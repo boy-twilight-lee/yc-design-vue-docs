@@ -44,13 +44,13 @@ const rowProps = ref([
   {
     name: 'div',
     desc: '开启这个选项Row和Col都会被当作div而不会附带任何Grid相关的类和样式',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`false`',
   },
   {
     name: 'wrap',
     desc: 'Col 是否支持换行',
-    type: '`boolean`',
+    type: 'boolean',
     value: '`true`',
   },
 ]);

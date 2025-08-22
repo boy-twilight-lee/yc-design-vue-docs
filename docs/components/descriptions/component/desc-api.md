@@ -1,32 +1,164 @@
 ## API
 
-### Descriptions Props
+### descriptions Props
 
-| 参数        | 说明       | 类型                 | 默认值         |
-| ----------- | ---------- | -------------------- | -------------- |
-| data        | 描述数据   | `DescData[]`         | `[]`           |
-| column      | 列数       | `DescriptionsColumn` | `3`            |
-| title       | 标题       | `string`             | `''`           |
-| layout      | 布局方式   | `DescriptionsLayout` | `'horizontal'` |
-| align       | 对齐方式   | `DescriptionsAlign`  | `'left'`       |
-| size        | 尺寸       | `Size`               | -              |
-| bordered    | 是否有边框 | `boolean`            | `false`        |
-| labelStyle  | 标签样式   | `CSSProperties`      | `{}`           |
-| valueStyle  | 值样式     | `CSSProperties`      | `{}`           |
-| tableLayout | 表格布局   | `TableLayout`        | `'auto'`       |
+<field-table :data="descriptionsProps"/>
 
-### DescriptionsItem Props
+### descriptions Slots
 
-| 参数  | 说明   | 类型     | 默认值 |
-| ----- | ------ | -------- | ------ |
-| span  | 跨列数 | `number` | `1`    |
-| label | 标签   | `string` | -      |
+<field-table :data="descriptionsSlots" type="slots"/>
 
-### Slots
+### descriptions-item Props
 
-| 插槽名  | 说明       | 参数                                               |
-| ------- | ---------- | -------------------------------------------------- |
-| default | 描述项内容 | -                                                  |
-| value   | 自定义值   | `{ value: string, index: number, data: DescData }` |
-| label   | 自定义标签 | `{ label: string, index: number, data: DescData }` |
-| title   | 自定义标题 | -                                                  |
+<field-table :data="descriptionsItemProps"/>
+
+### descriptions-item Slots
+
+<field-table :data="descriptionsItemSlots" type="slots"/>
+
+### DescData
+
+<field-table :data="descDataProps"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const descriptionsProps = ref([
+  {
+    name: 'data',
+    desc: '描述列表的数据',
+    type: 'DescData[]',
+    value: '[]',
+    version: '',
+  },
+  {
+    name: 'column',
+    desc: '每行放置的数据个数。2.20.0 版本支持响应式配置，配置可参考 Grid',
+    type: 'number | ResponsiveValue',
+    value: '3',
+    version: '',
+  },
+  {
+    name: 'title',
+    desc: '描述列表的标题',
+    type: 'string',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'layout',
+    desc: '描述列表的排列方式',
+    type: "'horizontal' | 'vertical' | 'inline-horizontal' | 'inline-vertical'",
+    value: "'horizontal'",
+    version: '',
+  },
+  {
+    name: 'align',
+    desc: '文字的对齐位置',
+    type: 'TextAlign | { label?: TextAlign; value?: TextAlign }',
+    value: "'left'",
+    version: '',
+  },
+  {
+    name: 'size',
+    desc: '描述列表的大小',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'bordered',
+    desc: '是否显示边框',
+    type: 'boolean',
+    value: 'false',
+    version: '',
+  },
+  {
+    name: 'label-style',
+    desc: '数据标签的样式',
+    type: 'CSSProperties',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'value-style',
+    desc: '数据内容的样式',
+    type: 'CSSProperties',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'table-layout',
+    desc: '描述中表格样式的 layout-fixed，当设置成 fixed 时，宽度会均分。',
+    type: "'auto' | 'fixed'",
+    value: "'auto'",
+    version: '2.38.0',
+  },
+]);
+
+const descriptionsSlots = ref([
+  {
+    name: 'value',
+    desc: '数据内容',
+    type: 'value: string, index: number, data: DescData',
+  },
+  {
+    name: 'label',
+    desc: '数据标签',
+    type: 'label: string, index: number, data: DescData',
+  },
+  {
+    name: 'title',
+    desc: '标题',
+    type: '-',
+  },
+]);
+
+const descriptionsItemProps = ref([
+  {
+    name: 'span',
+    desc: '所占列数',
+    type: 'number',
+    value: '1',
+    version: '2.18.0',
+  },
+  {
+    name: 'label',
+    desc: '标签',
+    type: 'string',
+    value: '-',
+    version: '2.18.0',
+  },
+]);
+
+const descriptionsItemSlots = ref([
+  {
+    name: 'label',
+    desc: '标签',
+    type: '-',
+    version: '2.18.0',
+  },
+]);
+
+const descDataProps = ref([
+  {
+    name: 'label',
+    desc: '标签',
+    type: 'string | RenderFunction',
+    value: '-',
+  },
+  {
+    name: 'value',
+    desc: '数据',
+    type: 'string | RenderFunction',
+    value: '-',
+  },
+  {
+    name: 'span',
+    desc: '所占列数',
+    type: 'number',
+    value: '1',
+  },
+]);
+
+</script>

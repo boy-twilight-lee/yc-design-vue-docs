@@ -1,21 +1,59 @@
 ## API
 
-### Props
+### badge Props
 
-| 参数     | 说明                                         | 类型               | 默认值   |
-| -------- | -------------------------------------------- | ------------------ | -------- |
-| count    | 展示的数字，大于 maxCount 时显示为 maxCount+ | `number`           | -        |
-| dot      | 不展示数字，只有一个小红点                   | `boolean`          | `false`  |
-| dotStyle | 自定义点的样式                               | `CSSProperties`    | `{}`     |
-| maxCount | 最大值，超过最大值会显示为 maxCount+         | `number`           | `99`     |
-| offset   | 设置状态点的位置偏移                         | `[number, number]` | `[0, 0]` |
-| color    | 自定义徽标颜色                               | `string`           | -        |
-| status   | 设置徽标为状态点                             | `BadgeStatus`      | -        |
-| text     | 状态点的文本                                 | `string`           | `''`     |
+<field-table :data="badgeProps"/>
 
-### Slots
-
-| 插槽名  | 说明           |
-| ------- | -------------- |
-| default | 徽标包裹的内容 |
-| content | 自定义徽标内容 |
+<script setup>
+import { ref } from 'vue';
+const badgeProps = ref([
+  {
+    name: 'text',
+    desc: '自定义提示内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'dot',
+    desc: '显示为小红点',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'dot-style',
+    desc: '徽标的样式',
+    type: 'object',
+    value: '-',
+  },
+  {
+    name: 'max-count',
+    desc: '徽标最大显示数值，如果count超过这个数值会显示为maxCount',
+    type: 'number',
+    value: '99',
+  },
+  {
+    name: 'offset',
+    desc: '设置徽标位置的偏移',
+    type: 'number[]',
+    value: '[]',
+  },
+  {
+    name: 'color',
+    desc: '内置的一些颜色',
+    type: 'ColorType | string',
+    value: '-',
+  },
+  {
+    name: 'status',
+    desc: '徽标的状态类型',
+    type: "'normal' | 'processing' | 'success' | 'warning' | 'danger'",
+    value: '-',
+  },
+  {
+    name: 'count',
+    desc: '徽标显示的数字',
+    type: 'number',
+    value: '-',
+  },
+]);
+</script>

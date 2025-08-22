@@ -1,46 +1,149 @@
 ## API
 
-### Avatar Props
+### avatar Props
 
-| 参数             | 说明                 | 类型                                       | 默认值       |
-| ---------------- | -------------------- | ------------------------------------------ | ------------ |
-| shape            | 头像形状             | `'square' \| 'round'`                      | -            |
-| imageUrl         | 图片地址             | `string`                                   | -            |
-| size             | 头像尺寸             | `number`                                   | -            |
-| autoFixFontSize  | 是否自动调整字体大小 | `boolean`                                  | -            |
-| triggerType      | 触发器类型           | `'mask' \| 'button'`                       | `'button'`   |
-| triggerIconStyle | 触发器图标样式       | `CSSProperties`                            | `() => ({})` |
-| objectFit        | 图片填充方式         | `'cover' \| 'contain' \| 'fill' \| 'none'` | `'cover'`    |
+<field-table :data="avatarProps"/>
 
-### AvatarGroup Props
+### avatar Events
 
-| 参数                   | 说明                 | 类型                  | 默认值       |
-| ---------------------- | -------------------- | --------------------- | ------------ |
-| shape                  | 头像形状             | `'square' \| 'round'` | `'round'`    |
-| size                   | 头像尺寸             | `number`              | `40`         |
-| autoFixFontSize        | 是否自动调整字体大小 | `boolean`             | `true`       |
-| maxCount               | 最大显示数量         | `number`              | `0`          |
-| zIndexAscend           | 层级是否递增         | `boolean`             | `false`      |
-| maxStyle               | 最大数量头像样式     | `CSSProperties`       | `() => ({})` |
-| maxPopoverTriggerProps | 最大数量弹窗属性     | `TriggerProps`        | `() => ({})` |
+<field-table :data="avatarEvents" type="emits" />
 
-### Avatar Events
+### avatar Slots
 
-| 事件名 | 说明               | 回调参数           |
-| ------ | ------------------ | ------------------ |
-| click  | 点击时触发         | `(ev: MouseEvent)` |
-| error  | 图片加载失败时触发 | `(ev: Event)`      |
-| load   | 图片加载成功时触发 | `(ev: Event)`      |
+<field-table :data="avatarSlots" type="slots"/>
 
-### Avatar Slots
+### avatar-group Props
 
-| 插槽名       | 说明                     |
-| ------------ | ------------------------ |
-| default      | 头像内容（文字、图标等） |
-| trigger-icon | 触发器图标               |
+<field-table :data="avatarGroupProps" />
 
-### AvatarGroup Slots
+<script setup>
+import { ref } from 'vue';
+const avatarProps = ref([
+  {
+    name: 'shape',
+    desc: '头像的形状，有圆形(circle)和正方形(square)两种',
+    type: "'circle' | 'square'",
+    value: "'circle'",
+    version: '',
+  },
+  {
+    name: 'image-url',
+    desc: '自定义头像图片地址，如果传入该属性，会默认渲染img标签',
+    type: 'string',
+    value: '-',
+    version: '2.40.0',
+  },
+  {
+    name: 'size',
+    desc: '头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px',
+    type: 'number',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'auto-fix-font-size',
+    desc: '是否自动根据头像尺寸调整字体大小',
+    type: 'boolean',
+    value: 'true',
+    version: '',
+  },
+  {
+    name: 'trigger-type',
+    desc: '可点击的头像交互类型',
+    type: "'mask' | 'button'",
+    value: "'button'",
+    version: '',
+  },
+  {
+    name: 'trigger-icon-style',
+    desc: '交互图标的样式',
+    type: 'CSSProperties',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'object-fit',
+    desc: '图片在容器内的的适应类型',
+    type: 'ObjectFit',
+    value: '-',
+    version: '2.52.0',
+  },
+]);
 
-| 插槽名  | 说明     |
-| ------- | -------- |
-| default | 头像列表 |
+const avatarEvents = ref([
+  {
+    name: 'click',
+    desc: '点击回调',
+    type: '(ev: MouseEvent)',
+  },
+  {
+    name: 'error',
+    desc: '图片加载错误',
+    type: '-',
+  },
+  {
+    name: 'load',
+    desc: '图片加载成功',
+    type: '-',
+  },
+]);
+
+const avatarSlots = ref([
+  {
+    name: 'trigger-icon',
+    desc: '可点击的头像交互图标',
+  },
+]);
+
+const avatarGroupProps = ref([
+  {
+    name: 'shape',
+    desc: '头像的形状，有圆形(circle)和正方形(square)两种',
+    type: "'circle' | 'square'",
+    value: "'circle'",
+    version: '',
+  },
+  {
+    name: 'size',
+    desc: '头像的尺寸大小，单位是 px',
+    type: 'number',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'auto-fix-font-size',
+    desc: '是否自动根据头像尺寸调整字体大小',
+    type: 'boolean',
+    value: 'true',
+    version: '',
+  },
+  {
+    name: 'max-count',
+    desc: '头像组最多显示的头像数量，多余头像将以 +x 的形式展示。',
+    type: 'number',
+    value: '0',
+    version: '',
+  },
+  {
+    name: 'z-index-ascend',
+    desc: '头像组内的头像 z-index 递增，默认是递减。',
+    type: 'boolean',
+    value: 'false',
+    version: '',
+  },
+  {
+    name: 'max-style',
+    desc: '多余头像样式。',
+    type: 'CSSProperties',
+    value: '-',
+    version: '2.7.0',
+  },
+  {
+    name: 'max-popover-trigger-props',
+    desc: '多余头像气泡的 TriggerProps',
+    type: 'TriggerProps',
+    value: '-',
+    version: '2.7.0',
+  },
+]);
+</script>
