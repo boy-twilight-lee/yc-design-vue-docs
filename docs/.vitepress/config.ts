@@ -120,8 +120,11 @@ export default defineConfig({
               text: '验证码 VerificationCode',
               link: '/components/verification-code/index.md',
             },
-            { text: '标签输入框 InputTag', link: '/components/input-tag' },
-            { text: '提及 Mention', link: '/components/mention' },
+            {
+              text: '标签输入框 InputTag',
+              link: '/components/input-tag/index.md',
+            },
+            { text: '提及 Mention', link: '/components/mention/index.md' },
             { text: '单选框 Radio', link: '/components/radio' },
             { text: '评分 Rate', link: '/components/rate' },
             { text: '选择器 Select', link: '/components/select' },

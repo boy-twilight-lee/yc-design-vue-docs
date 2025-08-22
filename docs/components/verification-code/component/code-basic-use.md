@@ -17,7 +17,11 @@ const onFinish = (value) => Message.info(`Verification code: ${value}`);
 </script>
 
 <details>
-<summary>点击查看/隐藏代码</summary>
+<summary>
+ <button class="code-btn"  >
+    <icon-code />
+ </button>
+</summary>
 
 ```vue
 <template>
