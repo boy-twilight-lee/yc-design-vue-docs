@@ -87,6 +87,13 @@ const collapseItemProps = ref([
     value: '-',
     version: '',
   },
+    {
+    name: 'path（必填）',
+    desc: '面板的key',
+    type: 'string | number',
+    value: '-',
+    version: '',
+  },
   {
     name: 'disabled',
     desc: '是否禁用',

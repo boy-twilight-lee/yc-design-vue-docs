@@ -56,6 +56,13 @@ const tabsSlots = ref([
 
 const tabPaneProps = ref([
   { name: 'title', desc: '选项卡的标题', type: 'string', value: '-' },
+   {
+    name: 'path（必填）',
+    desc: '面板的key',
+    type: 'string | number',
+    value: '-',
+    version: '',
+  },
   { name: 'disabled', desc: '是否禁用', type: 'boolean', value: 'false' },
   { name: 'closable', desc: '是否允许关闭此选项卡（仅在可编辑模式生效）', type: 'boolean', value: 'true' },
   { name: 'destroy-on-hide', desc: '是否在不显示标签时销毁内容', type: 'boolean', value: 'false', version: '2.27.0' },
