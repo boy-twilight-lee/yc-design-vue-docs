@@ -1,37 +1,103 @@
 ## API
 
-### Layout Props
+### layout Props
 
-| 参数     | 说明           | 类型      | 默认值 |
-| -------- | -------------- | --------- | ------ |
-| hasSider | 是否包含侧边栏 | `boolean` | -      |
+<field-table :data="layoutProps"/>
 
-### LayoutSider Props
+### layout-header Slots
 
-| 参数             | 说明             | 类型               | 默认值   |
-| ---------------- | ---------------- | ------------------ | -------- |
-| theme            | 主题             | `Theme`            | `'dark'` |
-| collapsed        | 是否折叠         | `boolean`          | -        |
-| defaultCollapsed | 默认是否折叠     | `boolean`          | `false`  |
-| collapsible      | 是否可折叠       | `boolean`          | `false`  |
-| width            | 宽度             | `number`           | `200`    |
-| collapsedWidth   | 折叠时宽度       | `number`           | `80`     |
-| reverseArrow     | 是否反转箭头     | `boolean`          | `false`  |
-| breakpoint       | 响应式断点       | `BreakpointName`   | -        |
-| hideTrigger      | 是否隐藏触发器   | `boolean`          | `false`  |
-| resizeDirections | 可调整尺寸的方向 | `ResizeDirections` | -        |
+<field-table :data="headerSlots" :show-default-value="false"/>
 
-### Events
+### layout-content Slots
 
-| 事件名           | 说明                 | 回调参数                                                     |
-| ---------------- | -------------------- | ------------------------------------------------------------ |
-| update:collapsed | 折叠状态变化时触发   | `(collapsed: boolean)`                                       |
-| collapse         | 折叠状态变化时触发   | `(collapsed: boolean, type: 'clickTrigger' \| 'responsive')` |
-| breakpoint       | 响应式断点触发时触发 | `(collapsed: boolean)`                                       |
+<field-table :data="headerSlots" :show-default-value="false"/>
 
-### Slots
+### layout-footer Slots
 
-| 插槽名  | 说明         | 参数                     |
-| ------- | ------------ | ------------------------ |
-| default | 布局内容     | -                        |
-| trigger | 自定义触发器 | `{ collapsed: boolean }` |
+<field-table :data="headerSlots" :show-default-value="false"/>
+
+### layout-sider props
+
+<field-table :data="siderProps" />
+
+<script setup>
+import { ref } from 'vue';
+const layoutProps = ref([
+  {
+    name: 'has-sider',
+    desc: '表示子元素里有 Sider，一般不用指定。可用于服务端渲染时避免样式闪动',
+    type: 'boolean',
+    value: 'false',
+  }
+]);
+const headerSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
+  }
+])
+const siderProps = ref([
+  {
+    name: 'theme',
+    desc: '主题颜色',
+    type: "'dark' | 'light'",
+    value: "'light'",
+  },
+  {
+    name: 'collapsed',
+    desc: '当前收起状态',
+    type: 'boolean',
+    value: '-',
+  },
+  {
+    name: 'default-collapsed',
+    desc: '默认的收起状态',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'collapsible',
+    desc: '是否可收起',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'width',
+    desc: '宽度',
+    type: 'number',
+    value: '200',
+  },
+  {
+    name: 'collapsed-width',
+    desc: '收缩宽度',
+    type: 'number',
+    value: '48',
+  },
+  {
+    name: 'reverse-arrow',
+    desc: '翻转折叠提示箭头的方向，当 Sider 在右边时可以使用',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'breakpoint',
+    desc: "触发响应式布局的断点, 详见响应式栅格",
+    type: "'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'",
+    value: '-',
+  },
+  {
+    name: 'resize-directions',
+    desc: '可以用 ResizeBox 替换原生的 aside 标签，这个参数即 ResizeBox的 directions 参数。详情请看 ResizeBox。',
+    type: "Array<'left' | 'right' | 'top' | 'bottom'>",
+    value: '-',
+  },
+  {
+    name: 'hide-trigger',
+    desc: '隐藏底部折叠触发器',
+    type: 'boolean',
+    value: 'false',
+  },
+])
+</script>
