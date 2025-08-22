@@ -1,11 +1,13 @@
 import Theme from 'vitepress/theme';
-import { App, watch, nextTick, h } from 'vue';
+import { watch, nextTick, h } from 'vue';
 import { useRoute } from 'vitepress';
 import 'yc-design-vue/es/style.css';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
 import '../style/global.less';
 import { HeroImage } from '../components/hero-image';
+import vitepressNprogress from 'vitepress-plugin-nprogress';
+import 'vitepress-plugin-nprogress/lib/css/index.css';
 // 是否是服务端渲染
 export const isServerRendering = (() => {
   try {
@@ -17,7 +19,9 @@ export const isServerRendering = (() => {
 
 export default {
   extends: Theme,
-  enhanceApp: async ({ app }: { app: App }) => {
+  enhanceApp: async (ctx) => {
+    vitepressNprogress(ctx);
+    const { app } = ctx;
     if (isServerRendering) return;
     const YcDesign = await import('yc-design-vue');
     const ArcoIcon = await import('@arco-design/web-vue/es/icon');
