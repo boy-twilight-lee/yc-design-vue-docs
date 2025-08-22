@@ -20,6 +20,10 @@
 
 <field-table :data="siderProps" />
 
+### layout-sider slots
+
+<field-table :data="headerSlots"  type="slots"/>
+
 <script setup>
 import { ref } from 'vue';
 const layoutProps = ref([

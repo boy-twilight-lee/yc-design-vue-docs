@@ -8,6 +8,10 @@
 
 <field-table :data="emits" type="emits"/>
 
+### common slots
+
+<field-table :data="slots" type="slots"/>
+
 ### typography-title Props
 
 <field-table :data="titleProps"/>
@@ -140,6 +144,26 @@ const emits =  ref([
     desc: '复制',
     type: '(text: string) => void',
     value: '-',
+  },
+]);
+const slots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: "-",
+    value: "",
+  },
+    {
+    name: 'copy-icon',
+    desc: '复制图标',
+    type: "-",
+    value: "",
+  },
+    {
+    name: 'copy-tooltip',
+    desc: '复制的文字气泡内容',
+    type: "-",
+    value: "",
   },
 ]);
 const titleProps = ref([

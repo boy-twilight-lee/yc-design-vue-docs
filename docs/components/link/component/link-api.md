@@ -8,6 +8,10 @@
 
 <field-table :data="emits" type="emits"/>
 
+### link Slots
+
+<field-table :data="slots" type="slots"/>
+
 <script setup>
 import { ref } from 'vue';
 const linkProps = ref([
@@ -25,19 +29,19 @@ const linkProps = ref([
   },
   {
     name: 'hoverable',
-    desc: '鼠标悬浮时存在底色 (2.7.0+)',
+    desc: '鼠标悬浮时存在底色',
     type: 'boolean',
     value: '`true`',
   },
   {
     name: 'icon',
-    desc: '图标 (2.7.0+)',
+    desc: '图标',
     type: 'boolean',
     value: '`false`',
   },
   {
     name: 'loading',
-    desc: '链接是否为加载中状态 (2.37.0+)',
+    desc: '链接是否为加载中状态',
     type: 'boolean',
     value: '`false`',
   },
@@ -56,5 +60,12 @@ const emits =  ref([
     value: '-',
   },
 ]);
-
+const slots =  ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
+  },
+]);
 </script>

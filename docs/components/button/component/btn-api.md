@@ -10,11 +10,15 @@
 
 ### button Slots
 
-<field-table :data="btnSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="btnSlots"  type="slots"/>
 
 ### button-group Props
 
 <field-table :data="groupProps" />
+
+### button-group Slots
+
+<field-table :data="groupSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -90,9 +94,15 @@ const btnEmits = ref([
 ]);
 const btnSlots = ref([
   {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
+  },
+  {
     name: 'icon',
     desc: '图标',
-    type: '#icon',
+    type: '-',
     value: '-',
   },
 ]);
@@ -127,5 +137,13 @@ const groupProps = ref([
     type: 'boolean',
     value: '`false`',
   },
+]);
+const groupSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
+  }
 ]);
 </script>

@@ -43,6 +43,12 @@ const spaceProps = ref([
   },
 ]);
 const spaceSlots = ref([
+    {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
+  },
   {
     name: 'split',
     desc: '设置分隔符',

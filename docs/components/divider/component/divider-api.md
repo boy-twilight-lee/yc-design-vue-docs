@@ -4,6 +4,10 @@
 
 <field-table :data="dividerProps"/>
 
+### divider slots
+
+<field-table :data="dividerSlots"/>
+
 <script setup>
 import { ref } from 'vue';
 const dividerProps = ref([
@@ -21,21 +25,27 @@ const dividerProps = ref([
   },
   {
     name: 'type',
-    desc: '分割线样式类型 (2.35.0+)',
+    desc: '分割线样式类型',
     type: "'solid' | 'dashed' | 'dotted' | 'double'",
     value: '-',
   },
   {
     name: 'size',
-    desc: '分割线宽度/高度 (2.35.0+)',
+    desc: '分割线宽度/高度 ',
     type: 'number',
     value: '-',
   },
   {
     name: 'margin',
-    desc: '分割线上下 margin (垂直方向时为左右 margin) (2.35.0+)',
+    desc: '分割线上下 margin (垂直方向时为左右 margin)',
     type: 'number | string',
     value: '-',
   },
 ]);
+const dividerSlots = ref([  {
+    name: 'default',
+    desc: '分割线内容（垂直情况不生效）',
+    type: "-",
+    value: "",
+  },])
 </script>
