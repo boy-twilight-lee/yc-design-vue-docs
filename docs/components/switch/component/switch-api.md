@@ -1,64 +1,135 @@
 ## API
 
-### Switch Props
+### switch Props
 
-| 参数           | 说明             | 类型           | 默认值     |
-| -------------- | ---------------- | -------------- | ---------- |
-| modelValue     | 绑定值           | `SwitchValue`  | -          |
-| defaultChecked | 默认值           | `SwitchValue`  | -          |
-| disabled       | 是否禁用         | `boolean`      | `false`    |
-| loading        | 是否加载中       | `boolean`      | `false`    |
-| type           | 开关类型         | `SwitchType`   | `'circle'` |
-| size           | 开关尺寸         | `SwitchSize`   | `'medium'` |
-| checkedValue   | 选中时的值       | `SwitchValue`  | `true`     |
-| uncheckedValue | 未选中时的值     | `SwitchValue`  | `false`    |
-| checkedColor   | 选中时的颜色     | `string`       | -          |
-| uncheckedColor | 未选中时的颜色   | `string`       | -          |
-| checkedText    | 选中时的文字     | `string`       | -          |
-| uncheckedText  | 未选中时的文字   | `string`       | -          |
-| beforeChange   | 切换前的回调函数 | `BeforeChange` | -          |
+<field-table :data="switchProps"/>
 
-### Events
+### switch Events
 
-| 事件名            | 说明             | 回调参数                          |
-| ----------------- | ---------------- | --------------------------------- |
-| update:modelValue | 绑定值变化时触发 | `(value: SwitchValue)`            |
-| change            | 状态变化时触发   | `(value: SwitchValue, ev: Event)` |
-| focus             | 获得焦点时触发   | `(ev: FocusEvent)`                |
-| blur              | 失去焦点时触发   | `(ev: FocusEvent)`                |
+<field-table :data="switchEvents" type="emits" />
 
-### Slots
+### switch Slots
 
-| 插槽名         | 说明           | 参数 |
-| -------------- | -------------- | ---- |
-| checked-icon   | 选中时的图标   | -    |
-| unchecked-icon | 未选中时的图标 | -    |
-| checked        | 选中时的内容   | -    |
-| unchecked      | 未选中时的内容 | -    |
+<field-table :data="switchSlots" :showDefaultValue="false" type="slots"/>
 
-### SwitchValue
+<script setup>
+import { ref } from 'vue';
 
-| 类型                          | 说明       |
-| ----------------------------- | ---------- |
-| `string \| number \| boolean` | 开关值类型 |
+const switchProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string|number|boolean',
+    value: '-',
+  },
+  {
+    name: 'default-checked',
+    desc: '默认选中状态（非受控状态）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'loading',
+    desc: '是否为加载中状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'type',
+    desc: '开关的类型',
+    type: "'circle' | 'round' | 'line'",
+    value: "'circle'",
+  },
+  {
+    name: 'size',
+    desc: '开关的大小',
+    type: "'small' | 'medium'",
+    value: "'medium'",
+  },
+  {
+    name: 'checked-value',
+    desc: '选中时的值',
+    type: 'string|number|boolean',
+    value: '`true` (2.12.0)',
+  },
+  {
+    name: 'unchecked-value',
+    desc: '未选中时的值',
+    type: 'string|number|boolean',
+    value: '`false` (2.12.0)',
+  },
+  {
+    name: 'checked-color',
+    desc: '选中时的开关颜色',
+    type: 'string',
+    value: '- (2.12.0)',
+  },
+  {
+    name: 'unchecked-color',
+    desc: '未选中时的开关颜色',
+    type: 'string',
+    value: '- (2.12.0)',
+  },
+  {
+    name: 'before-change',
+    desc: 'switch 状态改变前的钩子， 返回 false 或者返回 Promise 且被 reject 则停止切换。',
+    type: '( newValue: string | number | boolean) => Promise<boolean | void> | boolean | void',
+    value: '- (2.37.0)',
+  },
+  {
+    name: 'checked-text',
+    desc: '打开状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    type: 'string',
+    value: '- (2.45.0)',
+  },
+  {
+    name: 'unchecked-text',
+    desc: '关闭状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    type: 'string',
+    value: '- (2.45.0)',
+  },
+]);
 
-### SwitchType
+const switchEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: boolean | string | number, ev: Event) => void',
+  },
+  {
+    name: 'focus',
+    desc: '组件获得焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+  {
+    name: 'blur',
+    desc: '组件失去焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+]);
 
-| 类型       | 说明     |
-| ---------- | -------- |
-| `'circle'` | 圆形开关 |
-| `'round'`  | 圆角开关 |
-| `'line'`   | 线条开关 |
-
-### SwitchSize
-
-| 类型       | 说明     |
-| ---------- | -------- |
-| `'small'`  | 小尺寸   |
-| `'medium'` | 中等尺寸 |
-
-### BeforeChange
-
-| 类型                                                                     | 说明           |
-| ------------------------------------------------------------------------ | -------------- |
-| `(newValue: SwitchValue) => Promise<boolean \| void> \| boolean \| void` | 切换前回调函数 |
+const switchSlots = ref([
+  {
+    name: 'checked-icon',
+    desc: '打开状态时，按钮上的图标',
+  },
+  {
+    name: 'unchecked-icon',
+    desc: '关闭状态时，按钮上的图标',
+  },
+  {
+    name: 'checked',
+    desc: '打开状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+  },
+  {
+    name: 'unchecked',
+    desc: '关闭状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+  },
+]);
+</script>

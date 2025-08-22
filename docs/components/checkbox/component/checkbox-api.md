@@ -1,37 +1,137 @@
 ## API
 
-### Checkbox Props
+### checkbox Props
 
-| 参数           | 说明           | 类型            | 默认值  |
-| -------------- | -------------- | --------------- | ------- |
-| modelValue     | 是否选中       | `boolean`       | -       |
-| defaultChecked | 默认是否选中   | `boolean`       | `false` |
-| disabled       | 是否禁用       | `boolean`       | `false` |
-| value          | 复选框的值     | `CheckboxValue` | -       |
-| indeterminate  | 是否为半选状态 | `boolean`       | `false` |
+<field-table :data="checkboxProps"/>
 
-### CheckboxGroup Props
+### checkbox Events
 
-| 参数         | 说明             | 类型                                  | 默认值  |
-| ------------ | ---------------- | ------------------------------------- | ------- |
-| modelValue   | 选中的值列表     | `CheckboxValue[]`                     | -       |
-| defaultValue | 默认选中的值列表 | `CheckboxValue[]`                     | `[]`    |
-| max          | 最大选择数量     | `number`                              | -       |
-| options      | 选项配置         | `(CheckboxOption \| CheckboxValue)[]` | -       |
-| direction    | 排列方向         | `Direction`                           | -       |
-| disabled     | 是否禁用         | `boolean`                             | `false` |
+<field-table :data="checkboxEvents" type="emits" />
 
-### Events
+### checkbox Slots
 
-| 事件名            | 说明         | 回调参数                                          |
-| ----------------- | ------------ | ------------------------------------------------- |
-| update:modelValue | 值变化时触发 | `(value: boolean \| CheckboxValue[])`             |
-| change            | 值变化时触发 | `(value: boolean \| CheckboxValue[], ev?: Event)` |
+<field-table :data="checkboxSlots" :showDefaultValue="false" type="slots"/>
 
-### Slots
+### checkbox-group Props
 
-| 插槽名   | 说明           | 参数                                      |
-| -------- | -------------- | ----------------------------------------- |
-| default  | 复选框标签内容 | -                                         |
-| checkbox | 自定义复选框   | `{ checked: boolean, disabled: boolean }` |
-| label    | 自定义标签     | `{ data: ObjectData }`                    |
+<field-table :data="checkboxGroupProps" />
+
+### checkbox-group Events
+
+<field-table :data="checkboxGroupEvents" type="emits" />
+
+### checkbox-group Slots
+
+<field-table :data="checkboxGroupSlots" :showDefaultValue="false" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+const checkboxProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'boolean | Array<string | number | boolean>',
+    value: '-',
+  },
+  {
+    name: 'default-checked',
+    desc: '默认是否选中（非受控状态）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'value',
+    desc: '选项的 value',
+    type: 'string|number|boolean',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'indeterminate',
+    desc: '是否为半选状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+]);
+const checkboxEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: boolean | (string | number | boolean)[], ev: Event) => void',
+    value: '-',
+  },
+]);
+const checkboxSlots = ref([
+  {
+    name: 'checkbox',
+    desc: '自定义复选框',
+    type: '#checkbox',
+    value: '2.18.0',
+  },
+]);
+const checkboxGroupProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'Array<string | number | boolean>',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: 'Array<string | number | boolean>',
+    value: '`[]`',
+  },
+  {
+    name: 'max',
+    desc: '支持最多选中的数量',
+    type: 'number',
+    value: '2.36.0',
+  },
+  {
+    name: 'options',
+    desc: '选项',
+    type: 'Array<string | number | CheckboxOption>',
+    value: '2.27.0',
+  },
+  {
+    name: 'direction',
+    desc: '复选框的排列方向',
+    type: 'Direction',
+    value: "'horizontal'",
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+]);
+const checkboxGroupEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: (string | number | boolean)[], ev: Event) => void',
+    value: '-',
+  },
+]);
+const checkboxGroupSlots = ref([
+  {
+    name: 'checkbox',
+    desc: '自定义复选框',
+    type: '#checkbox',
+    value: '2.27.0',
+  },
+  {
+    name: 'label',
+    desc: 'checkbox 文案内容',
+    type: '#label',
+    value: '2.27.0',
+  },
+]);
+</script>

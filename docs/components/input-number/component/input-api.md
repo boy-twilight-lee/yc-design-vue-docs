@@ -1,54 +1,205 @@
 ## API
 
-### InputNumber Props
+### input-number Props
 
-| 参数名               | 描述                | 类型                                       | 默认值      |
-| -------------------- | ------------------- | ------------------------------------------ | ----------- |
-| modelValue (v-model) | 绑定值              | `number \| string`                         | `-`         |
-| default-value        | 默认值              | `number \| string`                         | `-`         |
-| mode                 | 步进器模式          | `'embed' \| 'button'`                      | `'embed'`   |
-| precision            | 数值精度            | `number`                                   | `-`         |
-| step                 | 数字变化步长        | `number`                                   | `1`         |
-| min                  | 最小值              | `number`                                   | `-Infinity` |
-| max                  | 最大值              | `number`                                   | `Infinity`  |
-| disabled             | 是否禁用            | `boolean`                                  | `false`     |
-| readonly             | 是否只读            | `boolean`                                  | `false`     |
-| error                | 是否为错误状态      | `boolean`                                  | `false`     |
-| size                 | 尺寸                | `'mini' \| 'small' \| 'medium' \| 'large'` | `'medium'`  |
-| placeholder          | 输入框占位文本      | `string`                                   | `-`         |
-| hide-button          | 是否隐藏步进按钮    | `boolean`                                  | `false`     |
-| allow-clear          | 是否允许清空        | `boolean`                                  | `false`     |
-| formatter            | 格式化函数          | `(value: string) => string`                | `-`         |
-| parser               | 解析函数            | `(value: string) => string`                | `-`         |
-| model-event          | 触发 v-model 的事件 | `'change' \| 'input'`                      | `'change'`  |
+<field-table :data="inputNumberProps"/>
 
-### InputNumber Events
+### input-number Events
 
-| 事件名      | 描述                               | 参数                                   |
-| ----------- | ---------------------------------- | -------------------------------------- |
-| input       | 输入框内容变化时触发               | `(value: number \| string, ev: Event)` |
-| change      | 仅在输入框失去焦点或按下回车时触发 | `(value: number \| string, ev: Event)` |
-| focus       | 获得焦点时触发                     | `(ev: FocusEvent)`                     |
-| blur        | 失去焦点时触发                     | `(ev: FocusEvent)`                     |
-| clear       | 点击清除按钮时触发                 | `(ev: MouseEvent)`                     |
-| keydown     | 键盘按下时触发                     | `(ev: KeyboardEvent)`                  |
-| press-enter | 按下回车键时触发                   | `(ev: KeyboardEvent)`                  |
+<field-table :data="inputNumberEvents" type="emits" />
 
-### InputNumber Slots
+### input-number Methods
 
-| 插槽名  | 描述           |
-| ------- | -------------- |
-| plus    | 自定义加号按钮 |
-| minus   | 自定义减号按钮 |
-| prefix  | 前缀内容       |
-| suffix  | 后缀内容       |
-| prepend | 前置内容       |
-| append  | 后置内容       |
-| label   | 标签内容       |
+<field-table :data="inputNumberMethods" type="expose" />
 
-### InputNumber Methods
+### input-number Slots
 
-| 方法名 | 描述             | 参数 |
-| ------ | ---------------- | ---- |
-| focus  | 使输入框获得焦点 | `-`  |
-| blur   | 使输入框失去焦点 | `-`  |
+<field-table :data="inputNumberSlots" :showDefaultValue="false" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const inputNumberProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'number',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控模式）',
+    type: 'number',
+    value: '-',
+  },
+  {
+    name: 'mode',
+    desc: '模式（embed：按钮内嵌模式，button：左右按钮模式）',
+    type: "'embed' | 'button'",
+    value: "'embed'",
+  },
+  {
+    name: 'precision',
+    desc: '数字精度',
+    type: 'number',
+    value: '-',
+  },
+  {
+    name: 'step',
+    desc: '数字变化步长',
+    type: 'number',
+    value: '1',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'error',
+    desc: '是否为错误状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'max',
+    desc: '最大值',
+    type: 'number',
+    value: '`Infinity`',
+  },
+  {
+    name: 'min',
+    desc: '最小值',
+    type: 'number',
+    value: '`-Infinity`',
+  },
+  {
+    name: 'formatter',
+    desc: '定义输入框展示值',
+    type: 'func',
+    value: '-',
+  },
+  {
+    name: 'parser',
+    desc: '从 formatter 转换为数字，和 formatter 搭配使用',
+    type: 'func',
+    value: '-',
+  },
+  {
+    name: 'placeholder',
+    desc: '输入框提示文字',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'hide-button',
+    desc: '是否隐藏按钮',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'size',
+    desc: '输入框大小',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: "'medium'",
+  },
+  {
+    name: 'allow-clear',
+    desc: '是否允许清空输入框',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'model-event',
+    desc: '触发 v-model 的事件',
+    type: "'change' | 'input'",
+    value: "'change'",
+  },
+  {
+    name: 'read-only',
+    desc: '只读',
+    type: 'boolean',
+    value: '`false` (2.33.1)',
+  },
+  {
+    name: 'input-attrs',
+    desc: '内部 input 元素的属性',
+    type: 'object',
+    value: '- (2.52.0)',
+  },
+]);
+
+const inputNumberEvents = ref([
+  {
+    name: 'change',
+    desc: '值发生改变时触发',
+    type: '(value: number | undefined, ev: Event) => void',
+  },
+  {
+    name: 'focus',
+    desc: '输入框获取焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+  {
+    name: 'blur',
+    desc: '输入框失去焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+  {
+    name: 'clear',
+    desc: '用户点击清除按钮时触发 (2.23.0)',
+    type: '(ev: Event) => void',
+  },
+  {
+    name: 'input',
+    desc: '输入时触发 (2.27.0)',
+    type: '(value: number | undefined, inputValue: string, ev: Event) => void',
+  },
+  {
+    name: 'keydown',
+    desc: '按下键盘时触发 (2.56.0)',
+    type: '(ev: KeyboardEvent) => void',
+  },
+]);
+
+const inputNumberMethods = ref([
+  {
+    name: 'focus',
+    desc: '使输入框获取焦点',
+    type: '() => void',
+  },
+  {
+    name: 'blur',
+    desc: '使输入框失去焦点',
+    type: '() => void',
+  },
+]);
+
+const inputNumberSlots = ref([
+  {
+    name: 'minus',
+    desc: '数值减少图标',
+  },
+  {
+    name: 'plus',
+    desc: '数值增加图标',
+  },
+  {
+    name: 'append',
+    desc: '后置标签',
+  },
+  {
+    name: 'prepend',
+    desc: '前置标签',
+  },
+  {
+    name: 'suffix',
+    desc: '后缀',
+  },
+  {
+    name: 'prefix',
+    desc: '前缀',
+  },
+]);
+</script>

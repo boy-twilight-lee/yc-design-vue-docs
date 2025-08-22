@@ -1,53 +1,153 @@
 ## API
 
-### Transfer Props
+### transfer Props
 
-| 参数            | 说明             | 类型             | 默认值  |
-| --------------- | ---------------- | ---------------- | ------- |
-| data            | 数据源           | `TransferItem[]` | -       |
-| modelValue      | 绑定值           | `string[]`       | -       |
-| defaultValue    | 默认值           | `string[]`       | -       |
-| selected        | 已选择的数据     | `string[]`       | -       |
-| defaultSelected | 默认已选择的数据 | `string[]`       | -       |
-| disabled        | 是否禁用         | `boolean`        | `false` |
-| simple          | 是否简单模式     | `boolean`        | `false` |
-| oneWay          | 是否单向模式     | `boolean`        | `false` |
-| showSearch      | 是否显示搜索框   | `boolean`        | `false` |
-| showSelectAll   | 是否显示全选     | `boolean`        | `false` |
-| title           | 标题             | `string[]`       | -       |
+<field-table :data="transferProps"/>
 
-### Events
+### transfer Events
 
-| 事件名            | 说明                 | 回调参数                                      |
-| ----------------- | -------------------- | --------------------------------------------- |
-| update:selected   | 已选择数据变化时触发 | `(value: TransferItemValue[])`                |
-| update:modelValue | 绑定值变化时触发     | `(value: TransferItemValue[])`                |
-| change            | 数据变化时触发       | `(value: TransferItemValue[])`                |
-| select            | 选择变化时触发       | `(value: TransferItemValue[])`                |
-| search            | 搜索时触发           | `(value: string, type: 'target' \| 'source')` |
+<field-table :data="transferEvents" type="emits" />
 
-### Slots
+### transfer Slots
 
-| 插槽名         | 说明         | 参数                               |
-| -------------- | ------------ | ---------------------------------- |
-| source         | 源数据面板   | `DefaultSlots`                     |
-| target         | 目标数据面板 | `DefaultSlots`                     |
-| source-title   | 源数据标题   | `TitleSlots`                       |
-| target-title   | 目标数据标题 | `TitleSlots`                       |
-| to-source-icon | 向左箭头图标 | -                                  |
-| to-target-icon | 向右箭头图标 | -                                  |
-| item           | 数据项       | `{ value: string; label: string }` |
+<field-table :data="transferSlots" :showDefaultValue="false" type="slots"/>
 
-### TransferItem
+<script setup>
+import { ref } from 'vue';
 
-| 参数     | 说明     | 类型                | 默认值  |
-| -------- | -------- | ------------------- | ------- |
-| label    | 显示文本 | `string`            | -       |
-| value    | 数据值   | `TransferItemValue` | -       |
-| disabled | 是否禁用 | `boolean`           | `false` |
+const transferProps = ref([
+  {
+    name: 'data',
+    desc: '穿梭框的数据',
+    type: 'TransferItem[]',
+    value: '[]',
+  },
+  {
+    name: 'model-value (v-model)',
+    desc: '目标选择框中的值',
+    type: 'string[]',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '目标选择框中默认的值（非受控状态）',
+    type: 'string[]',
+    value: '[]',
+  },
+  {
+    name: 'selected (v-model)',
+    desc: '选中的选项值',
+    type: 'string[]',
+    value: '-',
+  },
+  {
+    name: 'default-selected',
+    desc: '默认选中的选项值（非受控状态）',
+    type: 'string[]',
+    value: '[]',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'simple',
+    desc: '是否开启简单模式（点击选项即移动）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'one-way',
+    desc: '是否开启单向模式（仅可移动到目标选择框）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-search',
+    desc: '是否显示搜索框',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-select-all',
+    desc: '是否展示全选勾选框',
+    type: 'boolean',
+    value: '`true` (2.39.0)',
+  },
+  {
+    name: 'title',
+    desc: '源选择框和目标选择框的标题',
+    type: 'string[]',
+    value: "['Source', 'Target']",
+  },
+  {
+    name: 'source-input-search-props',
+    desc: '源选择框的搜索框配置',
+    type: 'object',
+    value: '- (2.51.1)',
+  },
+  {
+    name: 'target-input-search-props',
+    desc: '目标选择框的搜索框配置',
+    type: 'object',
+    value: '- (2.51.1)',
+  },
+]);
 
-### TransferItemValue
+const transferEvents = ref([
+  {
+    name: 'change',
+    desc: '目标选择框的值改变时触发',
+    type: '(value: string[]) => void',
+  },
+  {
+    name: 'select',
+    desc: '选中的值改变时触发',
+    type: '(selected: string[]) => void',
+  },
+  {
+    name: 'search',
+    desc: '用户搜索时触发',
+    type: "(value: string, type: 'target'|'source') => void",
+  },
+]);
 
-| 类型               | 说明       |
-| ------------------ | ---------- |
-| `string \| number` | 数据值类型 |
+const transferSlots = ref([
+  {
+    name: 'source',
+    desc: '源面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
+    value: '2.39.0',
+  },
+  {
+    name: 'source-title',
+    desc: '源标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
+    value: '2.45.0',
+  },
+  {
+    name: 'to-target-icon',
+    desc: '移至目标图标插槽',
+    value: '2.52.0',
+  },
+  {
+    name: 'to-source-icon',
+    desc: '移至源图标插槽',
+    value: '2.52.0',
+  },
+  {
+    name: 'target',
+    desc: '目标面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
+    value: '2.39.0',
+  },
+  {
+    name: 'target-title',
+    desc: '目标标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
+    value: '2.45.0',
+  },
+  {
+    name: 'item',
+    desc: '选项 (value: string, label: string)',
+  },
+]);
+</script>

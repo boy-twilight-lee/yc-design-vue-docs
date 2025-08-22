@@ -1,29 +1,94 @@
 ## API
 
-### Rate Props
+### rate Props
 
-| 参数         | 说明         | 类型                               | 默认值  |
-| ------------ | ------------ | ---------------------------------- | ------- |
-| count        | 评分数量     | `number`                           | `5`     |
-| modelValue   | 绑定值       | `number`                           | -       |
-| defaultValue | 默认值       | `number`                           | `0`     |
-| allowHalf    | 是否允许半星 | `boolean`                          | `false` |
-| allowClear   | 是否允许清除 | `boolean`                          | `true`  |
-| grading      | 是否启用分级 | `boolean`                          | `false` |
-| readonly     | 是否只读     | `boolean`                          | `false` |
-| disabled     | 是否禁用     | `boolean`                          | `false` |
-| color        | 评分颜色     | `string \| Record<number, string>` | -       |
+<field-table :data="rateProps"/>
 
-### Events
+### rate Events
 
-| 事件名            | 说明               | 回调参数          |
-| ----------------- | ------------------ | ----------------- |
-| update:modelValue | 绑定值变化时触发   | `(value: number)` |
-| change            | 评分变化时触发     | `(value: number)` |
-| hover-change      | 悬停评分变化时触发 | `(value: number)` |
+<field-table :data="rateEvents" type="emits" />
 
-### Slots
+### rate Slots
 
-| 插槽名    | 说明       | 参数                |
-| --------- | ---------- | ------------------- |
-| character | 自定义字符 | `{ index: number }` |
+<field-table :data="rateSlots" :showDefaultValue="false" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const rateProps = ref([
+  {
+    name: 'count',
+    desc: '评分的总数',
+    type: 'number',
+    value: '5',
+  },
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'number',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'allow-half',
+    desc: '是否允许半选',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'allow-clear',
+    desc: '是否允许清除',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'grading',
+    desc: '是否开启笑脸分级',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'readonly',
+    desc: '是否为只读状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'color',
+    desc: '颜色',
+    type: 'string | Record<string, string>',
+    value: '- (2.18.0)',
+  },
+]);
+
+const rateEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: number) => void',
+  },
+  {
+    name: 'hover-change',
+    desc: '鼠标移动到数值上时触发',
+    type: '(value: number) => void',
+  },
+]);
+
+const rateSlots = ref([
+  {
+    name: 'character',
+    desc: '符号 (index: number)',
+  },
+]);
+</script>

@@ -1,48 +1,186 @@
-### InputTag Props
+## API
 
-| 参数名                | 描述               | 类型                                              | 默认值     |
-| --------------------- | ------------------ | ------------------------------------------------- | ---------- |
-| modelValue (v-model)  | 绑定值             | `InputTagValue`                                   | `[]`       |
-| default-value         | 默认值             | `InputTagValue`                                   | `[]`       |
-| input-value (v-model) | 输入框的值         | `string`                                          | `-`        |
-| default-input-value   | 输入框的默认值     | `string`                                          | `-`        |
-| placeholder           | 输入框占位文本     | `string`                                          | `-`        |
-| disabled              | 是否禁用           | `boolean`                                         | `false`    |
-| error                 | 是否为错误状态     | `boolean`                                         | `false`    |
-| readonly              | 是否只读           | `boolean`                                         | `false`    |
-| allow-clear           | 是否允许清空       | `boolean`                                         | `false`    |
-| size                  | 尺寸               | `'mini' \| 'small' \| 'medium' \| 'large'`        | `'medium'` |
-| max-tag-count         | 最多显示的标签个数 | `number`                                          | `-`        |
-| retain-input-value    | 是否保留输入框的值 | `boolean \| { create?: boolean; blur?: boolean }` | `false`    |
-| format-tag            | 格式化标签的函数   | `(data: TagData) => string`                       | `-`        |
-| unique-value          | 是否唯一值         | `boolean`                                         | `false`    |
-| tag-nowrap            | 标签是否不换行     | `boolean`                                         | `false`    |
-| field-names           | 自定义字段名       | `Record<string, string>`                          | `-`        |
-| allow-create          | 是否允许创建       | `boolean`                                         | `true`     |
+### input-tag Props
 
-### InputTag Events
+<field-table :data="inputTagProps"/>
 
-| 事件名             | 描述               | 参数                                                         |
-| ------------------ | ------------------ | ------------------------------------------------------------ |
-| input              | 输入框输入时触发   | `(value: string)`                                            |
-| input-value-change | 输入框值改变时触发 | `(value: string, ev: Event)`                                 |
-| focus              | 获得焦点时触发     | `(ev: FocusEvent)`                                           |
-| blur               | 失去焦点时触发     | `(ev: FocusEvent)`                                           |
-| press-enter        | 按下回车键时触发   | `(ev: KeyboardEvent)`                                        |
-| remove             | 删除标签时触发     | `(value: number \| string, ev: MouseEvent \| KeyboardEvent)` |
-| clear              | 点击清除按钮时触发 | `(ev: MouseEvent)`                                           |
+### input-tag Events
 
-### InputTag Slots
+<field-table :data="inputTagEvents" type="emits" />
 
-| 插槽名 | 描述       | 参数               |
-| ------ | ---------- | ------------------ |
-| tag    | 自定义标签 | `{ tag: TagData }` |
-| prefix | 前缀内容   | `-`                |
-| suffix | 后缀内容   | `-`                |
+### input-tag Methods
 
-### InputTag Methods
+<field-table :data="inputTagMethods" type="expose" />
 
-| 方法名 | 描述             | 参数 |
-| ------ | ---------------- | ---- |
-| focus  | 使输入框获得焦点 | `-`  |
-| blur   | 使输入框失去焦点 | `-`  |
+### input-tag Slots
+
+<field-table :data="inputTagSlots" :showDefaultValue="false" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const inputTagProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: '(string | number | TagData)[]',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: '(string | number | TagData)[]',
+    value: '[]',
+  },
+  {
+    name: 'input-value (v-model)',
+    desc: '输入框的值',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'default-input-value',
+    desc: '输入框的默认值（非受控状态）',
+    type: 'string',
+    value: "''",
+  },
+  {
+    name: 'placeholder',
+    desc: '占位符',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'error',
+    desc: '是否为错误状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'readonly',
+    desc: '是否为只读模式',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'allow-clear',
+    desc: '是否允许清空',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'size',
+    desc: '输入框的大小',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: "'medium'",
+  },
+  {
+    name: 'max-tag-count',
+    desc: '最多展示的标签个数，0 表示不限制',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'retain-input-value',
+    desc: '是否保留输入框的内容',
+    type: 'boolean | { create?: boolean; blur?: boolean }',
+    value: '`false`',
+  },
+  {
+    name: 'format-tag',
+    desc: '格式化标签内容',
+    type: '(data: TagData) => string',
+    value: '-',
+  },
+  {
+    name: 'unique-value',
+    desc: '是否仅创建唯一的值',
+    type: 'boolean',
+    value: '`false` (2.15.0)',
+  },
+  {
+    name: 'field-names',
+    desc: '自定义 TagData 中的字段',
+    type: 'InputTagFieldNames',
+    value: '- (2.22.0)',
+  },
+  {
+    name: 'tag-nowrap',
+    desc: '标签内容不换行',
+    type: 'boolean',
+    value: '`false` (2.56.1)',
+  },
+]);
+
+const inputTagEvents = ref([
+  {
+    name: 'change',
+    desc: '值发生改变时触发',
+    type: '(value: (string | number | TagData)[], ev: Event) => void',
+  },
+  {
+    name: 'input-value-change',
+    desc: '输入值发生改变时触发',
+    type: '(inputValue: string, ev: Event) => void',
+  },
+  {
+    name: 'press-enter',
+    desc: '按下回车键时触发',
+    type: '(inputValue: string, ev: KeyboardEvent) => void',
+  },
+  {
+    name: 'remove',
+    desc: '点击标签的删除按钮时触发',
+    type: '(removed: string | number, ev: Event) => void',
+  },
+  {
+    name: 'clear',
+    desc: '点击清除按钮时触发',
+    type: '(ev: MouseEvent) => void',
+  },
+  {
+    name: 'focus',
+    desc: '输入框获取焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+  {
+    name: 'blur',
+    desc: '输入框失去焦点时触发',
+    type: '(ev: FocusEvent) => void',
+  },
+]);
+
+const inputTagMethods = ref([
+  {
+    name: 'focus',
+    desc: '使输入框获取焦点',
+    type: '() => void',
+  },
+  {
+    name: 'blur',
+    desc: '使输入框失去焦点',
+    type: '() => void',
+  },
+]);
+
+const inputTagSlots = ref([
+  {
+    name: 'tag',
+    desc: '输入框标签的显示内容 (data: TagData)',
+  },
+  {
+    name: 'prefix',
+    desc: '前缀元素',
+  },
+  {
+    name: 'suffix',
+    desc: '后缀元素',
+  },
+]);
+</script>

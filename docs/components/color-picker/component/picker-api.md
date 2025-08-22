@@ -1,27 +1,109 @@
 ## API
 
-### Props
+### color-picker Props
 
-| 参数          | 说明               | 类型           | 默认值  |
-| ------------- | ------------------ | -------------- | ------- |
-| modelValue    | 当前选中的颜色     | `string`       | -       |
-| defaultValue  | 默认颜色           | `string`       | -       |
-| format        | 颜色格式           | `ColorFormat`  | -       |
-| size          | 尺寸               | `Size`         | -       |
-| showText      | 是否显示颜色值文本 | `boolean`      | -       |
-| showHistory   | 是否显示历史颜色   | `boolean`      | -       |
-| showPreset    | 是否显示预设颜色   | `boolean`      | -       |
-| disabled      | 是否禁用           | `boolean`      | `false` |
-| disabledAlpha | 是否禁用透明度     | `boolean`      | -       |
-| hideTrigger   | 是否隐藏触发器     | `boolean`      | -       |
-| triggerProps  | 触发器属性         | `TriggerProps` | -       |
-| historyColors | 历史颜色列表       | `string[]`     | -       |
-| presetColors  | 预设颜色列表       | `string[]`     | -       |
+<field-table :data="colorPickerProps"/>
 
-### Events
+### color-picker Events
 
-| 事件名               | 说明                   | 回调参数                            |
-| -------------------- | ---------------------- | ----------------------------------- |
-| update:modelValue    | 颜色变化时触发         | `(value: string)`                   |
-| change               | 颜色变化时触发         | `(value: string)`                   |
-| popup-visible-change | 弹窗显示状态变化时触发 | `(visible: boolean, color: string)` |
+<field-table :data="colorPickerEvents" type="emits" />
+
+<script setup>
+import { ref } from 'vue';
+
+const colorPickerProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'format',
+    desc: '颜色值的格式',
+    type: "'hex' | 'rgb'",
+    value: '-',
+  },
+  {
+    name: 'size',
+    desc: '尺寸',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: "'medium'",
+  },
+  {
+    name: 'show-text',
+    desc: '显示颜色值',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-history',
+    desc: '显示历史颜色',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-preset',
+    desc: '显示预设颜色',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'disabled',
+    desc: '禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'disabled-alpha',
+    desc: '禁用透明通道',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'hide-trigger',
+    desc: '没有触发元素，只显示颜色面板',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'trigger-props',
+    desc: '接受所有 Trigger 组件的Props',
+    type: 'Partial<TriggerProps>',
+    value: '-',
+  },
+  {
+    name: 'history-colors',
+    desc: '历史颜色的颜色数组',
+    type: 'string[]',
+    value: '-',
+  },
+  {
+    name: 'preset-colors',
+    desc: '预设颜色的颜色数组',
+    type: 'string[]',
+    value: '`() => colors`',
+  },
+]);
+
+const colorPickerEvents = ref([
+  {
+    name: 'change',
+    desc: '颜色值改变时触发',
+    type: '(value: string) => void',
+    value: '-',
+  },
+  {
+    name: 'popup-visible-change',
+    desc: '颜色面板展开和收起时触发',
+    type: '(visible: boolean, value: string) => void',
+    value: '-',
+  },
+]);
+</script>

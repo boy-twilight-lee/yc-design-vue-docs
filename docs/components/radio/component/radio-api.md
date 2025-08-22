@@ -1,60 +1,141 @@
 ## API
 
-### Radio Props
+### radio Props
 
-| 参数           | 说明         | 类型         | 默认值    |
-| -------------- | ------------ | ------------ | --------- |
-| modelValue     | 绑定值       | `RadioValue` | -         |
-| defaultChecked | 默认是否选中 | `boolean`    | `false`   |
-| value          | 单选框的值   | `RadioValue` | -         |
-| type           | 单选框类型   | `RadioType`  | `'radio'` |
-| disabled       | 是否禁用     | `boolean`    | `false`   |
+<field-table :data="radioProps"/>
 
-### RadioGroup Props
+### radio Events
 
-| 参数         | 说明         | 类型          | 默认值         |
-| ------------ | ------------ | ------------- | -------------- |
-| modelValue   | 绑定值       | `RadioValue`  | -              |
-| defaultValue | 默认值       | `RadioValue`  | -              |
-| size         | 单选框组尺寸 | `Size`        | `'medium'`     |
-| type         | 单选框类型   | `RadioType`   | `'radio'`      |
-| options      | 选项配置     | `RadioOption` | -              |
-| direction    | 布局方向     | `Direction`   | `'horizontal'` |
-| disabled     | 是否禁用     | `boolean`     | `false`        |
+<field-table :data="radioEvents" type="emits" />
 
-### Events
+### radio Slots
 
-| 事件名            | 说明             | 回调参数                         |
-| ----------------- | ---------------- | -------------------------------- |
-| update:modelValue | 绑定值变化时触发 | `(value: RadioValue)`            |
-| change            | 值变化时触发     | `(value: RadioValue, ev: Event)` |
+<field-table :data="radioSlots" :showDefaultValue="false" type="slots"/>
 
-### Slots
+### radio-group Props
 
-| 插槽名  | 说明         | 参数                                      |
-| ------- | ------------ | ----------------------------------------- |
-| default | 标签内容     | -                                         |
-| radio   | 自定义单选框 | `{ checked: boolean, disabled: boolean }` |
-| label   | 自定义标签   | `{ data: ObjectData }`                    |
+<field-table :data="radioGroupProps" />
 
-### RadioValue
+### radio-group Events
 
-| 类型      | 说明     |
-| --------- | -------- |
-| `string`  | 字符串值 |
-| `number`  | 数字值   |
-| `boolean` | 布尔值   |
+<field-table :data="radioGroupEvents" type="emits" />
 
-### RadioType
+### radio-group Slots
 
-| 类型       | 说明           |
-| ---------- | -------------- |
-| `'radio'`  | 默认单选框样式 |
-| `'button'` | 按钮样式       |
+<field-table :data="radioGroupSlots" :showDefaultValue="false" type="slots"/>
 
-### RadioOption
+<script setup>
+import { ref } from 'vue';
 
-| 类型                                                        | 说明     |
-| ----------------------------------------------------------- | -------- |
-| `RadioValue`                                                | 简单值   |
-| `{ label?: string, value: RadioValue, disabled?: boolean }` | 对象配置 |
+const radioProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string | number | boolean',
+    value: '-',
+  },
+  {
+    name: 'default-checked',
+    desc: '默认是否选中（非受控状态）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'value',
+    desc: '选项的 value',
+    type: 'string | number | boolean',
+    value: '`true`',
+  },
+  {
+    name: 'type',
+    desc: '单选的类型',
+    type: "'radio' | 'button'",
+    value: "'radio'",
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+]);
+
+const radioEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: string | number | boolean, ev: Event) => void',
+  },
+]);
+
+const radioSlots = ref([
+  {
+    name: 'radio',
+    desc: '自定义单选框 (checked: boolean, disabled: boolean) (2.18.0)',
+  },
+]);
+
+const radioGroupProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string | number | boolean',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: 'string | number | boolean',
+    value: "''",
+  },
+  {
+    name: 'type',
+    desc: '单选框组的类型',
+    type: "'radio' | 'button'",
+    value: "'radio'",
+  },
+  {
+    name: 'size',
+    desc: '单选框组的尺寸',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: '-',
+  },
+  {
+    name: 'options',
+    desc: '选项',
+    type: 'Array<string | number | RadioOption>',
+    value: '- (2.27.0)',
+  },
+  {
+    name: 'direction',
+    desc: '单选框组的方向',
+    type: "'horizontal' | 'vertical'",
+    value: "'horizontal'",
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+]);
+
+const radioGroupEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: string | number | boolean) => void',
+  },
+]);
+
+const radioGroupSlots = ref([
+  {
+    name: 'radio',
+    desc: '自定义单选框 (checked: boolean, disabled: boolean) (2.27.0)',
+  },
+  {
+    name: 'label',
+    desc: 'radio 文案内容 (data: RadioOption) (2.27.0)',
+  },
+]);
+</script>

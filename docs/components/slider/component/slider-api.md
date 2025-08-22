@@ -1,39 +1,96 @@
 ## API
 
-### Slider Props
+### slider Props
 
-| 参数          | 说明           | 类型                     | 默认值         |
-| ------------- | -------------- | ------------------------ | -------------- |
-| modelValue    | 绑定值         | `SliderValue`            | -              |
-| defaultValue  | 默认值         | `SliderValue`            | -              |
-| step          | 步长           | `number`                 | `1`            |
-| min           | 最小值         | `number`                 | `0`            |
-| max           | 最大值         | `number`                 | `100`          |
-| marks         | 标记           | `Record<number, string>` | -              |
-| direction     | 方向           | `Direction`              | `'horizontal'` |
-| disabled      | 是否禁用       | `boolean`                | `false`        |
-| showTicks     | 是否显示刻度   | `boolean`                | `false`        |
-| showInput     | 是否显示输入框 | `boolean`                | `false`        |
-| range         | 是否范围选择   | `boolean`                | `false`        |
-| showTooltip   | 是否显示提示   | `boolean`                | `true`         |
-| formatTooltip | 提示格式化函数 | `FormatTooltip`          | -              |
+<field-table :data="sliderProps"/>
 
-### Events
+### slider Events
 
-| 事件名            | 说明             | 回调参数               |
-| ----------------- | ---------------- | ---------------------- |
-| update:modelValue | 绑定值变化时触发 | `(value: SliderValue)` |
-| change            | 值变化时触发     | `(value: SliderValue)` |
+<field-table :data="sliderEvents" type="emits" />
 
-### SliderValue
+<script setup>
+import { ref } from 'vue';
 
-| 类型       | 说明       |
-| ---------- | ---------- |
-| `number`   | 单选值     |
-| `number[]` | 范围选择值 |
+const sliderProps = ref([
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'number | [number, number]',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控状态）',
+    type: 'number | [number, number]',
+    value: '0',
+  },
+  {
+    name: 'step',
+    desc: '滑动的步长',
+    type: 'number',
+    value: '1',
+  },
+  {
+    name: 'min',
+    desc: '滑动范围的最小值',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'marks',
+    desc: '设置显示的标签',
+    type: 'Record<number, string>',
+    value: '-',
+  },
+  {
+    name: 'max',
+    desc: '滑动范围的最大值',
+    type: 'number',
+    value: '100',
+  },
+  {
+    name: 'direction',
+    desc: '滑动输入条的方向',
+    type: 'Direction',
+    value: "'horizontal'",
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-ticks',
+    desc: '是否显示刻度线',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-input',
+    desc: '是否显示输入框',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'range',
+    desc: '是否开启范围选择',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'show-tooltip',
+    desc: '是否显示tooltip',
+    type: 'boolean',
+    value: '`true` (2.42.0)',
+  },
+]);
 
-### FormatTooltip
-
-| 类型                        | 说明           |
-| --------------------------- | -------------- |
-| `(value: number) => string` | 提示格式化函数 |
+const sliderEvents = ref([
+  {
+    name: 'change',
+    desc: '值改变时触发',
+    type: '(value: number | [number, number]) => void',
+  },
+]);
+</script>

@@ -1,81 +1,197 @@
 ## API
 
-### TimePicker Props
+### time-picker Props
 
-| 参数                | 说明               | 类型                                                  | 默认值       |
-| ------------------- | ------------------ | ----------------------------------------------------- | ------------ |
-| type                | 时间选择器类型     | `TimePickerType`                                      | `'time'`     |
-| modelValue          | 绑定值             | `TimePickerValue`                                     | -            |
-| defaultValue        | 默认值             | `TimePickerValue`                                     | -            |
-| disabled            | 是否禁用           | `boolean`                                             | `false`      |
-| allowClear          | 是否允许清除       | `boolean`                                             | `false`      |
-| readonly            | 是否只读           | `boolean`                                             | `false`      |
-| error               | 是否错误状态       | `boolean`                                             | `false`      |
-| format              | 时间格式           | `string`                                              | `'HH:mm:ss'` |
-| placeholder         | 占位符             | `string \| string[]`                                  | -            |
-| size                | 尺寸               | `Size`                                                | `'medium'`   |
-| step                | 时间步长           | `{ hour?: number; minute?: number; second?: number }` | -            |
-| disabledHours       | 禁用的小时         | `DisabledHours`                                       | -            |
-| disabledMinutes     | 禁用的分钟         | `DisabledMinutes`                                     | -            |
-| disabledSeconds     | 禁用的秒数         | `DisabledSeconds`                                     | -            |
-| hideDisabledOptions | 是否隐藏禁用的选项 | `boolean`                                             | `false`      |
-| disableConfirm      | 是否禁用确认       | `boolean`                                             | `false`      |
-| position            | 弹出位置           | `TimePickerPosition`                                  | -            |
-| popupVisible        | 是否显示弹出层     | `boolean`                                             | -            |
-| defaultPopupVisible | 默认是否显示弹出层 | `boolean`                                             | `false`      |
-| unmountOnClose      | 关闭时是否卸载     | `boolean`                                             | `false`      |
+<field-table :data="timePickerProps"/>
 
-### Events
+### time-picker Events
 
-| 事件名               | 说明                     | 回调参数                   |
-| -------------------- | ------------------------ | -------------------------- |
-| update:modelValue    | 绑定值变化时触发         | `(value: TimePickerValue)` |
-| update:popupVisible  | 弹出层显示状态变化时触发 | `(value: boolean)`         |
-| change               | 时间变化时触发           | `(timeString, time)`       |
-| select               | 选择时间时触发           | `(timeString, time)`       |
-| clear                | 清除时触发               | -                          |
-| popup-visible-change | 弹出层显示状态变化时触发 | `(value: boolean)`         |
+<field-table :data="timePickerEvents" type="emits" />
 
-### Slots
+### time-picker Slots
 
-| 插槽名      | 说明     | 参数 |
-| ----------- | -------- | ---- |
-| prefix      | 前缀图标 | -    |
-| suffix-icon | 后缀图标 | -    |
-| extra       | 额外内容 | -    |
+<field-table :data="timePickerSlots" :showDefaultValue="false" type="slots"/>
 
-### TimePickerType
+<script setup>
+import { ref } from 'vue';
 
-| 类型           | 说明         |
-| -------------- | ------------ |
-| `'time'`       | 单个时间选择 |
-| `'time-range'` | 时间范围选择 |
+const timePickerProps = ref([
+  {
+    name: 'type',
+    desc: '选择器类型',
+    type: "'time' | 'time-range'",
+    value: "'time'",
+  },
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string | number | Date | Array<string | number | Date>',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值',
+    type: 'string | number | Date | Array<string | number | Date>',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'allow-clear',
+    desc: '是否允许清除',
+    type: 'boolean',
+    value: '`true`',
+  },
+  {
+    name: 'readonly',
+    desc: '是否为只读模式',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'error',
+    desc: '是否为错误状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'format',
+    desc: '展示日期的格式，参考字符串解析格式',
+    type: 'string',
+    value: "'HH:mm:ss'",
+  },
+  {
+    name: 'placeholder',
+    desc: '提示文案',
+    type: 'string | string[]',
+    value: '-',
+  },
+  {
+    name: 'size',
+    desc: '输入框尺寸',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: "'medium'",
+  },
+  {
+    name: 'popup-container',
+    desc: '弹出框的挂载容器',
+    type: 'string | HTMLElement',
+    value: '-',
+  },
+  {
+    name: 'use12-hours',
+    desc: '12 小时制',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'step',
+    desc: '设置 时 / 分 / 秒 的选择间隔',
+    type: '{ hour?: number; minute?: number; second?: number;}',
+    value: '-',
+  },
+  {
+    name: 'disabled-hours',
+    desc: '禁用的部分小时选项',
+    type: '() => number[]',
+    value: '-',
+  },
+  {
+    name: 'disabled-minutes',
+    desc: '禁用的部分分钟选项',
+    type: '(selectedHour?: number) => number[]',
+    value: '-',
+  },
+  {
+    name: 'disabled-seconds',
+    desc: '禁用的部分秒数选项',
+    type: '(selectedHour?: number, selectedMinute?: number) => number[]',
+    value: '-',
+  },
+  {
+    name: 'hide-disabled-options',
+    desc: '隐藏禁止选择的选项',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'disable-confirm',
+    desc: '禁用确认步骤，开启后直接点选时间不需要点击确认按钮',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'position',
+    desc: '弹出的位置',
+    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    value: "'bl'",
+  },
+  {
+    name: 'popup-visible (v-model)',
+    desc: '控制弹出框打开或者关闭',
+    type: 'boolean',
+    value: '-',
+  },
+  {
+    name: 'default-popup-visible',
+    desc: '弹出框默认打开或者关闭',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'trigger-props',
+    desc: '可以传入 Trigger 组件的参数',
+    type: 'TriggerProps',
+    value: '-',
+  },
+  {
+    name: 'unmount-on-close',
+    desc: '是否在关闭后销毁 dom 结构',
+    type: 'boolean',
+    value: '`false`',
+  },
+]);
 
-### TimePickerPosition
+const timePickerEvents = ref([
+  {
+    name: 'change',
+    desc: '组件值发生改变',
+    type: '(timeString: string | Array<string | undefined> | undefined, time: Date | Array<Date | undefined> | undefined) => void',
+  },
+  {
+    name: 'select',
+    desc: '选择时间但未触发组件值变化',
+    type: '(timeString: string | Array<string | undefined>, time: Date | Array<Date | undefined>) => void',
+  },
+  {
+    name: 'clear',
+    desc: '点击清除按钮',
+    type: '() => void',
+  },
+  {
+    name: 'popup-visible-change',
+    desc: '弹出框展开和收起',
+    type: '(visible: boolean) => void',
+  },
+]);
 
-| 类型       | 说明 |
-| ---------- | ---- |
-| `'top'`    | 顶部 |
-| `'tl'`     | 左上 |
-| `'tr'`     | 右上 |
-| `'bottom'` | 底部 |
-| `'bl'`     | 左下 |
-| `'br'`     | 右下 |
-
-### DisabledHours
-
-| 类型             | 说明               |
-| ---------------- | ------------------ |
-| `() => number[]` | 返回禁用的小时数组 |
-
-### DisabledMinutes
-
-| 类型                                  | 说明                             |
-| ------------------------------------- | -------------------------------- |
-| `(selectedHour?: number) => number[]` | 根据选中的小时返回禁用的分钟数组 |
-
-### DisabledSeconds
-
-| 类型                                                           | 说明                                   |
-| -------------------------------------------------------------- | -------------------------------------- |
-| `(selectedHour?: number, selectedMinute?: number) => number[]` | 根据选中的小时和分钟返回禁用的秒数数组 |
+const timePickerSlots = ref([
+  {
+    name: 'prefix',
+    desc: '输入框前缀',
+    value: '2.41.0',
+  },
+  {
+    name: 'suffix-icon',
+    desc: '输入框后缀图标',
+  },
+  {
+    name: 'extra',
+    desc: '额外的页脚',
+  },
+]);
+</script>
