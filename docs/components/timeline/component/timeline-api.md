@@ -1,79 +1,47 @@
 ## API
 
-### Timeline Props
+### timeline Props
 
-| 参数          | 说明       | 类型                    | 默认值       |
-| ------------- | ---------- | ----------------------- | ------------ |
-| reverse       | 是否倒序   | `boolean`               | `false`      |
-| direction     | 时间轴方向 | `Direction`             | `'vertical'` |
-| mode          | 时间轴模式 | `TimelineMode`          | `'left'`     |
-| pending       | 待处理状态 | `boolean \| string`     | -            |
-| labelPosition | 标签位置   | `TimelineLabelPosition` | -            |
+<field-table :data="timelineProps"/>
 
-### Timeline Slots
+### timeline Slots
 
-| 插槽名  | 说明       | 参数 |
-| ------- | ---------- | ---- |
-| dot     | 自定义节点 | -    |
-| default | 时间轴内容 | -    |
+<field-table :data="timelineSlots" type="slots"/>
 
-### TimelineItem Props
+### timeline-item Props
 
-| 参数      | 说明         | 类型               | 默认值  |
-| --------- | ------------ | ------------------ | ------- |
-| dotColor  | 节点颜色     | `string`           | -       |
-| dotType   | 节点类型     | `TimelineDotType`  | -       |
-| lineType  | 线条类型     | `TimelineLineType` | -       |
-| lineColor | 线条颜色     | `string`           | -       |
-| label     | 标签         | `string`           | -       |
-| position  | 位置         | `TimelinePositon`  | -       |
-| isGhost   | 是否幽灵节点 | `boolean`          | `false` |
+<field-table :data="timelineItemProps"/>
 
-### TimelineItem Slots
+### timeline-item Slots
 
-| 插槽名  | 说明       | 参数 |
-| ------- | ---------- | ---- |
-| dot     | 自定义节点 | -    |
-| label   | 自定义标签 | -    |
-| default | 节点内容   | -    |
+<field-table :data="timelineItemSlots" type="slots"/>
 
-### TimelineMode
+<script setup>
+import { ref } from 'vue';
 
-| 类型          | 说明     |
-| ------------- | -------- |
-| `'left'`      | 左侧模式 |
-| `'right'`     | 右侧模式 |
-| `'top'`       | 顶部模式 |
-| `'bottom'`    | 底部模式 |
-| `'alternate'` | 交替模式 |
+const timelineProps = ref([
+  { name: 'reverse', desc: '是否倒序', type: 'boolean', value: 'false' },
+  { name: 'direction', desc: '时间轴方向', type: "'horizontal' | 'vertical'", value: "'vertical'" },
+  { name: 'mode', desc: '时间轴的展示类型：时间轴在左侧，时间轴在右侧, 交替出现。', type: "'left' | 'right' | 'top' | 'bottom' | 'alternate'", value: "'left'" },
+  { name: 'pending', desc: '是否展示幽灵节点，设置为 true 时候只展示幽灵节点。传入ReactNode时，会作为节点内容展示。', type: 'boolean|string', value: '-' },
+  { name: 'label-position', desc: '设置标签文本的位置', type: "'relative' | 'same'", value: "'same'" },
+]);
 
-### TimelineLabelPosition
+const timelineSlots = ref([
+  { name: 'dot', desc: '幽灵节点' },
+]);
 
-| 类型         | 说明     |
-| ------------ | -------- |
-| `'relative'` | 相对位置 |
-| `'same'`     | 相同位置 |
+const timelineItemProps = ref([
+  { name: 'dot-color', desc: '节点颜色', type: 'string', value: '-' },
+  { name: 'dot-type', desc: '节点类型：空心圆/实心圆', type: "'hollow' | 'solid'", value: "'solid'" },
+  { name: 'line-type', desc: '时间轴类型：实线/虚线/点状线', type: "'solid' | 'dashed' | 'dotted'", value: "'solid'" },
+  { name: 'line-color', desc: '时间轴颜色', type: 'string', value: '-' },
+  { name: 'label', desc: '标签文本', type: 'string', value: '-' },
+  { name: 'position', desc: 'Item 位置', type: 'PositionType', value: '-' },
+]);
 
-### TimelineDotType
-
-| 类型       | 说明     |
-| ---------- | -------- |
-| `'hollow'` | 空心节点 |
-| `'solid'`  | 实心节点 |
-
-### TimelineLineType
-
-| 类型       | 说明 |
-| ---------- | ---- |
-| `'solid'`  | 实线 |
-| `'dashed'` | 虚线 |
-| `'dotted'` | 点线 |
-
-### TimelinePositon
-
-| 类型       | 说明 |
-| ---------- | ---- |
-| `'left'`   | 左侧 |
-| `'right'`  | 右侧 |
-| `'top'`    | 顶部 |
-| `'bottom'` | 底部 |
+const timelineItemSlots = ref([
+  { name: 'dot', desc: '自定义节点' },
+  { name: 'label', desc: '自定义标签', version: '2.50.0' },
+]);
+</script>

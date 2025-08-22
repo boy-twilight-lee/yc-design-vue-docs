@@ -1,42 +1,41 @@
 ## API
 
-### Tag Props
+### tag Props
 
-| 参数           | 说明           | 类型      | 默认值     |
-| -------------- | -------------- | --------- | ---------- |
-| color          | 标签颜色       | `string`  | -          |
-| size           | 标签尺寸       | `TagSize` | `'medium'` |
-| bordered       | 是否有边框     | `boolean` | `true`     |
-| visible        | 是否可见       | `boolean` | -          |
-| defaultVisible | 默认是否可见   | `boolean` | `true`     |
-| loading        | 是否加载中     | `boolean` | `false`    |
-| closable       | 是否可关闭     | `boolean` | `false`    |
-| checkable      | 是否可选择     | `boolean` | `false`    |
-| checked        | 是否已选择     | `boolean` | -          |
-| defaultChecked | 默认是否已选择 | `boolean` | `false`    |
-| nowrap         | 是否不换行     | `boolean` | `false`    |
+<field-table :data="tagProps"/>
 
-### Events
+### tag Events
 
-| 事件名         | 说明               | 回调参数                           |
-| -------------- | ------------------ | ---------------------------------- |
-| update:visible | 可见性变化时触发   | `(value: boolean)`                 |
-| update:checked | 选择状态变化时触发 | `(value: boolean)`                 |
-| close          | 关闭时触发         | `(ev: MouseEvent, value?: string)` |
-| check          | 选择状态变化时触发 | `(value: boolean, ev: MouseEvent)` |
+<field-table :data="tagEvents" type="emits"/>
 
-### Slots
+### tag Slots
 
-| 插槽名     | 说明     | 参数 |
-| ---------- | -------- | ---- |
-| default    | 标签内容 | -    |
-| icon       | 标签图标 | -    |
-| close-icon | 关闭图标 | -    |
+<field-table :data="tagSlots" type="slots"/>
 
-### TagSize
+<script setup>
+import { ref } from 'vue';
 
-| 类型       | 说明     |
-| ---------- | -------- |
-| `'small'`  | 小尺寸   |
-| `'medium'` | 中等尺寸 |
-| `'large'`  | 大尺寸   |
+const tagProps = ref([
+  { name: 'color', desc: '标签的颜色', type: "'red' | 'orangered' | 'orange' | 'gold' | 'lime' | 'green' | 'cyan' | 'blue' | 'arcoblue' | 'purple' | 'pinkpurple' | 'magenta' | 'gray'", value: '-' },
+  { name: 'size', desc: '标签的大小', type: "'small' | 'medium' | 'large'", value: "'medium'" },
+  { name: 'bordered', desc: '是否显示边框', type: 'boolean', value: 'false', version: '2.33.0' },
+  { name: 'visible (v-model)', desc: '标签是否可见', type: 'boolean', value: '-' },
+  { name: 'default-visible', desc: '标签默认是否可见', type: 'boolean', value: 'true' },
+  { name: 'loading', desc: '标签是否为加载中状态', type: 'boolean', value: 'false' },
+  { name: 'closable', desc: '标签是否可关闭', type: 'boolean', value: 'false' },
+  { name: 'checkable', desc: '标签是否可选中', type: 'boolean', value: 'false' },
+  { name: 'checked (v-model)', desc: '标签是否选中（标签可选中时可用）', type: 'boolean', value: '-' },
+  { name: 'default-checked', desc: '标签默认选中状态（标签可选中时可用）', type: 'boolean', value: 'true' },
+  { name: 'nowrap', desc: '标签内容不换行', type: 'boolean', value: 'false', version: '2.56.1' },
+]);
+
+const tagEvents = ref([
+  { name: 'close', desc: '点击关闭按钮时触发', type: 'ev: MouseEvent' },
+  { name: 'check', desc: '用户选中时触发（仅在可选中模式下触发）', type: 'checked: boolean, ev: MouseEvent' },
+]);
+
+const tagSlots = ref([
+  { name: 'icon', desc: '图标' },
+  { name: 'close-icon', desc: '关闭按钮的图标' },
+]);
+</script>

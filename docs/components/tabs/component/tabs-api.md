@@ -1,88 +1,67 @@
 ## API
 
-### Tabs Props
+### tabs Props
 
-| 参数             | 说明               | 类型         | 默认值         |
-| ---------------- | ------------------ | ------------ | -------------- |
-| activeKey        | 当前激活的标签页   | `TabKey`     | -              |
-| defaultActiveKey | 默认激活的标签页   | `TabKey`     | -              |
-| position         | 标签页位置         | `TabPositon` | `'top'`        |
-| size             | 标签页尺寸         | `Size`       | `'medium'`     |
-| type             | 标签页类型         | `TabType`    | `'line'`       |
-| direction        | 标签页方向         | `Direction`  | `'horizontal'` |
-| editable         | 是否可编辑         | `boolean`    | `false`        |
-| showAddButton    | 是否显示添加按钮   | `boolean`    | `false`        |
-| destoryOnHide    | 隐藏时是否销毁     | `boolean`    | `false`        |
-| justify          | 是否两端对齐       | `boolean`    | `false`        |
-| animation        | 是否启用动画       | `boolean`    | `true`         |
-| headerPadding    | 是否启用头部内边距 | `boolean`    | `false`        |
-| autoSwitch       | 是否自动切换       | `boolean`    | `false`        |
-| hideContent      | 是否隐藏内容       | `boolean`    | `false`        |
-| trigger          | 触发方式           | `TabTrigger` | `'click'`      |
+<field-table :data="tabsProps"/>
 
-### Events
+### tabs Events
 
-| 事件名           | 说明                 | 回调参数          |
-| ---------------- | -------------------- | ----------------- |
-| update:activeKey | 激活标签页变化时触发 | `(value: TabKey)` |
-| change           | 标签页变化时触发     | `(value: TabKey)` |
-| tab-click        | 标签页点击时触发     | `(value: TabKey)` |
-| add              | 添加标签页时触发     | -                 |
-| delete           | 删除标签页时触发     | `(value: TabKey)` |
+<field-table :data="tabsEvents" type="emits"/>
 
-### Slots
+### tabs Slots
 
-| 插槽名  | 说明       | 参数 |
-| ------- | ---------- | ---- |
-| extra   | 额外操作   | -    |
-| default | 标签页内容 | -    |
+<field-table :data="tabsSlots" type="slots"/>
 
-### TabPane Props
+### tab-pane Props
 
-| 参数          | 说明           | 类型      | 默认值  |
-| ------------- | -------------- | --------- | ------- |
-| title         | 标签页标题     | `string`  | -       |
-| path          | 标签页路径     | `TabKey`  | -       |
-| disabled      | 是否禁用       | `boolean` | `false` |
-| closable      | 是否可关闭     | `boolean` | `false` |
-| destoryOnHide | 隐藏时是否销毁 | `boolean` | `false` |
+<field-table :data="tabPaneProps"/>
 
-### TabPane Slots
+### tab-pane Slots
 
-| 插槽名  | 说明       | 参数 |
-| ------- | ---------- | ---- |
-| default | 标签页内容 | -    |
-| title   | 标签页标题 | -    |
+<field-table :data="tabPaneSlots" type="slots"/>
 
-### TabKey
+<script setup>
+import { ref } from 'vue';
 
-| 类型               | 说明           |
-| ------------------ | -------------- |
-| `string \| number` | 标签页键值类型 |
+const tabsProps = ref([
+  { name: 'active-key (v-model)', desc: '当前选中的标签的 key', type: 'string|number', value: '-' },
+  { name: 'default-active-key', desc: '默认选中的标签的key（非受控状态，为空时选中第一个标签页）', type: 'string|number', value: '-' },
+  { name: 'position', desc: '选项卡的位置', type: "'left' | 'right' | 'top' | 'bottom'", value: "'top'" },
+  { name: 'size', desc: '选项卡的大小', type: "'mini' | 'small' | 'medium' | 'large'", value: '-' },
+  { name: 'type', desc: '选项卡的类型', type: "'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule'", value: "'line'" },
+  { name: 'direction', desc: '选项卡的方向', type: "'horizontal' | 'vertical'", value: "'horizontal'" },
+  { name: 'editable', desc: '是否开启可编辑模式', type: 'boolean', value: 'false' },
+  { name: 'show-add-button', desc: '是否显示增加按钮（仅在可编辑模式可用）', type: 'boolean', value: 'false' },
+  { name: 'destroy-on-hide', desc: '是否在不显示标签时销毁内容', type: 'boolean', value: 'false', version: '2.27.0' },
+  { name: 'lazy-load', desc: '是否在首次展示标签时挂载内容', type: 'boolean', value: 'false' },
+  { name: 'justify', desc: '高度撑满容器，只在水平模式下生效。', type: 'boolean', value: 'false' },
+  { name: 'animation', desc: '是否开启选项内容过渡动画', type: 'boolean', value: 'false' },
+  { name: 'header-padding', desc: '选项卡头部是否存在水平边距。仅对 type 等于 line、text 类型的选项卡生效', type: 'boolean', value: 'true', version: '2.10.0' },
+  { name: 'auto-switch', desc: '创建标签后是否切换到新标签（最后一个）', type: 'boolean', value: 'false', version: '2.18.0' },
+  { name: 'hide-content', desc: '是否隐藏内容', type: 'boolean', value: 'false', version: '2.25.0' },
+  { name: 'trigger', desc: '触发方式', type: "'hover' | 'click'", value: "'click'", version: '2.34.0' },
+  { name: 'scroll-position', desc: '被选中 tab 的滚动位置，默认 auto 即会将 activeTab 滚动到可见区域，但不会特意做位置调整', type: "'start' | 'end' | 'center' | 'auto' | number", value: "'auto'" },
+]);
 
-### TabType
+const tabsEvents = ref([
+  { name: 'change', desc: '当前标签值改变时触发', type: 'key: string | number' },
+  { name: 'tab-click', desc: '用户点击标签时触发', type: 'key: string | number' },
+  { name: 'add', desc: '用户点击增加按钮时触发' },
+  { name: 'delete', desc: '用户点击删除按钮时触发', type: 'key: string | number' },
+]);
 
-| 类型            | 说明         |
-| --------------- | ------------ |
-| `'line'`        | 线条类型     |
-| `'card'`        | 卡片类型     |
-| `'card-gutter'` | 卡片间隔类型 |
-| `'text'`        | 文字类型     |
-| `'rounded'`     | 圆角类型     |
-| `'capsule'`     | 胶囊类型     |
+const tabsSlots = ref([
+  { name: 'extra', desc: '选项卡额外内容' },
+]);
 
-### TabPositon
+const tabPaneProps = ref([
+  { name: 'title', desc: '选项卡的标题', type: 'string', value: '-' },
+  { name: 'disabled', desc: '是否禁用', type: 'boolean', value: 'false' },
+  { name: 'closable', desc: '是否允许关闭此选项卡（仅在可编辑模式生效）', type: 'boolean', value: 'true' },
+  { name: 'destroy-on-hide', desc: '是否在不显示标签时销毁内容', type: 'boolean', value: 'false', version: '2.27.0' },
+]);
 
-| 类型       | 说明 |
-| ---------- | ---- |
-| `'left'`   | 左侧 |
-| `'right'`  | 右侧 |
-| `'bottom'` | 底部 |
-| `'top'`    | 顶部 |
-
-### TabTrigger
-
-| 类型      | 说明     |
-| --------- | -------- |
-| `'click'` | 点击触发 |
-| `'hover'` | 悬停触发 |
+const tabPaneSlots = ref([
+  { name: 'title', desc: '选项卡标题' },
+]);
+</script>

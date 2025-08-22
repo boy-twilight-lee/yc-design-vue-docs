@@ -1,39 +1,39 @@
 ## API
 
-### Tooltip Props
+### tooltip Props
 
-| 参数                | 说明               | 类型             | 默认值  |
-| ------------------- | ------------------ | ---------------- | ------- |
-| popupVisible        | 是否显示弹出层     | `boolean`        | -       |
-| defaultPopupVisible | 默认是否显示弹出层 | `boolean`        | `false` |
-| content             | 提示内容           | `string`         | -       |
-| position            | 提示位置           | `TriggerPostion` | `'top'` |
-| mini                | 是否迷你提示       | `boolean`        | `false` |
-| backgroundColor     | 背景色             | `string`         | -       |
-| contentClass        | 内容样式类         | `ClassName`      | -       |
-| contentStyle        | 内容内联样式       | `CSSProperties`  | -       |
-| arrowClass          | 箭头样式类         | `ClassName`      | -       |
-| arrowStyle          | 箭头内联样式       | `CSSProperties`  | -       |
-| popupContainer      | 弹出层容器         | `PopupContainer` | -       |
-| triggerProps        | 触发器属性         | `TriggerProps`   | -       |
+<field-table :data="tooltipProps"/>
 
-### Events
+### tooltip Events
 
-| 事件名               | 说明                     | 回调参数           |
-| -------------------- | ------------------------ | ------------------ |
-| update:popupVisible  | 弹出层显示状态变化时触发 | `(value: boolean)` |
-| popup-visible-change | 弹出层显示状态变化时触发 | `(value: boolean)` |
+<field-table :data="tooltipEvents" type="emits"/>
 
-### Slots
+### tooltip Slots
 
-| 插槽名  | 说明     | 参数 |
-| ------- | -------- | ---- |
-| default | 触发元素 | -    |
-| content | 提示内容 | -    |
+<field-table :data="tooltipSlots" type="slots"/>
 
-### Expose
+<script setup>
+import { ref } from 'vue';
 
-| 方法名 | 说明     | 参数 |
-| ------ | -------- | ---- |
-| hide   | 隐藏提示 | -    |
-| show   | 显示提示 | -    |
+const tooltipProps = ref([
+  { name: 'popup-visible (v-model)', desc: '文字气泡是否可见', type: 'boolean', value: '-' },
+  { name: 'default-popup-visible', desc: '文字气泡默认是否可见（非受控模式）', type: 'boolean', value: 'false' },
+  { name: 'content', desc: '文字气泡内容', type: 'string', value: '-' },
+  { name: 'position', desc: '弹出位置', type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'", value: "'top'" },
+  { name: 'mini', desc: '是否展示为迷你尺寸', type: 'boolean', value: 'false' },
+  { name: 'background-color', desc: '弹出框的背景颜色', type: 'string', value: '-' },
+  { name: 'content-class', desc: '弹出框内容的类名', type: 'ClassName', value: '-' },
+  { name: 'content-style', desc: '弹出框内容的样式', type: 'CSSProperties', value: '-' },
+  { name: 'arrow-class', desc: '弹出框箭头的类名', type: 'ClassName', value: '-' },
+  { name: 'arrow-style', desc: '弹出框箭头的样式', type: 'CSSProperties', value: '-' },
+  { name: 'popup-container', desc: '弹出框的挂载容器', type: 'string | HTMLElement', value: '-' },
+]);
+
+const tooltipEvents = ref([
+  { name: 'popup-visible-change', desc: '文字气泡显示状态改变时触发', type: 'visible: boolean' },
+]);
+
+const tooltipSlots = ref([
+  { name: 'content', desc: '内容' },
+]);
+</script>
