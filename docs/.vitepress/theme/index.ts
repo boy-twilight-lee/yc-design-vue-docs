@@ -5,7 +5,7 @@ import 'yc-design-vue/es/style.css';
 import '@arco-design/web-vue/dist/arco.css';
 import '../style/custom.less';
 import '../style/global.less';
-import { HeroImage } from '../component/hero-image';
+import { HeroImage } from '../components/hero-image';
 // 是否是服务端渲染
 export const isServerRendering = (() => {
   try {

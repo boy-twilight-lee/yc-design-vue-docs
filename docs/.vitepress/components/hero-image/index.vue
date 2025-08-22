@@ -1,19 +1,15 @@
 <template>
   <div class="hero-image-container">
     <div class="image-bg"></div>
-    <img
-      class="VPImage image-src"
-      src="/component.svg"
-      alt="component" />
+    <image-component class="VPImage image-src" />
   </div>
 </template>
 
-<script lang="ts" setup>
-// Script部分没有变化
+<script setup>
+import ImageComponent from './compoent/component.vue';
 </script>
 
 <style lang="less" scoped>
-// 1. 定义一个可复用的 "混入" (Mixin) 来处理响应式尺寸
 .responsive-size() {
   width: 192px;
   height: 192px;
@@ -42,7 +38,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: radial-gradient(circle, #a8c5ff, #165dff);
+    background-image: var(--vp-hero-image-bg);
     filter: blur(68px);
     border-radius: 50%;
 
