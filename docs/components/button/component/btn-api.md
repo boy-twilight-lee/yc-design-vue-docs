@@ -6,17 +6,15 @@
 
 ### button Events
 
-<field-table :data="btnEmits" :showDefaultValue="false" header="事件名"/>
+<field-table :data="btnEmits" type="emits" />
 
 ### button Slots
 
-<field-table :data="btnSlots" :showDefaultValue="false" header="
-插槽名"/>
+<field-table :data="btnSlots" :showDefaultValue="false" type="slots"/>
 
 ### button-group Props
 
-<field-table :data="groupProps" :showDefaultValue="false" header="
-插槽名"/>
+<field-table :data="groupProps" />
 
 <script setup>
 import { ref } from 'vue';

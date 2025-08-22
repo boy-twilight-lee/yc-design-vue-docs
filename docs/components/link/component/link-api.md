@@ -6,7 +6,7 @@
 
 ### link Events
 
-<field-table :data="emits" :showDefaultValue="false" header="事件名"/>
+<field-table :data="emits" type="emits"/>
 
 <script setup>
 import { ref } from 'vue';

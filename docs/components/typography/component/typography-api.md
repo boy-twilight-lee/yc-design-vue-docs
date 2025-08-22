@@ -6,7 +6,7 @@
 
 ### common Events
 
-<field-table :data="emits" :showDefaultValue="false" header="事件名"/>
+<field-table :data="emits" type="emits"/>
 
 ### typography-title Props
 

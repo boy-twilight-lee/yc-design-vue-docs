@@ -6,15 +6,15 @@
 
 ### layout-header Slots
 
-<field-table :data="headerSlots" :show-default-value="false"/>
+<field-table :data="headerSlots"  type="slots"/>
 
 ### layout-content Slots
 
-<field-table :data="headerSlots" :show-default-value="false"/>
+<field-table :data="headerSlots"  type="slots"/>
 
 ### layout-footer Slots
 
-<field-table :data="headerSlots" :show-default-value="false"/>
+<field-table :data="headerSlots"  type="slots"/>
 
 ### layout-sider props
 

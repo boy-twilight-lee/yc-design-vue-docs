@@ -1,6 +1,6 @@
 <template>
   <a-table
-    :columns="computedColumns"
+    :columns="columns"
     :data="data"
     :pagination="false"
     style="width: 100%; margin-top: 20px"
@@ -12,48 +12,45 @@
 import { computed } from 'vue';
 import { Table as ATable } from '@arco-design/web-vue';
 const props = defineProps({
-  /**
-   * 表格数据
-   */
   data: {
     type: Array,
     required: true,
   },
-  showDefaultValue: {
-    type: Boolean,
-    default: true,
-  },
-  header: {
+  type: {
     type: String,
-    default: '参数名',
+    default: 'props',
   },
 });
-
 // 动态计算最终显示的列
-const computedColumns = computed(() => {
-  const baseColumns = [
+const columns = computed(() => {
+  const nameMap = {
+    props: '参数名',
+    emits: '事件名',
+    expose: '方法名',
+    slots: '插槽名',
+  };
+  return [
     {
-      title: props.header,
+      title: nameMap[props.type],
       dataIndex: 'name',
-      width: 120,
+      width: 200,
     },
     {
       title: '描述',
       dataIndex: 'desc',
     },
     {
-      title: '类型',
+      title: props.type == 'props' ? '类型' : '参数',
       dataIndex: 'type',
+      width: 200,
     },
-  ];
-  const defaultValueColumn = {
-    title: '默认值',
-    dataIndex: 'value',
-    width: 100,
-  };
-  if (props.showDefaultValue) {
-    return [...baseColumns, defaultValueColumn];
-  }
-  return baseColumns;
+    props.type == 'props'
+      ? {
+          title: '默认值',
+          dataIndex: 'value',
+          width: 150,
+        }
+      : null,
+  ].filter((v) => v);
 });
 </script>

@@ -6,7 +6,7 @@
 
 ### space Slots
 
-<field-table :data="spaceSlots" :show-default-value="false"/>
+<field-table :data="spaceSlots" type="slots" />
 
 <script setup>
 import { ref } from 'vue';

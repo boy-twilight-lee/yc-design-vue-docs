@@ -2,7 +2,7 @@
 
 ### row Props
 
-<field-table :data="rowProps"/>
+<field-table :data="rowProps" />
 
 ### col Props
 
