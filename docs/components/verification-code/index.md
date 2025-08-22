@@ -1,4 +1,4 @@
-# VerificationCode 验证码
+# 验证码输入 VerificationCode
 
 验证码输入组件
 

@@ -130,8 +130,14 @@ export default defineConfig({
             { text: '滑块 Slider', link: '/components/slider/index.md' },
             { text: '开关 Switch', link: '/components/switch/index.md' },
             { text: '文本域 Textarea', link: '/components/textarea/index.md' },
-            { text: '时间选择器 TimePicker', link: '/components/time-picker' },
-            { text: '数据穿梭框 Transfer', link: '/components/transfer' },
+            {
+              text: '时间选择器 TimePicker',
+              link: '/components/time-picker/index.md',
+            },
+            {
+              text: '数据穿梭框 Transfer',
+              link: '/components/transfer/index.md',
+            },
           ],
         },
         {
