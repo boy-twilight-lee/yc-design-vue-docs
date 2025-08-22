@@ -4,7 +4,7 @@
 
 <field-table :data="spaceProps"/>
 
-### layout-space Slots
+### space Slots
 
 <field-table :data="spaceSlots" :show-default-value="false"/>
 
