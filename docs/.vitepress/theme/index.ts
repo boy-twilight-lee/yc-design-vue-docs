@@ -1,5 +1,5 @@
 import Theme from 'vitepress/theme';
-import { watch, nextTick, h } from 'vue';
+import { watch, nextTick, h, onMounted, onBeforeUnmount } from 'vue';
 import { useRoute } from 'vitepress';
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css';
@@ -38,6 +38,28 @@ export default {
   },
   setup() {
     if (isServerRendering) return;
+    let observer: MutationObserver | null = null;
+    onMounted(() => {
+      const htmlElement = document.documentElement;
+      observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.attributeName !== 'class') return;
+          if ((mutation.target as HTMLElement).classList.contains('dark')) {
+            document.body.setAttribute('arco-theme', 'dark');
+          } else {
+            document.body.removeAttribute('arco-theme');
+          }
+        });
+      });
+      observer.observe(htmlElement, {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+    });
+    // 在组件卸载前执行，这是非常重要的一步！
+    onBeforeUnmount(() => {
+      observer?.disconnect();
+    });
     // route信息
     const route = useRoute();
     watch(

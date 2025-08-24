@@ -1,6 +1,6 @@
 ### Modal全局方法
 
-组件`Modal`提供的全局方法，可以通过以下三种方法使用：
+`Modal` 提供的全局方法，可以通过以下三种方法使用：
 
 1. 通过 `this.$modal` 调用
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$modal` 调用

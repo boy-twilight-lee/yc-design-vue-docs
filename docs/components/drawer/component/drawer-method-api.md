@@ -1,6 +1,6 @@
 ### Drawer全局方法
 
-组件`Drawer`提供的全局方法，可以通过以下三种方法使用：
+`Drawer` 提供的全局方法，可以通过以下三种方法使用：
 
 1. 通过 `this.$drawer` 调用
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$drawer` 调用
