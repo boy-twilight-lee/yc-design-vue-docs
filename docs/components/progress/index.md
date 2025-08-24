@@ -5,7 +5,23 @@
 ---
 
 <script setup>
+import ProgressBasicUse from "./component/progress-basic-use.md"
+import ProgressStatus from "./component/progress-status.md"
+import ProgressCircle from "./component/progress-circle.md"
+import ProgressMini from "./component/progress-mini.md"
+import ProgressSize from "./component/progress-size.md"
+import ProgressGradient from "./component/progress-gradient.md"
+import ProgressStep from "./component/progress-step.md"
+import ProgressColor from "./component/progress-color.md"
 import ProgressApi from "./component/progress-api.md"
 </script>
 
+<progress-basic-use />
+<progress-status />
+<progress-circle />
+<progress-mini />
+<progress-size />
+<progress-gradient />
+<progress-step />
+<progress-color />
 <progress-api />

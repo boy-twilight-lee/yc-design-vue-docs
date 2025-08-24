@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import vueJsx from 'unplugin-vue-jsx/vite';
 
 export default defineConfig({
   title: 'Yc Design Vue',
@@ -228,6 +229,7 @@ export default defineConfig({
   },
   ignoreDeadLinks: true,
   vite: {
+    plugins: [vueJsx()],
     ssr: {
       noExternal: [
         'yc-design-vue',
