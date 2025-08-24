@@ -1,6 +1,6 @@
 ### 消息类型
 
-全局提示有 6 种不同的类型，分别为：<yc-tag>info</yc-tag>、<yc-tag>success</yc-tag>、<yc-tag>warning</yc-tag>、<yc-tag>error</yc-tag>、<yc-tag>normal</yc-tag>、<yc-tag>loading</yc-tag>。
+全局提示有 6 种不同的类型，分别为：`info`、`success`、`warning`、`error`、`normal`、`loading`。
 
 <div class="cell-demo vp-raw">
   <div>

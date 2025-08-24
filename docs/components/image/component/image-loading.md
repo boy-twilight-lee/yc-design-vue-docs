@@ -1,6 +1,6 @@
 ### 加载状态
 
-默认情况下，加载效果是不显示的，可通过设置 <yc-tag>showLoader</yc-tag> 为 <yc-tag>true</yc-tag> 显示默认加载效果。如果默认加载效果不符合需求, 还可以通过 具名插槽 <yc-tag>loader</yc-tag> 自行设置加载样式。
+默认情况下，加载效果是不显示的，可通过设置 `showLoader` 为 `true` 显示默认加载效果。如果默认加载效果不符合需求, 还可以通过 具名插槽 `loader` 自行设置加载样式。
 
 <div class="cell-demo vp-raw">
   <div>

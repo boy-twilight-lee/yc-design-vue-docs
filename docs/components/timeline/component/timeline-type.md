@@ -1,6 +1,6 @@
 ### 时间轴展示类型
 
-设置 <yc-tag>mode=alternate</yc-tag> 时将会交替展示内容。同时可以通过设置 <yc-tag>TimelineItem</yc-tag> 的 <yc-tag>position</yc-tag> 属性控制时间轴节点的位置.
+设置 `mode=alternate` 时将会交替展示内容。同时可以通过设置 `TimelineItem` 的 `position` 属性控制时间轴节点的位置.
 
 <div class="cell-demo vp-raw">
   <yc-row justify="space-between">

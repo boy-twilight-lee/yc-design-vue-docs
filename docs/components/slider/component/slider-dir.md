@@ -1,6 +1,6 @@
 ### 竖直滑动条
 
-设置 <yc-tag>direction="vertical"</yc-tag> ，将会显示竖直的滑动条。
+设置 `direction="vertical"` ，将会显示竖直的滑动条。
 
 <div class="cell-demo vp-raw">
   <yc-space align="start">

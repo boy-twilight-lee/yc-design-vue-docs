@@ -1,6 +1,6 @@
 ### 自定义复选框
 
-使用 <yc-tag>#checkbox</yc-tag> 插槽自定义复选框的展示
+使用 `#checkbox` 插槽自定义复选框的展示
 
 <div class="cell-demo vp-raw">
   <yc-checkbox-group :default-value="['1']">

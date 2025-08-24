@@ -1,6 +1,6 @@
 ### 幽灵节点
 
-当任务状态正在发生，还在记录过程中，可用幽灵节点来表示当前的时间节点，通过 <yc-tag>slot#pending-dot</yc-tag> 定制其轴点。
+当任务状态正在发生，还在记录过程中，可用幽灵节点来表示当前的时间节点，通过 `slot#pending-dot` 定制其轴点。
 
 <div class="cell-demo vp-raw">
   <yc-row

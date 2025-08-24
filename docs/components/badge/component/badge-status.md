@@ -1,6 +1,6 @@
 ### 状态点
 
-设置 <yc-tag>status</yc-tag>，可以得到不同的状态点。<yc-tag>normal - 正常</yc-tag> 、 <yc-tag>processing - 进行中</yc-tag> 、<yc-tag>success - 成功</yc-tag> 、 <yc-tag>warning - 提醒</yc-tag> 、 <yc-tag>danger - 危险</yc-tag>。
+设置 `status`，可以得到不同的状态点。`normal - 正常` 、 `processing - 进行中` 、`success - 成功` 、 `warning - 提醒` 、 `danger - 危险`。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large" direction="vertical">

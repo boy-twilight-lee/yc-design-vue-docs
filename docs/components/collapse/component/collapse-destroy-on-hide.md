@@ -1,6 +1,6 @@
 ### 隐藏时销毁
 
-通过设置 <yc-tag>destroy-on-hide</yc-tag> 可以让面板内容在隐藏时销毁。
+通过设置 `destroy-on-hide` 可以让面板内容在隐藏时销毁。
 
 <div class="cell-demo vp-raw">
   <yc-collapse

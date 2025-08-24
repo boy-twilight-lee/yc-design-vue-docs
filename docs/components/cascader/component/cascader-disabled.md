@@ -1,6 +1,6 @@
 ### 禁用选项
 
-指定 <yc-tag>option</yc-tag> 的 <yc-tag>disabled</yc-tag> 为 <yc-tag>true</yc-tag>，可以禁用该选项。
+指定 `option` 的 `disabled` 为 `true`，可以禁用该选项。
 
 <div class="cell-demo vp-raw">
   <yc-cascader

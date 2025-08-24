@@ -1,6 +1,6 @@
 ### 双向绑定
 
-支持 <yc-tag>v-model</yc-tag> 进行数据的双向绑定。
+支持 `v-model` 进行数据的双向绑定。
 
 <div class="cell-demo vp-raw">
   <yc-time-picker

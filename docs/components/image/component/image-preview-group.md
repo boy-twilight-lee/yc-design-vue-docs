@@ -1,6 +1,6 @@
 ### 多图预览
 
-用 <yc-tag> {{ '<yc-image-preview-group>' }} </yc-tag> 包裹 <yc-tag> {{'<yc-image>'}} </yc-tag> 组件即可进行多图预览。
+`<yc-image-preview-group>` 包裹 `<yc-image>` 组件即可进行多图预览。
 
 <div class="cell-demo vp-raw">
   <yc-image-preview-group infinite>

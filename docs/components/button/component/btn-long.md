@@ -1,6 +1,6 @@
 ### 长按钮
 
-通过设置 <yc-tag>long</yc-tag> 属性，使按钮的宽度跟随容器的宽度。
+通过设置 `long` 属性，使按钮的宽度跟随容器的宽度。
 
 <div class='cell-demo'>
    <yc-space class="wrapper" direction="vertical">

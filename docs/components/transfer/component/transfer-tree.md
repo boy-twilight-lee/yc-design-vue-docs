@@ -1,6 +1,6 @@
 ### 树型穿梭框
 
-通过设置 <yc-tag>simple</yc-tag> 来开启简单模式，点击选项即可移动。
+通过设置 `simple` 来开启简单模式，点击选项即可移动。
 
 <div class="cell-demo vp-raw">
   <yc-transfer

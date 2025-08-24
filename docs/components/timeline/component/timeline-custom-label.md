@@ -1,6 +1,6 @@
 ### 自定义标签
 
-可以通过 <yc-tag>label</yc-tag> 插槽自定义标签
+可以通过 `label` 插槽自定义标签
 
 <div class="cell-demo vp-raw">
   <yc-timeline>

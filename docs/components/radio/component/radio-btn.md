@@ -1,6 +1,6 @@
 ### 按钮类型的单选框组
 
-通过指定 <yc-tag>type="button"</yc-tag> ，可以显示按钮类型的单选框组。
+通过指定 `type="button"` ，可以显示按钮类型的单选框组。
 
 <div class="cell-demo vp-raw">
     <yc-radio-group type="button">

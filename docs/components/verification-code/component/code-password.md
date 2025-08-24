@@ -1,6 +1,6 @@
 ### 密码模式
 
-指定 <yc-tag>masked = true</yc-tag> 可开启密码模式
+指定 `masked = true` 可开启密码模式
 
 <div class="cell-demo vp-raw">
  <yc-verification-code

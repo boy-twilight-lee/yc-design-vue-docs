@@ -1,6 +1,6 @@
 ### 自定义图标
 
-设置 <yc-tag>icon</yc-tag> 来自定义图标。
+设置 `icon` 来自定义图标。
 
 <div class="cell-demo vp-rwa">
   <yc-button @click="handleClick">Info Message</yc-button>

@@ -1,6 +1,6 @@
 ### 预设颜色和历史颜色
 
-通过 <yc-tag>showPreset</yc-tag> 和 <yc-tag>showHistory</yc-tag> 开启预设颜色和历史颜色区域。历史颜色需要用户自行控制展示内容。
+通过 `showPreset` 和 `showHistory` 开启预设颜色和历史颜色区域。历史颜色需要用户自行控制展示内容。
 
 <div class="cell-demo vp-raw">
   <yc-color-picker

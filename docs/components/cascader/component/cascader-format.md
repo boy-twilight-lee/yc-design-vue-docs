@@ -1,6 +1,6 @@
 ### 自定义输入框的展示值
 
-利用 <yc-tag>formatLabel</yc-tag> 对显示的内容进行自定义处理。
+利用 `formatLabel` 对显示的内容进行自定义处理。
 
 <div class="cell-demo vp-raw">
   <yc-cascader

@@ -1,6 +1,6 @@
 ### 半选
 
-指定 <yc-tag>allow-half</yc-tag> 来开启半选。
+指定 `allow-half` 来开启半选。
 
 <div class="cell-demo vp-raw">
   <yc-rate

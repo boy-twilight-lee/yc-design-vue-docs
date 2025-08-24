@@ -1,6 +1,6 @@
 ### 可伸缩侧边栏
 
-可以用鼠标进行拖拽放大缩小的侧边栏，需要用到的参数：<yc-tag>resizeDirections</yc-tag>。
+可以用鼠标进行拖拽放大缩小的侧边栏，需要用到的参数：`resizeDirections`。
 
 <div class="cell-demo vp-raw">
   <div class="layout-demo">

@@ -1,6 +1,6 @@
 ### 基本用法
 
-按钮分为 <yc-tag>primary</yc-tag> - 主要按钮、<yc-tag>secondary</yc-tag> - 次要按钮（默认）、<yc-tag>dashed</yc-tag>- 虚线按钮、<yc-tag>outline</yc-tag> - 线形按钮、<yc-tag>text</yc-tag> - 文本按钮五种类型。
+按钮分为 `primary` - 主要按钮、`secondary` - 次要按钮（默认）、`dashed`- 虚线按钮、`outline` - 线形按钮、`text` - 文本按钮五种类型。
 
 <div class="cell-demo vp-raw">
   <yc-space>

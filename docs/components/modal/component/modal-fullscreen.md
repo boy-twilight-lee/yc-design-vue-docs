@@ -1,6 +1,6 @@
 ### 全屏
 
-开启 <yc-tag>fullscreen</yc-tag> 属性，可以让对话框占满整个容器。
+开启 `fullscreen` 属性，可以让对话框占满整个容器。
 
 <div class="cell-demo vp-raw">
   <yc-button @click="handleClick">Open Modal</yc-button>

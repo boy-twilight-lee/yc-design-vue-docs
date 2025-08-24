@@ -1,6 +1,6 @@
 ### 带有文字的分割线
 
-通过 <yc-tag>orientation</yc-tag> 为分割线添加描述文字。
+通过 `orientation` 为分割线添加描述文字。
 
 <div class="cell-demo vp-raw">
   <div class="divider-demo">

@@ -1,6 +1,6 @@
 ### 前缀与后缀
 
-通过指定 <yc-tag>prefix</yc-tag> 和 <yc-tag>suffix</yc-tag> 插槽来在输入框内添加前缀和后缀。
+通过指定 `prefix` 和 `suffix` 插槽来在输入框内添加前缀和后缀。
 
 <div class="cell-demo vp-raw">
   <yc-space

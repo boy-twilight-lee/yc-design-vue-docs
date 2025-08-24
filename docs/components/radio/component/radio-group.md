@@ -1,6 +1,6 @@
 ### 单选框组
 
-通过 <yc-tag>{{'<yc-radio-group>'}}</yc-tag> 组件展示单选框组。
+通过 `<yc-radio-group>` 组件展示单选框组。
 
 <div class="cell-demo vp-raw">
   <yc-space

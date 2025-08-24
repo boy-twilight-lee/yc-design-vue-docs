@@ -1,6 +1,6 @@
 ### 按钮模式
 
-指定 <yc-tag>mode</yc-tag> 为 <yc-tag>button</yc-tag> 来使用带按钮的数字输入框。
+指定 `mode` 为 `button` 来使用带按钮的数字输入框。
 
 <div class="cell-demo vp-raw">
    <yc-input-number

@@ -1,6 +1,6 @@
 ### 顶部公告
 
-通过设置 <yc-tag>banner</yc-tag>，可将警告提示作为顶部公告使用（去除边框和圆角）。
+通过设置 `banner`，可将警告提示作为顶部公告使用（去除边框和圆角）。
 
 <div class="cell-demo vp-raw">
   <yc-alert

@@ -1,6 +1,6 @@
 ### 自定义按钮 Icon
 
-通过设置 <yc-tag>Menu.Sider</yc-tag> 的 <yc-tag>trigger</yc-tag> 属性，实现自定义收起按钮的图标。
+通过设置 `Menu.Sider` 的 `trigger` 属性，实现自定义收起按钮的图标。
 
 <div class="cell-demo vp-raw">
   <yc-layout class="layout-demo">

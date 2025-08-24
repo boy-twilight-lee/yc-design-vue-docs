@@ -1,6 +1,6 @@
 ### 展开子菜单
 
-通过设置 <yc-tag> expand-child </yc-tag> 可以在选择时展开第一个子菜单
+通过设置 `expand-child` 可以在选择时展开第一个子菜单
 
 <div class="cell-demo vp-raw">
   <yc-cascader

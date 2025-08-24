@@ -1,6 +1,6 @@
 ### 布局
 
-使用 <yc-tag>{{'<yc-radio-group>'}}</yc-tag> 传入 <yc-tag>{{'<yc-radio>'}}</yc-tag>，配合 <yc-tag>{{'<yc-grid>'}}</yc-tag> 组件实现灵活的布局。
+使用 `<yc-radio-group>` 传入 `<yc-radio>`，配合 `<yc-grid>` 组件实现灵活的布局。
 
 <div class="Cell-demo vp-raw">
   <yc-radio-group v-model="checkedValue">

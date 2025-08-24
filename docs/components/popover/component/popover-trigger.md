@@ -1,6 +1,6 @@
 ### 触发方式
 
-通过设置 <yc-tag>trigger</yc-tag>，可以指定不同的触发方式。
+通过设置 `trigger`，可以指定不同的触发方式。
 
 <div class="cell-demo vp-raw">
   <yc-space>

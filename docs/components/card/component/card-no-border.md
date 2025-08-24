@@ -1,6 +1,6 @@
 ### 无边框卡片
 
-设置 <yc-tag>bordered</yc-tag> 为 <yc-tag>false</yc-tag> 来使用无边框卡片。
+设置 `bordered` 为 `false` 来使用无边框卡片。
 
 <div class="cell-demo vp-raw">
   <div

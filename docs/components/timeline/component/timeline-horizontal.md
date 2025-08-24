@@ -1,6 +1,6 @@
 ### 横向时间轴
 
-可以通过 <yc-tag>direction</yc-tag> 设置展示横向时间轴
+可以通过 `direction` 设置展示横向时间轴
 
 <div class="cell-demo vp-raw">
   <div>

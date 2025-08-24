@@ -1,6 +1,6 @@
 ### 可选中
 
-通过设置 <yc-tag>checkable</yc-tag> ，可以实现点击选中的效果。
+通过设置 `checkable`，可以实现点击选中的效果。
 
 <div class="cell-demo vp-raw">
   <yc-space>

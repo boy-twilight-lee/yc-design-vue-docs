@@ -1,6 +1,6 @@
 ### 自定义开关的颜色
 
-通过 <yc-tag>checked-color</yc-tag> 和 <yc-tag>unchecked-color</yc-tag> 可以自定义开关的颜色。
+通过 `checked-color` 和 `unchecked-color` 可以自定义开关的颜色。
 
 <div class="cell-demo vp-raw">
  <yc-switch

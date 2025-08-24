@@ -1,6 +1,6 @@
 ### 图标
 
-通过 <yc-tag>icon</yc-tag> 设置带图标的链接，设置为 <yc-tag>true</yc-tag> 时候显示默认图标。
+通过 `icon` 设置带图标的链接，设置为 `true` 时候显示默认图标。
 
  <div class='cell-demo'>
     <yc-space>

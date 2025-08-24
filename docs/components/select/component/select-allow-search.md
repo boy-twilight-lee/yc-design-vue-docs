@@ -1,6 +1,6 @@
 ### 允许创建
 
-通过设置 <yc-tag>allow-search</yc-tag> ，可以让选择器支持对选项的搜索，配合 <yc-tag>filter-option</yc-tag> 可以自定义搜索。。
+通过设置 `allow-search` ，可以让选择器支持对选项的搜索，配合 `filter-option` 可以自定义搜索。。
 
 <div class="cell-demo vp-raw">
   <yc-space

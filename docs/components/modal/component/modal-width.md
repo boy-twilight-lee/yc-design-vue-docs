@@ -1,6 +1,6 @@
 ### 对话框的宽度
 
-设置 <yc-tag>width="auto"</yc-tag> 可以让对话框自适应宽度
+设置 `width="auto"` 可以让对话框自适应宽度
 
 <div class="cell-demo vp-raw">
   <yc-button @click="handleClick">Open Modal</yc-button>

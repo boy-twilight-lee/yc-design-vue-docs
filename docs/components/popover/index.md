@@ -15,5 +15,5 @@ import PopoverApi from "./component/popover-api.md"
 <popover-basic-use />
 <popover-trigger />
 <popover-position />
-<yc-tag>popover</yc-tag> 组件的 <yc-tag>trigger-props</yc-tag> 继承 <yc-tag>trigger</yc-tag>  组件的全部属性
+`popover` 组件的 `trigger-props` 继承 `trigger`  组件的全部属性
 <popover-api />

@@ -1,6 +1,6 @@
 ### 标签的尺寸
 
-标签的大小分为：<yc-tag>small</yc-tag>、<yc-tag>medium</yc-tag>、<yc-tag>large</yc-tag> 三种，可以在不同场景下选择合适按钮尺寸。推荐及默认尺寸为 <yc-tag>medium</yc-tag>。
+标签的大小分为：`small`、`medium`、`large` 三种，可以在不同场景下选择合适按钮尺寸。推荐及默认尺寸为 `medium`。
 
 <div class="cell-demo vp-raw">
   <yc-space>

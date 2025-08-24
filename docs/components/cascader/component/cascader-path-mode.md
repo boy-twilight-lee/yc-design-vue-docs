@@ -1,6 +1,6 @@
 ### 多选模式
 
-用 <yc-tag>modelValue</yc-tag> 使用路径作为值。
+用 `modelValue` 使用路径作为值。
 
 <div class="cell-demo vp-raw">
   <yc-space

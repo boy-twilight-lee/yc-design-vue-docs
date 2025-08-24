@@ -1,6 +1,6 @@
 ### 笑脸分级
 
-通过 <yc-tag>grading</yc-tag> 使用笑脸分级。
+通过 `grading` 使用笑脸分级。
 
 <div class="cell-demo vp-raw">
   <yc-rate grading />

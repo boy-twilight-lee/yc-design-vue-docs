@@ -1,6 +1,6 @@
 ### 水平布局
 
-通过 <yc-tag>justify</yc-tag> 来进行水平布局。
+通过 `justify` 来进行水平布局。
 
 <div class="cell-demo vp-raw">
   <div>

@@ -1,6 +1,6 @@
 ### 格式化展示值
 
-通过 <yc-tag>formatter</yc-tag> 和 <yc-tag>parser</yc-tag> 配合使用可以定义输入框展示值。
+通过 `formatter` 和 `parser` 配合使用可以定义输入框展示值。
 
 <div class="cell-demo vp-raw">
   <yc-input-number

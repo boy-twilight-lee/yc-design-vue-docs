@@ -1,6 +1,6 @@
 ### 自定义字段名
 
-可以通过 <yc-tag>field-names</yc-tag> 属性自定义 <yc-tag>options</yc-tag> 中数据的格式。
+可以通过 `field-names` 属性自定义 `options` 中数据的格式。
 
 <div class="cell-demo vp-raw">
   <yc-select

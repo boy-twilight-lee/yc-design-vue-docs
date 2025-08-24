@@ -1,6 +1,6 @@
 ### 渐隐切换
 
-指定 <yc-tag>animation</yc-tag> 为 <yc-tag>fade</yc-tag> 使用渐隐切换效果。
+指定 `animation` 为 `fade` 使用渐隐切换效果。
 
 <div class="cell-demo vp-raw">
   <yc-carousel

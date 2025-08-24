@@ -1,6 +1,6 @@
 ### 附加内容
 
-通过 <yc-tag>extra</yc-tag> 插槽可以自定义额外显示内容。
+通过 `extra` 插槽可以自定义额外显示内容。
 
 <div class="cell-demo vp-raw">
   <yc-tabs>

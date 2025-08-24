@@ -1,6 +1,6 @@
 ### 基本用法
 
-开关分为 <yc-tag>circle</yc-tag> - 圆形（默认）、<yc-tag>round</yc-tag> - 圆角、<yc-tag>line</yc-tag> - 线性三种类型。
+开关分为 `circle` - 圆形（默认）、`round` - 圆角、`line` - 线性三种类型。
 
 <div class="cell-demo vp-raw">
   <yc-space

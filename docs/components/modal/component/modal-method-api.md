@@ -1,10 +1,10 @@
 ### Modal全局方法
 
-组件<yc-tag>Modal</yc-tag>提供的全局方法，可以通过以下三种方法使用：
+组件`Modal`提供的全局方法，可以通过以下三种方法使用：
 
-1. 通过 <yc-tag>this.$modal</yc-tag> 调用
-2. 在 Composition API 中，通过 <yc-tag>getCurrentInstance().appContext.config.globalProperties.$modal</yc-tag> 调用
-3. 导入 Modal，通过 <yc-tag>Modal</yc-tag> 本身调用
+1. 通过 `this.$modal` 调用
+2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$modal` 调用
+3. 导入 Modal，通过 `Modal` 本身调用
 
 ## ModalMethod
 

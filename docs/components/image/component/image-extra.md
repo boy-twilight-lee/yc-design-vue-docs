@@ -1,6 +1,6 @@
 ### 额外操作
 
-组件提供了具名插槽 <yc-tag>extra</yc-tag> 供用户在页脚定制额外的内容。
+组件提供了具名插槽 `extra` 供用户在页脚定制额外的内容。
 
 <div class="cell-demo vp-raw">
   <yc-image

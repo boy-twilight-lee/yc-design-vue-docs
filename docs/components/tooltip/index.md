@@ -17,5 +17,5 @@ import TooltipApi from "./component/tooltip-api.md"
 <tooltip-mini />
 <tooltip-position />
 <tooltip-bg />
-<yc-tag>tooltip</yc-tag> 组件的 <yc-tag>trigger-props</yc-tag> 继承 <yc-tag>trigger</yc-tag>  组件的全部属性
+`tooltip` 组件的 `trigger-props` 继承 `trigger`  组件的全部属性
 <tooltip-api />

@@ -1,6 +1,6 @@
 ### 前置、后置标签
 
-通过指定 <yc-tag>prepend</yc-tag> 和 <yc-tag>append</yc-tag> 插槽在输入框前后添加元素。
+通过指定 `prepend` 和 `append` 插槽在输入框前后添加元素。
 
 <div class="cell-demo vp-raw">
   <yc-space

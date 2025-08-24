@@ -1,6 +1,6 @@
 ### 自定义背景颜色
 
-通过 <yc-tag>background-color</yc-tag> 属性自定义背景颜色。
+通过 `background-color` 属性自定义背景颜色。
 
 <div class="cell-demo vp-raw">
   <yc-space>

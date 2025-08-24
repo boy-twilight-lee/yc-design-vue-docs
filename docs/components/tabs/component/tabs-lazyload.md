@@ -1,6 +1,6 @@
 ### 懒加载
 
-通过设置 <yc-tag>lazy-load</yc-tag> 属性，可以让面板在首次激活时渲染。
+通过设置 `lazy-load` 属性，可以让面板在首次激活时渲染。
 
 <div class="cell-demo vp-raw">
   <yc-tabs

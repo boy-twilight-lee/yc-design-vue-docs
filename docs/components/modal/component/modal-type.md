@@ -1,7 +1,7 @@
 ### 消息提示
 
-有 <yc-tag>info</yc-tag>、<yc-tag>success</yc-tag>、<yc-tag>warning</yc-tag>、<yc-tag>error</yc-tag>四种类型的消息提示，仅提供一个确认按钮用于关闭消息提示对话框。
-消息默认会默认开启 <yc-tag>simple</yc-tag> 和 <yc-tag>hideCancel</yc-tag>，如果想要取消可以再次设置。
+有 `info`、`success`、`warning`、`error`四种类型的消息提示，仅提供一个确认按钮用于关闭消息提示对话框。
+消息默认会默认开启 `simple` 和 `hideCancel`，如果想要取消可以再次设置。
 
 <div class="cell-demo vp-raw">
   <yc-space>

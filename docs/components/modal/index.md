@@ -23,6 +23,7 @@ import ModalMethodApi from "./component/modal-method-api.md"
 <modal-type />
 <modal-width />
 <modal-text />
+<modal-drag />
 <modal-fullscreen />
 <modal-api />
 <modal-method-api />

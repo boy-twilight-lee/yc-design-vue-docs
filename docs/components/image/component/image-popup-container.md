@@ -1,6 +1,6 @@
 ### 挂载节点
 
-可以通过 <yc-tag>popupContainer</yc-tag> 指定预览挂载的父级节点。
+可以通过 `popupContainer` 指定预览挂载的父级节点。
 
 <div class="cell-demo vp-raw">
   <div

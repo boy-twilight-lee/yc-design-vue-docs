@@ -1,6 +1,6 @@
 ### 搜索
 
-通过设置 <yc-tag>show-search</yc-tag> 来使用带搜索框的穿梭框，可以自定义搜索函数。
+通过设置 `show-search` 来使用带搜索框的穿梭框，可以自定义搜索函数。
 
 <div class="cell-demo vp-raw">
   <yc-transfer

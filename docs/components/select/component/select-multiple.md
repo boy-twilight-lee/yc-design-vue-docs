@@ -1,6 +1,6 @@
 ### 多选选择器
 
-通过设置 <yc-tag>multiple</yc-tag> ，可以让选择器支持多选。此外通过 <yc-tag>max-tag-count</yc-tag> 可以设置最多显示的标签个数。
+通过设置 `multiple` ，可以让选择器支持多选。此外通过 `max-tag-count` 可以设置最多显示的标签个数。
 
 <div class="cell-demo vp-raw">
   <div style="margin-bottom: 10px">

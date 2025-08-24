@@ -1,6 +1,6 @@
 ### 单选框组选项
 
-yc-radio-group 通过 <yc-tag>options</yc-tag> 属性设置子元素
+yc-radio-group 通过 `options` 属性设置子元素
 
 <div class="cell-demo vp-raw">
   <yc-space

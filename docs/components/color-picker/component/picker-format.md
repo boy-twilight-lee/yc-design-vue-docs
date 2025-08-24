@@ -1,6 +1,6 @@
 ### 颜色格式
 
-通过 <yc-tag>format</yc-tag> 设置颜色值的格式，支持 <yc-tag>hex</yc-tag> 和 <yc-tag>rgb</yc-tag>
+通过 `format` 设置颜色值的格式，支持 `hex` 和 `rgb`
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

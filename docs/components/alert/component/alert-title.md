@@ -1,6 +1,6 @@
 ### 提示标题
 
-通过设置 <yc-tag>title</yc-tag> 可以给警告提示添加标题。
+通过设置 `title` 可以给警告提示添加标题。
 
 <div class="cell-demo vp-raw">
   <yc-row :gutter="[40, 20]">

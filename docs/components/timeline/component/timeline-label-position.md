@@ -1,6 +1,6 @@
 ### 标签文本位置
 
-通过 <yc-tag>labelPosition</yc-tag> 可以设置标签文本的位置。
+通过 `labelPosition` 可以设置标签文本的位置。
 
 <div class="cell-demo vp-raw">
   <div>

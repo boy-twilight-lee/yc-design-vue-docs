@@ -1,6 +1,6 @@
 ### 定制步长
 
-通过设置 <yc-tag>step</yc-tag>，可以定制需要显示的时、分、秒的步长。
+通过设置 `step`，可以定制需要显示的时、分、秒的步长。
 
 <div class="cell-demo vp-raw">
   <yc-time-picker

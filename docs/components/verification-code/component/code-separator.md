@@ -1,6 +1,6 @@
 ### 自定义分隔符
 
-指定 <yc-tag>separator</yc-tag> 可以自定义渲染分隔符。
+指定 `separator` 可以自定义渲染分隔符。
 
 <div class="cell-demo vp-raw">
   <yc-verification-code

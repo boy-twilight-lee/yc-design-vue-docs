@@ -1,6 +1,6 @@
 ### 加载中状态
 
-通过设置 <yc-tag>loading</yc-tag> 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发事件。
+通过设置 `loading` 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发事件。
 
 <div class='cell-demo'>
   <yc-space>

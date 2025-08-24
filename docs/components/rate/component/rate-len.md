@@ -1,6 +1,6 @@
 ### 任意长度的评分
 
-通过指定 <yc-tag>count</yc-tag> 来指定任意长度的评分组件。
+通过指定 `count` 来指定任意长度的评分组件。
 
 <div class="cell-demo vp-raw">
   <yc-rate :count="10" />

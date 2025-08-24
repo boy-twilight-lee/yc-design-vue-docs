@@ -1,6 +1,6 @@
 ### 倒计时组件
 
-倒计时组件 <yc-tag>countdown</yc-tag> 的基本使用方法。
+倒计时组件 `countdown` 的基本使用方法。
 
 <div class="cell-demo vp-raw">
   <yc-row>

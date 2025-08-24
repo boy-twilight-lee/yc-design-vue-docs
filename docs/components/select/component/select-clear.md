@@ -1,6 +1,6 @@
 ### 允许清除
 
-通过设置 <yc-tag>allow-clear</yc-tag> ，显示清除按钮。
+通过设置 `allow-clear` ，显示清除按钮。
 
 <div class="cell-demo vp-raw">
   <yc-select

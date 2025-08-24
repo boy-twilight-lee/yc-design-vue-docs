@@ -1,6 +1,6 @@
 ### 无边框模式
 
-通过设置 <yc-tag>bordered="false"</yc-tag> 隐藏边框。
+通过设置 `bordered="false"` 隐藏边框。
 
 <div class="cell-demo vp-raw">
   <yc-collapse

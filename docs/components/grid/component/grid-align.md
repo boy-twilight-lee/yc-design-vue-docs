@@ -1,6 +1,6 @@
 ## 垂直布局
 
-通过 <yc-tag>align</yc-tag> 来进行垂直布局。
+通过 `align` 来进行垂直布局。
 
 <div class="cell-demo vp-raw">
   <div>

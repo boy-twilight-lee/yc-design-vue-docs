@@ -1,6 +1,6 @@
 ### 提示类型
 
-警告提示有 <yc-tag>info</yc-tag>、<yc-tag>success</yc-tag>、<yc-tag>warning</yc-tag>、<yc-tag>error</yc-tag>、<yc-tag>normal</yc-tag> 五种类型。
+警告提示有 `info`、`success`、`warning`、`error`、`normal` 五种类型。
 
 <div class="cell-demo vp-raw">
   <yc-row :gutter="[40, 20]">

@@ -1,6 +1,6 @@
 ### 挂载位置
 
-通过 <yc-tag>popup-container</yc-tag> 可以设置弹出层节点的挂载位置
+通过 `popup-container` 可以设置弹出层节点的挂载位置
 
 <div class="cell-demo vp-raw">
   <div>

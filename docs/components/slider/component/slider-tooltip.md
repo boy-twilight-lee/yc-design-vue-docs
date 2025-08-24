@@ -1,6 +1,6 @@
 ### 自定义提示
 
-通过设置 <yc-tag>format-tooltip</yc-tag> 可以自定义提示文字。
+通过设置 `format-tooltip` 可以自定义提示文字。
 
 <div class="cell-demo vp-raw">
   <yc-slider

@@ -1,6 +1,6 @@
 ### 大小和形状
 
-通过设置 <yc-tag>size</yc-tag> 字段，可以调节头像的大小，默认大小为 <yc-tag>40px</yc-tag>。设置 <yc-tag>shape</yc-tag> 字段，可以设置头像是圆形 (circle) 还是正方形 (square)。
+通过设置 `size` 字段，可以调节头像的大小，默认大小为 `40px`。设置 `shape` 字段，可以设置头像是圆形 (circle) 还是正方形 (square)。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large" direction="vertical">

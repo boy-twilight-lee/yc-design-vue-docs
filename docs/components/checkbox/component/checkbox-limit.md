@@ -1,6 +1,6 @@
 ### 限制可勾选数量
 
-通过设置 <yc-tag>max</yc-tag> 限制最多可被勾选的项目数。
+通过设置 `max` 限制最多可被勾选的项目数。
 
 <div class="cell-demo vp-raw">
   <yc-space

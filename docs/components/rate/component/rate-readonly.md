@@ -1,6 +1,6 @@
 ### 只读模式
 
-通过设置 <yc-tag>readonly</yc-tag> 属性让评分组件为只读状态。
+通过设置 `readonly` 属性让评分组件为只读状态。
 
 <div class="cell-demo vp-raw">
   <yc-rate

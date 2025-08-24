@@ -1,6 +1,6 @@
 ### 切换拦截
 
-设置 <yc-tag>beforeChange</yc-tag> 函数，函数的返回值将用于判断是否阻止切换。
+设置 `beforeChange` 函数，函数的返回值将用于判断是否阻止切换。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large">

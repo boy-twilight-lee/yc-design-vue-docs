@@ -1,6 +1,6 @@
 ### 区分大小写
 
-使用 <yc-tag>strict</yc-tag> 属性来指明在匹配时严格区分大小写。
+使用 `strict` 属性来指明在匹配时严格区分大小写。
 
 <div class="cell-demo vp-raw">
   <yc-auto-complete

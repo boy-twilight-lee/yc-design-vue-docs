@@ -1,6 +1,6 @@
 ### 无边框模式
 
-可以通过 <yc-tag>dropdown-scroll</yc-tag> 监听下拉菜单的滚动事件。或者通过 <yc-tag>dropdown-reach-bottom</yc-tag> 监听下拉菜单滚动到底部的事件。
+可以通过 `dropdown-scroll` 监听下拉菜单的滚动事件。或者通过 `dropdown-reach-bottom` 监听下拉菜单滚动到底部的事件。
 
 <div class="cell-demo vp-raw">
   <yc-select

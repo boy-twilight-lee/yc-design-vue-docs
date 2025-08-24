@@ -1,6 +1,6 @@
 ### 响应式的 Grid 布局
 
-Grid 组件的响应式配置格式为 <yc-tag>{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }</yc-tag>。
+Grid 组件的响应式配置格式为 `{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }`。
 
 <div class="cell-demo vp-raw">
   <yc-grid :cols="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }" :colGap="12" :rowGap="16" class="grid-demo-grid">

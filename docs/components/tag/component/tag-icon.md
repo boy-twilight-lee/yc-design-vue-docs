@@ -1,6 +1,6 @@
 ### 带图标的标签
 
-可通过 <yc-tag>icon</yc-tag> 插槽在标签中加入图标。
+可通过 `icon` 插槽在标签中加入图标。
 
 <div class="cell-demo vp-raw">
   <yc-space>

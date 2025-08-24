@@ -1,6 +1,6 @@
 ### 带边框的标签
 
-通过参数 <yc-tag>bordered</yc-tag>，可以显示带边框的标签。
+通过参数 `bordered`，可以显示带边框的标签。
 
 <div class="cell-demo vp-raw">
   <yc-space wrap>

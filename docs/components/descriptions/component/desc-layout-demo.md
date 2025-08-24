@@ -1,6 +1,6 @@
 ### 布局示例
 
-当 <yc-tag>span</yc-tag> 所占列数大于 <yc-tag>column</yc-tag> 可放置的数据个数时，<yc-tag>span</yc-tag> 会被设置为 <yc-tag>column</yc-tag> 的值，当行剩余列数不够放置下一列时将自动换行，每行末尾列会自动填充剩余量。
+当 `span` 所占列数大于 `column` 可放置的数据个数时，`span` 会被设置为 `column` 的值，当行剩余列数不够放置下一列时将自动换行，每行末尾列会自动填充剩余量。
 
 <div class="cell-demo vp-raw">
   <yc-form

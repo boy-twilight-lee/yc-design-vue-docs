@@ -1,6 +1,6 @@
 ### 格式化输入
 
-通过 <yc-tag>formatter</yc-tag> 校验输入。此外，可以返回非布尔类型来将用户输入的字符串为特定的格式。
+通过 `formatter` 校验输入。此外，可以返回非布尔类型来将用户输入的字符串为特定的格式。
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

@@ -1,6 +1,6 @@
 ### 栅格偏移
 
-指定 <yc-tag>offset</yc-tag> 可以对栅格进行平移操作。
+指定 `offset` 可以对栅格进行平移操作。
 
 <div class="cell-demo vp-raw">
   <div>

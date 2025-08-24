@@ -1,6 +1,6 @@
 ### 默认值
 
-只有默认值的情况，可通过 <yc-tag>defaultValue</yc-tag> 传递。
+只有默认值的情况，可通过 `defaultValue` 传递。
 
 <div class="cell-demo vp-raw">
   <yc-time-picker

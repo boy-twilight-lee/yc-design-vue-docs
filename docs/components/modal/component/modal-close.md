@@ -1,6 +1,6 @@
 ### 异步关闭
 
-可以通过 <yc-tag>on-before-ok</yc-tag> 更简洁的实现异步关闭功能
+可以通过 `on-before-ok` 更简洁的实现异步关闭功能
 
 <div class="cell-demo vp-raw">
   <yc-button @click="handleClick">Open Modal</yc-button>
@@ -8,7 +8,7 @@
     v-model:visible="visible"
     @cancel="handleCancel"
     :on-before-ok="handleBeforeOk"
-    unmountOnClose>
+    >
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal
@@ -45,8 +45,7 @@ const handleCancel = () => {
   <yc-modal
     v-model:visible="visible"
     @cancel="handleCancel"
-    :on-before-ok="handleBeforeOk"
-    unmountOnClose>
+    :on-before-ok="handleBeforeOk">
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal

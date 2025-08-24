@@ -1,6 +1,6 @@
 ### 更灵活的内容展示
 
-使用 <yc-tag>Card.Meta</yc-tag> 支持更加灵活的内容（封面、头像、 标题、描述信息）
+使用 `Card.Meta` 支持更加灵活的内容（封面、头像、 标题、描述信息）
 
 <div class="cell-demo vp-raw">
   <yc-card hoverable :style="{ width: '360px' }">

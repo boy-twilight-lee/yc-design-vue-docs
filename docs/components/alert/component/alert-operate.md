@@ -1,6 +1,6 @@
 ### 操作项
 
-通过 <yc-tag>#aciton</yc-tag> 插槽自定义操作按钮
+通过 `#aciton` 插槽自定义操作按钮
 
 <div class="cell-demo vp-raw">
    <yc-space

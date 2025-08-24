@@ -1,6 +1,6 @@
 ### 禁用
 
-设置 <yc-tag>disabled</yc-tag> 禁用选择器。
+设置 `disabled` 禁用选择器。
 
 <div class="cell-demo vp-raw">
   <yc-space>

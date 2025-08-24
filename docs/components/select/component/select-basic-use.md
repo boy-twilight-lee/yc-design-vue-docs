@@ -1,7 +1,7 @@
 ### 基本用法
 
 选择器的基本用法。
-通过 <yc-tag>trigger-props</yc-tag> 属性自定义下拉框的属性，比如可以让下拉框自动适应最小宽度。
+通过 `trigger-props` 属性自定义下拉框的属性，比如可以让下拉框自动适应最小宽度。
 
 <div class="cell-demo vp-raw">
   <yc-space

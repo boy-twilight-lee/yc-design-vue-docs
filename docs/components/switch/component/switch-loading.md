@@ -1,6 +1,6 @@
 ### 加载中状态
 
-通过设置 <yc-tag>loading</yc-tag> 使开关处于加载中状态，此时开关不可点击。
+通过设置 `loading` 使开关处于加载中状态，此时开关不可点击。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large">

@@ -1,6 +1,6 @@
 ### 网络型内嵌卡片
 
-通过 <yc-tag>Card.Grid</yc-tag> 来使用卡片内容区隔模式。
+通过 `Card.Grid` 来使用卡片内容区隔模式。
 
 <div class="cell-demo vp-raw">
   <yc-card :bordered="false" :style="{ width: '100%' }">

@@ -1,6 +1,6 @@
 ### 不同类型
 
-通过 <yc-tag>type</yc-tag> 可以设置标签的类型。
+通过 `type` 可以设置标签的类型。
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,6 +1,6 @@
 ### 远程搜索
 
-使用 <yc-tag>search</yc-tag> 事件进行远程搜索，并改变选项。
+使用 `search` 事件进行远程搜索，并改变选项。
 
 <div class="cell-demo vp-raw">
   <yc-space

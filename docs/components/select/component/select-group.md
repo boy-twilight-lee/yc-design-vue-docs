@@ -1,6 +1,6 @@
 ### 分组
 
-使用 <yc-tag>optgroup</yc-tag> 组件添加分组选项。
+使用 `optgroup` 组件添加分组选项。
 
 <div class="cell-demo vp-raw">
    <yc-space

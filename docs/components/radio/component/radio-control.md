@@ -1,6 +1,6 @@
 ### 受控
 
-通过 <yc-tag>v-model (model-value)</yc-tag> 属性控制是否选中
+通过 `v-model (model-value)` 属性控制是否选中
 
 <div class="cell-demo vp-raw">
   <yc-space size="large">

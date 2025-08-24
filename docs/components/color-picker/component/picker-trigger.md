@@ -1,6 +1,6 @@
 ### 触发器
 
-可以通过 <yc-tag>trigger-props</yc-tag> 设置触发器的所有属性。
+可以通过 `trigger-props` 设置触发器的所有属性。
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

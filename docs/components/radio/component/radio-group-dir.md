@@ -1,6 +1,6 @@
 ### 单选框组方向
 
-通过设置 <yc-tag>direction="vertical"</yc-tag> 可以展示竖直的单选框组。
+通过设置 `direction="vertical"` 可以展示竖直的单选框组。
 
 <div class="cell-demo vp-raw">
  <yc-radio-group direction="vertical">

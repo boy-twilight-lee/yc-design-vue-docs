@@ -1,6 +1,6 @@
 ### 无限长列表
 
-通过指定 <yc-tag>virtualListProps</yc-tag> 来开启虚拟列表，在大量数据时获得高性能表现。
+通过指定 `virtualListProps` 来开启虚拟列表，在大量数据时获得高性能表现。
 
 <div class="cell-demo vp-raw">
   <h3 :style="{ color: 'var(--color-text-2)' }">10000 items</h3>

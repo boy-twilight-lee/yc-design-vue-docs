@@ -1,6 +1,6 @@
 ### 回退选项
 
-组件默认会展示在选项中不存在的值，可通过 <yc-tag>fallback</yc-tag> 自定义展示或者关闭
+组件默认会展示在选项中不存在的值，可通过 `fallback` 自定义展示或者关闭
 
 <div class="cell-demo vp-raw">
   <yc-space

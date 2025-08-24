@@ -12,7 +12,7 @@
           <icon-bg-colors style="color: #fff" />
         </template>
         {{ value }}
-      </yc-tag>
+       </yc-tag>
     </yc-color-picker>
   </yc-space>
 </div>

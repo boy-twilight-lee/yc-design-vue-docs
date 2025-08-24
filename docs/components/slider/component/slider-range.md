@@ -1,6 +1,6 @@
 ### 范围选择
 
-通过设置 <yc-tag>range</yc-tag> 可开启范围选择，此时 <yc-tag>modelValue</yc-tag> 为数组。
+通过设置 `range` 可开启范围选择，此时 `modelValue` 为数组。
 
 <div class="cell-demo vp-raw">
   <a-slider

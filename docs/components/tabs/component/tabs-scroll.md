@@ -1,6 +1,6 @@
 ### 滚动
 
-支持通过滚轮或者触摸板进行滚动操作，且可以通过 <yc-tag>scrollPosition</yc-tag> 属性设置滚动位置。
+支持通过滚轮或者触摸板进行滚动操作，且可以通过 `scrollPosition` 属性设置滚动位置。
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,6 +1,6 @@
 ### 自定义颜色
 
-通过 <yc-tag>color</yc-tag> 可以自定义颜色。另外可以通过对象形式自定义不同分值时的颜色。
+通过 `color` 可以自定义颜色。另外可以通过对象形式自定义不同分值时的颜色。
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

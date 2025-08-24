@@ -1,6 +1,6 @@
 ### 链接的状态
 
-链接的状态分为 <yc-tag>normal</yc-tag> - 正常（默认）、<yc-tag>success</yc-tag> - 成功、<yc-tag>warning</yc-tag> - 警告、<yc-tag>danger</yc-tag> - 危险四种。
+链接的状态分为 `normal` - 正常（默认）、`success` - 成功、`warning` - 警告、`danger` - 危险四种。
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

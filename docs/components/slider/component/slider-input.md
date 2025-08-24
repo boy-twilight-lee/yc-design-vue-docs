@@ -1,6 +1,6 @@
 ### 显示输入框
 
-当设置 <yc-tag>show-input</yc-tag> 时，将显示输入框。
+当设置 `show-input` 时，将显示输入框。
 
 <div class="cell-demo vp-raw">
   <yc-space

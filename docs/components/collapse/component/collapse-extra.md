@@ -1,6 +1,6 @@
 ### 额外节点
 
-通过 <yc-tag>extra</yc-tag> 可以设置额外节点。<yc-tag>extra</yc-tag> 单击可以以设置 <yc-tag>stop</yc-tag> 修饰符，以阻止当前项目展开。
+通过 `extra` 可以设置额外节点。`extra` 单击可以以设置 `stop` 修饰符，以阻止当前项目展开。
 
 <div class="cell-demo vp-raw">
   <yc-collapse>

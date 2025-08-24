@@ -1,6 +1,6 @@
 ### 单独使用预览组件
 
-组件 <yc-tag>{{'<yc-image-preview>'}}</yc-tag> 可单独使用，需要手动控制 <yc-tag>visible</yc-tag>。
+组件 `<yc-image-preview>` 可单独使用，需要手动控制 `visible`。
 
 <div class="cell-demo vp-raw">
   <yc-button

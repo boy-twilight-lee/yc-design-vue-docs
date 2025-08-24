@@ -1,6 +1,6 @@
 ### 可关闭
 
-设置 <yc-tag>closable</yc-tag> 来显示关闭按钮。
+设置 `closable` 来显示关闭按钮。
 
 <div class="cell-demo vp-rwa">
   <yc-button

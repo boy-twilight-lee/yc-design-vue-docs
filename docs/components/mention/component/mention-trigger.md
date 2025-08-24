@@ -1,6 +1,6 @@
 ### 自定义触发字符
 
-指定 <yc-tag>prefix</yc-tag> 来自定义触发字符。默认为 <yc-tag>@</yc-tag>，可以自定义为任意字符。
+指定 `prefix` 来自定义触发字符。默认为 `@`，可以自定义为任意字符。
 
 <div class="cell-demo vp-raw">
   <yc-space

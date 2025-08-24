@@ -1,6 +1,6 @@
 ### 触发方式
 
-文字气泡支持 12 个不同的方位。分别为：<yc-tag>上左</yc-tag>、<yc-tag>上</yc-tag>、<yc-tag>上右</yc-tag>、<yc-tag>下左</yc-tag> <yc-tag>下</yc-tag>、<yc-tag>下右</yc-tag>、<yc-tag>左上</yc-tag>、<yc-tag>左</yc-tag>、<yc-tag>左下</yc-tag>、<yc-tag>右上</yc-tag>、<yc-tag>右</yc-tag>、<yc-tag>右下</yc-tag>。
+文字气泡支持 12 个不同的方位。分别为：`上左`、`上`、`上右`、`下左` `下`、`下右`、`左上`、`左`、`左下`、`右上`、`右`、`右下`。
 
 <div class="cell-demo vp-raw">
   <div :style="{ position: 'relative', width: '440px', height: '280px' }">

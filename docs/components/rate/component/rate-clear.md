@@ -1,6 +1,6 @@
 ### 支持清除
 
-通过设置 <yc-tag>allow-clear</yc-tag> 来允许清除评分。
+通过设置 `allow-clear` 来允许清除评分。
 
 <div class="cell-demo vp-raw">
   <yc-rate

@@ -1,6 +1,6 @@
 ### 多选模式
 
-通过设置 <yc-tag>multiple</yc-tag> 开启多选模式。
+通过设置 `multiple` 开启多选模式。
 
 <div class="cell-demo vp-raw">
   <yc-cascader

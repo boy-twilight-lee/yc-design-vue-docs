@@ -1,6 +1,6 @@
 ### 自定义节点内容
 
-可以通过属性 <yc-tag>dotColor</yc-tag>、<yc-tag>dotType</yc-tag> 设置节点的颜色以及节点类型。同时可通过 <yc-tag>dot</yc-tag> 直接传入 DOM 自定义节点样式。优先级高于 <yc-tag>dotColor</yc-tag> 和 <yc-tag>dotType</yc-tag>
+可以通过属性 `dotColor`、`dotType` 设置节点的颜色以及节点类型。同时可通过 `dot` 直接传入 DOM 自定义节点样式。优先级高于 `dotColor` 和 `dotType`
 
 <div class="cell-demo vp-raw">
   <div :style="{ display: 'flex' }">

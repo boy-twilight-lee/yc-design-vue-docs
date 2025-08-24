@@ -1,6 +1,6 @@
 ### 小红点
 
-设置 <yc-tag>dot</yc-tag>，即可只显示小红点而不显示数字。<yc-tag>count > 0</yc-tag> 时才显示
+设置 `dot`，即可只显示小红点而不显示数字。`count > 0` 时才显示
 
 <div class="cell-demo vp-raw">
   <yc-space :size="40">

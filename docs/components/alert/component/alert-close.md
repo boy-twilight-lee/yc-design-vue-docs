@@ -1,6 +1,6 @@
 ### 可关闭
 
-通过设置 <yc-tag>closable</yc-tag>，可开启关闭按钮。
+通过设置 `closable`，可开启关闭按钮。
 
 <div class="cell-demo vp-raw">
 <yc-row :gutter="[40, 20]">

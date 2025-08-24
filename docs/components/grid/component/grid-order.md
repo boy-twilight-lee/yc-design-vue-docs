@@ -1,6 +1,6 @@
 ## 排序
 
-通过 <yc-tag>order</yc-tag> 来进行元素排序。
+通过 `order` 来进行元素排序。
 
 <div class="cell-demo vp-raw">
   <div>

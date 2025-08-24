@@ -1,6 +1,6 @@
 ### 自定义预览操作栏
 
-通过设置 <yc-tag>actionsLayout</yc-tag> 可以调整预览操作栏中功能按钮的顺序，同时可以过滤功能按钮，只有在 <yc-tag>actionsLayout</yc-tag> 中的按钮才会出现。
+通过设置 `actionsLayout` 可以调整预览操作栏中功能按钮的顺序，同时可以过滤功能按钮，只有在 `actionsLayout` 中的按钮才会出现。
 
 <div class="cell-demo vp-raw">
   <yc-image

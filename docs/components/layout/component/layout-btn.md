@@ -1,6 +1,6 @@
 ### 自定义收起按钮
 
-设置 <yc-tag>Menu.Sider</yc-tag> 的 <yc-tag>hide-trigger</yc-tag> 属性为 <yc-tag>true</yc-tag> 后，<yc-tag>Sider</yc-tag> 内置的缩起按钮不会显示。此时可自定义收起按钮。
+设置 `Menu.Sider` 的 `hide-trigger` 属性为 `true` 后，`Sider` 内置的缩起按钮不会显示。此时可自定义收起按钮。
 
 <div class="cell-demo vp-raw">
 <yc-layout class="layout-demo">

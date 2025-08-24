@@ -1,6 +1,6 @@
 ### 允许搜索
 
-通过设置 <yc-tag>allow-search</yc-tag> 让输入框支持搜索功能。
+通过设置 `allow-search` 让输入框支持搜索功能。
 
 <div class="cell-demo vp-raw">
   <yc-cascader

@@ -1,6 +1,6 @@
 ### 全选
 
-在实现全选的功能时，可以通过 <yc-tag>indeterminate</yc-tag> 属性展示半选效果。
+在实现全选的功能时，可以通过 `indeterminate` 属性展示半选效果。
 
 <div class="cell-demo vp-raw">
   <yc-space direction="vertical">

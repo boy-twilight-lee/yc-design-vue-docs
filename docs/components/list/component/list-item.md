@@ -1,6 +1,6 @@
 ### 列表元素
 
-使用 <yc-tag>list-item-meta</yc-tag> 组件可快速指定头像、标题、文字。
+使用 `list-item-meta` 组件可快速指定头像、标题、文字。
 
 <div class="cell-demo vp-raw">
    <yc-list>

@@ -1,6 +1,6 @@
 ### 添加文本标签
 
-通过设置 <yc-tag>marks</yc-tag> 可以添加文本标签。
+通过设置 `marks` 可以添加文本标签。
 
 <div class="cell-demo vp-raw">
   <yc-slider

@@ -1,6 +1,6 @@
 ### 自适应高度
 
-通过设置 <yc-tag>auto-size</yc-tag>，可以让文本框自适应输入内容。
+通过设置 `auto-size`，可以让文本框自适应输入内容。
 
 <div class="cell-demo vp-raw">
    <yc-textarea

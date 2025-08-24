@@ -1,6 +1,6 @@
 ### 手风琴模式
 
-通过 <yc-tag>accordion</yc-tag> 开启手风琴模式，同时只能打开一个面板。
+通过 `accordion` 开启手风琴模式，同时只能打开一个面板。
 
 <div class="cell-demo vp-raw">
   <yc-collapse

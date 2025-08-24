@@ -1,6 +1,6 @@
 ### 隐藏图标
 
-通过设置 <yc-tag>:show-icon="false"</yc-tag> 来隐藏图标。
+通过设置 `:show-icon="false"` 来隐藏图标。
 
 <div class="cell-demo vp-raw">
   <yc-row :gutter="[40, 20]">

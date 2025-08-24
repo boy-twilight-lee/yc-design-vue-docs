@@ -1,6 +1,6 @@
 ### 标签的颜色
 
-我们提供多种预设色彩的标签样式，通过 <yc-tag>color</yc-tag> 设置不同颜色。如果预设值不能满足你的需求，<yc-tag>color</yc-tag> 字段也可以设置自定义色值。
+我们提供多种预设色彩的标签样式，通过 `color` 设置不同颜色。如果预设值不能满足你的需求，`color` 字段也可以设置自定义色值。
 
 <div class="cell-demo vp-raw">
   <yc-space wrap>

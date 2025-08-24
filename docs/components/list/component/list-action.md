@@ -1,6 +1,6 @@
 ### 增加操作项
 
-通过 <yc-tag>actions</yc-tag> 来为列表添加操作项。
+通过 `actions` 来为列表添加操作项。
 
 <div class="cell-demo vp-raw">
   <yc-list>

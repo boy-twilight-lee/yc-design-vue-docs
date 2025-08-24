@@ -1,6 +1,6 @@
 ### 基本用法
 
-基本用法。只需指定 <yc-tag>count</yc-tag> 或者 <yc-tag>content slot</yc-tag>，即可显示徽标。
+基本用法。只需指定 `count` 或者 `content slot`，即可显示徽标。
 
 <div class="cell-demo vp-raw">
   <yc-space :size="40">

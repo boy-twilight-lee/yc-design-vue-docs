@@ -1,6 +1,6 @@
 ### 更新内容
 
-更新消息内容，通过设置 <yc-tag>duration</yc-tag> 属性可以重置定时器。
+更新消息内容，通过设置 `duration` 属性可以重置定时器。
 
 <div class="cell-demo vp-raw">
   <yc-button @click="handleClick">Update Info Message</yc-button>

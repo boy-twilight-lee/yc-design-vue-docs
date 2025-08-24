@@ -2,11 +2,11 @@
 
 ### Notification全局方法
 
-组件<yc-tag>Notification</yc-tag>提供的全局方法，可以通过以下三种方法使用：
+组件`Notification`提供的全局方法，可以通过以下三种方法使用：
 
-1. 通过 <yc-tag>this.$notification</yc-tag> 调用
-2. 在 Composition API 中，通过 <yc-tag>getCurrentInstance().appContext.config.globalProperties.$notification</yc-tag> 调用
-3. 导入 Notification，通过 <yc-tag>Notification</yc-tag> 本身调用
+1. 通过 `this.$notification` 调用
+2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$notification` 调用
+3. 导入 Notification，通过 `Notification` 本身调用
 
 ### NotificationMethod
 

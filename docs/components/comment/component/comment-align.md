@@ -1,6 +1,6 @@
 ### 对齐
 
-通过 <yc-tag>align</yc-tag> 属性可以设置 <yc-tag>datetime</yc-tag> 和 <yc-tag>actions</yc-tag> 的对齐方式.
+通过 `align` 属性可以设置 `datetime` 和 `actions` 的对齐方式.
 
 <div class="cell-demo vp-raw">
   <yc-comment

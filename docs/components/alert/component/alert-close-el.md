@@ -1,6 +1,6 @@
 ### 自定义关闭元素
 
-指定 <yc-tag>closable-element</yc-tag> slot，自定义关闭元素。
+指定 `closable-element` slot，自定义关闭元素。
 
 <div class="cell-demo vp-raw">
   <yc-row :gutter="[40, 20]">

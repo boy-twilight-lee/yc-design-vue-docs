@@ -1,6 +1,6 @@
 ### 自定义标题栏
 
-通过 <yc-tag>source-title</yc-tag> , <yc-tag>target-title</yc-tag> 插槽自定义标题栏的渲染内容
+通过 `source-title` , `target-title` 插槽自定义标题栏的渲染内容
 
 <div class="cell-demo vp-raw">
   <yc-transfer

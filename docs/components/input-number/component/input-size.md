@@ -1,6 +1,6 @@
 ### 输入框尺寸
 
-数字输入框分为 <yc-tag>mini</yc-tag>、<yc-tag>small</yc-tag>、<yc-tag>medium</yc-tag>、<yc-tag>large</yc-tag> 四种尺寸。
+数字输入框分为 `mini`、`small`、`medium`、`large` 四种尺寸。
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,6 +1,6 @@
 ### 自定义前缀&后缀
 
-通过 <yc-tag>animation</yc-tag> 可以开启数值动画。
+通过 `animation` 可以开启数值动画。
 
 <div class="cell-demo vp-raw">
   <yc-statistic

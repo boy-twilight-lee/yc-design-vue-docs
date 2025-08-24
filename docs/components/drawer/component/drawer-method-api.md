@@ -1,10 +1,10 @@
 ### Drawer全局方法
 
-组件<yc-tag>Drawer</yc-tag>提供的全局方法，可以通过以下三种方法使用：
+组件`Drawer`提供的全局方法，可以通过以下三种方法使用：
 
-1. 通过 <yc-tag>this.$drawer</yc-tag> 调用
-2. 在 Composition API 中，通过 <yc-tag>getCurrentInstance().appContext.config.globalProperties.$drawer</yc-tag> 调用
-3. 导入 Drawer，通过 <yc-tag>Drawer</yc-tag> 本身调用
+1. 通过 `this.$drawer` 调用
+2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$drawer` 调用
+3. 导入 Drawer，通过 `Drawer` 本身调用
 
 ### DrawerConfig
 

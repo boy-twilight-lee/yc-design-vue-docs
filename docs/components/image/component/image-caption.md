@@ -1,6 +1,6 @@
 ### 显示 Caption
 
-通过设置 <yc-tag>title</yc-tag> 和 <yc-tag>description</yc-tag> 可以将图片的标题和描述显示在图片内部或者底部，显示的位置通过 <yc-tag>footerPosition</yc-tag> 控制。
+通过设置 `title` 和 `description` 可以将图片的标题和描述显示在图片内部或者底部，显示的位置通过 `footerPosition` 控制。
 
 <div class="cell-demo vp-raw">
   <yc-image

@@ -1,6 +1,6 @@
 ### 自定义选项渲染
 
-通过 <yc-tag>item</yc-tag> 插槽自定义选项的渲染内容。
+通过 `item` 插槽自定义选项的渲染内容。
 
 <div class="cell-demo vp-raw">
   <yc-transfer

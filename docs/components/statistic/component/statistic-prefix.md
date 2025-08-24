@@ -1,6 +1,6 @@
 ### 自定义前缀&后缀
 
-通过 <yc-tag>prefix</yc-tag> 和 <yc-tag>suffix</yc-tag> 插槽可以添加前后缀。
+通过 `prefix` 和 `suffix` 插槽可以添加前后缀。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large">

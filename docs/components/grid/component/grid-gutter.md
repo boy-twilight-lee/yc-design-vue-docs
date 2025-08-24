@@ -1,6 +1,6 @@
 ### 区块间隔
 
-通过在 <yc-tag>Row</yc-tag> 上指定 <yc-tag>Gutter</yc-tag> 可以增加栅格的区域间隔。
+通过在 `Row` 上指定 `Gutter` 可以增加栅格的区域间隔。
 
 <div class="cell-demo vp-raw">
  <div>

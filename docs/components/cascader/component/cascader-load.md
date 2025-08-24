@@ -1,8 +1,8 @@
 ### 子选项懒加载
 
-通过 <yc-tag>load-more</yc-tag> 属性可以开启数据懒加载功能。
-开启数据懒加载功能后，需要在叶子节点标注 <yc-tag>isLeaf: true</yc-tag>，没有标注且没有 <yc-tag>children</yc-tag> 属性的节点会认为需要懒加载处理。
-<yc-tag>load-more</yc-tag> 属性有提供 <yc-tag>done</yc-tag>函数进行回调，可以在回调中传入懒加载的子数据。如果 <yc-tag>done</yc-tag> 函数没有传入数据会认为懒加载失败，此节点可以再次触发懒加载。
+通过 `load-more` 属性可以开启数据懒加载功能。
+开启数据懒加载功能后，需要在叶子节点标注 `isLeaf: true`，没有标注且没有 `children` 属性的节点会认为需要懒加载处理。
+`load-more` 属性有提供 `done`函数进行回调，可以在回调中传入懒加载的子数据。如果 `done` 函数没有传入数据会认为懒加载失败，此节点可以再次触发懒加载。
 
 <div class="cell-demo vp-raw">
   <yc-space>

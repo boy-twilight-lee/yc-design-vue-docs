@@ -1,6 +1,6 @@
 ### 允许创建
 
-通过设置 <yc-tag>allow-create</yc-tag> ，让选择器可以创建选项中不存在的条目。
+通过设置 `allow-create` ，让选择器可以创建选项中不存在的条目。
 
 <div class="cell-demo vp-raw">
     <yc-space

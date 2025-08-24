@@ -1,6 +1,6 @@
 ### 切换方向
 
-默认情况下，<yc-tag>direction</yc-tag> 为 <yc-tag>horizontal</yc-tag>。通过设置 <yc-tag>direction</yc-tag> 为 <yc-tag>vertical</yc-tag> 来使用垂直方向切换。
+默认情况下，`direction` 为 `horizontal`。通过设置 `direction` 为 `vertical` 来使用垂直方向切换。
 
 <div class="cell-demo vp-raw">
   <yc-carousel

@@ -1,6 +1,6 @@
 ### 定制格式
 
-通过设置 <yc-tag>format</yc-tag>，可以定制需要显示的时、分、秒。
+通过设置 `format`，可以定制需要显示的时、分、秒。
 
 <div class="cell-demo vp-raw">
   <yc-time-picker
