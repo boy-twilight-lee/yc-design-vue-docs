@@ -1,3 +1,5 @@
+## API
+
 ### Message 全局方法
 
 组件<yc-tag>Message</yc-tag>提供的全局方法，可以通过以下三种方法使用：
