@@ -1,8 +1,13 @@
 .cell-demo {
+  overflow-x: auto;
+  max-width: var(--content-max-width);
   margin-top: 24px;
   padding: 48px;
   border: 1px solid var(--vp-color-border);
   border-radius: 2px 2px 0 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* 系统滚动条颜色 */
