@@ -131,8 +131,8 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
-const isDark = ref(false);
+import { computed, inject } from 'vue';
+const isDark = inject('isDark');
 const lightPalette = {
   bg: '#F8F9FC',
   cardBg: '#FFFFFF',
@@ -162,26 +162,4 @@ const darkPalette = {
   shadowOpacity: 0.25,
 };
 const palette = computed(() => (isDark.value ? darkPalette : lightPalette));
-let observer = null;
-// 在组件挂载到 DOM 后执行
-onMounted(() => {
-  const htmlElement = document.documentElement;
-  isDark.value = htmlElement.classList.contains('dark');
-  observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      if (mutation.attributeName === 'class') {
-        // 当 class 变化时，重新检查 'dark' 类是否存在，并更新 isDark 的值
-        isDark.value = mutation.target.classList.contains('dark');
-      }
-    });
-  });
-  observer.observe(htmlElement, {
-    attributes: true,
-    attributeFilter: ['class'],
-  });
-});
-// 在组件卸载前执行，这是非常重要的一步！
-onUnmounted(() => {
-  observer?.disconnect();
-});
 </script>

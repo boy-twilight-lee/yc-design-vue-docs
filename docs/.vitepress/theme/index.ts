@@ -1,5 +1,13 @@
 import Theme from 'vitepress/theme';
-import { watch, nextTick, h, onMounted, onBeforeUnmount } from 'vue';
+import {
+  ref,
+  provide,
+  watch,
+  nextTick,
+  h,
+  onMounted,
+  onBeforeUnmount,
+} from 'vue';
 import { useRoute } from 'vitepress';
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css';
@@ -38,7 +46,10 @@ export default {
   },
   setup() {
     if (isServerRendering) return;
+    // 处理暗色主题
     let observer: MutationObserver | null = null;
+    const isDark = ref(false);
+    provide('isDark', isDark);
     onMounted(() => {
       const htmlElement = document.documentElement;
       observer = new MutationObserver((mutations) => {
@@ -46,8 +57,10 @@ export default {
           if (mutation.attributeName !== 'class') return;
           if ((mutation.target as HTMLElement).classList.contains('dark')) {
             document.body.setAttribute('arco-theme', 'dark');
+            isDark.value = true;
           } else {
             document.body.removeAttribute('arco-theme');
+            isDark.value = false;
           }
         });
       });
