@@ -5,9 +5,24 @@
 ---
 
 <script setup>
+import ModalBasicUse from "./component/modal-basic-use.md"
+import ModalClose from "./component/modal-close.md"
+import ModalFn from "./component/modal-fn.md"
+import ModalType from "./component/modal-type.md"
+import ModalWidth from "./component/modal-width.md"
+import ModalText from "./component/modal-text.md"
+import ModalDrag from "./component/modal-drag.md"
+import ModalFullscreen from "./component/modal-fullscreen.md"
 import ModalApi from "./component/modal-api.md"
 import ModalMethodApi from "./component/modal-method-api.md"
 </script>
 
+<modal-basic-use />
+<modal-close />
+<modal-icon />
+<modal-type />
+<modal-width />
+<modal-text />
+<modal-fullscreen />
 <modal-api />
 <modal-method-api />

@@ -1,36 +1,25 @@
-### 挂载位置
+### 可拖动
 
-通过 <yc-tag>popup-container</yc-tag> 可以设置弹出层节点的挂载位置
+开启 draggable 属性，允许用户拖动对话框。
 
 <div class="cell-demo vp-raw">
-  <div>
-    <div
-      ref="containerRef"
-      style="width: 100%; height: 300px; background-color: var(--color-fill-2); position: relative; overflow: hidden;  text-align: center;">
-      <yc-button
-        type="primary"
-        @click="handleClick"
-        >Open Drawer</yc-button
-      >
-    </div>
-  </div>
-  <yc-drawer
-    :popup-container="containerRef"
-    :visible="visible"
+  <yc-button @click="handleClick">Open Draggable Modal</yc-button>
+  <yc-modal
+    v-model:visible="visible"
     @ok="handleOk"
-    @cancel="handleCancel">
+    @cancel="handleCancel"
+    draggable>
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal
       will be closed immediately once you press the OK button.
     </div>
-  </yc-drawer>
+  </yc-modal>
 </div>
 
 <script setup>
 import { ref } from 'vue';
 const visible = ref(false);
-const containerRef = ref()
 const handleClick = () => {
   visible.value = true;
 };
@@ -51,28 +40,18 @@ const handleCancel = () => {
 
 ```vue
 <template>
-  <div>
-    <div
-      id="parentNode"
-      style="width: 100%; height: 300px; background-color: var(--color-fill-2); position: relative; overflow: hidden;  text-align: center;">
-      <yc-button
-        type="primary"
-        @click="handleClick"
-        >Open Drawer</yc-button
-      >
-    </div>
-  </div>
-  <yc-drawer
-    popup-container="#parentNode"
-    :visible="visible"
+  <yc-button @click="handleClick">Open Draggable Modal</yc-button>
+  <yc-modal
+    v-model:visible="visible"
     @ok="handleOk"
-    @cancel="handleCancel">
+    @cancel="handleCancel"
+    draggable>
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal
       will be closed immediately once you press the OK button.
     </div>
-  </yc-drawer>
+  </yc-modal>
 </template>
 
 <script setup>

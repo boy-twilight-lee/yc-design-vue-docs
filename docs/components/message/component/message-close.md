@@ -1,0 +1,38 @@
+### 可关闭
+
+设置 <yc-tag>closable</yc-tag> 来显示关闭按钮。
+
+<div class="cell-demo vp-rwa">
+  <yc-button
+    @click="
+      this.$message.info({
+        content: 'This is an info message!',
+        closable: true,
+      })
+    "
+    >Closeable Message</yc-button
+  >
+</div>
+
+<details>
+<summary>
+ <button class="code-btn"  >
+    <icon-code />
+ </button>
+</summary>
+
+```vue
+<template>
+  <yc-button
+    @click="
+      this.$message.info({
+        content: 'This is an info message!',
+        closable: true,
+      })
+    "
+    >Closeable Message</yc-button
+  >
+</template>
+```
+
+</details>
