@@ -131,8 +131,8 @@
 </template>
 
 <script setup>
-import { computed, inject } from 'vue';
-const isDark = inject('isDark');
+import { computed, inject, ref } from 'vue';
+const isDark = inject('isDark', ref(false));
 const lightPalette = {
   bg: '#F8F9FC',
   cardBg: '#FFFFFF',
