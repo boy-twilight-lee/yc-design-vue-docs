@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@arco-design/web-vue": "^2.57.0",
-    "yc-design-vue": "^1.1.5"
+    "yc-design-vue": "^1.1.7"
   }
 }

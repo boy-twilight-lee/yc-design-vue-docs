@@ -5,7 +5,7 @@
 <div class="cell-demo vp-raw">
   <div>
     <div
-      id="parentNode"
+      ref="containerRef"
       style="width: 100%; height: 300px; background-color: var(--color-fill-2); position: relative; overflow: hidden; line-height: 300px; text-align: center;">
       <yc-button
         type="primary"
@@ -15,7 +15,7 @@
     </div>
   </div>
   <yc-drawer
-    popup-container="#parentNode"
+    :popup-container="containerRef"
     :visible="visible"
     @ok="handleOk"
     @cancel="handleCancel">
@@ -30,6 +30,7 @@
 <script setup>
 import { ref } from 'vue';
 const visible = ref(false);
+const containerRef = ref()
 const handleClick = () => {
   visible.value = true;
 };

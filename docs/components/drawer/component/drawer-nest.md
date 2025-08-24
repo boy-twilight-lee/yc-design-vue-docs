@@ -13,7 +13,7 @@
     :width="500"
     @ok="handleOk"
     @cancel="handleCancel"
-    unmountOnClose>
+    >
     <template #title> Title </template>
     <div :style="{ marginBottom: '20px' }">
       You can customize modal body text by the current situation. This modal
@@ -29,7 +29,7 @@
     :visible="nestedVisible"
     @ok="handleNestedOk"
     @cancel="handleNestedCancel"
-    unmountOnClose>
+    >
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal
@@ -81,8 +81,7 @@ const handleNestedCancel = () => {
     :visible="visible"
     :width="500"
     @ok="handleOk"
-    @cancel="handleCancel"
-    unmountOnClose>
+    @cancel="handleCancel">
     <template #title> Title </template>
     <div :style="{ marginBottom: '20px' }">
       You can customize modal body text by the current situation. This modal
@@ -97,8 +96,7 @@ const handleNestedCancel = () => {
   <yc-drawer
     :visible="nestedVisible"
     @ok="handleNestedOk"
-    @cancel="handleNestedCancel"
-    unmountOnClose>
+    @cancel="handleNestedCancel">
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal

@@ -21,7 +21,7 @@
     :visible="visible"
     @ok="handleOk"
     @cancel="handleCancel"
-    unmountOnClose>
+    >
     <template #header>
       <span>Header and title</span>
     </template>
@@ -74,8 +74,7 @@ const handleCancel = () => {
     :hide-cancel="custom.includes('hide cancel')"
     :visible="visible"
     @ok="handleOk"
-    @cancel="handleCancel"
-    unmountOnClose>
+    @cancel="handleCancel">
     <template #header>
       <span>Header and title</span>
     </template>

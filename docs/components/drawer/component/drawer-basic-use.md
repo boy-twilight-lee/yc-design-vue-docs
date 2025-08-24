@@ -54,8 +54,7 @@ const handleCancel = () => {
     :width="340"
     :visible="visible"
     @ok="handleOk"
-    @cancel="handleCancel"
-    unmountOnClose>
+    @cancel="handleCancel">
     <template #title> Title </template>
     <div>
       You can customize modal body text by the current situation. This modal
