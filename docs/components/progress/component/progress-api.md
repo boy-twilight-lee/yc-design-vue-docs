@@ -1,6 +1,6 @@
 ## API
 
-### Props
+### popconfirm Props
 
 <field-table :data="progressProps"/>
 

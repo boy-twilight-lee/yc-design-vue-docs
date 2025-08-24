@@ -11,6 +11,7 @@ import SpinDot from "./component/spin-dot.md"
 import SpinContainer from "./component/spin-container.md"
 import SpinDesc from "./component/spin-desc.md"
 import SpinIcon from "./component/spin-icon.md"
+import SpinApi from "./component/spin-api.md"
 </script>
 
 <spin-basic-use />

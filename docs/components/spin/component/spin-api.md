@@ -1,10 +1,10 @@
 ## API
 
-### Props
+### spin Props
 
 <field-table :data="spinProps"/>
 
-### Slots
+### spin Slots
 
 <field-table :data="spinSlots"/>
 

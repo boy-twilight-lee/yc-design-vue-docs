@@ -6,7 +6,7 @@
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$modal` 调用
 3. 导入 Modal，通过 `Modal` 本身调用
 
-## ModalMethod
+### ModalMethod
 
 <field-table :data="modalMethodProps"/>
 

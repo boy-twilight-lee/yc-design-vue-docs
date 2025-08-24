@@ -1,14 +1,14 @@
 ## API
 
-### Props
+### skeleton Props
 
 <field-table :data="skeletonProps"/>
 
-### Skeleton-Line
+### Skeleton-Line Props
 
 <field-table :data="skeletonLineProps"/>
 
-### Skeleton-Shape
+### Skeleton-Shape Props
 
 <field-table :data="skeletonShapeProps"/>
 

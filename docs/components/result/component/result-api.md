@@ -1,10 +1,10 @@
 ## API
 
-### Props
+### popconfirm Props
 
 <field-table :data="resultProps"/>
 
-### Slots
+### popconfirm Slots
 
 <field-table :data="resultSlots"/>
 
