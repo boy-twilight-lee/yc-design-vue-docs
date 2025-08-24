@@ -80,19 +80,19 @@ const drawerProps = ref([
     name: 'ok-button-props',
     desc: '确认按钮的Props',
     type: 'ButtonProps',
-    value: '- (2.9.0)',
+    value: '-',
   },
   {
     name: 'cancel-button-props',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
-    value: '- (2.9.0)',
+    value: '-',
   },
   {
     name: 'unmount-on-close',
     desc: '关闭时是否卸载节点',
     type: 'boolean',
-    value: '`false` (2.12.0)',
+    value: 'false',
   },
   {
     name: 'width',
@@ -146,31 +146,31 @@ const drawerProps = ref([
     name: 'esc-to-close',
     desc: '是否支持 ESC 键关闭抽屉',
     type: 'boolean',
-    value: '`true` (2.15.0)',
+    value: 'true',
   },
   {
     name: 'render-to-body',
     desc: '抽屉是否挂载在 body 元素下',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'header',
     desc: '是否展示头部内容',
     type: 'boolean',
-    value: '`true` (2.33.0)',
+    value: 'true',
   },
   {
     name: 'footer',
     desc: '是否展示底部内容',
     type: 'boolean',
-    value: '`true` (2.11.0)',
+    value: 'true',
   },
   {
     name: 'hide-cancel',
     desc: '是否隐藏取消按钮',
     type: 'boolean',
-    value: '`false` (2.19.0)',
+    value: 'false)',
   },
 ]);
 
@@ -197,12 +197,12 @@ const drawerEvents = ref([
   },
   {
     name: 'before-open',
-    desc: '对话框打开前触发 (2.43.0)',
+    desc: '对话框打开前触发',
     type: '() => void',
   },
   {
     name: 'before-close',
-    desc: '对话框关闭前触发 (2.43.0)',
+    desc: '对话框关闭前触发',
     type: '() => void',
   },
 ]);
@@ -210,7 +210,7 @@ const drawerEvents = ref([
 const drawerSlots = ref([
   {
     name: 'header',
-    desc: '页眉 (2.33.0)',
+    desc: '页眉',
   },
   {
     name: 'title',

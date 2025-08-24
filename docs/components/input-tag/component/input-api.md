@@ -102,19 +102,19 @@ const inputTagProps = ref([
     name: 'unique-value',
     desc: '是否仅创建唯一的值',
     type: 'boolean',
-    value: '`false` (2.15.0)',
+    value: 'false',
   },
   {
     name: 'field-names',
     desc: '自定义 TagData 中的字段',
     type: 'InputTagFieldNames',
-    value: '- (2.22.0)',
+    value: '-',
   },
   {
     name: 'tag-nowrap',
     desc: '标签内容不换行',
     type: 'boolean',
-    value: '`false` (2.56.1)',
+    value: 'false',
   },
 ]);
 

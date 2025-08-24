@@ -127,7 +127,7 @@ const notificationConfigProps = ref([
     name: 'footer',
     desc: '底部内容',
     type: 'RenderFunction',
-    value: '- (2.25.0)',
+    value: '-',
   },
   {
     name: 'closeIcon',

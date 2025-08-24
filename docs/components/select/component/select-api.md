@@ -128,7 +128,7 @@ const selectProps = ref([
     name: 'default-active-first-option',
     desc: '是否在无值时默认选择第一个选项',
     type: 'boolean',
-    value: '`true` (2.43.0)',
+    value: '`true`)',
   },
   {
     name: 'popup-visible (v-model)',
@@ -182,43 +182,43 @@ const selectProps = ref([
     name: 'fallback-option',
     desc: '自定义值中不存在的选项',
     type: 'boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)',
-    value: '`true` (2.10.0)',
+    value: '`true`',
   },
   {
     name: 'show-extra-options',
     desc: '是否在下拉菜单中显示额外选项',
     type: 'boolean',
-    value: '`true` (2.10.0)',
+    value: '`true`',
   },
   {
     name: 'value-key',
     desc: '用于确定选项键值的属性名',
     type: 'string',
-    value: '`\'value\'` (2.18.0)',
+    value: '`\'value\'`',
   },
   {
     name: 'search-delay',
     desc: '触发搜索事件的延迟时间',
     type: 'number',
-    value: '`500` (2.18.0)',
+    value: '`500`',
   },
   {
     name: 'limit',
     desc: '多选时最多的选择个数',
     type: 'number',
-    value: '`0` (2.18.0)',
+    value: '`0`',
   },
   {
     name: 'field-names',
     desc: '自定义 SelectOptionData 中的字段',
     type: 'SelectFieldNames',
-    value: '- (2.22.0)',
+    value: '-',
   },
   {
     name: 'scrollbar',
     desc: '是否开启虚拟滚动条',
     type: 'boolean | ScrollbarProps',
-    value: '`true` (2.38.0)',
+    value: '`true`',
   },
   {
     name: 'show-header-on-empty',
@@ -236,7 +236,7 @@ const selectProps = ref([
     name: 'tag-nowrap',
     desc: '标签内容不换行',
     type: 'boolean',
-    value: '`false` (2.56.1)',
+    value: '`false`)',
   },
 ]);
 
@@ -283,7 +283,7 @@ const selectEvents = ref([
   },
   {
     name: 'exceed-limit',
-    desc: '多选超出限制时触发 (2.18.0)',
+    desc: '多选超出限制时触发',
     type: '(value: string | number | boolean | Record<string, any> | undefined, ev: Event) => void',
   },
 ]);
@@ -291,23 +291,23 @@ const selectEvents = ref([
 const selectSlots = ref([
   {
     name: 'trigger',
-    desc: '自定义触发元素 (2.22.0)',
+    desc: '自定义触发元素',
   },
   {
     name: 'prefix',
-    desc: '前缀元素 (2.22.0)',
+    desc: '前缀元素',
   },
   {
     name: 'search-icon',
-    desc: '选择框的搜索图标 (2.16.0)',
+    desc: '选择框的搜索图标',
   },
   {
     name: 'loading-icon',
-    desc: '选择框的加载中图标 (2.16.0)',
+    desc: '选择框的加载中图标',
   },
   {
     name: 'arrow-icon',
-    desc: '选择框的箭头图标 (2.16.0)',
+    desc: '选择框的箭头图标',
   },
   {
     name: 'footer',
@@ -315,7 +315,7 @@ const selectSlots = ref([
   },
   {
     name: 'header',
-    desc: '下拉框的页头 (2.43.0)',
+    desc: '下拉框的页头',
   },
   {
     name: 'label',
@@ -354,19 +354,19 @@ const optionProps = ref([
     name: 'tag-props',
     desc: '展示的标签属性',
     type: 'TagProps',
-    value: '- (2.8.0)',
+    value: '-',
   },
   {
     name: 'extra',
     desc: '额外数据。2.18.0 版本废弃，可使用对象形式的 value 扩展数据',
     type: 'object',
-    value: '- (2.10.0)',
+    value: '-',
   },
   {
     name: 'index',
     desc: '用于手动指定选项的 index',
     type: 'number',
-    value: '- (2.20.0)',
+    value: '-',
   },
 ]);
 
@@ -382,7 +382,7 @@ const optgroupProps = ref([
 const optgroupSlots = ref([
   {
     name: 'label',
-    desc: '选项组的标题 (2.10.0)',
+    desc: '选项组的标题',
   },
 ]);
 

@@ -71,7 +71,7 @@ const radioEvents = ref([
 const radioSlots = ref([
   {
     name: 'radio',
-    desc: '自定义单选框 (checked: boolean, disabled: boolean) (2.18.0)',
+    desc: '自定义单选框 (checked: boolean, disabled: boolean))',
   },
 ]);
 
@@ -104,7 +104,7 @@ const radioGroupProps = ref([
     name: 'options',
     desc: '选项',
     type: 'Array<string | number | RadioOption>',
-    value: '- (2.27.0)',
+    value: '-',
   },
   {
     name: 'direction',
@@ -131,11 +131,11 @@ const radioGroupEvents = ref([
 const radioGroupSlots = ref([
   {
     name: 'radio',
-    desc: '自定义单选框 (checked: boolean, disabled: boolean) (2.27.0)',
+    desc: '自定义单选框 (checked: boolean, disabled: boolean)',
   },
   {
     name: 'label',
-    desc: 'radio 文案内容 (data: RadioOption) (2.27.0)',
+    desc: 'radio 文案内容 (data: RadioOption)',
   },
 ]);
 </script>

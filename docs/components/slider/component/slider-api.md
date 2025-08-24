@@ -82,7 +82,7 @@ const sliderProps = ref([
     name: 'show-tooltip',
     desc: '是否显示tooltip',
     type: 'boolean',
-    value: '`true` (2.42.0)',
+    value: 'true',
   },
 ]);
 

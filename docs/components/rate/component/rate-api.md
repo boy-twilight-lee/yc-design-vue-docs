@@ -68,7 +68,7 @@ const rateProps = ref([
     name: 'color',
     desc: '颜色',
     type: 'string | Record<string, string>',
-    value: '- (2.18.0)',
+    value: '-',
   },
 ]);
 

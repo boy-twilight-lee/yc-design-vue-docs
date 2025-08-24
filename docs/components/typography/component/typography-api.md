@@ -103,19 +103,19 @@ const props = ref([
   },
   {
     name: 'copy-delay',
-    desc: '复制成功后，复制按钮恢复到可点击状态的延迟时间，单位是毫秒 (2.16.0+)',
+    desc: '复制成功后，复制按钮恢复到可点击状态的延迟时间，单位是毫秒',
     type: 'number',
     value: '`3000`',
   },
   {
     name: 'edit-tooltip-props',
-    desc: '编辑按钮问题提示配置 (2.32.0+)',
+    desc: '编辑按钮问题提示配置',
     type: 'object',
     value: '-',
   },
   {
     name: 'copy-tooltip-props',
-    desc: '拷贝按钮问题提示配置 (2.32.0+)',
+    desc: '拷贝按钮问题提示配置',
     type: 'object',
     value: '-',
   },

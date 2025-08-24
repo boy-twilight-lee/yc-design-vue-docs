@@ -120,13 +120,13 @@ const inputNumberProps = ref([
     name: 'read-only',
     desc: '只读',
     type: 'boolean',
-    value: '`false` (2.33.1)',
+    value: 'false',
   },
   {
     name: 'input-attrs',
     desc: '内部 input 元素的属性',
     type: 'object',
-    value: '- (2.52.0)',
+    value: '-',
   },
 ]);
 
@@ -148,17 +148,17 @@ const inputNumberEvents = ref([
   },
   {
     name: 'clear',
-    desc: '用户点击清除按钮时触发 (2.23.0)',
+    desc: '用户点击清除按钮时触发',
     type: '(ev: Event) => void',
   },
   {
     name: 'input',
-    desc: '输入时触发 (2.27.0)',
+    desc: '输入时触发',
     type: '(value: number | undefined, inputValue: string, ev: Event) => void',
   },
   {
     name: 'keydown',
-    desc: '按下键盘时触发 (2.56.0)',
+    desc: '按下键盘时触发',
     type: '(ev: KeyboardEvent) => void',
   },
 ]);

@@ -66,7 +66,7 @@ const mentionProps = ref([
     name: 'allow-clear',
     desc: '是否允许清空输入框',
     type: 'boolean',
-    value: '`false` (2.23.0)',
+    value: 'false)',
   },
 ]);
 
@@ -88,17 +88,17 @@ const mentionEvents = ref([
   },
   {
     name: 'clear',
-    desc: '用户点击清除按钮时触发 (2.23.0)',
+    desc: '用户点击清除按钮时触发',
     type: '() => void',
   },
   {
     name: 'focus',
-    desc: '文本框获取焦点时触发 (2.42.0)',
+    desc: '文本框获取焦点时触发)',
     type: '(ev: FocusEvent) => void',
   },
   {
     name: 'blur',
-    desc: '文本框失去焦点时触发 (2.42.0)',
+    desc: '文本框失去焦点时触发)',
     type: '(ev: FocusEvent) => void',
   },
 ]);
@@ -106,12 +106,12 @@ const mentionEvents = ref([
 const mentionMethods = ref([
   {
     name: 'focus',
-    desc: '使输入框获取焦点 (2.24.0)',
+    desc: '使输入框获取焦点',
     type: '() => void',
   },
   {
     name: 'blur',
-    desc: '使输入框失去焦点 (2.24.0)',
+    desc: '使输入框失去焦点',
     type: '() => void',
   },
 ]);
@@ -119,7 +119,7 @@ const mentionMethods = ref([
 const mentionSlots = ref([
   {
     name: 'option',
-    desc: '选项内容 (data: OptionInfo) (2.13.0)',
+    desc: '选项内容 (data: OptionInfo)',
   },
 ]);
 </script>

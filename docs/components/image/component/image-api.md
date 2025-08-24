@@ -36,7 +36,7 @@
 
 <field-table :data="imagePreviewGroupSlots" type="slots"/>
 
-### image-preview-action Props (2.17.0)
+### image-preview-action Props
 
 <field-table :data="imagePreviewActionProps"/>
 

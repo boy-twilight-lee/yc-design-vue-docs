@@ -58,7 +58,7 @@ const messageMethodProps = ref([
     name: 'normal',
     desc: '显示提示',
     type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
-    value: '- (2.41.0)',
+    value: '-',
   },
   {
     name: 'clear',
@@ -121,7 +121,7 @@ const messageConfigProps = ref([
     name: 'reset-on-hover',
     desc: '设置鼠标移入后不会自动关闭',
     type: 'boolean',
-    value: '`false` (2.39.0)',
+    value: 'false',
   },
 ]);
 

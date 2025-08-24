@@ -31,7 +31,6 @@ const avatarProps = ref([
     desc: '自定义头像图片地址，如果传入该属性，会默认渲染img标签',
     type: 'string',
     value: '-',
-    version: '2.40.0',
   },
   {
     name: 'size',

@@ -74,7 +74,7 @@ const transferProps = ref([
     name: 'show-select-all',
     desc: '是否展示全选勾选框',
     type: 'boolean',
-    value: '`true` (2.39.0)',
+    value: 'true',
   },
   {
     name: 'title',
@@ -86,13 +86,13 @@ const transferProps = ref([
     name: 'source-input-search-props',
     desc: '源选择框的搜索框配置',
     type: 'object',
-    value: '- (2.51.1)',
+    value: '-',
   },
   {
     name: 'target-input-search-props',
     desc: '目标选择框的搜索框配置',
     type: 'object',
-    value: '- (2.51.1)',
+    value: '-',
   },
 ]);
 

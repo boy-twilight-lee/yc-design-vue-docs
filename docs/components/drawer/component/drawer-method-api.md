@@ -80,13 +80,13 @@ const drawerConfigProps = ref([
     name: 'ok-button-props',
     desc: '确认按钮的Props',
     type: 'ButtonProps',
-    value: '- (2.9.0)',
+    value: '-',
   },
   {
     name: 'cancel-button-props',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
-    value: '- (2.9.0)',
+    value: '-',
   },
   {
     name: 'width',
@@ -152,37 +152,37 @@ const drawerConfigProps = ref([
     name: 'on-before-open',
     desc: '抽屉打开前触发',
     type: '() => void',
-    value: '- (2.43.0)',
+    value: '-',
   },
   {
     name: 'on-before-close',
     desc: '抽屉关闭前触发',
     type: '() => void',
-    value: '- (2.43.0)',
+    value: '-',
   },
   {
     name: 'esc-to-close',
     desc: '是否支持 ESC 键关闭抽屉',
     type: 'boolean',
-    value: '`true` (2.15.0)',
+    value: 'true',
   },
   {
     name: 'header',
     desc: '是否展示头部内容',
     type: 'boolean | RenderContent',
-    value: '`true` (2.33.0)',
+    value: 'true',
   },
   {
     name: 'footer',
     desc: '是否展示底部内容',
     type: 'boolean | RenderContent',
-    value: '`true` (2.11.0)',
+    value: 'true',
   },
   {
     name: 'hide-cancel',
     desc: '是否隐藏取消按钮',
     type: 'boolean',
-    value: '`false` (2.19.0)',
+    value: 'false',
   },
 ]);
 
@@ -197,7 +197,7 @@ const drawerReturnProps = ref([
     name: 'update',
     desc: '更新抽屉',
     type: '(config: DrawerUpdateConfig) => void',
-    value: '- (2.43.2)',
+    value: '-',
   },
 ]);
 

@@ -115,7 +115,7 @@ const textareaProps = ref([
     name: 'word-slice',
     desc: '字符截取方法，同 wordLength 一起使用',
     type: '(value: string, maxLength: number) => string',
-    value: '- (2.12.0)',
+    value: '-',
   },
   {
     name: 'textarea-attrs',
@@ -156,12 +156,12 @@ const textareaEvents = ref([
 const textareaMethods = ref([
   {
     name: 'focus',
-    desc: '使输入框获取焦点 (2.24.0)',
+    desc: '使输入框获取焦点',
     type: '() => void',
   },
   {
     name: 'blur',
-    desc: '使输入框失去焦点 (2.24.0)',
+    desc: '使输入框失去焦点',
     type: '() => void',
   },
 ]);

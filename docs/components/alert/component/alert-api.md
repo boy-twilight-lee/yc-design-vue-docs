@@ -18,7 +18,7 @@ import { ref } from 'vue';
 const alertProps = ref([
   {
     name: 'type',
-    desc: '警告提示的类型。2.41.0 新增 normal 类型',
+    desc: '警告提示的类型。',
     type: 'info | success | warning | error | normal',
     value: '\'info\'',
   },
@@ -82,7 +82,7 @@ const alertSlots = ref([
   },
   {
     name: 'close-element',
-    desc: '关闭元素 (2.36.0)',
+    desc: '关闭元素',
   },
 ]);
 </script>
