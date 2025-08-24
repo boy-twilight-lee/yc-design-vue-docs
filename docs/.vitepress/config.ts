@@ -159,7 +159,7 @@ export default defineConfig({
             { text: '进度条 Progress', link: '/components/progress/index.md' },
             { text: '结果 Result', link: '/components/result/index.md' },
             { text: '加载中 Spin', link: '/components/spin/index.md' },
-            { text: '骨架屏 Skeleton', link: '/components/skeleton' },
+            { text: '骨架屏 Skeleton', link: '/components/skeleton/index.md' },
           ],
         },
         {
