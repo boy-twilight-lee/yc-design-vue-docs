@@ -5,7 +5,18 @@
 ---
 
 <script setup>
-import SpinApi from "./component/spin-api.md"
+import SpinBasicUse from "./component/spin-basic-use.md"
+import SpinSize from "./component/spin-size.md"
+import SpinDot from "./component/spin-dot.md"
+import SpinContainer from "./component/spin-container.md"
+import SpinDesc from "./component/spin-desc.md"
+import SpinIcon from "./component/spin-icon.md"
 </script>
 
+<spin-basic-use />
+<spin-size />
+<spin-dot />
+<spin-container />
+<spin-desc />
+<spin-icon />
 <spin-api />
