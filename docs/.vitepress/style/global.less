@@ -5,19 +5,6 @@
   border-radius: 2px 2px 0 0;
 }
 
-code {
-  padding: 2px 8px;
-  color: rgb(78, 89, 105) !important;
-  background-color: rgb(242, 243, 245) !important;
-}
-
-.dark {
-  code {
-    color: rgba(255, 255, 255, 0.7) !important;
-    background-color: rgb(46, 46, 48) !important;
-  }
-}
-
 /* 系统滚动条颜色 */
 ::-webkit-scrollbar {
   width: 6px;
@@ -31,6 +18,12 @@ code {
     background-color: rgb(134, 144, 156);
     opacity: 0.8;
   }
+}
+
+code {
+  padding: 2px 8px;
+  color: rgb(78, 89, 105) !important;
+  background-color: rgb(242, 243, 245) !important;
 }
 
 details {
@@ -70,5 +63,35 @@ details {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.dark {
+  code {
+    color: rgba(255, 255, 255, 0.7) !important;
+    background-color: rgb(46, 46, 48) !important;
+  }
+  details {
+    &[open] {
+      .code-btn {
+        background-color: #fff;
+        border-color: rgb(229, 230, 235);
+        color: rgb(78, 89, 105);
+      }
+    }
+    &:not([open]) {
+      .code-btn {
+        &:hover {
+          border-color: rgb(22, 93, 255);
+          color: rgb(22, 93, 255);
+          background-color: #313132;
+        }
+      }
+    }
+    .code-btn {
+      background-color: #313132;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.7);
+    }
   }
 }
