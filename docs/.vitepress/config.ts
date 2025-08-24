@@ -126,7 +126,7 @@ export default defineConfig({
             { text: '提及 Mention', link: '/components/mention/index.md' },
             { text: '单选框 Radio', link: '/components/radio/index.md' },
             { text: '评分 Rate', link: '/components/rate/index.md' },
-            { text: '选择器 Select', link: '/components/select' },
+            { text: '选择器 Select', link: '/components/select/index.md' },
             { text: '滑块 Slider', link: '/components/slider/index.md' },
             { text: '开关 Switch', link: '/components/switch/index.md' },
             { text: '文本域 Textarea', link: '/components/textarea/index.md' },
@@ -143,11 +143,14 @@ export default defineConfig({
         {
           text: '反馈',
           items: [
-            { text: '警告 Alert', link: '/components/alert' },
-            { text: '抽屉 Drawer', link: '/components/drawer' },
-            { text: '全局提示 Message', link: '/components/message' },
-            { text: '对话框 Modal', link: '/components/modal' },
-            { text: '通知提醒 Notification', link: '/components/notification' },
+            { text: '警告 Alert', link: '/components/alert/index.md' },
+            { text: '抽屉 Drawer', link: '/components/drawer/index.md' },
+            { text: '全局提示 Message', link: '/components/message/index.md' },
+            { text: '对话框 Modal', link: '/components/modal/index.md' },
+            {
+              text: '通知提醒 Notification',
+              link: '/components/notification/index.md',
+            },
             { text: '气泡确认框 Popconfirm', link: '/components/popconfirm' },
             { text: '进度条 Progress', link: '/components/progress' },
             { text: '结果 Result', link: '/components/result' },

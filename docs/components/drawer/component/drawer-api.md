@@ -1,0 +1,224 @@
+## API
+
+### drawer Props
+
+<field-table :data="drawerProps"/>
+
+### drawer Events
+
+<field-table :data="drawerEvents" type="emits" />
+
+### drawer Slots
+
+<field-table :data="drawerSlots" :showDefaultValue="false" type="slots"/>
+
+<script setup>
+import { ref } from 'vue';
+
+const drawerProps = ref([
+  {
+    name: 'visible (v-model)',
+    desc: '抽屉是否可见',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'default-visible',
+    desc: '抽屉默认是否可见（非受控模式）',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'placement',
+    desc: '抽屉放置的位置',
+    type: '\'top\' | \'right\' | \'bottom\' | \'left\'',
+    value: '\'right\'',
+  },
+  {
+    name: 'title',
+    desc: '标题',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'mask',
+    desc: '是否显示遮罩层',
+    type: 'boolean',
+    value: '`true`',
+  },
+  {
+    name: 'mask-closable',
+    desc: '点击遮罩层是否可以关闭',
+    type: 'boolean',
+    value: '`true`',
+  },
+  {
+    name: 'closable',
+    desc: '是否展示关闭按钮',
+    type: 'boolean',
+    value: '`true`',
+  },
+  {
+    name: 'ok-text',
+    desc: '确认按钮的内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'cancel-text',
+    desc: '取消按钮的内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'ok-loading',
+    desc: '确认按钮是否为加载中状态',
+    type: 'boolean',
+    value: '`false`',
+  },
+  {
+    name: 'ok-button-props',
+    desc: '确认按钮的Props',
+    type: 'ButtonProps',
+    value: '- (2.9.0)',
+  },
+  {
+    name: 'cancel-button-props',
+    desc: '取消按钮的Props',
+    type: 'ButtonProps',
+    value: '- (2.9.0)',
+  },
+  {
+    name: 'unmount-on-close',
+    desc: '关闭时是否卸载节点',
+    type: 'boolean',
+    value: '`false` (2.12.0)',
+  },
+  {
+    name: 'width',
+    desc: '抽屉的宽度（仅在placement为right,left时可用）',
+    type: 'number | string',
+    value: '250',
+  },
+  {
+    name: 'height',
+    desc: '抽屉的高度（仅在placement为top,bottom时可用）',
+    type: 'number | string',
+    value: '250',
+  },
+  {
+    name: 'popup-container',
+    desc: '弹出框的挂载容器',
+    type: 'string | HTMLElement',
+    value: '\'body\'',
+  },
+  {
+    name: 'drawer-style',
+    desc: '抽屉的样式',
+    type: 'CSSProperties',
+    value: '-',
+  },
+  {
+    name: 'body-class',
+    desc: '抽屉内容部分的类名',
+    type: 'string | any[]',
+    value: '-',
+  },
+  {
+    name: 'body-style',
+    desc: '抽屉内容部分的样式',
+    type: 'StyleValue',
+    value: '-',
+  },
+  {
+    name: 'on-before-ok',
+    desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
+    type: '(done: (closed: boolean) => void) => void | boolean | Promise<void | boolean>',
+    value: '-',
+  },
+  {
+    name: 'on-before-cancel',
+    desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
+    type: '() => boolean',
+    value: '-',
+  },
+  {
+    name: 'esc-to-close',
+    desc: '是否支持 ESC 键关闭抽屉',
+    type: 'boolean',
+    value: '`true` (2.15.0)',
+  },
+  {
+    name: 'render-to-body',
+    desc: '抽屉是否挂载在 body 元素下',
+    type: 'boolean',
+    value: '`true`',
+  },
+  {
+    name: 'header',
+    desc: '是否展示头部内容',
+    type: 'boolean',
+    value: '`true` (2.33.0)',
+  },
+  {
+    name: 'footer',
+    desc: '是否展示底部内容',
+    type: 'boolean',
+    value: '`true` (2.11.0)',
+  },
+  {
+    name: 'hide-cancel',
+    desc: '是否隐藏取消按钮',
+    type: 'boolean',
+    value: '`false` (2.19.0)',
+  },
+]);
+
+const drawerEvents = ref([
+  {
+    name: 'ok',
+    desc: '点击确定按钮时触发',
+    type: '(ev: MouseEvent) => void',
+  },
+  {
+    name: 'cancel',
+    desc: '点击取消、关闭按钮时触发',
+    type: '(ev: MouseEvent | KeyboardEvent) => void',
+  },
+  {
+    name: 'open',
+    desc: '抽屉打开后（动画结束）触发',
+    type: '() => void',
+  },
+  {
+    name: 'close',
+    desc: '抽屉关闭后（动画结束）触发',
+    type: '() => void',
+  },
+  {
+    name: 'before-open',
+    desc: '对话框打开前触发 (2.43.0)',
+    type: '() => void',
+  },
+  {
+    name: 'before-close',
+    desc: '对话框关闭前触发 (2.43.0)',
+    type: '() => void',
+  },
+]);
+
+const drawerSlots = ref([
+  {
+    name: 'header',
+    desc: '页眉 (2.33.0)',
+  },
+  {
+    name: 'title',
+    desc: '标题',
+  },
+  {
+    name: 'footer',
+    desc: '页脚',
+  },
+]);
+</script>

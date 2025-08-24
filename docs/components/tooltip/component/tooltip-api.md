@@ -27,6 +27,7 @@ const tooltipProps = ref([
   { name: 'arrow-class', desc: '弹出框箭头的类名', type: 'ClassName', value: '-' },
   { name: 'arrow-style', desc: '弹出框箭头的样式', type: 'CSSProperties', value: '-' },
   { name: 'popup-container', desc: '弹出框的挂载容器', type: 'string | HTMLElement', value: '-' },
+  { name: 'trigger-props', desc: 'trigger的属性', type: 'TriggerProps', value: '-' },
 ]);
 
 const tooltipEvents = ref([
