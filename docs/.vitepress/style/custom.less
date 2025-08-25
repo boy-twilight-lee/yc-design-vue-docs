@@ -45,12 +45,23 @@
   );
 }
 
-html {
-  overflow: hidden;
-  body {
-    height: 100vh;
-    width: 100%;
-    overflow: auto;
+#app {
+  height: 100vh;
+  .Layout {
+    height: 100%;
+    .VPContent {
+      height: 100%;
+      &.is-home {
+        overflow: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .VPDoc {
+        height: 100%;
+        overflow: auto;
+      }
+    }
   }
 }
 
@@ -133,7 +144,10 @@ html {
     }
   }
   .VPContent {
+    height: 100%;
     .VPDoc {
+      height: 100%;
+      overflow: auto;
       &.has-aside {
         .content {
           .content-container {
