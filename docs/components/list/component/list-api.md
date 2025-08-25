@@ -51,7 +51,7 @@ const listProps = ref([
   { name: 'max-height', desc: '列表的最大高度', type: 'string | number', value: '0' },
   { name: 'bottom-offset', desc: '触发到达底部的距离阈值', type: 'number', value: '0' },
   { name: 'virtual-list-props', desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps', type: 'VirtualListProps', value: '-' },
-  { name: 'scrollbar', desc: '是否开启虚拟滚动条', type: 'boolean | ScrollbarProps', value: 'true', version: '2.38.0' },
+  { name: 'scrollbar', desc: '是否开启虚拟滚动条', type: 'boolean', value: 'true', version: '2.38.0' },
 ]);
 
 const listEvents = ref([

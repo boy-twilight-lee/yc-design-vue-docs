@@ -14,7 +14,11 @@
 
 ### input-tag Slots
 
-<field-table :data="inputTagSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="inputTagSlots"  type="slots"/>
+
+### TagData
+
+<field-table :data="tagDataProps"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -181,6 +185,33 @@ const inputTagSlots = ref([
   {
     name: 'suffix',
     desc: '后缀元素',
+  },
+]);
+
+const tagDataProps = ref([
+  {
+    name: 'value',
+    desc: '标签值',
+    type: 'string | number',
+    value: '-',
+  },
+  {
+    name: 'label',
+    desc: '标签内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'closable',
+    desc: '是否可关闭',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'tagProps',
+    desc: '标签属性',
+    type: 'TagProps',
+    value: '-',
   },
 ]);
 </script>

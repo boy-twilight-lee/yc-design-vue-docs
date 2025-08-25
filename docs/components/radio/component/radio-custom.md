@@ -3,37 +3,6 @@
 使用 #radio 插槽自定义复选框的展示
 
 <div class="cell-demo vp-raw">
-  <yc-radio-group default-value="1">
-    <yc-radio value="1">
-      <template #radio="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag radio 1</yc-tag
-        >
-      </template>
-    </yc-radio>
-    <yc-radio value="2">
-      <template #radio="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag radio 2</yc-tag
-        >
-      </template>
-    </yc-radio>
-    <yc-radio value="3">
-      <template #radio="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag radio 3</yc-tag
-        >
-      </template>
-    </yc-radio>
-  </yc-radio-group>
-
-  <div :style="{ marginTop: '20px' }">
     <yc-radio-group>
       <template
         v-for="item in 2"
@@ -60,7 +29,6 @@
         </yc-radio>
       </template>
     </yc-radio-group>
-  </div>
 </div>
 
 <style scoped>

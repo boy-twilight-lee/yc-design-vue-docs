@@ -10,7 +10,7 @@
 
 ### select Slots
 
-<field-table :data="selectSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="selectSlots"  type="slots"/>
 
 ### option Props
 
@@ -22,7 +22,87 @@
 
 ### optgroup Slots
 
-<field-table :data="optgroupSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="optgroupSlots"  type="slots"/>
+
+### Type
+
+```typescript
+/**
+ * @zh 选项
+ * @en Option
+ */
+type Option = string | number | SelectOptionData | SelectOptionGroup;
+
+/**
+ * @zh 筛选
+ * @en Filter
+ */
+type FilterOption =
+  | boolean
+  | ((inputValue: string, option: SelectOptionData) => boolean);
+```
+
+### SelectOptionData
+
+<field-table :data="selectOptionDataProps"/>
+
+### SelectOptionGroup
+
+<field-table :data="selectOptionGroupProps"/>
+
+### VirtualListProps
+
+<field-table :data="virtualListPropsProps"/>
+
+### FAQ
+
+使用 `Object` 格式作为选项的值
+当使用 `Object` 格式作为选项的值时，需要通过 `value-key` 属性为选择器指定获取唯一标识的字段名，默认值为 `value`.
+此外 `value` 的对象值需要在 `setup` 中定义好，不能够在模版中创建对象，这样会导致 `Option` 组件的重复渲染。
+
+例如当我需要指定 `key` 为唯一标识时：
+
+```vue
+<template>
+  <yc-select
+    v-model="value"
+    :style="{ width: '320px' }"
+    placeholder="Please select ..."
+    value-key="key">
+    <yc-option
+      v-for="item of data"
+      :value="item"
+      :label="item.label" />
+  </yc-select>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+const value = ref();
+const data = [
+  {
+    value: 'beijing',
+    label: 'Beijing',
+    key: 'extra1',
+  },
+  {
+    value: 'shanghai',
+    label: 'Shanghai',
+    key: 'extra2',
+  },
+  {
+    value: 'guangzhou',
+    label: 'Guangzhou',
+    key: 'extra3',
+  },
+  {
+    value: 'chengdu',
+    label: 'Chengdu',
+    key: 'extra4',
+  },
+];
+</script>
+```
 
 <script setup>
 import { ref } from 'vue';
@@ -185,7 +265,7 @@ const selectProps = ref([
     value: '`true`',
   },
   {
-    name: 'show-extra-options',
+    name: 'show-extryc-options',
     desc: '是否在下拉菜单中显示额外选项',
     type: 'boolean',
     value: '`true`',
@@ -217,7 +297,7 @@ const selectProps = ref([
   {
     name: 'scrollbar',
     desc: '是否开启虚拟滚动条',
-    type: 'boolean | ScrollbarProps',
+    type: 'boolean',
     value: '`true`',
   },
   {
@@ -383,6 +463,77 @@ const optgroupSlots = ref([
   {
     name: 'label',
     desc: '选项组的标题',
+  },
+]);
+
+const selectOptionDataProps = ref([
+  {
+    name: 'value',
+    desc: '选项值',
+    type: 'string | number | boolean | Record<string, unknown>',
+    value: '-',
+  },
+  {
+    name: 'label',
+    desc: '选项内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'tagProps',
+    desc: '选项对应的多选标签的属性',
+    type: 'any',
+    value: '-',
+  },
+  {
+    name: 'render',
+    desc: '自定义渲染',
+    type: 'RenderFunction',
+    value: '-',
+  },
+]);
+
+const selectOptionGroupProps = ref([
+  {
+    name: 'isGroup',
+    desc: '是否为选项组',
+    type: 'true',
+    value: '-',
+  },
+  {
+    name: 'label',
+    desc: '选项组标题',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'options',
+    desc: '选项组中的选项',
+    type: 'SelectOption[]',
+    value: '-',
+  },
+]);
+
+const virtualListPropsProps = ref([
+  {
+    name: 'itemHeight（必填）',
+    desc: '每一项的高度',
+    type: 'number',
+    value: '-',
+    version: '',
+  },
+  {
+    name: 'threshold',
+    desc: '开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。',
+    type: 'number',
+    value: '-',
+    version: '',
   },
 ]);
 

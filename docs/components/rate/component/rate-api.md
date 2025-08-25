@@ -10,7 +10,7 @@
 
 ### rate Slots
 
-<field-table :data="rateSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="rateSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

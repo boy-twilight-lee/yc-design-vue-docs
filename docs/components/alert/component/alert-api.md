@@ -10,7 +10,7 @@
 
 ### alert Slots
 
-<field-table :data="alertSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="alertSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

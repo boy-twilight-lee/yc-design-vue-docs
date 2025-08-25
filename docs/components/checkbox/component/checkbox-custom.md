@@ -3,37 +3,6 @@
 使用 `#checkbox` 插槽自定义复选框的展示
 
 <div class="cell-demo vp-raw">
-  <yc-checkbox-group :default-value="['1']">
-    <yc-checkbox value="1">
-      <template #checkbox="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag checkbox 1</yc-tag
-        >
-      </template>
-    </yc-checkbox>
-    <yc-checkbox value="2">
-      <template #checkbox="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag checkbox 2</yc-tag
-        >
-      </template>
-    </yc-checkbox>
-    <yc-checkbox value="3">
-      <template #checkbox="{ checked }">
-        <yc-tag
-          :checked="checked"
-          checkable
-          >This is a tag checkbox 3</yc-tag
-        >
-      </template>
-    </yc-checkbox>
-  </yc-checkbox-group>
-
-  <div :style="{ marginTop: '20px' }">
     <yc-checkbox-group :default-value="[1]">
       <template
         v-for="item in 2"
@@ -60,7 +29,6 @@
         </yc-checkbox>
       </template>
     </yc-checkbox-group>
-  </div>
 </div>
 
 <style scoped>

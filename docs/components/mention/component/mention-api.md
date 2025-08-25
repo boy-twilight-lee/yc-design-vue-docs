@@ -14,7 +14,7 @@
 
 ### mention Slots
 
-<field-table :data="mentionSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="mentionSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

@@ -164,7 +164,10 @@ export default defineConfig({
         {
           text: '导航',
           items: [
-            { text: '面包屑 Breadcrumb', link: '/components/breadcrumb' },
+            {
+              text: '面包屑 Breadcrumb',
+              link: '/components/breadcrumb/index.md',
+            },
             { text: '下拉菜单 Dropdown', link: '/components/dropdown' },
             { text: '导航菜单 Menu', link: '/components/menu' },
             { text: '页头 PageHeader', link: '/components/page-header' },

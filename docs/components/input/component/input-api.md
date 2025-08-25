@@ -14,7 +14,7 @@
 
 ### input Slots
 
-<field-table :data="inputSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="inputSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

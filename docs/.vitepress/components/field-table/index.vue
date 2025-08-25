@@ -28,6 +28,11 @@ const columns = computed(() => {
     emits: '事件名',
     expose: '方法名',
     slots: '插槽名',
+    format: '格式',
+  };
+  const typeMap = {
+    props: '类型',
+    format: '输出',
   };
   return [
     {
@@ -40,7 +45,7 @@ const columns = computed(() => {
       dataIndex: 'desc',
     },
     {
-      title: props.type == 'props' ? '类型' : '参数',
+      title: typeMap[props.type] ?? '参数',
       dataIndex: 'type',
       width: 200,
     },

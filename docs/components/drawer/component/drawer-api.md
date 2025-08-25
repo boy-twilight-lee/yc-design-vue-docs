@@ -10,7 +10,7 @@
 
 ### drawer Slots
 
-<field-table :data="drawerSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="drawerSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

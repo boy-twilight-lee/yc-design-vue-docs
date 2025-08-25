@@ -10,7 +10,11 @@
 
 ### transfer Slots
 
-<field-table :data="transferSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="transferSlots"  type="slots"/>
+
+### TransferItem
+
+<field-table :data="transferItemProps"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -148,6 +152,27 @@ const transferSlots = ref([
   {
     name: 'item',
     desc: '选项 (value: string, label: string)',
+  },
+]);
+
+const transferItemProps = ref([
+  {
+    name: 'value',
+    desc: '选项的值',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'label',
+    desc: '选项的标签',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
   },
 ]);
 </script>

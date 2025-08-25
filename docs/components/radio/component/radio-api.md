@@ -10,7 +10,7 @@
 
 ### radio Slots
 
-<field-table :data="radioSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="radioSlots"  type="slots"/>
 
 ### radio-group Props
 
@@ -22,7 +22,11 @@
 
 ### radio-group Slots
 
-<field-table :data="radioGroupSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="radioGroupSlots"  type="slots"/>
+
+### RadioOption
+
+<field-table :data="radioOptionProps"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -136,6 +140,27 @@ const radioGroupSlots = ref([
   {
     name: 'label',
     desc: 'radio 文案内容 (data: RadioOption)',
+  },
+]);
+
+const radioOptionProps = ref([
+  {
+    name: 'label',
+    desc: '文案',
+    type: 'RenderContent',
+    value: '-',
+  },
+  {
+    name: 'value',
+    desc: '选项的 value',
+    type: 'string | number',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
   },
 ]);
 </script>

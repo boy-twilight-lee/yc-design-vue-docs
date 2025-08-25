@@ -10,7 +10,11 @@
 
 ### time-picker Slots
 
-<field-table :data="timePickerSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="timePickerSlots"  type="slots"/>
+
+### 字符串解析格式
+
+<field-table :data="stringParsingFormatProps" type="format"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -192,6 +196,189 @@ const timePickerSlots = ref([
   {
     name: 'extra',
     desc: '额外的页脚',
+  },
+]);
+
+const stringParsingFormatProps = ref([
+  {
+    name: 'YY',
+    type: '21',
+    desc: '两位数的年份',
+    value: '-',
+  },
+  {
+    name: 'YYYY',
+    type: '2021',
+    desc: '四位数年份',
+    value: '-',
+  },
+  {
+    name: 'M',
+    type: '1-12',
+    desc: '月份，从 1 开始',
+    value: '-',
+  },
+  {
+    name: 'MM',
+    type: '01-12',
+    desc: '月份，两位数',
+    value: '-',
+  },
+  {
+    name: 'MMM',
+    type: 'Jan-Dec',
+    desc: '缩写的月份名称',
+    value: '-',
+  },
+  {
+    name: 'MMMM',
+    type: 'January-December',
+    desc: '完整的月份名称',
+    value: '-',
+  },
+  {
+    name: 'D',
+    type: '1-31',
+    desc: '月份里的一天',
+    value: '-',
+  },
+  {
+    name: 'DD',
+    type: '01-31',
+    desc: '月份里的一天，两位数',
+    value: '-',
+  },
+  {
+    name: 'd',
+    type: '0-6',
+    desc: '一周中的一天，星期天是 0',
+    value: '-',
+  },
+  {
+    name: 'dd',
+    type: 'Su-Sa',
+    desc: '最简写的一周中一天的名称',
+    value: '-',
+  },
+  {
+    name: 'ddd',
+    type: 'Sun-Sat',
+    desc: '简写的一周中一天的名称',
+    value: '-',
+  },
+  {
+    name: 'dddd',
+    type: 'Sunday-Saturday',
+    desc: '一周中一天的名称',
+    value: '-',
+  },
+  {
+    name: 'H',
+    type: '0-23',
+    desc: '小时',
+    value: '-',
+  },
+  {
+    name: 'HH',
+    type: '00-23',
+    desc: '小时，两位数',
+    value: '-',
+  },
+  {
+    name: 'h',
+    type: '1-12',
+    desc: '小时, 12 小时制',
+    value: '-',
+  },
+  {
+    name: 'hh',
+    type: '01-12',
+    desc: '小时, 12 小时制, 两位数',
+    value: '-',
+  },
+  {
+    name: 'm',
+    type: '0-59',
+    desc: '分钟',
+    value: '-',
+  },
+  {
+    name: 'mm',
+    type: '00-59',
+    desc: '分钟，两位数',
+    value: '-',
+  },
+  {
+    name: 's',
+    type: '0-59',
+    desc: '秒',
+    value: '-',
+  },
+  {
+    name: 'ss',
+    type: '00-59',
+    desc: '秒，两位数',
+    value: '-',
+  },
+  {
+    name: 'S',
+    type: '0-9',
+    desc: '数百毫秒，一位数',
+    value: '-',
+  },
+  {
+    name: 'SS',
+    type: '00-99',
+    desc: '几十毫秒，两位数',
+    value: '-',
+  },
+  {
+    name: 'SSS',
+    type: '000-999',
+    desc: '毫秒，三位数字',
+    value: '-',
+  },
+  {
+    name: 'Z',
+    type: '-5:00',
+    desc: 'UTC 的偏移量',
+    value: '-',
+  },
+  {
+    name: 'ZZ',
+    type: '-0500',
+    desc: 'UTC 的偏移量，数字前面加上 0',
+    value: '-',
+  },
+  {
+    name: 'A',
+    type: 'AM PM',
+    desc: '-',
+    value: '-',
+  },
+  {
+    name: 'a',
+    type: 'am pm',
+    desc: '-',
+    value: '-',
+  },
+  {
+    name: 'Do',
+    type: '1st... 3st',
+    desc: '带序号的月份中的某天',
+    value: '-',
+  },
+  {
+    name: 'X',
+    type: '1410715640.579',
+    desc: 'Unix 时间戳',
+    value: '-',
+  },
+  {
+    name: 'x',
+    type: '1410715640579',
+    desc: 'Unix 毫秒时间戳',
+    value: '-',
   },
 ]);
 </script>

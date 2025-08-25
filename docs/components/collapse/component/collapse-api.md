@@ -16,6 +16,12 @@
 
 <field-table :data="collapseItemSlots" type="slots"/>
 
+### FAQ
+
+`<CollapseItem>`组件的 path 属性为必填
+<br/>
+在 `<Collapse>` 组件中每个 `<CollapseItem>` 都需要指定唯一的 `path` , `path` 对应 `activeKey` 中的值。
+
 <script setup>
 import { ref } from 'vue';
 

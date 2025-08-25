@@ -12,6 +12,12 @@
 
 <field-table :data="slots" type="slots"/>
 
+### type
+
+```typescript
+export type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
+```
+
 <script setup>
 import { ref } from 'vue';
 const linkProps = ref([
@@ -24,8 +30,8 @@ const linkProps = ref([
   {
     name: 'status',
     desc: '链接的状态',
-    type: "'normal' | 'warning' | 'success' | 'danger'",
-    value: "`'normal'`",
+    type: "LinkStatus",
+    value: "'normal'",
   },
   {
     name: 'hoverable',

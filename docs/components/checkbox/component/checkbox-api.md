@@ -10,7 +10,7 @@
 
 ### checkbox Slots
 
-<field-table :data="checkboxSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="checkboxSlots"  type="slots"/>
 
 ### checkbox-group Props
 
@@ -22,7 +22,11 @@
 
 ### checkbox-group Slots
 
-<field-table :data="checkboxGroupSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="checkboxGroupSlots"  type="slots"/>
+
+### CheckboxOption
+
+<field-table :data="checkboxOptionProps"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -132,6 +136,32 @@ const checkboxGroupSlots = ref([
     desc: 'checkbox 文案内容',
     type: '#label',
     value: '2.27.0',
+  },
+]);
+const checkboxOptionProps = ref([
+  {
+    name: 'label',
+    desc: '文案',
+    type: 'RenderContent',
+    value: '-',
+  },
+  {
+    name: 'value',
+    desc: '选项的 value',
+    type: 'string | number',
+    value: '-',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'indeterminate',
+    desc: '是否为半选状态',
+    type: 'boolean',
+    value: 'false',
   },
 ]);
 </script>

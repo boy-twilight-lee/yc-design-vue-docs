@@ -8,6 +8,12 @@
 
 <field-table :data="spaceSlots" type="slots" />
 
+### Type
+
+```typescript
+type SpaceSize = number | 'mini' | 'small' | 'medium' | 'large';
+```
+
 <script setup>
 import { ref } from 'vue';
 const spaceProps = ref([

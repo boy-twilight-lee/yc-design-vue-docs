@@ -20,13 +20,24 @@
 
 <field-table :data="paragraphProps"/>
 
+### type
+
+```typescript
+export type TypographyType =
+  | 'primary'
+  | 'secondary'
+  | 'dashed'
+  | 'outline'
+  | 'text';
+```
+
 <script setup>
 import { ref } from 'vue';
 const props = ref([
   {
     name: 'type',
     desc: '文本类型',
-    type: "'primary' | 'secondary' | 'success' | 'danger' | 'warning'",
+    type: "TypographyType",
     value: '-',
   },
   {

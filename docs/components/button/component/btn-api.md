@@ -20,32 +20,49 @@
 
 <field-table :data="groupSlots"  type="slots"/>
 
+```typescript
+export type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
+
+export type ButtonShape = 'square' | 'circle' | 'round';
+
+export type ButtonType =
+  | 'primary'
+  | 'secondary'
+  | 'dashed'
+  | 'outline'
+  | 'text';
+
+export type ButtonHtmlType = 'button' | 'reset' | 'submit';
+
+export type ButtonSize = 'mini' | 'small' | 'medium' | 'large';
+```
+
 <script setup>
 import { ref } from 'vue';
 const btnProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
-    type: 'ButtonTypes',
-    value: "`'secondary'`",
+    type: 'ButtonType',
+    value: "'secondary'",
   },
   {
     name: 'shape',
     desc: '按钮的形状',
-    type: 'BorderShape',
+    type: `ButtonShape`,
     value: '-',
   },
   {
     name: 'status',
     desc: '按钮的状态',
-    type: "'normal' | 'warning' | 'success' | 'danger'",
-    value: "`'normal'`",
+    type: 'ButtonStatus',
+    value: "'normal'",
   },
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: "'mini' | 'small' | 'medium' | 'large'",
-    value: "`'medium'`",
+    type: "ButtonSize",
+    value: "'medium'",
   },
   {
     name: 'long',
@@ -110,25 +127,25 @@ const groupProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
-    type: 'ButtonTypes',
+    type: 'ButtonType',
     value: '-',
   },
   {
     name: 'status',
     desc: '按钮的状态',
-    type: "'normal' | 'warning' | 'success' | 'danger'",
+    type: 'ButtonStatus',
     value: '-',
   },
   {
     name: 'shape',
     desc: '按钮的形状',
-    type: 'BorderShape',
+    type: 'ButtonShape',
     value: '-',
   },
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "ButtonSize",
     value: '-',
   },
   {

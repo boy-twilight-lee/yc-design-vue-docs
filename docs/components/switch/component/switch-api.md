@@ -10,7 +10,7 @@
 
 ### switch Slots
 
-<field-table :data="switchSlots" :showDefaultValue="false" type="slots"/>
+<field-table :data="switchSlots"  type="slots"/>
 
 <script setup>
 import { ref } from 'vue';
