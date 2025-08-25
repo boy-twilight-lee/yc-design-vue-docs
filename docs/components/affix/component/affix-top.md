@@ -5,15 +5,10 @@
 <div class="cell-demo vp-raw">
   <yc-affix
     :offsetTop="80"
-    :target="target">
+    style="z-index:10">
     <yc-button type="primary">80px to affix top</yc-button>
   </yc-affix>
 </div>
-
-<script setup>
-import { ref, onMounted } from 'vue';
-const target = window;
-</script>
 
 <details>
 <summary>
@@ -24,7 +19,9 @@ const target = window;
 
 ```vue
 <template>
-  <yc-affix :offsetTop="80">
+  <yc-affix
+    :offsetTop="80"
+    style="z-index:10">
     <yc-button type="primary">80px to affix top</yc-button>
   </yc-affix>
 </template>

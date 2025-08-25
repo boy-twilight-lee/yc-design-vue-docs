@@ -3,8 +3,8 @@
 使用 `affix` 组件可以让锚点固定在页面之内。
 
 <div class="cell-demo vp-raw">
-   <yc-affix :offsetTop="80">
-    <yc-anchor :style="{ backgroundColor: 'var(--color-bg-1)' }">
+   <yc-affix :offsetTop="80" style="z-index:10">
+    <yc-anchor :style="{ backgroundColor: '#fff' }">
       <yc-anchor-link href="#basic">Basic</yc-anchor-link>
       <yc-anchor-link href="#line-less">LineLess Mode</yc-anchor-link>
       <yc-anchor-link href="#affix">
