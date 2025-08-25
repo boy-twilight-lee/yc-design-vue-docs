@@ -168,11 +168,20 @@ export default defineConfig({
               text: '面包屑 Breadcrumb',
               link: '/components/breadcrumb/index.md',
             },
-            { text: '下拉菜单 Dropdown', link: '/components/dropdown' },
-            { text: '导航菜单 Menu', link: '/components/menu' },
-            { text: '页头 PageHeader', link: '/components/page-header' },
-            { text: '分页 Pagination', link: '/components/pagination' },
-            { text: '步骤条 Steps', link: '/components/steps' },
+            {
+              text: '下拉菜单 Dropdown',
+              link: '/components/dropdown/index.md',
+            },
+            { text: '导航菜单 Menu', link: '/components/menu/index.md' },
+            {
+              text: '页头 PageHeader',
+              link: '/components/page-header/index.md',
+            },
+            {
+              text: '分页 Pagination',
+              link: '/components/pagination/index.md',
+            },
+            { text: '步骤条 Steps', link: '/components/steps/index.md' },
           ],
         },
         {
