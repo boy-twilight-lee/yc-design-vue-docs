@@ -4,7 +4,7 @@
 
 <div class="cell-demo vp-raw">
   <yc-affix
-     target="html"
+    :target="target"
     :offsetBottom="80"
     @change="onChange">
     <yc-button type="primary">80px to affix bottom</yc-button>
@@ -12,6 +12,7 @@
 </div>
 
 <script setup>
+const target = window
 const onChange = (fixed) => {
   console.log(`${fixed}`);
 };
