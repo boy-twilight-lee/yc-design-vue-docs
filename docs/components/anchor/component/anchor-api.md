@@ -8,7 +8,7 @@
 
 <field-table :data="anchorEmits"/>
 
-## anchor-link
+### anchor-link
 
 <field-table :data="anchorLinkProps"/>
 

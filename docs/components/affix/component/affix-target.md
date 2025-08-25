@@ -14,6 +14,7 @@
       <yc-affix
         :offsetTop="20"
         :target="containerRef"
+        :target-container="containerRef"
         style="margin: 40px">
         <yc-button type="primary">Affix in scrolling container</yc-button>
       </yc-affix>

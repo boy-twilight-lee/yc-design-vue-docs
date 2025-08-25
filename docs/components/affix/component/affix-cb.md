@@ -4,6 +4,7 @@
 
 <div class="cell-demo vp-raw">
   <yc-affix
+     target="html"
     :offsetBottom="80"
     @change="onChange">
     <yc-button type="primary">80px to affix bottom</yc-button>
