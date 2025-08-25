@@ -45,23 +45,11 @@
   );
 }
 
-#app {
+body {
   height: 100vh;
-  .Layout {
-    height: 100%;
-    .VPContent {
-      height: 100%;
-      &.is-home {
-        overflow: auto;
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      }
-      .VPDoc {
-        height: 100%;
-        overflow: auto;
-      }
-    }
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
