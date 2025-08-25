@@ -9,7 +9,6 @@ import AffixBasicUse from "./component/affix-basic-use.md"
 import AffixTop from "./component/affix-top.md"
 import AffixBottom from "./component/affix-bottom.md"
 import AffixCb from "./component/affix-cb.md"
-import AffixTarget from "./component/affix-target.md"
 import AffixApi from "./component/affix-api.md"
 </script>
 
@@ -17,5 +16,4 @@ import AffixApi from "./component/affix-api.md"
 <affix-top />
 <affix-bottom />
 <affix-cb />
-<affix-target />
 <affix-api />

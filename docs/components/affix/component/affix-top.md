@@ -5,7 +5,7 @@
 <div class="cell-demo vp-raw">
   <yc-affix
     :offsetTop="80"
-    style="z-index:10">
+    style="z-index:1001">
     <yc-button type="primary">80px to affix top</yc-button>
   </yc-affix>
 </div>
@@ -21,7 +21,7 @@
 <template>
   <yc-affix
     :offsetTop="80"
-    style="z-index:10">
+    style="z-index:1001">
     <yc-button type="primary">80px to affix top</yc-button>
   </yc-affix>
 </template>

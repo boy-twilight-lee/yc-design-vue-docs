@@ -5,7 +5,7 @@
 <div class="cell-demo vp-raw">
   <yc-affix
     :offset-bttom="120"
-    style="z-index:10"
+    style="z-index:1001"
  >
     <yc-button type="primary">120px to affix bottom</yc-button>
   </yc-affix>
