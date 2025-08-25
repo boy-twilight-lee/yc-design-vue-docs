@@ -187,22 +187,28 @@ export default defineConfig({
         {
           text: '其他',
           items: [
-            { text: '固钉 Affix', link: '/components/affix' },
-            { text: '锚点 Anchor', link: '/components/anchor' },
-            { text: '回到顶部 BackTop', link: '/components/back-top' },
+            { text: '固钉 Affix', link: '/components/affix/index.md' },
+            { text: '锚点 Anchor', link: '/components/anchor/index.md' },
+            { text: '回到顶部 BackTop', link: '/components/back-top/index.md' },
             {
               text: '全局配置 ConfigProvider',
-              link: '/components/config-provider',
+              link: '/components/config-provider/index.md',
             },
-            { text: '调整尺寸 ResizeBox', link: '/components/resize-box' },
-            { text: '触发器 Trigger', link: '/components/trigger' },
-            { text: '分割面板 Split', link: '/components/split' },
+            {
+              text: '调整尺寸 ResizeBox',
+              link: '/components/resize-box/index.md',
+            },
+            { text: '触发器 Trigger', link: '/components/trigger/index.md' },
+            { text: '分割面板 Split', link: '/components/split/index.md' },
             {
               text: '溢出列表 OverflowList',
-              link: '/components/overflow-list',
+              link: '/components/overflow-list/index.md',
             },
-            { text: '滚动条 Scrollbar', link: '/components/scrollbar' },
-            { text: '水印 Watermark', link: '/components/watermark' },
+            {
+              text: '滚动条 Scrollbar',
+              link: '/components/scrollbar/index.md',
+            },
+            { text: '水印 Watermark', link: '/components/watermark/index.md' },
           ],
         },
       ],
