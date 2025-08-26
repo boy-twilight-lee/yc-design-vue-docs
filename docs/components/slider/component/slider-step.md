@@ -8,7 +8,8 @@
     size="large">
     <yc-form
       :model="data"
-      layout="inline">
+      layout="inline"
+      style="width:100%">
       <yc-form-item
         label="Step"
         field="step">

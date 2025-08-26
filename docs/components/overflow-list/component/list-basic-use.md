@@ -3,7 +3,7 @@
 折叠列表的基本使用方法。
 
 <div class="cell-demo vp-raw">
-  <yc-form auto-label-width>
+  <yc-form auto-label-width style="width:100%">
     <yc-form-item label="Tag Number">
       <yc-input-number
         v-model="number"
@@ -36,7 +36,7 @@ import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const width = ref(500);
 const number = ref(10);
 const tags = computed(() =>
-  Array.from({ length: number.value }, (_, idx) => idx + 1)
+  Array.from({ length: +number.value }, (_, idx) => idx + 1)
 );
 </script>
 

@@ -6,7 +6,8 @@
   <yc-form
     size="small"
     :model="form"
-    auto-label-width>
+    auto-label-width
+    style="width:100%">
     <yc-row :gutter="16">
       <yc-col :span="24">
         <yc-form-item

@@ -3,7 +3,7 @@
 通过 `from` 属性可以设置折叠的方向。
 
 <div class="cell-demo vp-raw">
-  <yc-form auto-label-width>
+  <yc-form auto-label-width style="width:100%"> 
     <yc-form-item label="Tag Number">
       <yc-input-number
         v-model="number"

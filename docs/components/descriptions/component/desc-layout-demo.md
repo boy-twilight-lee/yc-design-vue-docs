@@ -5,7 +5,8 @@
 <div class="cell-demo vp-raw">
   <yc-form
     :model="form"
-    auto-label-width>
+    auto-label-widt 
+    style="width:100%"h>
     <yc-form-item label="size">
       <yc-radio-group
         v-model="form.size"
