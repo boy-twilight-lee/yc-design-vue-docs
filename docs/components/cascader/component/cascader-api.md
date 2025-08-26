@@ -406,7 +406,7 @@ const cascaderPanelSlots = ref([
 const cascaderOption = ref([
   {
     name: 'value',
-    desc: '选项值，2.29.0 版本支持对象',
+    desc: '选项值',
     type: 'string | number | Record<string, any>',
     value: '-',
   },

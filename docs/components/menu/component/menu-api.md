@@ -154,19 +154,19 @@ const menuProps = ref([
     name: 'auto-open-selected',
     desc: '默认展开选中的菜单',
     type: 'boolean',
-    value: 'false (2.8.0)',
+    value: 'false',
   },
   {
     name: 'breakpoint',
     desc: '响应式的断点, 详见响应式栅格',
     type: '\'xxl\' | \'xl\' | \'lg\' | \'md\' | \'sm\' | \'xs\'',
-    value: '- (2.18.0)',
+    value: '-',
   },
   {
     name: 'popup-max-height',
     desc: '弹出框的最大高度',
     type: 'boolean | number',
-    value: 'true (2.23.0)',
+    value: 'true',
   },
 ]);
 
@@ -241,7 +241,7 @@ const subMenuProps = ref([
     name: 'popup-max-height',
     desc: '弹出框的最大高度',
     type: 'boolean | number',
-    value: 'true (2.23.0)',
+    value: 'true',
   },
 ]);
 
@@ -267,7 +267,7 @@ const subMenuSlots = ref([
   {
     name: 'icon',
     desc: '菜单的图标',
-    type: '- (2.11.0)',
+    type: '-',
     value: '-',
   },
 ]);
@@ -309,7 +309,7 @@ const menuItemSlots = ref([
   {
     name: 'icon',
     desc: '菜单的图标',
-    type: '- (2.11.0)',
+    type: '-',
     value: '-',
   },
 ]);

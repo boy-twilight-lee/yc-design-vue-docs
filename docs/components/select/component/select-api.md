@@ -438,7 +438,7 @@ const optionProps = ref([
   },
   {
     name: 'extra',
-    desc: '额外数据。2.18.0 版本废弃，可使用对象形式的 value 扩展数据',
+    desc: '额外数据',
     type: 'object',
     value: '-',
   },

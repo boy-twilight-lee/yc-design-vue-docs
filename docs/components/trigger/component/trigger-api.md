@@ -212,7 +212,7 @@ const triggerProps = ref([
     name: 'scroll-to-close',
     desc: '是否在滚动时关闭弹出框',
     type: 'boolean',
-    value: 'false (2.46.0)',
+    value: 'false',
   },
   {
     name: 'scroll-to-close-distance',
@@ -232,13 +232,13 @@ const triggerEmits = ref([
   {
     name: 'show',
     desc: '弹出框显示后（动画结束）触发',
-    type: '- (2.18.0)',
+    type: '-',
     value: '-',
   },
   {
     name: 'hide',
     desc: '弹出框隐藏后（动画结束）触发',
-    type: '- (2.18.0)',
+    type: '-',
     value: '-',
   },
 ]);

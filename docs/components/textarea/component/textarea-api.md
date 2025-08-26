@@ -48,7 +48,7 @@ const textareaProps = ref([
   },
   {
     name: 'max-length',
-    desc: '输入值的最大长度，errorOnly 属性在 2.12.0 版本添加',
+    desc: '输入值的最大长度',
     type: 'number | { length: number; errorOnly?: boolean }',
     value: '0',
   },

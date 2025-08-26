@@ -32,10 +32,6 @@
 
 <field-table :data="listItemMetaSlots" type="slots"/>
 
-### VirtualListProps
-
-<field-table :data="virtualListProps"/>
-
 <script setup>
 import { ref } from 'vue';
 
@@ -246,45 +242,6 @@ const listItemMetaSlots = ref([
     desc: '描述内容',
     type: '-',
     value: '-',
-  },
-]);
-
-const virtualListProps = ref([
-  {
-    name: 'height',
-    desc: '可视区域高度',
-    type: 'number | string',
-    value: '-',
-  },
-  {
-    name: 'threshold',
-    desc: '开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。',
-    type: 'number',
-    value: '-',
-  },
-  {
-    name: 'isStaticItemHeight',
-    desc: '（已废除）元素高度是否是固定的。2.34.1 版本废除，请使用 fixedSize',
-    type: 'boolean',
-    value: 'false',
-  },
-  {
-    name: 'fixedSize',
-    desc: '元素高度是否是固定的。',
-    type: 'boolean',
-    value: 'false',
-  },
-  {
-    name: 'estimatedSize',
-    desc: '元素高度不固定时的预估高度。',
-    type: 'number',
-    value: '-',
-  },
-  {
-    name: 'buffer',
-    desc: '视口边界外提前挂载的元素数量。',
-    type: 'number',
-    value: '10',
   },
 ]);
 </script>

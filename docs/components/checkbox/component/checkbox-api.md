@@ -78,7 +78,7 @@ const checkboxSlots = ref([
     name: 'checkbox',
     desc: '自定义复选框',
     type: '#checkbox',
-    value: '2.18.0',
+    value: '-',
   },
 ]);
 
@@ -99,13 +99,13 @@ const checkboxGroupProps = ref([
     name: 'max',
     desc: '支持最多选中的数量',
     type: 'number',
-    value: '2.36.0',
+    value: '-',
   },
   {
     name: 'options',
     desc: '选项',
     type: 'Array<string | number | CheckboxOption>',
-    value: '2.27.0',
+    value: '-',
   },
   {
     name: 'direction',
@@ -135,13 +135,13 @@ const checkboxGroupSlots = ref([
     name: 'checkbox',
     desc: '自定义复选框',
     type: '#checkbox',
-    value: '2.27.0',
+    value: '-',
   },
   {
     name: 'label',
     desc: 'checkbox 文案内容',
     type: '#label',
-    value: '2.27.0',
+    value: '-',
   },
 ]);
 

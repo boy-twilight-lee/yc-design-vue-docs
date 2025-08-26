@@ -79,7 +79,7 @@ const mentionEvents = ref([
   },
   {
     name: 'search',
-    desc: '动态搜索时触发，2.47.0 版本增加 prefix 参数',
+    desc: '动态搜索时触发',
     type: '(value: string, prefix: string) => void',
     value: '-',
   },

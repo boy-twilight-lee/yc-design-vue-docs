@@ -113,7 +113,7 @@ const imageProps = ref([
   },
   {
     name: 'hide-footer',
-    desc: '是否隐藏 footer（2.36.0 版本支持 \'never\' 参数，支持在加载错误时显示底部内容）',
+    desc: '是否隐藏 footer（支持在加载错误时显示底部内容）',
     type: "boolean | 'never'",
     value: 'false',
   },

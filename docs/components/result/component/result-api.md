@@ -55,13 +55,13 @@ const resultSlots = ref([
     name: 'extra',
     desc: '操作区',
     type: '-',
-    value: '2.8.0',
+    value: '-',
   },
   {
     name: 'default',
     desc: '默认插槽',
     type: '-',
-    value: '2.8.0',
+    value: '-',
   },
 ]);
 </script>

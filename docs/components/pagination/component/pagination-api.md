@@ -134,7 +134,7 @@ const paginationProps = ref([
     name: 'auto-adjust',
     desc: '是否在改变数据条数时调整页码',
     type: 'boolean',
-    value: '`true` (2.34.0)',
+    value: '`true`',
   },
 ]);
 

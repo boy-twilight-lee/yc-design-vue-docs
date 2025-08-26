@@ -94,13 +94,13 @@ const dropdownProps = ref([
     name: 'popup-max-height',
     desc: '弹出框最大高度',
     type: 'boolean | number',
-    value: 'true (2.29.0)',
+    value: 'true',
   },
   {
     name: 'hide-on-select',
     desc: '是否在用户选择后隐藏弹出框',
     type: 'boolean',
-    value: 'true (2.43.0)',
+    value: 'true',
   },
   {
     name: 'trigger-props',
@@ -136,7 +136,7 @@ const dropdownSlots = ref([
     name: 'footer',
     desc: '页脚',
     type: '-',
-    value: '- (2.10.0)',
+    value: '-',
   },
 ])
 
@@ -193,34 +193,28 @@ const dgroupSlots = ref([
     name: 'title',
     desc: '分组标题',
     type: '-',
-    value: '- (2.10.0)',
+    value: '-',
   },
 ])
 
 const dsubmenuProps = ref([
   {
-    name: 'value',
-    desc: '选项值（2.16.0 版本后暂无用处）',
-    type: 'string | number',
-    value: '-',
-  },
-  {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: 'false (2.10.0)',
+    value: 'false',
   },
   {
     name: 'trigger',
     desc: '触发方式',
     type: '\'hover\' | \'click\'',
-    value: '\'click\' (2.10.0)',
+    value: '\'click\'',
   },
   {
     name: 'position',
     desc: '弹出位置',
     type: '\'rt\' | \'lt\'',
-    value: '\'rt\' (2.10.0)',
+    value: '\'rt\'',
   },
   {
     name: 'popup-visible (v-model)',
@@ -238,7 +232,7 @@ const dsubmenuProps = ref([
     name: 'option-props',
     desc: '自定义选项属性',
     type: 'object',
-    value: '- (2.29.0)',
+    value: '-',
   },
   {
     name: 'trigger-props',
@@ -262,7 +256,7 @@ const dsubmenuSlots = ref([
     name: 'icon',
     desc: '图标',
     type: '-',
-    value: '- (2.29.0)',
+    value: '-',
   },
   {
     name: 'content',
@@ -274,7 +268,7 @@ const dsubmenuSlots = ref([
     name: 'footer',
     desc: '页脚',
     type: '-',
-    value: '- (2.10.0)',
+    value: '-',
   },
 ])
 
