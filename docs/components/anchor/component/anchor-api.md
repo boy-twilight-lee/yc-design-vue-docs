@@ -6,11 +6,11 @@
 
 ### anchor emits
 
-<field-table :data="anchorEmits"/>
+<field-table :data="anchorEmits" type="emits"/>
 
 ### anchor-link
 
-<field-table :data="anchorLinkProps"/>
+<field-table :data="anchorLinkProps" />
 
 <script setup>
 import { ref } from 'vue';

@@ -6,11 +6,11 @@
 
 ### affix Emits
 
-<field-table :data="affixEmits"/>
+<field-table :data="affixEmits" type="emits"/>
 
 ### affix Method
 
-<field-table :data="affixExpose"/>
+<field-table :data="affixExpose" type="expose"/>
 
 <script setup>
 import { ref } from 'vue';

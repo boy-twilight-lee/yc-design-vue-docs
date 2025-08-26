@@ -6,11 +6,11 @@
 
 ### overflow-list Emits
 
-<field-table :data="overflowListEmits"/>
+<field-table :data="overflowListEmits" type="emits"/>
 
 ### overflow-list Slots
 
-<field-table :data="overflowListSlots"/>
+<field-table :data="overflowListSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

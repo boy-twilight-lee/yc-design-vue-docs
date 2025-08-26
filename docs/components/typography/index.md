@@ -11,7 +11,6 @@ import TypograpgyText from "./component/typography-text.md"
 import TypograpgyParagraph from "./component/typography-paragraph.md"
 import TypograpgyAction from "./component/typography-action.md"
 import TypograpgyApi from "./component/typography-api.md"
-
 </script>
 
 <typograpgy-basic-use />

@@ -1,6 +1,6 @@
 ## API
 
-### Watermark Props
+### watermark Props
 
 <field-table :data="watermarkProps" />
 
