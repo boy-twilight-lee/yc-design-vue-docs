@@ -11,6 +11,7 @@ import ModalFn from "./component/modal-fn.md"
 import ModalType from "./component/modal-type.md"
 import ModalWidth from "./component/modal-width.md"
 import ModalText from "./component/modal-text.md"
+import ModalForm from "./component/modal-form.md"
 import ModalDrag from "./component/modal-drag.md"
 import ModalFullscreen from "./component/modal-fullscreen.md"
 import ModalApi from "./component/modal-api.md"
@@ -19,10 +20,12 @@ import ModalMethodApi from "./component/modal-method-api.md"
 
 <modal-basic-use />
 <modal-close />
+<modal-fn />
 <modal-icon />
 <modal-type />
 <modal-width />
 <modal-text />
+<modal-form />
 <modal-drag />
 <modal-fullscreen />
 <modal-api />

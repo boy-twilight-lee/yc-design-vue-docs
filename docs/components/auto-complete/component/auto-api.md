@@ -1,9 +1,6 @@
-好的，完全理解。将每个对象的属性单独放在一行可以极大地提升代码的可读性。
+## API
 
-我已经按照这个要求重新格式化了您提供的代码。
-
-```vue
-## API ### auto-complete Props
+### auto-complete Props
 
 <field-table :data="autoCompleteProps" />
 
@@ -154,4 +151,7 @@ const autoCompleteSlots = ref([
   },
 ]);
 </script>
+
+```
+
 ```
