@@ -10,7 +10,7 @@
 
 ### list Methods
 
-<field-table :data="listMethods" type="expose"/>
+<field-table :data="listMethods" type="methods"/>
 
 ### list Slots
 

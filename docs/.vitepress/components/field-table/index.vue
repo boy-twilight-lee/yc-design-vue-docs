@@ -26,7 +26,7 @@ const columns = computed(() => {
   const nameMap = {
     props: '参数名',
     emits: '事件名',
-    expose: '方法名',
+    methods: '方法名',
     slots: '插槽名',
     format: '格式',
   };
@@ -38,7 +38,7 @@ const columns = computed(() => {
     {
       title: nameMap[props.type],
       dataIndex: 'name',
-      width: 200,
+      width: 180,
     },
     {
       title: '描述',
@@ -47,7 +47,7 @@ const columns = computed(() => {
     {
       title: typeMap[props.type] ?? '参数',
       dataIndex: 'type',
-      width: 200,
+      width: 250,
     },
     props.type == 'props'
       ? {

@@ -56,7 +56,7 @@ const pageHeaderSlots = ref([
     name: 'back-icon',
     desc: '返回按钮',
     type: '-',
-    value: '2.36.0',
+    value: '-',
   },
   {
     name: 'title',

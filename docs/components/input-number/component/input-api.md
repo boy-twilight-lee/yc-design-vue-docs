@@ -10,7 +10,7 @@
 
 ### input-number Methods
 
-<field-table :data="inputNumberMethods" type="expose" />
+<field-table :data="inputNumberMethods" type="methods" />
 
 ### input-number Slots
 

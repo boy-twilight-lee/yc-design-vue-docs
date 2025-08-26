@@ -10,7 +10,7 @@
 
 ### textarea Methods
 
-<field-table :data="textareaMethods" type="expose" />
+<field-table :data="textareaMethods" type="methods" />
 
 <script setup>
 import { ref } from 'vue';

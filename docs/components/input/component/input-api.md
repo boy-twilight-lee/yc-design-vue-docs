@@ -10,7 +10,7 @@
 
 ### input Methods
 
-<field-table :data="inputMethods" type="expose" />
+<field-table :data="inputMethods" type="methods" />
 
 ### input Slots
 
@@ -90,13 +90,13 @@ const inputProps = ref([
     name: 'word-slice',
     desc: '字符截取方法，同 wordLength 一起使用',
     type: '(value: string, maxLength: number) => string',
-    value: '2.12.0',
+    value: '-',
   },
   {
     name: 'input-attrs',
     desc: '内部 input 元素的属性',
     type: 'object',
-    value: '2.27.0',
+    value: '-',
   },
   {
     name: 'prepend',

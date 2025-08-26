@@ -192,7 +192,7 @@ const timePickerSlots = ref([
     name: 'prefix',
     desc: '输入框前缀',
     type: '-',
-    value: '2.41.0',
+    value: '-',
   },
   {
     name: 'suffix-icon',

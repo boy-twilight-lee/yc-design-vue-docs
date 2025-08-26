@@ -10,7 +10,7 @@
 
 ### mention Methods
 
-<field-table :data="mentionMethods" type="expose" />
+<field-table :data="mentionMethods" type="methods" />
 
 ### mention Slots
 

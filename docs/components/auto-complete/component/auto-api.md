@@ -13,7 +13,7 @@
 
 ### auto-complete Methods
 
-<field-table :data="autoCompleteMethods" type="expose" />
+<field-table :data="autoCompleteMethods" type="methods" />
 
 ### auto-complete Slots
 

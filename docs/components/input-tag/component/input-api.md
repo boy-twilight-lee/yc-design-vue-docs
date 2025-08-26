@@ -10,7 +10,7 @@
 
 ### input-tag Methods
 
-<field-table :data="inputTagMethods" type="expose" />
+<field-table :data="inputTagMethods" type="methods" />
 
 ### input-tag Slots
 

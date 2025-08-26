@@ -10,7 +10,7 @@
 
 ### scrollbar Method
 
-<field-table :data="scrollbarMethod" type="expose"/>
+<field-table :data="scrollbarMethod" type="methods"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -56,13 +56,13 @@ const scrollbarMethod = ref([
     name: 'scrollTop',
     desc: '纵向滚动',
     type: 'top: number',
-    value: '- (2.40.0)',
+    value: '-',
   },
   {
     name: 'scrollLeft',
     desc: '横向滚动',
     type: 'left: number',
-    value: '- (2.40.0)',
+    value: '-',
   },
 ]);
 </script>

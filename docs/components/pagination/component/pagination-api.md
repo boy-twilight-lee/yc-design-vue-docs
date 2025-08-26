@@ -158,25 +158,25 @@ const paginationSlots = ref([
     name: 'total',
     desc: '总数',
     type: 'total: number',
-    value: '2.9.0',
+    value: '-',
   },
   {
     name: 'page-item-ellipsis',
     desc: '分页按钮（省略）',
     type: '-',
-    value: '2.9.0',
+    value: '-',
   },
   {
     name: 'page-item-step',
     desc: '分页按钮（步）',
     type: 'type: \'previous\'|\'next\'',
-    value: '2.9.0',
+    value: '-',
   },
   {
     name: 'page-item',
     desc: '分页按钮',
     type: 'page: number',
-    value: '2.9.0',
+    value: '-',
   },
 ]);
 </script>
