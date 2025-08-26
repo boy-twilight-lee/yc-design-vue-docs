@@ -3,20 +3,20 @@
 卡片中可以嵌套其他卡片组件。
 
 <div class="cell-demo vp-raw">
-  <a-card title="Arco Card">
-    <a-card :style="{ marginBottom: '20px' }" title="Inner Card Title">
+  <yc-card title="Arco Card">
+    <yc-card :style="{ marginBottom: '20px' }" title="Inner Card Title">
       <template #extra>
-        <a-link>More</a-link>
+        <yc-link>More</yc-link>
       </template>
       Inner Card Content
-    </a-card>
-    <a-card title="Inner Card Title">
+    </yc-card>
+    <yc-card title="Inner Card Title">
       <template #extra>
-        <a-link>More</a-link>
+        <yc-link>More</yc-link>
       </template>
       Inner Card Content
-    </a-card>
-  </a-card>
+    </yc-card>
+  </yc-card>
 </div>
 
 <details>

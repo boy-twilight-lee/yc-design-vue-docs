@@ -24,5 +24,6 @@ import CardApi from "./component/card-api.md"
 <card-display />
 <card-grid />
 <card-net />
+<card-inner />
 <card-more-setting />
 <card-api />
