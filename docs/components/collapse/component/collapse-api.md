@@ -8,6 +8,10 @@
 
 <field-table :data="collapseEvents" type="emits"/>
 
+### collapse Slots
+
+<field-table :data="collapseSlots" type="slots"/>
+
 ### collapse-item Props
 
 <field-table :data="collapseItemProps"/>
@@ -15,6 +19,14 @@
 ### collapse-item Slots
 
 <field-table :data="collapseItemSlots" type="slots"/>
+
+### Type
+
+```typescript
+type CollapseValue = string | number;
+
+type ExpandIconPosition = 'left' | 'right';
+```
 
 ### FAQ
 
@@ -29,14 +41,14 @@ const collapseProps = ref([
   {
     name: 'active-key (v-model)',
     desc: '当前展开的面板的 key',
-    type: '(string | number)[]',
+    type: 'CollapseValue[]',
     value: '-',
     version: '',
   },
   {
     name: 'default-active-key',
     desc: '默认展开的面板的 key （非受控模式）',
-    type: '(string | number)[]',
+    type: 'CollapseValue[]',
     value: '[]',
     version: '',
   },
@@ -57,7 +69,7 @@ const collapseProps = ref([
   {
     name: 'expand-icon-position',
     desc: '展开图标显示的位置',
-    type: "'left' | 'right'",
+    type: "ExpandIconPosition",
     value: "'left'",
     version: '',
   },
@@ -81,8 +93,16 @@ const collapseEvents = ref([
   {
     name: 'change',
     desc: '展开的面板发生改变时触发',
-    type: 'activeKey: (string | number)[], ev: Event',
+    type: 'activeKey: CollapseValue[], ev: Event',
   },
+]);
+
+const collapseSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+  }
 ]);
 
 const collapseItemProps = ref([
@@ -96,7 +116,7 @@ const collapseItemProps = ref([
     {
     name: 'path（必填）',
     desc: '面板的key',
-    type: 'string | number',
+    type: 'CollapseValue',
     value: '-',
     version: '',
   },
@@ -142,6 +162,11 @@ const collapseItemSlots = ref([
     type: '-',
     version: '',
   },
+  {
+    name: 'default',
+    desc: '面板的内容',
+    type: '-',
+  }
 ]);
 
 </script>

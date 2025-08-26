@@ -8,6 +8,30 @@
 
 <field-table :data="carouselEvents" type="emits"/>
 
+### carousel slots
+
+<field-table :data="carouselSlots" type="slots"/>
+
+### carousel-item slots
+
+<field-table :data="carouselSlots" type="slots"/>
+
+### Type
+
+```typescript
+type CarouselAnimationName = 'slide' | 'fade';
+
+type CarouselShowArrow = 'always' | 'hover' | 'never';
+
+type AutoPlay = boolean | { interval?: number; hoverToPause?: boolean };
+
+type IndicatorPosition = 'bottom' | 'top' | 'left' | 'right' | 'outer';
+
+type IndicatorType = 'line' | 'dot' | 'slider' | 'never';
+
+type IndicatorTrigger = 'click' | 'hover';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -27,7 +51,7 @@ const carouselProps = ref([
   {
     name: 'auto-play',
     desc: '是否自动循环展示，或者传入 { interval: 自动切换的时间间隔(默认: 3000), hoverToPause: 鼠标悬浮时是否暂停自动切换(默认: true) } 进行高级配置',
-    type: 'boolean | CarouselAutoPlayConfig',
+    type: 'AutoPlay',
     value: 'false',
   },
   {
@@ -39,13 +63,13 @@ const carouselProps = ref([
   {
     name: 'animation-name',
     desc: '切换动画',
-    type: "'slide' | 'fade' | 'card'",
+    type: "CarouselAnimationName",
     value: "'slide'",
   },
   {
     name: 'trigger',
     desc: '幻灯片切换触发方式, click/hover 指示器',
-    type: "'click' | 'hover'",
+    type: "IndicatorTrigger",
     value: "'click'",
   },
   {
@@ -57,32 +81,32 @@ const carouselProps = ref([
   {
     name: 'show-arrow',
     desc: '切换箭头显示时机',
-    type: "'always' | 'hover' | 'never'",
+    type: "CarouselShowArrow",
     value: "'always'",
   },
   {
     name: 'arrow-class',
     desc: '切换箭头样式',
     type: 'string',
-    value: "''",
+    value: "-",
   },
   {
     name: 'indicator-type',
     desc: '指示器类型，可为小方块和小圆点或不显示',
-    type: "'line' | 'dot' | 'slider' | 'never'",
+    type: "IndicatorType",
     value: "'dot'",
   },
   {
     name: 'indicator-position',
     desc: '指示器位置',
-    type: "'bottom' | 'top' | 'left' | 'right' | 'outer'",
+    type: "IndicatorPosition",
     value: "'bottom'",
   },
   {
     name: 'indicator-class',
     desc: '指示器的样式',
     type: 'string',
-    value: "''",
+    value: "-",
   },
   {
     name: 'transition-timing-function',
@@ -99,5 +123,13 @@ const carouselEvents = ref([
     type: 'index: number, prevIndex: number, isManual: boolean',
   },
 ]);
+
+const carouselSlots = ref([
+  {
+    name: 'default',
+    desc: '轮播内容',
+    type: '-',
+  },
+])
 
 </script>
