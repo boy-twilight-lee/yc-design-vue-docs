@@ -20,6 +20,7 @@ type CalendarMode = 'month' | 'year';
 
 <script setup>
 import { ref } from 'vue';
+
 const calendarProps = ref([
   {
     name: 'model-value (v-model)',
@@ -36,19 +37,19 @@ const calendarProps = ref([
   {
     name: 'mode',
     desc: '模式',
-    type: "CalendarMode",
+    type: 'CalendarMode',
     value: '-',
   },
   {
     name: 'default-mode',
     desc: '默认模式',
-    type: "CalendarMode",
+    type: 'CalendarMode',
     value: "'month'",
   },
   {
     name: 'modes',
     desc: '显示的模式',
-    type: "CalendarMode[]",
+    type: 'CalendarMode[]',
     value: "['month', 'year']",
   },
 ]);
@@ -58,11 +59,13 @@ const calendarEvents = ref([
     name: 'change',
     desc: '选择的日期改变时触发',
     type: 'date: Date',
+    value: '-',
   },
   {
     name: 'panel-change',
     desc: '日期面板改变时触发',
     type: 'date: Date',
+    value: '-',
   },
 ]);
 
@@ -71,13 +74,13 @@ const calendarSlots = ref([
     name: 'header',
     desc: '自定义头部内容',
     type: 'year: number, month: number',
-    version: '2.53.0',
+    value: '-',
   },
   {
     name: 'default',
     desc: '自定义单元格内容',
     type: 'year: number, month: number, date: number',
-    version: '2.53.0',
+    value: '-',
   },
 ]);
 </script>

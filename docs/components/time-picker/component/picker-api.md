@@ -165,21 +165,25 @@ const timePickerEvents = ref([
     name: 'change',
     desc: '组件值发生改变',
     type: '(timeString: string | Array<string | undefined> | undefined, time: Date | Array<Date | undefined> | undefined) => void',
+    value: '-',
   },
   {
     name: 'select',
     desc: '选择时间但未触发组件值变化',
     type: '(timeString: string | Array<string | undefined>, time: Date | Array<Date | undefined>) => void',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '点击清除按钮',
     type: '() => void',
+    value: '-',
   },
   {
     name: 'popup-visible-change',
     desc: '弹出框展开和收起',
     type: '(visible: boolean) => void',
+    value: '-',
   },
 ]);
 
@@ -187,15 +191,20 @@ const timePickerSlots = ref([
   {
     name: 'prefix',
     desc: '输入框前缀',
+    type: '-',
     value: '2.41.0',
   },
   {
     name: 'suffix-icon',
     desc: '输入框后缀图标',
+    type: '-',
+    value: '-',
   },
   {
     name: 'extra',
     desc: '额外的页脚',
+    type: '-',
+    value: '-',
   },
 ]);
 

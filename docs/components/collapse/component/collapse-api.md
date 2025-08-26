@@ -30,9 +30,8 @@ type ExpandIconPosition = 'left' | 'right';
 
 ### FAQ
 
-`<CollapseItem>`组件的 path 属性为必填
-<br/>
-在 `<Collapse>` 组件中每个 `<CollapseItem>` 都需要指定唯一的 `path` , `path` 对应 `activeKey` 中的值。
+<span style="font-size:16px;display:block;margin-bottom:5px;">`<CollapseItem>` 组件的 path 属性为必填</span>
+在 `<Collapse>` 组件中每个 `<CollapseItem>` 都需要指定唯一的 path , path 对应 activeKey 中的值。
 
 <script setup>
 import { ref } from 'vue';
@@ -43,49 +42,42 @@ const collapseProps = ref([
     desc: '当前展开的面板的 key',
     type: 'CollapseValue[]',
     value: '-',
-    version: '',
   },
   {
     name: 'default-active-key',
     desc: '默认展开的面板的 key （非受控模式）',
     type: 'CollapseValue[]',
     value: '[]',
-    version: '',
   },
   {
     name: 'accordion',
     desc: '是否开启手风琴模式',
     type: 'boolean',
     value: 'false',
-    version: '',
   },
   {
     name: 'show-expand-icon',
     desc: '是否显示展开图标',
     type: 'boolean',
     value: '-',
-    version: '2.33.0',
   },
   {
     name: 'expand-icon-position',
     desc: '展开图标显示的位置',
-    type: "ExpandIconPosition",
+    type: 'ExpandIconPosition',
     value: "'left'",
-    version: '',
   },
   {
     name: 'bordered',
     desc: '是否显示边框',
     type: 'boolean',
     value: 'true',
-    version: '',
   },
   {
     name: 'destroy-on-hide',
     desc: '是否在隐藏时销毁内容',
     type: 'boolean',
     value: 'false',
-    version: '2.27.0',
   },
 ]);
 
@@ -94,6 +86,7 @@ const collapseEvents = ref([
     name: 'change',
     desc: '展开的面板发生改变时触发',
     type: 'activeKey: CollapseValue[], ev: Event',
+    value: '-',
   },
 ]);
 
@@ -102,7 +95,8 @@ const collapseSlots = ref([
     name: 'default',
     desc: '内容',
     type: '-',
-  }
+    value: '-',
+  },
 ]);
 
 const collapseItemProps = ref([
@@ -111,35 +105,30 @@ const collapseItemProps = ref([
     desc: '面板的标题',
     type: 'string',
     value: '-',
-    version: '',
   },
-    {
+  {
     name: 'path（必填）',
     desc: '面板的key',
     type: 'CollapseValue',
     value: '-',
-    version: '',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
     value: 'false',
-    version: '',
   },
   {
     name: 'show-expand-icon',
     desc: '是否显示展开图标',
     type: 'boolean',
     value: 'true',
-    version: '',
   },
   {
     name: 'destroy-on-hide',
     desc: '是否在隐藏时销毁内容',
     type: 'boolean',
     value: 'false',
-    version: '2.27.0',
   },
 ]);
 
@@ -148,25 +137,25 @@ const collapseItemSlots = ref([
     name: 'extra',
     desc: '额外内容',
     type: '-',
-    version: '',
+    value: '-',
   },
   {
     name: 'expand-icon',
     desc: '展开图标',
     type: "active: boolean, disabled: boolean, position: 'left' | 'right'",
-    version: '2.33.0',
+    value: '-',
   },
   {
     name: 'header',
     desc: '面板的标题',
     type: '-',
-    version: '',
+    value: '-',
   },
   {
     name: 'default',
     desc: '面板的内容',
     type: '-',
-  }
+    value: '-',
+  },
 ]);
-
 </script>

@@ -8,6 +8,12 @@
 
 <field-table :data="sliderEvents" type="emits" />
 
+### Type
+
+```typescript
+type Direction = 'vertical' | 'horizontal';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -91,6 +97,7 @@ const sliderEvents = ref([
     name: 'change',
     desc: '值改变时触发',
     type: '(value: number | [number, number]) => void',
+    value: '-',
   },
 ]);
 </script>

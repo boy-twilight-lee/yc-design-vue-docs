@@ -33,28 +33,24 @@ const breadcrumbProps = ref([
     desc: '最多展示的面包屑数量（0表示不限制）',
     type: 'number',
     value: '0',
-    version: '',
   },
   {
     name: 'routes',
     desc: '设置路径',
     type: 'BreadcrumbRoute[]',
     value: '-',
-    version: '2.36.0',
   },
   {
     name: 'separator',
     desc: '分隔符文字',
     type: 'string|number',
     value: '-',
-    version: '2.36.0',
   },
   {
     name: 'custom-url',
     desc: '自定义链接地址',
     type: '(paths: string[]) => string',
     value: '-',
-    version: '2.36.0',
   },
 ]);
 
@@ -62,20 +58,20 @@ const breadcrumbSlots = ref([
   {
     name: 'more-icon',
     desc: '自定义更多图标',
-    params: '-',
-    version: '2.36.0',
+    type: '-',
+    value: '-',
   },
   {
     name: 'item-render',
     desc: 'routes 设置时生效，自定义渲染面包屑',
-    params: 'route: BreadcrumbRoute, routes: BreadcrumbRoute[], paths: string[]',
-    version: '2.36.0',
+    type: 'route: BreadcrumbRoute, routes: BreadcrumbRoute[], paths: string[]',
+    value: '-',
   },
   {
     name: 'separator',
     desc: '自定义分隔符',
-    params: '-',
-    version: '',
+    type: '-',
+    value: '-',
   },
 ]);
 
@@ -85,21 +81,18 @@ const breadcrumbItemProps = ref([
     desc: '分隔符文字',
     type: 'string|number',
     value: '-',
-    version: '2.36.0',
   },
   {
     name: 'droplist',
     desc: '下拉菜单内容',
     type: "BreadcrumbRoute['children']",
     value: '-',
-    version: '2.36.0',
   },
   {
     name: 'dropdown-props',
     desc: '下拉菜单属性',
     type: 'DropDownProps',
     value: '-',
-    version: '2.36.0',
   },
 ]);
 
@@ -107,14 +100,14 @@ const breadcrumbItemSlots = ref([
   {
     name: 'droplist',
     desc: '自定义下拉菜单',
-    params: '-',
-    version: '2.36.0',
+    type: '-',
+    value: '-',
   },
   {
     name: 'separator',
     desc: '自定义分隔符',
-    params: '-',
-    version: '2.36.0',
+    type: '-',
+    value: '-',
   },
 ]);
 

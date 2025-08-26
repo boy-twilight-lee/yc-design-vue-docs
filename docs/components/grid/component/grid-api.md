@@ -55,6 +55,7 @@ type Gutter = number | ResponsiveValue;
 
 <script setup>
 import { ref } from 'vue';
+
 const rowProps = ref([
   {
     name: 'gutter',
@@ -87,6 +88,7 @@ const rowProps = ref([
     value: 'true',
   },
 ]);
+
 const colProps = ref([
   {
     name: 'span',
@@ -112,7 +114,8 @@ const colProps = ref([
     type: 'GridColFlex',
     value: '-',
   },
-])
+]);
+
 const gridProps = ref([
   {
     name: 'cols',
@@ -144,7 +147,8 @@ const gridProps = ref([
     type: 'number',
     value: '1',
   },
-])
+]);
+
 const gridItemProps = ref([
   {
     name: 'span',
@@ -164,16 +168,18 @@ const gridItemProps = ref([
     type: 'boolean',
     value: 'false',
   },
-])
+]);
+
 const slots = ref([
-    {
+  {
     name: 'default',
     desc: '内容',
     type: '-',
     value: '',
   },
-])
-const responsiveValue =ref([
+]);
+
+const responsiveValue = ref([
   {
     name: 'xxl',
     desc: '>= 1600px 响应式配置',
@@ -210,5 +216,5 @@ const responsiveValue =ref([
     type: 'number',
     value: '-',
   },
-])
+]);
 </script>

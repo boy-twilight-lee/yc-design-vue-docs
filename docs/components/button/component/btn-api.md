@@ -2,23 +2,23 @@
 
 ### button Props
 
-<field-table :data="btnProps"/>
+<field-table :data="buttonProps"/>
 
 ### button Events
 
-<field-table :data="btnEmits" type="emits" />
+<field-table :data="buttonEvents" type="emits" />
 
 ### button Slots
 
-<field-table :data="btnSlots"  type="slots"/>
+<field-table :data="buttonSlots"  type="slots"/>
 
 ### button-group Props
 
-<field-table :data="groupProps" />
+<field-table :data="buttonGroupProps" />
 
 ### button-group Slots
 
-<field-table :data="groupSlots"  type="slots"/>
+<field-table :data="buttonGroupSlots"  type="slots"/>
 
 ```typescript
 type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
@@ -34,7 +34,8 @@ type ButtonSize = 'mini' | 'small' | 'medium' | 'large';
 
 <script setup>
 import { ref } from 'vue';
-const btnProps = ref([
+
+const buttonProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
@@ -56,7 +57,7 @@ const btnProps = ref([
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: "ButtonSize",
+    type: 'ButtonSize',
     value: "'medium'",
   },
   {
@@ -96,7 +97,8 @@ const btnProps = ref([
     value: '-',
   },
 ]);
-const btnEmits = ref([
+
+const buttonEvents = ref([
   {
     name: 'click',
     desc: '点击按钮时触发',
@@ -104,7 +106,8 @@ const btnEmits = ref([
     value: '-',
   },
 ]);
-const btnSlots = ref([
+
+const buttonSlots = ref([
   {
     name: 'default',
     desc: '内容',
@@ -118,7 +121,8 @@ const btnSlots = ref([
     value: '-',
   },
 ]);
-const groupProps = ref([
+
+const buttonGroupProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
@@ -140,7 +144,7 @@ const groupProps = ref([
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: "ButtonSize",
+    type: 'ButtonSize',
     value: '-',
   },
   {
@@ -150,12 +154,13 @@ const groupProps = ref([
     value: '`false`',
   },
 ]);
-const groupSlots = ref([
+
+const buttonGroupSlots = ref([
   {
     name: 'default',
     desc: '内容',
     type: '-',
     value: '-',
-  }
+  },
 ]);
 </script>

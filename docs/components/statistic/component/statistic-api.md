@@ -35,8 +35,8 @@ const statisticProps = ref([
   { name: 'animation', desc: '是否开启动画', type: 'boolean', value: 'false' },
   { name: 'animation-duration', desc: '动画的过度时间', type: 'number', value: '2000' },
   { name: 'value-from', desc: '动画的起始值', type: 'number', value: '-' },
-  { name: 'placeholder', desc: '提示文字（当 value 为 undefined 时显示）', type: 'string', value: '-', version: '2.28.0' },
-  { name: 'value-style', desc: '自定义显示值的样式', type: 'CSSProperties', value: '-', version: '2.32.0' },
+  { name: 'placeholder', desc: '提示文字（当 value 为 undefined 时显示）', type: 'string', value: '-',  },
+  { name: 'value-style', desc: '自定义显示值的样式', type: 'CSSProperties', value: '-', },
 ]);
 
 const statisticSlots = ref([
@@ -52,7 +52,7 @@ const countdownProps = ref([
   { name: 'now', desc: '用于修正初始化时间显示不正确', type: 'number', value: '() => Date.now()' },
   { name: 'format', desc: '倒计时的展示格式 dayjs', type: 'string', value: "'HH:mm:ss'" },
   { name: 'start', desc: '是否开始倒计时', type: 'boolean', value: 'true' },
-  { name: 'value-style', desc: '自定义显示值的样式', type: 'CSSProperties', value: '-', version: '2.32.0' },
+  { name: 'value-style', desc: '自定义显示值的样式', type: 'CSSProperties', value: '-', },
 ]);
 
 const countdownEvents = ref([

@@ -49,16 +49,19 @@ const spinSlots = ref([
     name: 'tip',
     desc: '自定义提示内容',
     type: '-',
+    value: '-',
   },
   {
     name: 'element',
     desc: '自定义元素',
     type: '-',
+    value: '-',
   },
   {
     name: 'icon',
     desc: '自定义图标（自动旋转）',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

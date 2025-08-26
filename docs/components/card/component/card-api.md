@@ -32,6 +32,7 @@ type CardSize = 'medium' | 'small';
 
 <script setup>
 import { ref } from 'vue';
+
 const cardProps = ref([
   {
     name: 'bordered',
@@ -54,7 +55,7 @@ const cardProps = ref([
   {
     name: 'size',
     desc: '卡片尺寸',
-    type: "CardSize",
+    type: 'CardSize',
     value: "'medium'",
   },
   {
@@ -87,27 +88,34 @@ const cardSlots = ref([
   {
     name: 'actions',
     desc: '卡片底部的操作组',
+    type: '-',
+    value: '-',
   },
   {
     name: 'cover',
     desc: '卡片封面',
+    type: '-',
+    value: '-',
   },
   {
     name: 'extra',
     desc: '卡片右上角的操作区域',
+    type: '-',
+    value: '-',
   },
   {
     name: 'title',
     desc: '卡片标题',
+    type: '-',
+    value: '-',
   },
   {
     name: 'default',
     desc: 'body内容',
+    type: '-',
+    value: '-',
   },
-].map(v=>{
-  v.type = '-'
-  return v
-}));
+]);
 
 const cardMetaProps = ref([
   {
@@ -128,19 +136,22 @@ const cardMetaSlots = ref([
   {
     name: 'description',
     desc: '描述',
+    type: '-',
+    value: '-',
   },
   {
     name: 'title',
     desc: '标题',
+    type: '-',
+    value: '-',
   },
   {
     name: 'avatar',
     desc: '头像',
+    type: '-',
+    value: '-',
   },
-].map(v=>{
-  v.type = '-'
-  return v
-}));
+]);
 
 const cardGridProps = ref([
   {
@@ -156,6 +167,7 @@ const cardGridSlots = ref([
     name: 'default',
     desc: '内容',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

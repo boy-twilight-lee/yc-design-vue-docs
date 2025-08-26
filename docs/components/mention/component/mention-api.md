@@ -75,31 +75,37 @@ const mentionEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: '(value: string) => void',
+    value: '-',
   },
   {
     name: 'search',
     desc: '动态搜索时触发，2.47.0 版本增加 prefix 参数',
     type: '(value: string, prefix: string) => void',
+    value: '-',
   },
   {
     name: 'select',
     desc: '选择下拉选项时触发',
     type: '(value: string | number | Record<string, any> | undefined) => void',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
     type: '() => void',
+    value: '-',
   },
   {
     name: 'focus',
     desc: '文本框获取焦点时触发)',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '文本框失去焦点时触发)',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
 ]);
 
@@ -108,18 +114,22 @@ const mentionMethods = ref([
     name: 'focus',
     desc: '使输入框获取焦点',
     type: '() => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
     type: '() => void',
+    value: '-',
   },
 ]);
 
 const mentionSlots = ref([
   {
     name: 'option',
-    desc: '选项内容 (data: OptionInfo)',
+    desc: '选项内容',
+    type: '(data: OptionInfo)',
+    value: '-',
   },
 ]);
 </script>

@@ -105,16 +105,19 @@ const transferEvents = ref([
     name: 'change',
     desc: '目标选择框的值改变时触发',
     type: '(value: string[]) => void',
+    value: '-',
   },
   {
     name: 'select',
     desc: '选中的值改变时触发',
     type: '(selected: string[]) => void',
+    value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
     type: "(value: string, type: 'target'|'source') => void",
+    value: '-',
   },
 ]);
 
@@ -122,36 +125,44 @@ const transferSlots = ref([
   {
     name: 'source',
     desc: '源面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
+    type: '-',
     value: '2.39.0',
   },
   {
     name: 'source-title',
     desc: '源标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
+    type: '-',
     value: '2.45.0',
   },
   {
     name: 'to-target-icon',
     desc: '移至目标图标插槽',
+    type: '-',
     value: '2.52.0',
   },
   {
     name: 'to-source-icon',
     desc: '移至源图标插槽',
+    type: '-',
     value: '2.52.0',
   },
   {
     name: 'target',
     desc: '目标面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
+    type: '-',
     value: '2.39.0',
   },
   {
     name: 'target-title',
     desc: '目标标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
+    type: '-',
     value: '2.45.0',
   },
   {
     name: 'item',
     desc: '选项 (value: string, label: string)',
+    type: '-',
+    value: '-',
   },
 ]);
 

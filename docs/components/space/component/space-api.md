@@ -20,23 +20,24 @@ type Direction = 'vertical' | 'horizontal';
 
 <script setup>
 import { ref } from 'vue';
+
 const spaceProps = ref([
   {
     name: 'align',
     desc: '对齐方式',
-    type: "SpaceAlign",
+    type: 'SpaceAlign',
     value: '-',
   },
   {
     name: 'direction',
     desc: '间距方向',
-    type: "Direction",
+    type: 'Direction',
     value: "'horizontal'",
   },
   {
     name: 'size',
     desc: '间距大小，支持分别制定横向和竖向的间距',
-    type: "SpaceSize | [SpaceSize, SpaceSize]",
+    type: 'SpaceSize | [SpaceSize, SpaceSize]',
     value: "'small'",
   },
   {
@@ -52,8 +53,9 @@ const spaceProps = ref([
     value: 'false',
   },
 ]);
+
 const spaceSlots = ref([
-    {
+  {
     name: 'default',
     desc: '内容',
     type: '-',
@@ -64,7 +66,6 @@ const spaceSlots = ref([
     desc: '设置分隔符',
     type: '-',
     value: '-',
-  }
-])
-
+  },
+]);
 </script>

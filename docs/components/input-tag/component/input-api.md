@@ -127,36 +127,43 @@ const inputTagEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: '(value: (string | number | TagData)[], ev: Event) => void',
+    value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入值发生改变时触发',
     type: '(inputValue: string, ev: Event) => void',
+    value: '-',
   },
   {
     name: 'press-enter',
     desc: '按下回车键时触发',
     type: '(inputValue: string, ev: KeyboardEvent) => void',
+    value: '-',
   },
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
     type: '(removed: string | number, ev: Event) => void',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '点击清除按钮时触发',
     type: '(ev: MouseEvent) => void',
+    value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
 ]);
 
@@ -165,11 +172,13 @@ const inputTagMethods = ref([
     name: 'focus',
     desc: '使输入框获取焦点',
     type: '() => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
     type: '() => void',
+    value: '-',
   },
 ]);
 
@@ -177,14 +186,20 @@ const inputTagSlots = ref([
   {
     name: 'tag',
     desc: '输入框标签的显示内容 (data: TagData)',
+    type: '-',
+    value: '-',
   },
   {
     name: 'prefix',
     desc: '前缀元素',
+    type: '-',
+    value: '-',
   },
   {
     name: 'suffix',
     desc: '后缀元素',
+    type: '-',
+    value: '-',
   },
 ]);
 

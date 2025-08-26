@@ -2,15 +2,15 @@
 
 ### common Props
 
-<field-table :data="props"/>
+<field-table :data="commonProps"/>
 
 ### common Events
 
-<field-table :data="emits" type="emits"/>
+<field-table :data="commonEvents" type="emits"/>
 
 ### common slots
 
-<field-table :data="slots" type="slots"/>
+<field-table :data="commonSlots" type="slots"/>
 
 ### typography-title Props
 
@@ -28,11 +28,12 @@ type TypographyType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 
 <script setup>
 import { ref } from 'vue';
-const props = ref([
+
+const commonProps = ref([
   {
     name: 'type',
     desc: '文本类型',
-    type: "TypographyType",
+    type: 'TypographyType',
     value: '-',
   },
   {
@@ -126,7 +127,8 @@ const props = ref([
     value: '-',
   },
 ]);
-const emits =  ref([
+
+const commonEvents = ref([
   {
     name: 'edit-start',
     desc: '开始编辑',
@@ -152,26 +154,28 @@ const emits =  ref([
     value: '-',
   },
 ]);
-const slots = ref([
+
+const commonSlots = ref([
   {
     name: 'default',
     desc: '内容',
-    type: "-",
-    value: "",
+    type: '-',
+    value: '',
   },
-    {
+  {
     name: 'copy-icon',
     desc: '复制图标',
-    type: "-",
-    value: "",
+    type: '-',
+    value: '',
   },
-    {
+  {
     name: 'copy-tooltip',
     desc: '复制的文字气泡内容',
-    type: "-",
-    value: "",
+    type: '-',
+    value: '',
   },
 ]);
+
 const titleProps = ref([
   {
     name: 'heading',
@@ -180,6 +184,7 @@ const titleProps = ref([
     value: "`'1'`",
   },
 ]);
+
 const paragraphProps = ref([
   {
     name: 'blockquote',

@@ -8,6 +8,15 @@
 
 <field-table :data="commentSlots" type="slots"/>
 
+### Type
+
+```typescript
+type CommentAlign =
+  | 'left'
+  | 'right'
+  | { datetime?: 'left' | 'right'; actions?: 'left' | 'right' };
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -39,7 +48,7 @@ const commentProps = ref([
   {
     name: 'align',
     desc: '靠左/靠右 展示 datetime 和 actions',
-    type: '\'left\' | \'right\' | { datetime?: "left" | "right"; actions?: "left" | "right" }',
+    type: 'CommentAlign',
     value: "'left'",
   },
 ]);
@@ -48,23 +57,38 @@ const commentSlots = ref([
   {
     name: 'avatar',
     desc: '头像',
+    type: '-',
+    value: '-',
   },
   {
     name: 'author',
     desc: '作者',
+    type: '-',
+    value: '-',
   },
   {
     name: 'datetime',
     desc: '时间描述',
+    type: '-',
+    value: '-',
   },
   {
     name: 'content',
     desc: '评论内容',
+    type: '-',
+    value: '-',
   },
   {
     name: 'actions',
     desc: '操作列表',
+    type: '-',
+    value: '-',
+  },
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
+    value: '-',
   },
 ]);
-
 </script>

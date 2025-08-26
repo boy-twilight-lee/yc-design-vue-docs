@@ -137,7 +137,3 @@ const watermarkFontProps = ref([
   },
 ]);
 </script>
-
-```
-
-```

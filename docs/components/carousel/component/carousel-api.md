@@ -63,13 +63,13 @@ const carouselProps = ref([
   {
     name: 'animation-name',
     desc: '切换动画',
-    type: "CarouselAnimationName",
+    type: 'CarouselAnimationName',
     value: "'slide'",
   },
   {
     name: 'trigger',
     desc: '幻灯片切换触发方式, click/hover 指示器',
-    type: "IndicatorTrigger",
+    type: 'IndicatorTrigger',
     value: "'click'",
   },
   {
@@ -81,32 +81,32 @@ const carouselProps = ref([
   {
     name: 'show-arrow',
     desc: '切换箭头显示时机',
-    type: "CarouselShowArrow",
+    type: 'CarouselShowArrow',
     value: "'always'",
   },
   {
     name: 'arrow-class',
     desc: '切换箭头样式',
     type: 'string',
-    value: "-",
+    value: '-',
   },
   {
     name: 'indicator-type',
     desc: '指示器类型，可为小方块和小圆点或不显示',
-    type: "IndicatorType",
+    type: 'IndicatorType',
     value: "'dot'",
   },
   {
     name: 'indicator-position',
     desc: '指示器位置',
-    type: "IndicatorPosition",
+    type: 'IndicatorPosition',
     value: "'bottom'",
   },
   {
     name: 'indicator-class',
     desc: '指示器的样式',
     type: 'string',
-    value: "-",
+    value: '-',
   },
   {
     name: 'transition-timing-function',
@@ -121,6 +121,7 @@ const carouselEvents = ref([
     name: 'change',
     desc: '幻灯片发生切换时的回调函数',
     type: 'index: number, prevIndex: number, isManual: boolean',
+    value: '-',
   },
 ]);
 
@@ -129,7 +130,7 @@ const carouselSlots = ref([
     name: 'default',
     desc: '轮播内容',
     type: '-',
+    value: '-',
   },
-])
-
+]);
 </script>

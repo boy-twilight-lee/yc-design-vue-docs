@@ -59,11 +59,13 @@ const alertEvents = ref([
     name: 'close',
     desc: '点击关闭按钮时触发',
     type: '(ev: MouseEvent) => void',
+    value: '-',
   },
   {
     name: 'after-close',
     desc: '关闭动画结束后触发',
     type: '() => void',
+    value: '-',
   },
 ]);
 
@@ -71,18 +73,26 @@ const alertSlots = ref([
   {
     name: 'icon',
     desc: '图标',
+    type: '-',
+    value: '-',
   },
   {
     name: 'title',
     desc: '标题',
+    type: '-',
+    value: '-',
   },
   {
     name: 'action',
     desc: '操作项',
+    type: '-',
+    value: '-',
   },
   {
     name: 'close-element',
     desc: '关闭元素',
+    type: '-',
+    value: '-',
   },
 ]);
 </script>

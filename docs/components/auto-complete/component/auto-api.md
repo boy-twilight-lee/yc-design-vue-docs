@@ -1,53 +1,157 @@
-## API
+好的，完全理解。将每个对象的属性单独放在一行可以极大地提升代码的可读性。
 
-### auto-complete Props
+我已经按照这个要求重新格式化了您提供的代码。
 
-<field-table :data="autoCompleteProps"/>
+```vue
+## API ### auto-complete Props
+
+<field-table :data="autoCompleteProps" />
 
 ### auto-complete Events
 
-<field-table :data="autoCompleteEvents" type="emits"/>
+<field-table :data="autoCompleteEvents" type="emits" />
 
 ### auto-complete Methods
 
-<field-table :data="autoCompleteMethods" type="expose"/>
+<field-table :data="autoCompleteMethods" type="expose" />
 
 ### auto-complete Slots
 
-<field-table :data="autoCompleteSlots" type="slots"/>
+<field-table :data="autoCompleteSlots" type="slots" />
 
 <script setup>
 import { ref } from 'vue';
 
 const autoCompleteProps = ref([
-  { name: 'model-value (v-model)', desc: '绑定值', type: 'string', value: '-' },
-  { name: 'default-value', desc: '默认值（非受控模式）', type: 'string', value: "''" },
-  { name: 'disabled', desc: '是否禁用', type: 'boolean', value: 'false' },
-  { name: 'data', desc: '用于自动提示的数据', type: '(string | number | SelectOptionData | SelectOptionGroup)[]', value: '[]' },
-  { name: 'popup-container', desc: '弹出框的挂载容器', type: 'string | HTMLElement | null | undefined', value: '-' },
-  { name: 'strict', desc: '是否为严格校验模式', type: 'boolean', value: 'false' },
-  { name: 'filter-option', desc: '自定义选项过滤方法', type: 'FilterOption', value: 'true' },
-  { name: 'trigger-props', desc: 'trigger 组件属性', type: 'TriggerProps', value: '-', version: '2.14.0' },
-  { name: 'allow-clear', desc: '是否允许清空输入框', type: 'boolean', value: 'false', version: '2.23.0' },
-  { name: 'virtual-list-props', desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps', type: 'VirtualListProps', value: '-', version: '2.50.0' },
+  {
+    name: 'model-value (v-model)',
+    desc: '绑定值',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'default-value',
+    desc: '默认值（非受控模式）',
+    type: 'string',
+    value: "''",
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'data',
+    desc: '用于自动提示的数据',
+    type: '(string | number | SelectOptionData | SelectOptionGroup)[]',
+    value: '[]',
+  },
+  {
+    name: 'popup-container',
+    desc: '弹出框的挂载容器',
+    type: 'string | HTMLElement | null | undefined',
+    value: '-',
+  },
+  {
+    name: 'strict',
+    desc: '是否为严格校验模式',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'filter-option',
+    desc: '自定义选项过滤方法',
+    type: 'FilterOption',
+    value: 'true',
+  },
+  {
+    name: 'trigger-props',
+    desc: 'trigger 组件属性',
+    type: 'TriggerProps',
+    value: '-',
+  },
+  {
+    name: 'allow-clear',
+    desc: '是否允许清空输入框',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'virtual-list-props',
+    desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps',
+    type: 'VirtualListProps',
+    value: '-',
+  },
 ]);
 
 const autoCompleteEvents = ref([
-  { name: 'change', desc: '绑定值发生改变时触发', type: 'value: string' },
-  { name: 'search', desc: '用户搜索时触发', type: 'value: string' },
-  { name: 'select', desc: '选择选项时触发', type: 'value: string' },
-  { name: 'clear', desc: '用户点击清除按钮时触发', type: 'ev: Event', version: '2.23.0' },
-  { name: 'dropdown-scroll', desc: '下拉菜单发生滚动时触发', type: 'ev: Event', version: '2.52.0' },
-  { name: 'dropdown-reach-bottom', desc: '下拉菜单滚动到底部时触发', type: 'ev: Event', version: '2.52.0' },
+  {
+    name: 'change',
+    desc: '绑定值发生改变时触发',
+    type: 'value: string',
+    value: '-',
+  },
+  {
+    name: 'search',
+    desc: '用户搜索时触发',
+    type: 'value: string',
+    value: '-',
+  },
+  {
+    name: 'select',
+    desc: '选择选项时触发',
+    type: 'value: string',
+    value: '-',
+  },
+  {
+    name: 'clear',
+    desc: '用户点击清除按钮时触发',
+    type: 'ev: Event',
+    value: '-',
+  },
+  {
+    name: 'dropdown-scroll',
+    desc: '下拉菜单发生滚动时触发',
+    type: 'ev: Event',
+    value: '-',
+  },
+  {
+    name: 'dropdown-reach-bottom',
+    desc: '下拉菜单滚动到底部时触发',
+    type: 'ev: Event',
+    value: '-',
+  },
 ]);
 
 const autoCompleteMethods = ref([
-  { name: 'focus', desc: '使输入框获取焦点', type: '-', value: '-', version: '2.40.0' },
-  { name: 'blur', desc: '使输入框失去焦点', type: '-', value: '-', version: '2.40.0' },
+  {
+    name: 'focus',
+    desc: '使输入框获取焦点',
+    type: '-',
+    value: '-',
+  },
+  {
+    name: 'blur',
+    desc: '使输入框失去焦点',
+    type: '-',
+    value: '-',
+  },
 ]);
 
 const autoCompleteSlots = ref([
-  { name: 'option', desc: '选项内容', type: 'data: OptionInfo', version: '2.13.0' },
-  { name: 'footer', desc: '弹出框的页脚' },
+  {
+    name: 'option',
+    desc: '选项内容',
+    type: 'data: OptionInfo',
+    value: '-',
+  },
+  {
+    name: 'footer',
+    desc: '弹出框的页脚',
+    type: '-',
+    value: '-',
+  },
 ]);
 </script>
+```

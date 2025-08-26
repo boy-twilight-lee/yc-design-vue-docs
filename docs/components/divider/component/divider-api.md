@@ -20,6 +20,7 @@ type Direction = 'vertical' | 'horizontal';
 
 <script setup>
 import { ref } from 'vue';
+
 const dividerProps = ref([
   {
     name: 'direction',
@@ -52,10 +53,13 @@ const dividerProps = ref([
     value: '-',
   },
 ]);
-const dividerSlots = ref([  {
+
+const dividerSlots = ref([
+  {
     name: 'default',
     desc: '分割线内容（垂直情况不生效）',
     type: "-",
     value: "",
-  },])
+  },
+]);
 </script>

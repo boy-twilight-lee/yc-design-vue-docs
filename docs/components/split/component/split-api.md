@@ -65,16 +65,19 @@ const splitEmits = ref([
     name: 'move-start',
     desc: '开始拖拽之前触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'moving',
     desc: '拖拽时触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'move-end',
     desc: '拖拽结束之后触发',
     type: '-',
+    value: '-',
   },
 ]);
 
@@ -83,21 +86,25 @@ const splitSlots = ref([
     name: 'first',
     desc: '第一个面板的内容',
     type: '-',
+    value: '-',
   },
   {
     name: 'resize-trigger',
     desc: '伸缩杆的内容',
     type: '-',
+    value: '-',
   },
   {
     name: 'resize-trigger-icon',
     desc: '伸缩杆的图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'second',
     desc: '第二个面板的内容',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

@@ -30,6 +30,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 const checkboxProps = ref([
   {
     name: 'model-value (v-model)',
@@ -62,6 +63,7 @@ const checkboxProps = ref([
     value: '`false`',
   },
 ]);
+
 const checkboxEvents = ref([
   {
     name: 'change',
@@ -70,6 +72,7 @@ const checkboxEvents = ref([
     value: '-',
   },
 ]);
+
 const checkboxSlots = ref([
   {
     name: 'checkbox',
@@ -78,6 +81,7 @@ const checkboxSlots = ref([
     value: '2.18.0',
   },
 ]);
+
 const checkboxGroupProps = ref([
   {
     name: 'model-value (v-model)',
@@ -116,6 +120,7 @@ const checkboxGroupProps = ref([
     value: '`false`',
   },
 ]);
+
 const checkboxGroupEvents = ref([
   {
     name: 'change',
@@ -124,6 +129,7 @@ const checkboxGroupEvents = ref([
     value: '-',
   },
 ]);
+
 const checkboxGroupSlots = ref([
   {
     name: 'checkbox',
@@ -138,6 +144,7 @@ const checkboxGroupSlots = ref([
     value: '2.27.0',
   },
 ]);
+
 const checkboxOptionProps = ref([
   {
     name: 'label',

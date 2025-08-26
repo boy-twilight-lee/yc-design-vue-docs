@@ -101,16 +101,19 @@ const switchEvents = ref([
     name: 'change',
     desc: '值改变时触发',
     type: '(value: boolean | string | number, ev: Event) => void',
+    value: '-',
   },
   {
     name: 'focus',
     desc: '组件获得焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '组件失去焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
 ]);
 
@@ -118,18 +121,26 @@ const switchSlots = ref([
   {
     name: 'checked-icon',
     desc: '打开状态时，按钮上的图标',
+    type: '-',
+    value: '-',
   },
   {
     name: 'unchecked-icon',
     desc: '关闭状态时，按钮上的图标',
+    type: '-',
+    value: '-',
   },
   {
     name: 'checked',
     desc: '打开状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    type: '-',
+    value: '-',
   },
   {
     name: 'unchecked',
     desc: '关闭状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    type: '-',
+    value: '-',
   },
 ]);
 </script>

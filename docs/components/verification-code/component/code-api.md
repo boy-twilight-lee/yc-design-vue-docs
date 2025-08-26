@@ -79,16 +79,19 @@ const verificationCodeEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: '(value: string) => void',
+    value: '-',
   },
   {
     name: 'finish',
     desc: '填充完成时触发',
     type: '(value: string) => void',
+    value: '-',
   },
   {
     name: 'input',
     desc: '输入时触发',
     type: '(inputValue: string, index: number, ev: Event) => void',
+    value: '-',
   },
 ]);
 </script>

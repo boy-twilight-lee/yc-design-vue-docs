@@ -6,11 +6,11 @@
 
 ### link Events
 
-<field-table :data="emits" type="emits"/>
+<field-table :data="linkEvents" type="emits"/>
 
 ### link Slots
 
-<field-table :data="slots" type="slots"/>
+<field-table :data="linkSlots" type="slots"/>
 
 ### type
 
@@ -20,6 +20,7 @@ type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
 
 <script setup>
 import { ref } from 'vue';
+
 const linkProps = ref([
   {
     name: 'href',
@@ -58,7 +59,8 @@ const linkProps = ref([
     value: '`false`',
   },
 ]);
-const emits =  ref([
+
+const linkEvents = ref([
   {
     name: 'click',
     desc: '点击时触发',
@@ -66,7 +68,8 @@ const emits =  ref([
     value: '-',
   },
 ]);
-const slots =  ref([
+
+const linkSlots = ref([
   {
     name: 'default',
     desc: '内容',

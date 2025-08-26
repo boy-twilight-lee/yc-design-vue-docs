@@ -77,18 +77,22 @@ const rateEvents = ref([
     name: 'change',
     desc: '值改变时触发',
     type: '(value: number) => void',
+    value: '-',
   },
   {
     name: 'hover-change',
     desc: '鼠标移动到数值上时触发',
     type: '(value: number) => void',
+    value: '-',
   },
 ]);
 
 const rateSlots = ref([
   {
     name: 'character',
-    desc: '符号 (index: number)',
+    desc: '符号',
+    type: '(index: number)',
+    value: '-',
   },
 ]);
 </script>

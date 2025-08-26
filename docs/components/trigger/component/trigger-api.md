@@ -227,16 +227,19 @@ const triggerEmits = ref([
     name: 'popup-visible-change',
     desc: '弹出框显示状态改变时触发',
     type: 'visible: boolean',
+    value: '-',
   },
   {
     name: 'show',
     desc: '弹出框显示后（动画结束）触发',
     type: '- (2.18.0)',
+    value: '-',
   },
   {
     name: 'hide',
     desc: '弹出框隐藏后（动画结束）触发',
     type: '- (2.18.0)',
+    value: '-',
   },
 ]);
 
@@ -245,6 +248,7 @@ const triggerSlots = ref([
     name: 'content',
     desc: '弹出框内容',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

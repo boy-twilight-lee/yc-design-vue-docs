@@ -10,7 +10,7 @@
 
 ### affix Method
 
-<field-table :data="affixExpose" type="expose"/>
+<field-table :data="affixMethod" type="expose"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -51,7 +51,7 @@ const affixEmits = ref([
   },
 ]);
 
-const affixExpose = ref([
+const affixMethod = ref([
   {
     name: 'updatePosition',
     desc: '更新位置',

@@ -175,16 +175,19 @@ const menuEmits = ref([
     name: 'collapse',
     desc: '折叠状态改变时触发',
     type: 'collapsed: boolean, type: \'clickTrigger\'|\'responsive\'',
+    value: '-',
   },
   {
     name: 'menu-item-click',
     desc: '点击菜单项时触发',
     type: 'key: string',
+    value: '-',
   },
   {
     name: 'sub-menu-click',
     desc: '点击子菜单时触发',
     type: 'key: string, openKeys: string[]',
+    value: '-',
   },
 ]);
 
@@ -193,21 +196,24 @@ const menuSlots = ref([
     name: 'collapse-icon',
     desc: '折叠图标',
     type: 'collapsed: boolean',
+    value: '-',
   },
   {
     name: 'expand-icon-right',
     desc: '向右展开的图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'expand-icon-down',
     desc: '向下展开的图标',
     type: '-',
+    value: '-',
   },
 ]);
 
 const subMenuProps = ref([
-      {
+  {
     name: 'path（必填）',
     desc: '子菜单的唯一标识',
     type: 'string',
@@ -244,21 +250,25 @@ const subMenuSlots = ref([
     name: 'title',
     desc: '标题',
     type: '-',
+    value: '-',
   },
   {
     name: 'expand-icon-right',
     desc: '向右展开的图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'expand-icon-down',
     desc: '向下展开的图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'icon',
     desc: '菜单的图标',
     type: '- (2.11.0)',
+    value: '-',
   },
 ]);
 
@@ -276,11 +286,12 @@ const menuItemGroupSlots = ref([
     name: 'title',
     desc: '标题',
     type: '-',
+    value: '-',
   },
 ]);
 
 const menuItemProps = ref([
-          {
+  {
     name: 'path（必填）',
     desc: '菜单项的唯一标识',
     type: 'string',
@@ -299,6 +310,7 @@ const menuItemSlots = ref([
     name: 'icon',
     desc: '菜单的图标',
     type: '- (2.11.0)',
+    value: '-',
   },
 ]);
 </script>

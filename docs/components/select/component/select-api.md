@@ -526,14 +526,14 @@ const virtualListPropsProps = ref([
     desc: '每一项的高度',
     type: 'number',
     value: '-',
-    version: '',
+
   },
   {
     name: 'threshold',
     desc: '开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。',
     type: 'number',
     value: '-',
-    version: '',
+
   },
 ]);
 

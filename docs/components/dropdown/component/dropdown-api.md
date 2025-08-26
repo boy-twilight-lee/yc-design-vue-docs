@@ -57,7 +57,7 @@
 <field-table :data="dropdownButtonSlots"/>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const dropdownProps = ref([
   {
@@ -108,7 +108,7 @@ const dropdownProps = ref([
     type: 'TriggerProps',
     value: '-',
   },
-]);
+])
 
 const dropdownEmits = ref([
   {
@@ -123,7 +123,7 @@ const dropdownEmits = ref([
     type: 'value: string | number | Record<string, any> | undefined, ev: Event',
     value: '-',
   },
-]);
+])
 
 const dropdownSlots = ref([
   {
@@ -138,7 +138,7 @@ const dropdownSlots = ref([
     type: '-',
     value: '- (2.10.0)',
   },
-]);
+])
 
 const doptionProps = ref([
   {
@@ -153,7 +153,7 @@ const doptionProps = ref([
     type: 'boolean',
     value: 'false',
   },
-]);
+])
 
 const doptionEmits = ref([
   {
@@ -162,16 +162,22 @@ const doptionEmits = ref([
     type: 'ev: MouseEvent',
     value: '-',
   },
-]);
+])
 
 const doptionSlots = ref([
+  {
+    name: 'default',
+    desc: '选项内容',
+    type: '-',
+    value: '-',
+  },
   {
     name: 'icon',
     desc: '图标',
     type: '-',
     value: '-',
   },
-]);
+])
 
 const dgroupProps = ref([
   {
@@ -180,7 +186,7 @@ const dgroupProps = ref([
     type: 'string',
     value: '-',
   },
-]);
+])
 
 const dgroupSlots = ref([
   {
@@ -189,7 +195,7 @@ const dgroupSlots = ref([
     type: '-',
     value: '- (2.10.0)',
   },
-]);
+])
 
 const dsubmenuProps = ref([
   {
@@ -234,13 +240,13 @@ const dsubmenuProps = ref([
     type: 'object',
     value: '- (2.29.0)',
   },
-    {
+  {
     name: 'trigger-props',
     desc: 'trigger的属性',
     type: 'TriggerProps',
     value: '-',
   },
-]);
+])
 
 const dsubmenuEmits = ref([
   {
@@ -249,7 +255,7 @@ const dsubmenuEmits = ref([
     type: 'visible: boolean',
     value: '-',
   },
-]);
+])
 
 const dsubmenuSlots = ref([
   {
@@ -270,7 +276,7 @@ const dsubmenuSlots = ref([
     type: '-',
     value: '- (2.10.0)',
   },
-]);
+])
 
 const dropdownButtonProps = ref([
   {
@@ -333,7 +339,7 @@ const dropdownButtonProps = ref([
     type: 'boolean',
     value: 'true',
   },
-]);
+])
 
 const dropdownButtonEmits = ref([
   {
@@ -354,7 +360,7 @@ const dropdownButtonEmits = ref([
     type: 'value: string | number | Record<string, any> | undefined, ev: Event',
     value: '-',
   },
-]);
+])
 
 const dropdownButtonSlots = ref([
   {
@@ -369,5 +375,5 @@ const dropdownButtonSlots = ref([
     type: '-',
     value: '-',
   },
-]);
+])
 </script>

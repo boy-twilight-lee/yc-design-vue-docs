@@ -40,22 +40,25 @@ type BreakpointName = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 
 <script setup>
 import { ref } from 'vue';
+
 const layoutProps = ref([
   {
     name: 'has-sider',
     desc: '表示子元素里有 Sider，一般不用指定。可用于服务端渲染时避免样式闪动',
     type: 'boolean',
     value: 'false',
-  }
+  },
 ]);
+
 const headerSlots = ref([
   {
     name: 'default',
     desc: '内容',
     type: '-',
     value: '-',
-  }
-])
+  },
+]);
+
 const siderProps = ref([
   {
     name: 'theme',
@@ -117,5 +120,5 @@ const siderProps = ref([
     type: 'boolean',
     value: 'false',
   },
-])
+]);
 </script>

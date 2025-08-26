@@ -16,6 +16,7 @@ type BadgeStatus = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
 
 <script setup>
 import { ref } from 'vue';
+
 const badgeProps = ref([
   {
     name: 'text',
@@ -56,7 +57,7 @@ const badgeProps = ref([
   {
     name: 'status',
     desc: '徽标的状态类型',
-    type: "BadgeStatus",
+    type: 'BadgeStatus',
     value: '-',
   },
   {
@@ -71,12 +72,14 @@ const badgeSlots = ref([
   {
     name: 'default',
     desc: '内容',
-    type:'-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'content',
     desc: '徽标文字内容',
-    type:'-'
+    type: '-',
+    value: '-',
   },
 ]);
 </script>

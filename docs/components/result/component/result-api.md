@@ -1,10 +1,10 @@
 ## API
 
-### popconfirm Props
+### result Props
 
 <field-table :data="resultProps"/>
 
-### popconfirm Slots
+### result Slots
 
 <field-table :data="resultSlots"/>
 
@@ -37,16 +37,19 @@ const resultSlots = ref([
     name: 'icon',
     desc: '图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'title',
     desc: '标题',
     type: '-',
+    value: '-',
   },
   {
     name: 'subtitle',
     desc: '副标题',
     type: '-',
+    value: '-',
   },
   {
     name: 'extra',

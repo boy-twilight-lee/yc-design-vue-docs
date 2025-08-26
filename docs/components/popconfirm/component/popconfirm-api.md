@@ -127,16 +127,19 @@ const popconfirmEvents = ref([
     name: 'popup-visible-change',
     desc: '气泡确认框的显隐状态改变时触发',
     type: 'visible: boolean',
+    value: '-',
   },
   {
     name: 'ok',
     desc: '点击确认按钮时触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'cancel',
     desc: '点击取消按钮时触发',
     type: '-',
+    value: '-',
   },
 ]);
 
@@ -145,11 +148,13 @@ const popconfirmSlots = ref([
     name: 'icon',
     desc: '图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'content',
     desc: '内容',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

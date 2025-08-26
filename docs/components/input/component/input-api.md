@@ -117,31 +117,37 @@ const inputEvents = ref([
     name: 'input',
     desc: '用户输入时触发',
     type: '(value: string, ev: Event) => void',
+    value: '-',
   },
   {
     name: 'change',
     desc: '仅在输入框失焦或按下回车时触发',
     type: '(value: string, ev: Event) => void',
+    value: '-',
   },
   {
     name: 'press-enter',
     desc: '用户按下回车时触发',
     type: '(ev: KeyboardEvent) => void',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
     type: '(ev: MouseEvent) => void',
+    value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
     type: '(ev: FocusEvent) => void',
+    value: '-',
   },
 ]);
 
@@ -150,11 +156,13 @@ const inputMethods = ref([
     name: 'focus',
     desc: '使输入框获取焦点',
     type: '() => void',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
     type: '() => void',
+    value: '-',
   },
 ]);
 
@@ -162,19 +170,26 @@ const inputSlots = ref([
   {
     name: 'append',
     desc: '后置标签',
+    type: '-',
+    value: '-',
   },
   {
     name: 'prepend',
     desc: '前置标签',
+    type: '-',
+    value: '-',
   },
   {
     name: 'suffix',
     desc: '后缀元素',
+    type: '-',
+    value: '-',
   },
   {
     name: 'prefix',
     desc: '前缀元素',
+    type: '-',
+    value: '-',
   },
 ]);
-
 </script>

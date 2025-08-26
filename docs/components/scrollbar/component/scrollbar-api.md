@@ -10,7 +10,7 @@
 
 ### scrollbar Method
 
-<field-table :data="scrollbarExpose" type="expose"/>
+<field-table :data="scrollbarMethod" type="expose"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -41,10 +41,11 @@ const scrollbarEmits = ref([
     name: 'scroll',
     desc: '滚动时触发',
     type: '-',
+    value: '-',
   },
 ]);
 
-const scrollbarExpose = ref([
+const scrollbarMethod = ref([
   {
     name: 'scrollTo',
     desc: '滚动',
