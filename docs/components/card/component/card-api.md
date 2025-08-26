@@ -20,6 +20,16 @@
 
 <field-table :data="cardGridProps"/>
 
+### card-grid Slots
+
+<field-table :data="cardGridSlots" type="slots"/>
+
+### Type
+
+```typescript
+type CardSize = 'medium' | 'small';
+```
+
 <script setup>
 import { ref } from 'vue';
 const cardProps = ref([
@@ -44,20 +54,20 @@ const cardProps = ref([
   {
     name: 'size',
     desc: '卡片尺寸',
-    type: "'medium' | 'small'",
+    type: "CardSize",
     value: "'medium'",
   },
   {
     name: 'header-style',
     desc: '自定义标题区域样式',
     type: 'CSSProperties',
-    value: '() => ({})',
+    value: '-',
   },
   {
     name: 'body-style',
     desc: '内容区域自定义样式',
     type: 'CSSProperties',
-    value: '() => ({})',
+    value: '-',
   },
   {
     name: 'title',
@@ -90,7 +100,14 @@ const cardSlots = ref([
     name: 'title',
     desc: '卡片标题',
   },
-]);
+  {
+    name: 'default',
+    desc: 'body内容',
+  },
+].map(v=>{
+  v.type = '-'
+  return v
+}));
 
 const cardMetaProps = ref([
   {
@@ -120,7 +137,10 @@ const cardMetaSlots = ref([
     name: 'avatar',
     desc: '头像',
   },
-]);
+].map(v=>{
+  v.type = '-'
+  return v
+}));
 
 const cardGridProps = ref([
   {
@@ -128,6 +148,14 @@ const cardGridProps = ref([
     desc: '是否可以悬浮',
     type: 'boolean',
     value: 'false',
+  },
+]);
+
+const cardGridSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type: '-',
   },
 ]);
 </script>

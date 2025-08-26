@@ -12,6 +12,12 @@
 
 <field-table :data="calendarSlots" type="slots"/>
 
+### Type
+
+```typescript
+type CalendarMode = 'month' | 'year';
+```
+
 <script setup>
 import { ref } from 'vue';
 const calendarProps = ref([
@@ -30,19 +36,19 @@ const calendarProps = ref([
   {
     name: 'mode',
     desc: '模式',
-    type: "'month' | 'year'",
+    type: "CalendarMode",
     value: '-',
   },
   {
     name: 'default-mode',
     desc: '默认模式',
-    type: "'month' | 'year'",
+    type: "CalendarMode",
     value: "'month'",
   },
   {
     name: 'modes',
     desc: '显示的模式',
-    type: "('month' | 'year')[]",
+    type: "CalendarMode[]",
     value: "['month', 'year']",
   },
 ]);

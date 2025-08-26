@@ -16,13 +16,27 @@
 
 <field-table :data="avatarGroupProps" />
 
+### avatar-group Slots
+
+<field-table :data="avatarGroupSlots" type="slots"/>
+
+### Type
+
+```typescript
+type AvatarShape = 'square' | 'round';
+
+type AvatarTriggerType = 'mask' | 'button';
+
+type ObjectFit = 'cover' | 'contain' | 'fill' | 'none';
+```
+
 <script setup>
 import { ref } from 'vue';
 const avatarProps = ref([
   {
     name: 'shape',
     desc: '头像的形状，有圆形(circle)和正方形(square)两种',
-    type: "'circle' | 'square'",
+    type: "AvatarShape",
     value: "'circle'",
     version: '',
   },
@@ -49,7 +63,7 @@ const avatarProps = ref([
   {
     name: 'trigger-type',
     desc: '可点击的头像交互类型',
-    type: "'mask' | 'button'",
+    type: "AvatarTriggerType",
     value: "'button'",
     version: '',
   },
@@ -89,8 +103,14 @@ const avatarEvents = ref([
 
 const avatarSlots = ref([
   {
+    name: 'default',
+    desc: '内容',
+    type:'-'
+  },
+  {
     name: 'trigger-icon',
     desc: '可点击的头像交互图标',
+    type:'-'
   },
 ]);
 
@@ -98,7 +118,7 @@ const avatarGroupProps = ref([
   {
     name: 'shape',
     desc: '头像的形状，有圆形(circle)和正方形(square)两种',
-    type: "'circle' | 'square'",
+    type: "AvatarShape",
     value: "'circle'",
     version: '',
   },
@@ -143,6 +163,14 @@ const avatarGroupProps = ref([
     type: 'TriggerProps',
     value: '-',
     version: '2.7.0',
+  },
+]);
+
+const avatarGroupSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type:'-'
   },
 ]);
 </script>

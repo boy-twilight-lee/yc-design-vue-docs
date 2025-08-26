@@ -4,6 +4,16 @@
 
 <field-table :data="badgeProps"/>
 
+### badge Slots
+
+<field-table :data="badgeSlots" type="slots"/>
+
+### Type
+
+```typescript
+type BadgeStatus = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
+```
+
 <script setup>
 import { ref } from 'vue';
 const badgeProps = ref([
@@ -46,7 +56,7 @@ const badgeProps = ref([
   {
     name: 'status',
     desc: '徽标的状态类型',
-    type: "'normal' | 'processing' | 'success' | 'warning' | 'danger'",
+    type: "BadgeStatus",
     value: '-',
   },
   {
@@ -54,6 +64,19 @@ const badgeProps = ref([
     desc: '徽标显示的数字',
     type: 'number',
     value: '-',
+  },
+]);
+
+const badgeSlots = ref([
+  {
+    name: 'default',
+    desc: '内容',
+    type:'-'
+  },
+  {
+    name: 'content',
+    desc: '徽标文字内容',
+    type:'-'
   },
 ]);
 </script>
