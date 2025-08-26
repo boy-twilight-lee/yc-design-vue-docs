@@ -8,7 +8,7 @@
 
 <field-table :data="affixEmits"/>
 
-### affix Expose
+### affix Method
 
 <field-table :data="affixExpose"/>
 
