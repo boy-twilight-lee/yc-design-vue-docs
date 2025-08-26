@@ -15,7 +15,7 @@
 ### type
 
 ```typescript
-export type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
+type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
 ```
 
 <script setup>

@@ -12,6 +12,10 @@
 
 ```typescript
 type SpaceSize = number | 'mini' | 'small' | 'medium' | 'large';
+
+type SpaceAlign = 'start' | 'end' | 'center' | 'baseline';
+
+type Direction = 'vertical' | 'horizontal';
 ```
 
 <script setup>
@@ -20,19 +24,19 @@ const spaceProps = ref([
   {
     name: 'align',
     desc: '对齐方式',
-    type: "'start' | 'end' | 'center' | 'baseline'",
+    type: "SpaceAlign",
     value: '-',
   },
   {
     name: 'direction',
     desc: '间距方向',
-    type: "'vertical' | 'horizontal'",
+    type: "Direction",
     value: "'horizontal'",
   },
   {
     name: 'size',
     desc: '间距大小，支持分别制定横向和竖向的间距',
-    type: "number | 'mini' | 'small' | 'medium' | 'large' | [SpaceSize, SpaceSize]",
+    type: "SpaceSize | [SpaceSize, SpaceSize]",
     value: "'small'",
   },
   {

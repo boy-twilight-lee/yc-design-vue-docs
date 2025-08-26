@@ -23,12 +23,7 @@
 ### type
 
 ```typescript
-export type TypographyType =
-  | 'primary'
-  | 'secondary'
-  | 'dashed'
-  | 'outline'
-  | 'text';
+type TypographyType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 ```
 
 <script setup>

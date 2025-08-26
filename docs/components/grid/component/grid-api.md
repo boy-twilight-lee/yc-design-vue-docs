@@ -36,38 +36,55 @@
 
 <field-table :data="responsiveValue"/>
 
+### Type
+
+```typescript
+type GridRowJustify =
+  | 'start'
+  | 'center'
+  | 'end'
+  | 'space-around'
+  | 'space-between';
+
+type GridRowAlign = 'start' | 'center' | 'end' | 'stretch';
+
+type GridColFlex = number | string | 'initial' | 'auto' | 'none';
+
+type Gutter = number | ResponsiveValue;
+```
+
 <script setup>
 import { ref } from 'vue';
 const rowProps = ref([
   {
     name: 'gutter',
     desc: '栅格间隔，单位是px 栅格间隔。可传入响应式对象写法 { xs: 4, sm: 6, md: 12}，传入数组 [ 水平间距， 垂直间距 ] 来设置两个方向。',
-    type: 'number | ResponsiveValue',
-    value: '`0`',
+    type: 'Gutter | [Gutter, Gutter]',
+    value: '0',
   },
   {
     name: 'justify',
     desc: '水平对齐方式 (justify-content)',
-    type: "'start' | 'center' | 'end' | 'space-around' | 'space-between'",
-    value: "`'start'`",
+    type: "GridRowJustify",
+    value: "'start'",
   },
   {
     name: 'align',
     desc: '竖直对齐方式 ( align-items )',
-    type: "'start' | 'center' | 'end' | 'stretch'",
-    value: "`'start'`",
+    type: "GridRowAlign",
+    value: "'start'",
   },
   {
     name: 'div',
     desc: '开启这个选项Row和Col都会被当作div而不会附带任何Grid相关的类和样式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'wrap',
     desc: 'Col 是否支持换行',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
 ]);
 const colProps = ref([
@@ -87,6 +104,12 @@ const colProps = ref([
     name: 'order',
     desc: '对元素进行排序',
     type: 'number | ResponsiveValue',
+    value: '-',
+  },
+  {
+    name: 'flex',
+    desc: '设置 flex 布局属性',
+    type: 'GridColFlex',
     value: '-',
   },
 ])

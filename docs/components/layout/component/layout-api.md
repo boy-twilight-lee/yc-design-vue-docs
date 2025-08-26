@@ -4,6 +4,10 @@
 
 <field-table :data="layoutProps"/>
 
+### layout Slots
+
+<field-table :data="headerSlots"  type="slots"/>
+
 ### layout-header Slots
 
 <field-table :data="headerSlots"  type="slots"/>
@@ -23,6 +27,16 @@
 ### layout-sider slots
 
 <field-table :data="headerSlots"  type="slots"/>
+
+### Type
+
+```typescript
+type ResizeDirections = Array<'left' | 'right' | 'top' | 'bottom'>;
+
+type Theme = 'light' | 'dark';
+
+type BreakpointName = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+```
 
 <script setup>
 import { ref } from 'vue';
@@ -46,7 +60,7 @@ const siderProps = ref([
   {
     name: 'theme',
     desc: '主题颜色',
-    type: "'dark' | 'light'",
+    type: "Theme",
     value: "'light'",
   },
   {
@@ -88,13 +102,13 @@ const siderProps = ref([
   {
     name: 'breakpoint',
     desc: "触发响应式布局的断点, 详见响应式栅格",
-    type: "'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'",
+    type: "BreakpointName",
     value: '-',
   },
   {
     name: 'resize-directions',
     desc: '可以用 ResizeBox 替换原生的 aside 标签，这个参数即 ResizeBox的 directions 参数。详情请看 ResizeBox。',
-    type: "Array<'left' | 'right' | 'top' | 'bottom'>",
+    type: "ResizeDirections",
     value: '-',
   },
   {

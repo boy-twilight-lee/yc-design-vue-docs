@@ -21,20 +21,15 @@
 <field-table :data="groupSlots"  type="slots"/>
 
 ```typescript
-export type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
+type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
 
-export type ButtonShape = 'square' | 'circle' | 'round';
+type ButtonShape = 'square' | 'circle' | 'round';
 
-export type ButtonType =
-  | 'primary'
-  | 'secondary'
-  | 'dashed'
-  | 'outline'
-  | 'text';
+type ButtonType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 
-export type ButtonHtmlType = 'button' | 'reset' | 'submit';
+type ButtonHtmlType = 'button' | 'reset' | 'submit';
 
-export type ButtonSize = 'mini' | 'small' | 'medium' | 'large';
+type ButtonSize = 'mini' | 'small' | 'medium' | 'large';
 ```
 
 <script setup>

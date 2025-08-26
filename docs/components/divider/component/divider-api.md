@@ -8,25 +8,35 @@
 
 <field-table :data="dividerSlots"/>
 
+### Type
+
+```typescript
+type Orientation = 'left' | 'center' | 'right';
+
+type DividerType = 'solid' | 'dashed' | 'dotted' | 'double';
+
+type Direction = 'vertical' | 'horizontal';
+```
+
 <script setup>
 import { ref } from 'vue';
 const dividerProps = ref([
   {
     name: 'direction',
     desc: '分割线的方向，是水平还是竖直',
-    type: "'horizontal' | 'vertical'",
-    value: "`'horizontal'`",
+    type: "Direction",
+    value: "'horizontal'",
   },
   {
     name: 'orientation',
     desc: '分割线文字的位置',
-    type: "'left' | 'center' | 'right'",
+    type: "Orientation",
     value: "`'center'`",
   },
   {
     name: 'type',
     desc: '分割线样式类型',
-    type: "'solid' | 'dashed' | 'dotted' | 'double'",
+    type: "DividerType",
     value: '-',
   },
   {
