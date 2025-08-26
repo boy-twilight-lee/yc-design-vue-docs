@@ -8,7 +8,7 @@
     :style="{ marginBottom: '24px' }">
     <yc-checkbox
       :checked="!!pendingProps.direction"
-      @change="(v) => onChange({ direction: v ? 'horizontal' : '' })">
+      @change="(v) => onChange({ direction: v ? 'horizontal' : 'vertical' })">
       horizontal &nbsp; &nbsp;
     </yc-checkbox>
     <yc-checkbox
@@ -74,7 +74,7 @@ const onChange = (newProps) => {
     :style="{ marginBottom: '24px' }">
     <yc-checkbox
       :checked="!!pendingProps.direction"
-      @change="(v) => onChange({ direction: v ? 'horizontal' : '' })">
+      @change="(v) => onChange({ direction: v ? 'horizontal' : 'vertical' })">
       horizontal &nbsp; &nbsp;
     </yc-checkbox>
     <yc-checkbox
