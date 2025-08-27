@@ -57,9 +57,11 @@ export default {
           if (mutation.attributeName !== 'class') return;
           if ((mutation.target as HTMLElement).classList.contains('dark')) {
             document.body.setAttribute('arco-theme', 'dark');
+            document.documentElement.setAttribute('yc-design-dark', '');
             isDark.value = true;
           } else {
             document.body.removeAttribute('arco-theme');
+            document.documentElement.removeAttribute('yc-design-dark');
             isDark.value = false;
           }
         });
