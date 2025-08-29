@@ -4,7 +4,7 @@
 
 <div class="cell-demo vp-raw">
    <yc-affix :offsetTop="80" style="z-index:1001">
-    <yc-anchor :style="{ backgroundColor: '#fff' }">
+    <yc-anchor :style="{ backgroundColor: 'var(--color-bg-1)' }">
       <yc-anchor-link href="#basic">Basic</yc-anchor-link>
       <yc-anchor-link href="#line-less">LineLess Mode</yc-anchor-link>
       <yc-anchor-link href="#affix">
@@ -28,7 +28,7 @@
 ```vue
 <template>
   <yc-affix :offsetTop="80">
-    <yc-anchor>
+    <yc-anchor :style="{ backgroundColor: 'var(--color-bg-1)' }">
       <yc-anchor-link href="#basic">Basic</yc-anchor-link>
       <yc-anchor-link href="#line-less">LineLess Mode</yc-anchor-link>
       <yc-anchor-link href="#affix">
