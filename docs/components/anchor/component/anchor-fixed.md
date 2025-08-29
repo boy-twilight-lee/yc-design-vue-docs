@@ -28,7 +28,7 @@
 ```vue
 <template>
   <yc-affix :offsetTop="80">
-    <yc-anchor :style="{ backgroundColor: 'var(--color-bg-1)' }">
+    <yc-anchor>
       <yc-anchor-link href="#basic">Basic</yc-anchor-link>
       <yc-anchor-link href="#line-less">LineLess Mode</yc-anchor-link>
       <yc-anchor-link href="#affix">

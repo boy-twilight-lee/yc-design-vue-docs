@@ -27,15 +27,33 @@
     <icon-code />
  </button>
 </summary>
-```vue
 
+```vue
 <template>
-   <yc-space class="wrapper" direction="vertical">
-    <yc-button type="primary" long>Primary</yc-button>
+  <yc-space
+    class="wrapper"
+    direction="vertical">
+    <yc-button
+      type="primary"
+      long
+      >Primary</yc-button
+    >
     <yc-button long>Default</yc-button>
-    <yc-button type="dashed" long>Dashed</yc-button>
-    <yc-button type="outline" long>Outline</yc-button>
-    <yc-button type="text" long>Text</yc-button>
+    <yc-button
+      type="dashed"
+      long
+      >Dashed</yc-button
+    >
+    <yc-button
+      type="outline"
+      long
+      >Outline</yc-button
+    >
+    <yc-button
+      type="text"
+      long
+      >Text</yc-button
+    >
   </yc-space>
 </template>
 ```

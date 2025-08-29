@@ -31,6 +31,7 @@
 import { ref } from 'vue';
 const trigger = ref('click');
 </script>
+
 <details>
 <summary>
  <button class="code-btn"  >

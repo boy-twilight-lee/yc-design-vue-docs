@@ -61,6 +61,7 @@ const updatePosition = (position) => {
   indicatorPosition.value = position;
 };
 </script>
+
 <details>
 <summary>
  <button class="code-btn"  >
