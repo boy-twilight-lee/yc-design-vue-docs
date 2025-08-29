@@ -17,14 +17,28 @@
     <icon-code />
  </button>
 </summary>
+
 ```vue
 <template>
   <yc-space>
-    <yc-button type="primary" size="mini">Mini</yc-button>
-    <yc-button type="primary" size="small">Small</yc-button>
+    <yc-button
+      type="primary"
+      size="mini"
+      >Mini</yc-button
+    >
+    <yc-button
+      type="primary"
+      size="small"
+      >Small</yc-button
+    >
     <yc-button type="primary">Medium</yc-button>
-    <yc-button type="primary" size="large">Large</yc-button>
+    <yc-button
+      type="primary"
+      size="large"
+      >Large</yc-button
+    >
   </yc-space>
 </template>
 ```
+
 </details>
