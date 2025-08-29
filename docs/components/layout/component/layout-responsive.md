@@ -15,7 +15,6 @@
       <yc-menu
         :defaultOpenKeys="['1']"
         :defaultSelectedKeys="'0_2'"
-        theme="dark"
         @menuItemClick="onClickMenuItem">
         <yc-menu-item
           path="0_1"
@@ -222,7 +221,6 @@ export default defineComponent({
       <yc-menu
         :defaultOpenKeys="['1']"
         :defaultSelectedKeys="'0_2'"
-        theme="dark"
         @menuItemClick="onClickMenuItem">
         <yc-menu-item
           path="0_1"
