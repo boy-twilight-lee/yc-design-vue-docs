@@ -9,6 +9,7 @@ import NotificationBasicUse from "./component/notification-basic-use.md"
 import NotificationType from "./component/notification-type.md"
 import NotificationPosition from "./component/notification-position.md"
 import NotificationUpdate from "./component/notification-update.md"
+import NotificationCustom from "./component/notification-custom.md"
 import NotificationStyle from "./component/notification-style.md"
 import NotificationApi from "./component/notification-api.md"
 </script>
@@ -17,5 +18,6 @@ import NotificationApi from "./component/notification-api.md"
 <notification-type />
 <notification-position />
 <notification-update />
+<notification-custom />
 <notification-style />
 <notification-api />
