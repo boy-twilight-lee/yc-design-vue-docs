@@ -2,7 +2,7 @@
 
 通过设置 `Menu.Sider` 的 `trigger` 属性，实现自定义收起按钮的图标。
 
-<div class="cell-demo vp-raw">
+<div class="cell-demp vp-raw">
   <yc-layout class="layout-demo">
     <yc-layout-sider
       collapsible
@@ -16,20 +16,29 @@
         <yc-menu-item
           path="0_1"
           disabled>
-          <IconHome></IconHome>
+          <template #icon>
+            <IconHome />
+          </template>
           Menu 1
         </yc-menu-item>
         <yc-menu-item path="0_2">
-          <IconCalendar></IconCalendar>
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 2
         </yc-menu-item>
         <yc-menu-item path="0_3">
-          <IconCalendar></IconCalendar>
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 3
         </yc-menu-item>
         <yc-sub-menu path="1">
+           <template #icon>
+              <IconCalendar />
+            </template>
           <template #title>
-            <IconCalendar></IconCalendar> Navigation 1
+            Navigation 1
           </template>
           <yc-menu-item path="1_1">Menu 1</yc-menu-item>
           <yc-menu-item path="1_2">Menu 2</yc-menu-item>
@@ -48,8 +57,11 @@
           </yc-sub-menu>
         </yc-sub-menu>
         <yc-sub-menu path="4">
+           <template #icon>
+              <IconCalendar />
+            </template>
           <template #title>
-            <IconCalendar></IconCalendar> Navigation 4
+            Navigation 4
           </template>
           <yc-menu-item path="4_1">Menu 1</yc-menu-item>
           <yc-menu-item path="4_2">Menu 2</yc-menu-item>
@@ -150,21 +162,28 @@ function onClickMenuItem(key) {
         <yc-menu-item
           path="0_1"
           disabled>
-          <IconHome></IconHome>
+          <template #icon>
+            <IconHome />
+          </template>
           Menu 1
         </yc-menu-item>
         <yc-menu-item path="0_2">
-          <IconCalendar></IconCalendar>
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 2
         </yc-menu-item>
         <yc-menu-item path="0_3">
-          <IconCalendar></IconCalendar>
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 3
         </yc-menu-item>
         <yc-sub-menu path="1">
-          <template #title>
-            <IconCalendar></IconCalendar> Navigation 1
+          <template #icon>
+            <IconCalendar />
           </template>
+          <template #title> Navigation 1 </template>
           <yc-menu-item path="1_1">Menu 1</yc-menu-item>
           <yc-menu-item path="1_2">Menu 2</yc-menu-item>
           <yc-sub-menu
@@ -182,9 +201,10 @@ function onClickMenuItem(key) {
           </yc-sub-menu>
         </yc-sub-menu>
         <yc-sub-menu path="4">
-          <template #title>
-            <IconCalendar></IconCalendar> Navigation 4
+          <template #icon>
+            <IconCalendar />
           </template>
+          <template #title> Navigation 4 </template>
           <yc-menu-item path="4_1">Menu 1</yc-menu-item>
           <yc-menu-item path="4_2">Menu 2</yc-menu-item>
           <yc-menu-item path="4_3">Menu 3</yc-menu-item>

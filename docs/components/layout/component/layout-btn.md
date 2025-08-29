@@ -3,81 +3,93 @@
 设置 `Menu.Sider` 的 `hide-trigger` 属性为 `true` 后，`Sider` 内置的缩起按钮不会显示。此时可自定义收起按钮。
 
 <div class="cell-demo vp-raw">
-<yc-layout class="layout-demo">
-<yc-layout-sider
+  <yc-layout class="layout-demo">
+    <yc-layout-sider
       hide-trigger
       collapsible
       :collapsed="collapsed">
-<div class="logo" />
-<yc-menu
-:defaultOpenKeys="['1']"
-:defaultSelectedKeys="'0_3'"
-:style="{ width: '100%' }"
-@menuItemClick="onClickMenuItem">
-<yc-menu-item
+      <div class="logo" />
+      <yc-menu
+        :defaultOpenKeys="['1']"
+        :defaultSelectedKeys="'0_3'"
+        :style="{ width: '100%' }"
+        @menuItemClick="onClickMenuItem">
+        <yc-menu-item
           path="0_1"
           disabled>
-<IconHome />
-Menu 1
-</yc-menu-item>
-<yc-menu-item path="0_2">
-<IconCalendar />
-Menu 2
-</yc-menu-item>
-<yc-menu-item path="0_3">
-<IconCalendar />
-Menu 3
-</yc-menu-item>
-<yc-sub-menu path="1">
-<template #title>
-<span><IconCalendar />Navigation 1</span>
-</template>
-<yc-menu-item path="1_1">Menu 1</yc-menu-item>
-<yc-menu-item path="1_2">Menu 2</yc-menu-item>
-<yc-sub-menu
+          <template #icon>
+            <IconHome />
+          </template>
+          Menu 1
+        </yc-menu-item>
+        <yc-menu-item path="0_2">
+          <template #icon>
+            <IconCalendar />
+          </template>
+          Menu 2
+        </yc-menu-item>
+        <yc-menu-item path="0_3">
+          <template #icon>
+            <IconCalendar />
+          </template>
+          Menu 3
+        </yc-menu-item>
+        <yc-sub-menu path="1">
+           <template #icon>
+              <IconCalendar />
+            </template>
+          <template #title>
+            <span>Navigation 1</span>
+          </template>
+          <yc-menu-item path="1_1">Menu 1</yc-menu-item>
+          <yc-menu-item path="1_2">Menu 2</yc-menu-item>
+          <yc-sub-menu
             path="2"
             title="Navigation 2">
-<yc-menu-item path="2_1">Menu 1</yc-menu-item>
-<yc-menu-item path="2_2">Menu 2</yc-menu-item>
-</yc-sub-menu>
-<yc-sub-menu
+            <yc-menu-item path="2_1">Menu 1</yc-menu-item>
+            <yc-menu-item path="2_2">Menu 2</yc-menu-item>
+          </yc-sub-menu>
+          <yc-sub-menu
             path="3"
             title="Navigation 3">
-<yc-menu-item path="3_1">Menu 1</yc-menu-item>
-<yc-menu-item path="3_2">Menu 2</yc-menu-item>
-<yc-menu-item path="3_3">Menu 3</yc-menu-item>
-</yc-sub-menu>
-</yc-sub-menu>
-<yc-sub-menu path="4">
-<template #title>
-<span><IconCalendar />Navigation 4</span>
-</template>
-<yc-menu-item path="4_1">Menu 1</yc-menu-item>
-<yc-menu-item path="4_2">Menu 2</yc-menu-item>
-<yc-menu-item path="4_3">Menu 3</yc-menu-item>
-</yc-sub-menu>
-</yc-menu>
-</yc-layout-sider>
-<yc-layout>
-<yc-layout-header style="padding-left: 20px;">
-<yc-button
-shape="round"
-@click="onCollapse">
-<IconCaretRight v-if="collapsed" />
-<IconCaretLeft v-else />
-</yc-button>
-</yc-layout-header>
-<yc-layout style="padding: 0 24px;">
-<yc-breadcrumb :style="{ margin: '16px 0' }">
-<yc-breadcrumb-item>Home</yc-breadcrumb-item>
-<yc-breadcrumb-item>List</yc-breadcrumb-item>
-<yc-breadcrumb-item>App</yc-breadcrumb-item>
-</yc-breadcrumb>
-<yc-layout-content>Content</yc-layout-content>
-<yc-layout-footer>Footer</yc-layout-footer>
-</yc-layout>
-</yc-layout>
-</yc-layout>
+            <yc-menu-item path="3_1">Menu 1</yc-menu-item>
+            <yc-menu-item path="3_2">Menu 2</yc-menu-item>
+            <yc-menu-item path="3_3">Menu 3</yc-menu-item>
+          </yc-sub-menu>
+        </yc-sub-menu>
+        <yc-sub-menu path="4">
+           <template #icon>
+              <IconCalendar />
+            </template>
+          <template #title>
+            <span>Navigation 4</span>
+          </template>
+          <yc-menu-item path="4_1">Menu 1</yc-menu-item>
+          <yc-menu-item path="4_2">Menu 2</yc-menu-item>
+          <yc-menu-item path="4_3">Menu 3</yc-menu-item>
+        </yc-sub-menu>
+      </yc-menu>
+    </yc-layout-sider>
+    <yc-layout>
+      <yc-layout-header style="padding-left: 20px;">
+        <yc-button
+          shape="round"
+          @click="onCollapse">
+          <IconCaretRight v-if="collapsed" />
+          <IconCaretLeft v-else />
+        </yc-button>
+      </yc-layout-header>
+      <yc-layout style="padding: 0 24px;">
+        <yc-breadcrumb :style="{ margin: '16px 0' }">
+          <yc-breadcrumb-item>Home</yc-breadcrumb-item>
+          <yc-breadcrumb-item>List</yc-breadcrumb-item>
+          <yc-breadcrumb-item>App</yc-breadcrumb-item>
+        </yc-breadcrumb>
+        <yc-layout-content>Content</yc-layout-content>
+        <yc-layout-footer>Footer</yc-layout-footer>
+      </yc-layout>
+    </yc-layout>
+  </yc-layout>
 </div>
 
 <script setup>
@@ -159,20 +171,29 @@ const onClickMenuItem = (key) => {
         <yc-menu-item
           path="0_1"
           disabled>
-          <IconHome />
+          <template #icon>
+            <IconHome />
+          </template>
           Menu 1
         </yc-menu-item>
         <yc-menu-item path="0_2">
-          <IconCalendar />
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 2
         </yc-menu-item>
         <yc-menu-item path="0_3">
-          <IconCalendar />
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 3
         </yc-menu-item>
         <yc-sub-menu path="1">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 1</span>
+            <span>Navigation 1</span>
           </template>
           <yc-menu-item path="1_1">Menu 1</yc-menu-item>
           <yc-menu-item path="1_2">Menu 2</yc-menu-item>
@@ -191,8 +212,11 @@ const onClickMenuItem = (key) => {
           </yc-sub-menu>
         </yc-sub-menu>
         <yc-sub-menu path="4">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 4</span>
+            <span>Navigation 4</span>
           </template>
           <yc-menu-item path="4_1">Menu 1</yc-menu-item>
           <yc-menu-item path="4_2">Menu 2</yc-menu-item>

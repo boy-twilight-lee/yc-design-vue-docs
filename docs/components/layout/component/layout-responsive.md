@@ -20,16 +20,23 @@
         <yc-menu-item
           path="0_1"
           disabled>
-          <IconHome />
+           <template #icon>
+            <IconHome />
+          </template>
           Menu 1
         </yc-menu-item>
         <yc-menu-item path="0_2">
-          <IconCalendar />
+       <template #icon>
+            <IconCalendar />
+          </template>
           Menu 2
         </yc-menu-item>
         <yc-sub-menu path="1">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 1</span>
+            <span>Navigation 1</span>
           </template>
           <yc-menu-item path="1_1">Menu 1</yc-menu-item>
           <yc-menu-item path="1_2">Menu 2</yc-menu-item>
@@ -48,8 +55,11 @@
           </yc-sub-menu>
         </yc-sub-menu>
         <yc-sub-menu path="4">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 4</span>
+            <span>Navigation 4</span>
           </template>
           <yc-menu-item path="4_1">Menu 1</yc-menu-item>
           <yc-menu-item path="4_2">Menu 2</yc-menu-item>
@@ -212,20 +222,28 @@ export default defineComponent({
       <yc-menu
         :defaultOpenKeys="['1']"
         :defaultSelectedKeys="'0_2'"
+        theme="dark"
         @menuItemClick="onClickMenuItem">
         <yc-menu-item
           path="0_1"
           disabled>
-          <IconHome />
+          <template #icon>
+            <IconHome />
+          </template>
           Menu 1
         </yc-menu-item>
         <yc-menu-item path="0_2">
-          <IconCalendar />
+          <template #icon>
+            <IconCalendar />
+          </template>
           Menu 2
         </yc-menu-item>
         <yc-sub-menu path="1">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 1</span>
+            <span>Navigation 1</span>
           </template>
           <yc-menu-item path="1_1">Menu 1</yc-menu-item>
           <yc-menu-item path="1_2">Menu 2</yc-menu-item>
@@ -244,8 +262,11 @@ export default defineComponent({
           </yc-sub-menu>
         </yc-sub-menu>
         <yc-sub-menu path="4">
+          <template #icon>
+            <IconCalendar />
+          </template>
           <template #title>
-            <span><IconCalendar />Navigation 4</span>
+            <span>Navigation 4</span>
           </template>
           <yc-menu-item path="4_1">Menu 1</yc-menu-item>
           <yc-menu-item path="4_2">Menu 2</yc-menu-item>
