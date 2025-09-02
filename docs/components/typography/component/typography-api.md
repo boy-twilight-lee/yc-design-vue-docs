@@ -20,7 +20,7 @@
 
 <field-table :data="paragraphProps"/>
 
-### type
+### Type
 
 ```typescript
 type TypographyType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';

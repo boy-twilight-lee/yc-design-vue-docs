@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, toRefs } from 'vue';
 import { Table as ATable } from '@arco-design/web-vue';
 const props = defineProps({
   data: {
@@ -21,6 +21,7 @@ const props = defineProps({
     default: 'props',
   },
 });
+const { type } = toRefs(props);
 // 动态计算最终显示的列
 const columns = computed(() => {
   const nameMap = {
@@ -36,7 +37,7 @@ const columns = computed(() => {
   };
   return [
     {
-      title: nameMap[props.type],
+      title: nameMap[type.value],
       dataIndex: 'name',
       width: 180,
     },
@@ -45,11 +46,11 @@ const columns = computed(() => {
       dataIndex: 'desc',
     },
     {
-      title: typeMap[props.type] ?? '参数',
+      title: typeMap[type.value] ?? '参数',
       dataIndex: 'type',
-      width: 250,
+      width: ['emits', 'methods', 'slots'].includes(props.type) ? 450 : 250,
     },
-    props.type == 'props'
+    type.value == 'props'
       ? {
           title: '默认值',
           dataIndex: 'value',

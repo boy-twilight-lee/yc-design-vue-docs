@@ -10,4 +10,4 @@ import CalendarApi from "./component/calendar-api.md"
 </script>
 
 <calendar-basic-use />
-<calendar-api />
+<calendar-api  />

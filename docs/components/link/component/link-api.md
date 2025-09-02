@@ -8,7 +8,7 @@
 
 <field-table :data="linkEvents" type="emits"/>
 
-### type
+### Type
 
 ```typescript
 type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
