@@ -5,7 +5,6 @@
 <div class="cell-demo vp-raw">
   <yc-layout class="layout-demo">
     <yc-layout-sider
-      theme="dark"
       breakpoint="lg"
       :width="220"
       collapsible
@@ -122,6 +121,7 @@
         <yc-layout-footer>Footer</yc-layout-footer>
       </yc-layout>
     </yc-layout>
+
   </yc-layout>
 </div>
 
@@ -162,34 +162,34 @@ export default defineComponent({
   background: var(--color-fill-2);
   border: 1px solid var(--color-border);
 }
-.layout-demo :deep(.arco-layout-sider) .logo {
+.layout-demo :deep(.yc-layout-sider) .logo {
   height: 32px;
   margin: 12px 8px;
   background: rgba(255, 255, 255, 0.2);
 }
-.layout-demo :deep(.arco-layout-sider-light) .logo {
+.layout-demo :deep(.yc-layout-sider-light) .logo {
   background: var(--color-fill-2);
 }
-.layout-demo :deep(.arco-layout-header) {
+.layout-demo :deep(.yc-layout-header) {
   height: 64px;
   line-height: 64px;
   background: var(--color-bg-3);
 }
-.layout-demo :deep(.arco-layout-footer) {
+.layout-demo :deep(.yc-layout-footer) {
   height: 48px;
   color: var(--color-text-2);
   font-weight: 400;
   font-size: 14px;
   line-height: 48px;
 }
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo :deep(.yc-layout-content) {
   color: var(--color-text-2);
   font-weight: 400;
   font-size: 14px;
   background: var(--color-bg-3);
 }
-.layout-demo :deep(.arco-layout-footer),
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo :deep(.yc-layout-footer),
+.layout-demo :deep(.yc-layout-content) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -368,34 +368,34 @@ export default defineComponent({
   background: var(--color-fill-2);
   border: 1px solid var(--color-border);
 }
-.layout-demo :deep(.arco-layout-sider) .logo {
+.layout-demo :deep(.yc-layout-sider) .logo {
   height: 32px;
   margin: 12px 8px;
   background: rgba(255, 255, 255, 0.2);
 }
-.layout-demo :deep(.arco-layout-sider-light) .logo {
+.layout-demo :deep(.yc-layout-sider-light) .logo {
   background: var(--color-fill-2);
 }
-.layout-demo :deep(.arco-layout-header) {
+.layout-demo :deep(.yc-layout-header) {
   height: 64px;
   line-height: 64px;
   background: var(--color-bg-3);
 }
-.layout-demo :deep(.arco-layout-footer) {
+.layout-demo :deep(.yc-layout-footer) {
   height: 48px;
   color: var(--color-text-2);
   font-weight: 400;
   font-size: 14px;
   line-height: 48px;
 }
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo :deep(.yc-layout-content) {
   color: var(--color-text-2);
   font-weight: 400;
   font-size: 14px;
   background: var(--color-bg-3);
 }
-.layout-demo :deep(.arco-layout-footer),
-.layout-demo :deep(.arco-layout-content) {
+.layout-demo :deep(.yc-layout-footer),
+.layout-demo :deep(.yc-layout-content) {
   display: flex;
   flex-direction: column;
   justify-content: center;
