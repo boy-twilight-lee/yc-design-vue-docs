@@ -124,13 +124,7 @@ const descriptionsSlots = ref([
     desc: '标题',
     type: '-',
     value: '-',
-  },
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
+  }
 ]);
 
 const descriptionsItemProps = ref([
@@ -154,13 +148,7 @@ const descriptionsItemSlots = ref([
     desc: '标签',
     type: '-',
     value: '-',
-  },
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
+  }
 ]);
 
 const descDataProps = ref([

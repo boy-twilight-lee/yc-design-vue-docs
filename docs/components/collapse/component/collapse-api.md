@@ -8,10 +8,6 @@
 
 <field-table :data="collapseEvents" type="emits"/>
 
-### collapse Slots
-
-<field-table :data="collapseSlots" type="slots"/>
-
 ### collapse-item Props
 
 <field-table :data="collapseItemProps"/>
@@ -90,14 +86,6 @@ const collapseEvents = ref([
   },
 ]);
 
-const collapseSlots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-]);
 
 const collapseItemProps = ref([
   {
@@ -148,12 +136,6 @@ const collapseItemSlots = ref([
   {
     name: 'header',
     desc: '面板的标题',
-    type: '-',
-    value: '-',
-  },
-  {
-    name: 'default',
-    desc: '面板的内容',
     type: '-',
     value: '-',
   },

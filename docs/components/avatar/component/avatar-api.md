@@ -16,10 +16,6 @@
 
 <field-table :data="avatarGroupProps" />
 
-### avatar-group Slots
-
-<field-table :data="avatarGroupSlots" type="slots"/>
-
 ### Type
 
 ```typescript
@@ -101,12 +97,6 @@ const avatarEvents = ref([
 
 const avatarSlots = ref([
   {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-  {
     name: 'trigger-icon',
     desc: '可点击的头像交互图标',
     type: '-',
@@ -159,12 +149,4 @@ const avatarGroupProps = ref([
   },
 ]);
 
-const avatarGroupSlots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-]);
 </script>

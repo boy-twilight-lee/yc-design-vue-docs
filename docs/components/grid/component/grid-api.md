@@ -4,33 +4,17 @@
 
 <field-table :data="rowProps" />
 
-### row Slots
-
-<field-table :data="slots" type="slots" />
-
 ### col Props
 
 <field-table :data="colProps"/>
-
-### col Slots
-
-<field-table :data="slots" type="slots" />
 
 ### grid Props
 
 <field-table :data="gridProps"/>
 
-### grid Slots
-
-<field-table :data="slots" type="slots" />
-
 ### grid-item Props
 
 <field-table :data="gridItemProps"/>
-
-### grid-item Slots
-
-<field-table :data="slots" type="slots" />
 
 ### ResponsiveValue
 
@@ -170,14 +154,6 @@ const gridItemProps = ref([
   },
 ]);
 
-const slots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '',
-  },
-]);
 
 const responsiveValue = ref([
   {

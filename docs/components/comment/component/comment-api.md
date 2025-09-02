@@ -84,11 +84,5 @@ const commentSlots = ref([
     type: '-',
     value: '-',
   },
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
 ]);
 </script>

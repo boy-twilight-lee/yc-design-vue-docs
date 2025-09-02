@@ -157,12 +157,6 @@ const commonEvents = ref([
 
 const commonSlots = ref([
   {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '',
-  },
-  {
     name: 'copy-icon',
     desc: '复制图标',
     type: '-',

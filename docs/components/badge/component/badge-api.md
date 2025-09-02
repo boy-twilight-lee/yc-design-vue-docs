@@ -70,12 +70,6 @@ const badgeProps = ref([
 
 const badgeSlots = ref([
   {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-  {
     name: 'content',
     desc: '徽标文字内容',
     type: '-',

@@ -87,12 +87,6 @@ const timePickerProps = ref([
     value: '-',
   },
   {
-    name: 'use12-hours',
-    desc: '12 小时制',
-    type: 'boolean',
-    value: '`false`',
-  },
-  {
     name: 'step',
     desc: '设置 时 / 分 / 秒 的选择间隔',
     type: '{ hour?: number; minute?: number; second?: number;}',

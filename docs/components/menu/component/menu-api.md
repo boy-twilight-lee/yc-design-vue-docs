@@ -57,7 +57,7 @@ const menuProps = ref([
   {
     name: 'mode',
     desc: '菜单的模式',
-    type: '\'vertical\' | \'horizontal\' | \'pop\' | \'popButton\'',
+    type: '\'vertical\' | \'horizontal\'',
     value: '\'vertical\'',
   },
   {

@@ -159,12 +159,6 @@ const cascaderProps = ref([
     value: '-',
   },
   {
-    name: 'check-strictly',
-    desc: '是否开启严格选择模式',
-    type: 'boolean',
-    value: 'false',
-  },
-  {
     name: 'load-more',
     desc: '数据懒加载函数，传入时开启懒加载功能',
     type: '( option: CascaderOption, done: (children?: CascaderOption[]) => void) => void',
@@ -211,12 +205,6 @@ const cascaderProps = ref([
     desc: '是否展开子菜单',
     type: 'boolean',
     value: 'false',
-  },
-  {
-    name: 'virtual-list-props',
-    desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps',
-    type: 'VirtualListProps',
-    value: '-',
   },
   {
     name: 'tag-nowrap',

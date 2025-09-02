@@ -8,14 +8,6 @@
 
 <field-table :data="carouselEvents" type="emits"/>
 
-### carousel slots
-
-<field-table :data="carouselSlots" type="slots"/>
-
-### carousel-item slots
-
-<field-table :data="carouselSlots" type="slots"/>
-
 ### Type
 
 ```typescript

@@ -8,10 +8,6 @@
 
 <field-table :data="linkEvents" type="emits"/>
 
-### link Slots
-
-<field-table :data="linkSlots" type="slots"/>
-
 ### type
 
 ```typescript
@@ -69,12 +65,4 @@ const linkEvents = ref([
   },
 ]);
 
-const linkSlots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-]);
 </script>

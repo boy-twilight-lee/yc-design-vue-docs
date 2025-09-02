@@ -23,13 +23,7 @@ const emptyProps = ref([
     desc: '自定义图片的地址',
     type: 'string',
     value: '-',
-  },
-  {
-    name: 'in-config-provider',
-    desc: '是否在 ConfigProvider 中使用',
-    type: 'boolean',
-    value: 'false',
-  },
+  }
 ]);
 
 const emptySlots = ref([

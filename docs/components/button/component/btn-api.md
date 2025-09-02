@@ -16,10 +16,6 @@
 
 <field-table :data="buttonGroupProps" />
 
-### button-group Slots
-
-<field-table :data="buttonGroupSlots"  type="slots"/>
-
 ```typescript
 type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
 
@@ -109,12 +105,6 @@ const buttonEvents = ref([
 
 const buttonSlots = ref([
   {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-  {
     name: 'icon',
     desc: '图标',
     type: '-',
@@ -155,12 +145,5 @@ const buttonGroupProps = ref([
   },
 ]);
 
-const buttonGroupSlots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-]);
+
 </script>

@@ -24,10 +24,6 @@
 
 <field-table :data="siderProps" />
 
-### layout-sider slots
-
-<field-table :data="headerSlots"  type="slots"/>
-
 ### Type
 
 ```typescript

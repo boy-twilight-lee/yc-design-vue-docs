@@ -20,10 +20,6 @@
 
 <field-table :data="cardGridProps"/>
 
-### card-grid Slots
-
-<field-table :data="cardGridSlots" type="slots"/>
-
 ### Type
 
 ```typescript
@@ -109,12 +105,6 @@ const cardSlots = ref([
     type: '-',
     value: '-',
   },
-  {
-    name: 'default',
-    desc: 'body内容',
-    type: '-',
-    value: '-',
-  },
 ]);
 
 const cardMetaProps = ref([
@@ -162,12 +152,4 @@ const cardGridProps = ref([
   },
 ]);
 
-const cardGridSlots = ref([
-  {
-    name: 'default',
-    desc: '内容',
-    type: '-',
-    value: '-',
-  },
-]);
 </script>

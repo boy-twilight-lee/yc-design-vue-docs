@@ -4,10 +4,6 @@
 
 <field-table :data="dividerProps"/>
 
-### divider slots
-
-<field-table :data="dividerSlots"/>
-
 ### Type
 
 ```typescript
@@ -51,15 +47,6 @@ const dividerProps = ref([
     desc: '分割线上下 margin (垂直方向时为左右 margin)',
     type: 'number | string',
     value: '-',
-  },
-]);
-
-const dividerSlots = ref([
-  {
-    name: 'default',
-    desc: '分割线内容（垂直情况不生效）',
-    type: "-",
-    value: "",
   },
 ]);
 </script>
