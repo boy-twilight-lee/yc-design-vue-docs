@@ -127,7 +127,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue';
 import { IconHome, IconCalendar } from '@arco-design/web-vue/es/icon';
 
 export default defineComponent({
@@ -333,7 +333,7 @@ export default defineComponent({
 
 <script>
 import { defineComponent, ref } from 'vue';
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue';
 import { IconHome, IconCalendar } from '@arco-design/web-vue/es/icon';
 
 export default defineComponent({

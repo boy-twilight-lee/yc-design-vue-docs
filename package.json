@@ -19,6 +19,8 @@
   "dependencies": {
     "@arco-design/web-vue": "^2.57.0",
     "dayjs": "^1.11.13",
-    "yc-design-vue": "^1.5.6"
+    "unplugin-auto-import": "^20.1.0",
+    "unplugin-vue-components": "^29.0.0",
+    "yc-design-vue": "^1.6.8"
   }
 }

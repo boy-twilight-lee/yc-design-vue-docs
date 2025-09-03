@@ -1,4 +1,7 @@
 import { defineConfig } from 'vitepress';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { ArcoResolver } from 'unplugin-vue-components/resolvers';
 
 export default defineConfig({
   title: 'Yc Design Vue',
@@ -247,6 +250,18 @@ export default defineConfig({
   },
   ignoreDeadLinks: true,
   vite: {
+    plugins: [
+      AutoImport({
+        resolvers: [ArcoResolver()],
+      }),
+      Components({
+        resolvers: [
+          ArcoResolver({
+            sideEffect: true,
+          }),
+        ],
+      }),
+    ],
     ssr: {
       noExternal: [
         'yc-design-vue',

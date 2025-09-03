@@ -32,7 +32,6 @@
 
 <script setup>
 import { computed, ref } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const width = ref(500);
 const number = ref(10);
 const tags = computed(() =>

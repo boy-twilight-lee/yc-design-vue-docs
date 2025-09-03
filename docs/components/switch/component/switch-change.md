@@ -15,7 +15,7 @@
 </div>
 
 <script setup>
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue';
 const handleChangeIntercept = async (newValue) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return true;
@@ -60,7 +60,7 @@ const handleChangeIntercept3 = async (newValue) => {
 </template>
 
 <script setup>
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue';
 const handleChangeIntercept = async (newValue) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return true;

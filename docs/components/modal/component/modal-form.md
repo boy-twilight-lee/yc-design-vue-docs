@@ -31,7 +31,6 @@
 
 <script setup>
 import { reactive, ref } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const visible = ref(false);
 const form = reactive({
   name: '',
@@ -90,7 +89,6 @@ const handleCancel = () => {
 
 <script setup>
 import { reactive, ref } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const visible = ref(false);
 const form = reactive({
   name: '',

@@ -101,7 +101,6 @@
 
 <script setup>
 import { reactive } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const form = reactive({
   rotate: 0,
   gap: [50, 50],
@@ -219,7 +218,6 @@ const form = reactive({
 
 <script setup>
 import { reactive } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const form = reactive({
   rotate: 0,
   gap: [50, 50],

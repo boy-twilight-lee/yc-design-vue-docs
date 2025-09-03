@@ -44,7 +44,7 @@
 
 <script>
 import { ref } from 'vue';
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue';
 import {
   IconMenuFold,
   IconMenuUnfold,
@@ -136,7 +136,7 @@ export default {
 
 <script>
 import { ref } from 'vue';
-import { Message } from '@arco-design/web-vue';
+import { Message } from 'yc-design-vue;
 import {
   IconMenuFold,
   IconMenuUnfold,

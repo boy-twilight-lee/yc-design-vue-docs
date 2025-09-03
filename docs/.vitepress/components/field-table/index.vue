@@ -10,7 +10,7 @@
 
 <script setup>
 import { computed, toRefs } from 'vue';
-import { Table as ATable } from '@arco-design/web-vue';
+// import { Table as ATable } from '@arco-design/web-vue';
 const props = defineProps({
   data: {
     type: Array,

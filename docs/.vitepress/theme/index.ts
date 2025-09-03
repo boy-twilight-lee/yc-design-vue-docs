@@ -11,12 +11,9 @@ import {
 import { useRoute } from 'vitepress';
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css';
-import '@arco-design/web-vue/dist/arco.css';
 import 'yc-design-vue/es/style.css';
-import '../style/custom.less';
-import '../style/global.less';
-import { HeroImage } from '../components/hero-image';
-import { FieldTable } from '../components/field-table';
+import '../style/index.less';
+import { HeroImage, FieldTable } from '../components';
 
 // 是否是服务端渲染
 export const isServerRendering = (() => {
@@ -56,11 +53,9 @@ export default {
         mutations.forEach((mutation) => {
           if (mutation.attributeName !== 'class') return;
           if ((mutation.target as HTMLElement).classList.contains('dark')) {
-            // document.body.setAttribute('arco-theme', 'dark');
             document.body.setAttribute('yc-design-theme', 'dark');
             isDark.value = true;
           } else {
-            // document.body.removeAttribute('arco-theme');
             document.body.removeAttribute('yc-design-theme');
             isDark.value = false;
           }

@@ -18,7 +18,6 @@
 </div>
 
 <script setup>
-import { Tree as ATree } from '@arco-design/web-vue';
 const treeData = [
   {
     title: 'Trunk 0-0',
@@ -127,7 +126,6 @@ const value = ['0-0-2-1'];
 </template>
 
 <script setup>
-import { Tree as ATree } from '@arco-design/web-vue';
 const treeData = [
   {
     title: 'Trunk 0-0',

@@ -8,8 +8,7 @@
 
 <script>
 import { h } from 'vue';
-import { Modal, Button } from '@arco-design/web-vue';
-
+import { Modal, Button } from 'yc-design-vue';
 const ModalContent = {
   setup() {
     const onClick = () => {
@@ -26,7 +25,6 @@ const ModalContent = {
       ]);
   },
 };
-
 export default {
   setup() {
     const handleClick = () => {
@@ -66,7 +64,7 @@ export default {
 
 <script>
 import { h } from 'vue';
-import { Modal, Button } from '@arco-design/web-vue';
+import { Modal, Button } from 'yc-design-vue';
 
 const ModalContent = {
   setup() {

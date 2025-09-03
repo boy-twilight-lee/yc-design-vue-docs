@@ -89,7 +89,6 @@
 
 <script setup>
 import { reactive } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const form = reactive({
   size: 'medium',
   layout: 'horizontal',
@@ -206,7 +205,6 @@ const sizeOptions = ['mini', 'small', 'medium', 'large'];
 
 <script setup>
 import { reactive } from 'vue';
-import { Form as YcForm, FormItem as YcFormItem } from '@arco-design/web-vue';
 const form = reactive({
   size: 'medium',
   layout: 'horizontal',
