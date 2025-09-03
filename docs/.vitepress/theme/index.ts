@@ -1,19 +1,12 @@
+import { h } from 'vue';
 import Theme from 'vitepress/theme';
-import {
-  ref,
-  provide,
-  watch,
-  nextTick,
-  h,
-  onMounted,
-  onBeforeUnmount,
-} from 'vue';
-import { useRoute } from 'vitepress';
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css';
 import 'yc-design-vue/es/style.css';
 import '../style/index.less';
 import { HeroImage, FieldTable } from '../components';
+import useCodeExpand from '../hooks/useCodeExpand';
+import useTheme from '../hooks/useTheme';
 
 // 是否是服务端渲染
 export const isServerRendering = (() => {
@@ -43,56 +36,7 @@ export default {
   },
   setup() {
     if (isServerRendering) return;
-    // 处理暗色主题
-    let observer: MutationObserver | null = null;
-    const isDark = ref(false);
-    provide('isDark', isDark);
-    onMounted(() => {
-      const htmlElement = document.documentElement;
-      observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.attributeName !== 'class') return;
-          if ((mutation.target as HTMLElement).classList.contains('dark')) {
-            document.body.setAttribute('yc-design-theme', 'dark');
-            isDark.value = true;
-          } else {
-            document.body.removeAttribute('yc-design-theme');
-            isDark.value = false;
-          }
-        });
-      });
-      observer.observe(htmlElement, {
-        attributes: true,
-        attributeFilter: ['class'],
-      });
-    });
-    // 在组件卸载前执行，这是非常重要的一步！
-    onBeforeUnmount(() => {
-      observer?.disconnect();
-    });
-    // route信息
-    const route = useRoute();
-    watch(
-      () => route.path,
-      async () => {
-        await nextTick();
-        document?.querySelectorAll('details')?.forEach((details) => {
-          const summary = details.querySelector('summary');
-          if (!summary) {
-            return;
-          }
-          summary.onclick = () => {
-            if (details.hasAttribute('open')) {
-              details.removeAttribute('open');
-            } else {
-              details.setAttribute('open', 'true');
-            }
-          };
-        });
-      },
-      {
-        immediate: true,
-      }
-    );
+    useCodeExpand();
+    useTheme();
   },
 };
