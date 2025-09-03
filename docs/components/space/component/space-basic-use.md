@@ -27,7 +27,7 @@
       v-if="false"
       color="arcoblue">
       Tag
-    `
+    </yc-tag>
     <yc-button type="primary">Item1</yc-button>
     <yc-button type="primary">Item2</yc-button>
     <yc-switch defaultChecked />

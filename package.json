@@ -21,6 +21,6 @@
     "dayjs": "^1.11.13",
     "unplugin-auto-import": "^20.1.0",
     "unplugin-vue-components": "^29.0.0",
-    "yc-design-vue": "^1.7.0"
+    "yc-design-vue": "^1.7.5"
   }
 }
