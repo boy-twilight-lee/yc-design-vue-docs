@@ -1,3 +1,7 @@
+好的，遵照您的要求，这是根据您提供的 GitHub Readme 内容并结合了详细的“按需引入”配置后，为您生成的完整版 `快速上手` 指南。
+
+---
+
 # 🚀 快速上手
 
 ## 👋 介绍
@@ -71,45 +75,54 @@ app.mount('#app');
 
 ### 方式二：按需引入 (On-Demand Import) - 🌟 推荐
 
-**我们强烈推荐这种方式**。它只打包您实际使用到的组件，可以极大地优化最终产物的体积。这需要借助一个 Vite 或 Webpack 的插件来自动完成。
+**我们强烈推荐这种方式**。它只会打包您在项目中实际使用到的组件及其样式，从而可以极大地优化最终产物的体积。为了实现这一目标，我们需要借助 `unplugin-vue-components`、`unplugin-auto-import`、`yc-design-vue-resolver` 插件来自动完成。
 
-**1. 安装插件**
+**1. 安装相关插件**
 
-我们将使用 `unplugin-vue-components` 来实现自动按需导入。
+首先，您需要安装实现按需引入所必需的开发依赖。
 
 ```bash
-npm install unplugin-vue-components -D
+# 使用 npm
+npm install unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
+
+# 使用 yarn
+yarn add unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
+
+# 使用 pnpm
+pnpm add unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
 ```
 
 **2. 配置插件**
 
-在您的 `vite.config.ts` 文件中，引入并配置插件。
+接下来，在您的 `vite.config.ts` 文件中，引入并配置插件。
 
-```typescript
+````typescript
 // vite.config.ts
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+// 引入 unplugin-vue-components
 import Components from 'unplugin-vue-components/vite';
-import { YcDesignVueResolver } from 'yc-design-vue/es/resolver'; // (请确认解析器路径)
+// 导入 YC Design Vue 的专用解析器
+import { YcDesignVueResolver } from 'yc-design-vue-resolver';
 
 export default defineConfig({
   plugins: [
     vue(),
+    AutoImport({
+      resolvers: [YcDesignVueResolver()],
+    }),
     Components({
       resolvers: [
-        // 配置 YC Design Vue 的解析器
         YcDesignVueResolver(),
       ],
-      // 指定组件类型声明文件的生成路径
-      dts: 'src/components.d.ts',
     }),
   ],
 });
 ```
 
-> ⚠️ **重要提示**：请根据 `yc-design-vue` 的实际导出情况，确认 `YcDesignVueResolver` 的正确引入路径。如果组件库尚未提供官方解析器，您也可以手动配置。
+````
 
-完成配置后，您无需在任何地方手动引入组件或样式，可以直接在模板中使用。插件会自动处理这一切！
+完成以上配置后，您就可以直接在项目的任何 `.vue` 文件的模板中直接使用 `yc-` 前缀的组件了，无需手动 `import` 组件和样式，打包工具会为您处理好一切，实现真正的按需加载！
 
 ## 🎬 第一个示例
 
@@ -136,6 +149,7 @@ export default defineConfig({
 </template>
 
 <script setup lang="ts">
+// 注意：使用按需引入后，这里无需手动 import 任何组件！
 import { ref } from 'vue';
 
 const text = ref('');
@@ -151,33 +165,9 @@ const text = ref('');
 </style>
 ```
 
-## 🔑 核心概念
-
-#### 🏷️ 组件前缀
+## 🏷️ 组件前缀
 
 所有 Yc Design Vue 的组件都使用统一的 `yc-` 前缀，以避免与原生HTML标签或其他库的组件产生命名冲突。例如：`yc-button`, `yc-input`, `yc-modal`。
-
-#### 🎨 主题定制
-
-YC Design Vue 开放了一系列全局 CSS 变量，让您可以轻松进行主题定制。只需在您的全局样式文件（如 `style.css`）中覆盖它们即可。
-
-```css
-/* 在你的全局样式文件中 */
-:root {
-  /* 基础品牌色 */
-  --yc-primary-color: #165dff;
-  --yc-primary-color-hover: #4080ff;
-  --yc-primary-color-active: #0e44d1;
-
-  /* 功能色 */
-  --yc-success-color: #00b42a;
-  --yc-warning-color: #ff7d00;
-  --yc-error-color: #f53f3f;
-
-  /* 其他变量... */
-  --yc-border-radius-base: 4px;
-}
-```
 
 ## 🧭 下一步
 
@@ -191,15 +181,15 @@ YC Design Vue 开放了一系列全局 CSS 变量，让您可以轻松进行主�
 
 **❓ Q: 组件渲染了，但是没有样式，怎么办？**
 
-**✅ A:** 如果您是完整引入，请确保在 `main.ts` 中正确引入了全局样式文件 `import 'yc-design-vue/es/style.css';`。如果您是按需引入，请检查 `unplugin-vue-components` 插件的配置是否正确。
+**✅ A:** 如果您是完整引入，请确保在 `main.ts` 中正确引入了全局样式文件 `import 'yc-design-vue/es/style.css';`。如果您是按需引入，请检查 `vite.config.ts` 中 `YcDesignVueResolver` 的配置是否正确，并确保插件版本是兼容的。
 
 **❓ Q: 使用组件时 TypeScript 提示找不到类型？**
 
-**✅ A:** 如果您使用了按需引入，请确保 `vite.config.ts` 中的 `dts` 选项已正确配置，并检查生成的 `components.d.ts` 文件是否已包含在项目的 `tsconfig.json` 的 `include` 范围内。
+**✅ A:** 如果您使用了按需引入，请确保 `vite.config.ts` 中的 `dts` 选项已正确配置，并检查生成的 `components.d.ts` 文件是否已包含在项目的 `tsconfig.json` 的 `include` 范围内。重启 VSCode 或您的 IDE 有时也可以解决类型缓存问题。
 
 **❓ Q: 是否支持服务端渲染 (SSR)？**
 
-**✅ A:** (这里根据您组件库的实际情况回答) 是的，YC Design Vue 经过精心设计，完全兼容 Nuxt.js 等服务端渲染环境。/ 目前正在积极适配中，敬请期待。
+**✅ A:** 是的，YC Design Vue 在设计上考虑了通用性，完全兼容 Nuxt.js 等服务端渲染 (SSR) 环境。 _(您可以根据组件库的实际情况选择以下声明)_ / 目前我们的团队正在积极进行全面的 SSR 适配和测试，将在未来的版本中提供完整的支持，敬请期待。
 
 ## ❤️ 社区与支持
 

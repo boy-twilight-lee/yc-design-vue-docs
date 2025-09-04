@@ -10,107 +10,507 @@ YC Design Vue 提供了灵活的主题定制方案，您可以根据项目需求
 
 ```css
 :root {
-  /* 主题色 */
-  --yc-primary-color: #165dff;
-  --yc-primary-light-1: #3370ff;
-  --yc-primary-light-2: #4080ff;
-  --yc-primary-light-3: #5c91ff;
-  --yc-primary-light-4: #7ba1ff;
-  --yc-primary-light-5: #94b2ff;
-  --yc-primary-light-6: #adc2ff;
-  --yc-primary-light-7: #c5d3ff;
-  --yc-primary-light-8: #dee3ff;
-  --yc-primary-light-9: #f2f4ff;
-
-  /* 功能色 */
-  --yc-success-color: #00b42a;
-  --yc-warning-color: #ff7d00;
-  --yc-error-color: #f53f3f;
-  --yc-info-color: #909399;
-
-  /* 中性色 */
-  --yc-text-color-primary: #1d2129;
-  --yc-text-color-regular: #4e5969;
-  --yc-text-color-secondary: #86909c;
-  --yc-text-color-placeholder: #c9cdd4;
-  --yc-text-color-disabled: #c9cdd4;
-
-  /* 边框色 */
-  --yc-border-color: #e5e6eb;
-  --yc-border-color-light: #f2f3f5;
-  --yc-border-color-lighter: #f7f8fa;
-
-  /* 背景色 */
-  --yc-bg-color: #ffffff;
-  --yc-bg-color-light: #f7f8fa;
-  --yc-bg-color-lighter: #fafbfc;
+  --red-1: 255, 236, 232;
+  --red-2: 253, 205, 197;
+  --red-3: 251, 172, 163;
+  --red-4: 249, 137, 129;
+  --red-5: 247, 101, 96;
+  --red-6: 245, 63, 63;
+  --red-7: 203, 39, 45;
+  --red-8: 161, 21, 30;
+  --red-9: 119, 8, 19;
+  --red-10: 77, 0, 10;
+  --orangered-1: 255, 243, 232;
+  --orangered-2: 253, 221, 195;
+  --orangered-3: 252, 197, 159;
+  --orangered-4: 250, 172, 123;
+  --orangered-5: 249, 144, 87;
+  --orangered-6: 247, 114, 52;
+  --orangered-7: 204, 81, 32;
+  --orangered-8: 162, 53, 17;
+  --orangered-9: 119, 31, 6;
+  --orangered-10: 77, 14, 0;
+  --orange-1: 255, 247, 232;
+  --orange-2: 255, 228, 186;
+  --orange-3: 255, 207, 139;
+  --orange-4: 255, 182, 93;
+  --orange-5: 255, 154, 46;
+  --orange-6: 255, 125, 0;
+  --orange-7: 210, 95, 0;
+  --orange-8: 166, 69, 0;
+  --orange-9: 121, 46, 0;
+  --orange-10: 77, 27, 0;
+  --gold-1: 255, 252, 232;
+  --gold-2: 253, 244, 191;
+  --gold-3: 252, 233, 150;
+  --gold-4: 250, 220, 109;
+  --gold-5: 249, 204, 69;
+  --gold-6: 247, 186, 30;
+  --gold-7: 204, 146, 19;
+  --gold-8: 162, 109, 10;
+  --gold-9: 119, 75, 4;
+  --gold-10: 77, 45, 0;
+  --yellow-1: 254, 255, 232;
+  --yellow-2: 254, 254, 190;
+  --yellow-3: 253, 250, 148;
+  --yellow-4: 252, 242, 107;
+  --yellow-5: 251, 232, 66;
+  --yellow-6: 250, 220, 25;
+  --yellow-7: 207, 175, 15;
+  --yellow-8: 163, 132, 8;
+  --yellow-9: 120, 93, 3;
+  --yellow-10: 77, 56, 0;
+  --lime-1: 252, 255, 232;
+  --lime-2: 237, 248, 187;
+  --lime-3: 220, 241, 144;
+  --lime-4: 201, 233, 104;
+  --lime-5: 181, 226, 65;
+  --lime-6: 159, 219, 29;
+  --lime-7: 126, 183, 18;
+  --lime-8: 95, 148, 10;
+  --lime-9: 67, 112, 4;
+  --lime-10: 42, 77, 0;
+  --green-1: 232, 255, 234;
+  --green-2: 175, 240, 181;
+  --green-3: 123, 225, 136;
+  --green-4: 76, 210, 99;
+  --green-5: 35, 195, 67;
+  --green-6: 0, 180, 42;
+  --green-7: 0, 154, 41;
+  --green-8: 0, 128, 38;
+  --green-9: 0, 102, 34;
+  --green-10: 0, 77, 28;
+  --cyan-1: 232, 255, 251;
+  --cyan-2: 183, 244, 236;
+  --cyan-3: 137, 233, 224;
+  --cyan-4: 94, 223, 214;
+  --cyan-5: 55, 212, 207;
+  --cyan-6: 20, 201, 201;
+  --cyan-7: 13, 165, 170;
+  --cyan-8: 7, 130, 139;
+  --cyan-9: 3, 97, 108;
+  --cyan-10: 0, 66, 77;
+  --blue-1: 232, 247, 255;
+  --blue-2: 195, 231, 254;
+  --blue-3: 159, 212, 253;
+  --blue-4: 123, 192, 252;
+  --blue-5: 87, 169, 251;
+  --blue-6: 52, 145, 250;
+  --blue-7: 32, 108, 207;
+  --blue-8: 17, 75, 163;
+  --blue-9: 6, 48, 120;
+  --blue-10: 0, 26, 77;
+  --arcoblue-1: 232, 243, 255;
+  --arcoblue-2: 190, 218, 255;
+  --arcoblue-3: 148, 191, 255;
+  --arcoblue-4: 106, 161, 255;
+  --arcoblue-5: 64, 128, 255;
+  --arcoblue-6: 22, 93, 255;
+  --arcoblue-7: 14, 66, 210;
+  --arcoblue-8: 7, 44, 166;
+  --arcoblue-9: 3, 26, 121;
+  --arcoblue-10: 0, 13, 77;
+  --purple-1: 245, 232, 255;
+  --purple-2: 221, 190, 246;
+  --purple-3: 195, 150, 237;
+  --purple-4: 168, 113, 227;
+  --purple-5: 141, 78, 218;
+  --purple-6: 114, 46, 209;
+  --purple-7: 85, 29, 176;
+  --purple-8: 60, 16, 143;
+  --purple-9: 39, 6, 110;
+  --purple-10: 22, 0, 77;
+  --pinkpurple-1: 255, 232, 251;
+  --pinkpurple-2: 247, 186, 239;
+  --pinkpurple-3: 240, 142, 230;
+  --pinkpurple-4: 232, 101, 223;
+  --pinkpurple-5: 225, 62, 219;
+  --pinkpurple-6: 217, 26, 217;
+  --pinkpurple-7: 176, 16, 182;
+  --pinkpurple-8: 138, 9, 147;
+  --pinkpurple-9: 101, 3, 112;
+  --pinkpurple-10: 66, 0, 77;
+  --magenta-1: 255, 232, 241;
+  --magenta-2: 253, 194, 219;
+  --magenta-3: 251, 157, 199;
+  --magenta-4: 249, 121, 183;
+  --magenta-5: 247, 84, 168;
+  --magenta-6: 245, 49, 157;
+  --magenta-7: 203, 30, 131;
+  --magenta-8: 161, 16, 105;
+  --magenta-9: 119, 6, 79;
+  --magenta-10: 77, 0, 52;
+  --gray-1: 247, 248, 250;
+  --gray-2: 242, 243, 245;
+  --gray-3: 229, 230, 235;
+  --gray-4: 201, 205, 212;
+  --gray-5: 169, 174, 184;
+  --gray-6: 134, 144, 156;
+  --gray-7: 107, 119, 133;
+  --gray-8: 78, 89, 105;
+  --gray-9: 39, 46, 59;
+  --gray-10: 29, 33, 41;
+  --success-1: var(--green-1);
+  --success-2: var(--green-2);
+  --success-3: var(--green-3);
+  --success-4: var(--green-4);
+  --success-5: var(--green-5);
+  --success-6: var(--green-6);
+  --success-7: var(--green-7);
+  --success-8: var(--green-8);
+  --success-9: var(--green-9);
+  --success-10: var(--green-10);
+  --primary-1: var(--arcoblue-1);
+  --primary-2: var(--arcoblue-2);
+  --primary-3: var(--arcoblue-3);
+  --primary-4: var(--arcoblue-4);
+  --primary-5: var(--arcoblue-5);
+  --primary-6: var(--arcoblue-6);
+  --primary-7: var(--arcoblue-7);
+  --primary-8: var(--arcoblue-8);
+  --primary-9: var(--arcoblue-9);
+  --primary-10: var(--arcoblue-10);
+  --danger-1: var(--red-1);
+  --danger-2: var(--red-2);
+  --danger-3: var(--red-3);
+  --danger-4: var(--red-4);
+  --danger-5: var(--red-5);
+  --danger-6: var(--red-6);
+  --danger-7: var(--red-7);
+  --danger-8: var(--red-8);
+  --danger-9: var(--red-9);
+  --danger-10: var(--red-10);
+  --warning-1: var(--orange-1);
+  --warning-2: var(--orange-2);
+  --warning-3: var(--orange-3);
+  --warning-4: var(--orange-4);
+  --warning-5: var(--orange-5);
+  --warning-6: var(--orange-6);
+  --warning-7: var(--orange-7);
+  --warning-8: var(--orange-8);
+  --warning-9: var(--orange-9);
+  --warning-10: var(--orange-10);
+  --link-1: var(--arcoblue-1);
+  --link-2: var(--arcoblue-2);
+  --link-3: var(--arcoblue-3);
+  --link-4: var(--arcoblue-4);
+  --link-5: var(--arcoblue-5);
+  --link-6: var(--arcoblue-6);
+  --link-7: var(--arcoblue-7);
+  --link-8: var(--arcoblue-8);
+  --link-9: var(--arcoblue-9);
+  --link-10: var(--arcoblue-10);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-border: rgb(var(--gray-3));
+  --color-bg-popup: var(--color-bg-5);
+  --color-bg-1: #fff;
+  --color-bg-2: #fff;
+  --color-bg-3: #fff;
+  --color-bg-4: #fff;
+  --color-bg-5: #fff;
+  --color-bg-white: #fff;
+  --color-neutral-1: rgb(var(--gray-1));
+  --color-neutral-2: rgb(var(--gray-2));
+  --color-neutral-3: rgb(var(--gray-3));
+  --color-neutral-4: rgb(var(--gray-4));
+  --color-neutral-5: rgb(var(--gray-5));
+  --color-neutral-6: rgb(var(--gray-6));
+  --color-neutral-7: rgb(var(--gray-7));
+  --color-neutral-8: rgb(var(--gray-8));
+  --color-neutral-9: rgb(var(--gray-9));
+  --color-neutral-10: rgb(var(--gray-10));
+  --color-text-1: var(--color-neutral-10);
+  --color-text-2: var(--color-neutral-8);
+  --color-text-3: var(--color-neutral-6);
+  --color-text-4: var(--color-neutral-4);
+  --color-border-1: var(--color-neutral-2);
+  --color-border-2: var(--color-neutral-3);
+  --color-border-3: var(--color-neutral-4);
+  --color-border-4: var(--color-neutral-6);
+  --color-fill-1: var(--color-neutral-1);
+  --color-fill-2: var(--color-neutral-2);
+  --color-fill-3: var(--color-neutral-3);
+  --color-fill-4: var(--color-neutral-4);
+  --color-primary-light-1: rgb(var(--primary-1));
+  --color-primary-light-2: rgb(var(--primary-2));
+  --color-primary-light-3: rgb(var(--primary-3));
+  --color-primary-light-4: rgb(var(--primary-4));
+  --color-link-light-1: rgb(var(--link-1));
+  --color-link-light-2: rgb(var(--link-2));
+  --color-link-light-3: rgb(var(--link-3));
+  --color-link-light-4: rgb(var(--link-4));
+  --color-secondary: var(--color-neutral-2);
+  --color-secondary-hover: var(--color-neutral-3);
+  --color-secondary-active: var(--color-neutral-4);
+  --color-secondary-disabled: var(--color-neutral-1);
+  --color-danger-light-1: rgb(var(--danger-1));
+  --color-danger-light-2: rgb(var(--danger-2));
+  --color-danger-light-3: rgb(var(--danger-3));
+  --color-danger-light-4: rgb(var(--danger-4));
+  --color-success-light-1: rgb(var(--success-1));
+  --color-success-light-2: rgb(var(--success-2));
+  --color-success-light-3: rgb(var(--success-3));
+  --color-success-light-4: rgb(var(--success-4));
+  --color-warning-light-1: rgb(var(--warning-1));
+  --color-warning-light-2: rgb(var(--warning-2));
+  --color-warning-light-3: rgb(var(--warning-3));
+  --color-warning-light-4: rgb(var(--warning-4));
+  --border-radius-none: 0;
+  --border-radius-small: 2px;
+  --border-radius-medium: 4px;
+  --border-radius-large: 8px;
+  --border-radius-circle: 50%;
+  --color-tooltip-bg: rgb(var(--gray-10));
+  --color-spin-layer-bg: rgba(255, 255, 255, 0.6);
+  --color-menu-dark-bg: #232324;
+  --color-menu-light-bg: #ffffff;
+  --color-menu-dark-hover: rgba(255, 255, 255, 0.04);
+  --color-mask-bg: rgba(29, 33, 41, 0.6);
 }
 ```
 
 ### 暗色主题
 
 ```css
-[data-theme='dark'] {
-  /* 主题色保持不变 */
-  --yc-primary-color: #3370ff;
-
-  /* 功能色 */
-  --yc-success-color: #27ae60;
-  --yc-warning-color: #f39c12;
-  --yc-error-color: #e74c3c;
-
-  /* 文字色 */
-  --yc-text-color-primary: #e5e6eb;
-  --yc-text-color-regular: #c9cdd4;
-  --yc-text-color-secondary: #86909c;
-  --yc-text-color-placeholder: #6b7785;
-  --yc-text-color-disabled: #6b7785;
-
-  /* 边框色 */
-  --yc-border-color: #3a3a3a;
-  --yc-border-color-light: #2e2e30;
-  --yc-border-color-lighter: #232324;
-
-  /* 背景色 */
-  --yc-bg-color: #17171a;
-  --yc-bg-color-light: #1e1e20;
-  --yc-bg-color-lighter: #232324;
-}
-```
-
-## 组件样式变量
-
-### 按钮组件
-
-```css
-:root {
-  --yc-button-height-mini: 24px;
-  --yc-button-height-small: 28px;
-  --yc-button-height-medium: 32px;
-  --yc-button-height-large: 36px;
-
-  --yc-button-border-radius: 2px;
-  --yc-button-font-size: 14px;
-  --yc-button-font-weight: 400;
-
-  --yc-button-padding-horizontal: 15px;
-  --yc-button-padding-vertical: 0;
-}
-```
-
-### 输入框组件
-
-```css
-:root {
-  --yc-input-height-mini: 24px;
-  --yc-input-height-small: 28px;
-  --yc-input-height-medium: 32px;
-  --yc-input-height-large: 36px;
-
-  --yc-input-border-radius: 2px;
-  --yc-input-font-size: 14px;
-  --yc-input-padding-horizontal: 11px;
-  --yc-input-padding-vertical: 0;
+body[yc-design-theme='dark'] {
+  --red-1: 77, 0, 10;
+  --red-2: 119, 6, 17;
+  --red-3: 161, 22, 31;
+  --red-4: 203, 46, 52;
+  --red-5: 245, 78, 78;
+  --red-6: 247, 105, 101;
+  --red-7: 249, 141, 134;
+  --red-8: 251, 176, 167;
+  --red-9: 253, 209, 202;
+  --red-10: 255, 240, 236;
+  --orangered-1: 77, 14, 0;
+  --orangered-2: 119, 30, 5;
+  --orangered-3: 162, 55, 20;
+  --orangered-4: 204, 87, 41;
+  --orangered-5: 247, 126, 69;
+  --orangered-6: 249, 146, 90;
+  --orangered-7: 250, 173, 125;
+  --orangered-8: 252, 198, 161;
+  --orangered-9: 253, 222, 197;
+  --orangered-10: 255, 244, 235;
+  --orange-1: 77, 27, 0;
+  --orange-2: 121, 48, 4;
+  --orange-3: 166, 75, 10;
+  --orange-4: 210, 105, 19;
+  --orange-5: 255, 141, 31;
+  --orange-6: 255, 150, 38;
+  --orange-7: 255, 179, 87;
+  --orange-8: 255, 205, 135;
+  --orange-9: 255, 227, 184;
+  --orange-10: 255, 247, 232;
+  --gold-1: 77, 45, 0;
+  --gold-2: 119, 75, 4;
+  --gold-3: 162, 111, 15;
+  --gold-4: 204, 150, 31;
+  --gold-5: 247, 192, 52;
+  --gold-6: 249, 204, 68;
+  --gold-7: 250, 220, 108;
+  --gold-8: 252, 233, 149;
+  --gold-9: 253, 244, 190;
+  --gold-10: 255, 252, 232;
+  --yellow-1: 77, 56, 0;
+  --yellow-2: 120, 94, 7;
+  --yellow-3: 163, 134, 20;
+  --yellow-4: 207, 179, 37;
+  --yellow-5: 250, 225, 60;
+  --yellow-6: 251, 233, 75;
+  --yellow-7: 252, 243, 116;
+  --yellow-8: 253, 250, 157;
+  --yellow-9: 254, 254, 198;
+  --yellow-10: 254, 255, 240;
+  --lime-1: 42, 77, 0;
+  --lime-2: 68, 112, 6;
+  --lime-3: 98, 148, 18;
+  --lime-4: 132, 183, 35;
+  --lime-5: 168, 219, 57;
+  --lime-6: 184, 226, 75;
+  --lime-7: 203, 233, 112;
+  --lime-8: 222, 241, 152;
+  --lime-9: 238, 248, 194;
+  --lime-10: 253, 255, 238;
+  --green-1: 0, 77, 28;
+  --green-2: 4, 102, 37;
+  --green-3: 10, 128, 45;
+  --green-4: 18, 154, 55;
+  --green-5: 29, 180, 64;
+  --green-6: 39, 195, 70;
+  --green-7: 80, 210, 102;
+  --green-8: 126, 225, 139;
+  --green-9: 178, 240, 183;
+  --green-10: 235, 255, 236;
+  --cyan-1: 0, 66, 77;
+  --cyan-2: 6, 97, 108;
+  --cyan-3: 17, 131, 139;
+  --cyan-4: 31, 166, 170;
+  --cyan-5: 48, 201, 201;
+  --cyan-6: 63, 212, 207;
+  --cyan-7: 102, 223, 215;
+  --cyan-8: 144, 233, 225;
+  --cyan-9: 190, 244, 237;
+  --cyan-10: 240, 255, 252;
+  --blue-1: 0, 26, 77;
+  --blue-2: 5, 47, 120;
+  --blue-3: 19, 76, 163;
+  --blue-4: 41, 113, 207;
+  --blue-5: 70, 154, 250;
+  --blue-6: 90, 170, 251;
+  --blue-7: 125, 193, 252;
+  --blue-8: 161, 213, 253;
+  --blue-9: 198, 232, 254;
+  --blue-10: 234, 248, 255;
+  --arcoblue-1: 0, 13, 77;
+  --arcoblue-2: 4, 27, 121;
+  --arcoblue-3: 14, 50, 166;
+  --arcoblue-4: 29, 77, 210;
+  --arcoblue-5: 48, 111, 255;
+  --arcoblue-6: 60, 126, 255;
+  --arcoblue-7: 104, 159, 255;
+  --arcoblue-8: 147, 190, 255;
+  --arcoblue-9: 190, 218, 255;
+  --arcoblue-10: 234, 244, 255;
+  --purple-1: 22, 0, 77;
+  --purple-2: 39, 6, 110;
+  --purple-3: 62, 19, 143;
+  --purple-4: 90, 37, 176;
+  --purple-5: 123, 61, 209;
+  --purple-6: 142, 81, 218;
+  --purple-7: 169, 116, 227;
+  --purple-8: 197, 154, 237;
+  --purple-9: 223, 194, 246;
+  --purple-10: 247, 237, 255;
+  --pinkpurple-1: 66, 0, 77;
+  --pinkpurple-2: 101, 3, 112;
+  --pinkpurple-3: 138, 13, 147;
+  --pinkpurple-4: 176, 27, 182;
+  --pinkpurple-5: 217, 46, 217;
+  --pinkpurple-6: 225, 61, 219;
+  --pinkpurple-7: 232, 102, 223;
+  --pinkpurple-8: 240, 146, 230;
+  --pinkpurple-9: 247, 193, 240;
+  --pinkpurple-10: 255, 242, 253;
+  --magenta-1: 77, 0, 52;
+  --magenta-2: 119, 8, 80;
+  --magenta-3: 161, 23, 108;
+  --magenta-4: 203, 43, 136;
+  --magenta-5: 245, 69, 166;
+  --magenta-6: 247, 86, 169;
+  --magenta-7: 249, 122, 184;
+  --magenta-8: 251, 158, 200;
+  --magenta-9: 253, 195, 219;
+  --magenta-10: 255, 232, 241;
+  --gray-1: 23, 23, 26;
+  --gray-2: 46, 46, 48;
+  --gray-3: 72, 72, 73;
+  --gray-4: 95, 95, 96;
+  --gray-5: 120, 120, 122;
+  --gray-6: 146, 146, 147;
+  --gray-7: 171, 171, 172;
+  --gray-8: 197, 197, 197;
+  --gray-9: 223, 223, 223;
+  --gray-10: 246, 246, 246;
+  --primary-1: var(--arcoblue-1);
+  --primary-2: var(--arcoblue-2);
+  --primary-3: var(--arcoblue-3);
+  --primary-4: var(--arcoblue-4);
+  --primary-5: var(--arcoblue-5);
+  --primary-6: var(--arcoblue-6);
+  --primary-7: var(--arcoblue-7);
+  --primary-8: var(--arcoblue-8);
+  --primary-9: var(--arcoblue-9);
+  --primary-10: var(--arcoblue-10);
+  --success-1: var(--green-1);
+  --success-2: var(--green-2);
+  --success-3: var(--green-3);
+  --success-4: var(--green-4);
+  --success-5: var(--green-5);
+  --success-6: var(--green-6);
+  --success-7: var(--green-7);
+  --success-8: var(--green-8);
+  --success-9: var(--green-9);
+  --success-10: var(--green-10);
+  --danger-1: var(--red-1);
+  --danger-2: var(--red-2);
+  --danger-3: var(--red-3);
+  --danger-4: var(--red-4);
+  --danger-5: var(--red-5);
+  --danger-6: var(--red-6);
+  --danger-7: var(--red-7);
+  --danger-8: var(--red-8);
+  --danger-9: var(--red-9);
+  --danger-10: var(--red-10);
+  --warning-1: var(--orange-1);
+  --warning-2: var(--orange-2);
+  --warning-3: var(--orange-3);
+  --warning-4: var(--orange-4);
+  --warning-5: var(--orange-5);
+  --warning-6: var(--orange-6);
+  --warning-7: var(--orange-7);
+  --warning-8: var(--orange-8);
+  --warning-9: var(--orange-9);
+  --warning-10: var(--orange-10);
+  --link-1: var(--arcoblue-1);
+  --link-2: var(--arcoblue-2);
+  --link-3: var(--arcoblue-3);
+  --link-4: var(--arcoblue-4);
+  --link-5: var(--arcoblue-5);
+  --link-6: var(--arcoblue-6);
+  --link-7: var(--arcoblue-7);
+  --link-8: var(--arcoblue-8);
+  --link-9: var(--arcoblue-9);
+  --link-10: var(--arcoblue-10);
+  --color-white: rgba(255, 255, 255, 0.9);
+  --color-black: #000000;
+  --color-border: #333335;
+  --color-bg-1: #17171a;
+  --color-bg-2: #232324;
+  --color-bg-3: #2a2a2b;
+  --color-bg-4: #313132;
+  --color-bg-5: #373739;
+  --color-bg-white: #f6f6f6;
+  --color-text-1: rgba(255, 255, 255, 0.9);
+  --color-text-2: rgba(255, 255, 255, 0.7);
+  --color-text-3: rgba(255, 255, 255, 0.5);
+  --color-text-4: rgba(255, 255, 255, 0.3);
+  --color-fill-1: rgba(255, 255, 255, 0.04);
+  --color-fill-2: rgba(255, 255, 255, 0.08);
+  --color-fill-3: rgba(255, 255, 255, 0.12);
+  --color-fill-4: rgba(255, 255, 255, 0.16);
+  --color-primary-light-1: rgba(var(--primary-6), 0.2);
+  --color-primary-light-2: rgba(var(--primary-6), 0.35);
+  --color-primary-light-3: rgba(var(--primary-6), 0.5);
+  --color-primary-light-4: rgba(var(--primary-6), 0.65);
+  --color-secondary: rgba(var(--gray-9), 0.08);
+  --color-secondary-hover: rgba(var(--gray-8), 0.16);
+  --color-secondary-active: rgba(var(--gray-7), 0.24);
+  --color-secondary-disabled: rgba(var(--gray-9), 0.08);
+  --color-danger-light-1: rgba(var(--danger-6), 0.2);
+  --color-danger-light-2: rgba(var(--danger-6), 0.35);
+  --color-danger-light-3: rgba(var(--danger-6), 0.5);
+  --color-danger-light-4: rgba(var(--danger-6), 0.65);
+  --color-success-light-1: rgb(var(--success-6), 0.2);
+  --color-success-light-2: rgb(var(--success-6), 0.35);
+  --color-success-light-3: rgb(var(--success-6), 0.5);
+  --color-success-light-4: rgb(var(--success-6), 0.65);
+  --color-warning-light-1: rgb(var(--warning-6), 0.2);
+  --color-warning-light-2: rgb(var(--warning-6), 0.35);
+  --color-warning-light-3: rgb(var(--warning-6), 0.5);
+  --color-warning-light-4: rgb(var(--warning-6), 0.65);
+  --color-link-light-1: rgb(var(--link-6), 0.2);
+  --color-link-light-2: rgb(var(--link-6), 0.35);
+  --color-link-light-3: rgb(var(--link-6), 0.5);
+  --color-link-light-4: rgb(var(--link-6), 0.65);
+  --color-tooltip-bg: #373739;
+  --color-spin-layer-bg: rgba(51, 51, 51, 0.6);
+  --color-menu-dark-bg: #232324;
+  --color-menu-light-bg: #232324;
+  --color-menu-dark-hover: var(--color-fill-2);
+  --color-mask-bg: rgba(23, 23, 26, 0.6);
 }
 ```
 
@@ -124,20 +524,13 @@ YC Design Vue 提供了灵活的主题定制方案，您可以根据项目需求
 /* styles/theme.css */
 :root {
   /* 自定义主色调 */
-  --yc-primary-color: #1890ff;
-
+  --primary-6: #1890ff;
   /* 自定义成功色 */
-  --yc-success-color: #52c41a;
-
+  --green-6: #52c41a;
   /* 自定义警告色 */
-  --yc-warning-color: #faad14;
-
+  --yellow-6: #faad14;
   /* 自定义错误色 */
-  --yc-error-color: #f5222d;
-
-  /* 自定义圆角 */
-  --yc-button-border-radius: 6px;
-  --yc-input-border-radius: 6px;
+  --red-6: #f5222d;
 }
 ```
 
@@ -147,125 +540,13 @@ YC Design Vue 提供了灵活的主题定制方案，您可以根据项目需求
 // main.ts
 import { createApp } from 'vue';
 import App from './App.vue';
-import YcUi from 'yc-design-vue';
+import YcDesignVue from 'yc-design-vue';
 import 'yc-design-vue/es/style.css';
 import './styles/theme.css'; // 引入自定义主题
 
 const app = createApp(App);
-app.use(YcUi);
+app.use(YcDesignVue);
 app.mount('#app');
-```
-
-### 动态切换主题
-
-您可以通过 JavaScript 动态修改 CSS 变量来实现主题切换：
-
-```typescript
-// 切换到暗色主题
-function switchToDarkTheme() {
-  document.documentElement.setAttribute('data-theme', 'dark');
-}
-
-// 切换到亮色主题
-function switchToLightTheme() {
-  document.documentElement.removeAttribute('data-theme');
-}
-
-// 动态修改主题色
-function changeThemeColor(color: string) {
-  document.documentElement.style.setProperty('--yc-primary-color', color);
-}
-```
-
-### 使用 ConfigProvider
-
-YC Design Vue 提供了 `ConfigProvider` 组件来全局配置主题：
-
-```vue
-<template>
-  <yc-config-provider :theme="theme">
-    <App />
-  </yc-config-provider>
-</template>
-
-<script setup>
-import { ref } from 'vue';
-
-const theme = ref({
-  token: {
-    colorPrimary: '#1890ff',
-    colorSuccess: '#52c41a',
-    colorWarning: '#faad14',
-    colorError: '#f5222d',
-    borderRadius: 6,
-  },
-});
-</script>
-```
-
-## 预设主题
-
-### Ant Design 风格
-
-```css
-:root {
-  --yc-primary-color: #1890ff;
-  --yc-success-color: #52c41a;
-  --yc-warning-color: #faad14;
-  --yc-error-color: #f5222d;
-  --yc-button-border-radius: 6px;
-  --yc-input-border-radius: 6px;
-}
-```
-
-### Element Plus 风格
-
-```css
-:root {
-  --yc-primary-color: #409eff;
-  --yc-success-color: #67c23a;
-  --yc-warning-color: #e6a23c;
-  --yc-error-color: #f56c6c;
-  --yc-button-border-radius: 4px;
-  --yc-input-border-radius: 4px;
-}
-```
-
-### Material Design 风格
-
-```css
-:root {
-  --yc-primary-color: #2196f3;
-  --yc-success-color: #4caf50;
-  --yc-warning-color: #ff9800;
-  --yc-error-color: #f44336;
-  --yc-button-border-radius: 4px;
-  --yc-input-border-radius: 4px;
-}
-```
-
-## Less 变量
-
-如果您在项目中使用 Less，可以通过 Less 变量来定制主题：
-
-```less
-// theme.less
-@primary-color: #1890ff;
-@success-color: #52c41a;
-@warning-color: #faad14;
-@error-color: #f5222d;
-@border-radius-base: 6px;
-@font-size-base: 14px;
-
-// 编译为 CSS 变量
-:root {
-  --yc-primary-color: @primary-color;
-  --yc-success-color: @success-color;
-  --yc-warning-color: @warning-color;
-  --yc-error-color: @error-color;
-  --yc-button-border-radius: @border-radius-base;
-  --yc-input-border-radius: @border-radius-base;
-}
 ```
 
 ## 注意事项
@@ -274,38 +555,3 @@ const theme = ref({
 2. **优先级**: 自定义的 CSS 变量需要确保优先级高于组件库的默认样式
 3. **作用域**: CSS 变量具有作用域特性，可以在特定容器内生效
 4. **性能**: 使用 CSS 变量进行主题切换性能更好，避免了重新加载样式文件
-
-## 常见问题
-
-### Q: 如何实现按组件定制样式？
-
-A: 您可以通过 CSS 选择器来针对特定组件定制样式：
-
-```css
-.my-custom-button {
-  --yc-primary-color: #ff6b6b;
-}
-```
-
-### Q: 如何实现局部主题？
-
-A: 在特定容器内设置 CSS 变量：
-
-```css
-.theme-container {
-  --yc-primary-color: #52c41a;
-  --yc-button-border-radius: 20px;
-}
-```
-
-### Q: 主题切换时如何添加过渡效果？
-
-A: 在根元素上添加 transition：
-
-```css
-:root {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-```
