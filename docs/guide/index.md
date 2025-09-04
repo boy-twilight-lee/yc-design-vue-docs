@@ -100,9 +100,8 @@ pnpm add unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
 // vite.config.ts
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-// 引入 unplugin-vue-components
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite';
-// 导入 YC Design Vue 的专用解析器
 import { YcDesignVueResolver } from 'yc-design-vue-resolver';
 
 export default defineConfig({

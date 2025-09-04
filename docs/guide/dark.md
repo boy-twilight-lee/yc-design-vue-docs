@@ -4,11 +4,11 @@
 
 ## 切换到暗黑模式
 
-组件库通过 HTML 标签上的 yc-design-dark 属性来标明当前的主题，所以你只要修改这个属性，即可完成主题的切换。
+组件库通过 BODY 标签上的 yc-design-theme 属性来标明当前的主题，所以你只要修改这个属性，即可完成主题的切换。
 
 ```typescript
 // 设置为暗黑主题
-document.documentElement.setAttribute('yc-design-dark', '');
+document.body.setAttribute('yc-design-theme', 'dark');
 // 恢复亮色主题
-document.documentElement.removeAttribute('yc-design-dark');
+document.body.removeAttribute('yc-design-dark');
 ```
