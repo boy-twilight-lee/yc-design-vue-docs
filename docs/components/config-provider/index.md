@@ -6,10 +6,8 @@
 
 <script setup>
 import ProviderBasicUse from "./component/provider-basic-use.md"
-import ProviderEmpty from "./component/provider-empty.md"
 import ProviderApi from "./component/provider-api.md"
 </script>
 
 <provider-basic-use />
-<provider-empty />
 <provider-api />
