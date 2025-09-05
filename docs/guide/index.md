@@ -67,8 +67,6 @@ app.use(YcDesignVue);
 app.mount('#app');
 ```
 
-> 💡 **专家提示**：完整引入会让您在项目的任何 `.vue` 文件中，无需 `import` 即可直接使用所有 `yc-` 前缀的组件，开发体验极佳。
-
 ### 方式二：按需引入 (On-Demand Import) - 🌟 推荐
 
 **我们强烈推荐这种方式**。它只会打包您在项目中实际使用到的组件及其样式，从而可以极大地优化最终产物的体积。为了实现这一目标，我们需要借助 `unplugin-vue-components`、`unplugin-auto-import`、`yc-design-vue-resolver` 插件来自动完成。
@@ -118,51 +116,6 @@ export default defineConfig({
 ````
 
 完成以上配置后，您就可以直接在项目的任何 `.vue` 文件的模板中直接使用 `yc-` 前缀的组件了，无需手动 `import` 组件和样式，打包工具会为您处理好一切，实现真正的按需加载！
-
-## 🎬 第一个示例
-
-现在，让我们把组件用起来！您可以在项目中的任意 `.vue` 文件里直接使用 `yc-design-vue` 的组件了。
-
-```vue
-<template>
-  <div class="demo-container">
-    <yc-button type="primary">主要按钮</yc-button>
-    <yc-button>默认按钮</yc-button>
-    <yc-button
-      type="success"
-      disabled
-      >成功按钮 (禁用)</yc-button
-    >
-  </div>
-  <div class="demo-container">
-    <yc-input
-      v-model="text"
-      placeholder="请输入内容..."
-      style="width: 240px;"></yc-input>
-  </div>
-  <p>输入的内容是: {{ text }}</p>
-</template>
-
-<script setup lang="ts">
-// 注意：使用按需引入后，这里无需手动 import 任何组件！
-import { ref } from 'vue';
-
-const text = ref('');
-</script>
-
-<style scoped>
-.demo-container {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-</style>
-```
-
-## 🏷️ 组件前缀
-
-所有 Yc Design Vue 的组件都使用统一的 `yc-` 前缀，以避免与原生HTML标签或其他库的组件产生命名冲突。例如：`yc-button`, `yc-input`, `yc-modal`。
 
 ## 浏览器支持
 
