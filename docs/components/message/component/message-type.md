@@ -113,7 +113,7 @@ const renderIcon = () => h(IconExclamationCircleFill);
 
 <script setup>
 import { h } from 'vue';
-import { IconExclamationCircleFill } from '@arco-design/web-vue/es/icon';
+import { IconExclamationCircleFill } from '/es/icon';
 const renderIcon = () => h(IconExclamationCircleFill);
 </script>
 ```

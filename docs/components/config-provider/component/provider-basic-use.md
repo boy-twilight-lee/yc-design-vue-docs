@@ -8,7 +8,6 @@
       type="button"
       v-model="localeType"
       :options="localeOptions"></yc-radio-group>
-<div></div>
 <yc-space
       :size="20"
       style="margin-bottom: 20px"
@@ -76,7 +75,6 @@ const locale = computed(() => locales[localeType.value]);
       type="button"
       v-model="localeType"
       :options="localeOptions"></yc-radio-group>
-    <div></div>
     <yc-space
       :size="20"
       style="margin-bottom: 20px"

@@ -10,7 +10,6 @@
 
 <script setup>
 import { computed, toRefs } from 'vue';
-// import { Table as ATable } from '@arco-design/web-vue';
 const props = defineProps({
   data: {
     type: Array,
@@ -30,6 +29,7 @@ const columns = computed(() => {
     methods: '方法名',
     slots: '插槽名',
     format: '格式',
+    langs: '语言',
   };
   const typeMap = {
     props: '类型',
@@ -39,17 +39,19 @@ const columns = computed(() => {
     {
       title: nameMap[type.value],
       dataIndex: 'name',
-      width: 180,
+      width: type.value == 'langs' ? 600 : 180,
     },
     {
-      title: '描述',
+      title: type.value == 'langs' ? '地区编码' : '描述',
       dataIndex: 'desc',
     },
-    {
-      title: typeMap[type.value] ?? '参数',
-      dataIndex: 'type',
-      width: ['emits', 'methods', 'slots'].includes(props.type) ? 450 : 250,
-    },
+    type.value != 'langs'
+      ? {
+          title: typeMap[type.value] ?? '参数',
+          dataIndex: 'type',
+          width: ['emits', 'methods', 'slots'].includes(props.type) ? 450 : 250,
+        }
+      : null,
     type.value == 'props'
       ? {
           title: '默认值',
