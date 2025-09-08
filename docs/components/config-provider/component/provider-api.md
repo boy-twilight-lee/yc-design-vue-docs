@@ -30,18 +30,6 @@ const configProviderProps = ref([
     desc: '大小',
     type: 'Size',
     value: '-',
-  },
-  {
-    name: 'update-at-scroll',
-    desc: '是否在容器滚动时更新弹出框的位置',
-    type: 'boolean',
-    value: '`false`',
-  },
-  {
-    name: 'scroll-to-close',
-    desc: '是否在滚动时关闭弹出框',
-    type: 'boolean',
-    value: '`false`',
-  },
+  }
 ]);
 </script>
