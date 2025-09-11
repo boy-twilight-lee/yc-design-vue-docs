@@ -13,9 +13,9 @@
 <field-table :data="tagSlots" type="slots"/>
 
 ```typescript
-type TagSize = 'small' | 'medium' | 'large';
+type Size = 'small' | 'medium' | 'large';
 
-type TagColor =
+type Color =
   | 'red'
   | 'orangered'
   | 'orange'
@@ -39,13 +39,13 @@ const tagProps = ref([
   {
     name: 'color',
     desc: '标签的颜色',
-    type: "TagColor",
+    type: "Color",
     value: '-',
   },
   {
     name: 'size',
     desc: '标签的大小',
-    type: "TagSize",
+    type: "Size",
     value: "'medium'",
   },
   {
@@ -108,13 +108,13 @@ const tagEvents = ref([
   {
     name: 'close',
     desc: '点击关闭按钮时触发',
-    type: 'ev: MouseEvent',
+    type: '(ev: MouseEvent) => void',
     value: '-',
   },
   {
     name: 'check',
     desc: '用户选中时触发（仅在可选中模式下触发）',
-    type: 'checked: boolean, ev: MouseEvent',
+    type: '(checked: boolean, ev: MouseEvent) => void',
     value: '-',
   },
 ]);

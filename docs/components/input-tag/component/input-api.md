@@ -20,6 +20,16 @@
 
 <field-table :data="tagDataProps"/>
 
+### Type
+
+```typescript
+type InputTagValue = InputTagValue;
+
+type InputRetainValue = boolean | { create?: boolean; blur?: boolean };
+
+type FormatTag = (data: TagData) => string;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -27,13 +37,13 @@ const inputTagProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: '(string | number | TagData)[]',
+    type: 'InputTagValue[]',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控状态）',
-    type: '(string | number | TagData)[]',
+    type: 'InputTagValue[]',
     value: '[]',
   },
   {
@@ -58,30 +68,30 @@ const inputTagProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'readonly',
     desc: '是否为只读模式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'size',
     desc: '输入框的大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size（参见Button）",
     value: "'medium'",
   },
   {
@@ -93,13 +103,13 @@ const inputTagProps = ref([
   {
     name: 'retain-input-value',
     desc: '是否保留输入框的内容',
-    type: 'boolean | { create?: boolean; blur?: boolean }',
-    value: '`false`',
+    type: 'InputRetainValue',
+    value: 'false',
   },
   {
     name: 'format-tag',
     desc: '格式化标签内容',
-    type: '(data: TagData) => string',
+    type: 'FormatTag',
     value: '-',
   },
   {
@@ -126,7 +136,7 @@ const inputTagEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: '(value: (string | number | TagData)[], ev: Event) => void',
+    type: '(value: InputTagValue, ev: Event) => void',
     value: '-',
   },
   {
@@ -230,3 +240,7 @@ const tagDataProps = ref([
   },
 ]);
 </script>
+
+```
+
+```

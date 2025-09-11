@@ -23,16 +23,11 @@
 ### Type
 
 ```typescript
-type GridRowJustify =
-  | 'start'
-  | 'center'
-  | 'end'
-  | 'space-around'
-  | 'space-between';
+type Justify = 'start' | 'center' | 'end' | 'space-around' | 'space-between';
 
-type GridRowAlign = 'start' | 'center' | 'end' | 'stretch';
+type Align = 'start' | 'center' | 'end' | 'stretch';
 
-type GridColFlex = number | string | 'initial' | 'auto' | 'none';
+type Flex = number | string | 'initial' | 'auto' | 'none';
 
 type Gutter = number | ResponsiveValue;
 ```
@@ -50,13 +45,13 @@ const rowProps = ref([
   {
     name: 'justify',
     desc: '水平对齐方式 (justify-content)',
-    type: "GridRowJustify",
+    type: "Justify",
     value: "'start'",
   },
   {
     name: 'align',
     desc: '竖直对齐方式 ( align-items )',
-    type: "GridRowAlign",
+    type: "Align",
     value: "'start'",
   },
   {
@@ -95,7 +90,7 @@ const colProps = ref([
   {
     name: 'flex',
     desc: '设置 flex 布局属性',
-    type: 'GridColFlex',
+    type: 'Flex',
     value: '-',
   },
 ]);

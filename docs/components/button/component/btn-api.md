@@ -17,15 +17,15 @@
 <field-table :data="buttonGroupProps" />
 
 ```typescript
-type ButtonStatus = 'normal' | 'warning' | 'success' | 'danger';
+type Status = 'normal' | 'warning' | 'success' | 'danger';
 
-type ButtonShape = 'square' | 'circle' | 'round';
+type Shape = 'square' | 'circle' | 'round';
 
-type ButtonType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
+type Type = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 
-type ButtonHtmlType = 'button' | 'reset' | 'submit';
+type HtmlType = 'button' | 'reset' | 'submit';
 
-type ButtonSize = 'mini' | 'small' | 'medium' | 'large';
+type Size = 'mini' | 'small' | 'medium' | 'large';
 ```
 
 <script setup>
@@ -35,25 +35,25 @@ const buttonProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
-    type: 'ButtonType',
+    type: 'Type',
     value: "'secondary'",
   },
   {
     name: 'shape',
     desc: '按钮的形状',
-    type: 'ButtonShape',
+    type: 'Shape',
     value: "'square'",
   },
   {
     name: 'status',
     desc: '按钮的状态',
-    type: 'ButtonStatus',
+    type: 'Status',
     value: "'normal'",
   },
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: 'ButtonSize',
+    type: 'Size',
     value: "'medium'",
   },
   {
@@ -116,25 +116,25 @@ const buttonGroupProps = ref([
   {
     name: 'type',
     desc: '按钮的类型，分为五种：次要按钮、主要按钮、虚框按钮、线性按钮、文字按钮。',
-    type: 'ButtonType',
+    type: 'Type',
     value: '-',
   },
   {
     name: 'status',
     desc: '按钮的状态',
-    type: 'ButtonStatus',
+    type: 'Status',
     value: '-',
   },
   {
     name: 'shape',
     desc: '按钮的形状',
-    type: 'ButtonShape',
+    type: 'Shape',
     value: '-',
   },
   {
     name: 'size',
     desc: '按钮的尺寸',
-    type: 'ButtonSize',
+    type: 'Size',
     value: '-',
   },
   {

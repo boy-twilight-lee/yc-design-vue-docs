@@ -23,17 +23,13 @@
 ### Type
 
 ```typescript
-type TabKey = TabKey;
+type TabKey = string | number;
 
-type TabType = 'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule';
+type Type = 'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule';
 
-type TabPositon = 'left' | 'right' | 'bottom' | 'top';
+type Position = 'left' | 'right' | 'bottom' | 'top';
 
-type TabTrigger = 'click' | 'hover';
-
-type TabSize = 'mini' | 'small' | 'medium' | 'large';
-
-type Direction = 'vertical' | 'horizontal';
+type Trigger = 'click' | 'hover';
 ```
 
 <script setup>
@@ -55,25 +51,25 @@ const tabsProps = ref([
   {
     name: 'position',
     desc: '选项卡的位置',
-    type: "TabPositon",
+    type: "Position",
     value: "'top'",
   },
   {
     name: 'size',
     desc: '选项卡的大小',
-    type: "TabSize",
+    type: "Size（参见Button）",
     value: '-',
   },
   {
     name: 'type',
     desc: '选项卡的类型',
-    type: "TabType",
+    type: "Type",
     value: "'line'",
   },
   {
     name: 'direction',
     desc: '选项卡的方向',
-    type: "Direction",
+    type: "Direction（参见Divider）",
     value: "'horizontal'",
   },
   {
@@ -133,7 +129,7 @@ const tabsProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "TabTrigger",
+    type: "Trigger",
     value: "'click'",
   },
 ]);
@@ -142,13 +138,13 @@ const tabsEvents = ref([
   {
     name: 'change',
     desc: '当前标签值改变时触发',
-    type: 'key: TabKey',
+    type: '(key: TabKey) => void',
     value: '-',
   },
   {
     name: 'tab-click',
     desc: '用户点击标签时触发',
-    type: 'key: TabKey',
+    type: '(key: TabKey) => void',
     value: '-',
   },
   {
@@ -160,7 +156,7 @@ const tabsEvents = ref([
   {
     name: 'delete',
     desc: '用户点击删除按钮时触发',
-    type: 'key: TabKey',
+    type: '(key: TabKey) => void',
     value: '-',
   },
 ]);

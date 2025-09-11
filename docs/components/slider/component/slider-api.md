@@ -11,7 +11,7 @@
 ### Type
 
 ```typescript
-type Direction = 'vertical' | 'horizontal';
+
 ```
 
 <script setup>

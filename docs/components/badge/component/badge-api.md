@@ -11,7 +11,7 @@
 ### Type
 
 ```typescript
-type BadgeStatus = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
+type Status = 'normal' | 'processing' | 'success' | 'warning' | 'danger';
 ```
 
 <script setup>
@@ -57,7 +57,7 @@ const badgeProps = ref([
   {
     name: 'status',
     desc: '徽标的状态类型',
-    type: 'BadgeStatus',
+    type: 'Status',
     value: '-',
   },
   {

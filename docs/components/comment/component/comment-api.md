@@ -11,7 +11,7 @@
 ### Type
 
 ```typescript
-type CommentAlign =
+type Align =
   | 'left'
   | 'right'
   | { datetime?: 'left' | 'right'; actions?: 'left' | 'right' };
@@ -48,7 +48,7 @@ const commentProps = ref([
   {
     name: 'align',
     desc: '靠左/靠右 展示 datetime 和 actions',
-    type: 'CommentAlign',
+    type: 'Align',
     value: "'left'",
   },
 ]);

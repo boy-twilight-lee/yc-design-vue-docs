@@ -15,7 +15,7 @@
 ### Type
 
 ```typescript
-type CalendarMode = 'month' | 'year';
+type Mode = 'month' | 'year';
 ```
 
 <script setup>
@@ -37,19 +37,19 @@ const calendarProps = ref([
   {
     name: 'mode',
     desc: '模式',
-    type: 'CalendarMode',
+    type: 'Mode',
     value: '-',
   },
   {
     name: 'default-mode',
     desc: '默认模式',
-    type: 'CalendarMode',
+    type: 'Mode',
     value: "'month'",
   },
   {
     name: 'modes',
     desc: '显示的模式',
-    type: 'CalendarMode[]',
+    type: 'Mode[]',
     value: "['month', 'year']",
   },
 ]);
@@ -58,13 +58,13 @@ const calendarEvents = ref([
   {
     name: 'change',
     desc: '选择的日期改变时触发',
-    type: 'date: Date',
+    type: '(date: Date) => void',
     value: '-',
   },
   {
     name: 'panel-change',
     desc: '日期面板改变时触发',
-    type: 'date: Date',
+    type: '(date: Date) => void',
     value: '-',
   },
 ]);
@@ -73,13 +73,13 @@ const calendarSlots = ref([
   {
     name: 'header',
     desc: '自定义头部内容',
-    type: 'year: number, month: number',
+    type: '(year: number，month: number) => void',
     value: '-',
   },
   {
     name: 'default',
     desc: '自定义单元格内容',
-    type: 'year: number, month: number, date: number',
+    type: '(year: number，month: number，date: number) => void',
     value: '-',
   },
 ]);

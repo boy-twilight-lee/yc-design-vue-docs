@@ -9,7 +9,7 @@
 ```typescript
 type Orientation = 'left' | 'center' | 'right';
 
-type DividerType = 'solid' | 'dashed' | 'dotted' | 'double';
+type Type = 'solid' | 'dashed' | 'dotted' | 'double';
 
 type Direction = 'vertical' | 'horizontal';
 ```
@@ -33,7 +33,7 @@ const dividerProps = ref([
   {
     name: 'type',
     desc: '分割线样式类型',
-    type: "DividerType",
+    type: "Type",
     value: "'solid'",
   },
   {

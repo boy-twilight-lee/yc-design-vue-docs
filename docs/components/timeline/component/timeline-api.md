@@ -19,17 +19,15 @@
 ### Type
 
 ```typescript
-type TimelineMode = 'left' | 'right' | 'top' | 'bottom' | 'alternate';
+type Mode = 'left' | 'right' | 'top' | 'bottom' | 'alternate';
 
-type TimelineLabelPosition = 'relative' | 'same';
+type LabelPosition = 'relative' | 'same';
 
-type TimelineDotType = 'hollow' | 'solid';
+type DotType = 'hollow' | 'solid';
 
-type TimelineLineType = 'solid' | 'dashed' | 'dotted';
+type LineType = 'solid' | 'dashed' | 'dotted';
 
-type TimelinePositon = 'left' | 'right' | 'top' | 'bottom';
-
-type Direction = 'vertical' | 'horizontal';
+type Position = 'left' | 'right' | 'top' | 'bottom';
 ```
 
 <script setup>
@@ -45,13 +43,13 @@ const timelineProps = ref([
   {
     name: 'direction',
     desc: '时间轴方向',
-    type: "Direction",
+    type: "Direction（参见Divider）",
     value: "'vertical'",
   },
   {
     name: 'mode',
     desc: '时间轴的展示类型：时间轴在左侧，时间轴在右侧, 交替出现。',
-    type: "TimelineMode",
+    type: "Mode",
     value: "'left'",
   },
   {
@@ -63,7 +61,7 @@ const timelineProps = ref([
   {
     name: 'label-position',
     desc: '设置标签文本的位置',
-    type: "TimelineLabelPosition",
+    type: "LabelPosition",
     value: "'same'",
   },
 ]);
@@ -87,13 +85,13 @@ const timelineItemProps = ref([
   {
     name: 'dot-type',
     desc: '节点类型：空心圆/实心圆',
-    type: "TimelineDotType",
+    type: "DotType",
     value: "'solid'",
   },
   {
     name: 'line-type',
     desc: '时间轴类型：实线/虚线/点状线',
-    type: "TimelineLineType",
+    type: "LineType",
     value: "'solid'",
   },
   {
@@ -111,7 +109,7 @@ const timelineItemProps = ref([
   {
     name: 'position',
     desc: 'Item 位置',
-    type: 'TimelinePositon',
+    type: 'Position',
     value: '-',
   },
 ]);

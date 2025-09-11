@@ -15,24 +15,6 @@
 ### Type
 
 ```typescript
-type TriggerPostion =
-  | 'top'
-  | 'tl'
-  | 'tr'
-  | 'bottom'
-  | 'bl'
-  | 'br'
-  | 'left'
-  | 'lt'
-  | 'lb'
-  | 'right'
-  | 'rt'
-  | 'rb';
-
-type TriggerType = 'hover' | 'click' | 'focus' | 'contextMenu';
-
-type PopupContainer = string | HTMLElement;
-
 type ClassName =
   | string
   | Record<string, boolean>
@@ -70,13 +52,13 @@ const popoverProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "TriggerType",
+    type: "TriggerType（参见Trigger）",
     value: "'hover'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPosition",
+    type: "TriggerPosition（参见Trigger）",
     value: "'bottom'",
   },
   {
@@ -106,13 +88,13 @@ const popoverProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'PopupContainer',
+    type: 'PopupContainer（参见Trigger）',
     value: '-',
   },
   {
     name: 'trigger-props',
     desc: 'trigger的属性',
-    type: 'TriggerProps',
+    type: 'TriggerProps（参见Trigger）',
     value: '-',
   },
 ]);

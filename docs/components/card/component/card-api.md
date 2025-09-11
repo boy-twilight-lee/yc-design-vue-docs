@@ -23,7 +23,7 @@
 ### Type
 
 ```typescript
-type CardSize = 'medium' | 'small';
+type Size = 'medium' | 'small';
 ```
 
 <script setup>
@@ -51,7 +51,7 @@ const cardProps = ref([
   {
     name: 'size',
     desc: '卡片尺寸',
-    type: 'CardSize',
+    type: 'Size',
     value: "'medium'",
   },
   {

@@ -111,8 +111,10 @@ const countdownProps = ref([
 ]);
 
 const countdownEvents = ref([
-  { name: 'finish', desc: '倒计时完成后触发的回调' },
+  { name: 'finish', desc: '倒计时完成后触发的回调',     type: '-',
+    value: '-', },
 ]);
 
-const countdownSlots = ref([{ name: 'title', desc: '标题' }]);
+const countdownSlots = ref([{ name: 'title', desc: '标题',    type: '-',
+    value: '-', }]);
 </script>

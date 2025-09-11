@@ -28,6 +28,22 @@
 
 <field-table :data="checkboxOptionProps"/>
 
+### Type
+
+```typescript
+type CheckboxValue = string | number | boolean;
+
+type CheckboxOption = (
+  | CheckboxValue
+  | {
+      label?: string;
+      value: CheckboxValue;
+      disabled?: boolean;
+      indeterminate?: boolean;
+    }
+)[];
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -35,32 +51,32 @@ const checkboxProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'boolean | Array<string | number | boolean>',
+    type: 'boolean',
     value: '-',
   },
   {
     name: 'default-checked',
     desc: '默认是否选中（非受控状态）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'value',
     desc: '选项的 value',
-    type: 'string|number|boolean',
+    type: 'CheckboxValue',
     value: '-',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'indeterminate',
     desc: '是否为半选状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 
@@ -68,7 +84,7 @@ const checkboxEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: '(value: boolean | (string | number | boolean)[], ev: Event) => void',
+    type: '(value: boolean, ev: Event) => void',
     value: '-',
   },
 ]);
@@ -86,14 +102,14 @@ const checkboxGroupProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'Array<string | number | boolean>',
+    type: 'CheckboxValue[]',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控状态）',
-    type: 'Array<string | number | boolean>',
-    value: '`[]`',
+    type: 'CheckboxValue[]',
+    value: '[]',
   },
   {
     name: 'max',
@@ -104,20 +120,20 @@ const checkboxGroupProps = ref([
   {
     name: 'options',
     desc: '选项',
-    type: 'Array<string | number | CheckboxOption>',
+    type: 'CheckboxOption[]',
     value: '-',
   },
   {
     name: 'direction',
     desc: '复选框的排列方向',
-    type: 'Direction',
+    type: 'Direction（参见Divider）',
     value: "'horizontal'",
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 
@@ -125,7 +141,7 @@ const checkboxGroupEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: '(value: (string | number | boolean)[], ev: Event) => void',
+    type: '(value: CheckboxValue[], ev: Event) => void',
     value: '-',
   },
 ]);

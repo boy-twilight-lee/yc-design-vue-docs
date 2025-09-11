@@ -43,7 +43,7 @@
 ### Type
 
 ```typescript
-type ImageObjectFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+type ObjectFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 
 type HideFooter = boolean | 'never';
 
@@ -117,7 +117,7 @@ const imageProps = ref([
   {
     name: 'fit',
     desc: '确定图片如何适应容器框',
-    type: "ImageObjectFit",
+    type: "ObjectFit",
     value: '-',
   },
   {
@@ -180,7 +180,7 @@ const imageEvents = ref([
   {
     name: 'preview-visible-change',
     desc: '预览的打开和关闭事件',
-    type: 'visible: boolean',
+    type: '(visible: boolean) => void',
     value: '-',
   },
 ]);
@@ -252,7 +252,7 @@ const imagePreviewProps = ref([
   {
     name: 'popup-container',
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
-    type: 'HTMLElement | string',
+    type: 'PopupContainer（参见Trigger）',
     value: '-',
   },
   {
@@ -363,7 +363,7 @@ const imagePreviewGroupProps = ref([
   {
     name: 'popup-container',
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer（参见Trigger）',
     value: '-',
   },
 ]);

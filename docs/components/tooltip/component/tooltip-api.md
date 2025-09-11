@@ -13,22 +13,6 @@
 <field-table :data="tooltipSlots" type="slots"/>
 
 ```typescript
-type TriggerPostion =
-  | 'top'
-  | 'tl'
-  | 'tr'
-  | 'bottom'
-  | 'bl'
-  | 'br'
-  | 'left'
-  | 'lt'
-  | 'lb'
-  | 'right'
-  | 'rt'
-  | 'rb';
-
-type PopupContainer = string | HTMLElement;
-
 type ClassName =
   | string
   | Record<string, boolean>
@@ -60,7 +44,7 @@ const tooltipProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPostion",
+    type: "TriggerPostion（参见Trigger）",
     value: "'top'",
   },
   {
@@ -102,7 +86,7 @@ const tooltipProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'PopupContainer',
+    type: 'PopupContainer（参见Trigger）',
     value: '-',
   },
   {

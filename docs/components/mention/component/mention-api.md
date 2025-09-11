@@ -16,6 +16,12 @@
 
 <field-table :data="mentionSlots"  type="slots"/>
 
+### Type
+
+```typescript
+type MentionType = 'input' | 'textarea';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -35,7 +41,7 @@ const mentionProps = ref([
   {
     name: 'data',
     desc: '用于自动补全的数据',
-    type: '(string | number | SelectOptionData | SelectOptionGroup)[]',
+    type: 'SelectOptions（参见Select）',
     value: '[]',
   },
   {
@@ -48,25 +54,25 @@ const mentionProps = ref([
     name: 'split',
     desc: '选中项的前后分隔符',
     type: 'string',
-    value: "' '",
+    value: "''",
   },
   {
     name: 'type',
     desc: '输入框或文本域',
-    type: "'input' | 'textarea'",
+    type: "MentionType",
     value: "'input'",
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空输入框',
     type: 'boolean',
-    value: 'false)',
+    value: 'false',
   },
 ]);
 
@@ -86,7 +92,7 @@ const mentionEvents = ref([
   {
     name: 'select',
     desc: '选择下拉选项时触发',
-    type: '(value: string | number | Record<string, any> | undefined) => void',
+    type: '(value: SelectValue) => void',
     value: '-',
   },
   {

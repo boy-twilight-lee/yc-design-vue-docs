@@ -16,6 +16,16 @@
 
 <field-table :data="inputSlots"  type="slots"/>
 
+### Type
+
+```typescript
+type WordSlice = (value: string, maxLength: number) => string;
+
+type WordLength = (value: string) => number;
+
+type MaxLength = number | { length: number; errorOnly?: boolean };
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -35,32 +45,32 @@ const inputProps = ref([
   {
     name: 'size',
     desc: '输入框大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size（参见Button）",
     value: "'medium'",
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空输入框',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'readonly',
     desc: '是否为只读状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'placeholder',
@@ -71,25 +81,25 @@ const inputProps = ref([
   {
     name: 'max-length',
     desc: '输入值的最大长度',
-    type: 'number | { length: number; errorOnly?: boolean }',
-    value: '0',
+    type: 'MaxLength',
+    value: '-',
   },
   {
     name: 'show-word-limit',
     desc: '是否显示字数统计',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'word-length',
     desc: '字符长度的计算方法',
-    type: '(value: string) => number',
+    type: 'WordLength',
     value: '-',
   },
   {
     name: 'word-slice',
     desc: '字符截取方法，同 wordLength 一起使用',
-    type: '(value: string, maxLength: number) => string',
+    type: 'WordSlice',
     value: '-',
   },
   {

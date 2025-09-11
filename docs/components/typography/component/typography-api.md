@@ -23,7 +23,7 @@
 ### Type
 
 ```typescript
-type TypographyType = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
+type Type = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 ```
 
 <script setup>
@@ -33,7 +33,7 @@ const commonProps = ref([
   {
     name: 'type',
     desc: '文本类型',
-    type: 'TypographyType',
+    type: 'Type',
     value: '-',
   },
   {
@@ -190,7 +190,7 @@ const paragraphProps = ref([
     name: 'spacing',
     desc: '段落的的行高，长文本(大于5行)的时候推荐使用默认行高，短文本(小于等于3行)推荐使用 close 紧密的行高。',
     type: "'default' | 'close'",
-    value: "`'default'`",
+    value: "default",
   },
 ]);
 </script>

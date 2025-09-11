@@ -12,21 +12,33 @@
 
 <field-table :data="cascaderSlots" type="slots"/>
 
-### cascader-panel Props
-
-<field-table :data="cascaderPanelProps"/>
-
-### cascader-panel Events
-
-<field-table :data="cascaderPanelEvents" type="emits"/>
-
-### cascader-panel Slots
-
-<field-table :data="cascaderPanelSlots" type="slots"/>
-
 ### CascaderOption
 
 <field-table :data="cascaderOption"/>
+
+### Type
+
+```typescript
+type CascaderOptionValue = string | number | Record<string, any>;
+
+type CascaderValue =
+  | CascaderOptionValue
+  | CascaderOptionValue[]
+  | CascaderOptionValue[][];
+
+type ExpandTrigger = 'click' | 'hover';
+
+type LoadMore = (
+  option: CascaderOption,
+  done: (children?: CascaderOption[]) => void
+) => void;
+
+type FallBack =
+  | boolean
+  | ((value: CascaderOptionValue | CascaderOptionValue[]) => string);
+
+type FilterOption = (inputValue: string, option: SelectOptionData) => boolean;
+```
 
 <script setup>
 import { ref } from 'vue';
@@ -47,13 +59,13 @@ const cascaderProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'string| number| Record<string, any>| ( | string | number | Record<string, any> | (string | number | Record<string, any>)[] )[]| undefined',
+    type: 'CascaderValue',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控状态）',
-    type: 'string| number| Record<string, any>| ( | string | number | Record<string, any> | (string | number | Record<string, any>)[] )[]| undefined',
+    type: 'CascaderValue',
     value: "'' | undefined | []",
   },
   {
@@ -77,14 +89,14 @@ const cascaderProps = ref([
   {
     name: 'size',
     desc: '选择框的大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size（参见Button）",
     value: "'medium'",
   },
   {
     name: 'allow-search',
     desc: '是否允许搜索',
     type: 'boolean',
-    value: 'false (single) | true (multiple)',
+    value: 'false',
   },
   {
     name: 'allow-clear',
@@ -111,16 +123,16 @@ const cascaderProps = ref([
     value: '-',
   },
   {
-    name: 'expand-trigger',
-    desc: '展开下一级的触发方式',
-    type: "'click' | 'hover'",
-    value: "'click'",
-  },
-  {
     name: 'default-popup-visible',
     desc: '是否默认显示下拉框（非受控状态）',
     type: 'boolean',
     value: 'false',
+  },
+  {
+    name: 'expand-trigger',
+    desc: '展开下一级的触发方式',
+    type: "ExpandTrigger",
+    value: "'click'",
   },
   {
     name: 'placeholder',
@@ -131,13 +143,7 @@ const cascaderProps = ref([
   {
     name: 'filter-option',
     desc: '自定义选项过滤方法',
-    type: '(inputValue: string, option: CascaderOption) => boolean',
-    value: '-',
-  },
-  {
-    name: 'popup-container',
-    desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'FilterOption',
     value: '-',
   },
   {
@@ -161,7 +167,7 @@ const cascaderProps = ref([
   {
     name: 'load-more',
     desc: '数据懒加载函数，传入时开启懒加载功能',
-    type: '( option: CascaderOption, done: (children?: CascaderOption[]) => void) => void',
+    type: 'LoadMore',
     value: '-',
   },
   {
@@ -197,7 +203,7 @@ const cascaderProps = ref([
   {
     name: 'fallback',
     desc: '自定义不存在选项的值的展示',
-    type: 'boolean| (( value: | string | number | Record<string, unknown> | (string | number | Record<string, unknown>)[] ) => string)',
+    type: 'Fallback',
     value: 'true',
   },
   {
@@ -218,7 +224,7 @@ const cascaderEvents = ref([
   {
     name: 'change',
     desc: '选中值改变时触发',
-    type: 'value: string | number | (string | number | (string | number)[])[] | undefined',
+    type: 'value: CascaderValue',
     value: '-',
   },
   {

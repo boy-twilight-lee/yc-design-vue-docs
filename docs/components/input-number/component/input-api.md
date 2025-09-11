@@ -16,6 +16,18 @@
 
 <field-table :data="inputNumberSlots"  type="slots"/>
 
+### Type
+
+```typescript
+type InputNumberValue = number | string;
+
+type Mode = 'embed' | 'button';
+
+type Formatter = (value: string) => string;
+
+type Parser = (value: string) => string;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -23,19 +35,19 @@ const inputNumberProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'number',
+    type: 'InputNumberValue',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控模式）',
-    type: 'number',
-    value: '-',
+    type: 'InputNumberValue',
+    value: "''",
   },
   {
     name: 'mode',
     desc: '模式（embed：按钮内嵌模式，button：左右按钮模式）',
-    type: "'embed' | 'button'",
+    type: "Mode",
     value: "'embed'",
   },
   {
@@ -54,36 +66,36 @@ const inputNumberProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'max',
     desc: '最大值',
     type: 'number',
-    value: '`Infinity`',
+    value: 'Infinity',
   },
   {
     name: 'min',
     desc: '最小值',
     type: 'number',
-    value: '`-Infinity`',
+    value: '-Infinity',
   },
   {
     name: 'formatter',
     desc: '定义输入框展示值',
-    type: 'func',
+    type: 'Formatter',
     value: '-',
   },
   {
     name: 'parser',
     desc: '从 formatter 转换为数字，和 formatter 搭配使用',
-    type: 'func',
+    type: 'Parser',
     value: '-',
   },
   {
@@ -96,25 +108,19 @@ const inputNumberProps = ref([
     name: 'hide-button',
     desc: '是否隐藏按钮',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'size',
     desc: '输入框大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size（参见Button）",
     value: "'medium'",
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空输入框',
     type: 'boolean',
-    value: '`false`',
-  },
-  {
-    name: 'model-event',
-    desc: '触发 v-model 的事件',
-    type: "'change' | 'input'",
-    value: "'change'",
+    value: 'false',
   },
   {
     name: 'read-only',
@@ -134,7 +140,7 @@ const inputNumberEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: '(value: number | undefined, ev: Event) => void',
+    type: '(value: InputNumberValue, ev: Event) => void',
   },
   {
     name: 'focus',
@@ -154,7 +160,7 @@ const inputNumberEvents = ref([
   {
     name: 'input',
     desc: '输入时触发',
-    type: '(value: number | undefined, inputValue: string, ev: Event) => void',
+    type: '(value: InputNumberValue, inputValue: string, ev: Event) => void',
   },
   {
     name: 'keydown',

@@ -19,9 +19,9 @@
 ### Type
 
 ```typescript
-type AvatarShape = 'square' | 'round';
+type Shape = 'square' | 'round';
 
-type AvatarTriggerType = 'mask' | 'button';
+type TriggerType = 'mask' | 'button';
 
 type ObjectFit = 'cover' | 'contain' | 'fill' | 'none';
 ```
@@ -33,7 +33,7 @@ const avatarProps = ref([
   {
     name: 'shape',
     desc: '头像的形状，有圆形(circle)和正方形(square)两种',
-    type: 'AvatarShape',
+    type: 'Shape',
     value: "'circle'",
   },
   {
@@ -57,7 +57,7 @@ const avatarProps = ref([
   {
     name: 'trigger-type',
     desc: '可点击的头像交互类型',
-    type: 'AvatarTriggerType',
+    type: 'TriggerType',
     value: "'button'",
   },
   {
@@ -78,7 +78,7 @@ const avatarEvents = ref([
   {
     name: 'click',
     desc: '点击回调',
-    type: '(ev: MouseEvent)',
+    type: '(ev: MouseEvent) => void',
     value: '-',
   },
   {
@@ -108,7 +108,7 @@ const avatarGroupProps = ref([
   {
     name: 'shape',
     desc: '头像的形状，有圆形(circle)和正方形(square)两种',
-    type: 'AvatarShape',
+    type: 'Shape',
     value: "'circle'",
   },
   {

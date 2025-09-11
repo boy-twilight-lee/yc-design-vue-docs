@@ -8,6 +8,14 @@
 
 <field-table :data="verificationCodeEvents" type="emits" />
 
+### Type
+
+```typescript
+type Separator = (index: number, character: string) => VNode;
+
+type Formatter = (inputValue: string, index: number, value: string) => string;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -33,43 +41,43 @@ const verificationCodeProps = ref([
   {
     name: 'size',
     desc: '输入框大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size（参见Button）",
     value: "'medium'",
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'masked',
     desc: '是否密码模式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'readonly',
     desc: '只读',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'separator',
     desc: '分隔符。可在不同索引的输入框后自定义渲染分隔符',
-    type: '(index: number, character: string) => VNode',
+    type: 'Separator',
     value: '-',
   },
   {
     name: 'formatter',
     desc: '格式化函数，当用户输入值改变时触发',
-    type: '(inputValue: string, index: number, value: string) => string | boolean',
+    type: 'Formatter',
     value: '-',
   },
 ]);

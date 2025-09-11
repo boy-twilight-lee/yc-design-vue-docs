@@ -25,19 +25,17 @@
 ```typescript
 type TextAlign = 'left' | 'right' | 'center';
 
-type DescriptionsAlign = TextAlign | { label?: TextAlign; value?: TextAlign };
+type Align = TextAlign | { label?: TextAlign; value?: TextAlign };
 
-type DescriptionsColumn = number | ResponsiveValue;
+type Column = number | ResponsiveValue;
 
-type DescriptionsLayout =
+type Layout =
   | 'horizontal'
   | 'vertical'
   | 'inline-horizontal'
   | 'inline-vertical';
 
 export type TableLayout = 'auto' | 'fixed';
-
-export type Size = 'mini' | 'small' | 'medium' | 'large';
 ```
 
 <script setup>
@@ -65,19 +63,19 @@ const descriptionsProps = ref([
   {
     name: 'layout',
     desc: '描述列表的排列方式',
-    type: "DescriptionsLayout",
+    type: "Layout",
     value: "'horizontal'",
   },
   {
     name: 'align',
     desc: '文字的对齐位置',
-    type: 'DescriptionsAlign',
+    type: 'Align',
     value: "'left'",
   },
   {
     name: 'size',
     desc: '描述列表的大小',
-    type: "size",
+    type: "Size（参见Button）",
     value: 'medium',
   },
   {
@@ -110,13 +108,13 @@ const descriptionsSlots = ref([
   {
     name: 'value',
     desc: '数据内容',
-    type: 'value: string, index: number, data: DescData',
+    type: '(value: string，index: number，data: DescData) => void',
     value: '-',
   },
   {
     name: 'label',
     desc: '数据标签',
-    type: 'label: string, index: number, data: DescData',
+    type: '(label: string，index: number，data: DescData) => void',
     value: '-',
   },
   {

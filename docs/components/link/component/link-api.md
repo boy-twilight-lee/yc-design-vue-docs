@@ -11,7 +11,7 @@
 ### Type
 
 ```typescript
-type LinkStatus = 'normal' | 'warning' | 'success' | 'danger';
+type Status = 'normal' | 'warning' | 'success' | 'danger';
 ```
 
 <script setup>
@@ -27,7 +27,7 @@ const linkProps = ref([
   {
     name: 'status',
     desc: '链接的状态',
-    type: "LinkStatus",
+    type: "Status",
     value: "'normal'",
   },
   {

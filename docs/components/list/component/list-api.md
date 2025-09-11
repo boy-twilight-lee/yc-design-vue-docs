@@ -35,13 +35,7 @@
 ### Type
 
 ```typescript
-type ListSize = 'small' | 'medium' | 'large';
-
-type VirtualListProps = {
-  itemHeight?: number;
-  buffer?: number;
-  threshold?: number;
-};
+type Size = 'small' | 'medium' | 'large';
 ```
 
 <script setup>
@@ -57,7 +51,7 @@ const listProps = ref([
   {
     name: 'size',
     desc: '列表大小',
-    type: "ListSize",
+    type: "Size",
     value: "'medium'",
   },
   {
@@ -87,7 +81,7 @@ const listProps = ref([
   {
     name: 'pagination-props',
     desc: '列表分页配置',
-    type: 'PaginationProps',
+    type: 'PaginationProps（参见Pagination）',
     value: '-',
   },
   {
@@ -105,7 +99,7 @@ const listProps = ref([
   {
     name: 'virtual-list-props',
     desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps',
-    type: 'VirtualListProps',
+    type: 'VirtualListProps（参见Select）',
     value: '-',
   },
   {
@@ -147,7 +141,7 @@ const listMethods = ref([
   {
     name: 'scrollIntoView',
     desc: '虚拟滚动到某个元素',
-    type: "options: { index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}",
+    type: "(options: { index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}) => void",
     value: '-',
   },
 ]);

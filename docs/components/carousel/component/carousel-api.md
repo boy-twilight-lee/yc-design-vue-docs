@@ -11,9 +11,9 @@
 ### Type
 
 ```typescript
-type CarouselAnimationName = 'slide' | 'fade';
+type AnimationName = 'slide' | 'fade';
 
-type CarouselShowArrow = 'always' | 'hover' | 'never';
+type ShowArrow = 'always' | 'hover' | 'never';
 
 type AutoPlay = boolean | { interval?: number; hoverToPause?: boolean };
 
@@ -55,7 +55,7 @@ const carouselProps = ref([
   {
     name: 'animation-name',
     desc: '切换动画',
-    type: 'CarouselAnimationName',
+    type: 'AnimationName',
     value: "'slide'",
   },
   {
@@ -67,13 +67,13 @@ const carouselProps = ref([
   {
     name: 'direction',
     desc: '幻灯片移动方向',
-    type: "'horizontal' | 'vertical'",
+    type: "Direction（参见Divider）",
     value: "'horizontal'",
   },
   {
     name: 'show-arrow',
     desc: '切换箭头显示时机',
-    type: 'CarouselShowArrow',
+    type: 'ShowArrow',
     value: "'always'",
   },
   {
@@ -112,7 +112,7 @@ const carouselEvents = ref([
   {
     name: 'change',
     desc: '幻灯片发生切换时的回调函数',
-    type: 'index: number, prevIndex: number, isManual: boolean',
+    type: '(index: number，prevIndex: number，isManual: boolean) => void',
     value: '-',
   },
 ]);
