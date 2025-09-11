@@ -121,7 +121,7 @@ const drawerProps = ref([
   {
     name: 'body-class',
     desc: '抽屉内容部分的类名',
-    type: 'string | any[]',
+    type: 'ClassName',
     value: '-',
   },
   {

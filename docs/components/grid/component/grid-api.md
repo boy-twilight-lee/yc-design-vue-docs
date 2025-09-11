@@ -111,13 +111,13 @@ const gridProps = ref([
     name: 'row-gap',
     desc: '行与行之间的间距',
     type: 'number | ResponsiveValue',
-    value: '0',
+    value: '-',
   },
   {
     name: 'col-gap',
     desc: '列与列之间的间距',
     type: 'number | ResponsiveValue',
-    value: '0',
+    value: '-',
   },
   {
     name: 'collapsed',

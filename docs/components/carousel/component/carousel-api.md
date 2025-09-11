@@ -79,7 +79,7 @@ const carouselProps = ref([
   {
     name: 'arrow-class',
     desc: '切换箭头样式',
-    type: 'string',
+    type: 'ClassName',
     value: '-',
   },
   {
@@ -97,7 +97,7 @@ const carouselProps = ref([
   {
     name: 'indicator-class',
     desc: '指示器的样式',
-    type: 'string',
+    type: 'ClassName',
     value: '-',
   },
   {

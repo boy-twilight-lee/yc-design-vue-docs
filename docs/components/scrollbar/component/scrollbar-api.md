@@ -25,7 +25,7 @@ const scrollbarProps = ref([
   {
     name: 'outer-class',
     desc: '外层的类名',
-    type: 'string|object|array',
+    type: 'ClassName',
     value: '-',
   },
   {

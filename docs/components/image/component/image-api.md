@@ -40,6 +40,21 @@
 
 <field-table :data="imagePreviewActionProps"/>
 
+### Type
+
+```typescript
+type ImageObjectFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+
+type HideFooter = boolean | 'never';
+
+type FooterPostion = 'inner' | 'outer';
+
+type ClassName =
+  | string
+  | Record<string, boolean>
+  | (string | Record<string, boolean>)[];
+```
+
 ### FAQ
 
 <span style="font-size: 16px">关于 `image-preview `的属性说明：</span>
@@ -102,7 +117,7 @@ const imageProps = ref([
   {
     name: 'fit',
     desc: '确定图片如何适应容器框',
-    type: "'contain' | 'cover' | 'fill' | 'none' | 'scale-down'",
+    type: "ImageObjectFit",
     value: '-',
   },
   {
@@ -114,13 +129,13 @@ const imageProps = ref([
   {
     name: 'hide-footer',
     desc: '是否隐藏 footer（支持在加载错误时显示底部内容）',
-    type: "boolean | 'never'",
+    type: "HideFooter",
     value: 'false',
   },
   {
     name: 'footer-position',
     desc: '底部显示的位置',
-    type: "'inner' | 'outer'",
+    type: "FooterPostion",
     value: "'inner'",
   },
   {
@@ -156,7 +171,7 @@ const imageProps = ref([
   {
     name: 'footer-class',
     desc: '底部显示区域的类名',
-    type: 'string|array|object',
+    type: 'ClassName',
     value: '-',
   },
 ]);

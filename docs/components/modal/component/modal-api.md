@@ -151,7 +151,7 @@ const modalProps = ref([
   {
     name: 'modal-class',
     desc: '对话框的类名',
-    type: 'string | any[]',
+    type: 'ClassName',
     value: '-',
   },
   {
@@ -205,7 +205,7 @@ const modalProps = ref([
   {
     name: 'body-class',
     desc: '对话框内容部分的类名',
-    type: 'string | any[]',
+    type: 'ClassName',
     value: '-',
   },
   {

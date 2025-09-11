@@ -34,25 +34,25 @@ const linkProps = ref([
     name: 'hoverable',
     desc: '鼠标悬浮时存在底色',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'icon',
     desc: '图标',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'loading',
     desc: '链接是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'disabled',
     desc: '链接是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 

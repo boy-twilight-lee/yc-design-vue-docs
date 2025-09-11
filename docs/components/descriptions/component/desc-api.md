@@ -78,7 +78,7 @@ const descriptionsProps = ref([
     name: 'size',
     desc: '描述列表的大小',
     type: "size",
-    value: '-',
+    value: 'medium',
   },
   {
     name: 'bordered',

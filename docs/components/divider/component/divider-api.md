@@ -28,13 +28,13 @@ const dividerProps = ref([
     name: 'orientation',
     desc: '分割线文字的位置',
     type: "Orientation",
-    value: "`'center'`",
+    value: "'center'",
   },
   {
     name: 'type',
     desc: '分割线样式类型',
     type: "DividerType",
-    value: '-',
+    value: "'solid'",
   },
   {
     name: 'size',

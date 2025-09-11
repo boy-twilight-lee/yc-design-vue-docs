@@ -32,6 +32,18 @@
 
 <field-table :data="listItemMetaSlots" type="slots"/>
 
+### Type
+
+```typescript
+type ListSize = 'small' | 'medium' | 'large';
+
+type VirtualListProps = {
+  itemHeight?: number;
+  buffer?: number;
+  threshold?: number;
+};
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -45,7 +57,7 @@ const listProps = ref([
   {
     name: 'size',
     desc: '列表大小',
-    type: "'small' | 'medium' | 'large'",
+    type: "ListSize",
     value: "'medium'",
   },
   {
@@ -76,12 +88,6 @@ const listProps = ref([
     name: 'pagination-props',
     desc: '列表分页配置',
     type: 'PaginationProps',
-    value: '-',
-  },
-  {
-    name: 'grid-props',
-    desc: '列表栅格配置',
-    type: 'object',
     value: '-',
   },
   {

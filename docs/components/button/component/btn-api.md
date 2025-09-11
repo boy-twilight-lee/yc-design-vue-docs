@@ -41,8 +41,8 @@ const buttonProps = ref([
   {
     name: 'shape',
     desc: '按钮的形状',
-    type: `ButtonShape`,
-    value: '-',
+    type: 'ButtonShape',
+    value: "'square'",
   },
   {
     name: 'status',
@@ -60,31 +60,31 @@ const buttonProps = ref([
     name: 'long',
     desc: '按钮的宽度是否随容器自适应。',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'loading',
     desc: '按钮是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'disabled',
     desc: '按钮是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'html-type',
     desc: '设置 button 的原生 type 属性，可选值参考 HTML标准',
     type: 'string',
-    value: "`'button'`",
+    value: "'button'",
   },
   {
     name: 'autofocus',
     desc: '设置 button 的原生 autofocus 属性，可选值参考 HTML标准',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'href',
@@ -141,7 +141,7 @@ const buttonGroupProps = ref([
     name: 'disabled',
     desc: '全部子按钮是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 

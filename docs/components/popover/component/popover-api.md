@@ -12,6 +12,33 @@
 
 <field-table :data="popoverSlots" type="slots"/>
 
+### Type
+
+```typescript
+type TriggerPostion =
+  | 'top'
+  | 'tl'
+  | 'tr'
+  | 'bottom'
+  | 'bl'
+  | 'br'
+  | 'left'
+  | 'lt'
+  | 'lb'
+  | 'right'
+  | 'rt'
+  | 'rb';
+
+type TriggerType = 'hover' | 'click' | 'focus' | 'contextMenu';
+
+type PopupContainer = string | HTMLElement;
+
+type ClassName =
+  | string
+  | Record<string, boolean>
+  | (string | Record<string, boolean>)[];
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -43,14 +70,14 @@ const popoverProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    type: "TriggerType",
     value: "'hover'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'",
-    value: "'top'",
+    type: "TriggerPosition",
+    value: "'bottom'",
   },
   {
     name: 'content-class',
@@ -79,7 +106,7 @@ const popoverProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
   },
   {

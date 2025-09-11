@@ -55,7 +55,7 @@ const collapseProps = ref([
     name: 'show-expand-icon',
     desc: '是否显示展开图标',
     type: 'boolean',
-    value: '-',
+    value: 'true',
   },
   {
     name: 'expand-icon-position',

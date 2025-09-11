@@ -16,6 +16,22 @@
 
 <field-table :data="timelineItemSlots" type="slots"/>
 
+### Type
+
+```typescript
+type TimelineMode = 'left' | 'right' | 'top' | 'bottom' | 'alternate';
+
+type TimelineLabelPosition = 'relative' | 'same';
+
+type TimelineDotType = 'hollow' | 'solid';
+
+type TimelineLineType = 'solid' | 'dashed' | 'dotted';
+
+type TimelinePositon = 'left' | 'right' | 'top' | 'bottom';
+
+type Direction = 'vertical' | 'horizontal';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -29,25 +45,25 @@ const timelineProps = ref([
   {
     name: 'direction',
     desc: '时间轴方向',
-    type: "'horizontal' | 'vertical'",
+    type: "Direction",
     value: "'vertical'",
   },
   {
     name: 'mode',
     desc: '时间轴的展示类型：时间轴在左侧，时间轴在右侧, 交替出现。',
-    type: "'left' | 'right' | 'top' | 'bottom' | 'alternate'",
+    type: "TimelineMode",
     value: "'left'",
   },
   {
     name: 'pending',
     desc: '是否展示幽灵节点，设置为 true 时候只展示幽灵节点。传入ReactNode时，会作为节点内容展示。',
-    type: 'boolean|string',
+    type: 'boolean | string',
     value: '-',
   },
   {
     name: 'label-position',
     desc: '设置标签文本的位置',
-    type: "'relative' | 'same'",
+    type: "TimelineLabelPosition",
     value: "'same'",
   },
 ]);
@@ -71,13 +87,13 @@ const timelineItemProps = ref([
   {
     name: 'dot-type',
     desc: '节点类型：空心圆/实心圆',
-    type: "'hollow' | 'solid'",
+    type: "TimelineDotType",
     value: "'solid'",
   },
   {
     name: 'line-type',
     desc: '时间轴类型：实线/虚线/点状线',
-    type: "'solid' | 'dashed' | 'dotted'",
+    type: "TimelineLineType",
     value: "'solid'",
   },
   {
@@ -95,7 +111,7 @@ const timelineItemProps = ref([
   {
     name: 'position',
     desc: 'Item 位置',
-    type: 'PositionType',
+    type: 'TimelinePositon',
     value: '-',
   },
 ]);

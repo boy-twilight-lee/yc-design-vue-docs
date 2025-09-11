@@ -103,7 +103,7 @@ const triggerProps = ref([
   {
     name: 'content-class',
     desc: '弹出框内容的类名',
-    type: 'string|array|object',
+    type: 'ClassName',
     value: '-',
   },
   {
@@ -115,7 +115,7 @@ const triggerProps = ref([
   {
     name: 'arrow-class',
     desc: '弹出框箭头的类名',
-    type: 'string|array|object',
+    type: 'ClassName',
     value: '-',
   },
   {

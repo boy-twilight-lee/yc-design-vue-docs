@@ -46,7 +46,7 @@ const avatarProps = ref([
     name: 'size',
     desc: '头像的尺寸大小，单位是 px。未填写时使用样式中的大小 40px',
     type: 'number',
-    value: '-',
+    value: "medium",
   },
   {
     name: 'auto-fix-font-size',
@@ -70,7 +70,7 @@ const avatarProps = ref([
     name: 'object-fit',
     desc: '图片在容器内的的适应类型',
     type: 'ObjectFit',
-    value: '-',
+    value: "'cover'",
   },
 ]);
 
@@ -115,7 +115,7 @@ const avatarGroupProps = ref([
     name: 'size',
     desc: '头像的尺寸大小，单位是 px',
     type: 'number',
-    value: '-',
+    value: 'medium',
   },
   {
     name: 'auto-fix-font-size',

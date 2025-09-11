@@ -10,5 +10,5 @@
 // 设置为暗黑主题
 document.body.setAttribute('yc-design-theme', 'dark');
 // 恢复亮色主题
-document.body.removeAttribute('yc-design-dark');
+document.body.removeAttribute('yc-design-theme');
 ```

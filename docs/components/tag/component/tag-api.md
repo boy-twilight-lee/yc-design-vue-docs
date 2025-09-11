@@ -12,6 +12,26 @@
 
 <field-table :data="tagSlots" type="slots"/>
 
+```typescript
+type TagSize = 'small' | 'medium' | 'large';
+
+type TagColor =
+  | 'red'
+  | 'orangered'
+  | 'orange'
+  | 'gold'
+  | 'lime'
+  | 'green'
+  | 'cyan'
+  | 'blue'
+  | 'arcoblue'
+  | 'purple'
+  | 'pinkpurple'
+  | 'magenta'
+  | 'gray'
+  | string;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -19,13 +39,13 @@ const tagProps = ref([
   {
     name: 'color',
     desc: '标签的颜色',
-    type: "'red' | 'orangered' | 'orange' | 'gold' | 'lime' | 'green' | 'cyan' | 'blue' | 'arcoblue' | 'purple' | 'pinkpurple' | 'magenta' | 'gray'",
+    type: "TagColor",
     value: '-',
   },
   {
     name: 'size',
     desc: '标签的大小',
-    type: "'small' | 'medium' | 'large'",
+    type: "TagSize",
     value: "'medium'",
   },
   {

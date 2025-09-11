@@ -20,6 +20,22 @@
 
 <field-table :data="tabPaneSlots" type="slots"/>
 
+### Type
+
+```typescript
+type TabKey = TabKey;
+
+type TabType = 'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule';
+
+type TabPositon = 'left' | 'right' | 'bottom' | 'top';
+
+type TabTrigger = 'click' | 'hover';
+
+type TabSize = 'mini' | 'small' | 'medium' | 'large';
+
+type Direction = 'vertical' | 'horizontal';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -27,37 +43,37 @@ const tabsProps = ref([
   {
     name: 'active-key (v-model)',
     desc: '当前选中的标签的 key',
-    type: 'string|number',
+    type: 'TabKey',
     value: '-',
   },
   {
     name: 'default-active-key',
     desc: '默认选中的标签的key（非受控状态，为空时选中第一个标签页）',
-    type: 'string|number',
-    value: '-',
+    type: 'TabKey',
+    value: "''",
   },
   {
     name: 'position',
     desc: '选项卡的位置',
-    type: "'left' | 'right' | 'top' | 'bottom'",
+    type: "TabPositon",
     value: "'top'",
   },
   {
     name: 'size',
     desc: '选项卡的大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "TabSize",
     value: '-',
   },
   {
     name: 'type',
     desc: '选项卡的类型',
-    type: "'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule'",
+    type: "TabType",
     value: "'line'",
   },
   {
     name: 'direction',
     desc: '选项卡的方向',
-    type: "'horizontal' | 'vertical'",
+    type: "Direction",
     value: "'horizontal'",
   },
   {
@@ -117,14 +133,8 @@ const tabsProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover' | 'click'",
+    type: "TabTrigger",
     value: "'click'",
-  },
-  {
-    name: 'scroll-position',
-    desc: '被选中 tab 的滚动位置，默认 auto 即会将 activeTab 滚动到可见区域，但不会特意做位置调整',
-    type: "'start' | 'end' | 'center' | 'auto' | number",
-    value: "'auto'",
   },
 ]);
 
@@ -132,13 +142,13 @@ const tabsEvents = ref([
   {
     name: 'change',
     desc: '当前标签值改变时触发',
-    type: 'key: string | number',
+    type: 'key: TabKey',
     value: '-',
   },
   {
     name: 'tab-click',
     desc: '用户点击标签时触发',
-    type: 'key: string | number',
+    type: 'key: TabKey',
     value: '-',
   },
   {
@@ -150,7 +160,7 @@ const tabsEvents = ref([
   {
     name: 'delete',
     desc: '用户点击删除按钮时触发',
-    type: 'key: string | number',
+    type: 'key: TabKey',
     value: '-',
   },
 ]);
@@ -174,7 +184,7 @@ const tabPaneProps = ref([
   {
     name: 'path（必填）',
     desc: '面板的key',
-    type: 'string | number',
+    type: 'TabKey',
     value: '-',
   },
   {
