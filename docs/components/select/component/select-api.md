@@ -27,16 +27,8 @@
 ### Type
 
 ```typescript
-/**
- * @zh 选项
- * @en Option
- */
 type Option = string | number | SelectOptionData | SelectOptionGroup;
 
-/**
- * @zh 筛选
- * @en Filter
- */
 type FilterOption =
   | boolean
   | ((inputValue: string, option: SelectOptionData) => boolean);
@@ -136,7 +128,7 @@ const selectProps = ref([
     name: 'default-input-value',
     desc: '输入框的默认值（非受控模式）',
     type: 'string',
-    value: '`''`',
+    value: "''",
   },
   {
     name: 'size',
@@ -203,12 +195,6 @@ const selectProps = ref([
     desc: '是否显示输入框的边框',
     type: 'boolean',
     value: '`true`',
-  },
-  {
-    name: 'default-active-first-option',
-    desc: '是否在无值时默认选择第一个选项',
-    type: 'boolean',
-    value: '`true`)',
   },
   {
     name: 'popup-visible (v-model)',
@@ -325,46 +311,55 @@ const selectEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: 'value: SelectValue | SelectValue[]',
+    value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入框的值发生改变时触发',
     type: 'inputValue: string',
+    value: '-',
   },
   {
     name: 'popup-visible-change',
     desc: '下拉框的显示状态改变时触发',
     type: 'visible: boolean',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '点击清除按钮时触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
     type: 'removed: SelectValue',
+    value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
     type: 'inputValue: string',
+    value: '-',
   },
   {
     name: 'dropdown-scroll',
     desc: '下拉菜单发生滚动时触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'dropdown-reach-bottom',
     desc: '下拉菜单滚动到底部时触发',
     type: '-',
+    value: '-',
   },
   {
     name: 'exceed-limit',
     desc: '多选超出限制时触发',
     type: 'value: SelectValue,\nev: Event',
+    value: '-',
   },
 ]);
 
@@ -372,52 +367,62 @@ const selectSlots = ref([
   {
     name: 'trigger',
     desc: '自定义触发元素',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'prefix',
     desc: '前缀元素',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'search-icon',
     desc: '选择框的搜索图标',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'loading-icon',
     desc: '选择框的加载中图标',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'arrow-icon',
     desc: '选择框的箭头图标',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'footer',
     desc: '下拉框的页脚',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'header',
     desc: '下拉框的页头',
-    type: '-'
+    type: '-',
+    value: '-',
   },
   {
     name: 'label',
     desc: '选择框的显示内容',
-    type: 'data: SelectOptionData'
+    type: 'data: SelectOptionData',
+    value: '-',
   },
   {
     name: 'option',
     desc: '选项内容',
-    type: 'data: SelectOptionData'
+    type: 'data: SelectOptionData',
+    value: '-',
   },
   {
     name: 'empty',
     desc: '选项为空时的显示内容',
-    type: '-'
+    type: '-',
+    value: '-',
   },
 ]);
 
@@ -545,7 +550,6 @@ const virtualListPropsProps = ref([
     desc: '开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。',
     type: 'number',
     value: '-',
-
   },
 ]);
 

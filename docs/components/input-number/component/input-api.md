@@ -141,31 +141,37 @@ const inputNumberEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: 'value: InputNumberValue,\nev: Event',
+    value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
     type: 'ev: FocusEvent',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
     type: 'ev: FocusEvent',
+    value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
     type: 'ev: Event',
+    value: '-',
   },
   {
     name: 'input',
     desc: '输入时触发',
     type: 'value: InputNumberValue,\ninputValue: string,\nev: Event',
+    value: '-',
   },
   {
     name: 'keydown',
     desc: '按下键盘时触发',
     type: 'ev: KeyboardEvent',
+    value: '-',
   },
 ]);
 
@@ -174,11 +180,13 @@ const inputNumberMethods = ref([
     name: 'focus',
     desc: '使输入框获取焦点',
     type: '-',
+    value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
     type: '-',
+    value: '-',
   },
 ]);
 
@@ -187,31 +195,37 @@ const inputNumberSlots = ref([
     name: 'minus',
     desc: '数值减少图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'plus',
     desc: '数值增加图标',
     type: '-',
+    value: '-',
   },
   {
     name: 'append',
     desc: '后置标签',
     type: '-',
+    value: '-',
   },
   {
     name: 'prepend',
     desc: '前置标签',
     type: '-',
+    value: '-',
   },
   {
     name: 'suffix',
     desc: '后缀',
     type: '-',
+    value: '-',
   },
   {
     name: 'prefix',
     desc: '前缀',
     type: '-',
+    value: '-',
   },
 ]);
 </script>

@@ -159,7 +159,3 @@ const autoCompleteSlots = ref([
   },
 ]);
 </script>
-
-```
-
-```

@@ -24,16 +24,36 @@
 import { ref } from 'vue';
 
 const statisticProps = ref([
-  { name: 'title', desc: '数值显示的标题', type: 'string', value: '-' },
-  { name: 'value', desc: '数值显示的值', type: 'number | Date', value: '-' },
+  {
+    name: 'title',
+    desc: '数值显示的标题',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'value',
+    desc: '数值显示的值',
+    type: 'number | Date',
+    value: '-',
+  },
   {
     name: 'format',
     desc: '数值显示的格式 dayjs（日期模式使用）',
     type: 'string',
     value: "'HH:mm:ss'",
   },
-  { name: 'extra', desc: '额外的显示内容', type: 'string', value: '-' },
-  { name: 'start', desc: '是否开始动画', type: 'boolean', value: 'true' },
+  {
+    name: 'extra',
+    desc: '额外的显示内容',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'start',
+    desc: '是否开始动画',
+    type: 'boolean',
+    value: 'true',
+  },
   {
     name: 'precision',
     desc: '小数保留位数（数字模式使用）',
@@ -52,14 +72,24 @@ const statisticProps = ref([
     type: 'boolean',
     value: 'false',
   },
-  { name: 'animation', desc: '是否开启动画', type: 'boolean', value: 'false' },
+  {
+    name: 'animation',
+    desc: '是否开启动画',
+    type: 'boolean',
+    value: 'false',
+  },
   {
     name: 'animation-duration',
     desc: '动画的过度时间',
     type: 'number',
     value: '2000',
   },
-  { name: 'value-from', desc: '动画的起始值', type: 'number', value: '-' },
+  {
+    name: 'value-from',
+    desc: '动画的起始值',
+    type: 'number',
+    value: '-',
+  },
   {
     name: 'placeholder',
     desc: '提示文字（当 value 为 undefined 时显示）',
@@ -75,14 +105,39 @@ const statisticProps = ref([
 ]);
 
 const statisticSlots = ref([
-  { name: 'title', desc: '标题' },
-  { name: 'prefix', desc: '前缀' },
-  { name: 'suffix', desc: '后缀' },
-  { name: 'extra', desc: '额外内容' },
+  {
+    name: 'title',
+    desc: '标题',
+    type: '-',
+    value: '-',
+  },
+  {
+    name: 'prefix',
+    desc: '前缀',
+    type: '-',
+    value: '-',
+  },
+  {
+    name: 'suffix',
+    desc: '后缀',
+    type: '-',
+    value: '-',
+  },
+  {
+    name: 'extra',
+    desc: '额外内容',
+    type: '-',
+    value: '-',
+  },
 ]);
 
 const countdownProps = ref([
-  { name: 'title', desc: '倒计时的标题', type: 'string', value: '-' },
+  {
+    name: 'title',
+    desc: '倒计时的标题',
+    type: 'string',
+    value: '-',
+  },
   {
     name: 'value',
     desc: '倒计时的值',
@@ -101,7 +156,12 @@ const countdownProps = ref([
     type: 'string',
     value: "'HH:mm:ss'",
   },
-  { name: 'start', desc: '是否开始倒计时', type: 'boolean', value: 'true' },
+  {
+    name: 'start',
+    desc: '是否开始倒计时',
+    type: 'boolean',
+    value: 'true',
+  },
   {
     name: 'value-style',
     desc: '自定义显示值的样式',
@@ -111,10 +171,20 @@ const countdownProps = ref([
 ]);
 
 const countdownEvents = ref([
-  { name: 'finish', desc: '倒计时完成后触发的回调',     type: '-',
-    value: '-', },
+  {
+    name: 'finish',
+    desc: '倒计时完成后触发的回调',
+    type: '-',
+    value: '-',
+  },
 ]);
 
-const countdownSlots = ref([{ name: 'title', desc: '标题',    type: '-',
-    value: '-', }]);
-</script>
+const countdownSlots = ref([
+  {
+    name: 'title',
+    desc: '标题',
+    type: '-',
+    value: '-',
+  },
+]);
+</script>```

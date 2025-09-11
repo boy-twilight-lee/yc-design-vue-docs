@@ -12,25 +12,8 @@
         v-bind="v">
         <template #cell="{ record }">
           <span
-            v-if="
-              ['emits', 'methods', 'slots'].includes(type) &&
-              ['type'].includes(v.dataIndex)
-            "
-            style="white-space: pre-wrap">
-            {{}}
-          </span>
-          <!--  -->
-          <span
-            v-else
-            :style="{
-              color:
-                ['value', 'type'].includes(v.dataIndex) &&
-                !['format', 'langs'].includes(type)
-                  ? 'rgb(var(--primary-6))'
-                  : '',
-            }">
-            {{ record[v.dataIndex] }}
-          </span>
+            v-html="parse(record, v.dataIndex)"
+            style="white-space: pre-wrap"></span>
         </template>
       </a-table-column>
     </template>
@@ -91,8 +74,30 @@ const columns = computed(() => {
   ].filter((v) => v);
 });
 // 获取解析的html
-const getParamsHtml = (value) => {
-  if (value == '-') return '-';
-  const arr = value.split('\n').map((v) => v.tirm());
+const parse = (data, field) => {
+  const dataValue = data[field];
+  if (dataValue == '-') return '-';
+  if (
+    ['emits', 'methods', 'slots'].includes(type.value) &&
+    ['type'].includes(field)
+  ) {
+    const str = dataValue
+      .split(',')
+      .map((v) => {
+        const [key, value] = v.split(': ');
+        console.log(key, value);
+        return `${key}：<i style="color:rgb(var(--primary-6));">${value}<span>`;
+      })
+      .join(',');
+    console.log(str);
+    return str;
+  } else if (
+    !['format', 'langs'].includes(type.value) &&
+    ['value', 'type'].includes(field)
+  ) {
+    return `<i style="color:rgb(var(--primary-6));">${dataValue}</i>`;
+  } else {
+    return dataValue;
+  }
 };
 </script>

@@ -84,7 +84,7 @@ const checkboxEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: boolean,\nev: Event',
+    type: 'value: CheckboxValue[],\nev: Event',
     value: '-',
   },
 ]);
