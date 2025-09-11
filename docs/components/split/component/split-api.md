@@ -20,13 +20,13 @@ const splitProps = ref([
     name: 'component',
     desc: '分割框的 html 标签',
     type: 'string',
-    value: '\'div\'',
+    value: "'div'",
   },
   {
     name: 'direction',
     desc: '分割的方向',
-    type: '\'horizontal\' | \'vertical\'',
-    value: '\'horizontal\'',
+    type: 'Direction',
+    value: "'horizontal'",
   },
   {
     name: 'size (v-model)',

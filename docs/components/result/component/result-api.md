@@ -15,8 +15,8 @@ const resultProps = ref([
   {
     name: 'status',
     desc: '结果页显示的状态',
-    type: '\'info\' | \'success\' | \'warning\' | \'error\' | \'403\' | \'404\' | \'500\' | null',
-    value: '\'info\'',
+    type: "'info' | 'success' | 'warning' | 'error' | '403' | '404' | '500' | null",
+    value: "'info'",
   },
   {
     name: 'title',

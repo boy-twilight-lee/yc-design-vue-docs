@@ -11,7 +11,24 @@
         :key="v.dataIndex"
         v-bind="v">
         <template #cell="{ record }">
-          <span style="white-space: pre-wrap">
+          <span
+            v-if="
+              ['emits', 'methods', 'slots'].includes(type) &&
+              ['type'].includes(v.dataIndex)
+            "
+            style="white-space: pre-wrap">
+            {{}}
+          </span>
+          <!--  -->
+          <span
+            v-else
+            :style="{
+              color:
+                ['value', 'type'].includes(v.dataIndex) &&
+                !['format', 'langs'].includes(type)
+                  ? 'rgb(var(--primary-6))'
+                  : '',
+            }">
             {{ record[v.dataIndex] }}
           </span>
         </template>
@@ -73,4 +90,9 @@ const columns = computed(() => {
       : null,
   ].filter((v) => v);
 });
+// 获取解析的html
+const getParamsHtml = (value) => {
+  if (value == '-') return '-';
+  const arr = value.split('\n').map((v) => v.tirm());
+};
 </script>

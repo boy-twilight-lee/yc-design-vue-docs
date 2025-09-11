@@ -114,7 +114,7 @@ const tagEvents = ref([
   {
     name: 'check',
     desc: '用户选中时触发（仅在可选中模式下触发）',
-    type: 'checked: boolean, \nev: MouseEvent',
+    type: 'checked: boolean,\nev: MouseEvent',
     value: '-',
   },
 ]);

@@ -24,7 +24,7 @@ const backTopProps = ref([
     name: 'easing',
     desc: '滚动动画的缓动方式，可选值参考 BTween',
     type: 'string',
-    value: '\'quartOut\'',
+    value: "'quartOut'",
   },
   {
     name: 'duration',

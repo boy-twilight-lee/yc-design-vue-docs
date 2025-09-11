@@ -31,8 +31,8 @@ const overflowListProps = ref([
   {
     name: 'from',
     desc: '折叠方向',
-    type: '\'start\' | \'end\'',
-    value: '\'end\'',
+    type: "'start' | 'end'",
+    value: "'end'",
   },
 ]);
 

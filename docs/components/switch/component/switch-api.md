@@ -84,13 +84,13 @@ const switchProps = ref([
   },
   {
     name: 'checked-text',
-    desc: '打开状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    desc: "打开状态时的文案（type='line'和size='small'时不生效）",
     type: 'string',
     value: '-',
   },
   {
     name: 'unchecked-text',
-    desc: '关闭状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    desc: "关闭状态时的文案（type='line'和size='small'时不生效）",
     type: 'string',
     value: '-',
   },
@@ -100,7 +100,7 @@ const switchEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: boolean | string | number, \nev: Event',
+    type: 'value: boolean | string | number,\nev: Event',
     value: '-',
   },
   {
@@ -132,13 +132,13 @@ const switchSlots = ref([
   },
   {
     name: 'checked',
-    desc: '打开状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    desc: "打开状态时的文案（type='line'和size='small'时不生效）",
     type: '-',
     value: '-',
   },
   {
     name: 'unchecked',
-    desc: '关闭状态时的文案（type=\'line\'和size=\'small\'时不生效）',
+    desc: "关闭状态时的文案（type='line'和size='small'时不生效）",
     type: '-',
     value: '-',
   },

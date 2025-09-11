@@ -86,7 +86,7 @@ const mentionEvents = ref([
   {
     name: 'search',
     desc: '动态搜索时触发',
-    type: 'value: string, \nprefix: string',
+    type: 'value: string,\nprefix: string',
     value: '-',
   },
   {

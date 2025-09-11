@@ -158,13 +158,13 @@ const timePickerEvents = ref([
   {
     name: 'change',
     desc: '组件值发生改变',
-    type: 'timeString: string | Array<string | undefined> | undefined, \ntime: Date | Array<Date | undefined> | undefined',
+    type: 'timeString: string | Array<string | undefined> | undefined,\ntime: Date | Array<Date | undefined> | undefined',
     value: '-',
   },
   {
     name: 'select',
     desc: '选择时间但未触发组件值变化',
-    type: 'timeString: string | Array<string | undefined>, \ntime: Date | Array<Date | undefined>',
+    type: 'timeString: string | Array<string | undefined>,\ntime: Date | Array<Date | undefined>',
     value: '-',
   },
   {

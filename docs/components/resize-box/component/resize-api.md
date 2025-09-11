@@ -52,7 +52,7 @@ const resizeBoxEvents = ref([
   {
     name: 'moving',
     desc: '拖拽时触发',
-    type: 'size: { width: number; height: number; }, \nev: MouseEvent',
+    type: 'size: { width: number; height: number; },\nev: MouseEvent',
     value: '-',
   },
   {

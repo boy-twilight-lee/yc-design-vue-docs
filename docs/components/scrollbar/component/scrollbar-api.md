@@ -19,8 +19,8 @@ const scrollbarProps = ref([
   {
     name: 'type',
     desc: '类型',
-    type: '\'track\' | \'embed\'',
-    value: '\'embed\'',
+    type: "'track' | 'embed'",
+    value: "'embed'",
   },
   {
     name: 'outer-class',

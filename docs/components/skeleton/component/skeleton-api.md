@@ -61,14 +61,14 @@ const skeletonShapeProps = ref([
   {
     name: 'shape',
     desc: '图形骨架的形状',
-    type: '\'square\' | \'circle\'',
-    value: '\'square\'',
+    type: "'square' | 'circle'",
+    value: "'square'",
   },
   {
     name: 'size',
     desc: '图形骨架的大小',
-    type: '\'small\' | \'medium\' | \'large\'',
-    value: '\'medium\'',
+    type: "'small' | 'medium' | 'large'",
+    value: "'medium'",
   },
 ]);
 </script>

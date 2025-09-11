@@ -19,8 +19,8 @@ const anchorProps = ref([
   {
     name: 'boundary',
     desc: '滚动边界值，设置该值为数字后，将会在距离滚动容器 boundary 距離時停止滾動。',
-    type: '\'start\' | \'end\' | \'center\' | \'nearest\' | number',
-    value: '\'start\'',
+    type: "'start' | 'end' | 'center' | 'nearest' | number",
+    value: "'start'",
   },
   {
     name: 'line-less',
@@ -52,7 +52,7 @@ const anchorEmits = ref([
   {
     name: 'select',
     desc: '用户点击链接时触发',
-    type: 'hash: string | undefined, \npreHash: string',
+    type: 'hash: string | undefined,\npreHash: string',
     value: '-',
   },
   {

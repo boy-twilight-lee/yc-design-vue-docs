@@ -124,7 +124,7 @@ const selectProps = ref([
     name: 'default-value',
     desc: '默认值（非受控模式）',
     type: 'string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]',
-    value: '`\'\' | []`',
+    value: "'' | []",
   },
   {
     name: 'input-value (v-model)',
@@ -136,13 +136,13 @@ const selectProps = ref([
     name: 'default-input-value',
     desc: '输入框的默认值（非受控模式）',
     type: 'string',
-    value: '`\'\'`',
+    value: '`''`',
   },
   {
     name: 'size',
     desc: '选择框的大小',
-    type: '\'mini\' | \'small\' | \'medium\' | \'large\'',
-    value: '`\'medium\'`',
+    type: "'mini' | 'small' | 'medium' | 'large'",
+    value: "'medium'",
   },
   {
     name: 'placeholder',
@@ -274,7 +274,7 @@ const selectProps = ref([
     name: 'value-key',
     desc: '用于确定选项键值的属性名',
     type: 'string',
-    value: '`\'value\'`',
+    value: "'value'",
   },
   {
     name: 'search-delay',
@@ -364,7 +364,7 @@ const selectEvents = ref([
   {
     name: 'exceed-limit',
     desc: '多选超出限制时触发',
-    type: 'value: SelectValue, \nev: Event',
+    type: 'value: SelectValue,\nev: Event',
   },
 ]);
 

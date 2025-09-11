@@ -116,7 +116,7 @@ const transferEvents = ref([
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: "value: string, \ntype: 'target'|'source'",
+    type: "value: string,\ntype: 'target'|'source'",
     value: '-',
   },
 ]);
@@ -125,13 +125,13 @@ const transferSlots = ref([
   {
     name: 'source',
     desc: '源面板',
-    type: 'data: TransferItem[], \nselectedKeys: string[], \nonSelect: (value: string[]) => void',
+    type: 'data: TransferItem[],\nselectedKeys: string[],\nonSelect: (value: string[]) => void',
     value: '-',
   },
   {
     name: 'source-title',
     desc: '源标题插槽 ',
-    type: 'countTotal: number, \ncountSelected: number, \nsearchValue: string, \nchecked: boolean, \nindeterminate: boolean, \nonSelectAllChange: (checked:boolean) => void, \nonClear: () => void',
+    type: 'countTotal: number,\ncountSelected: number,\nsearchValue: string,\nchecked: boolean,\nindeterminate: boolean,\nonSelectAllChange: (checked:boolean) => void,\nonClear: () => void',
     value: '-',
   },
   {
@@ -148,20 +148,20 @@ const transferSlots = ref([
   },
   {
     name: 'target',
-    type: 'data: TransferItem[], \nselectedKeys: string[], \nonSelect: (value: string[]) => void',
+    type: 'data: TransferItem[],\nselectedKeys: string[],\nonSelect: (value: string[]) => void',
     type: '-',
     value: '-',
   },
   {
     name: 'target-title',
-    type: 'countTotal: number, \ncountSelected: number, \nsearchValue: string, \nchecked: boolean, \nindeterminate: boolean, \nonSelectAllChange: (checked:boolean) => void, \nonClear: () => void',
+    type: 'countTotal: number,\ncountSelected: number,\nsearchValue: string,\nchecked: boolean,\nindeterminate: boolean,\nonSelectAllChange: (checked:boolean) => void,\nonClear: () => void',
     type: '-',
     value: '-',
   },
   {
     name: 'item',
     desc: '选项',
-    type: 'value: string, \nlabel: string',
+    type: 'value: string,\nlabel: string',
     value: '-',
   },
 ]);

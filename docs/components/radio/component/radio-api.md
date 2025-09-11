@@ -76,7 +76,7 @@ const radioEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: RadioValue, \nev: Event',
+    type: 'value: RadioValue,\nev: Event',
     value: '-',
   },
 ]);
@@ -85,7 +85,7 @@ const radioSlots = ref([
   {
     name: 'radio',
     desc: '自定义单选框',
-    type: 'checked: boolean, \ndisabled: boolean',
+    type: 'checked: boolean,\ndisabled: boolean',
     value: '-',
   },
 ]);
@@ -148,7 +148,7 @@ const radioGroupSlots = ref([
   {
     name: 'radio',
     desc: '自定义单选框',
-    type: 'checked: boolean, \ndisabled: boolean',
+    type: 'checked: boolean,\ndisabled: boolean',
     value: '-',
   },
   {

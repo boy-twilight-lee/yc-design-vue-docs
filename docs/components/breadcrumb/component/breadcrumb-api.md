@@ -64,7 +64,7 @@ const breadcrumbSlots = ref([
   {
     name: 'item-render',
     desc: 'routes 设置时生效，自定义渲染面包屑',
-    type: 'route: BreadcrumbRoute, \nroutes: BreadcrumbRoute[], \npaths: string[]',
+    type: 'route: BreadcrumbRoute,\nroutes: BreadcrumbRoute[],\npaths: string[]',
     value: '-',
   },
   {

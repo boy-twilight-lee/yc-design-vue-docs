@@ -51,14 +51,14 @@ const menuProps = ref([
   {
     name: 'theme',
     desc: '菜单的主题',
-    type: '\'light\' | \'dark\'',
-    value: '\'light\'',
+    type: "'light' | 'dark'",
+    value: "'light'",
   },
   {
     name: 'mode',
     desc: '菜单的模式',
-    type: '\'vertical\' | \'horizontal\'',
-    value: '\'vertical\'',
+    type: "'vertical' | 'horizontal'",
+    value: "'vertical'",
   },
   {
     name: 'level-indent',
@@ -159,7 +159,7 @@ const menuProps = ref([
   {
     name: 'breakpoint',
     desc: '响应式的断点, 详见响应式栅格',
-    type: '\'xxl\' | \'xl\' | \'lg\' | \'md\' | \'sm\' | \'xs\'',
+    type: "'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'",
     value: '-',
   },
   {
@@ -174,7 +174,7 @@ const menuEmits = ref([
   {
     name: 'collapse',
     desc: '折叠状态改变时触发',
-    type: 'collapsed: boolean, \ntype: \'clickTrigger\'|\'responsive\'',
+    type: "collapsed: boolean,\ntype: 'clickTrigger' | 'responsive'",
     value: '-',
   },
   {

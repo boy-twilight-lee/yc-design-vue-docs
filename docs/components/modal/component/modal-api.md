@@ -55,8 +55,8 @@ const modalProps = ref([
   {
     name: 'title-align',
     desc: '标题的水平对齐方向',
-    type: '\'start\' | \'center\'',
-    value: '\'center\'',
+    type: "'start' | 'center'",
+    value: "'center'",
   },
   {
     name: 'align-center',
@@ -140,7 +140,7 @@ const modalProps = ref([
     name: 'popup-container',
     desc: '弹出框的挂载容器',
     type: 'string | HTMLElement',
-    value: '\'body\'',
+    value: '-',
   },
   {
     name: 'mask-style',

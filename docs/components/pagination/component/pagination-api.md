@@ -103,8 +103,8 @@ const paginationProps = ref([
   {
     name: 'size',
     desc: '分页选择器的大小',
-    type: '\'mini\' | \'small\' | \'medium\' | \'large\'',
-    value: '\'medium\'',
+    type: 'Size（参见Button）',
+    value: "'medium'",
   },
   {
     name: 'page-item-style',
@@ -169,7 +169,7 @@ const paginationSlots = ref([
   {
     name: 'page-item-step',
     desc: '分页按钮（步）',
-    type: 'type: \'previous\'|\'next\'',
+    type: "type: 'previous'|'next'",
     value: '-',
   },
   {

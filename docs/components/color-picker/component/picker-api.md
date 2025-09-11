@@ -108,7 +108,7 @@ const colorPickerEvents = ref([
   {
     name: 'popup-visible-change',
     desc: '颜色面板展开和收起时触发',
-    type: 'visible: boolean, \nvalue: string',
+    type: 'visible: boolean,\nvalue: string',
     value: '-',
   },
 ]);

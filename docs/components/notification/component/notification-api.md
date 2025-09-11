@@ -102,7 +102,7 @@ const notificationConfigProps = ref([
   {
     name: 'position',
     desc: '位置',
-    type: '\'topLeft\'|\'topRight\'|\'bottomLeft\'|\'bottomRight\'',
+    type: "'topLeft'|'topRight'|'bottomLeft'|'bottomRight'",
     value: '-',
   },
   {

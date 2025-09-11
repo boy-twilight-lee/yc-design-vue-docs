@@ -141,7 +141,7 @@ const listMethods = ref([
   {
     name: 'scrollIntoView',
     desc: '虚拟滚动到某个元素',
-    type: `options: { \n index?: number; \n key?: number | string; \n align: 'auto' | 'top' | 'bottom'\n}`,
+    type: `options: {\n index?: number;\n key?: number | string;\n align: 'auto' | 'top' | 'bottom'\n}`,
     value: '-',
   },
 ]);
@@ -156,7 +156,7 @@ const listSlots = ref([
   {
     name: 'item',
     desc: '列表项',
-    type: 'index: number, \nitem: any',
+    type: 'index: number,\nitem: any',
     value: '-',
   },
   {

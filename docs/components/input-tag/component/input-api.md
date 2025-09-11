@@ -136,25 +136,25 @@ const inputTagEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: InputTagValue, \nev: Event',
+    type: 'value: InputTagValue,\nev: Event',
     value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入值发生改变时触发',
-    type: 'inputValue: string, \nev: Event',
+    type: 'inputValue: string,\nev: Event',
     value: '-',
   },
   {
     name: 'press-enter',
     desc: '按下回车键时触发',
-    type: 'inputValue: string, \nev: KeyboardEvent',
+    type: 'inputValue: string,\nev: KeyboardEvent',
     value: '-',
   },
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
-    type: 'removed: string | number, \nev: Event',
+    type: 'removed: string | number,\nev: Event',
     value: '-',
   },
   {

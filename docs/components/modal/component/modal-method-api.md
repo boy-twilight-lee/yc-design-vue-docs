@@ -232,8 +232,8 @@ const modalConfigProps = ref([
   {
     name: 'titleAlign',
     desc: '标题的水平对齐方向',
-    type: '\'start\' | \'center\'',
-    value: '\'center\'',
+    type: "'start' | 'center'",
+    value: "'center'",
   },
   {
     name: 'renderToBody',
@@ -245,7 +245,7 @@ const modalConfigProps = ref([
     name: 'popupContainer',
     desc: '弹出框的挂载容器',
     type: 'string | HTMLElement',
-    value: '\'body\'',
+    value: '-',
   },
   {
     name: 'modalClass',

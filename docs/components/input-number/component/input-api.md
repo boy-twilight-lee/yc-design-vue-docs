@@ -140,7 +140,7 @@ const inputNumberEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: InputNumberValue, \nev: Event',
+    type: 'value: InputNumberValue,\nev: Event',
   },
   {
     name: 'focus',
@@ -160,7 +160,7 @@ const inputNumberEvents = ref([
   {
     name: 'input',
     desc: '输入时触发',
-    type: 'value: InputNumberValue, \ninputValue: string, \nev: Event',
+    type: 'value: InputNumberValue,\ninputValue: string,\nev: Event',
   },
   {
     name: 'keydown',

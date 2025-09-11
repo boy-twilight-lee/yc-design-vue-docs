@@ -98,7 +98,7 @@ const verificationCodeEvents = ref([
   {
     name: 'input',
     desc: '输入时触发',
-    type: 'inputValue: string, \nindex: number, \nev: Event',
+    type: 'inputValue: string,\nindex: number,\nev: Event',
     value: '-',
   },
 ]);

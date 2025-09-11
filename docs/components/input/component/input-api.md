@@ -126,13 +126,13 @@ const inputEvents = ref([
   {
     name: 'input',
     desc: '用户输入时触发',
-    type: 'value: string, \nev: Event',
+    type: 'value: string,\nev: Event',
     value: '-',
   },
   {
     name: 'change',
     desc: '仅在输入框失焦或按下回车时触发',
-    type: 'value: string, \nev: Event',
+    type: 'value: string,\nev: Event',
     value: '-',
   },
   {

@@ -75,14 +75,14 @@ const dropdownProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: '\'hover\' | \'click\' | \'focus\' | \'contextMenu\'',
-    value: '\'click\'',
+    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    value: "'click'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: '\'top\' | \'tl\' | \'tr\' | \'bottom\' | \'bl\' | \'br\'',
-    value: '\'bottom\'',
+    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    value: "'bottom'",
   },
   {
     name: 'popup-container',
@@ -120,7 +120,7 @@ const dropdownEmits = ref([
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined, \nev: Event',
+    type: 'value: string | number | Record<string, any> | undefined,\nev: Event',
     value: '-',
   },
 ])
@@ -207,14 +207,14 @@ const dsubmenuProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: '\'hover\' | \'click\'',
-    value: '\'click\'',
+    type: "'hover'" | "'click'",
+    value: "'click'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: '\'rt\' | \'lt\'',
-    value: '\'rt\'',
+    type: "'rt' | 'lt'",
+    value: "'rt'",
   },
   {
     name: 'popup-visible (v-model)',
@@ -288,14 +288,14 @@ const dropdownButtonProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: '\'hover\' | \'click\' | \'focus\' | \'contextMenu\'',
-    value: '\'click\'',
+    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    value: "'click'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: '\'top\' | \'tl\' | \'tr\' | \'bottom\' | \'bl\' | \'br\'',
-    value: '\'br\'',
+    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    value: "'br'",
   },
   {
     name: 'popup-container',
@@ -351,7 +351,7 @@ const dropdownButtonEmits = ref([
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined, \nev: Event',
+    type: 'value: string | number | Record<string, any> | undefined,\nev: Event',
     value: '-',
   },
 ])

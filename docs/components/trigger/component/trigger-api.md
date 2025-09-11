@@ -31,14 +31,14 @@ const triggerProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: '\'hover\' | \'click\' | \'focus\' | \'contextMenu\'',
-    value: '\'hover\'',
+    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    value: "'hover'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: '\'top\' | \'tl\' | \'tr\' | \'bottom\' | \'bl\' | \'br\' | \'left\' | \'lt\' | \'lb\' | \'right\' | \'rt\' | \'rb\'',
-    value: '\'bottom\'',
+    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'",
+    value: "'bottom'",
   },
   {
     name: 'disabled',
@@ -134,7 +134,7 @@ const triggerProps = ref([
     name: 'animation-name',
     desc: '弹出动画的name',
     type: 'string',
-    value: '\'fade-in\'',
+    value: "'fade-in'",
   },
   {
     name: 'duration',

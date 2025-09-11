@@ -25,8 +25,8 @@ const drawerConfigProps = ref([
   {
     name: 'placement',
     desc: '抽屉放置的位置',
-    type: '\'top\' | \'right\' | \'bottom\' | \'left\'',
-    value: '\'right\'',
+    type: "'top' | 'right' | 'bottom' | 'left'",
+    value: "'right'",
   },
   {
     name: 'title',
@@ -104,7 +104,7 @@ const drawerConfigProps = ref([
     name: 'popup-container',
     desc: '弹出框的挂载容器',
     type: 'string | HTMLElement',
-    value: '\'body\'',
+    value: "-",
   },
   {
     name: 'drawer-style',

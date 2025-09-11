@@ -90,7 +90,7 @@ const messageConfigProps = ref([
   {
     name: 'position',
     desc: '消息的位置',
-    type: '\'top\' | \'bottom\'',
+    type: "'top' | 'bottom'",
     value: '-',
   },
   {

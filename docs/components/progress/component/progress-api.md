@@ -11,14 +11,14 @@ const progressProps = ref([
   {
     name: 'type',
     desc: '进度条的类型',
-    type: '\'line\' | \'circle\'',
-    value: '\'line\'',
+    type: "'line' | 'circle'",
+    value: "'line'",
   },
   {
     name: 'size',
     desc: '进度条的大小',
-    type: '\'mini\' | \'small\' | \'medium\' | \'large\'',
-    value: '\'medium\'',
+    type: 'Size（参见Buton）',
+    value: "'medium'",
   },
   {
     name: 'percent',
@@ -71,7 +71,7 @@ const progressProps = ref([
   {
     name: 'status',
     desc: '进度条状态',
-    type: '\'normal\' | \'success\' | \'warning\' | \'danger\'',
+    type: "'normal' | 'success' | 'warning' | 'danger'",
     value: '-',
   },
 ]);

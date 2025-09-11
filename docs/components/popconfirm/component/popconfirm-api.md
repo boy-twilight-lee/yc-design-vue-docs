@@ -27,8 +27,8 @@ const popconfirmProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: '\'top\' | \'tl\' | \'tr\' | \'bottom\' | \'bl\' | \'br\' | \'left\' | \'lt\' | \'lb\' | \'right\' | \'rt\' | \'rb\'',
-    value: '\'top\'',
+    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'",
+    value: "'top'",
   },
   {
     name: 'popup-visible (v-model)',
@@ -45,8 +45,8 @@ const popconfirmProps = ref([
   {
     name: 'type',
     desc: '气泡确认框的类型',
-    type: '\'info\' | \'success\' | \'warning\' | \'error\'',
-    value: '\'info\'',
+    type: "'info' | 'success' | 'warning' | 'error'",
+    value: "'info'",
   },
   {
     name: 'ok-text',

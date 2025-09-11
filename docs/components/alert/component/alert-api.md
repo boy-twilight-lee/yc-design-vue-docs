@@ -20,7 +20,7 @@ const alertProps = ref([
     name: 'type',
     desc: '警告提示的类型。',
     type: 'info | success | warning | error | normal',
-    value: '\'info\'',
+    value: "'info'",
   },
   {
     name: 'show-icon',

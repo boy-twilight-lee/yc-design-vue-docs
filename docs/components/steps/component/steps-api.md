@@ -23,20 +23,20 @@ const stepsProps = ref([
   {
     name: 'type',
     desc: '步骤条的类型',
-    type: '\'default\' | \'arrow\' | \'dot\' | \'navigation\'',
-    value: '\'default\'',
+    type: "'default' | 'arrow' | 'dot' | 'navigation'",
+    value: "'default'",
   },
   {
     name: 'direction',
     desc: '步骤条的显示方向',
-    type: '\'horizontal\' | \'vertical\'',
-    value: '\'horizontal\'',
+    type: 'Direction',
+    value: "'horizontal'",
   },
   {
     name: 'label-placement',
     desc: '标签描述文字放置的位置',
-    type: '\'horizontal\' | \'vertical\'',
-    value: '\'horizontal\'',
+    type: 'Direction',
+    value: "'horizontal'",
   },
   {
     name: 'current',
@@ -53,8 +53,8 @@ const stepsProps = ref([
   {
     name: 'status',
     desc: '当前步骤的状态',
-    type: '\'wait\' | \'process\' | \'finish\' | \'error\'',
-    value: '\'process\'',
+    type: "'wait' | 'process' | 'finish' | 'error'",
+    value: "'process'",
   },
   {
     name: 'line-less',
@@ -80,7 +80,7 @@ const stepsEmits = ref([
   {
     name: 'change',
     desc: '步骤数发生改变时触发',
-    type: 'step: number, \nev: Event',
+    type: 'step: number,\nev: Event',
     value: '-',
   },
 ]);
@@ -101,7 +101,7 @@ const stepProps = ref([
   {
     name: 'status',
     desc: '步骤的状态',
-    type: '\'wait\' | \'process\' | \'finish\' | \'error\'',
+    type: "'wait' | 'process' | 'finish' | 'error'",
     value: '-',
   },
   {
@@ -116,13 +116,13 @@ const stepSlots = ref([
   {
     name: 'node',
     desc: '节点',
-    type: 'step: number, \nstatus: string',
+    type: 'step: number,\nstatus: string',
     value: '-',
   },
   {
     name: 'icon',
     desc: '图标',
-    type: 'step: number, \nstatus: string',
+    type: 'step: number,\nstatus: string',
     value: '-',
   },
   {

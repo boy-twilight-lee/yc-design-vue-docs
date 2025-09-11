@@ -94,13 +94,13 @@ const textareaEvents = ref([
   {
     name: 'input',
     desc: '用户输入时触发',
-    type: 'value: string, \nev: Event',
+    type: 'value: string,\nev: Event',
     value: '-',
   },
   {
     name: 'change',
     desc: '仅在文本框失焦时触发',
-    type: 'value: string, \nev: Event',
+    type: 'value: string,\nev: Event',
     value: '-',
   },
   {
