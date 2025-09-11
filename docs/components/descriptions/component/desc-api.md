@@ -75,8 +75,9 @@ const descriptionsProps = ref([
   {
     name: 'size',
     desc: '描述列表的大小',
-    type: "Size（参见Button）",
+    type: "Size",
     value: 'medium',
+    href:"/components/divider"
   },
   {
     name: 'bordered',

@@ -44,8 +44,9 @@ const tooltipProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPostion（参见Trigger）",
+    type: "TriggerPostion",
     value: "'top'",
+    href:"/components/trigger"
   },
   {
     name: 'mini',
@@ -86,8 +87,9 @@ const tooltipProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'PopupContainer（参见Trigger）',
+    type: 'PopupContainer',
     value: '-',
+    href:"/components/trigger"
   },
   {
     name: 'trigger-props',

@@ -89,8 +89,9 @@ const cascaderProps = ref([
   {
     name: 'size',
     desc: '选择框的大小',
-    type: "Size（参见Button）",
+    type: "Size",
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'allow-search',

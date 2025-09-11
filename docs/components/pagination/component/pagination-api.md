@@ -103,8 +103,9 @@ const paginationProps = ref([
   {
     name: 'size',
     desc: '分页选择器的大小',
-    type: 'Size（参见Button）',
+    type: 'Size',
     value: "'medium'",
+    href:"/components/select"
   },
   {
     name: 'page-item-style',

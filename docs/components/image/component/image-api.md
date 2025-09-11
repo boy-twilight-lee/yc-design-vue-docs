@@ -252,8 +252,9 @@ const imagePreviewProps = ref([
   {
     name: 'popup-container',
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
-    type: 'PopupContainer（参见Trigger）',
+    type: 'PopupContainer',
     value: '-',
+    href:"/components/trigger"
   },
   {
     name: 'esc-to-close',
@@ -363,8 +364,9 @@ const imagePreviewGroupProps = ref([
   {
     name: 'popup-container',
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
-    type: 'PopupContainer（参见Trigger）',
+    type: 'PopupContainer',
     value: '-',
+    href:"/components/trigger"
   },
 ]);
 

@@ -67,8 +67,9 @@ const carouselProps = ref([
   {
     name: 'direction',
     desc: '幻灯片移动方向',
-    type: "Direction（参见Divider）",
+    type: "Direction）",
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'show-arrow',

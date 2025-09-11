@@ -17,8 +17,9 @@ const progressProps = ref([
   {
     name: 'size',
     desc: '进度条的大小',
-    type: 'Size（参见Buton）',
+    type: 'Size',
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'percent',

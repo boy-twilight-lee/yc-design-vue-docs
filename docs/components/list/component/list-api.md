@@ -81,8 +81,9 @@ const listProps = ref([
   {
     name: 'pagination-props',
     desc: '列表分页配置',
-    type: 'PaginationProps（参见Pagination）',
+    type: 'PaginationProps',
     value: '-',
+    href:"/components/pagination"
   },
   {
     name: 'max-height',
@@ -99,8 +100,9 @@ const listProps = ref([
   {
     name: 'virtual-list-props',
     desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps',
-    type: 'VirtualListProps（参见Select）',
+    type: 'VirtualListProps',
     value: '-',
+    href:"/components/select"
   },
   {
     name: 'scrollbar',

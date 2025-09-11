@@ -13,7 +13,8 @@
         <template #cell="{ record }">
           <span
             v-html="parse(record, v.dataIndex)"
-            style="white-space: pre-wrap"></span>
+            style="white-space: pre-wrap"
+            @click="handleClick(record)"></span>
         </template>
       </a-table-column>
     </template>
@@ -22,6 +23,7 @@
 
 <script setup>
 import { computed, toRefs } from 'vue';
+import { useRouter } from 'vitepress';
 const props = defineProps({
   data: {
     type: Array,
@@ -33,6 +35,7 @@ const props = defineProps({
   },
 });
 const { type } = toRefs(props);
+const router = useRouter();
 // 动态计算最终显示的列
 const columns = computed(() => {
   const nameMap = {
@@ -73,31 +76,40 @@ const columns = computed(() => {
       : null,
   ].filter((v) => v);
 });
+// 获取style
+const getStyleStr = (style) => {
+  return Object.entries(style)
+    .map(([key, value]) => `${key}:${value}`)
+    .join(';');
+};
 // 获取解析的html
 const parse = (data, field) => {
   const dataValue = data[field];
   if (dataValue == '-') return '-';
   if (
-    ['emits', 'methods', 'slots'].includes(type.value) &&
-    ['type'].includes(field)
+    ['emits', 'methods', 'slots', 'props'].includes(type.value) &&
+    ['type', 'value'].includes(field)
   ) {
-    const str = dataValue
-      .split(',')
-      .map((v) => {
-        const [key, value] = v.split(': ');
-        console.log(key, value);
-        return `${key}：<i style="color:rgb(var(--primary-6));">${value}<span>`;
-      })
-      .join(',');
-    console.log(str);
-    return str;
-  } else if (
-    !['format', 'langs'].includes(type.value) &&
-    ['value', 'type'].includes(field)
-  ) {
-    return `<i style="color:rgb(var(--primary-6));">${dataValue}</i>`;
-  } else {
-    return dataValue;
+    const styleStr = getStyleStr({
+      color: 'rgb(var(--primary-6))',
+      'text-decoration': data.href ? 'underline' : 'none',
+      cursor: data.href ? 'pointer' : '',
+    });
+    return ['emits', 'methods', 'slots'].includes(type.value) && field == 'type'
+      ? dataValue
+          .split(',')
+          .map((v) => {
+            const [key, value] = v.split(': ');
+            return `${key}：<i style="${styleStr}">${value}</i>`;
+          })
+          .join(',')
+      : `<i style="${styleStr}">${dataValue}</i>`;
   }
+  return dataValue;
+};
+// 处理点击
+const handleClick = (record) => {
+  if (!record.href) return;
+  router.go(record.href);
 };
 </script>

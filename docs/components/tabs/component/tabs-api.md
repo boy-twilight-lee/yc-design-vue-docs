@@ -57,8 +57,9 @@ const tabsProps = ref([
   {
     name: 'size',
     desc: '选项卡的大小',
-    type: "Size（参见Button）",
+    type: "Size",
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'type',
@@ -69,8 +70,9 @@ const tabsProps = ref([
   {
     name: 'direction',
     desc: '选项卡的方向',
-    type: "Direction（参见Divider）",
+    type: "Direction",
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'editable',

@@ -91,8 +91,9 @@ const inputTagProps = ref([
   {
     name: 'size',
     desc: '输入框的大小',
-    type: "Size（参见Button）",
+    type: "Size",
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'max-tag-count',

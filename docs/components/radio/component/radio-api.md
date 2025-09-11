@@ -112,8 +112,9 @@ const radioGroupProps = ref([
   {
     name: 'size',
     desc: '单选框组的尺寸',
-    type: "Size（参见Button）",
+    type: "Size",
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'options',
@@ -124,8 +125,9 @@ const radioGroupProps = ref([
   {
     name: 'direction',
     desc: '单选框组的方向',
-    type: "Direction（参见Divider）",
+    type: "Direction",
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'disabled',

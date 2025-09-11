@@ -39,8 +39,9 @@ const colorPickerProps = ref([
   {
     name: 'size',
     desc: '尺寸',
-    type: "Size（参见Button）",
+    type: "Size",
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'show-text',

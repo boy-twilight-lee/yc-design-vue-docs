@@ -113,8 +113,9 @@ const inputNumberProps = ref([
   {
     name: 'size',
     desc: '输入框大小',
-    type: "Size（参见Button）",
+    type: "Size",
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'allow-clear',

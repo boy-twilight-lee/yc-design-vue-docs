@@ -41,8 +41,9 @@ const mentionProps = ref([
   {
     name: 'data',
     desc: '用于自动补全的数据',
-    type: 'SelectOptions（参见Select）',
+    type: 'SelectOptions',
     value: '[]',
+    href:"/components/select"
   },
   {
     name: 'prefix',

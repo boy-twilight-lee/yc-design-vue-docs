@@ -126,8 +126,9 @@ const checkboxGroupProps = ref([
   {
     name: 'direction',
     desc: '复选框的排列方向',
-    type: 'Direction（参见Divider）',
+    type: 'Direction',
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'disabled',

@@ -49,14 +49,16 @@ const autoCompleteProps = ref([
   {
     name: 'data',
     desc: '用于自动提示的数据',
-    type: 'SelectOptions（参见Select）',
+    type: 'SelectOptions',
     value: '[]',
+    href:'/components/select/'
   },
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'PopupContainer（参见Trigger）',
+    type: 'PopupContainer',
     value: '-',
+    href:'/components/trigger/'
   },
   {
     name: 'strict',
@@ -85,8 +87,9 @@ const autoCompleteProps = ref([
   {
     name: 'virtual-list-props',
     desc: '传递虚拟列表属性，传入此参数以开启虚拟滚动 VirtualListProps',
-    type: 'VirtualListProps（参见Select）',
+    type: 'VirtualListProps',
     value: '-',
+    href:"/components/select"
   },
 ]);
 

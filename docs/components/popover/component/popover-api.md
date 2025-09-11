@@ -52,14 +52,16 @@ const popoverProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "TriggerType（参见Trigger）",
+    type: "TriggerType",
     value: "'hover'",
+    href:"/components/trigger"
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPosition（参见Trigger）",
+    type: "TriggerPosition",
     value: "'bottom'",
+    href:"/components/trigger"
   },
   {
     name: 'content-class',
@@ -88,14 +90,16 @@ const popoverProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'PopupContainer（参见Trigger）',
+    type: 'PopupContainer',
     value: '-',
+    href:"/components/trigger"
   },
   {
     name: 'trigger-props',
     desc: 'trigger的属性',
-    type: 'TriggerProps（参见Trigger）',
+    type: 'TriggerProps',
     value: '-',
+    href:"/components/trigger"
   },
 ]);
 
