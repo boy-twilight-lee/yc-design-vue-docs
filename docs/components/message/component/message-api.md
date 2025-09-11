@@ -129,7 +129,7 @@ const messageReturnProps = ref([
   {
     name: 'close',
     desc: '关闭当前消息',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

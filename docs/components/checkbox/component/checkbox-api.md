@@ -156,7 +156,7 @@ const checkboxGroupSlots = ref([
   {
     name: 'label',
     desc: 'checkbox 文案内容',
-    type: '-',
+    type: 'data: CheckboxOption',
     value: '-',
   },
 ]);

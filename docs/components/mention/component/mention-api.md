@@ -119,13 +119,13 @@ const mentionMethods = ref([
   {
     name: 'focus',
     desc: '使输入框获取焦点',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

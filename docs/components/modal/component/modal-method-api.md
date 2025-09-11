@@ -295,14 +295,8 @@ const modalReturnProps = ref([
   {
     name: 'close',
     desc: '关闭对话框',
-    type: '() => void',
+    type: '-',
     value: '-',
-  },
-  {
-    name: 'update',
-    desc: '更新对话框',
-    type: '(config: ModalUpdateConfig) => void',
-    value: '-)',
   },
 ]);
 </script>

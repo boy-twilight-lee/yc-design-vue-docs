@@ -141,7 +141,7 @@ const listMethods = ref([
   {
     name: 'scrollIntoView',
     desc: '虚拟滚动到某个元素',
-    type: "(options: { index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom'}) => void",
+    type: `options: { \n index?: number; \n key?: number | string; \n align: 'auto' | 'top' | 'bottom'\n}`,
     value: '-',
   },
 ]);

@@ -473,6 +473,8 @@ const optgroupSlots = ref([
   {
     name: 'label',
     desc: '选项组的标题',
+    type: '-',
+    value: '-',
   },
 ]);
 

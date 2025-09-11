@@ -153,7 +153,7 @@ const notificationReturnProps = ref([
   {
     name: 'close',
     desc: '关闭当前通知提醒框',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

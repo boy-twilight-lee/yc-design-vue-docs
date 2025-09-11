@@ -173,12 +173,12 @@ const inputNumberMethods = ref([
   {
     name: 'focus',
     desc: '使输入框获取焦点',
-    type: '() => void',
+    type: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
-    type: '() => void',
+    type: '-',
   },
 ]);
 
@@ -186,26 +186,32 @@ const inputNumberSlots = ref([
   {
     name: 'minus',
     desc: '数值减少图标',
+    type: '-',
   },
   {
     name: 'plus',
     desc: '数值增加图标',
+    type: '-',
   },
   {
     name: 'append',
     desc: '后置标签',
+    type: '-',
   },
   {
     name: 'prepend',
     desc: '前置标签',
+    type: '-',
   },
   {
     name: 'suffix',
     desc: '后缀',
+    type: '-',
   },
   {
     name: 'prefix',
     desc: '前缀',
+    type: '-',
   },
 ]);
 </script>

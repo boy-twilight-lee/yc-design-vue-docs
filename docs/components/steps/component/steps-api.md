@@ -80,7 +80,7 @@ const stepsEmits = ref([
   {
     name: 'change',
     desc: '步骤数发生改变时触发',
-    type: 'step: number, ev: Event',
+    type: 'step: number, \nev: Event',
     value: '-',
   },
 ]);

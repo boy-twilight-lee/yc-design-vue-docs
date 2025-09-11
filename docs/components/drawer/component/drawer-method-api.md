@@ -190,22 +190,16 @@ const drawerReturnProps = ref([
   {
     name: 'close',
     desc: '关闭抽屉',
-    type: '() => void',
+    type: '-',
     value: '-',
-  },
-  {
-    name: 'update',
-    desc: '更新抽屉',
-    type: '(config: DrawerUpdateConfig) => void',
-    value: '-',
-  },
+  }
 ]);
 
 const drawerMethodProps = ref([
   {
     name: 'open',
     desc: '打开抽屉',
-    type: '(config: DrawerConfig, appContext?: AppContext) => DrawerReturn',
+    type: 'config: DrawerConfig',
     value: '-',
   },
 ]);
