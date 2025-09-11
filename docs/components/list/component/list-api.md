@@ -156,7 +156,7 @@ const listSlots = ref([
   {
     name: 'item',
     desc: '列表项',
-    type: 'index: number, item: any',
+    type: 'index: number, \nitem: any',
     value: '-',
   },
   {

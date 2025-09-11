@@ -58,13 +58,13 @@ const alertEvents = ref([
   {
     name: 'close',
     desc: '点击关闭按钮时触发',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
   {
     name: 'after-close',
     desc: '关闭动画结束后触发',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

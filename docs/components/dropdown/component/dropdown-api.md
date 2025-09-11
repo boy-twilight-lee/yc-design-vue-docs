@@ -6,11 +6,11 @@
 
 ### dropdown Emits
 
-<field-table :data="dropdownEmits"/>
+<field-table :data="dropdownEmits" type="emits"/>
 
 ### dropdown Slots
 
-<field-table :data="dropdownSlots"/>
+<field-table :data="dropdownSlots" type="slots"/>
 
 ### doption Props
 
@@ -18,11 +18,11 @@
 
 ### doption Emits
 
-<field-table :data="doptionEmits"/>
+<field-table :data="doptionEmits" type="emits"/>
 
 ### doption Slots
 
-<field-table :data="doptionSlots"/>
+<field-table :data="doptionSlots" type="slots"/>
 
 ### dgroup Props
 
@@ -30,7 +30,7 @@
 
 ### dgroup Slots
 
-<field-table :data="dgroupSlots"/>
+<field-table :data="dgroupSlots" type="slots"/>
 
 ### dsubmenu Props
 
@@ -38,11 +38,11 @@
 
 ### dsubmenu Emits
 
-<field-table :data="dsubmenuEmits"/>
+<field-table :data="dsubmenuEmits" type="emits"/>
 
 ### dsubmenu Slots
 
-<field-table :data="dsubmenuSlots"/>
+<field-table :data="dsubmenuSlots" type="slots"/>
 
 ### dropdown-button Props
 
@@ -50,11 +50,11 @@
 
 ### dropdown-button Emits
 
-<field-table :data="dropdownButtonEmits"/>
+<field-table :data="dropdownButtonEmits" type="emits"/>
 
 ### dropdown-button Slots
 
-<field-table :data="dropdownButtonSlots"/>
+<field-table :data="dropdownButtonSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue'
@@ -120,7 +120,7 @@ const dropdownEmits = ref([
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined, ev: Event',
+    type: 'value: string | number | Record<string, any> | undefined, \nev: Event',
     value: '-',
   },
 ])
@@ -351,7 +351,7 @@ const dropdownButtonEmits = ref([
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined, ev: Event',
+    type: 'value: string | number | Record<string, any> | undefined, \nev: Event',
     value: '-',
   },
 ])

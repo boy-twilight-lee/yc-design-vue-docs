@@ -8,11 +8,11 @@
 
 ### popconfirm Events
 
-<field-table :data="popconfirmEvents"/>
+<field-table :data="popconfirmEvents" type="emits"/>
 
 ### popconfirm Slots
 
-<field-table :data="popconfirmSlots"/>
+<field-table :data="popconfirmSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

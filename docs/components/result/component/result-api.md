@@ -6,7 +6,7 @@
 
 ### result Slots
 
-<field-table :data="resultSlots"/>
+<field-table :data="resultSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

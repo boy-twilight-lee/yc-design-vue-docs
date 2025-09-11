@@ -6,7 +6,7 @@
 
 ### spin Slots
 
-<field-table :data="spinSlots"/>
+<field-table :data="spinSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

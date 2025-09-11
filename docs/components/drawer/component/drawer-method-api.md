@@ -12,11 +12,11 @@
 
 ### DrawerReturn
 
-<field-table :data="drawerReturnProps"/>
+<field-table :data="drawerReturnProps" type="methods"/>
 
 ### DrawerMethod
 
-<field-table :data="drawerMethodProps"/>
+<field-table :data="drawerMethodProps" type="methods"/>
 
 <script setup>
 import { ref } from 'vue';

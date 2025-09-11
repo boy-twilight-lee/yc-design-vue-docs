@@ -6,11 +6,11 @@
 
 ### menu Emits
 
-<field-table :data="menuEmits"/>
+<field-table :data="menuEmits" type="emits"/>
 
 ### menu Slots
 
-<field-table :data="menuSlots"/>
+<field-table :data="menuSlots" type="slots"/>
 
 ### submenu Props
 
@@ -18,7 +18,7 @@
 
 ### submenu Slots
 
-<field-table :data="subMenuSlots"/>
+<field-table :data="subMenuSlots" type="slots"/>
 
 ### menu-item-group Props
 
@@ -26,7 +26,7 @@
 
 ### menu-item-group Slots
 
-<field-table :data="menuItemGroupSlots"/>
+<field-table :data="menuItemGroupSlots" type="slots"/>
 
 ### menu-item Props
 
@@ -34,7 +34,7 @@
 
 ### menu-item Slots
 
-<field-table :data="menuItemSlots"/>
+<field-table :data="menuItemSlots" type="slots"/>
 
 ### FAQ
 
@@ -174,7 +174,7 @@ const menuEmits = ref([
   {
     name: 'collapse',
     desc: '折叠状态改变时触发',
-    type: 'collapsed: boolean, type: \'clickTrigger\'|\'responsive\'',
+    type: 'collapsed: boolean, \ntype: \'clickTrigger\'|\'responsive\'',
     value: '-',
   },
   {

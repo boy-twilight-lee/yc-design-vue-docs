@@ -5,6 +5,18 @@
     :pagination="false"
     style="width: 100%; margin-top: 20px"
     class="vp-raw">
+    <template #columns>
+      <a-table-column
+        v-for="v in columns"
+        :key="v.dataIndex"
+        v-bind="v">
+        <template #cell="{ record }">
+          <span style="white-space: pre-wrap">
+            {{ record[v.dataIndex] }}
+          </span>
+        </template>
+      </a-table-column>
+    </template>
   </a-table>
 </template>
 

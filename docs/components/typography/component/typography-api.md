@@ -132,25 +132,25 @@ const commonEvents = ref([
   {
     name: 'edit-start',
     desc: '开始编辑',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'change',
     desc: '编辑内容变化',
-    type: '(text: string) => void',
+    type: 'text: string',
     value: '-',
   },
   {
     name: 'edit-end',
     desc: '编辑结束',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'copy',
     desc: '复制',
-    type: '(text: string) => void',
+    type: 'text: string',
     value: '-',
   },
 ]);

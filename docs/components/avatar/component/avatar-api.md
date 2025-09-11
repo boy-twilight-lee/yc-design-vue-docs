@@ -78,7 +78,7 @@ const avatarEvents = ref([
   {
     name: 'click',
     desc: '点击回调',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
   {

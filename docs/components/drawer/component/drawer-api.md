@@ -178,37 +178,37 @@ const drawerEvents = ref([
   {
     name: 'ok',
     desc: '点击确定按钮时触发',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
   {
     name: 'cancel',
     desc: '点击取消、关闭按钮时触发',
-    type: '(ev: MouseEvent | KeyboardEvent) => void',
+    type: 'ev: MouseEvent | KeyboardEvent',
     value: '-',
   },
   {
     name: 'open',
     desc: '抽屉打开后（动画结束）触发',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'close',
     desc: '抽屉关闭后（动画结束）触发',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'before-open',
     desc: '对话框打开前触发',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'before-close',
     desc: '对话框关闭前触发',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

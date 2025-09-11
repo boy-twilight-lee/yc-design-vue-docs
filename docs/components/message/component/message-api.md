@@ -10,7 +10,7 @@
 
 ### MessageMethod
 
-<field-table :data="messageMethodProps"/>
+<field-table :data="messageMethodProps" type="methods"/>
 
 ### MessageConfig
 

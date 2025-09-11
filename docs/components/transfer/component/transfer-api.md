@@ -104,19 +104,19 @@ const transferEvents = ref([
   {
     name: 'change',
     desc: '目标选择框的值改变时触发',
-    type: '(value: string[]) => void',
+    type: 'value: string[]',
     value: '-',
   },
   {
     name: 'select',
     desc: '选中的值改变时触发',
-    type: '(selected: string[]) => void',
+    type: 'selected: string[]',
     value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: "(value: string, type: 'target'|'source') => void",
+    type: "value: string, \ntype: 'target'|'source'",
     value: '-',
   },
 ]);
@@ -124,14 +124,14 @@ const transferEvents = ref([
 const transferSlots = ref([
   {
     name: 'source',
-    desc: '源面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
-    type: '-',
+    desc: '源面板',
+    type: 'data: TransferItem[], \nselectedKeys: string[], \nonSelect: (value: string[]) => void',
     value: '-',
   },
   {
     name: 'source-title',
-    desc: '源标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
-    type: '-',
+    desc: '源标题插槽 ',
+    type: 'countTotal: number, \ncountSelected: number, \nsearchValue: string, \nchecked: boolean, \nindeterminate: boolean, \nonSelectAllChange: (checked:boolean) => void, \nonClear: () => void',
     value: '-',
   },
   {
@@ -148,20 +148,20 @@ const transferSlots = ref([
   },
   {
     name: 'target',
-    desc: '目标面板 (data: TransferItem[], selectedKeys: string[], onSelect: (value: string[]) => void)',
+    type: 'data: TransferItem[], \nselectedKeys: string[], \nonSelect: (value: string[]) => void',
     type: '-',
     value: '-',
   },
   {
     name: 'target-title',
-    desc: '目标标题插槽 (countTotal: number, countSelected: number, searchValue: string, checked: boolean, indeterminate: boolean, onSelectAllChange: (checked:boolean) => void, onClear: () => void)',
+    type: 'countTotal: number, \ncountSelected: number, \nsearchValue: string, \nchecked: boolean, \nindeterminate: boolean, \nonSelectAllChange: (checked:boolean) => void, \nonClear: () => void',
     type: '-',
     value: '-',
   },
   {
     name: 'item',
-    desc: '选项 (value: string, label: string)',
-    type: '-',
+    desc: '选项',
+    type: 'value: string, \nlabel: string',
     value: '-',
   },
 ]);

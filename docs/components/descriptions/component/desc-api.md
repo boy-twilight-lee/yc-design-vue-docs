@@ -108,13 +108,13 @@ const descriptionsSlots = ref([
   {
     name: 'value',
     desc: '数据内容',
-    type: '(value: string，index: number，data: DescData) => void',
+    type: 'value: string，\nindex: number，\ndata: DescData',
     value: '-',
   },
   {
     name: 'label',
     desc: '数据标签',
-    type: '(label: string，index: number，data: DescData) => void',
+    type: 'label: string，\nindex: number，\ndata: DescData',
     value: '-',
   },
   {

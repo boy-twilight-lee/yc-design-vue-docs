@@ -136,43 +136,43 @@ const inputTagEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: '(value: InputTagValue, ev: Event) => void',
+    type: 'value: InputTagValue, \nev: Event',
     value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入值发生改变时触发',
-    type: '(inputValue: string, ev: Event) => void',
+    type: 'inputValue: string, \nev: Event',
     value: '-',
   },
   {
     name: 'press-enter',
     desc: '按下回车键时触发',
-    type: '(inputValue: string, ev: KeyboardEvent) => void',
+    type: 'inputValue: string, \nev: KeyboardEvent',
     value: '-',
   },
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
-    type: '(removed: string | number, ev: Event) => void',
+    type: 'removed: string | number, \nev: Event',
     value: '-',
   },
   {
     name: 'clear',
     desc: '点击清除按钮时触发',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
-    type: '(ev: FocusEvent) => void',
+    type: 'ev: FocusEvent',
     value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
-    type: '(ev: FocusEvent) => void',
+    type: 'ev: FocusEvent',
     value: '-',
   },
 ]);
@@ -195,8 +195,8 @@ const inputTagMethods = ref([
 const inputTagSlots = ref([
   {
     name: 'tag',
-    desc: '输入框标签的显示内容 (data: TagData)',
-    type: '-',
+    desc: '输入框标签的显示内容',
+    type: 'data: TagData',
     value: '-',
   },
   {

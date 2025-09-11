@@ -52,7 +52,7 @@ const anchorEmits = ref([
   {
     name: 'select',
     desc: '用户点击链接时触发',
-    type: 'hash: string | undefined, preHash: string',
+    type: 'hash: string | undefined, \npreHash: string',
     value: '-',
   },
   {

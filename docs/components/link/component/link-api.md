@@ -60,7 +60,7 @@ const linkEvents = ref([
   {
     name: 'click',
     desc: '点击时触发',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
 ]);

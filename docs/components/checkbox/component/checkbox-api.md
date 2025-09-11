@@ -84,7 +84,7 @@ const checkboxEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: '(value: boolean, ev: Event) => void',
+    type: 'value: boolean, \nev: Event',
     value: '-',
   },
 ]);
@@ -93,7 +93,7 @@ const checkboxSlots = ref([
   {
     name: 'checkbox',
     desc: '自定义复选框',
-    type: '#checkbox',
+    type: 'checked: boolean,\ndisabled:boolean',
     value: '-',
   },
 ]);
@@ -141,7 +141,7 @@ const checkboxGroupEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: '(value: CheckboxValue[], ev: Event) => void',
+    type: 'value: CheckboxValue[], \nev: Event',
     value: '-',
   },
 ]);
@@ -150,13 +150,13 @@ const checkboxGroupSlots = ref([
   {
     name: 'checkbox',
     desc: '自定义复选框',
-    type: '#checkbox',
+    type: 'checked: boolean,\ndisabled:boolean',
     value: '-',
   },
   {
     name: 'label',
     desc: 'checkbox 文案内容',
-    type: '#label',
+    type: '-',
     value: '-',
   },
 ]);

@@ -126,37 +126,37 @@ const inputEvents = ref([
   {
     name: 'input',
     desc: '用户输入时触发',
-    type: '(value: string, ev: Event) => void',
+    type: 'value: string, \nev: Event',
     value: '-',
   },
   {
     name: 'change',
     desc: '仅在输入框失焦或按下回车时触发',
-    type: '(value: string, ev: Event) => void',
+    type: 'value: string, \nev: Event',
     value: '-',
   },
   {
     name: 'press-enter',
     desc: '用户按下回车时触发',
-    type: '(ev: KeyboardEvent) => void',
+    type: 'ev: KeyboardEvent',
     value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
-    type: '(ev: MouseEvent) => void',
+    type: 'ev: MouseEvent',
     value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
-    type: '(ev: FocusEvent) => void',
+    type: 'ev: FocusEvent',
     value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
-    type: '(ev: FocusEvent) => void',
+    type: 'ev: FocusEvent',
     value: '-',
   },
 ]);
@@ -165,13 +165,13 @@ const inputMethods = ref([
   {
     name: 'focus',
     desc: '使输入框获取焦点',
-    type: '() => void',
+    type: '()=>void',
     value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
-    type: '() => void',
+    type: '()=>void',
     value: '-',
   },
 ]);

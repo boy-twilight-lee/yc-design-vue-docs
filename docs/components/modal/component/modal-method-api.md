@@ -8,7 +8,7 @@
 
 ### ModalMethod
 
-<field-table :data="modalMethodProps"/>
+<field-table :data="modalMethodProps" type="methods"/>
 
 ### ModalConfig
 
@@ -16,7 +16,7 @@
 
 ### ModalReturn
 
-<field-table :data="modalReturnProps"/>
+<field-table :data="modalReturnProps" type="methods"/>
 
 <script setup>
 import { ref } from 'vue';

@@ -6,7 +6,7 @@
 
 ### Breadcrumb Slots
 
-<field-table :data="breadcrumbSlots"/>
+<field-table :data="breadcrumbSlots" type="slots"/>
 
 ### BreadcrumbItem Props
 
@@ -14,7 +14,7 @@
 
 ### BreadcrumbItem Slots
 
-<field-table :data="breadcrumbItemSlots"/>
+<field-table :data="breadcrumbItemSlots" type="slots"/>
 
 ### BreadcrumbRoute
 
@@ -64,7 +64,7 @@ const breadcrumbSlots = ref([
   {
     name: 'item-render',
     desc: 'routes 设置时生效，自定义渲染面包屑',
-    type: 'route: BreadcrumbRoute, routes: BreadcrumbRoute[], paths: string[]',
+    type: 'route: BreadcrumbRoute, \nroutes: BreadcrumbRoute[], \npaths: string[]',
     value: '-',
   },
   {

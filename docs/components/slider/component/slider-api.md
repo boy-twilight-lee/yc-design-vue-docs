@@ -96,7 +96,7 @@ const sliderEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: '(value: number | [number, number]) => void',
+    type: 'value: number | [number, number]',
     value: '-',
   },
 ]);

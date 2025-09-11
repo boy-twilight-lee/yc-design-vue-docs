@@ -112,7 +112,7 @@ const carouselEvents = ref([
   {
     name: 'change',
     desc: '幻灯片发生切换时的回调函数',
-    type: '(index: number，prevIndex: number，isManual: boolean) => void',
+    type: 'index: number，\nprevIndex: number，\nisManual: boolean',
     value: '-',
   },
 ]);

@@ -10,7 +10,7 @@
 
 ### NotificationMethod
 
-<field-table :data="notificationMethodProps"/>
+<field-table :data="notificationMethodProps" type="methods"/>
 
 ### NotificationConfig
 
@@ -18,7 +18,7 @@
 
 ### NotificationReturn
 
-<field-table :data="notificationReturnProps"/>
+<field-table :data="notificationReturnProps" type="methods"/>
 
 <script setup>
 import { ref } from 'vue';

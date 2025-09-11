@@ -6,11 +6,11 @@
 
 ### Modal Emits
 
-<field-table :data="modalEmits"/>
+<field-table :data="modalEmits" type="emits"/>
 
 ### Modal Slots
 
-<field-table :data="modalSlots"/>
+<field-table :data="modalSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';

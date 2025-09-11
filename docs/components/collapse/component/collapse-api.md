@@ -81,7 +81,7 @@ const collapseEvents = ref([
   {
     name: 'change',
     desc: '展开的面板发生改变时触发',
-    type: '(activeKey: CollapseValue[], ev: Event) => void',
+    type: 'activeKey: CollapseValue[], \nev: Event',
     value: '-',
   },
 ]);
@@ -130,7 +130,7 @@ const collapseItemSlots = ref([
   {
     name: 'expand-icon',
     desc: '展开图标',
-    type: "(active: boolean, disabled: boolean, position: 'left' | 'right') => void",
+    type: "active: boolean, \ndisabled: boolean, \nposition: 'left' | 'right'",
     value: '-',
   },
   {

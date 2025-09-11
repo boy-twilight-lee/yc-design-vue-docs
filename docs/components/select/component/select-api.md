@@ -324,47 +324,47 @@ const selectEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: '(value: string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]) => void',
+    type: 'value: SelectValue | SelectValue[]',
   },
   {
     name: 'input-value-change',
     desc: '输入框的值发生改变时触发',
-    type: '(inputValue: string) => void',
+    type: 'inputValue: string',
   },
   {
     name: 'popup-visible-change',
     desc: '下拉框的显示状态改变时触发',
-    type: '(visible: boolean) => void',
+    type: 'visible: boolean',
   },
   {
     name: 'clear',
     desc: '点击清除按钮时触发',
-    type: '() => void',
+    type: '-',
   },
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
-    type: '(removed: string | number | boolean | Record<string, any> | undefined) => void',
+    type: 'removed: SelectValue',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: '(inputValue: string) => void',
+    type: 'inputValue: string',
   },
   {
     name: 'dropdown-scroll',
     desc: '下拉菜单发生滚动时触发',
-    type: '() => void',
+    type: '-',
   },
   {
     name: 'dropdown-reach-bottom',
     desc: '下拉菜单滚动到底部时触发',
-    type: '() => void',
+    type: '-',
   },
   {
     name: 'exceed-limit',
     desc: '多选超出限制时触发',
-    type: '(value: string | number | boolean | Record<string, any> | undefined, ev: Event) => void',
+    type: 'value: SelectValue, \nev: Event',
   },
 ]);
 
@@ -372,42 +372,52 @@ const selectSlots = ref([
   {
     name: 'trigger',
     desc: '自定义触发元素',
+    type: '-'
   },
   {
     name: 'prefix',
     desc: '前缀元素',
+    type: '-'
   },
   {
     name: 'search-icon',
     desc: '选择框的搜索图标',
+    type: '-'
   },
   {
     name: 'loading-icon',
     desc: '选择框的加载中图标',
+    type: '-'
   },
   {
     name: 'arrow-icon',
     desc: '选择框的箭头图标',
+    type: '-'
   },
   {
     name: 'footer',
     desc: '下拉框的页脚',
+    type: '-'
   },
   {
     name: 'header',
     desc: '下拉框的页头',
+    type: '-'
   },
   {
     name: 'label',
-    desc: '选择框的显示内容 (data: SelectOptionData)',
+    desc: '选择框的显示内容',
+    type: 'data: SelectOptionData'
   },
   {
     name: 'option',
-    desc: '选项内容 (data: SelectOptionData)',
+    desc: '选项内容',
+    type: 'data: SelectOptionData'
   },
   {
     name: 'empty',
     desc: '选项为空时的显示内容',
+    type: '-'
   },
 ]);
 

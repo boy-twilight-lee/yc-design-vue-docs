@@ -6,7 +6,7 @@
 
 ### steps Emits
 
-<field-table :data="stepsEmits"/>
+<field-table :data="stepsEmits" type="emits"/>
 
 ### step Props
 
@@ -14,7 +14,7 @@
 
 ### step Slots
 
-<field-table :data="stepSlots"/>
+<field-table :data="stepSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -116,13 +116,13 @@ const stepSlots = ref([
   {
     name: 'node',
     desc: '节点',
-    type: 'step: number, status: string',
+    type: 'step: number, \nstatus: string',
     value: '-',
   },
   {
     name: 'icon',
     desc: '图标',
-    type: 'step: number, status: string',
+    type: 'step: number, \nstatus: string',
     value: '-',
   },
   {

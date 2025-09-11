@@ -180,7 +180,7 @@ const imageEvents = ref([
   {
     name: 'preview-visible-change',
     desc: '预览的打开和关闭事件',
-    type: '(visible: boolean) => void',
+    type: 'visible: boolean',
     value: '-',
   },
 ]);

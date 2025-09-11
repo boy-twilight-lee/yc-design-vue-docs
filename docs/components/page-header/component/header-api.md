@@ -6,11 +6,11 @@
 
 ### page-header Emits
 
-<field-table :data="pageHeaderEmits"/>
+<field-table :data="pageHeaderEmits" type="emits"/>
 
 ### page-header Slots
 
-<field-table :data="pageHeaderSlots"/>
+<field-table :data="pageHeaderSlots" type="slots"/>
 
 <script setup>
 import { ref } from 'vue';
