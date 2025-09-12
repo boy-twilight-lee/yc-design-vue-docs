@@ -24,6 +24,10 @@
 
 <field-table :data="siderProps" />
 
+### layout-sider emits
+
+<field-table :data="siderEmits" type="emits"/>
+
 ### Type
 
 ```typescript
@@ -115,6 +119,26 @@ const siderProps = ref([
     desc: '隐藏底部折叠触发器',
     type: 'boolean',
     value: 'false',
+  },
+]);
+
+const siderEmits = ref([
+  {
+    name: 'collapse',
+    desc: '触发sider发生收缩',
+    type: {
+      collapsed:'boolean',
+      type: "'clickTrigger' | 'responsive'"
+    },
+    value: '-',
+  },
+  {
+    name: 'breakpoint',
+    desc: '触发响应式收缩',
+    type: {
+      collapsed:'boolean',
+    },
+    value: '-',
   },
 ]);
 </script>

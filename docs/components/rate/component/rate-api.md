@@ -76,13 +76,17 @@ const rateEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: number',
+    type: {
+      value: 'number'
+    },
     value: '-',
   },
   {
     name: 'hover-change',
     desc: '鼠标移动到数值上时触发',
-    type: 'value: number',
+    type: {
+      value: 'number'
+    },
     value: '-',
   },
 ]);

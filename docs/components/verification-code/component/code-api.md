@@ -87,19 +87,27 @@ const verificationCodeEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'finish',
     desc: '填充完成时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'input',
     desc: '输入时触发',
-    type: 'inputValue: string,\nindex: number,\nev: Event',
+    type: {
+      inputValue: 'string',
+      ev: 'Event',
+      index: 'number',
+    },
     value: '-',
   },
 ]);

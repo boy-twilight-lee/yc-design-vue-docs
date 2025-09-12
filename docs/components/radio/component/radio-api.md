@@ -76,7 +76,10 @@ const radioEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: RadioValue,\nev: Event',
+    type: {
+      value: 'RadioValue',
+      ev: 'Event'
+    },
     value: '-',
   },
 ]);
@@ -85,7 +88,10 @@ const radioSlots = ref([
   {
     name: 'radio',
     desc: '自定义单选框',
-    type: 'checked: boolean,\ndisabled: boolean',
+    type: {
+      checked: 'boolean',
+      disabled: 'boolean'
+    },
     value: '-',
   },
 ]);
@@ -141,7 +147,9 @@ const radioGroupEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: RadioValue',
+    type: {
+      value: 'RadioValue'
+    },
     value: '-',
   },
 ]);
@@ -150,13 +158,18 @@ const radioGroupSlots = ref([
   {
     name: 'radio',
     desc: '自定义单选框',
-    type: 'checked: boolean,\ndisabled: boolean',
+    type: {
+      checked: 'boolean',
+      disabled: 'boolean'
+    },
     value: '-',
   },
   {
     name: 'label',
     desc: 'radio 文案内容',
-    type: 'data: RadioOption',
+    type: {
+      data: 'RadioOption'
+    },
     value: '-',
   },
 ]);

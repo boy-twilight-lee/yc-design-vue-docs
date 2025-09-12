@@ -158,13 +158,19 @@ const timePickerEvents = ref([
   {
     name: 'change',
     desc: '组件值发生改变',
-    type: 'timeString: string | Array<string | undefined> | undefined,\ntime: Date | Array<Date | undefined> | undefined',
+    type: {
+      timeString: 'string | Array<string | undefined> | undefined',
+      time: 'Date | Array<Date | undefined> | undefined'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '选择时间但未触发组件值变化',
-    type: 'timeString: string | Array<string | undefined>,\ntime: Date | Array<Date | undefined>',
+    type: {
+      timeString: 'string | Array<string | undefined>',
+      time: 'Date | Array<Date | undefined>'
+    },
     value: '-',
   },
   {
@@ -176,7 +182,9 @@ const timePickerEvents = ref([
   {
     name: 'popup-visible-change',
     desc: '弹出框展开和收起',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
 ]);

@@ -138,7 +138,9 @@ const commonEvents = ref([
   {
     name: 'change',
     desc: '编辑内容变化',
-    type: 'text: string',
+    type: {
+      text: 'string'
+    },
     value: '-',
   },
   {
@@ -150,7 +152,9 @@ const commonEvents = ref([
   {
     name: 'copy',
     desc: '复制',
-    type: 'text: string',
+    type: {
+      text: 'string'
+    },
     value: '-',
   },
 ]);

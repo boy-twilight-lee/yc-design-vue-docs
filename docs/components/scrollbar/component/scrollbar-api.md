@@ -49,19 +49,25 @@ const scrollbarMethod = ref([
   {
     name: 'scrollTo',
     desc: '滚动',
-    type: 'options: number | {left?: number;top?: number}',
-    value: 'y: number',
+    type: {
+      options: 'number | {left?: number;top?: number}'
+    },
+    value: '-',
   },
   {
     name: 'scrollTop',
     desc: '纵向滚动',
-    type: 'top: number',
+    type: {
+      top: 'number'
+    },
     value: '-',
   },
   {
     name: 'scrollLeft',
     desc: '横向滚动',
-    type: 'left: number',
+    type: {
+      left: 'number'
+    },
     value: '-',
   },
 ]);

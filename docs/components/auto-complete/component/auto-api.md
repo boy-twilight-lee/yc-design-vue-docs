@@ -97,39 +97,67 @@ const autoCompleteEvents = ref([
   {
     name: 'change',
     desc: '绑定值发生改变时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '选择选项时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
-    type: 'ev: Event',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'dropdown-scroll',
     desc: '下拉菜单发生滚动时触发',
-    type: 'ev: Event',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'dropdown-reach-bottom',
     desc: '下拉菜单滚动到底部时触发',
-    type: 'ev: Event',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
+  {
+    name: 'focus',
+    desc: '自动补全聚焦时',
+    type: {
+      ev: 'FocusEvent'
+    },
+    value: '-',
+  }, 
+  {
+    name: 'blur',
+    desc: '自动补全失焦时',
+    type: {
+      ev: 'FocusEvent'
+    },
+    value: '-',
+  }, 
 ]);
 
 const autoCompleteMethods = ref([
@@ -151,7 +179,9 @@ const autoCompleteSlots = ref([
   {
     name: 'option',
     desc: '选项内容',
-    type: 'data: OptionInfo',
+    type: {
+      data: 'OptionInfo'
+    },
     value: '-',
   },
   {

@@ -116,25 +116,33 @@ const listEvents = ref([
   {
     name: 'scroll',
     desc: '列表滚动时触发',
-    type: '-',
+    type: {
+      ev:'Event'
+    },
     value: '-',
   },
   {
     name: 'reach-bottom',
     desc: '当列表到达底部时触发',
-    type: '-',
+    type: {
+      ev:'Event'
+    },
     value: '-',
   },
   {
     name: 'page-change',
     desc: '表格分页发生改变时触发',
-    type: 'page: number',
+    type: {
+      page: 'number'
+    },
     value: '-',
   },
   {
     name: 'page-size-change',
     desc: '表格每页数据数量发生改变时触发',
-    type: 'pageSize: number',
+    type: {
+      pageSize: 'number'
+    },
     value: '-',
   },
 ]);
@@ -143,7 +151,9 @@ const listMethods = ref([
   {
     name: 'scrollIntoView',
     desc: '虚拟滚动到某个元素',
-    type: `options: {\n index?: number;\n key?: number | string;\n align: 'auto' | 'top' | 'bottom'\n}`,
+    type: {
+      options: "{ index?: number; key?: number | string; align: 'auto' | 'top' | 'bottom' }"
+    },
     value: '-',
   },
 ]);
@@ -158,7 +168,10 @@ const listSlots = ref([
   {
     name: 'item',
     desc: '列表项',
-    type: 'index: number,\nitem: any',
+    type: {
+      index: 'number',
+      item: 'any'
+    },
     value: '-',
   },
   {

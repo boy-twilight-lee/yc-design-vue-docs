@@ -226,7 +226,9 @@ const triggerEmits = ref([
   {
     name: 'popup-visible-change',
     desc: '弹出框显示状态改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {

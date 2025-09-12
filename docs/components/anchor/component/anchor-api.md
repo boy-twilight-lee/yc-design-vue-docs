@@ -52,13 +52,18 @@ const anchorEmits = ref([
   {
     name: 'select',
     desc: '用户点击链接时触发',
-    type: 'hash: string | undefined,\npreHash: string',
+    type: {
+        hash: 'string | undefined',
+        preHash: 'string'
+    },
     value: '-',
   },
   {
     name: 'change',
     desc: '链接发生改变时触发',
-    type: 'hash: string',
+    type: {
+        hash: 'string'
+    },
     value: '-',
   },
 ]);

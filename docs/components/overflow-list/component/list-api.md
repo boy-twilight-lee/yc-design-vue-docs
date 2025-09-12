@@ -40,7 +40,9 @@ const overflowListEmits = ref([
   {
     name: 'change',
     desc: '溢出数量改变时触发',
-    type: 'value: number',
+    type: {
+      value: 'number'
+    },
     value: '-',
   },
 ]);
@@ -49,7 +51,9 @@ const overflowListSlots = ref([
   {
     name: 'overflow',
     desc: '折叠元素',
-    type: 'number: number',
+    type: {
+      value: 'number'
+    },
     value: '-',
   },
 ]);

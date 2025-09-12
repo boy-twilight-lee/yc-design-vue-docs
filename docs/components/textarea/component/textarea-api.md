@@ -94,31 +94,43 @@ const textareaEvents = ref([
   {
     name: 'input',
     desc: '用户输入时触发',
-    type: 'value: string,\nev: Event',
+    type: {
+      value: 'string',
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'change',
     desc: '仅在文本框失焦时触发',
-    type: 'value: string,\nev: Event',
+    type: {
+      value: 'string',
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'clear',
     desc: '点击清除按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'focus',
     desc: '文本框获取焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'blur',
     desc: '文本框失去焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
 ]);

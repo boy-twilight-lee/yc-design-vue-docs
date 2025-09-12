@@ -174,19 +174,27 @@ const menuEmits = ref([
   {
     name: 'collapse',
     desc: '折叠状态改变时触发',
-    type: "collapsed: boolean,\ntype: 'clickTrigger' | 'responsive'",
+    type: {
+      collapsed: 'boolean',
+      type: "'clickTrigger' | 'responsive'"
+    },
     value: '-',
   },
   {
     name: 'menu-item-click',
     desc: '点击菜单项时触发',
-    type: 'key: string',
+    type: {
+      key: 'string'
+    },
     value: '-',
   },
   {
     name: 'sub-menu-click',
     desc: '点击子菜单时触发',
-    type: 'key: string, openKeys: string[]',
+    type: {
+      key: 'string',
+      openKeys: 'string[]'
+    },
     value: '-',
   },
 ]);
@@ -195,7 +203,9 @@ const menuSlots = ref([
   {
     name: 'collapse-icon',
     desc: '折叠图标',
-    type: 'collapsed: boolean',
+    type: {
+      collapsed: 'boolean'
+    },
     value: '-',
   },
   {

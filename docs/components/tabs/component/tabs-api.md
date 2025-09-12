@@ -140,13 +140,17 @@ const tabsEvents = ref([
   {
     name: 'change',
     desc: '当前标签值改变时触发',
-    type: 'key: TabKey',
+    type: {
+      key: 'TabKey'
+    },
     value: '-',
   },
   {
     name: 'tab-click',
     desc: '用户点击标签时触发',
-    type: 'key: TabKey',
+    type: {
+      key: 'TabKey'
+    },
     value: '-',
   },
   {
@@ -158,7 +162,9 @@ const tabsEvents = ref([
   {
     name: 'delete',
     desc: '用户点击删除按钮时触发',
-    type: 'key: TabKey',
+    type: {
+      key: 'TabKey'
+    },
     value: '-',
   },
 ]);

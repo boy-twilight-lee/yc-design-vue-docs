@@ -67,7 +67,7 @@ const carouselProps = ref([
   {
     name: 'direction',
     desc: '幻灯片移动方向',
-    type: "Direction）",
+    type: "Direction",
     value: "'horizontal'",
     href:"/components/divider"
   },
@@ -113,7 +113,11 @@ const carouselEvents = ref([
   {
     name: 'change',
     desc: '幻灯片发生切换时的回调函数',
-    type: 'index: number,\nprevIndex: number,\nisManual: boolean',
+    type: {
+      index: 'number',
+      prevIndex: 'number',
+      isManual: 'boolean'
+    },
     value: '-',
   },
 ]);

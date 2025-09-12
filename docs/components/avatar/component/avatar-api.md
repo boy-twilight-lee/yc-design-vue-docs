@@ -78,19 +78,25 @@ const avatarEvents = ref([
   {
     name: 'click',
     desc: '点击回调',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: "MouseEvent"
+    },
     value: '-',
   },
   {
     name: 'error',
     desc: '图片加载错误',
-    type: '-',
+    type: {
+      ev: "Event"
+    },
     value: '-',
   },
   {
     name: 'load',
     desc: '图片加载成功',
-    type: '-',
+    type: {
+      ev: "Event"
+    },
     value: '-',
   },
 ]);

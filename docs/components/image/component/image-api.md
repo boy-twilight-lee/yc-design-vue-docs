@@ -180,7 +180,9 @@ const imageEvents = ref([
   {
     name: 'preview-visible-change',
     desc: '预览的打开和关闭事件',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
 ]);
@@ -374,13 +376,17 @@ const imagePreviewGroupEvents = ref([
   {
     name: 'change',
     desc: '切换图片',
-    type: 'index: number',
+    type: {
+      index: 'number'
+    },
     value: '-',
   },
   {
     name: 'visible-change',
     desc: '预览的打开和关闭',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
 ]);

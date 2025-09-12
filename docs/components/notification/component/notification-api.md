@@ -27,37 +27,49 @@ const notificationMethodProps = ref([
   {
     name: 'info',
     desc: '显示信息提醒框',
-    type: '( config: string | NotificationConfig, appContext?: AppContext ) => NotificationReturn',
+    type:{
+      config: 'config: string | NotificationConfig',
+    },
     value: '-',
   },
   {
     name: 'success',
     desc: '显示成功提醒框',
-    type: '( config: string | NotificationConfig, appContext?: AppContext ) => NotificationReturn',
+    type:{
+      config: 'config: string | NotificationConfig',
+    },
     value: '-',
   },
   {
     name: 'warning',
     desc: '显示警告提醒框',
-    type: '( config: string | NotificationConfig, appContext?: AppContext ) => NotificationReturn',
+    type:{
+      config: 'config: string | NotificationConfig',
+    },
     value: '-',
   },
   {
     name: 'error',
     desc: '显示错误提醒框',
-    type: '( config: string | NotificationConfig, appContext?: AppContext ) => NotificationReturn',
+    type:{
+      config: 'config: string | NotificationConfig',
+    },
     value: '-',
   },
   {
     name: 'remove',
     desc: '清除对应 id 的提醒框',
-    type: '(id: string) => void',
+    type: {
+      id: 'string'
+    },
     value: '-',
   },
   {
     name: 'clear',
     desc: '清除全部提醒框',
-    type: '(position?: NotificationPosition) => void',
+    type: {
+      position: 'NotificationPosition'
+    },
     value: '-',
   },
 ]);

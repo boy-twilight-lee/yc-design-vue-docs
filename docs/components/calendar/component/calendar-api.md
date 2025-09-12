@@ -58,13 +58,17 @@ const calendarEvents = ref([
   {
     name: 'change',
     desc: '选择的日期改变时触发',
-    type: 'date: Date',
+    type: {
+      date: 'Date'
+    },
     value: '-',
   },
   {
     name: 'panel-change',
     desc: '日期面板改变时触发',
-    type: 'date: Date',
+    type: {
+      date: 'Date'
+    },
     value: '-',
   },
 ]);
@@ -73,13 +77,20 @@ const calendarSlots = ref([
   {
     name: 'header',
     desc: '自定义头部内容',
-    type: 'year: number,\nmonth: number',
+    type: {
+      year: 'number',
+      month: 'number'
+    },
     value: '-',
   },
   {
     name: 'default',
     desc: '自定义单元格内容',
-    type: 'year: number,\nmonth: number,\ndate: number',
+    type: {
+      year: 'number',
+      month: 'number',
+      date: 'number'
+    },
     value: '-',
   },
 ]);

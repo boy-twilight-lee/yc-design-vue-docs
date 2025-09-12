@@ -40,7 +40,9 @@ const pageHeaderEmits = ref([
   {
     name: 'back',
     desc: '点击返回按钮时触发',
-    type: 'event: Event',
+    type: {
+      event: 'Event'
+    },
     value: '-',
   },
 ]);

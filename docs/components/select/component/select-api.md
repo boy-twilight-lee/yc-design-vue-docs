@@ -310,19 +310,25 @@ const selectEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: SelectValue | SelectValue[]',
+    type: {
+      value: 'SelectValue | SelectValue[]'
+    },
     value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入框的值发生改变时触发',
-    type: 'inputValue: string',
+    type: {
+      inputValue: 'string'
+    },
     value: '-',
   },
   {
     name: 'popup-visible-change',
     desc: '下拉框的显示状态改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {
@@ -334,31 +340,42 @@ const selectEvents = ref([
   {
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
-    type: 'removed: SelectValue',
+    type: {
+      removed: 'SelectValue'
+    },
     value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: 'inputValue: string',
+    type: {
+      inputValue: 'string'
+    },
     value: '-',
   },
   {
     name: 'dropdown-scroll',
     desc: '下拉菜单发生滚动时触发',
-    type: '-',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'dropdown-reach-bottom',
     desc: '下拉菜单滚动到底部时触发',
-    type: '-',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'exceed-limit',
     desc: '多选超出限制时触发',
-    type: 'value: SelectValue,\nev: Event',
+    type: {
+      value: 'SelectValue',
+      ev: 'Event'
+    },
     value: '-',
   },
 ]);
@@ -409,13 +426,17 @@ const selectSlots = ref([
   {
     name: 'label',
     desc: '选择框的显示内容',
-    type: 'data: SelectOptionData',
+    type: {
+      data: 'SelectOptionData'
+    },
     value: '-',
   },
   {
     name: 'option',
     desc: '选项内容',
-    type: 'data: SelectOptionData',
+    type: {
+      data: 'SelectOptionData'
+    },
     value: '-',
   },
   {

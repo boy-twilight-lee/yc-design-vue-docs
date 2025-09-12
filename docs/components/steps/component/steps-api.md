@@ -80,7 +80,10 @@ const stepsEmits = ref([
   {
     name: 'change',
     desc: '步骤数发生改变时触发',
-    type: 'step: number,\nev: Event',
+    type: {
+      step: 'number',
+      ev: 'Event'
+    },
     value: '-',
   },
 ]);
@@ -116,13 +119,19 @@ const stepSlots = ref([
   {
     name: 'node',
     desc: '节点',
-    type: 'step: number,\nstatus: string',
+    type: {
+      step: 'number',
+      status: 'string'
+    },
     value: '-',
   },
   {
     name: 'icon',
     desc: '图标',
-    type: 'step: number,\nstatus: string',
+    type: {
+      step: 'number',
+      status: 'string'
+    },
     value: '-',
   },
   {

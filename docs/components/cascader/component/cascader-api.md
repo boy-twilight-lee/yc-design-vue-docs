@@ -225,13 +225,17 @@ const cascaderEvents = ref([
   {
     name: 'change',
     desc: '选中值改变时触发',
-    type: 'value: CascaderValue',
+    type: {
+      value: 'CascaderValue'
+    },
     value: '-',
   },
   {
     name: 'input-value-change',
     desc: '输入值改变时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
@@ -243,25 +247,33 @@ const cascaderEvents = ref([
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'popup-visible-change',
     desc: '下拉框的显示状态改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {
     name: 'focus',
     desc: '获得焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'blur',
     desc: '失去焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
 ]);
@@ -270,7 +282,9 @@ const cascaderSlots = ref([
   {
     name: 'label',
     desc: '选择框的显示内容',
-    type: 'data: CascaderOption',
+    type: {
+      data: 'CascaderOption'
+    },
     value: '-',
   },
   {
@@ -306,7 +320,9 @@ const cascaderSlots = ref([
   {
     name: 'option',
     desc: '选项内容',
-    type: 'data: CascaderOption',
+    type: {
+      data: 'CascaderOption'
+    },
     value: '-',
   },
 ]);

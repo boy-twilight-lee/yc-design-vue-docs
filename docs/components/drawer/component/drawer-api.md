@@ -178,13 +178,17 @@ const drawerEvents = ref([
   {
     name: 'ok',
     desc: '点击确定按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'cancel',
     desc: '点击取消、关闭按钮时触发',
-    type: 'ev: MouseEvent | KeyboardEvent',
+    type: {
+      ev: 'MouseEvent | KeyboardEvent'
+    },
     value: '-',
   },
   {

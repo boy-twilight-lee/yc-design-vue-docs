@@ -25,37 +25,49 @@ const modalMethodProps = ref([
   {
     name: 'open',
     desc: '打开对话框',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
   {
     name: 'confirm',
     desc: '打开对话框（简单模式）',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
   {
     name: 'info',
     desc: '打开信息对话框',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
   {
     name: 'success',
     desc: '打开成功对话框',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
   {
     name: 'warning',
     desc: '打开警告对话框',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
   {
     name: 'error',
     desc: '打开错误对话框',
-    type: '(config: ModalConfig, appContext?: AppContext) => ModalReturn',
+    type:{
+      config: 'ModalConfig',
+    },
     value: '-',
   },
 ]);

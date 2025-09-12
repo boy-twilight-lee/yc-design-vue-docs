@@ -126,7 +126,9 @@ const popconfirmEvents = ref([
   {
     name: 'popup-visible-change',
     desc: '气泡确认框的显隐状态改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {

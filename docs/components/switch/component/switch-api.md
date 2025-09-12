@@ -100,19 +100,26 @@ const switchEvents = ref([
   {
     name: 'change',
     desc: '值改变时触发',
-    type: 'value: boolean | string | number,\nev: Event',
+    type: {
+      value: 'boolean | string | number',
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'focus',
     desc: '组件获得焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'blur',
     desc: '组件失去焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
 ]);

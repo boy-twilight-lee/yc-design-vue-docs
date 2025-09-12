@@ -143,13 +143,17 @@ const paginationEmits = ref([
   {
     name: 'change',
     desc: '页码改变时触发',
-    type: 'current: number',
+    type: {
+      current: 'number'
+    },
     value: '-',
   },
   {
     name: 'page-size-change',
     desc: '数据条数改变时触发',
-    type: 'pageSize: number',
+    type: {
+      pageSize: 'number'
+    },
     value: '-',
   },
 ]);

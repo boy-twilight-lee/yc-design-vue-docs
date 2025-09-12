@@ -141,37 +141,51 @@ const inputNumberEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: InputNumberValue,\nev: Event',
+    type: {
+      value: 'InputNumberValue',
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'focus',
     desc: '输入框获取焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'blur',
     desc: '输入框失去焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'clear',
     desc: '用户点击清除按钮时触发',
-    type: 'ev: Event',
+    type: {
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'input',
     desc: '输入时触发',
-    type: 'value: InputNumberValue,\ninputValue: string,\nev: Event',
+    type: {
+      value: 'InputNumberValue',
+      ev: 'Event'
+    },
     value: '-',
   },
   {
     name: 'keydown',
     desc: '按下键盘时触发',
-    type: 'ev: KeyboardEvent',
+    type: {
+      ev: 'KeyboardEvent'
+    },
     value: '-',
   },
 ]);

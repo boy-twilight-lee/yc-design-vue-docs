@@ -81,19 +81,26 @@ const mentionEvents = ref([
   {
     name: 'change',
     desc: '值发生改变时触发',
-    type: 'value: string',
+    type: {
+      value: 'string'
+    },
     value: '-',
   },
   {
     name: 'search',
     desc: '动态搜索时触发',
-    type: 'value: string,\nprefix: string',
+    type: {
+      value: 'string',
+      prefix: 'string'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '选择下拉选项时触发',
-    type: 'value: SelectValue',
+    type: {
+      value: 'SelectValue'
+    },
     value: '-',
   },
   {
@@ -105,13 +112,17 @@ const mentionEvents = ref([
   {
     name: 'focus',
     desc: '文本框获取焦点时触发',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
   {
     name: 'blur',
     desc: '文本框失去焦点时触发)',
-    type: 'ev: FocusEvent',
+    type: {
+      ev: 'FocusEvent'
+    },
     value: '-',
   },
 ]);
@@ -135,7 +146,9 @@ const mentionSlots = ref([
   {
     name: 'option',
     desc: '选项内容',
-    type: 'data: OptionInfo',
+    type: {
+      data: 'OptionInfo'
+    },
     value: '-',
   },
 ]);

@@ -103,7 +103,9 @@ const tooltipEvents = ref([
   {
     name: 'popup-visible-change',
     desc: '文字气泡显示状态改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
 ]);

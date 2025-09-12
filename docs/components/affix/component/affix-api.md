@@ -46,7 +46,9 @@ const affixEmits = ref([
   {
     name: 'change',
     desc: '固定状态发生改变时触发',
-    type: 'fixed: boolean',
+    type: {
+      fixed: 'boolean'
+    },
     value: '-',
   },
 ]);

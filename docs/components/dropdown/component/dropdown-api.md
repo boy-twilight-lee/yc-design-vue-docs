@@ -114,13 +114,18 @@ const dropdownEmits = ref([
   {
     name: 'popup-visible-change',
     desc: '下拉框显示状态发生改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined,\nev: Event',
+    type: {
+      value: 'string | number | Record<string, any> | undefined',
+      ev: 'Event'
+    },
     value: '-',
   },
 ])
@@ -159,7 +164,9 @@ const doptionEmits = ref([
   {
     name: 'click',
     desc: '点击按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
 ])
@@ -246,7 +253,9 @@ const dsubmenuEmits = ref([
   {
     name: 'popup-visible-change',
     desc: '下拉框显示状态发生改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
 ])
@@ -339,19 +348,26 @@ const dropdownButtonEmits = ref([
   {
     name: 'popup-visible-change',
     desc: '下拉框显示状态发生改变时触发',
-    type: 'visible: boolean',
+    type: {
+      visible: 'boolean'
+    },
     value: '-',
   },
   {
     name: 'click',
     desc: '点击按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '用户选择时触发',
-    type: 'value: string | number | Record<string, any> | undefined,\nev: Event',
+    type: {
+      value: 'string | number | Record<string, any> | undefined',
+      ev: 'Event'
+    },
     value: '-',
   },
 ])
@@ -360,7 +376,9 @@ const dropdownButtonSlots = ref([
   {
     name: 'icon',
     desc: '按钮图标',
-    type: 'popupVisible: boolean',
+    type: {
+      popupVisible: 'boolean'
+    },
     value: '-',
   },
   {

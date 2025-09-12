@@ -108,13 +108,18 @@ const tagEvents = ref([
   {
     name: 'close',
     desc: '点击关闭按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'check',
     desc: '用户选中时触发（仅在可选中模式下触发）',
-    type: 'checked: boolean,\nev: MouseEvent',
+    type: {
+      checked: 'boolean',
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
 ]);

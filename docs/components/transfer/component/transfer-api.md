@@ -104,19 +104,26 @@ const transferEvents = ref([
   {
     name: 'change',
     desc: '目标选择框的值改变时触发',
-    type: 'value: string[]',
+    type: {
+      value: 'string[]'
+    },
     value: '-',
   },
   {
     name: 'select',
     desc: '选中的值改变时触发',
-    type: 'selected: string[]',
+    type: {
+      selected: 'string[]'
+    },
     value: '-',
   },
   {
     name: 'search',
     desc: '用户搜索时触发',
-    type: "value: string,\ntype: 'target'|'source'",
+    type: {
+      value: "string",
+      type: "'target'|'source'"
+    },
     value: '-',
   },
 ]);
@@ -125,13 +132,25 @@ const transferSlots = ref([
   {
     name: 'source',
     desc: '源面板',
-    type: 'data: TransferItem[],\nselectedKeys: string[],\nonSelect: (value: string[]) => void',
+    type: {
+      data: 'TransferItem[]',
+      selectedKeys: 'string[]',
+      onSelect: '(value: string[]) => void'
+    },
     value: '-',
   },
   {
     name: 'source-title',
     desc: '源标题插槽 ',
-    type: 'countTotal: number,\ncountSelected: number,\nsearchValue: string,\nchecked: boolean,\nindeterminate: boolean,\nonSelectAllChange: (checked:boolean) => void,\nonClear: () => void',
+    type: {
+      countTotal: 'number',
+      countSelected: 'number',
+      searchValue: 'string',
+      checked: 'boolean',
+      indeterminate: 'boolean',
+      onSelectAllChange: '(checked:boolean) => void',
+      onClear: '() => void'
+    },
     value: '-',
   },
   {
@@ -148,20 +167,35 @@ const transferSlots = ref([
   },
   {
     name: 'target',
-    type: 'data: TransferItem[],\nselectedKeys: string[],\nonSelect: (value: string[]) => void',
-    type: '-',
+    desc: '目标面板',
+    type: {
+      data: 'TransferItem[]',
+      selectedKeys: 'string[]',
+      onSelect: '(value: string[]) => void'
+    },
     value: '-',
   },
   {
     name: 'target-title',
-    type: 'countTotal: number,\ncountSelected: number,\nsearchValue: string,\nchecked: boolean,\nindeterminate: boolean,\nonSelectAllChange: (checked:boolean) => void,\nonClear: () => void',
-    type: '-',
+    desc: '目标标题插槽',
+    type: {
+      countTotal: 'number',
+      countSelected: 'number',
+      searchValue: 'string',
+      checked: 'boolean',
+      indeterminate: 'boolean',
+      onSelectAllChange: '(checked:boolean) => void',
+      onClear: '() => void'
+    },
     value: '-',
   },
   {
     name: 'item',
     desc: '选项',
-    type: 'value: string,\nlabel: string',
+    type: {
+      value: 'string',
+      label: 'string'
+    },
     value: '-',
   },
 ]);

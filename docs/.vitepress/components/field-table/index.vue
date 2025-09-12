@@ -64,7 +64,7 @@ const columns = computed(() => {
       ? {
           title: typeMap[type.value] ?? '参数',
           dataIndex: 'type',
-          width: ['emits', 'methods', 'slots'].includes(props.type) ? 450 : 250,
+          width: ['emits', 'methods', 'slots'].includes(props.type) ? 350 : 250,
         }
       : null,
     type.value == 'props'
@@ -86,24 +86,20 @@ const getStyleStr = (style) => {
 const parse = (data, field) => {
   const dataValue = data[field];
   if (dataValue == '-') return '-';
-  if (
-    ['emits', 'methods', 'slots', 'props'].includes(type.value) &&
-    ['type', 'value'].includes(field)
-  ) {
+  if (typeof data[field] == 'object') {
+    return Object.entries(data[field])
+      .map(([key, value]) => {
+        return `${key}: <i style="color:rgb(var(--primary-6))">${value}</i>`;
+      })
+      .join(',\n');
+  }
+  if (type.value == 'props' && ['type', 'value'].includes(field)) {
     const styleStr = getStyleStr({
       color: 'rgb(var(--primary-6))',
       'text-decoration': data.href ? 'underline' : 'none',
       cursor: data.href ? 'pointer' : '',
     });
-    return ['emits', 'methods', 'slots'].includes(type.value) && field == 'type'
-      ? dataValue
-          .split(',')
-          .map((v) => {
-            const [key, value] = v.split(': ');
-            return `${key}：<i style="${styleStr}">${value}</i>`;
-          })
-          .join(',')
-      : `<i style="${styleStr}">${dataValue}</i>`;
+    return `<i style="${styleStr}">${dataValue}</i>`;
   }
   return dataValue;
 };

@@ -46,19 +46,26 @@ const resizeBoxEvents = ref([
   {
     name: 'moving-start',
     desc: '拖拽开始时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'moving',
     desc: '拖拽时触发',
-    type: 'size: { width: number; height: number; },\nev: MouseEvent',
+    type: {
+      size: '{ width: number; height: number; }',
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
   {
     name: 'moving-end',
     desc: '拖拽结束时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
 ]);
@@ -67,13 +74,17 @@ const resizeBoxSlots = ref([
   {
     name: 'resize-trigger',
     desc: '伸缩杆的内容',
-    type: "direction: 'left' | 'right' | 'top' | 'bottom'",
+    type: {
+      direction: "'left' | 'right' | 'top' | 'bottom'"
+    },
     value: '-',
   },
   {
     name: 'resize-trigger-icon',
     desc: '伸缩杆的图标',
-    type: "direction: 'left' | 'right' | 'top' | 'bottom'",
+    type: {
+      direction: "'left' | 'right' | 'top' | 'bottom'"
+    },
     value: '-',
   },
 ]);

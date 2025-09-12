@@ -199,7 +199,9 @@ const drawerMethodProps = ref([
   {
     name: 'open',
     desc: '打开抽屉',
-    type: 'config: DrawerConfig',
+    type: {
+      config: 'DrawerConfig'
+    },
     value: '-',
   },
 ]);

@@ -27,43 +27,57 @@ const messageMethodProps = ref([
   {
     name: 'info',
     desc: '显示信息提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'success',
     desc: '显示成功提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'warning',
     desc: '显示警告提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'error',
     desc: '显示错误提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'loading',
     desc: '显示加载中提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'normal',
     desc: '显示提示',
-    type: '(config: string | MessageConfig, appContext?: AppContext) => MessageReturn',
+    type: {
+      config: "string | MessageConfig"
+    },
     value: '-',
   },
   {
     name: 'clear',
     desc: '清空全部提示',
-    type: '(position?: MessagePosition) => void',
+    type: {
+      position: "MessagePosition"
+    },
     value: '-',
   },
 ]);
