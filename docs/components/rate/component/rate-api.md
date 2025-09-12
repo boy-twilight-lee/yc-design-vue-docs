@@ -95,7 +95,9 @@ const rateSlots = ref([
   {
     name: 'character',
     desc: '符号',
-    type: 'index: number',
+    type: {
+      index: 'number'
+    },
     value: '-',
   },
 ]);

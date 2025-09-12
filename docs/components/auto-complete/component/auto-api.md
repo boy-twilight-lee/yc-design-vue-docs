@@ -180,7 +180,7 @@ const autoCompleteSlots = ref([
     name: 'option',
     desc: '选项内容',
     type: {
-      data: 'OptionInfo'
+      data: 'SelectOption'
     },
     value: '-',
   },

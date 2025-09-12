@@ -163,13 +163,17 @@ const commonSlots = ref([
   {
     name: 'copy-icon',
     desc: '复制图标',
-    type: '-',
+    type: {
+      copied: 'boolean'
+    },
     value: '',
   },
   {
     name: 'copy-tooltip',
     desc: '复制的文字气泡内容',
-    type: '-',
+    type: {
+      copied: 'boolean'
+    },
     value: '',
   },
 ]);

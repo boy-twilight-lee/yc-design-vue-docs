@@ -162,7 +162,9 @@ const paginationSlots = ref([
   {
     name: 'total',
     desc: '总数',
-    type: 'total: number',
+    type: {
+      total: 'number'
+    },
     value: '-',
   },
   {
@@ -174,13 +176,17 @@ const paginationSlots = ref([
   {
     name: 'page-item-step',
     desc: '分页按钮（步）',
-    type: "type: 'previous'|'next'",
+    type: {
+      type: "'previous' | 'next'"
+    },
     value: '-',
   },
   {
     name: 'page-item',
     desc: '分页按钮',
-    type: 'page: number',
+    type: {
+      page: 'number'
+    },
     value: '-',
   },
 ]);

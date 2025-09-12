@@ -28,6 +28,10 @@
 
 <field-table :data="siderEmits" type="emits"/>
 
+### layout-sider slots
+
+<field-table :data="siderSlots" type="slots"/>
+
 ### Type
 
 ```typescript
@@ -135,6 +139,17 @@ const siderEmits = ref([
   {
     name: 'breakpoint',
     desc: '触发响应式收缩',
+    type: {
+      collapsed:'boolean',
+    },
+    value: '-',
+  },
+]);
+
+const siderSlots = ref([
+  {
+    name: 'trigger',
+    desc: '触发收缩的触发器',
     type: {
       collapsed:'boolean',
     },
