@@ -152,6 +152,7 @@ const avatarGroupProps = ref([
     desc: '多余头像气泡的 TriggerProps',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'
   },
 ]);
 

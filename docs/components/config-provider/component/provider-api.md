@@ -22,14 +22,16 @@ const configProviderProps = ref([
   {
     name: 'popupContainer',
     desc: 'teleport传出组件挂载的容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: 'body',
+    href: '/components/trigger/'
   },
   {
     name: 'size',
     desc: '大小',
     type: 'Size',
     value: '-',
+    href:"/components/button"
   }
 ]);
 </script>

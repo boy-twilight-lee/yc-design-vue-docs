@@ -31,12 +31,14 @@ const stepsProps = ref([
     desc: '步骤条的显示方向',
     type: 'Direction',
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'label-placement',
     desc: '标签描述文字放置的位置',
     type: 'Direction',
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'current',

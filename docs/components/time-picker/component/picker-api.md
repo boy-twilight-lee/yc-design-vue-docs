@@ -2,65 +2,88 @@
 
 ### time-picker Props
 
-<field-table :data="timePickerProps"/>
+<field-table :data="Props"/>
 
 ### time-picker Events
 
-<field-table :data="timePickerEvents" type="emits" />
+<field-table :data="Events" type="emits" />
 
 ### time-picker Slots
 
-<field-table :data="timePickerSlots"  type="slots"/>
+<field-table :data="Slots"  type="slots"/>
 
 ### 字符串解析格式
 
 <field-table :data="stringParsingFormatProps" type="format"/>
 
+### Type
+
+```typescript
+type TimeUnit = 'hour' | 'minute' | 'second';
+
+type TimePickerValue = string | number | Date | (string | number | Date)[];
+
+type Type = 'time' | 'time-range';
+
+type Step = { hour?: number; minute?: number; second?: number };
+
+type Position = 'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br';
+
+type DisabledHours = () => number[];
+
+type DisabledMinutes = (selectedHour?: number) => number[];
+
+type DisabledSeconds = (
+  selectedHour?: number,
+  selectedMinute?: number
+) => number[];
+```
+
 <script setup>
 import { ref } from 'vue';
 
-const timePickerProps = ref([
+const Props = ref([
   {
     name: 'type',
     desc: '选择器类型',
-    type: "'time' | 'time-range'",
+    type: "Type",
     value: "'time'",
   },
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'string | number | Date | Array<string | number | Date>',
+    type: 'TimePickerValue',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值',
-    type: 'string | number | Date | Array<string | number | Date>',
+    type: 'TimePickerValue',
     value: '-',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-clear',
     desc: '是否允许清除',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'readonly',
     desc: '是否为只读模式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'format',
@@ -77,55 +100,57 @@ const timePickerProps = ref([
   {
     name: 'size',
     desc: '输入框尺寸',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size",
     value: "'medium'",
+    href:'/components/button'
   },
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+    href:'/components/trigger'
   },
   {
     name: 'step',
     desc: '设置 时 / 分 / 秒 的选择间隔',
-    type: '{ hour?: number; minute?: number; second?: number;}',
+    type: 'Step',
     value: '-',
   },
   {
     name: 'disabled-hours',
     desc: '禁用的部分小时选项',
-    type: '() => number[]',
+    type: 'DisabledHours',
     value: '-',
   },
   {
     name: 'disabled-minutes',
     desc: '禁用的部分分钟选项',
-    type: '(selectedHour?: number) => number[]',
+    type: 'DisabledMinutes',
     value: '-',
   },
   {
     name: 'disabled-seconds',
     desc: '禁用的部分秒数选项',
-    type: '(selectedHour?: number, selectedMinute?: number) => number[]',
+    type: 'DisabledSeconds',
     value: '-',
   },
   {
     name: 'hide-disabled-options',
     desc: '隐藏禁止选择的选项',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'disable-confirm',
     desc: '禁用确认步骤，开启后直接点选时间不需要点击确认按钮',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'position',
     desc: '弹出的位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    type: "Position",
     value: "'bl'",
   },
   {
@@ -138,28 +163,29 @@ const timePickerProps = ref([
     name: 'default-popup-visible',
     desc: '弹出框默认打开或者关闭',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'trigger-props',
     desc: '可以传入 Trigger 组件的参数',
     type: 'TriggerProps',
     value: '-',
+    href:'/components/trigger'
   },
   {
     name: 'unmount-on-close',
     desc: '是否在关闭后销毁 dom 结构',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 
-const timePickerEvents = ref([
+const Events = ref([
   {
     name: 'change',
     desc: '组件值发生改变',
     type: {
-      timeString: 'string | Array<string | undefined> | undefined',
+      timeString: 'TimePickerValue',
       time: 'Date | Array<Date | undefined> | undefined'
     },
     value: '-',
@@ -168,7 +194,7 @@ const timePickerEvents = ref([
     name: 'select',
     desc: '选择时间但未触发组件值变化',
     type: {
-      timeString: 'string | Array<string | undefined>',
+      timeString: 'TimePickerValue',
       time: 'Date | Array<Date | undefined>'
     },
     value: '-',
@@ -189,7 +215,7 @@ const timePickerEvents = ref([
   },
 ]);
 
-const timePickerSlots = ref([
+const Slots = ref([
   {
     name: 'prefix',
     desc: '输入框前缀',

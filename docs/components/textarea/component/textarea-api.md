@@ -12,6 +12,17 @@
 
 <field-table :data="textareaMethods" type="methods" />
 
+### Type
+
+```typescript
+type AutoSize =
+  | boolean
+  | {
+      minRows?: number;
+      maxRows?: number;
+    };
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -38,49 +49,52 @@ const textareaProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'max-length',
     desc: '输入值的最大长度',
-    type: 'number | { length: number; errorOnly?: boolean }',
+    type: 'MaxLength',
     value: '0',
+    href:'/components/input'
   },
   {
     name: 'show-word-limit',
     desc: '是否显示字数统计',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空文本域',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'auto-size',
     desc: '是否让文本框自适应内容高度',
-    type: 'boolean | { minRows?: number; maxRows?: number }',
-    value: '`false`',
+    type: 'AutoSize',
+    value: 'false',
   },
   {
     name: 'word-length',
     desc: '字符长度的计算方法',
-    type: '(value: string) => number',
+    type: 'WordLength',
     value: '-',
+        href:'/components/input'
   },
   {
     name: 'word-slice',
     desc: '字符截取方法，同 wordLength 一起使用',
-    type: '(value: string, maxLength: number) => string',
+    type: 'WordSlice',
     value: '-',
+    href:'/components/input'
   },
   {
     name: 'textarea-attrs',
@@ -139,13 +153,13 @@ const textareaMethods = ref([
   {
     name: 'focus',
     desc: '使输入框获取焦点',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
   {
     name: 'blur',
     desc: '使输入框失去焦点',
-    type: '() => void',
+    type: '-',
     value: '-',
   },
 ]);

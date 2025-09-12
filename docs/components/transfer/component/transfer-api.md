@@ -54,25 +54,25 @@ const transferProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'simple',
     desc: '是否开启简单模式（点击选项即移动）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'one-way',
     desc: '是否开启单向模式（仅可移动到目标选择框）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-search',
     desc: '是否显示搜索框',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-select-all',
@@ -202,7 +202,7 @@ const transferSlots = ref([
 
 const transferItemProps = ref([
   {
-    name: 'value',
+    name: 'string | value',
     desc: '选项的值',
     type: 'string',
     value: '-',

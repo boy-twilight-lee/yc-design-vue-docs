@@ -200,6 +200,7 @@ const listItemProps = ref([
     desc: '操作组排列方向',
     type: 'Direction',
     value: "'horizontal'",
+    href:"/components/divider"
   },
 ]);
 

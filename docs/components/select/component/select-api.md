@@ -24,16 +24,6 @@
 
 <field-table :data="optgroupSlots"  type="slots"/>
 
-### Type
-
-```typescript
-type Option = string | number | SelectOptionData | SelectOptionGroup;
-
-type FilterOption =
-  | boolean
-  | ((inputValue: string, option: SelectOptionData) => boolean);
-```
-
 ### SelectOptionData
 
 <field-table :data="selectOptionDataProps"/>
@@ -45,6 +35,34 @@ type FilterOption =
 ### VirtualListProps
 
 <field-table :data="virtualListPropsProps"/>
+
+### Type
+
+```typescript
+type OptionValue = string | number | boolean | ObjectData;
+
+type SelectValue = OptionValue | OptionValue[];
+
+type SelectOption =
+  | OptionValue
+  | SelectOptionData
+  | SelectOptionGroup
+  | ObjectData;
+
+type FilterOption =
+  | boolean
+  | ((inputValue: string, option: SelectOptionData) => boolean);
+
+type FallbackOption = (value: OptionValue) => SelectOptionData;
+
+type FormatLabel = (data: SelectOptionData) => string;
+
+type VirtualListProps = {
+  itemHeight?: number;
+  buffer?: number;
+  threshold?: number;
+};
+```
 
 ### FAQ
 
@@ -104,19 +122,19 @@ const selectProps = ref([
     name: 'multiple',
     desc: '是否开启多选模式（多选模式默认开启搜索）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'string | number | boolean | Record<string, any> | (string | number | boolean | Record<string, any>)[]',
+    type: 'SelectValue',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控模式）',
-    type: 'string | number | boolean | Record<string, unknown> | (string | number | boolean | Record<string, unknown>)[]',
-    value: "'' | []",
+    type: 'SelectValue',
+    value: "'' (single) | [] (multiple)",
   },
   {
     name: 'input-value (v-model)',
@@ -133,8 +151,9 @@ const selectProps = ref([
   {
     name: 'size',
     desc: '选择框的大小',
-    type: "'mini' | 'small' | 'medium' | 'large'",
+    type: "Size",
     value: "'medium'",
+    href:"/components/button"
   },
   {
     name: 'placeholder',
@@ -146,37 +165,37 @@ const selectProps = ref([
     name: 'loading',
     desc: '是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'error',
     desc: '是否为错误状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-clear',
     desc: '是否允许清空',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'allow-search',
     desc: '是否允许搜索',
-    type: 'boolean | { retainInputValue?: boolean }',
-    value: '`false` (single) | `true` (multiple)',
+    type: 'boolean',
+    value: 'false (single) | true (multiple)',
   },
   {
     name: 'allow-create',
     desc: '是否允许创建',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'max-tag-count',
@@ -187,14 +206,15 @@ const selectProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+    href:'/components/trigger'
   },
   {
     name: 'bordered',
     desc: '是否显示输入框的边框',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'popup-visible (v-model)',
@@ -206,25 +226,25 @@ const selectProps = ref([
     name: 'default-popup-visible',
     desc: '弹出框默认是否可见（非受控模式）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'unmount-on-close',
     desc: '是否在下拉菜单关闭时销毁元素',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'filter-option',
     desc: '是否过滤选项',
-    type: 'boolean | ((inputValue: string, option: SelectOptionData) => boolean)',
-    value: '`true`',
+    type: 'FilterOption',
+    value: 'true',
   },
   {
     name: 'options',
     desc: '选项数据',
-    type: '(string | number | boolean | SelectOptionData | SelectOptionGroup)[]',
-    value: '`[]`',
+    type: 'SelectOption[]',
+    value: '[]',
   },
   {
     name: 'virtual-list-props',
@@ -237,24 +257,25 @@ const selectProps = ref([
     desc: '下拉菜单的触发器属性',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'  
   },
   {
     name: 'format-label',
     desc: '格式化显示内容',
-    type: '(data: SelectOptionData) => string',
+    type: 'FormatLabel',
     value: '-',
   },
   {
     name: 'fallback-option',
     desc: '自定义值中不存在的选项',
-    type: 'boolean | ((value: string | number | boolean | Record<string, unknown>) => SelectOptionData)',
-    value: '`true`',
+    type: 'FallbackOption',
+    value: 'true',
   },
   {
     name: 'show-extryc-options',
     desc: '是否在下拉菜单中显示额外选项',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'value-key',
@@ -284,25 +305,25 @@ const selectProps = ref([
     name: 'scrollbar',
     desc: '是否开启虚拟滚动条',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'show-header-on-empty',
     desc: '空状态时是否显示header',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-footer-on-empty',
     desc: '空状态时是否显示footer',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'tag-nowrap',
     desc: '标签内容不换行',
     type: 'boolean',
-    value: '`false`)',
+    value: 'false',
   },
 ]);
 
@@ -311,7 +332,7 @@ const selectEvents = ref([
     name: 'change',
     desc: '值发生改变时触发',
     type: {
-      value: 'SelectValue | SelectValue[]'
+      value: 'SelectValue'
     },
     value: '-',
   },
@@ -341,7 +362,7 @@ const selectEvents = ref([
     name: 'remove',
     desc: '点击标签的删除按钮时触发',
     type: {
-      removed: 'SelectValue'
+      removed: 'OptionValue'
     },
     value: '-',
   },
@@ -373,7 +394,7 @@ const selectEvents = ref([
     name: 'exceed-limit',
     desc: '多选超出限制时触发',
     type: {
-      value: 'SelectValue',
+      value: 'OptionValue',
       ev: 'Event'
     },
     value: '-',
@@ -451,7 +472,7 @@ const optionProps = ref([
   {
     name: 'value',
     desc: '选项值（如不填，会从内容中获取）',
-    type: 'string | number | boolean | object',
+    type: 'OptionValue',
     value: '-',
   },
   {
@@ -464,19 +485,14 @@ const optionProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'tag-props',
     desc: '展示的标签属性',
     type: 'TagProps',
     value: '-',
-  },
-  {
-    name: 'extra',
-    desc: '额外数据',
-    type: 'object',
-    value: '-',
+    href: '/components/tag'
   },
   {
     name: 'index',
@@ -508,7 +524,7 @@ const selectOptionDataProps = ref([
   {
     name: 'value',
     desc: '选项值',
-    type: 'string | number | boolean | Record<string, unknown>',
+    type: 'SelectValue',
     value: '-',
   },
   {

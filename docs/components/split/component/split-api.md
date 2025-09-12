@@ -27,6 +27,7 @@ const splitProps = ref([
     desc: '分割的方向',
     type: 'Direction',
     value: "'horizontal'",
+    href:"/components/divider"
   },
   {
     name: 'size (v-model)',

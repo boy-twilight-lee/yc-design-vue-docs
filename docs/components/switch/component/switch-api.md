@@ -12,6 +12,20 @@
 
 <field-table :data="switchSlots"  type="slots"/>
 
+### Type
+
+```typescript
+type SwitchValue = string | number | boolean;
+
+type Type = 'circle' | 'round' | 'line';
+
+type Size = 'small' | 'medium';
+
+type BeforeChange = (
+  newValue: SwitchValue
+) => Promise<boolean | void> | boolean | void;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -19,50 +33,50 @@ const switchProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'string|number|boolean',
+    type: 'SwitchValue',
     value: '-',
   },
   {
     name: 'default-checked',
     desc: '默认选中状态（非受控状态）',
-    type: 'boolean',
-    value: '`false`',
+    type: 'SwitchValue',
+    value: 'false',
   },
   {
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'loading',
     desc: '是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'type',
     desc: '开关的类型',
-    type: "'circle' | 'round' | 'line'",
+    type: "Type",
     value: "'circle'",
   },
   {
     name: 'size',
     desc: '开关的大小',
-    type: "'small' | 'medium'",
+    type: "Size",
     value: "'medium'",
   },
   {
     name: 'checked-value',
     desc: '选中时的值',
-    type: 'string|number|boolean',
+    type: 'SwitchValue',
     value: 'true',
   },
   {
     name: 'unchecked-value',
     desc: '未选中时的值',
-    type: 'string|number|boolean',
-    value: 'false)',
+    type: 'SwitchValue',
+    value: 'false',
   },
   {
     name: 'checked-color',
@@ -79,7 +93,7 @@ const switchProps = ref([
   {
     name: 'before-change',
     desc: 'switch 状态改变前的钩子， 返回 false 或者返回 Promise 且被 reject 则停止切换。',
-    type: '( newValue: string | number | boolean) => Promise<boolean | void> | boolean | void',
+    type: 'BeforeChange',
     value: '-',
   },
   {
@@ -101,7 +115,7 @@ const switchEvents = ref([
     name: 'change',
     desc: '值改变时触发',
     type: {
-      value: 'boolean | string | number',
+      value: 'SwitchValue',
       ev: 'Event'
     },
     value: '-',

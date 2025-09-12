@@ -23,7 +23,6 @@ export default () => {
       attributeFilter: ['class'],
     });
   });
-  // 在组件卸载前执行，这是非常重要的一步！
   onBeforeUnmount(() => {
     observer?.disconnect();
   });

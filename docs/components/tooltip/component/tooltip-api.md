@@ -95,6 +95,7 @@ const tooltipProps = ref([
     name: 'trigger-props',
     desc: 'trigger的属性',
     type: 'TriggerProps',
+    href: '/components/trigger',
     value: '-',
   },
 ]);

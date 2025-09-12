@@ -164,6 +164,7 @@ const cascaderProps = ref([
     desc: '下拉菜单的触发器属性',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'
   },
   {
     name: 'load-more',

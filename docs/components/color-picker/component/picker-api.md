@@ -84,6 +84,7 @@ const colorPickerProps = ref([
     desc: '接受所有 Trigger 组件的Props',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'    
   },
   {
     name: 'history-colors',

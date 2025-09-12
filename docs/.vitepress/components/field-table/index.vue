@@ -96,7 +96,6 @@ const parse = (data, field) => {
   if (type.value == 'props' && ['type', 'value'].includes(field)) {
     const styleStr = getStyleStr({
       color: 'rgb(var(--primary-6))',
-      'text-decoration': data.href ? 'underline' : 'none',
       cursor: data.href ? 'pointer' : '',
     });
     return `<i style="${styleStr}">${dataValue}</i>`;

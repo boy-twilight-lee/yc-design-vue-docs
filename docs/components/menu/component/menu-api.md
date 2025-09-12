@@ -143,6 +143,7 @@ const menuProps = ref([
     desc: '弹出模式下可接受所有 Trigger 的 Props',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'  
   },
   {
     name: 'tooltip-props',

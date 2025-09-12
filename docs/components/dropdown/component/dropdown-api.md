@@ -107,6 +107,7 @@ const dropdownProps = ref([
     desc: 'trigger的属性',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'  
   },
 ])
 
@@ -246,6 +247,7 @@ const dsubmenuProps = ref([
     desc: 'trigger的属性',
     type: 'TriggerProps',
     value: '-',
+    href: '/components/trigger'  
   },
 ])
 

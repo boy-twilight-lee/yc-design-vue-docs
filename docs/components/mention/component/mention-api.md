@@ -41,7 +41,7 @@ const mentionProps = ref([
   {
     name: 'data',
     desc: '用于自动补全的数据',
-    type: 'SelectOptions',
+    type: 'SelectOption[]',
     value: '[]',
     href:"/components/select"
   },

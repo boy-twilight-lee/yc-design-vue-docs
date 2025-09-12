@@ -59,6 +59,7 @@ const sliderProps = ref([
     desc: '滑动输入条的方向',
     type: 'Direction',
     value: "'horizontal'",
+    href:'/components/divider'
   },
   {
     name: 'disabled',
