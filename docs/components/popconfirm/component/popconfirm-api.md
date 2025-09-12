@@ -14,6 +14,12 @@
 
 <field-table :data="popconfirmSlots" type="slots"/>
 
+### Type
+
+```typescript
+type Type = 'info' | 'success' | 'warning' | 'error';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -27,8 +33,9 @@ const popconfirmProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'",
+    type: "TriggerPosition",
     value: "'top'",
+    href:"/components/trigger"
   },
   {
     name: 'popup-visible (v-model)',
@@ -45,7 +52,7 @@ const popconfirmProps = ref([
   {
     name: 'type',
     desc: '气泡确认框的类型',
-    type: "'info' | 'success' | 'warning' | 'error'",
+    type: "Type",
     value: "'info'",
   },
   {
@@ -71,12 +78,14 @@ const popconfirmProps = ref([
     desc: '确认按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:'components/button'
   },
   {
     name: 'cancel-button-props',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:'components/button'
   },
   {
     name: 'content-class',
@@ -105,20 +114,23 @@ const popconfirmProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载点',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
+    href:'components/trigger',
     value: '-',
   },
   {
     name: 'on-before-ok',
     desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
-    type: '( done: (closed: boolean) => void) => void | boolean | Promise<void | boolean>',
+    type: 'OnBeforeOk',
     value: '-',
+    href:'components/modal'
   },
   {
     name: 'on-before-cancel',
     desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
-    type: '() => boolean',
+    type: 'OnBeforeCancel',
     value: '-',
+    href:'components/modal'
   },
 ]);
 

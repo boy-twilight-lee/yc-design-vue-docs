@@ -12,6 +12,12 @@
 
 <field-table :data="drawerSlots"  type="slots"/>
 
+### Type
+
+```typescript
+type Placement = 'right' | 'left' | 'top' | 'bottom';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -20,18 +26,18 @@ const drawerProps = ref([
     name: 'visible (v-model)',
     desc: '抽屉是否可见',
     type: 'boolean',
-    value: '`false`',
+    value: '-',
   },
   {
     name: 'default-visible',
     desc: '抽屉默认是否可见（非受控模式）',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'placement',
     desc: '抽屉放置的位置',
-    type: "'top' | 'right' | 'bottom' | 'left'",
+    type: "Placement",
     value: "'right'",
   },
   {
@@ -44,19 +50,19 @@ const drawerProps = ref([
     name: 'mask',
     desc: '是否显示遮罩层',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'mask-closable',
     desc: '点击遮罩层是否可以关闭',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'closable',
     desc: '是否展示关闭按钮',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'ok-text',
@@ -74,19 +80,21 @@ const drawerProps = ref([
     name: 'ok-loading',
     desc: '确认按钮是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'ok-button-props',
     desc: '确认按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'cancel-button-props',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'unmount-on-close',
@@ -109,8 +117,9 @@ const drawerProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
-    value: "'body'",
+    type: 'PopupContainer',
+    value: "-",
+    href:'/components/trigger'
   },
   {
     name: 'drawer-style',
@@ -127,20 +136,22 @@ const drawerProps = ref([
   {
     name: 'body-style',
     desc: '抽屉内容部分的样式',
-    type: 'StyleValue',
+    type: 'CSSProperties',
     value: '-',
   },
   {
     name: 'on-before-ok',
     desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
-    type: '(done: (closed: boolean) => void) => void | boolean | Promise<void | boolean>',
+    type: 'OnBeforeOk',
     value: '-',
+    href:'/components/modal'
   },
   {
     name: 'on-before-cancel',
     desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
-    type: '() => boolean',
+    type: 'OnBeforeCancel',
     value: '-',
+    href:'/components/modal'
   },
   {
     name: 'esc-to-close',
@@ -170,7 +181,7 @@ const drawerProps = ref([
     name: 'hide-cancel',
     desc: '是否隐藏取消按钮',
     type: 'boolean',
-    value: 'false)',
+    value: 'false',
   },
 ]);
 

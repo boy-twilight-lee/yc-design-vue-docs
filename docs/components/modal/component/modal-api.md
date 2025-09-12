@@ -12,6 +12,20 @@
 
 <field-table :data="modalSlots" type="slots"/>
 
+### Type
+
+```typescript
+type Type = 'info' | 'warning' | 'error' | 'success';
+
+type TitleAlign = 'start' | 'center';
+
+type OnBeforeOk = (
+  done: (closed: boolean) => void
+) => void | boolean | Promise<boolean | void>;
+
+type OnBeforeCancel = () => boolean;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -31,13 +45,13 @@ const modalProps = ref([
   {
     name: 'width',
     desc: '对话框的宽度，不设置的情况下会使用样式中的宽度值',
-    type: 'number|string',
+    type: 'number | string',
     value: '-',
   },
   {
     name: 'top',
     desc: '对话框的距离顶部的高度，居中显示开启的情况下不生效',
-    type: 'number|string',
+    type: 'number | string',
     value: '-',
   },
   {
@@ -55,7 +69,7 @@ const modalProps = ref([
   {
     name: 'title-align',
     desc: '标题的水平对齐方向',
-    type: "'start' | 'center'",
+    type: "TitleAlign",
     value: "'center'",
   },
   {
@@ -86,7 +100,7 @@ const modalProps = ref([
     name: 'simple',
     desc: '是否开启简单模式',
     type: 'boolean',
-    value: '(props: any) => { return props.notice;}',
+    value: 'false',
   },
   {
     name: 'closable',
@@ -117,12 +131,14 @@ const modalProps = ref([
     desc: '确认按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'cancel-button-props',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:"/components/button"
   },
   {
     name: 'footer',
@@ -139,8 +155,9 @@ const modalProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+      href:"/components/trigger"
   },
   {
     name: 'mask-style',
@@ -163,13 +180,13 @@ const modalProps = ref([
   {
     name: 'on-before-ok',
     desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
-    type: '( done: (closed: boolean) => void) => void | boolean | Promise<void | boolean>',
+    type: 'OnBeforeOk',
     value: '-',
   },
   {
     name: 'on-before-cancel',
     desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
-    type: '() => boolean',
+    type: 'OnBeforecancel',
     value: '-',
   },
   {
@@ -211,7 +228,7 @@ const modalProps = ref([
   {
     name: 'body-style',
     desc: '对话框内容部分的样式',
-    type: 'StyleValue',
+    type: 'CSSProperties',
     value: '-',
   },
   {

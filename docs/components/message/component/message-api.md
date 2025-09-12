@@ -8,13 +8,13 @@
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$message` 调用
 3. 导入 Message，通过 `Message` 本身调用
 
-### MessageMethod
-
-<field-table :data="messageMethodProps" type="methods"/>
-
 ### MessageConfig
 
 <field-table :data="messageConfigProps"/>
+
+### MessageMethod
+
+<field-table :data="messageMethodProps" type="methods"/>
 
 ### MessageReturn
 

@@ -8,17 +8,23 @@
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$notification` 调用
 3. 导入 Notification，通过 `Notification` 本身调用
 
-### NotificationMethod
-
-<field-table :data="notificationMethodProps" type="methods"/>
-
 ### NotificationConfig
 
 <field-table :data="notificationConfigProps"/>
 
+### NotificationMethod
+
+<field-table :data="notificationMethodProps" type="methods"/>
+
 ### NotificationReturn
 
 <field-table :data="notificationReturnProps" type="methods"/>
+
+### Type
+
+```typescript
+type Position = 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
+```
 
 <script setup>
 import { ref } from 'vue';
@@ -28,7 +34,7 @@ const notificationMethodProps = ref([
     name: 'info',
     desc: '显示信息提醒框',
     type:{
-      config: 'config: string | NotificationConfig',
+      config: 'string | NotificationConfig',
     },
     value: '-',
   },
@@ -36,7 +42,7 @@ const notificationMethodProps = ref([
     name: 'success',
     desc: '显示成功提醒框',
     type:{
-      config: 'config: string | NotificationConfig',
+      config: 'string | NotificationConfig',
     },
     value: '-',
   },
@@ -44,7 +50,7 @@ const notificationMethodProps = ref([
     name: 'warning',
     desc: '显示警告提醒框',
     type:{
-      config: 'config: string | NotificationConfig',
+      config: 'string | NotificationConfig',
     },
     value: '-',
   },
@@ -52,7 +58,7 @@ const notificationMethodProps = ref([
     name: 'error',
     desc: '显示错误提醒框',
     type:{
-      config: 'config: string | NotificationConfig',
+      config: 'string | NotificationConfig',
     },
     value: '-',
   },
@@ -68,7 +74,7 @@ const notificationMethodProps = ref([
     name: 'clear',
     desc: '清除全部提醒框',
     type: {
-      position: 'NotificationPosition'
+      position: 'Position'
     },
     value: '-',
   },
@@ -114,7 +120,7 @@ const notificationConfigProps = ref([
   {
     name: 'position',
     desc: '位置',
-    type: "'topLeft'|'topRight'|'bottomLeft'|'bottomRight'",
+    type: "Position",
     value: '-',
   },
   {

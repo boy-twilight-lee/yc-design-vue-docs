@@ -6,13 +6,13 @@
 2. 在 Composition API 中，通过 `getCurrentInstance().appContext.config.globalProperties.$modal` 调用
 3. 导入 Modal，通过 `Modal` 本身调用
 
-### ModalMethod
-
-<field-table :data="modalMethodProps" type="methods"/>
-
 ### ModalConfig
 
 <field-table :data="modalConfigProps"/>
+
+### ModalMethod
+
+<field-table :data="modalMethodProps" type="methods"/>
 
 ### ModalReturn
 
@@ -114,12 +114,14 @@ const modalConfigProps = ref([
     desc: '确认按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:'/components/button'
   },
   {
     name: 'cancelButtonProps',
     desc: '取消按钮的Props',
     type: 'ButtonProps',
     value: '-',
+    href:'/components/button'
   },
   {
     name: 'okLoading',
@@ -196,13 +198,13 @@ const modalConfigProps = ref([
   {
     name: 'onBeforeOk',
     desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
-    type: '( done: (closed: boolean) => void ) => void | boolean | Promise<void | boolean>',
+    type: 'OnBeforeOk',
     value: '-',
   },
   {
     name: 'onBeforeCancel',
     desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
-    type: '() => boolean',
+    type: 'OnBeforeCancel',
     value: '-',
   },
   {
@@ -244,7 +246,7 @@ const modalConfigProps = ref([
   {
     name: 'titleAlign',
     desc: '标题的水平对齐方向',
-    type: "'start' | 'center'",
+    type: "TitleAlign",
     value: "'center'",
   },
   {
@@ -254,15 +256,9 @@ const modalConfigProps = ref([
     value: 'true',
   },
   {
-    name: 'popupContainer',
-    desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
-    value: '-',
-  },
-  {
     name: 'modalClass',
     desc: '对话框的类名',
-    type: 'string | any[]',
+    type: 'ClassName',
     value: '-',
   },
   {
@@ -292,13 +288,13 @@ const modalConfigProps = ref([
   {
     name: 'bodyClass',
     desc: '对话框内容部分的类名',
-    type: 'string | any[]',
+    type: 'ClassName',
     value: '-',
   },
   {
     name: 'bodyStyle',
     desc: '对话框内容部分的样式',
-    type: 'StyleValue',
+    type: 'CSSProperties',
     value: '-',
   },
 ]);

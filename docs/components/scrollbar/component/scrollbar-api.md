@@ -31,7 +31,7 @@ const scrollbarProps = ref([
   {
     name: 'outer-style',
     desc: '外层的样式',
-    type: 'StyleValue',
+    type: 'CSSProperties',
     value: '-',
   },
 ]);

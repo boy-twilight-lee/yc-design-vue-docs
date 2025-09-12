@@ -10,13 +10,13 @@
 
 <field-table :data="drawerConfigProps"/>
 
-### DrawerReturn
-
-<field-table :data="drawerReturnProps" type="methods"/>
-
 ### DrawerMethod
 
 <field-table :data="drawerMethodProps" type="methods"/>
+
+### DrawerReturn
+
+<field-table :data="drawerReturnProps" type="methods"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -25,7 +25,7 @@ const drawerConfigProps = ref([
   {
     name: 'placement',
     desc: '抽屉放置的位置',
-    type: "'top' | 'right' | 'bottom' | 'left'",
+    type: "Placement",
     value: "'right'",
   },
   {
@@ -44,19 +44,19 @@ const drawerConfigProps = ref([
     name: 'mask',
     desc: '是否显示遮罩层',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'mask-closable',
     desc: '点击遮罩层是否可以关闭',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'closable',
     desc: '是否展示关闭按钮',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'ok-text',
@@ -74,7 +74,7 @@ const drawerConfigProps = ref([
     name: 'ok-loading',
     desc: '确认按钮是否为加载中状态',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'ok-button-props',
@@ -101,12 +101,6 @@ const drawerConfigProps = ref([
     value: '250',
   },
   {
-    name: 'popup-container',
-    desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
-    value: "-",
-  },
-  {
     name: 'drawer-style',
     desc: '抽屉的样式',
     type: 'CSSProperties',
@@ -127,13 +121,13 @@ const drawerConfigProps = ref([
   {
     name: 'on-before-ok',
     desc: '触发 ok 事件前的回调函数。如果返回 false 则不会触发后续事件，也可使用 done 进行异步关闭。',
-    type: '(done: (closed: boolean) => void) => void | boolean | Promise<void | boolean>',
+    type: 'OnBeforeOk',
     value: '-',
   },
   {
     name: 'on-before-cancel',
     desc: '触发 cancel 事件前的回调函数。如果返回 false 则不会触发后续事件。',
-    type: '() => boolean',
+    type: 'OnBeforeCancel',
     value: '-',
   },
   {

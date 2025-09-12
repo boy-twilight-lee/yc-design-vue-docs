@@ -85,7 +85,6 @@ const getStyleStr = (style) => {
 // 获取解析的html
 const parse = (data, field) => {
   const dataValue = data[field];
-  if (dataValue == '-') return '-';
   if (typeof data[field] == 'object') {
     return Object.entries(data[field])
       .map(([key, value]) => {
