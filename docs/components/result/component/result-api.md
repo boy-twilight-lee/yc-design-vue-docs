@@ -8,6 +8,20 @@
 
 <field-table :data="resultSlots" type="slots"/>
 
+### Type
+
+```typescript
+type Status =
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | '403'
+  | '404'
+  | '500'
+  | null;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -15,7 +29,7 @@ const resultProps = ref([
   {
     name: 'status',
     desc: '结果页显示的状态',
-    type: "'info' | 'success' | 'warning' | 'error' | '403' | '404' | '500' | null",
+    type: "Status",
     value: "'info'",
   },
   {

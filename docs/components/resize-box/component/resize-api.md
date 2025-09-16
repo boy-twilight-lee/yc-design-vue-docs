@@ -12,6 +12,12 @@
 
 <field-table type="slots" :data="resizeBoxSlots"/>
 
+### Type
+
+```typescript
+type ResizeBoxDirection = 'left' | 'right' | 'top' | 'bottom';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -37,7 +43,7 @@ const resizeBoxProps = ref([
   {
     name: 'directions',
     desc: '可以进行伸缩的边，有上、下、左、右可以使用',
-    type: "('left' | 'right' | 'top' | 'bottom')[]",
+    type: "ResizeBoxDirection[]",
     value: "['right']",
   },
 ]);
@@ -75,7 +81,7 @@ const resizeBoxSlots = ref([
     name: 'resize-trigger',
     desc: '伸缩杆的内容',
     type: {
-      direction: "'left' | 'right' | 'top' | 'bottom'"
+      direction: "ResizeBoxDirection"
     },
     value: '-',
   },
@@ -83,7 +89,7 @@ const resizeBoxSlots = ref([
     name: 'resize-trigger-icon',
     desc: '伸缩杆的图标',
     type: {
-      direction: "'left' | 'right' | 'top' | 'bottom'"
+      direction: "ResizeBoxDirection"
     },
     value: '-',
   },

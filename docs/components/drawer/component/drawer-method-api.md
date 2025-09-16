@@ -33,6 +33,7 @@ const drawerConfigProps = ref([
     desc: '标题',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content',
@@ -165,12 +166,14 @@ const drawerConfigProps = ref([
     desc: '是否展示头部内容',
     type: 'boolean | RenderContent',
     value: 'true',
+    href:"/guide/types"
   },
   {
     name: 'footer',
     desc: '是否展示底部内容',
     type: 'boolean | RenderContent',
     value: 'true',
+    href:"/guide/types"
   },
   {
     name: 'hide-cancel',

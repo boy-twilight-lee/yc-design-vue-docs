@@ -157,7 +157,7 @@ const modalProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-      href:"/components/trigger"
+    href:"/guide/types"
   },
   {
     name: 'mask-style',
@@ -170,6 +170,7 @@ const modalProps = ref([
     desc: '对话框的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'modal-style',
@@ -224,6 +225,7 @@ const modalProps = ref([
     desc: '对话框内容部分的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'body-style',

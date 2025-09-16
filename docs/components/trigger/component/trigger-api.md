@@ -12,6 +12,12 @@
 
 <field-table :data="triggerSlots" type="slots"/>
 
+### Type
+
+```typescript
+type TriggerType = 'hover' | 'click' | 'focus' | 'contextMenu';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -31,14 +37,15 @@ const triggerProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    type: "TriggerType",
     value: "'hover'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br' | 'left' | 'lt' | 'lb' | 'right' | 'rt' | 'rb'",
+    type: "PopupPosition",
     value: "'bottom'",
+    href: '/guide/types'
   },
   {
     name: 'disabled',
@@ -105,6 +112,7 @@ const triggerProps = ref([
     desc: '弹出框内容的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content-style',
@@ -117,6 +125,7 @@ const triggerProps = ref([
     desc: '弹出框箭头的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'arrow-style',
@@ -181,8 +190,9 @@ const triggerProps = ref([
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'update-at-scroll',

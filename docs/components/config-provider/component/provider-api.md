@@ -24,14 +24,14 @@ const configProviderProps = ref([
     desc: 'teleport传出组件挂载的容器',
     type: 'PopupContainer',
     value: 'body',
-    href: '/components/trigger/'
+    href:"/guide/types"
   },
   {
     name: 'size',
     desc: '大小',
     type: 'Size',
     value: '-',
-    href:"/components/button"
+    href:'/guide/types'
   }
 ]);
 </script>

@@ -33,9 +33,9 @@ const popconfirmProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPosition",
+    type: "PopupPosition",
     value: "'top'",
-    href:"/components/trigger"
+    href: '/guide/types'
   },
   {
     name: 'popup-visible (v-model)',
@@ -92,6 +92,7 @@ const popconfirmProps = ref([
     desc: '弹出框内容的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content-style',
@@ -104,6 +105,7 @@ const popconfirmProps = ref([
     desc: '弹出框箭头的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'arrow-style',
@@ -115,7 +117,7 @@ const popconfirmProps = ref([
     name: 'popup-container',
     desc: '弹出框的挂载点',
     type: 'PopupContainer',
-    href:'components/trigger',
+    href:"/guide/types"
     value: '-',
   },
   {

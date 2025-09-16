@@ -136,7 +136,7 @@ const collapseItemSlots = ref([
     type: {
       active: 'boolean',
       disabled: 'boolean',
-      position: "'left' | 'right'"
+      position: "ExpandIconPosition"
     },
     value: '-',
   },

@@ -36,10 +36,6 @@
 
 ```typescript
 type ResizeDirections = Array<'left' | 'right' | 'top' | 'bottom'>;
-
-type Theme = 'light' | 'dark';
-
-type BreakpointName = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 ```
 
 <script setup>
@@ -69,6 +65,7 @@ const siderProps = ref([
     desc: '主题颜色',
     type: "Theme",
     value: "'light'",
+    href:"/guide/types"
   },
   {
     name: 'collapsed',
@@ -111,6 +108,7 @@ const siderProps = ref([
     desc: "触发响应式布局的断点, 详见响应式栅格",
     type: "BreakpointName",
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'resize-directions',

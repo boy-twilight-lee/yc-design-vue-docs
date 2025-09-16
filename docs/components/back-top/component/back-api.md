@@ -17,8 +17,9 @@ const backTopProps = ref([
   {
     name: 'target-container',
     desc: '滚动事件的监听容器',
-    type: 'string | HTMLElement',
+    type: 'TargetContainer',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'easing',

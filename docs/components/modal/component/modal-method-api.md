@@ -78,18 +78,21 @@ const modalConfigProps = ref([
     desc: '标题',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content',
     desc: '内容',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'footer',
     desc: '页脚',
     type: 'boolean | RenderContent',
     value: 'true',
+    href:"/guide/types"
   },
   {
     name: 'closable',
@@ -260,6 +263,7 @@ const modalConfigProps = ref([
     desc: '对话框的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'modalStyle',
@@ -290,6 +294,7 @@ const modalConfigProps = ref([
     desc: '对话框内容部分的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'bodyStyle',

@@ -10,8 +10,6 @@
 type Orientation = 'left' | 'center' | 'right';
 
 type Type = 'solid' | 'dashed' | 'dotted' | 'double';
-
-type Direction = 'vertical' | 'horizontal';
 ```
 
 <script setup>
@@ -22,7 +20,7 @@ const dividerProps = ref([
     name: 'direction',
     desc: '分割线的方向，是水平还是竖直',
     type: "Direction",
-    value: "'horizontal'",
+    href:"/guide/types"
   },
   {
     name: 'orientation',

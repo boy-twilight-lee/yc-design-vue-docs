@@ -4,6 +4,14 @@
 
 <field-table :data="progressProps"/>
 
+### Type
+
+```typescript
+type Status = 'normal' | 'success' | 'warning' | 'danger';
+
+type Type = 'line' | 'circle';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -11,7 +19,7 @@ const progressProps = ref([
   {
     name: 'type',
     desc: '进度条的类型',
-    type: "'line' | 'circle'",
+    type: "Type",
     value: "'line'",
   },
   {
@@ -19,7 +27,7 @@ const progressProps = ref([
     desc: '进度条的大小',
     type: 'Size',
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'percent',
@@ -48,13 +56,13 @@ const progressProps = ref([
   {
     name: 'width',
     desc: '进度条的长度',
-    type: 'number|string',
+    type: 'number | string',
     value: '-',
   },
   {
     name: 'color',
     desc: '进度条的颜色',
-    type: 'string|object',
+    type: 'string | object',
     value: '-',
   },
   {
@@ -72,7 +80,7 @@ const progressProps = ref([
   {
     name: 'status',
     desc: '进度条状态',
-    type: "'normal' | 'success' | 'warning' | 'danger'",
+    type: "Status",
     value: '-',
   },
 ]);

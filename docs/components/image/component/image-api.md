@@ -43,16 +43,9 @@
 ### Type
 
 ```typescript
-type ObjectFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
-
 type HideFooter = boolean | 'never';
 
 type FooterPostion = 'inner' | 'outer';
-
-type ClassName =
-  | string
-  | Record<string, boolean>
-  | (string | Record<string, boolean>)[];
 ```
 
 ### FAQ
@@ -119,6 +112,7 @@ const imageProps = ref([
     desc: '确定图片如何适应容器框',
     type: "ObjectFit",
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'alt',
@@ -173,6 +167,7 @@ const imageProps = ref([
     desc: '底部显示区域的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
 ]);
 
@@ -256,7 +251,7 @@ const imagePreviewProps = ref([
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
     type: 'PopupContainer',
     value: '-',
-    href:"/components/trigger"
+    href:"/guide/types"
   },
   {
     name: 'esc-to-close',
@@ -368,7 +363,7 @@ const imagePreviewGroupProps = ref([
     desc: '设置弹出框的挂载点，同 teleport 的 to，缺省值是 document.body',
     type: 'PopupContainer',
     value: '-',
-    href:"/components/trigger"
+    href:"/guide/types"
   },
 ]);
 

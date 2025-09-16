@@ -23,8 +23,6 @@ type InputNumberValue = number | string;
 
 type Mode = 'embed' | 'button';
 
-type Formatter = (value: string) => string;
-
 type Parser = (value: string) => string;
 ```
 
@@ -89,8 +87,9 @@ const inputNumberProps = ref([
   {
     name: 'formatter',
     desc: '定义输入框展示值',
-    type: 'Formatter',
+    type: 'Format<string>',
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'parser',
@@ -115,7 +114,7 @@ const inputNumberProps = ref([
     desc: '输入框大小',
     type: "Size",
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'allow-clear',

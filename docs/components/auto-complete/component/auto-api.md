@@ -16,14 +16,6 @@
 
 <field-table :data="autoCompleteSlots" type="slots" />
 
-### Type
-
-```typescript
-type Record<string, any> = Record<string, any>;
-
-type FilterOption = (inputValue: string, option: SelectOptionData) => boolean;
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -58,7 +50,7 @@ const autoCompleteProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-    href: '/components/trigger/'
+    href:"/guide/types"
   },
   {
     name: 'strict',
@@ -69,8 +61,9 @@ const autoCompleteProps = ref([
   {
     name: 'filter-option',
     desc: '自定义选项过滤方法',
-    type: 'FilterOption',
+    type: 'FilterOption<SeletOptionData>',
     value: 'true',
+    href:'/guide/types'
   },
   {
     name: 'trigger-props',

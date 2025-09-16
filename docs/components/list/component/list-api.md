@@ -170,7 +170,7 @@ const listSlots = ref([
     desc: '列表项',
     type: {
       index: 'number',
-      item: 'any'
+      item: 'Record<string,any>'
     },
     value: '-',
   },
@@ -200,7 +200,7 @@ const listItemProps = ref([
     desc: '操作组排列方向',
     type: 'Direction',
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
 ]);
 

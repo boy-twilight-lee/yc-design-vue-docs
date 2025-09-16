@@ -12,6 +12,12 @@
 
 <field-table :data="anchorLinkProps" />
 
+### Type
+
+```typescript
+type Boundary = 'start' | 'end' | 'center' | 'nearest' | number;
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -19,32 +25,33 @@ const anchorProps = ref([
   {
     name: 'boundary',
     desc: '滚动边界值，设置该值为数字后，将会在距离滚动容器 boundary 距離時停止滾動。',
-    type: "'start' | 'end' | 'center' | 'nearest' | number",
+    type: "Boundary",
     value: "'start'",
   },
   {
     name: 'line-less',
     desc: '是否显示左侧轴线',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'scroll-container',
     desc: '滚动容器',
-    type: 'string | HTMLElement | Window',
+    type: 'TargetContainer',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'change-hash',
     desc: '是否改变hash。设置为 false 时点击锚点不会改变页面的 hash',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
   {
     name: 'smooth',
     desc: '是否使用平滑滚动',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
 ]);
 

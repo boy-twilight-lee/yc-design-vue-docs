@@ -97,6 +97,7 @@ const breadcrumbItemProps = ref([
     desc: '下拉菜单属性',
     type: 'DropDownProps',
     value: '-',
+    href:'/components/dropdown'
   },
 ]);
 
@@ -131,7 +132,7 @@ const breadcrumbRouteProps = ref([
   {
     name: 'children',
     desc: '下拉菜单展示项',
-    type: '{ label: string; path: string; }[]',
+    type: 'BreadcrumbRoute[]',
     value: '-',
   },
 ]);

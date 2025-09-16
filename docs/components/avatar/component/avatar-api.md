@@ -22,8 +22,6 @@
 type Shape = 'square' | 'round';
 
 type TriggerType = 'mask' | 'button';
-
-type ObjectFit = 'cover' | 'contain' | 'fill' | 'none';
 ```
 
 <script setup>
@@ -71,6 +69,7 @@ const avatarProps = ref([
     desc: '图片在容器内的的适应类型',
     type: 'ObjectFit',
     value: "'cover'",
+    href:'/guide/types'
   },
 ]);
 

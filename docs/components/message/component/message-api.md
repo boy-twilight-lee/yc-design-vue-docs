@@ -88,6 +88,7 @@ const messageConfigProps = ref([
     desc: '内容',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'id',

@@ -27,6 +27,7 @@ const scrollbarProps = ref([
     desc: '外层的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'outer-style',

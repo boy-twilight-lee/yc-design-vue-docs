@@ -24,8 +24,6 @@ type Shape = 'square' | 'circle' | 'round';
 type Type = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 
 type HtmlType = 'button' | 'reset' | 'submit';
-
-type Size = 'mini' | 'small' | 'medium' | 'large';
 ```
 
 <script setup>
@@ -55,6 +53,7 @@ const buttonProps = ref([
     desc: '按钮的尺寸',
     type: 'Size',
     value: "'medium'",
+    href:'/guide/types'
   },
   {
     name: 'long',
@@ -130,12 +129,14 @@ const buttonGroupProps = ref([
     desc: '按钮的形状',
     type: 'Shape',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'size',
     desc: '按钮的尺寸',
     type: 'Size',
     value: '-',
+     href:'/guide/types'
   },
   {
     name: 'disabled',

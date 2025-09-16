@@ -119,7 +119,7 @@ const drawerProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: "-",
-    href:'/components/trigger'
+    href:"/guide/types"
   },
   {
     name: 'drawer-style',
@@ -132,6 +132,7 @@ const drawerProps = ref([
     desc: '抽屉内容部分的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'body-style',

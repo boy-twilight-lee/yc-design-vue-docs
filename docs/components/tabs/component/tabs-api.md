@@ -28,8 +28,6 @@ type TabKey = string | number;
 type Type = 'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule';
 
 type Position = 'left' | 'right' | 'bottom' | 'top';
-
-type Trigger = 'click' | 'hover';
 ```
 
 <script setup>
@@ -59,7 +57,7 @@ const tabsProps = ref([
     desc: '选项卡的大小',
     type: "Size",
     value: '-',
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'type',
@@ -72,7 +70,7 @@ const tabsProps = ref([
     desc: '选项卡的方向',
     type: "Direction",
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'editable',
@@ -133,6 +131,7 @@ const tabsProps = ref([
     desc: '触发方式',
     type: "Trigger",
     value: "'click'",
+    href: "/guide/types"
   },
 ]);
 

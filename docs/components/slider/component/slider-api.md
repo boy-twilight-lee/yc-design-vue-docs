@@ -59,7 +59,7 @@ const sliderProps = ref([
     desc: '滑动输入条的方向',
     type: 'Direction',
     value: "'horizontal'",
-    href:'/components/divider'
+    href:"/guide/types"
   },
   {
     name: 'disabled',
@@ -90,6 +90,13 @@ const sliderProps = ref([
     desc: '是否显示tooltip',
     type: 'boolean',
     value: 'true',
+  },
+  {
+    name: 'format-tooltip',
+    desc: '格式化tooltip的内容',
+    type: 'Format<number>',
+    value: '-',
+    href:'/guide/types'
   },
 ]);
 

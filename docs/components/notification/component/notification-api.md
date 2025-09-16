@@ -86,12 +86,14 @@ const notificationConfigProps = ref([
     desc: '内容',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'title',
     desc: '标题',
     type: 'RenderContent',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'icon',
@@ -116,6 +118,7 @@ const notificationConfigProps = ref([
     desc: '样式类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'position',

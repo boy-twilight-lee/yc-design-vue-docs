@@ -37,6 +37,7 @@ export default defineConfig({
             { text: '暗黑模式', link: '/guide/dark' },
             { text: '主题定制', link: '/guide/theme' },
             { text: '国际化', link: '/guide/lang' },
+            { text: '公用类型', link: '/guide/types' },
           ],
         },
       ],

@@ -26,8 +26,6 @@
 type InputTagValue = InputTagValue;
 
 type InputRetainValue = boolean | { create?: boolean; blur?: boolean };
-
-type FormatTag = (data: TagData) => string;
 ```
 
 <script setup>
@@ -93,7 +91,7 @@ const inputTagProps = ref([
     desc: '输入框的大小',
     type: "Size",
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'max-tag-count',
@@ -110,8 +108,9 @@ const inputTagProps = ref([
   {
     name: 'format-tag',
     desc: '格式化标签内容',
-    type: 'FormatTag',
+    type: 'Format<TagData>',
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'unique-value',

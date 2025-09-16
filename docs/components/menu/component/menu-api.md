@@ -51,14 +51,16 @@ const menuProps = ref([
   {
     name: 'theme',
     desc: '菜单的主题',
-    type: "'light' | 'dark'",
+    type: "Theme",
     value: "'light'",
+    href:"/guide/types"
   },
   {
     name: 'mode',
     desc: '菜单的模式',
-    type: "'vertical' | 'horizontal'",
+    type: "Direction",
     value: "'vertical'",
+    href:"/guide/types"
   },
   {
     name: 'level-indent',
@@ -160,8 +162,9 @@ const menuProps = ref([
   {
     name: 'breakpoint',
     desc: '响应式的断点, 详见响应式栅格',
-    type: "'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'",
+    type: "BreakpointName",
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'popup-max-height',

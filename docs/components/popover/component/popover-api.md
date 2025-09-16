@@ -12,15 +12,6 @@
 
 <field-table :data="popoverSlots" type="slots"/>
 
-### Type
-
-```typescript
-type ClassName =
-  | string
-  | Record<string, boolean>
-  | (string | Record<string, boolean>)[];
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -59,15 +50,16 @@ const popoverProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPosition",
+    type: "PopupPosition",
     value: "'bottom'",
-    href:"/components/trigger"
+    href: '/guide/types'
   },
   {
     name: 'content-class',
     desc: '弹出框内容的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content-style',
@@ -80,6 +72,7 @@ const popoverProps = ref([
     desc: '弹出框箭头的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'arrow-style',
@@ -92,14 +85,14 @@ const popoverProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-    href:"/components/trigger"
+    href:"/guide/types"
   },
   {
     name: 'trigger-props',
     desc: 'trigger的属性',
     type: 'TriggerProps',
     value: '-',
-    href:"/components/trigger"
+    href:"/guide/types"
   },
 ]);
 

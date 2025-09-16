@@ -12,13 +12,6 @@
 
 <field-table :data="tooltipSlots" type="slots"/>
 
-```typescript
-type ClassName =
-  | string
-  | Record<string, boolean>
-  | (string | Record<string, boolean>)[];
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -44,9 +37,9 @@ const tooltipProps = ref([
   {
     name: 'position',
     desc: '弹出位置',
-    type: "TriggerPostion",
+    type: "PopupPosition",
     value: "'top'",
-    href:"/components/trigger"
+    href: '/guide/types'
   },
   {
     name: 'mini',
@@ -65,6 +58,7 @@ const tooltipProps = ref([
     desc: '弹出框内容的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'content-style',
@@ -77,6 +71,7 @@ const tooltipProps = ref([
     desc: '弹出框箭头的类名',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'arrow-style',
@@ -89,7 +84,7 @@ const tooltipProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-    href:"/components/trigger"
+    href:"/guide/types"
   },
   {
     name: 'trigger-props',

@@ -102,14 +102,14 @@ const Props = ref([
     desc: '输入框尺寸',
     type: "Size",
     value: "'medium'",
-    href:'/components/button'
+    href:"/guide/types"
   },
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-    href:'/components/trigger'
+    href:"/guide/types"
   },
   {
     name: 'step',

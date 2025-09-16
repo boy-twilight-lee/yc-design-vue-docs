@@ -12,6 +12,14 @@
 
 <field-table :data="skeletonShapeProps"/>
 
+### Type
+
+```typescript
+type Shape = 'square' | 'circle';
+
+type Size = 'small' | 'medium' | 'large';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -61,13 +69,13 @@ const skeletonShapeProps = ref([
   {
     name: 'shape',
     desc: '图形骨架的形状',
-    type: "'square' | 'circle'",
+    type: "Shape",
     value: "'square'",
   },
   {
     name: 'size',
     desc: '图形骨架的大小',
-    type: "'small' | 'medium' | 'large'",
+    type: "Size",
     value: "'medium'",
   },
 ]);

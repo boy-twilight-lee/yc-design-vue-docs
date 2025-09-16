@@ -39,7 +39,7 @@
 ### Type
 
 ```typescript
-type OptionValue = string | number | boolean | ObjectData;
+type OptionValue = string | number | boolean | Record<string, any>;
 
 type SelectValue = OptionValue | OptionValue[];
 
@@ -47,15 +47,7 @@ type SelectOption =
   | OptionValue
   | SelectOptionData
   | SelectOptionGroup
-  | ObjectData;
-
-type FilterOption =
-  | boolean
-  | ((inputValue: string, option: SelectOptionData) => boolean);
-
-type FallbackOption = (value: OptionValue) => SelectOptionData;
-
-type FormatLabel = (data: SelectOptionData) => string;
+  | Record<string, any>;
 
 type VirtualListProps = {
   itemHeight?: number;
@@ -153,7 +145,7 @@ const selectProps = ref([
     desc: '选择框的大小',
     type: "Size",
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'placeholder',
@@ -208,7 +200,7 @@ const selectProps = ref([
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',
     value: '-',
-    href:'/components/trigger'
+    href:"/guide/types"
   },
   {
     name: 'bordered',
@@ -237,8 +229,9 @@ const selectProps = ref([
   {
     name: 'filter-option',
     desc: '是否过滤选项',
-    type: 'FilterOption',
+    type: 'boolean | FilterOption<SelectOptionData>',
     value: 'true',
+    href:'/guide/types'
   },
   {
     name: 'options',
@@ -262,14 +255,16 @@ const selectProps = ref([
   {
     name: 'format-label',
     desc: '格式化显示内容',
-    type: 'FormatLabel',
+    type: 'Format<SelectOptionData>',
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'fallback-option',
     desc: '自定义值中不存在的选项',
-    type: 'FallbackOption',
+    type: 'FallBack<SelectOptionValue, SelectOptionData>',
     value: 'true',
+    href: '/guide/types'
   },
   {
     name: 'show-extryc-options',

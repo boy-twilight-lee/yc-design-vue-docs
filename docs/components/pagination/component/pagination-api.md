@@ -50,43 +50,43 @@ const paginationProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'hide-on-single-page',
     desc: '单页时是否隐藏分页',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'simple',
     desc: '是否为简单模式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-total',
     desc: '是否显示数据总数',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-more',
     desc: '是否显示更多按钮',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-jumper',
     desc: '是否显示跳转',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'show-page-size',
     desc: '是否显示数据条数选择器',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'page-size-options',
@@ -105,7 +105,7 @@ const paginationProps = ref([
     desc: '分页选择器的大小',
     type: 'Size',
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'page-item-style',
@@ -135,7 +135,7 @@ const paginationProps = ref([
     name: 'auto-adjust',
     desc: '是否在改变数据条数时调整页码',
     type: 'boolean',
-    value: '`true`',
+    value: 'true',
   },
 ]);
 

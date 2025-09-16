@@ -74,12 +74,14 @@ const colProps = ref([
     desc: '栅格占位格数',
     type: 'number | ResponsiveValue',
     value: '24',
+    href:"/guide/types"
   },
   {
     name: 'offset',
     desc: '栅格左侧的间隔格数，间隔内不可以有栅格',
     type: 'number | ResponsiveValue',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'order',
@@ -92,6 +94,7 @@ const colProps = ref([
     desc: '设置 flex 布局属性',
     type: 'Flex',
     value: '-',
+    href:"/guide/types"
   },
 ]);
 
@@ -101,18 +104,21 @@ const gridProps = ref([
     desc: '每一行展示的列数',
     type: 'number | ResponsiveValue',
     value: '24',
+    href:"/guide/types"
   },
   {
     name: 'row-gap',
     desc: '行与行之间的间距',
     type: 'number | ResponsiveValue',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'col-gap',
     desc: '列与列之间的间距',
     type: 'number | ResponsiveValue',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'collapsed',
@@ -134,12 +140,14 @@ const gridItemProps = ref([
     desc: '跨越的格数',
     type: 'number | ResponsiveValue',
     value: '1',
+    href:"/guide/types"
   },
   {
     name: 'offset',
     desc: '左侧的间隔格数',
     type: 'number | ResponsiveValue',
     value: '0',
+    href:"/guide/types"
   },
   {
     name: 'suffix',

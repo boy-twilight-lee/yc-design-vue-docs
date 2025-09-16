@@ -26,18 +26,10 @@ type CascaderValue =
   | CascaderOptionValue[]
   | CascaderOptionValue[][];
 
-type ExpandTrigger = 'click' | 'hover';
-
 type LoadMore = (
   option: CascaderOption,
   done: (children?: CascaderOption[]) => void
 ) => void;
-
-type FallBack =
-  | boolean
-  | ((value: CascaderOptionValue | CascaderOptionValue[]) => string);
-
-type FilterOption = (inputValue: string, option: SelectOptionData) => boolean;
 ```
 
 <script setup>
@@ -91,7 +83,7 @@ const cascaderProps = ref([
     desc: '选择框的大小',
     type: "Size",
     value: "'medium'",
-    href:"/components/button"
+    href:'/guide/types'
   },
   {
     name: 'allow-search',
@@ -134,6 +126,7 @@ const cascaderProps = ref([
     desc: '展开下一级的触发方式',
     type: "ExpandTrigger",
     value: "'click'",
+    href: "/guide/types"
   },
   {
     name: 'placeholder',
@@ -144,7 +137,7 @@ const cascaderProps = ref([
   {
     name: 'filter-option',
     desc: '自定义选项过滤方法',
-    type: 'FilterOption',
+    type: 'FilterOption<CascaderOption>',
     value: '-',
   },
   {
@@ -156,8 +149,9 @@ const cascaderProps = ref([
   {
     name: 'format-label',
     desc: '格式化展示内容',
-    type: '(options: CascaderOption[]) => string',
+    type: 'Format<CascaderOption[]>',
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'trigger-props',
@@ -205,8 +199,9 @@ const cascaderProps = ref([
   {
     name: 'fallback',
     desc: '自定义不存在选项的值的展示',
-    type: 'Fallback',
+    type: 'boolean | FallBack<CascaderOptionValue | CascaderOptionValue[], string>;',
     value: 'true',
+    href: '/guide/types'
   },
   {
     name: 'expand-child',

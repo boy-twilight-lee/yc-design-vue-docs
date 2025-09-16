@@ -45,7 +45,7 @@ const timelineProps = ref([
     desc: '时间轴方向',
     type: "Direction",
     value: "'vertical'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'mode',

@@ -16,6 +16,14 @@
 
 <field-table :data="stepSlots" type="slots"/>
 
+### Type
+
+```typescript
+type Type = 'default' | 'arrow' | 'dot' | 'navigation';
+
+type Status = 'wait' | 'process' | 'finish' | 'error';
+```
+
 <script setup>
 import { ref } from 'vue';
 
@@ -23,7 +31,7 @@ const stepsProps = ref([
   {
     name: 'type',
     desc: '步骤条的类型',
-    type: "'default' | 'arrow' | 'dot' | 'navigation'",
+    type: "StepsType",
     value: "'default'",
   },
   {
@@ -31,14 +39,14 @@ const stepsProps = ref([
     desc: '步骤条的显示方向',
     type: 'Direction',
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'label-placement',
     desc: '标签描述文字放置的位置',
     type: 'Direction',
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'current',
@@ -55,26 +63,26 @@ const stepsProps = ref([
   {
     name: 'status',
     desc: '当前步骤的状态',
-    type: "'wait' | 'process' | 'finish' | 'error'",
+    type: "Status",
     value: "'process'",
   },
   {
     name: 'line-less',
     desc: '是否使用无连接线样式',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'small',
     desc: '是否使用小型步骤条',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
   {
     name: 'changeable',
     desc: '是否可以点击切换',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 
@@ -113,7 +121,7 @@ const stepProps = ref([
     name: 'disabled',
     desc: '是否禁用',
     type: 'boolean',
-    value: '`false`',
+    value: 'false',
   },
 ]);
 

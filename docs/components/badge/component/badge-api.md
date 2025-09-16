@@ -33,7 +33,7 @@ const badgeProps = ref([
   {
     name: 'dot-style',
     desc: '徽标的样式',
-    type: 'object',
+    type: 'CSSProperties',
     value: '-',
   },
   {
@@ -51,7 +51,7 @@ const badgeProps = ref([
   {
     name: 'color',
     desc: '内置的一些颜色',
-    type: 'ColorType | string',
+    type: 'string | ColorType',
     value: '-',
   },
   {

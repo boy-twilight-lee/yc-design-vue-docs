@@ -56,6 +56,16 @@
 
 <field-table :data="dropdownButtonSlots" type="slots"/>
 
+### Type
+
+```typescript
+type DropdownValue = string | number | Record<string, any>;
+
+type Position = 'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br';
+
+type MenuPosition = 'rt' | 'lt';
+```
+
 <script setup>
 import { ref } from 'vue'
 
@@ -75,20 +85,22 @@ const dropdownProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    type: "Trigger",
     value: "'click'",
+    href:'/components/trigger'
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    type: "Position",
     value: "'bottom'",
   },
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'popup-max-height',
@@ -124,7 +136,7 @@ const dropdownEmits = ref([
     name: 'select',
     desc: '用户选择时触发',
     type: {
-      value: 'string | number | Record<string, any> | undefined',
+      value: 'DropdownValue',
       ev: 'Event'
     },
     value: '-',
@@ -150,7 +162,7 @@ const doptionProps = ref([
   {
     name: 'value',
     desc: '选项值',
-    type: 'string | number | object',
+    type: 'DropdownValue',
     value: '-',
   },
   {
@@ -215,13 +227,13 @@ const dsubmenuProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover'" | "'click'",
+    type: "MenuTrigger",
     value: "'click'",
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'rt' | 'lt'",
+    type: "MenuPosition",
     value: "'rt'",
   },
   {
@@ -239,7 +251,7 @@ const dsubmenuProps = ref([
   {
     name: 'option-props',
     desc: '自定义选项属性',
-    type: 'object',
+    type: 'DoptionProps',
     value: '-',
   },
   {
@@ -299,20 +311,22 @@ const dropdownButtonProps = ref([
   {
     name: 'trigger',
     desc: '触发方式',
-    type: "'hover' | 'click' | 'focus' | 'contextMenu'",
+    type: "Trigger",
     value: "'click'",
+    href:'/components/trigger'
   },
   {
     name: 'position',
     desc: '弹出位置',
-    type: "'top' | 'tl' | 'tr' | 'bottom' | 'bl' | 'br'",
+    type: "Position",
     value: "'br'",
   },
   {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
-    type: 'string | HTMLElement',
+    type: 'PopupContainer',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'disabled',
@@ -337,6 +351,7 @@ const dropdownButtonProps = ref([
     desc: '按钮属性',
     type: 'ButtonProps',
     value: '-',
+    href:'/components/button'
   },
   {
     name: 'hide-on-select',
@@ -367,7 +382,7 @@ const dropdownButtonEmits = ref([
     name: 'select',
     desc: '用户选择时触发',
     type: {
-      value: 'string | number | Record<string, any> | undefined',
+      value: 'DropdownValue',
       ev: 'Event'
     },
     value: '-',

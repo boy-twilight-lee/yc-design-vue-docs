@@ -51,8 +51,9 @@ const descriptionsProps = ref([
   {
     name: 'column',
     desc: '每行放置的数据个数',
-    type: 'number | ResponsiveValue',
+    type: 'Column',
     value: '3',
+    href:"/guide/types"
   },
   {
     name: 'title',
@@ -77,7 +78,7 @@ const descriptionsProps = ref([
     desc: '描述列表的大小',
     type: "Size",
     value: 'medium',
-    href:"/components/button"
+    href:'/guide/types'
   },
   {
     name: 'bordered',

@@ -43,7 +43,7 @@ const verificationCodeProps = ref([
     desc: '输入框大小',
     type: "Size",
     value: "'medium'",
-    href:"/components/button"
+    href:"/guide/types"
   },
   {
     name: 'disabled',

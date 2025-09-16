@@ -20,8 +20,6 @@ type AutoPlay = boolean | { interval?: number; hoverToPause?: boolean };
 type IndicatorPosition = 'bottom' | 'top' | 'left' | 'right' | 'outer';
 
 type IndicatorType = 'line' | 'dot' | 'slider' | 'never';
-
-type IndicatorTrigger = 'click' | 'hover';
 ```
 
 <script setup>
@@ -61,15 +59,16 @@ const carouselProps = ref([
   {
     name: 'trigger',
     desc: '幻灯片切换触发方式, click/hover 指示器',
-    type: 'IndicatorTrigger',
+    type: 'EventTrigger',
     value: "'click'",
+    href: "/guide/types"
   },
   {
     name: 'direction',
     desc: '幻灯片移动方向',
     type: "Direction",
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'show-arrow',
@@ -82,6 +81,7 @@ const carouselProps = ref([
     desc: '切换箭头样式',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'indicator-type',
@@ -100,6 +100,7 @@ const carouselProps = ref([
     desc: '指示器的样式',
     type: 'ClassName',
     value: '-',
+    href:"/guide/types"
   },
   {
     name: 'transition-timing-function',

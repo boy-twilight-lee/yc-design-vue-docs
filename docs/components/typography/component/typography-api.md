@@ -24,6 +24,12 @@
 
 ```typescript
 type Type = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
+
+type Heading = 1 | 2 | 3 | 4 | 5 | 6;
+
+type Spacing = 'default' | 'close';
+
+type Mark = boolean | { color: string };
 ```
 
 <script setup>
@@ -45,7 +51,7 @@ const commonProps = ref([
   {
     name: 'mark',
     desc: '添加标记样式',
-    type: 'boolean | { color: string }',
+    type: 'Mark',
     value: 'false',
   },
   {
@@ -182,7 +188,7 @@ const titleProps = ref([
   {
     name: 'heading',
     desc: '标题级别，相当于 h1 h2 h3 h4 h5 h6',
-    type: "'1' | '2' | '3' | '4' | '5' | '6'",
+    type: "Heading",
     value: "`'1'`",
   },
 ]);
@@ -197,7 +203,7 @@ const paragraphProps = ref([
   {
     name: 'spacing',
     desc: '段落的的行高，长文本(大于5行)的时候推荐使用默认行高，短文本(小于等于3行)推荐使用 close 紧密的行高。',
-    type: "'default' | 'close'",
+    type: "Spacing",
     value: "default",
   },
 ]);

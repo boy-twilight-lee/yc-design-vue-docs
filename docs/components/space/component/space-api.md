@@ -31,7 +31,7 @@ const spaceProps = ref([
     desc: '间距方向',
     type: 'Direction',
     value: "'horizontal'",
-    href:"/components/divider"
+    href:"/guide/types"
   },
   {
     name: 'size',
