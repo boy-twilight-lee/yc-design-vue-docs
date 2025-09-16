@@ -97,7 +97,9 @@ const buttonEvents = ref([
   {
     name: 'click',
     desc: '点击按钮时触发',
-    type: 'ev: MouseEvent',
+    type: {
+      ev: 'MouseEvent'
+    },
     value: '-',
   },
 ]);

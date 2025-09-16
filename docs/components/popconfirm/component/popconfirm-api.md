@@ -117,8 +117,8 @@ const popconfirmProps = ref([
     name: 'popup-container',
     desc: '弹出框的挂载点',
     type: 'PopupContainer',
-    href:"/guide/types"
     value: '-',
+    href:"/guide/types"   
   },
   {
     name: 'on-before-ok',

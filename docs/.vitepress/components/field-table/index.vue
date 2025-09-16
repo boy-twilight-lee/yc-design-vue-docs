@@ -11,10 +11,33 @@
         :key="v.dataIndex"
         v-bind="v">
         <template #cell="{ record }">
-          <span
-            v-html="parse(record, v.dataIndex)"
-            style="white-space: pre-wrap"
-            @click="handleClick(record)"></span>
+          <div @click="handleClick(record)">
+            <!-- 渲染参数 -->
+            <div
+              v-if="typeof record[v.dataIndex] == 'object'"
+              class="param-list">
+              <div
+                v-for="[key, value] in Object.entries(record[v.dataIndex])"
+                :key="key"
+                class="param-list-item">
+                {{ key }}:
+                <i class="highlight">{{ value }}</i>
+              </div>
+            </div>
+            <!-- 渲染pros -->
+            <span
+              v-else-if="
+                type == 'props' && ['type', 'value'].includes(v.dataIndex)
+              "
+              :class="{
+                highlight: true,
+                'cursor-pointer': record.href,
+              }">
+              {{ record[v.dataIndex] }}
+            </span>
+            <!-- 渲染普通 -->
+            <span v-else>{{ record[v.dataIndex] }}</span>
+          </div>
         </template>
       </a-table-column>
     </template>
@@ -76,34 +99,23 @@ const columns = computed(() => {
       : null,
   ].filter((v) => v);
 });
-// 获取style
-const getStyleStr = (style) => {
-  return Object.entries(style)
-    .map(([key, value]) => `${key}:${value}`)
-    .join(';');
-};
-// 获取解析的html
-const parse = (data, field) => {
-  const dataValue = data[field];
-  if (typeof data[field] == 'object') {
-    return Object.entries(data[field])
-      .map(([key, value]) => {
-        return `${key}: <i style="color:rgb(var(--primary-6))">${value}</i>`;
-      })
-      .join(',\n');
-  }
-  if (type.value == 'props' && ['type', 'value'].includes(field)) {
-    const styleStr = getStyleStr({
-      color: 'rgb(var(--primary-6))',
-      cursor: data.href ? 'pointer' : '',
-    });
-    return `<i style="${styleStr}">${dataValue}</i>`;
-  }
-  return dataValue;
-};
 // 处理点击
 const handleClick = (record) => {
   if (!record.href) return;
   router.go(record.href);
 };
 </script>
+
+<style scoped>
+.highlight {
+  color: rgb(var(--primary-6));
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.param-list {
+  display: flex;
+  flex-direction: column;
+}
+</style>
