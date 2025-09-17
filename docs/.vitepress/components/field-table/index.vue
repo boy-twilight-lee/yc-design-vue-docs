@@ -58,6 +58,7 @@ const props = defineProps({
   },
 });
 const { type } = toRefs(props);
+// router
 const router = useRouter();
 // 动态计算最终显示的列
 const columns = computed(() => {
