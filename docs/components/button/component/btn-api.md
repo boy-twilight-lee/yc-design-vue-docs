@@ -17,10 +17,6 @@
 <field-table :data="buttonGroupProps" />
 
 ```typescript
-type Status = 'normal' | 'warning' | 'success' | 'danger';
-
-type Shape = 'square' | 'circle' | 'round';
-
 type Type = 'primary' | 'secondary' | 'dashed' | 'outline' | 'text';
 
 type HtmlType = 'button' | 'reset' | 'submit';
@@ -41,12 +37,14 @@ const buttonProps = ref([
     desc: '按钮的形状',
     type: 'Shape',
     value: "'square'",
+    href:'/guide/types'
   },
   {
     name: 'status',
     desc: '按钮的状态',
     type: 'Status',
     value: "'normal'",
+    href:'/guide/types'
   },
   {
     name: 'size',
@@ -125,6 +123,7 @@ const buttonGroupProps = ref([
     desc: '按钮的状态',
     type: 'Status',
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'shape',

@@ -32,12 +32,6 @@
 
 <field-table :data="siderSlots" type="slots"/>
 
-### Type
-
-```typescript
-type ResizeDirections = Array<'left' | 'right' | 'top' | 'bottom'>;
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -113,8 +107,9 @@ const siderProps = ref([
   {
     name: 'resize-directions',
     desc: '可以用 ResizeBox 替换原生的 aside 标签，这个参数即 ResizeBox的 directions 参数。详情请看 ResizeBox。',
-    type: "ResizeDirections",
+    type: "Position",
     value: '-',
+    href:'/guide/types'
   },
   {
     name: 'hide-trigger',

@@ -14,12 +14,6 @@
 
 <field-table :data="popconfirmSlots" type="slots"/>
 
-### Type
-
-```typescript
-type Type = 'info' | 'success' | 'warning' | 'error';
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -54,6 +48,7 @@ const popconfirmProps = ref([
     desc: '气泡确认框的类型',
     type: "Type",
     value: "'info'",
+    href:'/guide/types'
   },
   {
     name: 'ok-text',

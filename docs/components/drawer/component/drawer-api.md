@@ -12,12 +12,6 @@
 
 <field-table :data="drawerSlots"  type="slots"/>
 
-### Type
-
-```typescript
-type Placement = 'right' | 'left' | 'top' | 'bottom';
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -37,8 +31,9 @@ const drawerProps = ref([
   {
     name: 'placement',
     desc: '抽屉放置的位置',
-    type: "Placement",
+    type: "Position",
     value: "'right'",
+    href:'/guide/types'
   },
   {
     name: 'title',

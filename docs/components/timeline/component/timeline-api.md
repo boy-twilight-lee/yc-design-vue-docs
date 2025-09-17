@@ -26,8 +26,6 @@ type LabelPosition = 'relative' | 'same';
 type DotType = 'hollow' | 'solid';
 
 type LineType = 'solid' | 'dashed' | 'dotted';
-
-type Position = 'left' | 'right' | 'top' | 'bottom';
 ```
 
 <script setup>
@@ -112,6 +110,7 @@ const timelineItemProps = ref([
     desc: 'Item 位置',
     type: 'Position',
     value: '-',
+    href:'/guide/types'
   },
 ]);
 

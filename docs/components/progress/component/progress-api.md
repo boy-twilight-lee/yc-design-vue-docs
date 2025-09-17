@@ -7,8 +7,6 @@
 ### Type
 
 ```typescript
-type Status = 'normal' | 'success' | 'warning' | 'danger';
-
 type Type = 'line' | 'circle';
 ```
 
@@ -82,6 +80,7 @@ const progressProps = ref([
     desc: '进度条状态',
     type: "Status",
     value: '-',
+    href:'/guide/types'
   },
 ]);
 </script>

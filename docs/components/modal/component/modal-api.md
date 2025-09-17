@@ -15,8 +15,6 @@
 ### Type
 
 ```typescript
-type Type = 'info' | 'warning' | 'error' | 'success';
-
 type TitleAlign = 'start' | 'center';
 
 type OnBeforeOk = (

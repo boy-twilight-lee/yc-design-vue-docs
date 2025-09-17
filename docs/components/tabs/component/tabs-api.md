@@ -26,8 +26,6 @@
 type TabKey = string | number;
 
 type Type = 'line' | 'card' | 'card-gutter' | 'text' | 'rounded' | 'capsule';
-
-type Position = 'left' | 'right' | 'bottom' | 'top';
 ```
 
 <script setup>
@@ -51,6 +49,7 @@ const tabsProps = ref([
     desc: '选项卡的位置',
     type: "Position",
     value: "'top'",
+     href:'/guide/types'
   },
   {
     name: 'size',

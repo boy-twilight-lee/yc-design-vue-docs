@@ -8,12 +8,6 @@
 
 <field-table :data="linkEvents" type="emits"/>
 
-### Type
-
-```typescript
-type Status = 'normal' | 'warning' | 'success' | 'danger';
-```
-
 <script setup>
 import { ref } from 'vue';
 
@@ -29,6 +23,7 @@ const linkProps = ref([
     desc: '链接的状态',
     type: "Status",
     value: "'normal'",
+    href:'/guide/types'
   },
   {
     name: 'hoverable',
