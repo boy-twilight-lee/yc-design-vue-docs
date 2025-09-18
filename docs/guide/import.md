@@ -1,6 +1,6 @@
 # 自动引入插件
 
-对于组件的按需引入，你可以直接使用我们准备好的自动引入插件 `yc-design-vue-resolver`，当然如果不方便下载，在下面我也会提供其源码供各位按需取用。
+对于组件的按需引入，你可以直接使用我们准备好的自动引入插件 [yc-design-vue-resolver](https://github.com/boy-twilight-lee/yc-design-vue-resolver)，当然如果不方便下载，想要本地化使用，在也会提供其源码供各位按需取用。
 
 ## 插件源码
 
