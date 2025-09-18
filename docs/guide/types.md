@@ -1,8 +1,8 @@
-### 公用类型
+# 公用类型
 
 所有组件采用的一些公用的类型
 
----
+## 共享类型
 
 ```typescript
 import { RenderFunction } from 'vue';

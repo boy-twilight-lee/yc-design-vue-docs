@@ -38,6 +38,7 @@ export default defineConfig({
             { text: '主题定制', link: '/guide/theme' },
             { text: '国际化', link: '/guide/lang' },
             { text: '公用类型', link: '/guide/types' },
+            { text: '自动引入插件', link: '/guide/import' },
           ],
         },
       ],
