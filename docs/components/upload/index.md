@@ -5,15 +5,18 @@
 ---
 
 <script setup>
-import uploadBasicUse from "./component/upload-basic-use.md"
-import uploadAvatar from "./component/upload-avatar.md"
-import uploadFileList from "./component/upload-file-list.md"
-import uploadPictureWall from "./component/upload-picture-wall.md"
-import uploadDraggable from "./component/upload-draggable.md"
-import uploadPicture from "./component/upload-picture.md"
-import uploadValidate from "./component/upload-validate.md"
-import uploadRemove from "./component/upload-remove.md"
-import uploadLimit from "./component/upload-limit.md"
+import UploadBasicUse from "./component/upload-basic-use.md"
+import UploadAvatar from "./component/upload-avatar.md"
+import UploadFileList from "./component/upload-file-list.md"
+import UploadPictureWall from "./component/upload-picture-wall.md"
+import UploadDraggable from "./component/upload-draggable.md"
+import UploadPicture from "./component/upload-picture.md"
+import UploadValidate from "./component/upload-validate.md"
+import UploadRemove from "./component/upload-remove.md"
+import UploadLimit from "./component/upload-limit.md"
+import UploadCustom from "./component/upload-custom.md"
+import UploadIcon from "./component/upload-icon.md"
+import UploadDirectory from "./component/upload-directory.md"
 </script>
 
 <upload-basic-use />
@@ -25,3 +28,6 @@ import uploadLimit from "./component/upload-limit.md"
 <upload-validate />
 <upload-remove />
 <upload-limit />
+<upload-custom />
+<upload-icon />
+<upload-directory />
