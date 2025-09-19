@@ -144,6 +144,10 @@ export default defineConfig({
               text: '数据穿梭框 Transfer',
               link: '/components/transfer/index.md',
             },
+            {
+              text: '上传 Upload',
+              link: '/components/upload/index.md',
+            },
           ],
         },
         {
