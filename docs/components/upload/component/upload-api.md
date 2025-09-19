@@ -24,6 +24,14 @@
 
 <field-table :data="customIconProps" />
 
+<!-- ### RequestOption
+
+<field-table :data="requestOptionProps" />
+
+### UploadRequest
+
+<field-table :data="uploadRequestProps" /> -->
+
 ### Type
 
 ```typescript
@@ -41,14 +49,6 @@ type OnBeforeRemove = (fileItem: FileItem) => Promise<boolean>;
 
 type OnButtonClick = (event: Event) => Promise<FileList> | void;
 ```
-
-<!-- ### RequestOption
-
-<field-table :data="requestOptionProps" />
-
-### UploadRequest
-
-<field-table :data="uploadRequestProps" /> -->
 
 <script setup>
 import { ref } from 'vue';
