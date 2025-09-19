@@ -7,7 +7,7 @@
     direction="vertical"
     :style="{ width: '100%' }">
     <yc-upload
-      :before-upload="beforeUpload" />
+      :on-before-upload="beforeUpload" />
   </yc-space>
 </div>
 
@@ -37,7 +37,7 @@ const beforeUpload = (file) => {
   <yc-space
     direction="vertical"
     :style="{ width: '100%' }">
-    <yc-upload :before-upload="beforeUpload" />
+    <yc-upload :on-before-upload="beforeUpload" />
   </yc-space>
 </template>
 
