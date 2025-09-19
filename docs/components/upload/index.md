@@ -17,6 +17,7 @@ import UploadLimit from "./component/upload-limit.md"
 import UploadCustom from "./component/upload-custom.md"
 import UploadIcon from "./component/upload-icon.md"
 import UploadDirectory from "./component/upload-directory.md"
+import UploadApi from "./component/upload-api.md"
 </script>
 
 <upload-basic-use />
@@ -31,3 +32,4 @@ import UploadDirectory from "./component/upload-directory.md"
 <upload-custom />
 <upload-icon />
 <upload-directory />
+<upload-api />
