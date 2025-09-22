@@ -7,11 +7,10 @@
     <yc-button
       type="primary"
       @click="
-        () =>
-          this.$notification.info({
-            title: 'Notification',
-            content: 'This is a notification!',
-          })
+        this.$notification.info({
+          title: 'Notification',
+          content: 'This is a notification!',
+        })
       ">
       Open Notification
     </yc-button>
@@ -42,11 +41,10 @@ const handleNotification = () => {
     <yc-button
       type="primary"
       @click="
-        () =>
-          this.$notification.info({
-            title: 'Notification',
-            content: 'This is a notification!',
-          })
+        this.$notification.info({
+          title: 'Notification',
+          content: 'This is a notification!',
+        })
       ">
       Open Notification
     </yc-button>

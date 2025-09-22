@@ -5,21 +5,21 @@
 <div class="cell-demo vp-raw">
   <div>
     <yc-space>
-      <yc-button @click="() => this.$message.info('This is an info message!')"
+      <yc-button @click="this.$message.info('This is an info message!')"
         >Info Message</yc-button
       >
       <yc-button
-        @click="() => this.$message.success('This is a success message!')"
+        @click="this.$message.success('This is a success message!')"
         status="success"
         >Success Message
       </yc-button>
       <yc-button
-        @click="() => this.$message.warning('This is a warning message!')"
+        @click="this.$message.warning('This is a warning message!')"
         status="warning"
         >Warning Message
       </yc-button>
       <yc-button
-        @click="() => this.$message.error('This is an error message!')"
+        @click="this.$message.error('This is an error message!')"
         status="danger"
         >Error Message</yc-button
       >
@@ -27,12 +27,11 @@
   </div>
   <div style="margin-top: 20px">
     <yc-space>
-      <yc-button @click="() => this.$message.normal('This is a normal message!')"
+      <yc-button @click="this.$message.normal('This is a normal message!')"
         >Normal Message</yc-button
       >
       <yc-button
         @click="
-          () =>
             this.$message.normal({
               content: 'This is a normal message!',
               icon: renderIcon,
@@ -41,7 +40,7 @@
         >Normal Message With Icon
       </yc-button>
       <yc-button
-        @click="() => this.$message.loading('This is a loading message!')"
+        @click="this.$message.loading('This is a loading message!')"
         status="primary"
         >Loading Message
       </yc-button>
@@ -52,7 +51,7 @@
 <script setup>
 import { h } from 'vue';
 import { IconExclamationCircleFill } from '@arco-design/web-vue/es/icon';
-const renderIcon = () => h(IconExclamationCircleFill);
+const renderIcon = h(IconExclamationCircleFill);
 </script>
 
 <details>
@@ -66,21 +65,21 @@ const renderIcon = () => h(IconExclamationCircleFill);
 <template>
   <div>
     <yc-space>
-      <yc-button @click="() => this.$message.info('This is an info message!')"
+      <yc-button @click="this.$message.info('This is an info message!')"
         >Info Message</yc-button
       >
       <yc-button
-        @click="() => this.$message.success('This is a success message!')"
+        @click="this.$message.success('This is a success message!')"
         status="success"
         >Success Message
       </yc-button>
       <yc-button
-        @click="() => this.$message.warning('This is a warning message!')"
+        @click="this.$message.warning('This is a warning message!')"
         status="warning"
         >Warning Message
       </yc-button>
       <yc-button
-        @click="() => this.$message.error('This is an error message!')"
+        @click="this.$message.error('This is an error message!')"
         status="danger"
         >Error Message</yc-button
       >
@@ -88,22 +87,20 @@ const renderIcon = () => h(IconExclamationCircleFill);
   </div>
   <div style="margin-top: 20px">
     <yc-space>
-      <yc-button
-        @click="() => this.$message.normal('This is a normal message!')"
+      <yc-button @click="this.$message.normal('This is a normal message!')"
         >Normal Message</yc-button
       >
       <yc-button
         @click="
-          () =>
-            this.$message.normal({
-              content: 'This is a normal message!',
-              icon: renderIcon,
-            })
+          this.$message.normal({
+            content: 'This is a normal message!',
+            icon: renderIcon,
+          })
         "
         >Normal Message With Icon
       </yc-button>
       <yc-button
-        @click="() => this.$message.loading('This is a loading message!')"
+        @click="this.$message.loading('This is a loading message!')"
         status="primary"
         >Loading Message
       </yc-button>
@@ -114,7 +111,7 @@ const renderIcon = () => h(IconExclamationCircleFill);
 <script setup>
 import { h } from 'vue';
 import { IconExclamationCircleFill } from '/es/icon';
-const renderIcon = () => h(IconExclamationCircleFill);
+const renderIcon = h(IconExclamationCircleFill);
 </script>
 ```
 

@@ -5,12 +5,11 @@
 <div class="cell-demo vp-rwa">
   <yc-space>
     <yc-button
-      @click="() => this.$message.info({ content: 'This is an info message!' })"
+      @click="this.$message.info({ content: 'This is an info message!' })"
       >Top Message</yc-button
     >
     <yc-button
       @click="
-        () =>
           this.$message.info({
             content: 'This is an info message!',
             position: 'bottom',
@@ -32,16 +31,15 @@
 <template>
   <yc-space>
     <yc-button
-      @click="() => this.$message.info({ content: 'This is an info message!' })"
+      @click="this.$message.info({ content: 'This is an info message!' })"
       >Top Message</yc-button
     >
     <yc-button
       @click="
-        () =>
-          this.$message.info({
-            content: 'This is an info message!',
-            position: 'bottom',
-          })
+        this.$message.info({
+          content: 'This is an info message!',
+          position: 'bottom',
+        })
       "
       >Bottom Message</yc-button
     >
