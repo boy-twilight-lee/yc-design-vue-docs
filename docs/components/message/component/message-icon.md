@@ -6,19 +6,15 @@
   <yc-button @click="handleClick">Info Message</yc-button>
 </div>
 
-<script>
+<script setup>
 import { h } from 'vue';
+import { Message } from 'yc-design-vue';
 import { IconFaceSmileFill } from '@arco-design/web-vue/es/icon';
-
-export default {
-  methods: {
-    handleClick() {
-      this.$message.info({
-        content: 'This is an info message!',
-        icon: () => h(IconFaceSmileFill),
-      });
-    },
-  },
+const handleClick = () => {
+  Message.info({
+    content: 'This is an info message!',
+    icon: () => h(IconFaceSmileFill),
+  });
 };
 </script>
 
@@ -34,19 +30,15 @@ export default {
   <yc-button @click="handleClick">Info Message</yc-button>
 </template>
 
-<script>
+<script setup>
 import { h } from 'vue';
+import { Message } from 'yc-design-vue';
 import { IconFaceSmileFill } from '@arco-design/web-vue/es/icon';
-
-export default {
-  methods: {
-    handleClick() {
-      this.$message.info({
-        content: 'This is an info message!',
-        icon: () => h(IconFaceSmileFill),
-      });
-    },
-  },
+const handleClick = () => {
+  Message.info({
+    content: 'This is an info message!',
+    icon: () => h(IconFaceSmileFill),
+  });
 };
 </script>
 ```

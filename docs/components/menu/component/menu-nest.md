@@ -48,25 +48,6 @@
   </div>
 </div>
 
-<script>
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
-export default {
-components: {
-IconMenuFold,
-IconMenuUnfold,
-IconApps,
-IconBug,
-IconBulb,
-},
-};
-</script>
-
 <style scoped>
 .menu-demo {
   box-sizing: border-box;
@@ -130,25 +111,7 @@ IconBulb,
     </yc-menu>
   </div>
 </template>
-<script>
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-};
-</script>
 <style scoped>
 .menu-demo {
   box-sizing: border-box;

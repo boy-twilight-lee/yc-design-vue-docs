@@ -53,33 +53,12 @@
   </div>
 </div>
 
-<script>
+<script setup>
 import { ref } from 'vue';
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-  setup() {
-    const collapsed = ref(false);
-    return {
-      collapsed,
-      toggleCollapse: () => {
-        collapsed.value = !collapsed.value;
-      },
-    };
-  },
+const collapsed = ref(false);
+const toggleCollapse = () => {
+  collapsed.value = !collapsed.value;
 };
 </script>
 
@@ -151,33 +130,12 @@ export default {
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-  setup() {
-    const collapsed = ref(false);
-    return {
-      collapsed,
-      toggleCollapse: () => {
-        collapsed.value = !collapsed.value;
-      },
-    };
-  },
+const collapsed = ref(false);
+const toggleCollapse = () => {
+  collapsed.value = !collapsed.value;
 };
 </script>
 

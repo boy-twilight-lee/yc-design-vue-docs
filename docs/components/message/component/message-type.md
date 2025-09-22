@@ -5,21 +5,21 @@
 <div class="cell-demo vp-raw">
   <div>
     <yc-space>
-      <yc-button @click="this.$message.info('This is an info message!')"
+      <yc-button @click="$message.info('This is an info message!')"
         >Info Message</yc-button
       >
       <yc-button
-        @click="this.$message.success('This is a success message!')"
+        @click="$message.success('This is a success message!')"
         status="success"
         >Success Message
       </yc-button>
       <yc-button
-        @click="this.$message.warning('This is a warning message!')"
+        @click="$message.warning('This is a warning message!')"
         status="warning"
         >Warning Message
       </yc-button>
       <yc-button
-        @click="this.$message.error('This is an error message!')"
+        @click="$message.error('This is an error message!')"
         status="danger"
         >Error Message</yc-button
       >
@@ -27,12 +27,12 @@
   </div>
   <div style="margin-top: 20px">
     <yc-space>
-      <yc-button @click="this.$message.normal('This is a normal message!')"
+      <yc-button @click="$message.normal('This is a normal message!')"
         >Normal Message</yc-button
       >
       <yc-button
         @click="
-            this.$message.normal({
+            $message.normal({
               content: 'This is a normal message!',
               icon: renderIcon,
             })
@@ -40,7 +40,7 @@
         >Normal Message With Icon
       </yc-button>
       <yc-button
-        @click="this.$message.loading('This is a loading message!')"
+        @click="$message.loading('This is a loading message!')"
         status="primary"
         >Loading Message
       </yc-button>
@@ -65,21 +65,21 @@ const renderIcon = h(IconExclamationCircleFill);
 <template>
   <div>
     <yc-space>
-      <yc-button @click="this.$message.info('This is an info message!')"
+      <yc-button @click="$message.info('This is an info message!')"
         >Info Message</yc-button
       >
       <yc-button
-        @click="this.$message.success('This is a success message!')"
+        @click="$message.success('This is a success message!')"
         status="success"
         >Success Message
       </yc-button>
       <yc-button
-        @click="this.$message.warning('This is a warning message!')"
+        @click="$message.warning('This is a warning message!')"
         status="warning"
         >Warning Message
       </yc-button>
       <yc-button
-        @click="this.$message.error('This is an error message!')"
+        @click="$message.error('This is an error message!')"
         status="danger"
         >Error Message</yc-button
       >
@@ -87,12 +87,12 @@ const renderIcon = h(IconExclamationCircleFill);
   </div>
   <div style="margin-top: 20px">
     <yc-space>
-      <yc-button @click="this.$message.normal('This is a normal message!')"
+      <yc-button @click="$message.normal('This is a normal message!')"
         >Normal Message</yc-button
       >
       <yc-button
         @click="
-          this.$message.normal({
+          $message.normal({
             content: 'This is a normal message!',
             icon: renderIcon,
           })
@@ -100,7 +100,7 @@ const renderIcon = h(IconExclamationCircleFill);
         >Normal Message With Icon
       </yc-button>
       <yc-button
-        @click="this.$message.loading('This is a loading message!')"
+        @click="$message.loading('This is a loading message!')"
         status="primary"
         >Loading Message
       </yc-button>

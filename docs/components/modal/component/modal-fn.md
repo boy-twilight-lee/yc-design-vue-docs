@@ -6,9 +6,10 @@
   <yc-button @click="handleClick">Open Modal</yc-button>
 </div>
 
-<script>
+<script setup>
 import { h } from 'vue';
 import { Modal, Button } from 'yc-design-vue';
+
 const ModalContent = {
   setup() {
     const onClick = () => {
@@ -25,19 +26,12 @@ const ModalContent = {
       ]);
   },
 };
-export default {
-  setup() {
-    const handleClick = () => {
-      Modal.info({
-        title: 'Info Title',
-        content: () => h(ModalContent),
-      });
-    };
 
-    return {
-      handleClick,
-    };
-  },
+const handleClick = () => {
+  Modal.info({
+    title: 'Info Title',
+    content: () => h(ModalContent),
+  });
 };
 </script>
 
@@ -62,7 +56,7 @@ export default {
   <yc-button @click="handleClick">Open Modal</yc-button>
 </template>
 
-<script>
+<script setup>
 import { h } from 'vue';
 import { Modal, Button } from 'yc-design-vue';
 
@@ -83,19 +77,11 @@ const ModalContent = {
   },
 };
 
-export default {
-  setup() {
-    const handleClick = () => {
-      Modal.info({
-        title: 'Info Title',
-        content: () => h(ModalContent),
-      });
-    };
-
-    return {
-      handleClick,
-    };
-  },
+const handleClick = () => {
+  Modal.info({
+    title: 'Info Title',
+    content: () => h(ModalContent),
+  });
 };
 </script>
 

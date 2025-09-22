@@ -125,35 +125,21 @@
   </yc-layout>
 </div>
 
-<script>
-import { defineComponent, ref } from 'vue';
+<script setup>
+import { ref } from 'vue';
 import { Message } from 'yc-design-vue';
-import { IconHome, IconCalendar } from '@arco-design/web-vue/es/icon';
-
-export default defineComponent({
-  components: {
-    IconHome,
-    IconCalendar,
-  },
-  setup() {
-    const collapsed = ref(false);
-    const onCollapse = (val, type) => {
-      const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
-      Message.info({
-        content,
-        duration: 2000,
-      });
-      collapsed.value = val;
-    };
-    return {
-      collapsed,
-      onCollapse,
-      onClickMenuItem(key) {
-        Message.info({ content: `You select ${key}`, showIcon: true });
-      },
-    };
-  },
-});
+const collapsed = ref(false);
+const onCollapse = (val, type) => {
+  const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
+  Message.info({
+    content,
+    duration: 2000,
+  });
+  collapsed.value = val;
+};
+const onClickMenuItem = (key) => {
+  Message.info({ content: `You select ${key}`, showIcon: true });
+};
 </script>
 
 <style scoped>
@@ -331,35 +317,21 @@ export default defineComponent({
   </yc-layout>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue';
+<script setup>
+import { ref } from 'vue';
 import { Message } from 'yc-design-vue';
-import { IconHome, IconCalendar } from '@arco-design/web-vue/es/icon';
-
-export default defineComponent({
-  components: {
-    IconHome,
-    IconCalendar,
-  },
-  setup() {
-    const collapsed = ref(false);
-    const onCollapse = (val, type) => {
-      const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
-      Message.info({
-        content,
-        duration: 2000,
-      });
-      collapsed.value = val;
-    };
-    return {
-      collapsed,
-      onCollapse,
-      onClickMenuItem(key) {
-        Message.info({ content: `You select ${key}`, showIcon: true });
-      },
-    };
-  },
-});
+const collapsed = ref(false);
+const onCollapse = (val, type) => {
+  const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
+  Message.info({
+    content,
+    duration: 2000,
+  });
+  collapsed.value = val;
+};
+const onClickMenuItem = (key) => {
+  Message.info({ content: `You select ${key}`, showIcon: true });
+};
 </script>
 
 <style scoped>

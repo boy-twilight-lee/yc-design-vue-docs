@@ -6,22 +6,16 @@
   <yc-button @click="handleClick">Update Info Message</yc-button>
 </div>
 
-<script>
-export default {
-  data() {
-    return {
-      index: 0,
-    };
-  },
-  methods: {
-    handleClick() {
-      this.$message.info({
-        id: 'myInfo',
-        content: `This is an info message ${this.$data.index++}`,
-        duration: 2000,
-      });
-    },
-  },
+<script setup>
+import { ref } from 'vue';
+import { Message } from 'yc-design-vue';
+const index = ref(0);
+const handleClick = () => {
+  Message.info({
+    id: 'myInfo',
+    content: `This is an info message ${this.$data.index++}`,
+    duration: 2000,
+  });
 };
 </script>
 
@@ -37,22 +31,16 @@ export default {
   <yc-button @click="handleClick">Update Info Message</yc-button>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      index: 0,
-    };
-  },
-  methods: {
-    handleClick() {
-      this.$message.info({
-        id: 'myInfo',
-        content: `This is an info message ${this.$data.index++}`,
-        duration: 2000,
-      });
-    },
-  },
+<script setup>
+import { ref } from 'vue';
+import { Message } from 'yc-design-vue';
+const index = ref(0);
+const handleClick = () => {
+  Message.info({
+    id: 'myInfo',
+    content: `This is an info message ${this.$data.index++}`,
+    duration: 2000,
+  });
 };
 </script>
 ```

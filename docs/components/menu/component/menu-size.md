@@ -44,28 +44,9 @@
   </div>
 </div>
 
-<script>
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
-export default {
-components: {
-IconMenuFold,
-IconMenuUnfold,
-IconApps,
-IconBug,
-IconBulb,
-},
-data() {
-return {
-width: 240,
-};
-},
-};
+<script setup>
+import { ref } from 'vue';
+const width = ref(240);
 </script>
 
 <style scoped>
@@ -127,29 +108,10 @@ width: 240,
     </yc-menu>
   </div>
 </template>
-<script>
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-  data() {
-    return {
-      width: 240,
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue';
+const width = ref(240);
 </script>
 
 <style scoped>

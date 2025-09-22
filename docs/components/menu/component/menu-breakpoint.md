@@ -42,37 +42,16 @@
   </div>
 </div>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import { Message } from 'yc-design-vue';
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-  setup() {
-    return {
-      onCollapse(val, type) {
-        const content =
-          type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
-        Message.info({
-          content,
-          duration: 2000,
-        });
-      },
-    };
-  },
+const onCollapse = (val, type) => {
+  const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
+  Message.info({
+    content,
+    duration: 2000,
+  });
 };
 </script>
 
@@ -134,37 +113,16 @@ export default {
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
-import { Message } from 'yc-design-vue;
-import {
-  IconMenuFold,
-  IconMenuUnfold,
-  IconApps,
-  IconBug,
-  IconBulb,
-} from '@arco-design/web-vue/es/icon';
+import { Message } from 'yc-design-vue';
 
-export default {
-  components: {
-    IconMenuFold,
-    IconMenuUnfold,
-    IconApps,
-    IconBug,
-    IconBulb,
-  },
-  setup() {
-    return {
-      onCollapse(val, type) {
-        const content =
-          type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
-        Message.info({
-          content,
-          duration: 2000,
-        });
-      },
-    };
-  },
+const onCollapse = (val, type) => {
+  const content = type === 'responsive' ? '触发响应式收缩' : '点击触发收缩';
+  Message.info({
+    content,
+    duration: 2000,
+  });
 };
 </script>
 

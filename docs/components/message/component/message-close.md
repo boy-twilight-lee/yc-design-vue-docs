@@ -4,8 +4,7 @@
 
 <div class="cell-demo vp-rwa">
   <yc-button
-    @click="
-      this.$message.info({
+    @click="$message.info({
         content: 'This is an info message!',
         closable: true,
       })
@@ -27,7 +26,7 @@
 <template>
   <yc-button
     @click="
-      this.$message.info({
+      $message.info({
         content: 'This is an info message!',
         closable: true,
       })
