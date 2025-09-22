@@ -8,6 +8,8 @@
   >
 </div>
 
+<script setup></script>
+
 <details>
 <summary>
  <button class="code-btn"  >
@@ -21,6 +23,7 @@
     >Info Message</yc-button
   >
 </template>
+<script setup></script>
 ```
 
 </details>

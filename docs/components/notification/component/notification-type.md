@@ -40,6 +40,8 @@
   </yc-space>
 </div>
 
+<script setup></script>
+
 <details>
 <summary>
  <button class="code-btn"  >
@@ -85,6 +87,8 @@
     </yc-button>
   </yc-space>
 </template>
+
+<script setup></script>
 ```
 
 </details>
