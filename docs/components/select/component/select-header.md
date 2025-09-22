@@ -21,24 +21,6 @@
         </div>
       </template>
     </yc-select>
-    <yc-select
-      :default-value="'Beijing'"
-      :style="{ width: '360px' }"
-      placeholder="Please select ..."
-      multiple
-      show-header-on-empty>
-      <yc-option>Beijing</yc-option>
-      <yc-option>Shanghai</yc-option>
-      <yc-option>Guangzhou</yc-option>
-      <yc-option disabled>Disabled</yc-option>
-      <yc-option>Shenzhen</yc-option>
-      <yc-option>Wuhan</yc-option>
-      <template #header>
-        <div style="padding: 6px 12px;">
-          <yc-checkbox value="1">全选</yc-checkbox>
-        </div>
-      </template>
-    </yc-select>
   </yc-space>
 </div>
 
@@ -57,25 +39,6 @@
       :style="{ width: '360px' }"
       placeholder="Please select ..."
       multiple>
-      <yc-option>Beijing</yc-option>
-      <yc-option>Shanghai</yc-option>
-      <yc-option>Guangzhou</yc-option>
-      <yc-option disabled>Disabled</yc-option>
-      <yc-option>Shenzhen</yc-option>
-      <yc-option>Wuhan</yc-option>
-      <template #header>
-        <div style="padding: 6px 12px;">
-          <yc-checkbox value="1">全选</yc-checkbox>
-        </div>
-      </template>
-    </yc-select>
-
-    <yc-select
-      :default-value="'Beijing'"
-      :style="{ width: '360px' }"
-      placeholder="Please select ..."
-      multiple
-      show-header-on-empty>
       <yc-option>Beijing</yc-option>
       <yc-option>Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>

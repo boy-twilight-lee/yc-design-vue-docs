@@ -1,6 +1,6 @@
-### 基本用法
+### 开关尺寸
 
-开关的基本用法。
+开关分为 `small`、`medium` 两种尺寸。
 
 <div class="cell-demo vp-raw">
   <yc-space size="large">

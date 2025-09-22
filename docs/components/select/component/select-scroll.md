@@ -1,4 +1,4 @@
-### 无边框模式
+### 下拉菜单滚动
 
 可以通过 `dropdown-scroll` 监听下拉菜单的滚动事件。或者通过 `dropdown-reach-bottom` 监听下拉菜单滚动到底部的事件。
 

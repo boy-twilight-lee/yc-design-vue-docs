@@ -13,7 +13,7 @@ const index = ref(0);
 const handleClick = () => {
   Message.info({
     id: 'myInfo',
-    content: `This is an info message ${this.$data.index++}`,
+    content: `This is an info message ${index.value++}`,
     duration: 2000,
   });
 };
@@ -38,7 +38,7 @@ const index = ref(0);
 const handleClick = () => {
   Message.info({
     id: 'myInfo',
-    content: `This is an info message ${this.$data.index++}`,
+    content: `This is an info message ${index.value++}`,
     duration: 2000,
   });
 };

@@ -1,6 +1,6 @@
-### 基本用法
+### 自定义开关的值
 
-开关分为 `circle` - 圆形（默认）、`round` - 圆角、`line` - 线性三种类型。
+通过 `checked-value` 和 `unchecked-value` 可以自定义开关的值。
 
 <div class="cell-demo vp-raw">
   <yc-space

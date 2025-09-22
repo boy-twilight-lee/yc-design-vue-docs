@@ -1,6 +1,6 @@
 ### 树型穿梭框
 
-通过设置 `simple` 来开启简单模式，点击选项即可移动。
+通过穿梭框自定义接口可以实现树型穿梭框。
 
 <div class="cell-demo vp-raw">
   <yc-transfer
