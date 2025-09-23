@@ -3,6 +3,7 @@ import Theme from 'vitepress/theme';
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css';
 import 'yc-design-vue/es/style.css';
+import '@arco-design/web-vue/dist/arco.css';
 import '../style/index.less';
 import { HeroImage, FieldTable } from '../components';
 import useCodeExpand from '../hooks/useCodeExpand';

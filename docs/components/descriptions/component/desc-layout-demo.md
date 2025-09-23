@@ -3,41 +3,41 @@
 当 `span` 所占列数大于 `column` 可放置的数据个数时，`span` 会被设置为 `column` 的值，当行剩余列数不够放置下一列时将自动换行，每行末尾列会自动填充剩余量。
 
 <div class="cell-demo vp-raw">
-  <yc-form
+  <a-form
     :model="form"
     auto-label-widt 
     style="width:100%"h>
-    <yc-form-item label="size">
+    <a-form-item label="size">
       <yc-radio-group
         v-model="form.size"
         type="button"
         :options="sizeOptions" />
-    </yc-form-item>
-    <yc-form-item label="layout">
+    </a-form-item>
+    <a-form-item label="layout">
       <yc-radio-group
         v-model="form.layout"
         type="button"
         :options="layoutOptions" />
-    </yc-form-item>
-    <yc-form-item label="table-layout">
+    </a-form-item>
+    <a-form-item label="table-layout">
       <yc-radio-group
         v-model="form.tableLayout"
         type="button"
         :options="['auto', 'fixed']" />
-    </yc-form-item>
-    <yc-form-item label="column">
+    </a-form-item>
+    <a-form-item label="column">
       <yc-radio-group
         v-model="form.column"
         type="button"
         :options="columnOptions" />
-    </yc-form-item>
-    <yc-form-item label="firstSpan">
+    </a-form-item>
+    <a-form-item label="firstSpan">
       <yc-radio-group
         v-model="form.firstSpan"
         type="button"
         :options="firstSpanOptions" />
-    </yc-form-item>
-  </yc-form>
+    </a-form-item>
+  </a-form>
   <div style="margin-top: 20px">
     <yc-descriptions
       title="Layout Example"
@@ -89,6 +89,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { Form as AForm, FormItem as AFormItem } from '@arco-design/web-vue';
 const form = reactive({
   size: 'medium',
   layout: 'horizontal',
@@ -116,44 +117,44 @@ const sizeOptions = ['mini', 'small', 'medium', 'large'];
 
 ```vue
 <template>
-  <yc-form
+  <a-form
     :model="form"
     auto-label-width>
-    <yc-form-item label="size">
+    <a-form-item label="size">
       <yc-radio-group
         v-model="form.size"
         type="button"
         :options="sizeOptions" />
-    </yc-form-item>
+    </a-form-item>
 
-    <yc-form-item label="layout">
+    <a-form-item label="layout">
       <yc-radio-group
         v-model="form.layout"
         type="button"
         :options="layoutOptions" />
-    </yc-form-item>
+    </a-form-item>
 
-    <yc-form-item label="table-layout">
+    <a-form-item label="table-layout">
       <yc-radio-group
         v-model="form.tableLayout"
         type="button"
         :options="['auto', 'fixed']" />
-    </yc-form-item>
+    </a-form-item>
 
-    <yc-form-item label="column">
+    <a-form-item label="column">
       <yc-radio-group
         v-model="form.column"
         type="button"
         :options="columnOptions" />
-    </yc-form-item>
+    </a-form-item>
 
-    <yc-form-item label="firstSpan">
+    <a-form-item label="firstSpan">
       <yc-radio-group
         v-model="form.firstSpan"
         type="button"
         :options="firstSpanOptions" />
-    </yc-form-item>
-  </yc-form>
+    </a-form-item>
+  </a-form>
   <div style="margin-top: 20px">
     <yc-descriptions
       title="Layout Example"

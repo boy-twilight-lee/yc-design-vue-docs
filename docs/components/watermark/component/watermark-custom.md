@@ -3,24 +3,24 @@
 通过自定义参数以实现更多的水印效果。
 
 <div class="cell-demo vp-raw">
-  <yc-form
+  <a-form
     size="small"
     :model="form"
     auto-label-width
     style="width:100%">
     <yc-row :gutter="16">
       <yc-col :span="24">
-        <yc-form-item
+        <a-form-item
           field="rotate"
           label="rotate">
           <yc-slider
             v-model="form.rotate"
             :min="-180"
             :max="180" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="gap">
+        <a-form-item label="gap">
           <yc-input-group>
             <yc-input-number
               v-model="form.gap[0]"
@@ -31,10 +31,10 @@
               placeholder="gap[y]"
               :min="0" />
           </yc-input-group>
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="offset">
+        <a-form-item label="offset">
           <yc-input-group>
             <yc-input-number
               v-model="form.offset[0]"
@@ -43,34 +43,34 @@
               v-model="form.offset[1]"
               placeholder="offsetTop" />
           </yc-input-group>
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="fontSize">
+        <a-form-item label="fontSize">
           <yc-input-number
             v-model="form.font.fontSize"
             mode="button" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="zIndex">
+        <a-form-item label="zIndex">
           <yc-input-number
             v-model="form.zIndex"
             mode="button" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="6">
-        <yc-form-item label="repeat">
+        <a-form-item label="repeat">
           <yc-switch v-model="form.repeat" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="6">
-        <yc-form-item label="staggered">
+        <a-form-item label="staggered">
           <yc-switch v-model="form.staggered" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
     </yc-row>
-  </yc-form>
+  </a-form>
   <yc-watermark
     content="yc-design"
     v-bind="form">
@@ -101,6 +101,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { Form as AForm, FormItem as AFormItem } from '@arco-design/web-vue';
 const form = reactive({
   rotate: 0,
   gap: [50, 50],
@@ -121,23 +122,23 @@ const form = reactive({
 
 ```vue
 <template>
-  <yc-form
+  <a-form
     size="small"
     :model="form"
     auto-label-width>
     <yc-row :gutter="16">
       <yc-col :span="24">
-        <yc-form-item
+        <a-form-item
           field="rotate"
           label="rotate">
           <yc-slider
             v-model="form.rotate"
             :min="-180"
             :max="180" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="gap">
+        <a-form-item label="gap">
           <yc-input-group>
             <yc-input-number
               v-model="form.gap[0]"
@@ -148,10 +149,10 @@ const form = reactive({
               placeholder="gap[y]"
               :min="0" />
           </yc-input-group>
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="offset">
+        <a-form-item label="offset">
           <yc-input-group>
             <yc-input-number
               v-model="form.offset[0]"
@@ -160,34 +161,34 @@ const form = reactive({
               v-model="form.offset[1]"
               placeholder="offsetTop" />
           </yc-input-group>
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="fontSize">
+        <a-form-item label="fontSize">
           <yc-input-number
             v-model="form.font.fontSize"
             mode="button" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="12">
-        <yc-form-item label="zIndex">
+        <a-form-item label="zIndex">
           <yc-input-number
             v-model="form.zIndex"
             mode="button" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="6">
-        <yc-form-item label="repeat">
+        <a-form-item label="repeat">
           <yc-switch v-model="form.repeat" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
       <yc-col :span="6">
-        <yc-form-item label="staggered">
+        <a-form-item label="staggered">
           <yc-switch v-model="form.staggered" />
-        </yc-form-item>
+        </a-form-item>
       </yc-col>
     </yc-row>
-  </yc-form>
+  </a-form>
   <yc-watermark
     content="yc-design"
     v-bind="form">

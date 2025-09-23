@@ -1,6 +1,6 @@
-### 禁用状态
+### 复选框组
 
-禁用复选框。
+通过 `<a-checkbox-group>` 组件展示复选框组。设置 `direction="vertical"` 可以展示竖向的复选框组。
 
 <div class="cell-demo vp-raw">
   <yc-space

@@ -1,4 +1,4 @@
-### 基本用法
+### 消息类型
 
 通知提醒框的消息类型。
 
@@ -29,8 +29,7 @@
     </yc-button>
     <yc-button
       type="secondary"
-      @click="
-          $notification.info({
+      @click="$notification.info({
             content: 'This is an error message!',
             showIcon: false,
           })

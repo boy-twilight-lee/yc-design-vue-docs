@@ -3,11 +3,11 @@
 可以通过 `directory` 开启文件夹上传
 
 <div class="cell-demo vp-raw">
-  <space
+  <yc-space
     direction="vertical"
     :style="{ width: '100%' }">
     <yc-upload directory />
-  </space>
+  </yc-space>
 </div>
 
 <details>
@@ -19,11 +19,11 @@
 
 ```vue
 <template>
-  <space
+  <yc-space
     direction="vertical"
     :style="{ width: '100%' }">
     <yc-upload directory />
-  </space>
+  </yc-space>
 </template>
 ```
 

@@ -1,4 +1,4 @@
-### 基本用法
+### 受控的高宽
 
 `ResizeBox` 的 `width` 和 `height` 都支持 `v-model`。
 

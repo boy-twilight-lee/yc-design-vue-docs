@@ -1,6 +1,6 @@
-### 隐藏连接线
+### 竖直步骤条
 
-通过设置 `line-less` 可以使用无连接线模式。
+竖直方向的步骤条。
 
 <div class="cell-demo vp-raw">
   <div class="frame-bg">

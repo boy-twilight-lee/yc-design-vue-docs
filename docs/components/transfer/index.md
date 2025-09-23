@@ -17,7 +17,7 @@ import TransferApi from "./component/transfer-api.md"
 
 <transfer-basic-use />
 <transfer-search />
-<transfer-on-way />
+<transfer-one-way />
 <transfer-item />
 <transfer-simple />
 <transfer-title />

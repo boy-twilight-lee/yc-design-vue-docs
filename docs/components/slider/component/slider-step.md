@@ -6,23 +6,23 @@
   <yc-space
     direction="vertical"
     size="large">
-    <yc-form
+    <a-form
       :model="data"
       layout="inline"
       style="width:100%">
-      <yc-form-item
+      <a-form-item
         label="Step"
         field="step">
         <yc-input-number
           :style="{ width: '100px' }"
           v-model="data.step" />
-      </yc-form-item>
-      <yc-form-item
+      </a-form-item>
+      <a-form-item
         label="Show steps"
         field="showTicks">
         <yc-switch v-model="data.showTicks" />
-      </yc-form-item>
-    </yc-form>
+      </a-form-item>
+    </a-form>
     <yc-slider
       :default-value="20"
       :style="{ width: '300px' }"
@@ -33,6 +33,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { Form as AForm, FormItem as AFormItem } from '@arco-design/web-vue';
 const data = reactive({
   step: 5,
   showTicks: true,
@@ -51,22 +52,22 @@ const data = reactive({
   <yc-space
     direction="vertical"
     size="large">
-    <yc-form
+    <a-form
       :model="data"
       layout="inline">
-      <yc-form-item
+      <a-form-item
         label="Step"
         field="step">
         <yc-input-number
           :style="{ width: '100px' }"
           v-model="data.step" />
-      </yc-form-item>
-      <yc-form-item
+      </a-form-item>
+      <a-form-item
         label="Show steps"
         field="showTicks">
         <yc-switch v-model="data.showTicks" />
-      </yc-form-item>
-    </yc-form>
+      </a-form-item>
+    </a-form>
     <yc-slider
       :default-value="20"
       :style="{ width: '300px' }"

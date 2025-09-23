@@ -21,7 +21,6 @@ import ModalMethodApi from "./component/modal-method-api.md"
 <modal-basic-use />
 <modal-close />
 <modal-fn />
-<modal-icon />
 <modal-type />
 <modal-width />
 <modal-text />

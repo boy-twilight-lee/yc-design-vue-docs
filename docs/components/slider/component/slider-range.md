@@ -3,7 +3,7 @@
 通过设置 `range` 可开启范围选择，此时 `modelValue` 为数组。
 
 <div class="cell-demo vp-raw">
-  <a-slider
+  <yc-slider
     v-model="value"
     :style="{ width: '300px' }"
     range />
@@ -23,7 +23,7 @@ const value = ref([5, 10]);
 
 ```vue
 <template>
-  <a-slider
+  <yc-slider
     v-model="value"
     :style="{ width: '300px' }"
     range />

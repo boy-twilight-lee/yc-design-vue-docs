@@ -16,10 +16,8 @@ import InputApi from "./component/input-api.md"
 </script>
 
 <input-basic-use />
-<input-button-mode />
 <input-size />
 <input-step />
 <input-prefix />
-<input-word-count />
 <input-formatter />
 <input-api />

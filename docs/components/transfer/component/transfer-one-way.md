@@ -1,6 +1,6 @@
 ### 单向
 
-通过设置 one-way ，使用单向模式的穿梭框。
+通过设置 `one-way`，使用单向模式的穿梭框。
 
 <div class="cell-demo vp-raw">
   <yc-transfer

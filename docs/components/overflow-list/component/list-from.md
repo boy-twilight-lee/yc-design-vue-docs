@@ -3,21 +3,21 @@
 通过 `from` 属性可以设置折叠的方向。
 
 <div class="cell-demo vp-raw">
-  <yc-form auto-label-width style="width:100%"> 
-    <yc-form-item label="Tag Number">
+  <a-form :model="{}" auto-label-width style="width:100%"> 
+    <a-form-item label="Tag Number">
       <yc-input-number
         v-model="number"
         :min="0"
         :max="20"
         style="width: 200px" />
-    </yc-form-item>
-    <yc-form-item label="List Width">
+    </a-form-item>
+    <a-form-item label="List Width">
       <yc-slider
         v-model="width"
         :min="0"
         :max="800" />
-    </yc-form-item>
-  </yc-form>
+    </a-form-item>
+  </a-form>
   <div :style="{ width: `${width}px`, marginTop: '20px' }">
     <yc-overflow-list from="start">
       <div>DIV Element</div>
@@ -32,6 +32,7 @@
 
 <script setup>
 import { computed, ref } from 'vue';
+import { Form as AForm, FormItem as AFormItem } from '@arco-design/web-vue';
 const width = ref(500);
 const number = ref(10);
 const tags = computed(() =>
@@ -48,21 +49,21 @@ const tags = computed(() =>
 
 ```vue
 <template>
-  <yc-form auto-label-width>
-    <yc-form-item label="Tag Number">
+  <a-form auto-label-width>
+    <a-form-item label="Tag Number">
       <yc-input-number
         v-model="number"
         :min="0"
         :max="20"
         style="width: 200px" />
-    </yc-form-item>
-    <yc-form-item label="List Width">
+    </a-form-item>
+    <a-form-item label="List Width">
       <yc-slider
         v-model="width"
         :min="0"
         :max="800" />
-    </yc-form-item>
-  </yc-form>
+    </a-form-item>
+  </a-form>
   <div :style="{ width: `${width}px`, marginTop: '20px' }">
     <yc-overflow-list from="start">
       <div>DIV Element</div>

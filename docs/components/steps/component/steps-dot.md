@@ -1,6 +1,6 @@
-### 箭头步骤条
+### 点状步骤条
 
-通过设置 `type="arrow"`，可以使用箭头类型的步骤条。注意：仅支持水平步骤条。
+通过设置 `type="dot"` ， 可以使用点状的步骤条。此模式没有 `small` 尺寸。
 
 <div class="cell-demo vp-raw">
   <yc-steps type="dot">

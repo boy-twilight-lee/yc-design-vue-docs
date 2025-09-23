@@ -9,13 +9,13 @@
     title="Modal Form"
     @cancel="handleCancel"
     @before-ok="handleBeforeOk">
-    <yc-form :model="form">
-      <yc-form-item
+    <a-form :model="form">
+      <a-form-item
         field="name"
         label="Name">
         <yc-input v-model="form.name" />
-      </yc-form-item>
-      <yc-form-item
+      </a-form-item>
+      <a-form-item
         field="post"
         label="Post">
         <yc-select v-model="form.post">
@@ -24,13 +24,14 @@
           <yc-option value="post3">Post3</yc-option>
           <yc-option value="post4">Post4</yc-option>
         </yc-select>
-      </yc-form-item>
-    </yc-form>
+      </a-form-item>
+    </a-form>
   </yc-modal>
 </div>
 
 <script setup>
 import { reactive, ref } from 'vue';
+import { Form as AForm, FormItem as AFormItem } from '@arco-design/web-vue';
 const visible = ref(false);
 const form = reactive({
   name: '',
@@ -67,13 +68,13 @@ const handleCancel = () => {
     title="Modal Form"
     @cancel="handleCancel"
     @before-ok="handleBeforeOk">
-    <yc-form :model="form">
-      <yc-form-item
+    <a-form :model="form">
+      <a-form-item
         field="name"
         label="Name">
         <yc-input v-model="form.name" />
-      </yc-form-item>
-      <yc-form-item
+      </a-form-item>
+      <a-form-item
         field="post"
         label="Post">
         <yc-select v-model="form.post">
@@ -82,8 +83,8 @@ const handleCancel = () => {
           <yc-option value="post3">Post3</yc-option>
           <yc-option value="post4">Post4</yc-option>
         </yc-select>
-      </yc-form-item>
-    </yc-form>
+      </a-form-item>
+    </a-form>
   </yc-modal>
 </template>
 

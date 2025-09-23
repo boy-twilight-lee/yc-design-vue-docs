@@ -21,8 +21,8 @@ import SliderApi from "./component/slider-api.md"
 <slider-disabled />
 <slider-step />
 <slider-mark />
-<slider-clear />
+<slider-range />
 <slider-input />
-<slider-len />
+<slider-dir />
 <slider-tooltip />
 <slider-api />
