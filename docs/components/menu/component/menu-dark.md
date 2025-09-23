@@ -2,7 +2,7 @@
 
 通过 `theme` 指定主题，分为 `light` 和 `dark` 两种。
 
-<div class="cell-demo">
+<div class="cell-demo vp-raw">
   <div class="menu-demo">
     <yc-menu
       mode="horizontal"

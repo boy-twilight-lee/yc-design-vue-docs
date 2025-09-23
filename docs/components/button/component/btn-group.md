@@ -2,7 +2,7 @@
 
 通过 `<yc-button-group>` 属性 组件使按钮以组合方式出现。可用在同级多项操作中。
 
-<div class='cell-demo'>
+<div class='cell-demo vp-raw'>
   <yc-space direction="vertical">
     <yc-button-group>
       <yc-button>Publish</yc-button>

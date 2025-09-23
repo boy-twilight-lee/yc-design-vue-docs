@@ -2,7 +2,7 @@
 
 通过 `icon` 设置带图标的链接，设置为 `true` 时候显示默认图标。
 
- <div class='cell-demo'>
+ <div class='cell-demo vp-raw'>
     <yc-space>
       <yc-link href="link" icon>Link</yc-link>
       <yc-link href="link" disabled icon>Link</yc-link>

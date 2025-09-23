@@ -2,7 +2,7 @@
 
 通过设置 `loading` 可以让按钮处于加载中状态。处于加载中状态的按钮不会触发事件。
 
-<div class='cell-demo'>
+<div class='cell-demo vp-raw'>
   <yc-space>
     <yc-button type="primary" loading>Primary</yc-button>
     <yc-button loading>Default</yc-button>

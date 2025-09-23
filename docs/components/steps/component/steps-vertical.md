@@ -59,6 +59,7 @@ const onNext = () => {
 }
 
 .frame-aside {
+  min-width:200px;
   padding: 24px;
   height: 272px;
   border-right: 1px solid var(--color-border);

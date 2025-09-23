@@ -2,7 +2,7 @@
 
 通过设置 `loading` 可以让链接处于加载中状态。处于加载中状态的链接不会触发点击事件。
 
- <div class='cell-demo'>
+ <div class='cell-demo vp-raw'>
   <yc-space>
     <yc-link loading>Link</yc-link>
     <yc-link :loading="loading1" @click="handleClick1">Link</yc-link>

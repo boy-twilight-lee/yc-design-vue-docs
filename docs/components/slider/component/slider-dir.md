@@ -6,11 +6,12 @@
   <yc-space align="start">
     <yc-slider
       :default-value="50"
+      :style="{ height: '300px' }"
       direction="vertical" />
     <yc-slider
       direction="vertical"
       :default-value="5"
-      :style="{ width: '300px' }"
+      :style="{ height: '300px' }"
       :max="15"
       :marks="{
         5: '5km',
