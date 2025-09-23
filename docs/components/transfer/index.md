@@ -10,7 +10,6 @@ import TransferSearch from "./component/transfer-search.md"
 import TransferOneWay from "./component/transfer-one-way.md"
 import TransferItem from "./component/transfer-item.md"
 import TransferSimple from "./component/transfer-simple.md"
-import TransferTree from "./component/transfer-tree.md"
 import TransferTitle from "./component/transfer-title.md"
 import TransferApi from "./component/transfer-api.md"
 
@@ -21,6 +20,5 @@ import TransferApi from "./component/transfer-api.md"
 <transfer-on-way />
 <transfer-item />
 <transfer-simple />
-<transfer-tree />
 <transfer-title />
 <transfer-api />
