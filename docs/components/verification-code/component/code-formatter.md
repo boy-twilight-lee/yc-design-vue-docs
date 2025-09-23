@@ -10,13 +10,14 @@
       :formatter="
         (inputValue) => (/^\d*$/.test(inputValue) ? inputValue : false)
       " />
-    <yc-verification-code
+     <yc-verification-code
       defaultValue="abcdef"
       style="width: 300px"
       :formatter="
         (inputValue) =>
-          /^[yc-zA-Z]*$/.test(inputValue) ? inputValue.toUpperCase() : ''
-      " />
+          /^[a-zA-Z]*$/.test(inputValue) ? inputValue.toUpperCase() : ''
+      "
+    />
   </yc-space>
 </div>
 
