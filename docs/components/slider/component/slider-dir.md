@@ -3,21 +3,19 @@
 设置 `direction="vertical"` ，将会显示竖直的滑动条。
 
 <div class="cell-demo vp-raw">
-  <yc-space align="start">
+    <div style="display:flex;gap:20px;height:300px">
     <yc-slider
       :default-value="50"
-      :style="{ height: '300px' }"
       direction="vertical" />
     <yc-slider
       direction="vertical"
       :default-value="5"
-      :style="{ height: '300px' }"
       :max="15"
       :marks="{
         5: '5km',
         10: '10km',
       }" />
-  </yc-space>
+    </div>
 </div>
 
 <details>
