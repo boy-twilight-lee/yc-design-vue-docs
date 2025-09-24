@@ -44,7 +44,7 @@
   height: 14px;
   width: 14px;
   display: inline-flex;
-  align-i                                                                                                             tems: center;
+  align-items: center;
   justify-content: center;
   border-radius: 2px;
   border: 1px solid var(--color-border-2);
