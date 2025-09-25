@@ -11,9 +11,12 @@ import InputSize from "./component/input-size.md"
 import InputPrefix from "./component/input-prefix.md"
 import InputAppend from "./component/input-append.md"
 import InputWordCount from "./component/input-word-count.md"
+import InputGroup from "./component/input-group.md"
+import InputSearch from "./component/input-search.md"
+import InputSearchCustom from "./component/input-search-custom.md"
+import InputSearchLoading from "./component/input-search-loading.md"
 import InputPassword from "./component/input-password.md"
 import InputApi from "./component/input-api.md"
-
 </script>
 
 <input-basic-use />
@@ -22,5 +25,9 @@ import InputApi from "./component/input-api.md"
 <input-prefix />
 <input-append />
 <input-word-count />
+<input-group />
+<input-search />
+<input-search-custom />
+<input-search-loading />
 <input-password />
 <input-api />

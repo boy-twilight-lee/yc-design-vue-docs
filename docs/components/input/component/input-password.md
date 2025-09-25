@@ -7,11 +7,11 @@
     direction="vertical"
     size="large">
     <yc-switch v-model="visibility" />
-    <yc-input
+    <yc-input-password
       v-model:visibility="visibility"
       placeholder="Please enter something"
       :style="{ width: '320px' }"
-      is-password
+      :defaultVisibility="false"
       allow-clear />
   </yc-space>
 </div>
@@ -34,18 +34,18 @@ const visibility = ref(true);
     direction="vertical"
     size="large">
     <yc-switch v-model="visibility" />
-    <yc-input
+    <yc-input-password
       v-model:visibility="visibility"
       placeholder="Please enter something"
       :style="{ width: '320px' }"
-      is-password
+      :defaultVisibility="false"
       allow-clear />
   </yc-space>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-const visibility = ref(true);
+const visibility = ref(false);
 </script>
 ```
 
