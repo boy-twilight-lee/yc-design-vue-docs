@@ -17,6 +17,7 @@ import CascaderPathMode from "./component/cascader-path-mode.md"
 import CascaderFallback from "./component/cascader-fallback.md"
 import CascaderField from "./component/cascader-field.md"
 import CascaderExpand from "./component/cascader-expand-menu.md"
+import CascaderPanel from "./component/cascader-panel.md"
 import CascaderApi from "./component/cascader-api.md"
 </script>
 
@@ -32,4 +33,5 @@ import CascaderApi from "./component/cascader-api.md"
 <cascader-fallback />
 <cascader-field />
 <cascader-expand />
+<cascader-panel />
 <cascader-api />

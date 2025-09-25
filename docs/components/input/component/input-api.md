@@ -16,6 +16,22 @@
 
 <field-table :data="inputSlots"  type="slots"/>
 
+### input-password Props
+
+<field-table :data="inputPasswordProps"/>
+
+### input-password Events
+
+<field-table :data="inputPasswordEvents" type="emits" />
+
+### input-search Props
+
+<field-table :data="inputSearchProps"/>
+
+### input-search Events
+
+<field-table :data="inputSearchEvents" type="emits" />
+
 ### Type
 
 ```typescript
@@ -222,6 +238,91 @@ const inputSlots = ref([
     name: 'prefix',
     desc: '前缀元素',
     type: '-',
+    value: '-',
+  },
+]);
+
+const inputPasswordProps = ref([
+  {
+    name: 'visibility (v-model)',
+    desc: '是否可见，受控属性',
+    type: 'boolean',
+    value: '-',
+  },
+  {
+    name: 'default-visibility',
+    desc: '默认是否可见，非受控',
+    type: 'boolean',
+    value: 'true',
+  },
+  {
+    name: 'invisible-button',
+    desc: '是否显示可见按钮',
+    type: 'boolean',
+    value: 'true',
+  },
+]);
+
+const inputPasswordEvents = ref([
+  {
+    name: 'visibility-change',
+    desc: 'visibility 改变时触发',
+    type: {
+      visible: 'boolean',
+    },
+    value: '-',
+  },
+]);
+
+const inputSearchProps = ref([
+  {
+    name: 'search-button',
+    desc: '是否为后置按钮模式',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'loading',
+    desc: '是否为加载中状态',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'disabled',
+    desc: '是否禁用',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'size',
+    desc: '输入框大小',
+    type: 'Size',
+    value: "'medium'",
+    href: '/guide/types',
+  },
+  {
+    name: 'button-text',
+    desc: '搜索按钮的文字，使用后会替换原本的图标',
+    type: 'string',
+    value: '-',
+  },
+  {
+    name: 'button-props',
+    desc: '搜索按钮的属性',
+    type: 'ButtonProps',
+    value: '-',
+    href: '/components/button',
+  },
+]);
+
+const inputSearchEvents = ref([
+  {
+    name: 'search',
+    desc: '单击搜索按钮时触发',
+    type: {
+      value: 'string',
+      ev: 'MouseEvent',
+    },
     value: '-',
   },
 ]);

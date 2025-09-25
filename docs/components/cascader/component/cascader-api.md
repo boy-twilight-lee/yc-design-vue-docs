@@ -12,6 +12,18 @@
 
 <field-table :data="cascaderSlots" type="slots"/>
 
+### cascader-panel Props
+
+<field-table :data="cascaderPanelProps"/>
+
+### cascader-panel Events
+
+<field-table :data="cascaderPanelEvents" type="emits" />
+
+### cascader-panel Slots
+
+<field-table :data="cascaderPanelSlots" type="slots"/>
+
 ### CascaderOption
 
 <field-table :data="cascaderOption"/>
@@ -339,13 +351,13 @@ const cascaderPanelProps = ref([
   {
     name: 'model-value (v-model)',
     desc: '绑定值',
-    type: 'string| number| Record<string, any>| ( | string | number | Record<string, any> | (string | number | Record<string, any>)[] )[]| undefined',
+    type: 'CascaderValue',
     value: '-',
   },
   {
     name: 'default-value',
     desc: '默认值（非受控状态）',
-    type: 'string| number| Record<string, any>| ( | string | number | Record<string, any> | (string | number | Record<string, any>)[] )[]| undefined',
+    type: 'CascaderValue',
     value: "'' | undefined | []",
   },
   {
@@ -360,29 +372,29 @@ const cascaderPanelProps = ref([
     type: 'string',
     value: "'click'",
   },
-  {
-    name: 'check-strictly',
-    desc: '是否开启严格选择模式',
-    type: 'boolean',
-    value: 'false',
-  },
+  // {
+  //   name: 'check-strictly',
+  //   desc: '是否开启严格选择模式',
+  //   type: 'boolean',
+  //   value: 'false',
+  // },
   {
     name: 'load-more',
     desc: '数据懒加载函数，传入时开启懒加载功能',
-    type: '( option: CascaderOption, done: (children?: CascaderOption[]) => void) => void',
+    type: 'LoadMore',
     value: '-',
   },
   {
     name: 'field-names',
     desc: '自定义 CascaderOption 中的字段',
-    type: 'CascaderFieldNames',
+    type: 'Record<string,string>',
     value: '-',
   },
   {
     name: 'value-key',
     desc: '用于确定选项键值的属性名',
     type: 'string',
-    value: "'value'",
+    value: "'value'", 
   },
   {
     name: 'expand-child',
@@ -396,7 +408,9 @@ const cascaderPanelEvents = ref([
   {
     name: 'change',
     desc: '选中值改变时触发',
-    type: 'value: string | number | (string | number | (string | number)[])[] | undefined',
+    type: {
+      value:'CascaderValue',
+    },
     value: '-',
   },
 ]);
