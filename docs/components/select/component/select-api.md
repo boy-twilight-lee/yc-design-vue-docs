@@ -583,6 +583,12 @@ const virtualListPropsProps = ref([
     type: 'number',
     value: '-',
   },
+  {
+    name: 'buffer',
+    desc: '视口边界外提前挂载的元素数量。',
+    type: 'number',
+    value: '10',
+  },
 ]);
 
 </script>
