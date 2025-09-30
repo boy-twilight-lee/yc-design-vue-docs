@@ -116,6 +116,10 @@ export default defineConfig({
               text: '颜色选择器 ColorPicker',
               link: '/components/color-picker/index.md',
             },
+            {
+              text: '日期选择器 DatePicker',
+              link: '/components/date-picker/index.md',
+            },
             { text: '输入框 Input', link: '/components/input/index.md' },
             {
               text: '数字输入框 InputNumber',
