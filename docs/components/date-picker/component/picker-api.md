@@ -42,7 +42,7 @@
 
 ### 字符串解析格式
 
-<field-table :data="stringParsingFormat"/>
+<field-table :data="stringParsingFormat" type="format"/>
 
 <script setup>
 import { ref } from 'vue';
@@ -604,35 +604,35 @@ const shortcutType = ref([
 ]);
 
 const stringParsingFormat = ref([
-  { name: 'YY', value: '21', desc: '两位数的年份' },
-  { name: 'YYYY', value: '2021', desc: '四位数年份' },
-  { name: 'M', value: '1-12', desc: '月份，从 1 开始' },
-  { name: 'MM', value: '01-12', desc: '月份，两位数' },
-  { name: 'MMM', value: 'Jan-Dec', desc: '缩写的月份名称' },
-  { name: 'MMMM', value: 'January-December', desc: '完整的月份名称' },
-  { name: 'D', value: '1-31', desc: '月份里的一天' },
-  { name: 'DD', value: '01-31', desc: '月份里的一天，两位数' },
-  { name: 'd', value: '0-6', desc: '一周中的一天，星期天是 0' },
-  { name: 'dd', value: 'Su-Sa', desc: '最简写的一周中一天的名称' },
-  { name: 'ddd', value: 'Sun-Sat', desc: '简写的一周中一天的名称' },
-  { name: 'dddd', value: 'Sunday-Saturday', desc: '一周中一天的名称' },
-  { name: 'H', value: '0-23', desc: '小时' },
-  { name: 'HH', value: '00-23', desc: '小时，两位数' },
-  { name: 'h', value: '1-12', desc: '小时, 12 小时制' },
-  { name: 'hh', value: '01-12', desc: '小时, 12 小时制, 两位数' },
-  { name: 'm', value: '0-59', desc: '分钟' },
-  { name: 'mm', value: '00-59', desc: '分钟，两位数' },
-  { name: 's', value: '0-59', desc: '秒' },
-  { name: 'ss', value: '00-59', desc: '秒，两位数' },
-  { name: 'S', value: '0-9', desc: '数百毫秒，一位数' },
-  { name: 'SS', value: '00-99', desc: '几十毫秒，两位数' },
-  { name: 'SSS', value: '000-999', desc: '毫秒，三位数字' },
-  { name: 'Z', value: '-5:00', desc: 'UTC 的偏移量' },
-  { name: 'ZZ', value: '-0500', desc: 'UTC 的偏移量，数字前面加上 0' },
-  { name: 'A', value: 'AM PM', desc: '-' },
-  { name: 'a', value: 'am pm', desc: '-' },
-  { name: 'Do', value: '1st... 3st', desc: '带序号的月份中的某天' },
-  { name: 'X', value: '1410715640.579', desc: 'Unix 时间戳' },
-  { name: 'x', value: '1410715640579', desc: 'Unix 毫秒时间戳' },
+  { name: 'YY', type: '21', desc: '两位数的年份' },
+  { name: 'YYYY', type: '2021', desc: '四位数年份' },
+  { name: 'M', type: '1-12', desc: '月份，从 1 开始' },
+  { name: 'MM', type: '01-12', desc: '月份，两位数' },
+  { name: 'MMM', type: 'Jan-Dec', desc: '缩写的月份名称' },
+  { name: 'MMMM', type: 'January-December', desc: '完整的月份名称' },
+  { name: 'D', type: '1-31', desc: '月份里的一天' },
+  { name: 'DD', type: '01-31', desc: '月份里的一天，两位数' },
+  { name: 'd', type: '0-6', desc: '一周中的一天，星期天是 0' },
+  { name: 'dd', type: 'Su-Sa', desc: '最简写的一周中一天的名称' },
+  { name: 'ddd', type: 'Sun-Sat', desc: '简写的一周中一天的名称' },
+  { name: 'dddd', type: 'Sunday-Saturday', desc: '一周中一天的名称' },
+  { name: 'H', type: '0-23', desc: '小时' },
+  { name: 'HH', type: '00-23', desc: '小时，两位数' },
+  { name: 'h', type: '1-12', desc: '小时, 12 小时制' },
+  { name: 'hh', type: '01-12', desc: '小时, 12 小时制, 两位数' },
+  { name: 'm', type: '0-59', desc: '分钟' },
+  { name: 'mm', type: '00-59', desc: '分钟，两位数' },
+  { name: 's', type: '0-59', desc: '秒' },
+  { name: 'ss', type: '00-59', desc: '秒，两位数' },
+  { name: 'S', type: '0-9', desc: '数百毫秒，一位数' },
+  { name: 'SS', type: '00-99', desc: '几十毫秒，两位数' },
+  { name: 'SSS', type: '000-999', desc: '毫秒，三位数字' },
+  { name: 'Z', type: '-5:00', desc: 'UTC 的偏移量' },
+  { name: 'ZZ', type: '-0500', desc: 'UTC 的偏移量，数字前面加上 0' },
+  { name: 'A', type: 'AM PM', desc: '-' },
+  { name: 'a', type: 'am pm', desc: '-' },
+  { name: 'Do', type: '1st... 3st', desc: '带序号的月份中的某天' },
+  { name: 'X', type: '1410715640.579', desc: 'Unix 时间戳' },
+  { name: 'x', type: '1410715640579', desc: 'Unix 毫秒时间戳' },
 ]);
 </script>
