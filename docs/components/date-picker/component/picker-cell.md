@@ -5,9 +5,9 @@
 <div class="cell-demo vp-raw">
   <yc-date-picker style="width: 200px;" >
     <template #cell="{ date }">
-      <div class="arco-picker-date">
+      <div class="yc-picker-date">
         <div
-          class="arco-picker-date-value"
+          class="yc-picker-date-value"
           :style="getCellStyle(date)">
           {{ date.getDate() }}
         </div>
@@ -37,9 +37,9 @@ function getCellStyle(date) {
 <template>
   <yc-date-picker style="width: 200px;">
     <template #cell="{ date }">
-      <div class="arco-picker-date">
+      <div class="yc-picker-date">
         <div
-          class="arco-picker-date-value"
+          class="yc-picker-date-value"
           :style="getCellStyle(date)">
           {{ date.getDate() }}
         </div>

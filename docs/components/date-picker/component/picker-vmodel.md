@@ -1,6 +1,6 @@
 ### 双向绑定
 
-通过 v-model 实现值的双向绑定
+通过 `v-model` 实现值的双向绑定
 
 <div class="cell-demo vp-raw">
   <yc-space>
