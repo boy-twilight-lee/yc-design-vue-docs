@@ -44,6 +44,12 @@
 
 <field-table :data="stringParsingFormat" type="format"/>
 
+### FAQ
+
+<span style="font-size:16px;display:block;">关于 `locale` 字段</span>
+
+可以使用组件库提供的语言包配置 `locale` 字段。
+
 <script setup>
 import { ref } from 'vue';
 
