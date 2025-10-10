@@ -3,21 +3,24 @@
 使用 `showTime` 可以使用带时间的日期选择。
 
 <div class="cell-demo vp-raw">
-  <yc-date-picker
-    style="width: 220px; margin: 0 24px 2 4px 0;"
-    show-time
-    :time-picker-props="{ defaultValue: '09:09:06' }"
-    format="YYYY-MM-DD HH:mm:ss"
-    @change="onChange"
-    @select="onSelect"
-    @ok="onOk" />
-  <yc-date-picker
-    style="width: 220px; margin: 0 24px 24px 0;"
-    show-time
-    format="YYYY-MM-DD hh:mm"
-    @change="onChange"
-    @select="onSelect"
-    @ok="onOk" />
+  <yc-space>
+    <yc-date-picker
+      style="width: 220px; margin: 0 24px 24px 0;"
+      show-time
+      :time-picker-props="{ defaultValue: '09:09:06' }"
+      format="YYYY-MM-DD HH:mm:ss"
+      @change="onChange"
+      @select="onSelect"
+      @ok="onOk" />
+    <yc-date-picker
+      style="width: 220px; margin: 0 24px 24px 0;"
+      show-time
+      format="YYYY-MM-DD hh:mm"
+      value-format="YYYY-MM-DD hh:mm"
+      @change="onChange"
+      @select="onSelect"
+      @ok="onOk" />
+  </yc-space>
 </div>
 
 <script setup>
@@ -41,21 +44,23 @@ function onOk(dateString, date) {
 
 ```vue
 <template>
-  <yc-date-picker
-    style="width: 220px; margin: 0 24px 24px 0;"
-    show-time
-    :time-picker-props="{ defaultValue: '09:09:06' }"
-    format="YYYY-MM-DD HH:mm:ss"
-    @change="onChange"
-    @select="onSelect"
-    @ok="onOk" />
-  <yc-date-picker
-    style="width: 220px; margin: 0 24px 24px 0;"
-    show-time
-    format="YYYY-MM-DD hh:mm"
-    @change="onChange"
-    @select="onSelect"
-    @ok="onOk" />
+  <yc-space>
+    <yc-date-picker
+      style="width: 220px; margin: 0 24px 24px 0;"
+      show-time
+      :time-picker-props="{ defaultValue: '09:09:06' }"
+      format="YYYY-MM-DD HH:mm:ss"
+      @change="onChange"
+      @select="onSelect"
+      @ok="onOk" />
+    <yc-date-picker
+      style="width: 220px; margin: 0 24px 24px 0;"
+      show-time
+      value-format="YYYY-MM-DD hh:mm"
+      @change="onChange"
+      @select="onSelect"
+      @ok="onOk" />
+  </yc-space>
 </template>
 
 <script setup>
