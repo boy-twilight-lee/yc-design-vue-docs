@@ -4,7 +4,7 @@
 
 <div class="cell-demo vp-raw">
   <yc-date-picker
-    style="width: 220px; margin: 0 24px 24px 0;"
+    style="width: 220px; margin: 0 24px 2 4px 0;"
     show-time
     :time-picker-props="{ defaultValue: '09:09:06' }"
     format="YYYY-MM-DD HH:mm:ss"

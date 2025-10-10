@@ -2,7 +2,7 @@
 
 日期输入器有默认值的情况。
 
-<!-- <div class="cell-demo vp-raw">
+<div class="cell-demo vp-raw">
   <yc-date-picker
     defaultValue="2019-06-03"
     @select="onSelect"
@@ -10,7 +10,6 @@
     :style="style" />
   <yc-date-picker
     defaultValue="2019-06-03"
-    :format="(value) => `custom format: ${dayjs(value).format('YYYY-MM-DD')}`"
     @select="onSelect"
     @change="onChange"
     :style="{ ...style, width: '240px' }" />
@@ -31,7 +30,7 @@
     @change="onChange"
     :style="style" />
   <yc-week-picker
-    :defaultValue="dayjs('2019-08-02')"
+    :defaultValue="'2019-08-02'"
     @select="onSelect"
     @change="onChange"
     :style="style" />
@@ -46,7 +45,7 @@ function onChange(dateString, date) {
   console.log('onChange: ', dateString, date);
 }
 const style = { width: '200px', marginBottom: '24px', marginRight: '24px' };
-</script> -->
+</script>
 
 <details>
 <summary>
