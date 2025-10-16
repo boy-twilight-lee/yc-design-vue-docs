@@ -69,7 +69,7 @@ app.mount('#app');
 
 ### 方式二：按需引入 (On-Demand Import) - 🌟 推荐
 
-**我们强烈推荐这种方式**。它只会打包您在项目中实际使用到的组件及其样式，从而可以极大地优化最终产物的体积。为了实现这一目标，我们需要借助 `unplugin-vue-components`、`unplugin-auto-import`、`yc-design-vue-resolver` 插件来自动完成。
+**我们强烈推荐这种方式**。它只会打包您在项目中实际使用到的组件及其样式，从而可以极大地优化最终产物的体积。为了实现这一目标，我们需要借助 `unplugin-vue-components`、`unplugin-auto-import` 插件来自动完成。
 
 **1. 安装相关插件**
 
@@ -77,13 +77,13 @@ app.mount('#app');
 
 ```bash
 # 使用 npm
-npm install unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
+npm install unplugin-vue-components unplugin-auto-import -D
 
 # 使用 yarn
-yarn add unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
+yarn add unplugin-vue-components unplugin-auto-import -D
 
 # 使用 pnpm
-pnpm add unplugin-vue-components unplugin-auto-import  yc-design-vue-resolver -D
+pnpm add unplugin-vue-components unplugin-auto-import -D
 ```
 
 **2. 配置插件**
@@ -96,7 +96,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite';
-import { YcDesignVueResolver } from 'yc-design-vue-resolver';
+import { YcDesignVueResolver } from 'yc-design-vue/resolver';
 
 export default defineConfig({
   plugins: [
