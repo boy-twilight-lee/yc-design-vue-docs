@@ -7,6 +7,7 @@ import CarouselBasicUse from "./component/carousel-basic-use.md"
 import CarouselAutoPlay from "./component/carousel-auto-play.md"
 import CarouselIndicator from "./component/carousel-indicator.md"
 import CarouselDirection from "./component/carousel-direction.md"
+import CarouselCard from "./component/carousel-card.md"
 import CarouselAnimation from "./component/carousel-animation.md"
 import CarouselApi from "./component/carousel-api.md"
 </script>
@@ -15,5 +16,6 @@ import CarouselApi from "./component/carousel-api.md"
 <carousel-auto-play />
 <carousel-indicator />
 <carousel-direction />
+<carousel-card />
 <carousel-animation />
 <carousel-api />
