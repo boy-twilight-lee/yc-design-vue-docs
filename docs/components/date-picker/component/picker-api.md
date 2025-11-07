@@ -175,13 +175,6 @@ const commonProps = ref([
     value: '-',
   },
   {
-    name: 'value-format',
-    desc: '值的格式，对 value defaultValue pickerValue defaultPickerValue 以及事件中的返回值生效',
-    type: "'timestamp' | 'Date' | string",
-    value: '-',
-    version: '2.16.0',
-  },
-  {
     name: 'preview-shortcut',
     desc: '是否要预览快捷选择的结果',
     type: 'boolean',
@@ -419,13 +412,6 @@ const weekPickerProps = ref([
     value: "'gggg-wo'",
   },
   {
-    name: 'value-format',
-    desc: '值的格式',
-    type: 'string',
-    value: "'YYYY-MM-DD'",
-    version: '2.16.0',
-  },
-  {
     name: 'day-start-of-week',
     desc: '每周的第一天开始于周几',
     type: '0 | 1 | 2 | 3 | 4 | 5 | 6',
@@ -483,13 +469,6 @@ const rangePickerProps = ref([
     desc: '展示日期的格式',
     type: 'string',
     value: '-',
-  },
-  {
-    name: 'value-format',
-    desc: '值的格式',
-    type: "'timestamp' | 'Date' | string",
-    value: '-',
-    version: '2.16.0',
   },
   {
     name: 'show-time',

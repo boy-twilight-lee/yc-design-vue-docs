@@ -30,10 +30,7 @@
     @change="onChange"
     :style="style" />
   <yc-week-picker
-    default-value="2019-08-02"
-    @select="onSelect"
-    @change="onChange"
-    :style="style" />
+    default-value="2019-08-02" />
 </div>
 
 <script setup>

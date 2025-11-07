@@ -16,7 +16,6 @@
       style="width: 220px; margin: 0 24px 24px 0;"
       show-time
       format="YYYY-MM-DD hh:mm"
-      value-format="YYYY-MM-DD hh:mm"
       @change="onChange"
       @select="onSelect"
       @ok="onOk" />
@@ -56,7 +55,7 @@ function onOk(dateString, date) {
     <yc-date-picker
       style="width: 220px; margin: 0 24px 24px 0;"
       show-time
-      value-format="YYYY-MM-DD hh:mm"
+      format="YYYY-MM-DD hh:mm"
       @change="onChange"
       @select="onSelect"
       @ok="onOk" />
