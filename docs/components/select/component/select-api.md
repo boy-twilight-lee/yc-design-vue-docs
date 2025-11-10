@@ -34,7 +34,7 @@
 
 ### VirtualListProps
 
-<field-table :data="virtualListPropsProps"/>
+<field-table :data="virtualListProps"/>
 
 ### Type
 
@@ -569,26 +569,162 @@ const selectOptionGroupProps = ref([
   },
 ]);
 
-const virtualListPropsProps = ref([
+const virtualListProps = ref([
   {
-    name: 'itemHeight（必填）',
-    desc: '每一项的高度',
-    type: 'number',
-    value: '-',
-
-  },
-  {
-    name: 'threshold',
-    desc: '开启虚拟滚动的元素数量阈值，当数据数量小于阈值时不会开启虚拟滚动。',
+    name: 'count (必填)',
+    desc: '列表中的项目总数。',
     type: 'number',
     value: '-',
   },
   {
-    name: 'buffer',
-    desc: '视口边界外提前挂载的元素数量。',
+    name: 'getScrollElement (必填)',
+    desc: '一个返回滚动容器元素的函数。',
+    type: '() => Element | Window | null',
+    value: '-',
+  },
+  {
+    name: 'estimateSize (必填)',
+    desc: '一个函数，用于估算每个列表项的尺寸（高度或宽度）。',
+    type: '(index: number) => number',
+    value: '-',
+  },
+  {
+    name: 'scrollToFn (必填)',
+    desc: '执行滚动操作的函数，虚拟器内部会调用它来更新滚动位置。',
+    type: '(offset: number, options: object, instance: Virtualizer) => void',
+    value: '-',
+  },
+  {
+    name: 'observeElementRect (必填)',
+    desc: '用于监测滚动容器尺寸变化的函数，通常使用 ResizeObserver 实现。',
+    type: '(instance: Virtualizer, cb: (rect: Rect) => void) => void | (() => void)',
+    value: '-',
+  },
+  {
+    name: 'observeElementOffset (必填)',
+    desc: '用于监测滚动容器偏移量变化的函数。',
+    type: '(instance: Virtualizer, cb: ObserveOffsetCallBack) => void | (() => void)',
+    value: '-',
+  },
+  {
+    name: 'overscan',
+    desc: '在可视区域之外额外渲染的列表项数量，以减少滚动白屏。',
     type: 'number',
-    value: '10',
+    value: '1',
+  },
+  {
+    name: 'measureElement',
+    desc: '一个函数，用于精确测量已渲染元素的实际尺寸，用于支持动态高度/宽度。',
+    type: '(element: Element) => number',
+    value: '-',
+  },
+  {
+    name: 'getItemKey',
+    desc: '为每个列表项返回唯一键的函数，类似于 v-for 的 :key。',
+    type: '(index: number) => Key',
+    value: '-',
+  },
+  {
+    name: 'horizontal',
+    desc: '如果为 true，则列表变为水平滚动。',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'lanes',
+    desc: '泳道或列数，用于实现多列（网格）布局。',
+    type: 'number',
+    value: '1',
+  },
+  {
+    name: 'gap',
+    desc: '每个列表项之间的间距（像素）。',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'paddingStart',
+    desc: '在列表内容的开始处添加的内边距（像素）。',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'paddingEnd',
+    desc: '在列表内容的结束处添加的内边距（像素）。',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'scrollPaddingStart',
+    desc: '滚动对齐时，视口开始处的偏移量，用于避免元素被固定导航栏等遮挡。',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'scrollPaddingEnd',
+    desc: '滚动对齐时，视口结束处的偏移量。',
+    type: 'number',
+    value: '0',
+  },
+  {
+    name: 'initialOffset',
+    desc: '列表初始化的滚动偏移量。',
+    type: 'number | (() => number)',
+    value: '0',
+  },
+  {
+    name: 'isScrollingResetDelay',
+    desc: '滚动停止后，将 isScrolling 状态重置为 false 的延迟时间（毫秒）。',
+    type: 'number',
+    value: '150',
+  },
+    {
+    name: 'useScrollendEvent',
+    desc: '是否尝试使用浏览器原生的 "scrollend" 事件来检测滚动结束。',
+    type: 'boolean',
+    value: 'true',
+  },
+  {
+    name: 'enabled',
+    desc: '是否启用虚拟滚动功能。',
+    type: 'boolean',
+    value: 'true',
+  },
+  {
+    name: 'onChange',
+    desc: '当虚拟器状态更新时（如滚动时）触发的回调函数。',
+    type: '(instance: Virtualizer, sync: boolean) => void',
+    value: '-',
+  },
+  {
+    name: 'indexAttribute',
+    desc: '设置在列表项DOM元素上标记其索引的HTML属性名称。',
+    type: 'string',
+    value: "'data-index'",
+  },
+  {
+    name: 'initialMeasurementsCache',
+    desc: '用于传入初始的测量缓存，可用于恢复滚动位置和尺寸。',
+    type: 'Array<VirtualItem>',
+    value: '-',
+  },
+  {
+    name: 'rangeExtractor',
+    desc: '自定义从可视范围中提取需要渲染的索引数组的函数，用于实现复杂布局。',
+    type: '(range: Range) => Array<number>',
+    value: '-',
+  },
+  {
+    name: 'isRtl',
+    desc: '是否为从右到左（RTL）的布局模式。',
+    type: 'boolean',
+    value: 'false',
+  },
+  {
+    name: 'debug',
+    desc: '是否在控制台输出详细的调试信息。',
+    type: 'boolean',
+    value: 'false',
   },
 ]);
-
 </script>

@@ -7,7 +7,8 @@
   <yc-list
     :maxHeight="560"
     :virtualListProps="{
-      itemHeight: 103,
+      estimateSize: 103,
+      count: ()=> list.length,
     }"
     :data="list">
     <template #item="{ item, index }">
@@ -52,7 +53,8 @@ const list = reactive(
   <yc-list
     :maxHeight="560"
     :virtualListProps="{
-      itemHeight: 103,
+      estimateSize: 103,
+      count: () => list.length,
     }"
     :data="list">
     <template #item="{ item, index }">

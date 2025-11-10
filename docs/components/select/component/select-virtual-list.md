@@ -6,12 +6,12 @@
   <yc-select
     :style="{ width: '320px' }"
     :options="options"
-    placeholder="Please select ..."
-    :virtual-list-props="{ itemHeight: 36 }" />
+    :virtual-list-props="{ estimateSize: ()=> 36, count: options.length }"
+    placeholder="Please select ..." />
 </div>
 
 <script setup>
-const options = Array(1000)
+const options = Array(10000)
   .fill(null)
   .map((_, index) => `Option ${index}`);
 </script>
@@ -28,12 +28,12 @@ const options = Array(1000)
   <yc-select
     :style="{ width: '320px' }"
     :options="options"
-    placeholder="Please select ..."
-    :virtual-list-props="{ itemHeight: 36 }" />
+    :virtual-list-props="{ estimateSize: () => 36, count: options.length }"
+    placeholder="Please select ..." />
 </template>
 
 <script setup>
-const options = Array(1000)
+const options = Array(10000)
   .fill(null)
   .map((_, index) => `Option ${index}`);
 </script>
