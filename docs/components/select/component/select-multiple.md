@@ -3,10 +3,6 @@
 通过设置 `multiple` ，可以让选择器支持多选。此外通过 `max-tag-count` 可以设置最多显示的标签个数。
 
 <div class="cell-demo vp-raw">
-  <div style="margin-bottom: 10px">
-    <yc-switch v-model="scrollbar" />
-    Virtual Scrollbar
-  </div>
   <yc-space
     direction="vertical"
     size="large">
@@ -14,8 +10,7 @@
       :default-value="['Beijing', 'Shanghai']"
       :style="{ width: '360px' }"
       placeholder="Please select ..."
-      multiple
-      :scrollbar="scrollbar">
+      multiple>
       <yc-option>Beijing</yc-option>
       <yc-option :tag-props="{ color: 'red' }">Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -29,8 +24,7 @@
       placeholder="Please select ..."
       multiple
       :max-tag-count="2"
-      allow-clear
-      :scrollbar="scrollbar">
+      allow-clear>
       <yc-option>Beijing</yc-option>
       <yc-option>Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -44,8 +38,7 @@
       :style="{ width: '360px' }"
       placeholder="Please select ..."
       multiple
-      :limit="2"
-      :scrollbar="scrollbar">
+      :limit="2">
       <yc-option>Beijing</yc-option>
       <yc-option :tag-props="{ color: 'red' }">Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -56,11 +49,6 @@
   </yc-space>
 </div>
 
-<script setup>
-import { ref } from 'vue';
-const scrollbar = ref(true);
-</script>
-
 <details>
 <summary>
  <button class="code-btn"  >
@@ -70,10 +58,6 @@ const scrollbar = ref(true);
 
 ```vue
 <template>
-  <div style="margin-bottom: 10px">
-    <yc-switch v-model="scrollbar" />
-    Virtual Scrollbar
-  </div>
   <yc-space
     direction="vertical"
     size="large">
@@ -81,8 +65,7 @@ const scrollbar = ref(true);
       :default-value="['Beijing', 'Shanghai']"
       :style="{ width: '360px' }"
       placeholder="Please select ..."
-      multiple
-      :scrollbar="scrollbar">
+      multiple>
       <yc-option>Beijing</yc-option>
       <yc-option :tag-props="{ color: 'red' }">Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -96,8 +79,7 @@ const scrollbar = ref(true);
       placeholder="Please select ..."
       multiple
       :max-tag-count="2"
-      allow-clear
-      :scrollbar="scrollbar">
+      allow-clear>
       <yc-option>Beijing</yc-option>
       <yc-option>Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -111,8 +93,7 @@ const scrollbar = ref(true);
       :style="{ width: '360px' }"
       placeholder="Please select ..."
       multiple
-      :limit="2"
-      :scrollbar="scrollbar">
+      :limit="2">
       <yc-option>Beijing</yc-option>
       <yc-option :tag-props="{ color: 'red' }">Shanghai</yc-option>
       <yc-option>Guangzhou</yc-option>
@@ -122,11 +103,6 @@ const scrollbar = ref(true);
     </yc-select>
   </yc-space>
 </template>
-
-<script setup>
-import { ref } from 'vue';
-const scrollbar = ref(true);
-</script>
 ```
 
 </details>

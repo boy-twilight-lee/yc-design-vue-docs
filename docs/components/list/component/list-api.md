@@ -103,13 +103,7 @@ const listProps = ref([
     type: 'VirtualListProps',
     value: '-',
     href:"/components/select"
-  },
-  {
-    name: 'scrollbar',
-    desc: '是否开启虚拟滚动条',
-    type: 'boolean',
-    value: 'true',
-  },
+  }
 ]);
 
 const listEvents = ref([

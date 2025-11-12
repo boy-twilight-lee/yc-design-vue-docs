@@ -229,7 +229,7 @@ const selectProps = ref([
   {
     name: 'filter-option',
     desc: '是否过滤选项',
-    type: 'boolean | FilterOption<SelectOptionData>',
+    type: 'FilterOption<SelectOptionData>',
     value: 'true',
     href:'/guide/types'
   },
@@ -295,12 +295,6 @@ const selectProps = ref([
     desc: '自定义 SelectOptionData 中的字段',
     type: 'SelectFieldNames',
     value: '-',
-  },
-  {
-    name: 'scrollbar',
-    desc: '是否开启虚拟滚动条',
-    type: 'boolean',
-    value: 'true',
   },
   {
     name: 'show-header-on-empty',
