@@ -207,12 +207,6 @@ const triggerProps = ref([
     value: 'true',
   },
   {
-    name: 'render-to-body',
-    desc: '是否挂载在 body 元素下',
-    type: 'boolean',
-    value: 'true',
-  },
-  {
     name: 'prevent-focus',
     desc: '是否阻止弹出层中的元素点击时获取焦点',
     type: 'boolean',

@@ -145,12 +145,6 @@ const modalProps = ref([
     value: 'true',
   },
   {
-    name: 'render-to-body',
-    desc: '对话框是否挂载在 body 元素下',
-    type: 'boolean',
-    value: 'true',
-  },
-  {
     name: 'popup-container',
     desc: '弹出框的挂载容器',
     type: 'PopupContainer',

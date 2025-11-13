@@ -253,12 +253,6 @@ const modalConfigProps = ref([
     value: "'center'",
   },
   {
-    name: 'renderToBody',
-    desc: '对话框是否挂载在 body 元素下',
-    type: 'boolean',
-    value: 'true',
-  },
-  {
     name: 'modalClass',
     desc: '对话框的类名',
     type: 'ClassName',

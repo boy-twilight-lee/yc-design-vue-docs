@@ -19,7 +19,6 @@ import { ref } from 'vue';
 const triggerProps = ref({
   popupVisible: false,
   unmountOnClose: true,
-  renderToBody: false,
   position: 'rt',
 });
 </script>
@@ -49,7 +48,6 @@ import { ref } from 'vue';
 const triggerProps = ref({
   popupVisible: false,
   unmountOnClose: true,
-  renderToBody: false,
   position: 'rt',
 });
 </script>

@@ -156,12 +156,6 @@ const drawerProps = ref([
     value: 'true',
   },
   {
-    name: 'render-to-body',
-    desc: '抽屉是否挂载在 body 元素下',
-    type: 'boolean',
-    value: 'true',
-  },
-  {
     name: 'header',
     desc: '是否展示头部内容',
     type: 'boolean',
